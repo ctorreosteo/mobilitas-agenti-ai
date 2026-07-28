@@ -1,0 +1,36 @@
+{
+  "_come_si_usa": "Questo file decide il RUOLO e il LIVELLO di ogni skill nel workflow. Usa le CHIAVI = la parte dopo 'direttore-osteopatico-'. L'ESISTENZA delle skill resta auto-scoperta dalla cartella .claude/skills; qui dichiari ESPLICITAMENTE chi e' l'autore, chi e' revisore di PRIMO, SECONDO o TERZO livello. Un revisore presente nella cartella ma NON elencato qui NON viene usato (il workflow lo segnala). Per spostare un revisore di livello, togli la sua chiave da un array e mettila nell'altro. FLUSSO: v1 -> primo_livello (in parallelo) -> sintesi v2 -> secondo_livello sulla v2 -> sintesi v3 -> terzo_livello sulla v3 -> sintesi v4 finale. Un array vuoto salta il livello. NOTA: l'automazione (genera-procedure.workflow.js) legge gia' primo/secondo/terzo livello.",
+
+  "autore": "procedure",
+
+  "primo_livello": [
+    "specialista",
+    "medico-generale",
+    "sicurezza-tecniche",
+    "fisioterapista-ebp",
+    "compliance",
+    "neolaureato",
+    "sistema-dominante",
+    "modelli",
+    "clinico-esperto"
+  ],
+
+  "secondo_livello": [
+    "fedelta-bibbia"
+  ],
+
+  "terzo_livello": [
+    "editor"
+  ],
+
+  "_esempi": {
+    "sposta_sistema_dominante_al_secondo": {
+      "primo_livello": ["specialista", "medico-generale", "fisioterapista-ebp", "compliance", "neolaureato"],
+      "secondo_livello": ["fedelta-bibbia", "sistema-dominante"]
+    },
+    "nessun_secondo_livello": {
+      "primo_livello": ["specialista", "medico-generale", "fisioterapista-ebp", "compliance", "neolaureato", "sistema-dominante", "fedelta-bibbia"],
+      "secondo_livello": []
+    }
+  }
+}
