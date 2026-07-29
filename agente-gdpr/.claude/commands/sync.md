@@ -17,7 +17,12 @@ Recupera il gestionale nel workspace di lavoro.
    - commit HEAD (sha breve + data), da annotare per il report;
    - numero di file `.md` presenti (esclusi `node_modules`, `target`, `dist`, `.venv`);
    - `git status --short` (deve essere pulito).
-4. Se una copia di lavoro contiene modifiche non committate da una sessione precedente,
-   segnalale **senza** cancellarle e chiedi all'utente come procedere.
+4. Lo script **si rifiuta** di sincronizzare una copia di lavoro con modifiche non committate:
+   non le cancella mai. Se succede, mostra all'utente l'elenco dei file pendenti e chiedi se
+   committarli sul branch di documentazione o scartarli; non decidere al posto suo.
+5. Se lo script segnala `🚨 INCIDENTE` (il branch di lavoro modifica file non Markdown),
+   **fermati**: riporta i file in cima alla risposta e non procedere con `/audit`.
+6. Se segnala che il branch di lavoro è indietro rispetto a `main`, riferiscilo: contiene lavoro
+   di una sessione precedente e va deciso se ribasarlo prima di continuare.
 
 Non modificare nulla in questa fase. Al termine indica il comando successivo: `/audit`.

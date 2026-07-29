@@ -33,10 +33,11 @@ ripristina il file, non committare, e segnalalo in cima al riepilogo finale.
 4. Domande al Titolare: elenco numerato.
 5. Comandi per revisionare e portare le modifiche nei repo dell'utente (il push lo fa lui):
    ```bash
-   git -C workspace/mobilitas-backend diff --stat main...gdpr/aggiornamento-docs
+   AG=/Users/carlitos/mobilitas-agenti-ai/agente-gdpr
+   git -C $AG/workspace/mobilitas-backend diff --stat main...gdpr/aggiornamento-docs
 
    cd /Users/carlitos/mobilitas-backend
-   git fetch /Users/carlitos/agente-gdpr/workspace/mobilitas-backend \
+   git fetch $AG/workspace/mobilitas-backend \
        gdpr/aggiornamento-docs:gdpr/aggiornamento-docs
    git diff main..gdpr/aggiornamento-docs -- '*.md'
    git push origin gdpr/aggiornamento-docs

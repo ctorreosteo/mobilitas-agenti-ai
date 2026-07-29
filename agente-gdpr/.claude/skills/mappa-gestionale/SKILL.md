@@ -25,10 +25,11 @@ Package radice: `it.mobilitas.hq` in `src/main/java/it/mobilitas/hq/`.
 | `ai/` | integrazione Claude/Whisper/voce | artt. 9, 35, 44-49: cosa esce verso i fornitori AI |
 | `jobs/` | cron e job schedulati | art. 5(1)(e): esistono job di cancellazione/purge? |
 | `config/` | configurazione | segreti, CORS, region, toggle |
-| `bootstrap/`, `migration/` | init e migrazioni applicative | creazione utenze admin, dati seed |
+| `mappers/`, `dto/` | conversione entità → DTO | quali campi personali attraversano il confine dell'API |
+| `util/`, `utils/` | helper trasversali | formattazione/anonimizzazione, generazione di export |
 | `exception/` | gestione errori | messaggi di errore che espongono dati personali |
 | `src/main/resources/db/migration/` | **Flyway `V*.sql`** | schema reale: colonne con dati personali, indici, vincoli. Contiene anche dati inseriti via migrazione (**attenzione**: nomi di persone dentro le migration) |
-| `src/main/resources/application*.properties` | config per profilo | chiavi, endpoint, livelli di log |
+| `src/main/resources/application*.properties` | config per profilo (`local`, `dev`, `uat`, `prod`) | chiavi, endpoint, livelli di log: **confronta i profili**, `prod` è quello che conta |
 | `env.example` | variabili attese | elenco dei fornitori |
 | `docs/` | documentazione (hub `docs/README.md`) | oggetto degli aggiornamenti |
 | `docs/privacy/` | 01 ruoli · 02 registro · 03 DPIA audio · 04 DPIA AI | base da aggiornare |
@@ -55,10 +56,10 @@ Stack: React + Vite + TypeScript, Firebase Hosting.
 | Path | Contenuto | Rilevanza privacy |
 |------|-----------|-------------------|
 | `src/services/` | chiamate API per dominio (`cartelle-cliniche-service.ts`, `pazienti-*`, `messaggi-service.ts`, `assistente-vocale-service.ts`, …) | quali dati il client richiede e riceve |
-| `src/pages/` | schermate | quali dati vengono mostrati e a chi |
+| `src/pages/`, `src/components/` | schermate e componenti | quali dati vengono mostrati e a chi |
 | `src/contexts/`, `src/hooks/` | stato applicativo | dati clinici tenuti in memoria/contesto |
 | `src/lib/`, `src/constants/`, `src/config/` | client API, storage, costanti | **localStorage/sessionStorage con dati personali o token** |
-| `src/mock/`, `src/data/`, `src/examples/` | dati fittizi | **verificare che non siano dati reali di pazienti** |
+| `src/mock/`, `src/data/`, `src/examples/`, `src/test/` | dati fittizi e fixture | **verificare che non siano dati reali di pazienti** |
 | `src/types/` | tipi dei DTO | mappa dei campi personali lato client |
 | `index.html`, `src/main.tsx` | bootstrap | script di terze parti, analytics, cookie |
 | `docs/` | documentazione (hub `docs/README.md`) | oggetto degli aggiornamenti |

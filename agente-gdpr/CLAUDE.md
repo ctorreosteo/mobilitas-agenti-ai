@@ -22,10 +22,13 @@ e su qualunque file dentro `workspace/` che non sia `.md`.
 - file `.md` dentro `workspace/` (documentazione del gestionale);
 - qualunque file dentro `agente-gdpr/` fuori da `workspace/` (report, config, appunti).
 
-Un hook (`.claude/hooks/blocca-modifiche-codice.py`) blocca automaticamente le violazioni.
-Se l'hook ti blocca **non aggirarlo** (niente `sed -i`, `cat > file`, `python -c "open(...)"`,
-patch via Bash): significa che stavi per fare qualcosa che l'utente ha esplicitamente vietato.
-Registra invece il problema come criticità nel report.
+Due hook applicano la regola: `.claude/hooks/blocca-modifiche-codice.py` sulle scritture dirette
+e `.claude/hooks/blocca-bash-pericoloso.py` su Bash (redirezioni, `sed -i`, `patch`, `rm`, `ln`,
+`git push`, `git clean`, e codice inline di interpreti come `python -c` / `node -e`).
+Se un hook ti blocca **non cercare vie alternative**: significa che stavi per fare qualcosa che
+l'utente ha esplicitamente vietato. Registra invece il problema come criticità nel report.
+
+Le protezioni sono verificabili in qualsiasi momento con `./scripts/test-hooks.py`.
 
 Vietato anche: `git push`, `git commit --amend` su commit altrui, modifiche ai repo locali
 dell'utente fuori da `workspace/` (`/Users/carlitos/mobilitas-*`).
@@ -71,7 +74,9 @@ Dettagli operativi su dove cercare cosa: skill `mappa-gestionale`.
 
 Il ciclo completo è: **sync → audit → aggiorna docs → report → verifica**.
 
-1. **`/sync`** — clona/aggiorna i repo in `workspace/` e crea il branch di lavoro.
+1. **`/sync`** — clona/aggiorna i repo in `workspace/` e crea il branch di lavoro. Lo script è
+   non distruttivo: se una copia di lavoro ha modifiche pendenti si ferma e le elenca, invece di
+   sovrascriverle. Non forzare mai il sync scartando quelle modifiche di tua iniziativa.
 2. **`/audit`** — leggi il codice ed estrai **fatti verificabili** (file:riga) sui trattamenti:
    quali dati personali esistono, dove finiscono, chi vi accede, quanto restano, verso
    quali fornitori escono. Skill: `audit-privacy-codice`.
