@@ -1,0 +1,88 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/carlitos/agente-gdpr/**)",
+      "Glob(//Users/carlitos/agente-gdpr/**)",
+      "Grep(//Users/carlitos/agente-gdpr/**)",
+      "Bash(./scripts/sync-repos.sh:*)",
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(git branch:*)",
+      "Bash(git show:*)",
+      "Bash(rg:*)",
+      "Bash(grep:*)",
+      "Bash(find:*)",
+      "Bash(ls:*)",
+      "Bash(wc:*)",
+      "Bash(jq:*)",
+      "Bash(sort:*)",
+      "Bash(uniq:*)",
+      "Bash(head:*)",
+      "Bash(tail:*)"
+    ],
+    "deny": [
+      "Write(workspace/**/*.java)",
+      "Edit(workspace/**/*.java)",
+      "Write(workspace/**/*.ts)",
+      "Edit(workspace/**/*.ts)",
+      "Write(workspace/**/*.tsx)",
+      "Edit(workspace/**/*.tsx)",
+      "Write(workspace/**/*.js)",
+      "Edit(workspace/**/*.js)",
+      "Write(workspace/**/*.jsx)",
+      "Edit(workspace/**/*.jsx)",
+      "Write(workspace/**/*.json)",
+      "Edit(workspace/**/*.json)",
+      "Write(workspace/**/*.xml)",
+      "Edit(workspace/**/*.xml)",
+      "Write(workspace/**/*.sql)",
+      "Edit(workspace/**/*.sql)",
+      "Write(workspace/**/*.yml)",
+      "Edit(workspace/**/*.yml)",
+      "Write(workspace/**/*.yaml)",
+      "Edit(workspace/**/*.yaml)",
+      "Write(workspace/**/*.properties)",
+      "Edit(workspace/**/*.properties)",
+      "Write(workspace/**/*.sh)",
+      "Edit(workspace/**/*.sh)",
+      "Write(workspace/**/*.py)",
+      "Edit(workspace/**/*.py)",
+      "Write(workspace/**/*.gs)",
+      "Edit(workspace/**/*.gs)",
+      "Write(workspace/**/*.css)",
+      "Edit(workspace/**/*.css)",
+      "Write(workspace/**/*.html)",
+      "Edit(workspace/**/*.html)",
+      "Write(//Users/carlitos/mobilitas-backend/**)",
+      "Edit(//Users/carlitos/mobilitas-backend/**)",
+      "Write(//Users/carlitos/mobilitas-frontend/**)",
+      "Edit(//Users/carlitos/mobilitas-frontend/**)",
+      "Bash(git push:*)",
+      "Bash(gh pr create:*)",
+      "Bash(gh repo:*)"
+    ]
+  },
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit|NotebookEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/blocca-modifiche-codice.py\""
+          }
+        ]
+      },
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/blocca-bash-pericoloso.py\""
+          }
+        ]
+      }
+    ]
+  }
+}
