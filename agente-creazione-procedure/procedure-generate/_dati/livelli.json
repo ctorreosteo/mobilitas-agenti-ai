@@ -1,5 +1,7 @@
 {
-  "_come_si_usa": "Questo file decide il RUOLO e il LIVELLO di ogni skill nel workflow. Usa le CHIAVI = la parte dopo 'direttore-osteopatico-'. L'ESISTENZA delle skill resta auto-scoperta dalla cartella .claude/skills; qui dichiari ESPLICITAMENTE chi e' l'autore, chi e' revisore di PRIMO, SECONDO o TERZO livello. Un revisore presente nella cartella ma NON elencato qui NON viene usato (il workflow lo segnala). Per spostare un revisore di livello, togli la sua chiave da un array e mettila nell'altro. FLUSSO: v1 -> primo_livello (in parallelo) -> sintesi v2 -> secondo_livello sulla v2 -> sintesi v3 -> terzo_livello sulla v3 -> sintesi v4 finale. Un array vuoto salta il livello. NOTA: l'automazione (genera-procedure.workflow.js) legge gia' primo/secondo/terzo livello.",
+  "_come_si_usa": "Questo file decide il RUOLO e il LIVELLO di ogni skill nel workflow. Usa le CHIAVI = la parte dopo 'direttore-osteopatico-'. L'ESISTENZA delle skill resta auto-scoperta dalla cartella .claude/skills; qui dichiari ESPLICITAMENTE chi e' l'autore, chi e' revisore di PRIMO, SECONDO, TERZO o QUARTO livello. Un revisore presente nella cartella ma NON elencato qui NON viene usato (il workflow lo segnala). Per spostare un revisore di livello, togli la sua chiave da un array e mettila nell'altro. FLUSSO: v1 -> primo_livello (in parallelo) -> sintesi v2 -> secondo_livello sulla v2 -> sintesi v3 -> terzo_livello sulla v3 -> sintesi v4 -> quarto_livello sulla v4 -> sintesi v5 finale. Un array vuoto salta il livello (la versione viene promossa senza modifiche). NOTA: l'automazione (genera-procedure.workflow.js) legge gia' primo/secondo/terzo/quarto livello.",
+
+  "_ordine_dei_livelli": "1o = panel avversariale sul contenuto (clinica, sicurezza, EBP, compliance, usabilita, modelli). 2o = fedelta al metodo/Bibbia. 3o = logica dell'apprendimento: il documento insegna o fa solo eseguire (perche' -> cosa -> come -> pratica -> feedback -> autonomia). 4o = editor di asciugatura: toglie ridondanza e riporta nel range 5.000-7.000 parole. L'apprendimento sta PRIMA dell'editor apposta: riordina e puo' chiedere qualche riga in piu', poi l'editor asciuga il risultato.",
 
   "autore": "procedure",
 
@@ -20,6 +22,10 @@
   ],
 
   "terzo_livello": [
+    "apprendimento"
+  ],
+
+  "quarto_livello": [
     "editor"
   ],
 
@@ -31,6 +37,10 @@
     "nessun_secondo_livello": {
       "primo_livello": ["specialista", "medico-generale", "fisioterapista-ebp", "compliance", "neolaureato", "sistema-dominante", "fedelta-bibbia"],
       "secondo_livello": []
+    },
+    "salta_asciugatura": {
+      "terzo_livello": ["apprendimento"],
+      "quarto_livello": []
     }
   }
 }

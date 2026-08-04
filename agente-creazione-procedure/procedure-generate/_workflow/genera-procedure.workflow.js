@@ -1,6 +1,6 @@
 export const meta = {
   name: 'genera-procedure-osteopatiche',
-  description: 'Per ogni problema: draft con la skill autore, revisione su tre livelli (1o parallelo, 2o fedelta, 3o editor di asciugatura), sintesi finale. Resiliente: retry sugli agenti critici + fallback di promozione, un singolo fallimento non aborta la catena',
+  description: 'Per ogni problema: draft con la skill autore, revisione su quattro livelli (1o parallelo, 2o fedelta, 3o logica dell apprendimento, 4o editor di asciugatura), sintesi finale. Resiliente: retry sugli agenti critici + fallback di promozione, un singolo fallimento non aborta la catena',
   whenToUse: 'Genera le procedure cliniche Mobilitas in batch a partire da PROBLEMI_OSTEOPATIA.xlsx',
   phases: [
     { title: 'Scoperta', detail: 'trova da solo le skill-revisore presenti nella cartella' },
@@ -9,8 +9,10 @@ export const meta = {
     { title: 'Sintesi intermedia', detail: 'skill autore pesa i feedback e riscrive la v2' },
     { title: 'Revisione 2o livello', detail: 'revisori di 2o livello (dal manifesto) sulla v2' },
     { title: 'Sintesi v3', detail: 'skill autore applica i feedback di 2o livello -> v3' },
-    { title: 'Revisione 3o livello', detail: 'editor di asciugatura (dal manifesto) sulla v3' },
-    { title: 'Sintesi finale', detail: 'skill autore applica la mappa di taglio dell editor -> v4 finale' },
+    { title: 'Revisione 3o livello', detail: 'logica dell apprendimento (dal manifesto) sulla v3' },
+    { title: 'Sintesi v4', detail: 'skill autore applica i rilievi di apprendimento -> v4' },
+    { title: 'Revisione 4o livello', detail: 'editor di asciugatura (dal manifesto) sulla v4' },
+    { title: 'Sintesi finale', detail: 'skill autore applica la mappa di taglio dell editor -> v5 finale' },
   ],
 }
 
@@ -23,23 +25,24 @@ const DATA = OUT + '/_dati/problemi.json'
 
 // ---- RUOLI E LIVELLI DECISI DAL MANIFESTO, NON DAL CODICE ----
 // L'ESISTENZA dei revisori resta auto-scoperta dalla cartella .claude/skills.
-// Il RUOLO e il LIVELLO (autore / 1o / 2o / 3o livello) li decide ESPLICITAMENTE
+// Il RUOLO e il LIVELLO (autore / 1o / 2o / 3o / 4o livello) li decide ESPLICITAMENTE
 // procedure-generate/_dati/livelli.json: ogni revisore va elencato in "primo_livello",
-// "secondo_livello" o "terzo_livello". Un revisore presente nella cartella ma non
-// elencato NON viene usato. Cosi aggiungi/togli/sposti revisori modificando solo quel file.
+// "secondo_livello", "terzo_livello" o "quarto_livello". Un revisore presente nella cartella
+// ma non elencato NON viene usato. Cosi aggiungi/togli/sposti revisori modificando solo quel file.
 const MANIFESTO = OUT + '/_dati/livelli.json'
 
 // Schema della fase di scoperta: cartelle reali + ruoli/livelli espliciti dal manifesto.
 const DISCOVERY_SCHEMA = {
   type: 'object',
   additionalProperties: false,
-  required: ['tutte_le_skill', 'autore', 'primo_livello', 'secondo_livello', 'terzo_livello'],
+  required: ['tutte_le_skill', 'autore', 'primo_livello', 'secondo_livello', 'terzo_livello', 'quarto_livello'],
   properties: {
     tutte_le_skill: { type: 'array', items: { type: 'string' }, description: 'Chiavi (dopo "direttore-osteopatico-") di TUTTE le cartelle skill realmente presenti' },
     autore: { type: 'string', description: 'Chiave dell autore dal manifesto (di norma "procedure")' },
     primo_livello: { type: 'array', items: { type: 'string' }, description: 'Chiavi dei revisori di PRIMO livello dal manifesto' },
     secondo_livello: { type: 'array', items: { type: 'string' }, description: 'Chiavi dei revisori di SECONDO livello dal manifesto' },
-    terzo_livello: { type: 'array', items: { type: 'string' }, description: 'Chiavi dei revisori di TERZO livello dal manifesto (di norma "editor")' },
+    terzo_livello: { type: 'array', items: { type: 'string' }, description: 'Chiavi dei revisori di TERZO livello dal manifesto (di norma "apprendimento")' },
+    quarto_livello: { type: 'array', items: { type: 'string' }, description: 'Chiavi dei revisori di QUARTO livello dal manifesto (di norma "editor")' },
   },
 }
 
@@ -47,10 +50,10 @@ const discoveryPrompt = () => `Devi determinare ruoli e livelli delle skill di q
 
 1) Esegui: ls -1 ${SK}
    Prendi TUTTE le cartelle che iniziano con "direttore-osteopatico-" e per ognuna estrai la chiave = la parte dopo quel prefisso (es. "direttore-osteopatico-compliance" -> "compliance"). Questo e "tutte_le_skill".
-2) Leggi il manifesto ${MANIFESTO} (JSON). Prendi "autore" (una chiave), "primo_livello", "secondo_livello" e "terzo_livello" (array di chiavi; un array puo mancare o essere vuoto -> restituisci []).
+2) Leggi il manifesto ${MANIFESTO} (JSON). Prendi "autore" (una chiave), "primo_livello", "secondo_livello", "terzo_livello" e "quarto_livello" (array di chiavi; un array puo mancare o essere vuoto -> restituisci []).
 
-Restituisci l'oggetto strutturato con: tutte_le_skill, autore, primo_livello, secondo_livello, terzo_livello.
-Regole: usa SOLO cartelle realmente presenti; non inventare chiavi; se una chiave del manifesto non ha una cartella corrispondente, NON includerla; riporta i tre livelli esattamente come stanno nel manifesto (filtrati sulle cartelle esistenti).`
+Restituisci l'oggetto strutturato con: tutte_le_skill, autore, primo_livello, secondo_livello, terzo_livello, quarto_livello.
+Regole: usa SOLO cartelle realmente presenti; non inventare chiavi; se una chiave del manifesto non ha una cartella corrispondente, NON includerla; riporta i quattro livelli esattamente come stanno nel manifesto (filtrati sulle cartelle esistenti).`
 
 // ---- schema del feedback strutturato di ogni revisore ----
 const FEEDBACK_SCHEMA = {
@@ -120,7 +123,7 @@ Leggi ${AUTORE}/SKILL.md e ${AUTORE}/references/revisione-e-sintesi.md. Regola c
 
 ## Input
 - Draft: ${OUT}/${slug}/v1-draft.md e ${OUT}/${slug}/v1-scheda.md
-- Feedback: leggi TUTTI i file ${OUT}/${slug}/feedback-*.md (uno per revisore, esclusi quelli che finiscono in -r2.md o -r3.md)
+- Feedback: leggi TUTTI i file ${OUT}/${slug}/feedback-*.md (uno per revisore, esclusi quelli che finiscono in -r2.md, -r3.md o -r4.md)
 
 ## Output
 Riscrivi applicando il triage:
@@ -142,8 +145,8 @@ Leggi ${OUT}/${slug}/v2-intermedia.md e ${OUT}/${slug}/scheda-v2.md. Se non esis
 Classifica OGNI rilievo per severita: ERRORE / RISCHIO / PREFERENZA. Sii chirurgico: sezione/elemento preciso, problema, correzione concreta. Non riscrivere la procedura.
 Restituisci l'oggetto strutturato richiesto. In parallelo salva la stessa cosa in ${OUT}/${slug}/feedback-${r.key}-r2.md`
 
-// SINTESI v3: applica i feedback di 2o livello alla v2. NON e la finale: dopo c'e il 3o livello (editor).
-const thirdSynthPrompt = (slug) => `Sei il **Direttore Osteopatico** di Mobilitas. Devi produrre la v3 della procedura "${slug}", applicando i feedback della revisione di 2o livello alla v2. NON e ancora la finale: dopo di te la v3 va all'editor di asciugatura (3o livello).
+// SINTESI v3: applica i feedback di 2o livello alla v2. NON e la finale: dopo c'e il 3o livello (apprendimento) e poi il 4o (editor).
+const thirdSynthPrompt = (slug) => `Sei il **Direttore Osteopatico** di Mobilitas. Devi produrre la v3 della procedura "${slug}", applicando i feedback della revisione di 2o livello alla v2. NON e ancora la finale: dopo di te la v3 va al revisore della logica dell'apprendimento (3o livello) e poi all'editor di asciugatura (4o livello).
 
 ## Metodo (seguilo INTEGRALMENTE)
 Leggi ${AUTORE}/SKILL.md e ${AUTORE}/references/revisione-e-sintesi.md. Vale la stessa regola: **il feedback si pesa, non si somma**. Parti dalla v2, non dalla bozza.
@@ -159,34 +162,76 @@ Riscrivi applicando il triage:
 
 Restituisci SOLO: cosa hai corretto dalla 2a revisione, cosa hai valutato/ignorato, variazione % di lunghezza rispetto alla v2.`
 
-// TERZA REVISIONE: l'editor di asciugatura (dal manifesto), sulla v3. Produce una MAPPA DI TAGLIO, non riscrive.
-const thirdReviewPrompt = (slug, r) => `Sei il revisore di TERZO LIVELLO **${r.key}** del panel Mobilitas — l'editor di asciugatura. La procedura e gia stata validata dai revisori di 1o e 2o livello: contenuto, sicurezza, compliance e fedelta al metodo sono chiusi. Tu NON aggiungi ne contesti la sostanza: produci una MAPPA DI TAGLIO per togliere ridondanza e riportare il documento nel range 5.000-7.000 parole, senza perdere informazione clinica/sicurezza/legale/metodo e senza spegnere la voce.
+// TERZA REVISIONE: la logica dell'apprendimento (dal manifesto), sulla v3. Non aggiunge clinica, non asciuga: riordina e pretende il senso.
+const thirdReviewPrompt = (slug, r) => `Sei il revisore di TERZO LIVELLO **${r.key}** del panel Mobilitas — la logica dell'apprendimento. La procedura e gia stata validata dai revisori di 1o e 2o livello: contenuto, sicurezza, compliance e fedelta al metodo sono chiusi. Tu guardi il documento non come testo ma come PERCORSO DI APPRENDIMENTO, e rispondi a una domanda sola: chi legge impara davvero a fare, o impara solo a eseguire?
 
 ## Il tuo ruolo e metodo
-Leggi e segui INTEGRALMENTE ${r.skill}/SKILL.md. Rispetta l'INTOCCABILE (red flag, controindicazioni, screening, stop-rule, dosi, PMID/dati, hedge di compliance, le tre voci). Se il documento e gia tra 5.000 e 7.000 parole di PROSA (non contare le celle delle tabelle) e non trovi ridondanza vera, il verdetto legittimo e "Gia asciutta": non inventare tagli.
+Leggi e segui INTEGRALMENTE ${r.skill}/SKILL.md e il suo reference ${r.skill}/references/sei-fasi-apprendimento.md. La legge e la sequenza: **perche -> cosa -> come -> pratica -> feedback -> autonomia**. Il difetto capitale delle procedure e contenere solo il "come": passi corretti e nessun senso attorno, cosi il lettore esegue senza capire e crolla al primo caso fuori copione. Trova i gradini mancanti, invertiti o solo accennati, e di dove vanno rimessi.
+
+## Tre confini rigidi
+1. **Non aggiungi contenuto clinico**: niente tecniche, dosi, studi, red flag o cautele nuove. Se una fase manca, la costruisci con il materiale gia presente nel documento, spostandolo o esplicitandone il senso.
+2. **Non asciughi**: dopo di te c'e l'editor (4o livello). Una ripetizione con funzione didattica e un pregio, non un difetto: segnalala tra le cose DA PROTEGGERE.
+3. **Non gonfi**: preferisci lo spostamento all'aggiunta. Ogni rilievo che aggiunge testo dichiara quante parole costa. Budget complessivo: crescita netta **<= 5%**.
+
+Rispetta l'INTOCCABILE (red flag, criteri di invio, controindicazioni, screening, stop-rule, dosi, PMID/dati, hedge di compliance, le tre voci, l'architettura fissa Parte 0/I/II/III/IV). Se il documento gia insegna, il verdetto legittimo e "Insegna": non inventare gradini mancanti.
 
 ## Documento da revisionare
 Leggi ${OUT}/${slug}/v3-intermedia.md e ${OUT}/${slug}/scheda-v3.md. Se non esistono, restituisci un rilievo ERRORE che dice che la v3 manca.
 
 ## Output
-Mappa il tuo output sullo schema per severita: **RIDONDANTE -> ERRORE** (taglio sicuro, l'info esiste identica altrove), **COMPRIMIBILE -> RISCHIO** (stessa sostanza in meno parole), **PREFERENZA -> PREFERENZA**. Per ogni rilievo indica sezione/passaggio, cosa tagliare o come comprimere, e dove resta l'informazione. Non riscrivere la procedura.
-Restituisci l'oggetto strutturato richiesto. In parallelo salva la stessa cosa in ${OUT}/${slug}/feedback-${r.key}-r3.md`
+Mappa il tuo output sullo schema per severita: **ERRORE** = una fase e assente o invertita in modo che rompe l'apprendimento (il "come" prima del "perche", passi senza quadro d'insieme, nessun feedback intra-seduta, nessun criterio di autonomia). **RISCHIO** = la fase c'e ma e debole, implicita o lontana dal punto d'uso. **PREFERENZA** = gusto didattico (max 3). Per ogni rilievo: fase mancante, sezione OSPITE gia esistente dove rimetterla, cosa fare concretamente, costo in parole. Non riscrivere la procedura.
+Restituisci l'oggetto strutturato richiesto. In parallelo salva la stessa cosa in ${OUT}/${slug}/feedback-${r.key}-r3.md, includendo la mappa delle sei fasi (presente/debole/assente), la sezione **Da proteggere dall'editor** e il bilancio parole.`
 
-// SINTESI FINALE (v4): applica la mappa di taglio dell'editor alla v3. Solo se strettamente necessario.
-const finalSynthPrompt = (slug) => `Sei il **Direttore Osteopatico** di Mobilitas. Devi chiudere la versione FINALE (v4) della procedura "${slug}", applicando la mappa di taglio dell'editor (3o livello) alla v3.
+// SINTESI v4: applica i rilievi di apprendimento alla v3. NON e la finale: dopo c'e l'editor (4o livello).
+const fourthSynthPrompt = (slug) => `Sei il **Direttore Osteopatico** di Mobilitas. Devi produrre la v4 della procedura "${slug}", applicando i rilievi del revisore della logica dell'apprendimento (3o livello) alla v3. NON e ancora la finale: dopo di te la v4 va all'editor di asciugatura (4o livello).
 
 ## Metodo (seguilo INTEGRALMENTE)
-Leggi ${AUTORE}/SKILL.md e ${AUTORE}/references/revisione-e-sintesi.md. Regola: **si asciuga solo se strettamente necessario**. Applica i tagli RIDONDANTE (ex-ERRORE: ridondanza vera, informazione identica altrove); valuta i COMPRIMIBILE (ex-RISCHIO) solo se servono a rientrare nel range 5.000-7.000 parole di prosa; ignora le PREFERENZE di default. NON toccare l'INTOCCABILE (red flag, sicurezza, dosi, PMID, hedge, le tre voci). Se la v3 e gia asciutta, lasciala com'e: copia la v3 nella v4 senza modifiche.
+Leggi ${AUTORE}/SKILL.md e ${AUTORE}/references/revisione-e-sintesi.md. Vale la stessa regola: **il feedback si pesa, non si somma**. Parti dalla v3, non dalle versioni precedenti.
+
+Regola specifica di questo livello: **prima si sposta, poi si riscrive, solo in ultimo si aggiunge**. Quasi tutti i rilievi di apprendimento si chiudono riordinando materiale che c'e gia o attaccando il senso al passo che lo richiede. NON introdurre contenuto clinico nuovo (tecniche, dosi, studi, red flag): il contenuto e chiuso dai livelli 1 e 2. Crescita netta ammessa rispetto alla v3: **massimo 5%**; se la superi, hai aggiunto invece di riordinare.
 
 ## Input
 - Procedura v3: ${OUT}/${slug}/v3-intermedia.md e ${OUT}/${slug}/scheda-v3.md
-- Mappa di taglio: leggi TUTTI i file ${OUT}/${slug}/feedback-*-r3.md
+- Rilievi di apprendimento: leggi TUTTI i file ${OUT}/${slug}/feedback-*-r3.md
 
 ## Output
-- ${OUT}/${slug}/v4-finale.md     → procedura FINALE da consegnare
+- ${OUT}/${slug}/v4-intermedia.md → procedura v4
+- ${OUT}/${slug}/scheda-v4.md     → scheda v4
+
+Restituisci SOLO: quali fasi dell'apprendimento hai colmato e come (spostamento / riscrittura / aggiunta), cosa hai ignorato, la variazione % di lunghezza rispetto alla v3, e l'elenco dei passaggi che il revisore ha marcato **da proteggere dall'editor** (riportalo, serve al livello successivo).`
+
+// QUARTA REVISIONE: l'editor di asciugatura (dal manifesto), sulla v4. Produce una MAPPA DI TAGLIO, non riscrive.
+const fourthReviewPrompt = (slug, r) => `Sei il revisore di QUARTO LIVELLO **${r.key}** del panel Mobilitas — l'editor di asciugatura. La procedura e gia stata validata dai revisori di 1o e 2o livello e riordinata dal revisore della logica dell'apprendimento (3o livello): contenuto, sicurezza, compliance, fedelta al metodo e impianto didattico sono chiusi. Tu NON aggiungi ne contesti la sostanza: produci una MAPPA DI TAGLIO per togliere ridondanza e riportare il documento nel range 5.000-7.000 parole, senza perdere informazione clinica/sicurezza/legale/metodo e senza spegnere la voce.
+
+## Il tuo ruolo e metodo
+Leggi e segui INTEGRALMENTE ${r.skill}/SKILL.md. Rispetta l'INTOCCABILE (red flag, controindicazioni, screening, stop-rule, dosi, PMID/dati, hedge di compliance, le tre voci). Se il documento e gia tra 5.000 e 7.000 parole di PROSA (non contare le celle delle tabelle) e non trovi ridondanza vera, il verdetto legittimo e "Gia asciutta": non inventare tagli.
+
+## Vincolo aggiuntivo: il lavoro del 3o livello
+Leggi anche i file ${OUT}/${slug}/feedback-*-r3.md e in particolare la loro sezione **Da proteggere dall'editor**. Quei passaggi hanno funzione didattica: una ripetizione che ancora il senso al punto d'uso NON e ridondanza. Se ritieni comunque che uno di essi vada tagliato, classificalo al massimo come PREFERENZA e motiva perche il documento insegna lo stesso senza.
+
+## Documento da revisionare
+Leggi ${OUT}/${slug}/v4-intermedia.md e ${OUT}/${slug}/scheda-v4.md. Se non esistono, restituisci un rilievo ERRORE che dice che la v4 manca.
+
+## Output
+Mappa il tuo output sullo schema per severita: **RIDONDANTE -> ERRORE** (taglio sicuro, l'info esiste identica altrove), **COMPRIMIBILE -> RISCHIO** (stessa sostanza in meno parole), **PREFERENZA -> PREFERENZA**. Per ogni rilievo indica sezione/passaggio, cosa tagliare o come comprimere, e dove resta l'informazione. Non riscrivere la procedura.
+Restituisci l'oggetto strutturato richiesto. In parallelo salva la stessa cosa in ${OUT}/${slug}/feedback-${r.key}-r4.md`
+
+// SINTESI FINALE (v5): applica la mappa di taglio dell'editor alla v4. Solo se strettamente necessario.
+const finalSynthPrompt = (slug) => `Sei il **Direttore Osteopatico** di Mobilitas. Devi chiudere la versione FINALE (v5) della procedura "${slug}", applicando la mappa di taglio dell'editor (4o livello) alla v4.
+
+## Metodo (seguilo INTEGRALMENTE)
+Leggi ${AUTORE}/SKILL.md e ${AUTORE}/references/revisione-e-sintesi.md. Regola: **si asciuga solo se strettamente necessario**. Applica i tagli RIDONDANTE (ex-ERRORE: ridondanza vera, informazione identica altrove); valuta i COMPRIMIBILE (ex-RISCHIO) solo se servono a rientrare nel range 5.000-7.000 parole di prosa; ignora le PREFERENZE di default. NON toccare l'INTOCCABILE (red flag, sicurezza, dosi, PMID, hedge, le tre voci) ne i passaggi marcati **da proteggere** nei feedback di 3o livello (${OUT}/${slug}/feedback-*-r3.md): sono le ripetizioni che tengono in piedi l'apprendimento. Se la v4 e gia asciutta, lasciala com'e: copia la v4 nella v5 senza modifiche.
+
+## Input
+- Procedura v4: ${OUT}/${slug}/v4-intermedia.md e ${OUT}/${slug}/scheda-v4.md
+- Mappa di taglio: leggi TUTTI i file ${OUT}/${slug}/feedback-*-r4.md
+- Da proteggere: la sezione omonima nei file ${OUT}/${slug}/feedback-*-r3.md
+
+## Output
+- ${OUT}/${slug}/v5-finale.md     → procedura FINALE da consegnare
 - ${OUT}/${slug}/scheda-finale.md → scheda FINALE
 
-Restituisci SOLO: cosa hai tagliato (RIDONDANTE), cosa hai compresso o lasciato, e la variazione di lunghezza rispetto alla v3.`
+Restituisci SOLO: cosa hai tagliato (RIDONDANTE), cosa hai compresso o lasciato, cosa hai protetto su indicazione del 3o livello, e la variazione di lunghezza rispetto alla v4.`
 
 // promuovi un documento a versione successiva senza modifiche (quando un livello e vuoto)
 const promotePrompt = (procIn, schedaIn, procOut, schedaOut) =>
@@ -260,22 +305,24 @@ const autore = (disc && disc.autore) || 'procedure'
 const firstKeys = ((disc && disc.primo_livello) || []).filter((k) => all.includes(k) && k !== autore)
 const secondKeys = ((disc && disc.secondo_livello) || []).filter((k) => all.includes(k) && k !== autore && !firstKeys.includes(k))
 const thirdKeys = ((disc && disc.terzo_livello) || []).filter((k) => all.includes(k) && k !== autore && !firstKeys.includes(k) && !secondKeys.includes(k))
+const fourthKeys = ((disc && disc.quarto_livello) || []).filter((k) => all.includes(k) && k !== autore && !firstKeys.includes(k) && !secondKeys.includes(k) && !thirdKeys.includes(k))
 
 const mk = (k) => ({ key: k, skill: SK + '/direttore-osteopatico-' + k })
 const REVIEWERS = firstKeys.map(mk)  // 1o livello
 const SECOND = secondKeys.map(mk)    // 2o livello
-const THIRD = thirdKeys.map(mk)      // 3o livello (editor)
+const THIRD = thirdKeys.map(mk)      // 3o livello (logica dell'apprendimento)
+const FOURTH = fourthKeys.map(mk)    // 4o livello (editor di asciugatura)
 
 // Segnala eventuali skill-revisore presenti nella cartella ma non assegnate a nessun livello: niente cali silenziosi.
-const assegnate = new Set([autore, ...firstKeys, ...secondKeys, ...thirdKeys])
+const assegnate = new Set([autore, ...firstKeys, ...secondKeys, ...thirdKeys, ...fourthKeys])
 const nonAssegnate = all.filter((k) => !assegnate.has(k))
 if (nonAssegnate.length) log(`ATTENZIONE: skill presenti ma non assegnate a nessun livello nel manifesto (ignorate): ${nonAssegnate.join(', ')}`)
 
-if (!REVIEWERS.length && !SECOND.length && !THIRD.length) {
+if (!REVIEWERS.length && !SECOND.length && !THIRD.length && !FOURTH.length) {
   log('ATTENZIONE: nessun revisore dichiarato nel manifesto. Interrompo.')
-  return { errore: 'nessun revisore in primo/secondo/terzo_livello del manifesto ' + MANIFESTO }
+  return { errore: 'nessun revisore in primo/secondo/terzo/quarto_livello del manifesto ' + MANIFESTO }
 }
-log(`Autore: ${autore} | 1o (${REVIEWERS.length}): ${REVIEWERS.map((r) => r.key).join(', ') || '—'} | 2o (${SECOND.length}): ${SECOND.map((r) => r.key).join(', ') || '—'} | 3o (${THIRD.length}): ${THIRD.map((r) => r.key).join(', ') || '—'}`)
+log(`Autore: ${autore} | 1o (${REVIEWERS.length}): ${REVIEWERS.map((r) => r.key).join(', ') || '—'} | 2o (${SECOND.length}): ${SECOND.map((r) => r.key).join(', ') || '—'} | 3o (${THIRD.length}): ${THIRD.map((r) => r.key).join(', ') || '—'} | 4o (${FOURTH.length}): ${FOURTH.map((r) => r.key).join(', ') || '—'}`)
 
 const results = await pipeline(
   slugs,
@@ -329,12 +376,12 @@ const results = await pipeline(
     return slug
   },
 
-  // --- STAGE 5: REVISIONE 3o LIVELLO (editor) -> SINTESI FINALE (v4) (retry + fallback: promuove v3) ---
+  // --- STAGE 5: REVISIONE 3o LIVELLO (apprendimento) -> SINTESI v4 (retry + fallback: promuove v3) ---
   async (slug) => {
     if (!THIRD.length) {
-      await promote(`${OUT}/${slug}/v3-intermedia.md`, `${OUT}/${slug}/scheda-v3.md`, `${OUT}/${slug}/v4-finale.md`, `${OUT}/${slug}/scheda-finale.md`, `nessun 3o livello per ${slug}`)
-      log(`FINALE (v4 = v3, nessun 3o livello): ${slug}`)
-      return { slug, esito: 'completata (senza 3o livello)' }
+      await promote(`${OUT}/${slug}/v3-intermedia.md`, `${OUT}/${slug}/scheda-v3.md`, `${OUT}/${slug}/v4-intermedia.md`, `${OUT}/${slug}/scheda-v4.md`, `nessun 3o livello per ${slug}`)
+      log(`v4 (= v3, nessun 3o livello): ${slug}`)
+      return slug
     }
     const fbs = await parallel(
       THIRD.map((rv) => () =>
@@ -342,12 +389,31 @@ const results = await pipeline(
       )
     )
     log(`Revisione 3o livello ${slug}: ${fbs.filter(Boolean).length}/${THIRD.length}`)
+    const r = await robustAgent(fourthSynthPrompt(slug), { label: `sintesi-v4:${slug}`, phase: 'Sintesi v4', agentType: 'general-purpose' })
+    if (!r) await promote(`${OUT}/${slug}/v3-intermedia.md`, `${OUT}/${slug}/scheda-v3.md`, `${OUT}/${slug}/v4-intermedia.md`, `${OUT}/${slug}/scheda-v4.md`, `sintesi v4 non riuscita per ${slug}`)
+    else log(`v4 pronta: ${slug}`)
+    return slug
+  },
+
+  // --- STAGE 6: REVISIONE 4o LIVELLO (editor) -> SINTESI FINALE (v5) (retry + fallback: promuove v4) ---
+  async (slug) => {
+    if (!FOURTH.length) {
+      await promote(`${OUT}/${slug}/v4-intermedia.md`, `${OUT}/${slug}/scheda-v4.md`, `${OUT}/${slug}/v5-finale.md`, `${OUT}/${slug}/scheda-finale.md`, `nessun 4o livello per ${slug}`)
+      log(`FINALE (v5 = v4, nessun 4o livello): ${slug}`)
+      return { slug, esito: 'completata (senza 4o livello)' }
+    }
+    const fbs = await parallel(
+      FOURTH.map((rv) => () =>
+        agent(fourthReviewPrompt(slug, rv), { label: `rev4:${rv.key}:${slug}`, phase: 'Revisione 4o livello', schema: FEEDBACK_SCHEMA, agentType: 'general-purpose' })
+      )
+    )
+    log(`Revisione 4o livello ${slug}: ${fbs.filter(Boolean).length}/${FOURTH.length}`)
     const r = await robustAgent(finalSynthPrompt(slug), { label: `sintesi-finale:${slug}`, phase: 'Sintesi finale', agentType: 'general-purpose' })
     if (!r) {
-      await promote(`${OUT}/${slug}/v3-intermedia.md`, `${OUT}/${slug}/scheda-v3.md`, `${OUT}/${slug}/v4-finale.md`, `${OUT}/${slug}/scheda-finale.md`, `sintesi finale non riuscita per ${slug}`)
-      return { slug, esito: 'completata (v4=v3, sintesi finale promossa dopo i retry)' }
+      await promote(`${OUT}/${slug}/v4-intermedia.md`, `${OUT}/${slug}/scheda-v4.md`, `${OUT}/${slug}/v5-finale.md`, `${OUT}/${slug}/scheda-finale.md`, `sintesi finale non riuscita per ${slug}`)
+      return { slug, esito: 'completata (v5=v4, sintesi finale promossa dopo i retry)' }
     }
-    log(`FINALE (v4) pronta: ${slug}`)
+    log(`FINALE (v5) pronta: ${slug}`)
     return { slug, esito: 'completata' }
   }
 )

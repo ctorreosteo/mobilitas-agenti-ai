@@ -15,16 +15,33 @@ Cartella di lavoro per la redazione e revisione delle **procedure cliniche osteo
   direttore-osteopatico-fisioterapista-ebp/ REVISORE — fisioterapista evidence-based (scettico)
   direttore-osteopatico-compliance/       REVISORE — legale / deontologia / GDPR
   direttore-osteopatico-neolaureato/      REVISORE — usabilità in stanza il lunedì mattina
+  direttore-osteopatico-apprendimento/    REVISORE 3° liv. — logica dell'apprendimento
 docs/
   agent-teams.md           documentazione team di agenti Claude Code
+procedure-generate/
+  _dati/livelli.json       manifesto: chi è autore e chi revisore di 1°/2°/3°/4° livello
+  _workflow/genera-procedure.workflow.js
 ```
 
 ## Pipeline editoriale
 
-1. **`procedure`** redige o aggiorna il documento clinico.
-2. I **5 revisori** lo attaccano ciascuno da una prospettiva diversa (specialista, MMG,
-   EBP, compliance, usabilità) — pensati come panel avversariale.
-3. **`procedure`** sintetizza i feedback e chiude la versione finale.
+Ruoli e livelli sono dichiarati in `procedure-generate/_dati/livelli.json`: è l'unico file
+da toccare per aggiungere, togliere o spostare un revisore.
+
+1. **`procedure`** redige la v1 (procedura + Scheda Operativa).
+2. **1° livello** — panel avversariale in parallelo sul contenuto (specialista, MMG, EBP,
+   sicurezza, compliance, usabilità, modelli, sistema dominante, clinico esperto) → **v2**.
+3. **2° livello** — fedeltà al metodo / Bibbia → **v3**.
+4. **3° livello** — **logica dell'apprendimento**: il documento insegna o fa solo eseguire?
+   Verifica la sequenza *perché → cosa → come → pratica → feedback → autonomia*. Non aggiunge
+   clinica e non asciuga: riordina, esplicita il senso mancante, pretende criteri di
+   padronanza (crescita netta ≤ 5%) → **v4**.
+5. **4° livello** — editor di asciugatura: toglie ridondanza e riporta il documento nel range
+   5.000-7.000 parole, rispettando i passaggi che il 3° livello ha marcato *da proteggere*
+   → **v5 finale**.
+
+L'apprendimento sta **prima** dell'editor apposta: può chiedere qualche riga in più, e
+l'editor asciuga il risultato.
 
 ## Note operative
 
