@@ -88,6 +88,33 @@ Succederà, ed è il segnale che il sistema funziona:
 - **Modelli vs Sistema-dominante — la parola "dominante" ha due metri diversi.** `modelli` sceglie il dominante **per evidenza/pertinenza** ("su cosa c'è più supporto per questa condizione"); `sistema-dominante` lo sceglie **per gerarchia di sopravvivenza** ("cosa sequestra il compenso e va toccato per primo"). Sullo stesso caso possono indicare modelli diversi, e **non è un conflitto**: rispondono a domande diverse. In vetrina (Parte 0) si dichiara l'evidenza per modello — metro di `modelli`; nel Motore Clinico si sceglie l'ordine d'azione — metro di `sistema-dominante`. Il direttore tiene entrambi: *su cosa c'è più supporto* e *cosa va toccato per primo* convivono.
 - **Sistema-dominante contro MMG/Specialista**: "il sistema dominante qui è viscerale, tratta lì" vs "quella tecnica è a rischio su questo paziente". Vince la sicurezza sul *gesto* (controindicazione o cautela restano), vince il metodo sul *ragionamento* (l'ordine di comando resta corretto anche se la mano si ferma prima).
 
+## Quando il metodo stesso è sbagliato — la regola di precedenza
+
+I conflitti qui sopra si **compongono**: due lenti hanno ragione su piani diversi e si applicano entrambe. Esiste però un caso che non si compone, ed è il più delicato del sistema:
+
+> **Un elemento prescritto dall'architettura interna è contraddetto dalla fisiologia o dall'evidenza.**
+
+Non è "il metodo chiede di affermare ciò che l'evidenza vieta" (quello è il caso del claim, risolto sopra: il claim si smonta e il metodo resta come cornice interna). Qui è più grave: **il contenuto del metodo è falso**. Tenerlo come cornice interna significa conservare l'errore e riprodurlo in ogni procedura futura.
+
+**La gerarchia, in ordine. Quando due piani confliggono davvero, vince quello più in alto:**
+
+1. **Sicurezza del paziente.** Non si negozia con nulla, nemmeno con l'evidenza: se l'evidenza è sottile, vince la scelta prudente.
+2. **Accuratezza fisiologica e dell'evidenza.** **Batte la fedeltà al metodo interno.** Una procedura non scrive il falso perché lo standard lo prescrive.
+3. **Compliance legale e deontologica.** Governa *ciò che si promette*, non *ciò che è vero*: non può obbligare ad affermare il falso, può vietare di prometterlo.
+4. **Fedeltà all'architettura del metodo.**
+5. **Preferenze editoriali e di voce.**
+
+**Cosa fa il direttore quando scatta il punto 2:**
+
+1. **Corregge la procedura.** La versione corretta è quella scientificamente accurata, non quella fedele.
+2. **Non tratta la deviazione come un'infrazione da nascondere.** La dichiara.
+3. **Apre una voce in `procedure-generate/_dati/deviazioni-dal-metodo.md`** con stato `PROPOSTA`, la fonte, e cosa andrebbe cambiato nel documento di metodo. Una deviazione senza fonte non si registra: si scarta.
+4. **Non modifica il documento di metodo.** Il metodo è dello studio: solo un umano lo aggiorna, portando la voce a `RATIFICATA` o `RESPINTA`.
+
+Il registro è il pezzo che rende la regola **trasversale**. Senza, ogni condizione riscopre lo stesso conflitto da zero e lo risolve a modo suo: 58 procedure con 58 interpretazioni dello stesso errore. Con il registro il conflitto si risolve una volta e vale per tutte.
+
+**Il rischio da tenere d'occhio, in direzione opposta:** questa regola non è una licenza per riscrivere il metodo ogni volta che una lente storce il naso. Scatta solo quando l'elemento è **fattualmente contraddetto** da una fonte verificabile — non quando è "poco supportato", "datato" o "non come lo direi io". Quelli restano fedeltà al metodo, punto 4.
+
 ## Il tetto di questo sistema
 
 Più istanze dello stesso modello, per quanto isolate, condividono gli stessi priori. Il contesto pulito elimina il bias dell'autore, non i punti ciechi del modello. Il valore reale sta nel **mandato di ricerca**: è cercando la letteratura critica che emerge ciò che nessuna simulazione produce. Le lenti-metodo (sistema-dominante, fedelta-bibbia) non ricercano letteratura ma proteggono la coerenza interna: sono un secondo tipo di garanzia, non lo stesso.

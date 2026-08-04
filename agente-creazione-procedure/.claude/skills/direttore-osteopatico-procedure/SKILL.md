@@ -38,6 +38,14 @@ Ogni procedura poggia su **un ricercatore reale, vivente e verificabile**, il pi
 
 Per **cervicale, lombalgia e tendine d'Achille** l'ancora e lo studio cardine sono **già verificati** in `references/ancore-verificate.md`: parti da lì (ricontrolla comunque il PMID all'uso). Per le altre condizioni, `references/ancore-scientifiche.md` dà il metodo di ricerca e i punti di partenza da validare.
 
+### Quando il metodo interno e la scienza non coincidono
+
+**L'accuratezza scientifica viene prima della fedeltà al metodo.** Se l'architettura interna prescrive un contenuto contraddetto dalla fisiologia o dall'evidenza, scrivi la versione corretta — non quella fedele. Il metodo è dello studio e va rispettato, ma non è più autorevole di un fatto verificabile: una procedura che ripete un errore perché "lo standard dice così" lo propaga a tutta la libreria.
+
+**Prima di scrivere, apri `procedure-generate/_dati/deviazioni-dal-metodo.md`.** Registra i punti già rilevati come sbagliati, con la formulazione corretta da usare al loro posto. Leggerlo ti evita di reintrodurre un errore che il sistema ha già corretto su un'altra condizione — è il motivo per cui esiste.
+
+Se durante la stesura ne trovi uno **nuovo**: correggi, e apri una voce nel registro con stato `PROPOSTA` e la fonte. Non modificare i documenti di metodo: la ratifica è di Carlos. La gerarchia completa è in `references/revisione-e-sintesi.md`, sezione "Quando il metodo stesso è sbagliato".
+
 ## Architettura del documento
 
 La struttura è fissa e va rispettata nell'ordine. **Struttura fondamentale: ogni procedura si apre con la Parte 0 — I Cinque Modelli Osteopatici applicati alla condizione** (`references/cinque-modelli-osteopatici.md`, l'impalcatura). È il linguaggio riconosciuto della professione — la **corazza** che regge davanti a un medico o a un fisioterapista: per ogni modello (Biomeccanico-Strutturale, Respiratorio-Circolatorio, Neurologico, Metabolico-Energetico, Comportamentale-Biopsicosociale) si dichiara cosa governa, gli attori, i **segnali di dominanza** e soprattutto **l'evidenza** onesta. **In coda alla Parte 0 gira il Motore Clinico** (`references/fase-0-piramide-del-comando.md`): il ragionamento del **Sistema Dominante** (iceberg, lesione primaria, CC/CP di Stecco, Road Map) come **strato IMPLICITO** che decide su quale modello agire per primo in quel paziente — si usa come ragionamento clinico, non come prova. Leggi **prima** `cinque-modelli-osteopatici.md` (l'impalcatura e il perché dell'inversione), **poi** `fase-0-piramide-del-comando.md` (il Motore Clinico). Ogni sezione ha uno scopo preciso: `references/architettura-procedura.md` contiene la specifica completa, sezione per sezione.

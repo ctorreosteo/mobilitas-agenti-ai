@@ -35,9 +35,25 @@ Due regole di confine:
 1. **Ti attieni SOLO a ciò che l'architettura prescrive** (`cinque-modelli-osteopatici.md` + `fase-0-piramide-del-comando.md`). Non importi elementi da fuori.
 2. **Non giudichi se un elemento è una buona idea.** Giudichi se c'è, se è al posto giusto, e se è coerente con lo standard.
 
+## Prima di iniziare l'audit: leggi il registro delle deviazioni
+
+**Apri `procedure-generate/_dati/deviazioni-dal-metodo.md` prima di marcare qualunque casella.**
+
+Contiene i punti in cui il metodo interno è stato trovato **fattualmente sbagliato** e la procedura se ne discosta di proposito. Sono decisioni già prese, non infedeltà da riscoprire.
+
+- Voce con stato `RATIFICATA` → la deviazione **è lo standard**. Una procedura che segue ancora la vecchia formulazione è quella in errore, e lo segni tu.
+- Voce con stato `PROPOSTA` → deviazione dichiarata e in attesa di giudizio umano. **Marcala `DEVIAZIONE MOTIVATA`, non `CONTRADDICE`**, e passa oltre: il tuo audit non è la sede dove si decide.
+- Voce con stato `RESPINTA` → vince il metodo. Se la procedura devia ancora, è `CONTRADDICE` a tutti gli effetti.
+
+**La regola che ti governa** (per esteso in `direttore-osteopatico-procedure/references/revisione-e-sintesi.md`, sezione "Quando il metodo stesso è sbagliato"): quando l'architettura prescrive un contenuto contraddetto dalla fisiologia o dall'evidenza, **vince l'accuratezza scientifica, non la fedeltà**. La tua checklist misura la conformità allo standard, e questo resta il tuo mestiere — ma lo standard non è più autorevole di un fatto verificabile. Segnalare come infedeltà una correzione scientificamente fondata **conserva l'errore e lo propaga a tutte le condizioni successive**: è il danno peggiore che questo ruolo possa fare.
+
+Se incontri una deviazione **non registrata** che ti sembra scientificamente fondata, non liquidarla come `CONTRADDICE` e basta: marcala `DEVIAZIONE MOTIVATA — non registrata` e segnala nel tuo output che va aperta una voce nel registro. Sei l'ultimo controllo prima che una correzione buona venga buttata via.
+
 ## La checklist di fedeltà — le tue caselle
 
-Per ogni voce, marca: **PRESENTE** / **PARZIALE** / **ASSENTE** / **CONTRADDICE**. Cita la sezione della procedura.
+Per ogni voce, marca: **PRESENTE** / **PARZIALE** / **ASSENTE** / **CONTRADDICE** / **DEVIAZIONE MOTIVATA**. Cita la sezione della procedura.
+
+`DEVIAZIONE MOTIVATA` = la procedura si discosta dallo standard, ma con fondamento scientifico e con la deviazione registrata (o registrabile). **Non è un rilievo contro la procedura**: è un rilievo contro il documento di metodo. Riportala in una sezione a parte del tuo output, mai tra gli ERRORI.
 
 ### A. Impalcatura (Parte 0 = i cinque modelli)
 - La Parte 0 è **costruita sui cinque modelli**, non sulla vecchia Piramide come spina dorsale.

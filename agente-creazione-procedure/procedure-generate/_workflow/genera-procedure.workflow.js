@@ -22,6 +22,9 @@ const SK = ROOT + '/.claude/skills'
 const AUTORE = SK + '/direttore-osteopatico-procedure'
 const OUT = ROOT + '/procedure-generate'
 const DATA = OUT + '/_dati/problemi.json'
+// Registro delle deviazioni dal metodo interno: dove l'architettura e' stata trovata
+// fattualmente sbagliata, vince l'accuratezza scientifica. Trasversale a tutte le condizioni.
+const DEVIAZIONI = OUT + '/_dati/deviazioni-dal-metodo.md'
 
 // ---- RUOLI E LIVELLI DECISI DAL MANIFESTO, NON DAL CODICE ----
 // L'ESISTENZA dei revisori resta auto-scoperta dalla cartella .claude/skills.
@@ -88,6 +91,9 @@ const draftPrompt = (slug) => `Sei il **Direttore Osteopatico** di Mobilitas (Os
 1. Leggi ${AUTORE}/SKILL.md
 2. Poi leggi i reference che la SKILL indica, ALMENO: dna-editoriale.md (voce, prima di scrivere), architettura-procedura.md (struttura fissa), cinque-modelli-osteopatici.md (impalcatura Parte 0, leggila per prima) e fase-0-piramide-del-comando.md (il Motore Clinico, ragionamento implicito), ancore-verificate.md e ancore-scientifiche.md (ancora scientifica), scheda-operativa.md, integrazione-gestionale.md, sistema-libreria.md, esempio-canonico-acufeni.md SOLO per voce/ritmo (precede l'inversione: NON copiarne i claim gonfiati) ed esempio-reflusso.md (voce, caso a evidenza sottile). Sono in ${AUTORE}/references/. Per l'IMPIANTO Parte 0 allineato allo standard (cinque modelli + Motore Clinico) il modello e' ${OUT}/reflusso/procedura-reflusso.md
 
+## Precedenza scientifica — leggi PRIMA di scrivere
+Apri ${DEVIAZIONI}. Registra i punti in cui il metodo interno e' stato trovato fattualmente sbagliato, con la formulazione corretta da usare al suo posto. **L'accuratezza scientifica viene prima della fedelta' al metodo**: dove le due confliggono, scrivi la versione corretta, non quella fedele. Leggerlo ti evita di reintrodurre un errore gia' corretto su un'altra condizione. Se ne trovi uno NUOVO: correggi e apri una voce con stato PROPOSTA e la fonte; NON modificare i documenti di metodo (la ratifica e' umana).
+
 ## Dati del problema
 Apri ${DATA}, trova l'oggetto con "slug": "${slug}" e usa TUTTI i suoi campi (sintomi, soluzioni_provate, farmaci, esami_strumentali, benefici_trattamento, ads_pain_points, red_flag, meccanismo_causa, meccanismo_trattamento, obiezioni_specifiche) come materia prima. Sono la voce del paziente e del mercato: la procedura deve rispondere a quei sintomi, smontare quelle obiezioni, gestire quei red flag.
 
@@ -137,6 +143,10 @@ const secondReviewPrompt = (slug, r) => `Sei il revisore di SECONDO LIVELLO **${
 
 ## Il tuo ruolo e metodo
 Leggi e segui INTEGRALMENTE ${r.skill}/SKILL.md (e i suoi reference se ne cita). Adotta esattamente quella prospettiva, con la stessa severita.
+
+## Precedenza scientifica — vincolo che sovrascrive la fedelta' al metodo
+Apri ${DEVIAZIONI} PRIMA di formulare rilievi. Elenca i punti in cui l'architettura interna e' stata trovata fattualmente sbagliata e la procedura se ne discosta di proposito: sono decisioni prese, NON infedelta' da segnalare. Stato RATIFICATA = la deviazione e' lo standard. Stato PROPOSTA = marcala "DEVIAZIONE MOTIVATA" e passa oltre. Stato RESPINTA = vince il metodo.
+Regola generale: **quando il metodo prescrive un contenuto contraddetto dalla fisiologia o dall'evidenza, vince l'accuratezza scientifica**. Segnalare come infedelta' una correzione fondata conserva l'errore e lo propaga a tutte le condizioni successive. Se trovi una deviazione fondata ma NON registrata, marcala "DEVIAZIONE MOTIVATA — non registrata" e segnala che va aperta una voce nel registro.
 
 ## Documento da revisionare
 Leggi ${OUT}/${slug}/v2-intermedia.md e ${OUT}/${slug}/scheda-v2.md. Se non esistono, restituisci un rilievo ERRORE che dice che la v2 manca.
