@@ -4,10 +4,14 @@ Converte una procedura clinica Mobilitas da markdown a .docx.
 
 Uso:
     python build_docx.py procedura-reflusso.md "Reflusso Gastroesofageo"
-    python build_docx.py procedura-reflusso.md "Reflusso" -o /mnt/user-data/outputs/Procedura_Reflusso.docx
+    python build_docx.py scheda-reflusso.md "Reflusso Gastroesofageo" --slug reflusso-gastrico
+    python build_docx.py procedura-reflusso.md "Reflusso" -o /percorso/esplicito/Procedura_Reflusso.docx
+
+Senza -o il file finisce in <repo>/outputs/<slug>/, una sottocartella per condizione.
+Lo slug si deduce dal titolo; passa --slug per allinearlo a procedure-generate/<slug>/.
 
 Dopo la conversione verifica sempre il risultato:
-    python /mnt/skills/public/docx/scripts/office/soffice.py --headless --convert-to pdf output.docx
+    soffice --headless --convert-to pdf output.docx
     pdftoppm -jpeg -r 100 output.pdf page && ls page-*.jpg
 e poi GUARDA le immagini. Tabelle spezzate e heading persi si vedono solo così.
 """
@@ -64,17 +68,32 @@ def build(md_path: Path, titolo: str, out_path: Path) -> None:
     print("Ora renderizza il .docx in immagini e GUARDALE prima di consegnare.")
 
 
+# <repo>/.claude/skills/direttore-osteopatico-procedure/scripts/build_docx.py -> <repo>
+REPO = Path(__file__).resolve().parents[4]
+OUTPUTS = REPO / "outputs"
+
+
+def slugify(titolo: str) -> str:
+    return re.sub(r"[^a-z0-9]+", "-", titolo.lower()).strip("-")
+
+
 def main() -> None:
     p = argparse.ArgumentParser(description="Build procedura clinica Mobilitas -> docx")
     p.add_argument("markdown", type=Path, help="File markdown sorgente")
     p.add_argument("titolo", help="Nome della condizione, es. 'Reflusso Gastroesofageo'")
     p.add_argument("-o", "--output", type=Path, default=None, help="Path di output .docx")
+    p.add_argument("--slug", default=None,
+                   help="Sottocartella sotto outputs/ (default: dedotto dal titolo). "
+                        "Usa lo stesso slug di procedure-generate/<slug>/ per tenerli allineati.")
     args = p.parse_args()
 
     out = args.output
     if out is None:
-        slug = re.sub(r"[^A-Za-z0-9]+", "_", args.titolo).strip("_")
-        out = Path("/mnt/user-data/outputs") / f"Procedura_{slug}.docx"
+        # La scheda e la procedura convivono nella stessa cartella: il nome del file
+        # deve distinguerle, altrimenti la seconda conversione sovrascrive la prima.
+        nome = re.sub(r"[^A-Za-z0-9]+", "_", args.titolo).strip("_")
+        prefisso = "Scheda_Operativa" if "scheda" in args.markdown.name.lower() else "Procedura"
+        out = OUTPUTS / (args.slug or slugify(args.titolo)) / f"{prefisso}_{nome}.docx"
 
     build(args.markdown, args.titolo, out)
 

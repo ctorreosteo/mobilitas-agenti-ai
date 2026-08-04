@@ -106,14 +106,16 @@ Le procedure formano una **libreria coerente**, non documenti sparsi: nomenclatu
 
 ## Produzione del file
 
-1. Scrivi procedura e scheda in markdown in `/home/claude/procedura-<condizione>.md` e `/home/claude/scheda-<condizione>.md`.
-2. Converti entrambe con `scripts/build_docx.py` (pandoc + stili Mobilitas).
+La lavorazione sta in markdown sotto `procedure-generate/<slug>/`; i deliverable in .docx stanno sotto `outputs/<slug>/`. Una sottocartella per condizione da entrambe le parti, con lo **stesso slug**.
+
+1. Scrivi procedura e scheda in markdown in `procedure-generate/<slug>/`. Se stai lavorando dentro la catena automatica, i nomi dei file li decide il workflow: non inventarne altri.
+2. Converti entrambe con `scripts/build_docx.py` (pandoc + stili Mobilitas), passando `--slug <slug>` per allineare la cartella di output a quella di lavorazione.
 3. Renderizza in PDF/immagine e **guarda**: tabelle spezzate o heading persi si vedono solo così.
-4. Salva in `/mnt/user-data/outputs/` (`Procedura_<Condizione>.docx`, `Scheda_Operativa_<Condizione>.docx`) e presentali insieme.
+4. I file finiscono in `outputs/<slug>/` (`Procedura_<Condizione>.docx`, `Scheda_Operativa_<Condizione>.docx`): presentali insieme.
 
 ## Revisione avversariale
 
-Una procedura importante non si consegna al team senza revisione. Esistono **undici skill-revisore su tre livelli** (dichiarati nel manifesto `procedure-generate/_dati/livelli.json`): al **1º livello** specialista, medico-generale, sicurezza-tecniche, fisioterapista-ebp, compliance, neolaureato, sistema-dominante, modelli e clinico-esperto (che chiede "il paziente guarisce davvero?"); al **2º livello** fedelta-bibbia (audit di completezza sulla v2); al **3º livello** editor (asciugatura sulla v3). Girano **in chat/contesti separati e puliti**, ciascuna con obbligo di ricerca e output classificato per severità. Il metodo completo è in `references/revisione-e-sintesi.md`.
+Una procedura importante non si consegna al team senza revisione. Esistono **tredici skill-revisore su quattro livelli** (dichiarati nel manifesto `procedure-generate/_dati/livelli.json`): al **1º livello** specialista, medico-generale, sicurezza-tecniche, fisioterapista-ebp, compliance, neolaureato, sistema-dominante, modelli, neuromodulazione (meccanismo d'azione neurofisiologico) e clinico-esperto (che chiede "il paziente guarisce davvero?"); al **2º livello** fedelta-bibbia (audit di completezza sulla v2); al **3º livello** apprendimento (la procedura insegna o fa solo eseguire?); al **4º livello** editor (asciugatura, per ultimo). Girano **in chat/contesti separati e puliti**, ciascuna con obbligo di ricerca e output classificato per severità. Il metodo completo è in `references/revisione-e-sintesi.md`.
 
 Quando Carlos ti porta i verdetti dei revisori, **il tuo compito è la sintesi**: elimina i doppioni, applica il triage e restituisci la lista corta. La regola che protegge il documento: **il feedback si pesa, non si somma** — ERRORE si corregge, RISCHIO si valuta, PREFERENZA si ignora di default. Se dopo la revisione la procedura è cresciuta di oltre il 20%, hai sommato invece di pesare.
 

@@ -17,7 +17,7 @@ export const meta = {
 }
 
 // ---- percorsi (assoluti: i subagent non ereditano la working dir) ----
-const ROOT = '/Users/carlitos/Desktop/Agente-creazione-procedure'
+const ROOT = '/Users/carlitos/mobilitas-agenti-ai/agente-creazione-procedure'
 const SK = ROOT + '/.claude/skills'
 const AUTORE = SK + '/direttore-osteopatico-procedure'
 const OUT = ROOT + '/procedure-generate'
