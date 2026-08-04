@@ -4,8 +4,8 @@ description: Ciclo completo — sync, audit, aggiornamento documentazione, repor
 
 Esegui l'intero ciclo di conformità GDPR sul gestionale, nell'ordine, senza saltare passaggi.
 
-1. **`/sync`** — recupera backend e frontend in `workspace/`, prepara il branch
-   `gdpr/aggiornamento-docs`, annota i commit sha.
+1. **`/sync`** — verifica i due repository sul posto, li porta sul branch
+   `gdpr/aggiornamento-docs`, annota i commit sha e il branch di partenza dell'utente.
 2. **`/audit`** — `auditor-backend` e `auditor-frontend` in parallelo; evidenze in
    `report/evidenze/` + riconciliazione con i documenti privacy esistenti.
 3. **`/aggiorna-docs`** — allinea e mette a norma i `.md`, partendo dal registro dei trattamenti.
@@ -15,11 +15,11 @@ Esegui l'intero ciclo di conformità GDPR sul gestionale, nell'ordine, senza sal
 
 ## Controlli di sicurezza obbligatori
 
-Prima di consegnare, verifica per **ogni** repo del workspace:
+Prima di consegnare, verifica per **ogni** repository del gestionale:
 
 ```bash
-git -C workspace/<repo> diff --stat main...gdpr/aggiornamento-docs
-git -C workspace/<repo> status --short
+git -C /Users/carlitos/mobilitas-backend diff --stat main...gdpr/aggiornamento-docs
+git -C /Users/carlitos/mobilitas-backend status --short
 ```
 
 Devono comparire **solo file `.md`**. Se compare qualsiasi altra estensione, è un incidente:
@@ -31,16 +31,14 @@ ripristina il file, non committare, e segnalalo in cima al riepilogo finale.
 2. Documentazione aggiornata: tabella file → cosa è cambiato.
 3. Criticità: tabella per severità + elenco sintetico di CRITICA e ALTA.
 4. Domande al Titolare: elenco numerato.
-5. Comandi per revisionare e portare le modifiche nei repo dell'utente (il push lo fa lui):
+5. Comandi per revisionare e pubblicare (il push lo fa l'utente). Le modifiche sono già nel suo
+   repo, sul branch `gdpr/aggiornamento-docs`:
    ```bash
-   AG=/Users/carlitos/mobilitas-agenti-ai/agente-gdpr
-   git -C $AG/workspace/mobilitas-backend diff --stat main...gdpr/aggiornamento-docs
-
    cd /Users/carlitos/mobilitas-backend
-   git fetch $AG/workspace/mobilitas-backend \
-       gdpr/aggiornamento-docs:gdpr/aggiornamento-docs
-   git diff main..gdpr/aggiornamento-docs -- '*.md'
+   git diff main...gdpr/aggiornamento-docs -- '*.md'
    git push origin gdpr/aggiornamento-docs
+   git checkout main          # per tornare al proprio lavoro
    ```
-   Idem per `mobilitas-frontend`. Il push dalla copia di lavoro è disabilitato.
-6. Promemoria: **nessuna riga di codice è stata modificata**.
+   Idem per `mobilitas-frontend`.
+6. **Su quale branch era l'utente** prima di `/sync`, in ciascun repo, così può tornarci.
+7. Promemoria: **nessuna riga di codice è stata modificata**.

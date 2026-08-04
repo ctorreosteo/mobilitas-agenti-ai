@@ -1,15 +1,14 @@
 {
-  "$commento": "Recupero del gestionale. mode=local-git (default): git clone dal repo locale, copia indipendente con storia git, nessuna credenziale richiesta, l'originale non viene toccato. mode=remote: git clone da GitHub, richiede credenziali (i repo sono privati). mode=local-copy: rsync della working tree, include anche le modifiche non ancora committate. In ogni caso si lavora SOLO dentro workspace/.",
-  "mode": "local-git",
+  "$commento": "L'agente lavora DIRETTAMENTE nei repository del gestionale indicati in 'path'. Nessuna copia, nessun clone: i .md vengono modificati nelle cartelle reali, su un branch dedicato ('branchLavoro') così che le modifiche restino revisionabili e reversibili. Il codice non viene mai toccato: lo impongono gli hook in .claude/hooks/.",
   "branchLavoro": "gdpr/aggiornamento-docs",
   "repos": [
     {
       "nome": "mobilitas-backend",
       "ruolo": "backend",
       "descrizione": "Gestionale MobilitasHQ — Java 21, Spring Boot 3.4, PostgreSQL/Cloud SQL, Flyway, JWT, Cloud Run",
+      "path": "/Users/carlitos/mobilitas-backend",
       "remote": "https://github.com/ctorreosteo/mobilitas.git",
       "branch": "main",
-      "localPath": "/Users/carlitos/mobilitas-backend",
       "docsRoot": "docs",
       "privacyRoot": "docs/privacy"
     },
@@ -17,9 +16,9 @@
       "nome": "mobilitas-frontend",
       "ruolo": "frontend",
       "descrizione": "Frontend gestionale — React + Vite + TypeScript, Firebase Hosting",
+      "path": "/Users/carlitos/mobilitas-frontend",
       "remote": "https://github.com/ctorreosteo/mobilitas-frontend.git",
       "branch": "main",
-      "localPath": "/Users/carlitos/mobilitas-frontend",
       "docsRoot": "docs",
       "privacyRoot": "docs/privacy"
     }

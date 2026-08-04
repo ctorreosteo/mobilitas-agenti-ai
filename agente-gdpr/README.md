@@ -1,11 +1,19 @@
 # agente-gdpr — Conformità GDPR di MobilitasHQ
 
-Agente Claude Code che **recupera** backend e frontend del gestionale MobilitasHQ,
-ne verifica la conformità al GDPR, **aggiorna la documentazione Markdown** perché sia a norma
-e **segnala in un file MD separato** tutto ciò che manca da implementare.
+Agente Claude Code che analizza backend e frontend del gestionale MobilitasHQ, ne verifica la
+conformità al GDPR, **aggiorna la documentazione Markdown** perché sia a norma e **segnala in un
+file MD separato** tutto ciò che manca da implementare.
 
-> **Non modifica in alcun modo il codice.** Solo file `.md` e report. Un hook di sicurezza
-> blocca a livello di harness qualsiasi scrittura su file di codice.
+> **Non modifica in alcun modo il codice.** Solo file `.md` e report. Due hook di sicurezza
+> bloccano a livello di harness qualsiasi scrittura su file di codice.
+
+L'agente lavora **direttamente nei repository reali**, sul posto:
+
+- `/Users/carlitos/mobilitas-backend`
+- `/Users/carlitos/mobilitas-frontend`
+
+Nessuna copia, nessun clone: i `.md` aggiornati compaiono già nei tuoi repo, su un branch
+dedicato che puoi revisionare e pubblicare tu.
 
 ---
 
@@ -23,7 +31,7 @@ claude
 Poi, in sessione:
 
 ```
-/sync              # clona/aggiorna backend e frontend in workspace/
+/sync              # verifica i repo e li porta sul branch di lavoro
 /audit             # analizza il codice ed estrae le evidenze privacy
 /aggiorna-docs     # allinea e mette a norma i .md del gestionale
 /report            # scrive report/CRITICITA-GDPR.md
@@ -42,13 +50,10 @@ Oppure tutto in una volta:
 ```
 agente-gdpr/
 ├── CLAUDE.md                 # istruzioni permanenti dell'agente (regole + metodo)
-├── config/repos.json         # quali repo recuperare e come
+├── config/repos.json         # dove stanno i repo e qual è il branch di lavoro
 ├── scripts/
-│   ├── sync-repos.sh         # clone/fetch dei repo nel workspace (mai distruttivo)
+│   ├── prepara-repos.sh      # verifica i repo e prepara il branch (non clona, non pulla)
 │   └── test-hooks.py         # verifica che le protezioni siano attive
-├── workspace/                # copie di lavoro (git-ignored) — SOLA LETTURA tranne i .md
-│   ├── mobilitas-backend/
-│   └── mobilitas-frontend/
 ├── report/
 │   ├── CRITICITA-GDPR.md     # ⬅ output principale: cosa manca da implementare
 │   └── evidenze/             # tracce grezze dell'audit (file:riga)
@@ -60,77 +65,68 @@ agente-gdpr/
     └── commands/             # /sync /audit /aggiorna-docs /report /tutto
 ```
 
-## Cosa recupera
+## Su cosa lavora
 
 Da `config/repos.json` (modificabile):
 
-| Repo | Ruolo | Origine |
-|------|-------|---------|
-| `mobilitas-backend` | backend gestionale (Java 21 / Spring Boot / PostgreSQL) | `https://github.com/ctorreosteo/mobilitas.git` |
-| `mobilitas-frontend` | frontend gestionale (React + Vite + TS) | `https://github.com/ctorreosteo/mobilitas-frontend.git` |
+| Repo | Ruolo | Percorso |
+|------|-------|----------|
+| `mobilitas-backend` | backend gestionale (Java 21 / Spring Boot / PostgreSQL) | `/Users/carlitos/mobilitas-backend` |
+| `mobilitas-frontend` | frontend gestionale (React + Vite + TS) | `/Users/carlitos/mobilitas-frontend` |
 
-Modalità di recupero, in `config/repos.json` → `mode`:
+L'audit analizza lo **stato attuale della tua working tree**, incluse le modifiche non ancora
+committate: è il codice vero, non un'istantanea.
 
-| Modalità | Cosa fa | Quando usarla |
-|----------|---------|---------------|
-| `local-git` **(default)** | `git clone` dal repo locale: copia indipendente con storia git, **originale mai toccato**, nessuna credenziale richiesta | uso normale |
-| `remote` | `git clone` da GitHub | da un'altra macchina o per lavorare sull'ultimo `origin/main`; i repo sono **privati**, serve autenticazione (chiave SSH o `gh auth login`) |
-| `local-copy` | snapshot `rsync` della working tree | quando vuoi auditare anche le **modifiche non ancora committate** |
+`/sync` **non** esegue clone, fetch, pull, push o reset. Si limita a verificare i repo e a
+portarli sul branch `gdpr/aggiornamento-docs`. Se hai modifiche non committate si **ferma** e te
+le elenca, senza toccarle: sei tu a decidere se committarle o metterle da parte. Ti ricorda
+anche su quale branch eri, per tornarci.
 
-In `local-git` l'audit analizza lo **stato committato**: se il repo di origine ha modifiche
-pendenti, lo script te lo dice.
+## Come revisionare e pubblicare le modifiche ai `.md`
 
-Il sync è **idempotente e non distruttivo**: se la copia di lavoro ha modifiche non committate,
-lo script le elenca e si ferma su quel repo invece di sovrascriverle. In `local-copy` il nuovo
-snapshot viene portato sul branch di documentazione con un merge, così i `.md` già scritti
-restano; un eventuale conflitto viene segnalato e il merge annullato.
-
-## Come arrivano nei tuoi repo le modifiche ai `.md`
-
-L'agente lavora sul branch `gdpr/aggiornamento-docs` dentro `workspace/`, **non pusha mai** e il
-push dalla copia di lavoro è disabilitato. Per portarti le modifiche:
+Le modifiche sono già nel tuo repo, sul branch `gdpr/aggiornamento-docs`. L'agente **non pusha
+mai**:
 
 ```bash
-AG=/Users/carlitos/mobilitas-agenti-ai/agente-gdpr
+cd /Users/carlitos/mobilitas-backend
 
 # 1. revisiona il diff (devono comparire solo file .md)
-git -C $AG/workspace/mobilitas-backend diff --stat main...gdpr/aggiornamento-docs
+git diff main...gdpr/aggiornamento-docs --stat
+git diff main...gdpr/aggiornamento-docs -- '*.md'
 
-# 2. porta il branch nel tuo repo
-cd /Users/carlitos/mobilitas-backend
-git fetch $AG/workspace/mobilitas-backend \
-    gdpr/aggiornamento-docs:gdpr/aggiornamento-docs
-git diff main..gdpr/aggiornamento-docs -- '*.md'
-
-# 3. se ti convince, pubblichi tu
+# 2. se ti convince, pubblichi tu
 git push origin gdpr/aggiornamento-docs
+
+# 3. per tornare al tuo lavoro
+git checkout main
 ```
 
-Stessa procedura per `mobilitas-frontend`.
+Stessa procedura per `mobilitas-frontend`. Se il diff mostra un file che non è `.md`, è un
+incidente: segnalalo e ripristinalo con `git checkout main -- <file>`.
 
 ## Garanzie di sicurezza
 
-1. **Hook `PreToolUse`** su `Write|Edit|MultiEdit|NotebookEdit`: lavora a *whitelist* — consente
-   solo `.md` dentro `workspace/` e qualunque file dentro `agente-gdpr/`. Tutto il resto,
-   percorsi relativi e `..` inclusi, è bloccato.
-2. **Hook `PreToolUse` su Bash**: chiude le vie laterali — `git push`, `git clean`,
-   `git remote set-url`, riscritture in-place (`sed -i`, `perl -i`, `awk -i inplace`, `patch`,
-   `git apply`, `ed`), redirezioni (`>`, `>>`, `>|`, `tee`), comandi mutanti
-   (`rm`, `mv`, `cp`, `ln`, `chmod`, `dd`…), `find -delete`/`-exec`, e **codice inline di
-   interpreti** (`python -c`, `node -e`, heredoc, `ruby`, `perl`, `php`) con intento di
-   scrittura. Vale anche per i percorsi nudi, quando la shell è già dentro `workspace/`.
-3. **Deny list** in `.claude/settings.json` sulle estensioni di codice (difesa ridondante).
-4. **Sync non distruttivo**: `sync-repos.sh` rifiuta di operare su una copia di lavoro con
-   modifiche non committate e non esegue mai `reset --hard` sul branch di documentazione.
-   A fine sync verifica che il branch di lavoro tocchi **solo** file `.md` e, in caso
-   contrario, segnala un incidente ed esce con codice ≠ 0.
+1. **Hook `PreToolUse`** su `Write|Edit|MultiEdit|NotebookEdit`: lavora a *whitelist* — nei due
+   repository consente **solo** i `.md`, dentro `agente-gdpr/` consente tutto, altrove blocca.
+   Percorsi relativi e `..` vengono risolti prima del controllo. Se `config/repos.json` è
+   illeggibile fallisce **chiuso**.
+2. **Hook `PreToolUse` su Bash**: chiude le vie laterali — riscritture in-place (`sed -i`,
+   `perl -i`, `awk -i inplace`, `patch`, `git apply`, `ed`), redirezioni (`>`, `>>`, `>|`,
+   `tee`), comandi mutanti (`rm`, `mv`, `cp`, `ln`, `chmod`, `dd`…), `find -delete`/`-exec` e
+   **codice inline di interpreti** (`python -c`, `node -e`, heredoc, `ruby`, `perl`, `php`) con
+   intento di scrittura. Vale anche per i percorsi nudi, quando la shell è già dentro un repo.
+3. **Protezione del tuo lavoro in corso** — poiché l'agente opera nei repo che usi davvero,
+   l'hook Bash blocca anche `git push`, `reset --hard`, `clean`, `stash`, `rebase`,
+   `commit --amend`, `cherry-pick`, `branch -D`, `commit -a` (rastrellerebbe le tue modifiche
+   in un commit di documentazione) e `git add` non filtrato sui `.md`.
+4. **Deny list** in `.claude/settings.json` sulle estensioni di codice (difesa ridondante).
 5. **Regola prima in `CLAUDE.md`**: le criticità del codice si *segnalano*, non si correggono.
 
-Le protezioni 1 e 2 sono coperte da una suite di test (67 casi: blocchi attesi **e** falsi
+Le protezioni 1-3 sono coperte da una suite di test (84 casi: blocchi attesi **e** falsi
 positivi sul flusso legittimo di lavoro):
 
 ```bash
 ./scripts/test-hooks.py
 ```
 
-Va rieseguita dopo ogni modifica agli hook.
+Va rieseguita dopo ogni modifica agli hook o ai percorsi in `config/repos.json`.

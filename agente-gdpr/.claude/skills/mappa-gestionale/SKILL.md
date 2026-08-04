@@ -5,10 +5,10 @@ description: Mappa di orientamento nei due repository del gestionale MobilitasHQ
 
 # Dove sta cosa in MobilitasHQ
 
-Tutto il lavoro avviene su `workspace/mobilitas-backend` e `workspace/mobilitas-frontend`.
+Tutto il lavoro avviene su `/Users/carlitos/mobilitas-backend` e `/Users/carlitos/mobilitas-frontend`.
 Escludi sempre da ricerche e conteggi: `node_modules/`, `target/`, `dist/`, `.venv/`, `build/`, `.git/`.
 
-## Backend — `workspace/mobilitas-backend`
+## Backend — `/Users/carlitos/mobilitas-backend`
 
 Stack: Java 21 · Spring Boot 3.4 · PostgreSQL/Cloud SQL · Flyway · JWT · Cloud Run.
 Package radice: `it.mobilitas.hq` in `src/main/java/it/mobilitas/hq/`.
@@ -39,7 +39,7 @@ Package radice: `it.mobilitas.hq` in `src/main/java/it/mobilitas/hq/`.
 ### Comandi utili (sola lettura)
 
 ```bash
-WS=workspace/mobilitas-backend
+WS=/Users/carlitos/mobilitas-backend
 rg -n "class .*Entity|@Entity" $WS/src/main/java --glob '!target'      # entità
 rg -n "@RestController|@RequestMapping" $WS/src/main/java              # endpoint
 rg -n "@Scheduled|@EnableScheduling" $WS/src/main/java                 # job
@@ -49,7 +49,7 @@ rg -n "RestTemplate|WebClient|HttpClient|api\.|https://" $WS/src/main/java | rg 
 rg -n "delete|purge|cleanup|retention|scadenza" $WS/src/main/java -i
 ```
 
-## Frontend — `workspace/mobilitas-frontend`
+## Frontend — `/Users/carlitos/mobilitas-frontend`
 
 Stack: React + Vite + TypeScript, Firebase Hosting.
 
@@ -69,7 +69,7 @@ Stack: React + Vite + TypeScript, Firebase Hosting.
 ### Comandi utili (sola lettura)
 
 ```bash
-WS=workspace/mobilitas-frontend
+WS=/Users/carlitos/mobilitas-frontend
 rg -n "localStorage|sessionStorage|document.cookie" $WS/src
 rg -n "console\.(log|debug|info)" $WS/src | rg -i "paziente|cartella|anamnesi|token|email|telefono"
 rg -n "VITE_[A-Z_]+" $WS/src $WS/.env.example 2>/dev/null

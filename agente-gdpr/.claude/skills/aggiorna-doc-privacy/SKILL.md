@@ -1,12 +1,15 @@
 ---
 name: aggiorna-doc-privacy
-description: Come aggiornare e mettere a norma i file Markdown del gestionale MobilitasHQ — quali documenti toccare, quali creare, stile e intestazioni da rispettare, come inserire i riferimenti normativi, come marcare ciò che non è verificabile. Usa questa skill ogni volta che stai per scrivere o modificare un .md dentro workspace/.
+description: Come aggiornare e mettere a norma i file Markdown del gestionale MobilitasHQ — quali documenti toccare, quali creare, stile e intestazioni da rispettare, come inserire i riferimenti normativi, come marcare ciò che non è verificabile. Usa questa skill ogni volta che stai per scrivere o modificare un .md nei repository del gestionale.
 ---
 
 # Aggiornare la documentazione perché sia a norma
 
-Si modificano **solo file `.md`**, solo dentro `workspace/`, solo sul branch
+Si modificano **solo file `.md`**, solo dentro i repository del gestionale
+(`/Users/carlitos/mobilitas-backend`, `/Users/carlitos/mobilitas-frontend`), solo sul branch
 `gdpr/aggiornamento-docs`. Nessun file di codice, in nessuna circostanza.
+
+Sono i repository di lavoro dell'utente: non toccare mai il suo lavoro non committato.
 
 ## Principio guida
 
@@ -75,7 +78,7 @@ Hub tecnico: [docs/README.md](../README.md). <altri link pertinenti>
 
 ## Frontend
 
-Se `workspace/mobilitas-frontend/docs/privacy/` non esiste, crealo con un `README.md` che rimanda
+Se `/Users/carlitos/mobilitas-frontend/docs/privacy/` non esiste, crealo con un `README.md` che rimanda
 alla documentazione privacy del backend (fonte unica) e contenga solo ciò che è specifico del
 client: storage locale, token, script di terze parti, dati mostrati per ruolo, cookie.
 Aggiorna anche l'hub `docs/README.md` del frontend.
@@ -93,13 +96,16 @@ Aggiorna anche l'hub `docs/README.md` del frontend.
 
 ## Chiusura del lavoro
 
-Al termine, in `workspace/<repo>`:
+Al termine, nel repository toccato:
 
 ```bash
-git add -A ':(glob)**/*.md'
-git status --short          # deve contenere SOLO file .md
+git add -A ':(glob)**/*.md'   # il filtro è obbligatorio: 'git add -A' nudo è bloccato dall'hook
+git status --short            # deve contenere SOLO file .md
 git commit -m "docs(privacy): allineamento GDPR <AAAA-MM-GG>"
 ```
+
+Mai `git commit -a`: rastrellerebbe le modifiche in corso dell'utente dentro un commit di
+documentazione.
 
 Se `git status` mostra un file non `.md`, **fermati**: qualcosa ha modificato il codice.
 Ripristinalo con `git checkout -- <file>` e segnala l'accaduto all'utente.

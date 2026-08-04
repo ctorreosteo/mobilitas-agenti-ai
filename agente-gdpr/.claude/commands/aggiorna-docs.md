@@ -9,7 +9,8 @@ Segui la skill `aggiorna-doc-privacy`.
 **Precondizione**: `report/evidenze/` popolato da `/audit`. Se è vuoto, esegui prima `/audit`:
 non si scrive documentazione privacy senza evidenze.
 
-**Si modificano solo file `.md` dentro `workspace/`, sul branch `gdpr/aggiornamento-docs`.**
+**Si modificano solo file `.md` dentro i due repository del gestionale, sul branch
+`gdpr/aggiornamento-docs`.**
 
 ## Procedura
 
@@ -30,13 +31,13 @@ non si scrive documentazione privacy senza evidenze.
    criticità emerse: serviranno a `/report`.
 5. Lancia `revisore-gdpr` sui documenti modificati. Correggi i **bloccanti** tramite
    `redattore-doc` prima di chiudere.
-6. Committa nel workspace, per ogni repo toccato:
+6. Committa, per ogni repo toccato:
    ```bash
-   git add -A ':(glob)**/*.md'
+   git add -A ':(glob)**/*.md'    # il filtro sui .md è obbligatorio: l'hook rifiuta 'git add -A'
    git status --short
    git commit -m "docs(privacy): allineamento GDPR <AAAA-MM-GG>"
    ```
-   **Nessun push.**
+   **Nessun push.** Mai `git commit -a`: rastrellerebbe le modifiche in corso dell'utente.
 
 ## Chiusura
 
@@ -44,5 +45,5 @@ Riporta all'utente:
 - tabella dei `.md` creati/modificati con una riga di descrizione;
 - numero di punti lasciati aperti `[DA VERIFICARE]` / `[DA COMPILARE]`;
 - il comando per revisionare il diff:
-  `git -C workspace/<repo> diff main...gdpr/aggiornamento-docs -- '*.md'`;
+  `git -C /Users/carlitos/mobilitas-backend diff main...gdpr/aggiornamento-docs -- '*.md'`;
 - promemoria: le criticità non risolvibili con la documentazione vanno in `/report`.

@@ -1,10 +1,15 @@
 #!/usr/bin/env python3
 """Hook PreToolUse — impedisce all'agente GDPR di modificare il codice del gestionale.
 
-Regole:
-  * dentro workspace/  → consentiti SOLO i file .md
-  * dentro agente-gdpr/ (fuori da workspace/) → tutto consentito (report, config, appunti)
-  * fuori dalla cartella dell'agente → consentito solo lo scratchpad temporaneo
+L'agente lavora DIRETTAMENTE nei repository reali (config/repos.json → "path"),
+quindi la protezione non può più essere "non scrivere fuori da casa tua": deve
+distinguere, dentro i repo dell'utente, i Markdown da tutto il resto.
+
+Regole (whitelist):
+  * dentro un repo del gestionale  → consentiti SOLO i file .md
+  * dentro agente-gdpr/            → tutto consentito (report, config, appunti)
+  * scratchpad temporaneo          → consentito
+  * qualunque altro percorso       → bloccato
 
 Uscita 2 = operazione bloccata; il messaggio su stderr torna al modello.
 """
@@ -14,13 +19,30 @@ import sys
 from pathlib import Path
 
 AGENT_ROOT = Path(__file__).resolve().parents[2]
-WORKSPACE = AGENT_ROOT / "workspace"
+CONFIG = AGENT_ROOT / "config" / "repos.json"
 TMP_OK = ("/tmp/", "/private/tmp/", "/var/folders/")
 
 
 def blocca(msg: str) -> None:
     sys.stderr.write(msg)
     sys.exit(2)
+
+
+def repos_gestionale():
+    """Percorsi dei repository del gestionale. None se la config è illeggibile."""
+    try:
+        dati = json.loads(CONFIG.read_text(encoding="utf-8"))
+    except Exception:
+        return None
+    percorsi = []
+    for r in dati.get("repos", []):
+        p = r.get("path")
+        if p:
+            try:
+                percorsi.append(str(Path(p).expanduser().resolve()))
+            except Exception:
+                percorsi.append(os.path.abspath(os.path.expanduser(p)))
+    return percorsi or None
 
 
 def main() -> None:
@@ -50,30 +72,44 @@ def main() -> None:
 
     s = str(path)
     is_md = path.suffix.lower() in (".md", ".markdown")
+    dentro_agente = s == str(AGENT_ROOT) or s.startswith(str(AGENT_ROOT) + os.sep)
 
-    if s.startswith(str(WORKSPACE) + os.sep):
-        if is_md:
+    repos = repos_gestionale()
+    if repos is None:
+        # fail closed: senza config non so quali repo proteggere
+        if dentro_agente or any(s.startswith(p) for p in TMP_OK):
             sys.exit(0)
         blocca(
-            f"🚫 BLOCCATO — stavi per scrivere su un file del gestionale che non è Markdown:\n"
-            f"   {s}\n\n"
-            "L'agente GDPR non modifica MAI il codice: dentro workspace/ sono consentiti solo i file .md.\n"
-            "Azione corretta: NON tentare vie alternative (sed, redirezioni, patch). "
-            "Registra il problema come criticità in report/CRITICITA-GDPR.md, indicando file:riga, "
-            "articolo GDPR violato, rischio e intervento suggerito, e lascia che sia l'utente a "
-            "decidere se implementarlo.\n"
+            "🚫 BLOCCATO — config/repos.json illeggibile: non posso sapere quali repository\n"
+            "   proteggere, quindi consento scritture solo dentro la cartella dell'agente.\n"
+            f"   percorso richiesto: {s}\n"
         )
 
-    if s.startswith(str(AGENT_ROOT) + os.sep) or s == str(AGENT_ROOT):
+    for repo in repos:
+        if s == repo or s.startswith(repo + os.sep):
+            if is_md:
+                sys.exit(0)
+            blocca(
+                f"🚫 BLOCCATO — stavi per scrivere su un file del gestionale che non è Markdown:\n"
+                f"   {s}\n\n"
+                "L'agente GDPR non modifica MAI il codice: nei repository del gestionale sono\n"
+                "consentiti solo i file .md.\n"
+                "Azione corretta: NON tentare vie alternative (sed, redirezioni, patch, python -c). "
+                "Registra il problema come criticità in report/CRITICITA-GDPR.md, indicando file:riga, "
+                "articolo GDPR violato, rischio e intervento suggerito, e lascia che sia l'utente a "
+                "decidere se implementarlo.\n"
+            )
+
+    if dentro_agente:
         sys.exit(0)
 
     if any(s.startswith(p) for p in TMP_OK):
         sys.exit(0)
 
     blocca(
-        f"🚫 BLOCCATO — scrittura fuori dalla cartella dell'agente:\n   {s}\n\n"
-        f"L'agente GDPR scrive solo dentro {AGENT_ROOT} (e file .md dentro workspace/).\n"
-        "I repository locali dell'utente non vanno toccati: usa le copie in workspace/.\n"
+        f"🚫 BLOCCATO — scrittura fuori dal perimetro consentito:\n   {s}\n\n"
+        f"L'agente GDPR scrive solo dentro {AGENT_ROOT}\n"
+        "e, limitatamente ai file .md, dentro i repository elencati in config/repos.json.\n"
     )
 
 

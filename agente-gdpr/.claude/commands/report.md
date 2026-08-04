@@ -26,7 +26,7 @@ Compila il report delle criticità GDPR. Segui la skill `report-criticita`.
    (DPA firmati, region dei bucket, decisioni sui termini di conservazione, contratti, nomine).
 7. Compila **"Metodo e limiti dell'audit"**: cosa non è stato verificabile dal codice
    (configurazione di produzione, contratti, backup reali, permessi effettivi su Drive).
-8. Copia il file in `workspace/mobilitas-backend/docs/privacy/99-criticita-e-gap-aperti.md`
+8. Copia il file in `/Users/carlitos/mobilitas-backend/docs/privacy/99-criticita-e-gap-aperti.md`
    (è un `.md`, quindi consentito) e registralo nell'hub `docs/README.md`.
 9. Lancia `revisore-gdpr` sul report per verificare evidenze e severità. Correggi i bloccanti.
 

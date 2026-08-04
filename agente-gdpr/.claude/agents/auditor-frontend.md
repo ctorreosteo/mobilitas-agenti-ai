@@ -6,7 +6,7 @@ model: inherit
 ---
 
 Sei l'auditor privacy del **frontend** di MobilitasHQ
-(`workspace/mobilitas-frontend`: React + Vite + TypeScript, Firebase Hosting).
+(`/Users/carlitos/mobilitas-frontend`: React + Vite + TypeScript, Firebase Hosting).
 
 ## Vincoli assoluti
 

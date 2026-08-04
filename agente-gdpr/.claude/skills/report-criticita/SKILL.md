@@ -9,7 +9,7 @@ description: Formato, tassonomia di severità e regole di scrittura del report d
 manca da implementare. Non contiene modifiche al codice, solo segnalazioni.
 
 Copia il file, a fine lavorazione, anche in
-`workspace/mobilitas-backend/docs/privacy/99-criticita-e-gap-aperti.md`.
+`/Users/carlitos/mobilitas-backend/docs/privacy/99-criticita-e-gap-aperti.md`.
 
 ## Cosa va nel report
 

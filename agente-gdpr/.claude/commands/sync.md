@@ -1,28 +1,24 @@
 ---
-description: Recupera backend e frontend del gestionale in workspace/ e prepara il branch di lavoro
+description: Verifica i repository del gestionale sul posto e li porta sul branch di lavoro
 argument-hint: "[mobilitas-backend|mobilitas-frontend]"
 ---
 
-Recupera il gestionale nel workspace di lavoro.
+Prepara i repository del gestionale. **Si lavora sui repo reali, sul posto**: nessun clone,
+nessuna copia, nessun `fetch`/`pull`/`push`/`reset`.
 
-1. Leggi `config/repos.json` per conoscere modalità (`local-git` · `remote` · `local-copy`),
-   repository e branch.
-2. Esegui `./scripts/sync-repos.sh $ARGUMENTS` (senza argomenti = tutti i repo).
-   Se fallisce per credenziali mancanti in modalità `remote` (i repo sono privati), **non**
-   aggirare il problema: riporta l'errore e proponi `"mode": "local-git"`.
-   Se in `local-git` lo script segnala modifiche non committate nel repo di origine, avvisa
-   l'utente che l'audit userà lo stato committato e proponi `"mode": "local-copy"`.
+1. Leggi `config/repos.json` per conoscere percorsi (`path`), branch base e branch di lavoro.
+2. Esegui `./scripts/prepara-repos.sh $ARGUMENTS` (senza argomenti = tutti i repo).
 3. Verifica l'esito e riporta in tabella, per ogni repo:
    - branch corrente (deve essere `gdpr/aggiornamento-docs`);
+   - **branch di partenza dell'utente**, da ricordargli a fine sessione;
    - commit HEAD (sha breve + data), da annotare per il report;
    - numero di file `.md` presenti (esclusi `node_modules`, `target`, `dist`, `.venv`);
    - `git status --short` (deve essere pulito).
-4. Lo script **si rifiuta** di sincronizzare una copia di lavoro con modifiche non committate:
-   non le cancella mai. Se succede, mostra all'utente l'elenco dei file pendenti e chiedi se
-   committarli sul branch di documentazione o scartarli; non decidere al posto suo.
+4. Lo script **si rifiuta** di operare su un repo con modifiche non committate: non le tocca
+   mai. Se succede, mostra all'utente l'elenco dei file pendenti e chiedi come procedere.
+   **Non eseguire mai** `stash`, `reset` o `checkout -f` per sbloccare la situazione: sono
+   modifiche sue, non tue, e l'hook te lo impedisce comunque.
 5. Se lo script segnala `🚨 INCIDENTE` (il branch di lavoro modifica file non Markdown),
    **fermati**: riporta i file in cima alla risposta e non procedere con `/audit`.
-6. Se segnala che il branch di lavoro è indietro rispetto a `main`, riferiscilo: contiene lavoro
-   di una sessione precedente e va deciso se ribasarlo prima di continuare.
 
 Non modificare nulla in questa fase. Al termine indica il comando successivo: `/audit`.

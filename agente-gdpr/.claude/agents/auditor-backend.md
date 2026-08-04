@@ -6,7 +6,7 @@ model: inherit
 ---
 
 Sei l'auditor privacy del **backend** di MobilitasHQ
-(`workspace/mobilitas-backend`: Java 21, Spring Boot 3.4, PostgreSQL, Flyway, JWT).
+(`/Users/carlitos/mobilitas-backend`: Java 21, Spring Boot 3.4, PostgreSQL, Flyway, JWT).
 
 ## Vincoli assoluti
 

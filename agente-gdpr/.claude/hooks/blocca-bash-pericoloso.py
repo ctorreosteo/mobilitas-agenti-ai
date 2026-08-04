@@ -1,38 +1,48 @@
 #!/usr/bin/env python3
 """Hook PreToolUse su Bash — chiude le vie laterali per modificare il codice.
 
-L'hook su Write|Edit lavora a whitelist ed è la difesa primaria; questo copre Bash,
-dove la scrittura può avvenire in molti modi indiretti.
+L'agente lavora direttamente nei repository reali dell'utente (config/repos.json →
+"path"): oltre alle scritture, qui vanno fermati anche i comandi git che
+distruggerebbero lavoro non suo (reset --hard, clean, stash, rebase, amend) e
+quelli che rastrellerebbero le sue modifiche in corso dentro un commit di
+documentazione (commit -a, add -A senza filtro sui .md).
 
 Blocca:
-  * git push / git clean / git remote set-url --push (nessuna pubblicazione, nessuna pulizia)
-  * riscritture in-place (sed -i, perl -i, awk -i inplace, patch, git apply, ed, ex, vi/vim -c)
-  * interpreti che eseguono codice inline o heredoc con intento di scrittura
-    (python, node, deno, bun, ruby, perl, php, osascript)
-  * redirezioni  >  >>  >|  o `tee` verso file non .md dentro workspace/
-  * rm / mv / cp / ln / chmod / truncate / dd … su file non .md dentro workspace/
-  * find … -delete / -exec su workspace/
+  * git push / clean / stash / rebase / reset --hard / commit --amend / branch -D
+    / filter-branch / update-ref / worktree / reflog / remote set-url
+  * git commit -a|--all   e   git add senza alcun riferimento a .md
+  * riscritture in-place (sed -i, perl -i, awk -i inplace, patch, git apply, ed, ex, vi -c)
+  * interpreti con codice inline o heredoc e intento di scrittura
+    (python -c, node -e, ruby, perl, php, osascript, heredoc)
+  * redirezioni  >  >>  >|  o `tee` verso file non .md del gestionale
+  * rm / mv / cp / ln / chmod / truncate / dd … su file non .md del gestionale
+  * find … -delete / -exec sul gestionale
 
-Quando la shell si trova già dentro workspace/ valgono anche i percorsi nudi,
-non solo quelli che contengono la stringa "workspace/".
-
+Vale anche per i percorsi nudi, quando la shell è già dentro un repo del gestionale.
 Uscita 2 = comando bloccato.
 """
 import json
+import os
 import re
 import sys
+from pathlib import Path
 
+AGENT_ROOT = Path(__file__).resolve().parents[2]
+CONFIG = AGENT_ROOT / "config" / "repos.json"
 MD_EXT = (".md", ".markdown")
 
-GIT_PUSH = re.compile(
-    r"\bgit\s+(?:(?:-c|-C|--git-dir|--work-tree|--exec-path)(?:=\S+|\s+\S+)\s+)*push\b"
+G = r"\bgit\s+(?:(?:-c|-C|--git-dir|--work-tree|--exec-path)(?:=\S+|\s+\S+)\s+)*"
+
+GIT_PUSH = re.compile(G + r"push\b")
+GIT_DISTRUTTIVI = re.compile(
+    G + r"(?:clean|stash|rebase|filter-branch|update-ref|worktree|reflog"
+        r"|remote\s+set-url|cherry-pick|revert)\b"
 )
-GIT_CLEAN = re.compile(
-    r"\bgit\s+(?:(?:-c|-C|--git-dir|--work-tree|--exec-path)(?:=\S+|\s+\S+)\s+)*clean\b"
-)
-GIT_SET_URL = re.compile(
-    r"\bgit\s+(?:(?:-c|-C|--git-dir|--work-tree|--exec-path)(?:=\S+|\s+\S+)\s+)*remote\s+set-url\b"
-)
+GIT_RESET_DURO = re.compile(G + r"reset\b[^;&|]*--(?:hard|merge|keep)\b")
+GIT_AMEND = re.compile(G + r"commit\b[^;&|]*--amend\b")
+GIT_COMMIT_TUTTO = re.compile(G + r"commit\b[^;&|]*(?:\s--all\b|\s-[a-zA-Z]*a[a-zA-Z]*\b)")
+GIT_BRANCH_DEL = re.compile(G + r"branch\b[^;&|]*\s-[dD]\b")
+GIT_ADD = re.compile(G + r"add\b")
 
 INPLACE = re.compile(
     r"\b(?:sed\s+(?:-[a-zA-Z]*\s+)*-i"
@@ -49,7 +59,6 @@ INTERPRETE = re.compile(
     r"[^;&|]*?(?:\s-[ecprE]\b|\seval\b|<<)"
 )
 
-# indizi di scrittura dentro il codice inline di un interprete
 SCRITTURA = re.compile(
     r"""(?x)
       \b(?:writeFile|appendFile|createWriteStream|copyFile|truncate
@@ -69,61 +78,76 @@ MUTANTI = re.compile(
 FIND_DISTRUTTIVO = re.compile(r"\bfind\b[^;&|]*?(?:-delete\b|-exec\b)")
 
 REDIR = re.compile(r">\|?>?\s*([^\s;|&<>]+)")
-TOKEN_WS = re.compile(r"[^\s;|&'\"]*workspace/[^\s;|&'\"]*")
-CD_WS = re.compile(r"\bcd\s+[^\s;&|]*workspace(?:/|\s|$)")
 NAVIGAZIONE = re.compile(r"\b(?:cd|pushd|git\s+-C)\s+[^\s;&|]+")
-
-# token che sembra un percorso di file: ha un'estensione breve oppure contiene "/"
 ESTENSIONE = re.compile(r"\.[A-Za-z0-9]{1,8}$")
-TOKEN_NUDO = re.compile(r"[^\s;|&'\"<>]+")
+TOKEN = re.compile(r"[^\s;|&'\"<>]+")
 
 
 def blocca(motivo: str, comando: str) -> None:
     sys.stderr.write(
         f"🚫 BLOCCATO — {motivo}\n"
         f"   comando: {comando.strip()[:300]}\n\n"
-        "L'agente GDPR non modifica il codice del gestionale e non pubblica nulla.\n"
-        "Non cercare vie alternative: se il problema è reale va scritto in\n"
-        "report/CRITICITA-GDPR.md (file:riga, articolo GDPR, rischio, intervento suggerito),\n"
-        "e sarà l'utente a decidere se implementarlo.\n"
+        "L'agente GDPR lavora nei repository reali dell'utente: non modifica il codice,\n"
+        "non pubblica nulla e non tocca il lavoro non committato.\n"
+        "Se il problema è reale va scritto in report/CRITICITA-GDPR.md (file:riga,\n"
+        "articolo GDPR, rischio, intervento suggerito), non risolto qui.\n"
     )
     sys.exit(2)
 
 
+def repos_gestionale():
+    """(percorsi assoluti, marcatori riconoscibili nei comandi)."""
+    try:
+        dati = json.loads(CONFIG.read_text(encoding="utf-8"))
+    except Exception:
+        return [], []
+    percorsi = []
+    for r in dati.get("repos", []):
+        p = r.get("path")
+        if not p:
+            continue
+        try:
+            percorsi.append(str(Path(p).expanduser().resolve()))
+        except Exception:
+            percorsi.append(os.path.abspath(os.path.expanduser(p)))
+    marcatori = percorsi + [os.path.basename(p) + "/" for p in percorsi]
+    return percorsi, marcatori
+
+
 def non_md(tok: str) -> bool:
-    """True se il token punta a un file del workspace che non è Markdown."""
-    if "workspace/" not in tok:
-        return False
+    """Il token è un percorso che non è un file Markdown?"""
     base = tok.rstrip("/").split("/")[-1]
-    if "." not in base:          # directory o path senza estensione
+    if "." not in base:      # directory o percorso senza estensione
         return True
     return not base.lower().endswith(MD_EXT)
 
 
 def nudo_sospetto(tok: str) -> bool:
-    """Come non_md, ma per percorsi relativi quando la shell è già dentro workspace/."""
+    """Percorso relativo pericoloso, quando la shell è già dentro un repo."""
     tok = tok.strip("'\"").rstrip("/")
     if not tok or tok.startswith("-"):
         return False
     base = tok.split("/")[-1]
     if base.lower().endswith(MD_EXT):
         return False
-    if ESTENSIONE.search(base):  # file con estensione non-Markdown
+    if ESTENSIONE.search(base):
         return True
-    return "/" in tok            # directory o percorso senza estensione
+    return "/" in tok
 
 
-def senza_navigazione(cmd: str) -> str:
-    """Toglie gli argomenti di cd/pushd/git -C: sono destinazioni, non bersagli."""
-    return NAVIGAZIONE.sub(" ", cmd)
-
-
-def bersagli(cmd: str, dentro_ws: bool) -> list:
+def bersagli(cmd: str, marcatori, dentro_repo: bool) -> list:
     """Percorsi di file del gestionale, non Markdown, toccati dal comando."""
-    cmd = senza_navigazione(cmd)
-    trovati = [t for t in TOKEN_WS.findall(cmd) if non_md(t)]
-    if dentro_ws:
-        trovati += [t for t in TOKEN_NUDO.findall(cmd) if nudo_sospetto(t)]
+    cmd = NAVIGAZIONE.sub(" ", cmd)   # cd/git -C indicano una destinazione, non un bersaglio
+    trovati = []
+    for grezzo in TOKEN.findall(cmd):
+        tok = grezzo.strip("'\"")
+        if not tok:
+            continue
+        if any(m in tok for m in marcatori):
+            if non_md(tok):
+                trovati.append(tok)
+        elif dentro_repo and nudo_sospetto(tok):
+            trovati.append(tok)
     return trovati
 
 
@@ -137,26 +161,45 @@ def main() -> None:
     if not cmd:
         sys.exit(0)
 
-    cwd = payload.get("cwd") or ""
-    dentro_ws = "/workspace/" in (cwd.rstrip("/") + "/") or bool(CD_WS.search(cmd))
-    tocca_ws = "workspace" in cmd or dentro_ws
+    percorsi, marcatori = repos_gestionale()
+    cwd = (payload.get("cwd") or "").rstrip("/")
+    dentro_repo = any(cwd == p or cwd.startswith(p + os.sep) for p in percorsi)
+    tocca_repo = dentro_repo or any(m in cmd for m in marcatori)
 
+    # ── git: pubblicazione e comandi che distruggono lavoro non nostro ──────
     if GIT_PUSH.search(cmd):
         blocca("push vietato: le modifiche restano locali e le pubblica l'utente", cmd)
 
-    if GIT_SET_URL.search(cmd):
-        blocca("cambiare l'origin delle copie di lavoro non è consentito", cmd)
+    if tocca_repo:
+        if GIT_DISTRUTTIVI.search(cmd):
+            blocca("comando git che può distruggere lavoro non committato dell'utente", cmd)
+        if GIT_RESET_DURO.search(cmd):
+            blocca("reset distruttivo su un repository di lavoro dell'utente", cmd)
+        if GIT_AMEND.search(cmd):
+            blocca("riscrivere un commit esistente dell'utente non è consentito", cmd)
+        if GIT_BRANCH_DEL.search(cmd):
+            blocca("cancellare un branch dell'utente non è consentito", cmd)
+        if GIT_COMMIT_TUTTO.search(cmd):
+            blocca(
+                "commit -a/--all rastrellerebbe anche le modifiche in corso dell'utente: "
+                "aggiungi esplicitamente i soli .md",
+                cmd,
+            )
+        if GIT_ADD.search(cmd) and ".md" not in cmd:
+            blocca(
+                "git add senza filtro sui Markdown: usa la forma "
+                "git add -A ':(glob)**/*.md'",
+                cmd,
+            )
 
-    if GIT_CLEAN.search(cmd) and tocca_ws:
-        blocca("git clean cancellerebbe anche i documenti privacy non ancora committati", cmd)
-
-    if (INPLACE.search(cmd) or COMANDO_EDIT.search(cmd)) and tocca_ws:
+    # ── scritture indirette sul codice ─────────────────────────────────────
+    if (INPLACE.search(cmd) or COMANDO_EDIT.search(cmd)) and tocca_repo:
         blocca("riscrittura in-place di file del gestionale", cmd)
 
-    if FIND_DISTRUTTIVO.search(cmd) and tocca_ws:
+    if FIND_DISTRUTTIVO.search(cmd) and tocca_repo:
         blocca("find distruttivo sul gestionale: l'audit è di sola lettura", cmd)
 
-    if INTERPRETE.search(cmd) and SCRITTURA.search(cmd) and tocca_ws:
+    if INTERPRETE.search(cmd) and SCRITTURA.search(cmd) and tocca_repo:
         blocca(
             "codice inline che scrive su file del gestionale "
             "(python/node/… non sono una scorciatoia per aggirare il blocco)",
@@ -164,11 +207,15 @@ def main() -> None:
         )
 
     for target in REDIR.findall(cmd):
-        if non_md(target) or (dentro_ws and nudo_sospetto(target)):
-            blocca(f"redirezione verso un file non-Markdown del gestionale ({target})", cmd)
+        t = target.strip("'\"")
+        if any(m in t for m in marcatori):
+            if non_md(t):
+                blocca(f"redirezione verso un file non-Markdown del gestionale ({t})", cmd)
+        elif dentro_repo and nudo_sospetto(t):
+            blocca(f"redirezione verso un file non-Markdown del gestionale ({t})", cmd)
 
     if MUTANTI.search(cmd):
-        colpiti = bersagli(cmd, dentro_ws)
+        colpiti = bersagli(cmd, marcatori, dentro_repo)
         if colpiti:
             blocca(f"comando che altera file del gestionale ({colpiti[0]})", cmd)
 

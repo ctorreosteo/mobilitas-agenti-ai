@@ -5,8 +5,8 @@ argument-hint: "[area: dati|flussi|accessi|log|conservazione|diritti|sicurezza]"
 
 Esegui l'audit privacy del gestionale. Segui la skill `audit-privacy-codice`.
 
-**Precondizione**: `workspace/mobilitas-backend` e `workspace/mobilitas-frontend` esistono.
-Se non ci sono, esegui prima `/sync`.
+**Precondizione**: `/sync` eseguito con esito positivo — i due repository esistono, sono puliti
+e si trovano sul branch `gdpr/aggiornamento-docs`.
 
 **In questa fase non si modifica nulla, nemmeno i Markdown.**
 
@@ -16,7 +16,7 @@ Se non ci sono, esegui prima `/sync`.
    `auditor-frontend`. Se `$ARGUMENTS` indica un'area, restringi il perimetro a quella e dillo
    nel prompt dei subagenti.
 2. Mentre girano, leggi tu la documentazione privacy esistente
-   (`workspace/mobilitas-backend/docs/privacy/*.md`) per sapere cosa il gestionale **dichiara**.
+   (`/Users/carlitos/mobilitas-backend/docs/privacy/*.md`) per sapere cosa il gestionale **dichiara**.
 3. Raccogli i risultati e scrivi i file in `report/evidenze/` (01…08 come da skill), mantenendo
    il formato `[FATTO]` / `[ASSENTE]` / `[IPOTESI]` con `file:riga`.
 4. Scrivi `report/evidenze/09-riconciliazione.md`: confronto tra ciò che il codice fa e ciò che
