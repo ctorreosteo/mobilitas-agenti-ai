@@ -1,0 +1,22 @@
+{
+  "esito": "CONSEGNABILE",
+  "statistiche": {
+    "parole_v5": 11118,
+    "parole_v6": 11339,
+    "delta_pct": 2.0,
+    "etichette_v5": 23,
+    "etichette_v6": 23,
+    "pmid_v5": 22,
+    "pmid_v6": 22
+  },
+  "violazioni": [
+    {
+      "severita": "AVVISO",
+      "codice": "ETICHETTE_RIANCORATE",
+      "messaggio": "1 etichette seguono un testo diverso dalla v5. Può essere solo riformulazione — va guardato dal collaudatore semantico.",
+      "dettaglio": [
+        "DIMOSTRATO: …come fattore causale — l'indice di massa corporea ha una rel"
+      ]
+    }
+  ]
+}

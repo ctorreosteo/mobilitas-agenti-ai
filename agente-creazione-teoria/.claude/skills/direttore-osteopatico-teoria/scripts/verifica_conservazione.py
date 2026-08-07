@@ -151,10 +151,22 @@ def glossario(t):
 
 
 def script_paziente(t):
-    """Lo script del capitolo 12: il blocco in corsivo piu' lungo del documento."""
-    cand = re.findall(r'"\s*\*(.+?)\*\s*"', t, flags=re.S) + re.findall(r"\*_(.+?)_\*", t, flags=re.S)
+    """Lo script del capitolo 12: il blocco in corsivo sotto l'intestazione «Lo script».
+
+    La misura e' ancorata alla sezione, non all'intero documento: una coppia
+    virgoletta+asterisco distante inghiottiva mezza Bibbia e faceva sembrare lo
+    script lungo migliaia di parole. Fuori dalla sezione, e come rete di sicurezza,
+    i gruppi catturati non possono attraversare un a capo.
+    """
+    sez = re.search(r"^#{1,4}\s*Lo\s+script\b[^\n]*\n(.*?)(?=^#{1,4}\s|\Z)",
+                    t, flags=re.S | re.M | re.I)
+    testo = sez.group(1) if sez else t
+
+    cand = (re.findall(r'\*\s*"([^"\n]{40,})"\s*\*', testo)
+            + re.findall(r'"\s*\*([^*\n]{40,})\*\s*"', testo)
+            + re.findall(r"\*_([^_\n]{40,})_\*", testo))
     if not cand:
-        cand = re.findall(r"^\s*>?\s*\*([^*\n]{200,})\*\s*$", t, flags=re.M)
+        cand = re.findall(r"^\s*>?\s*\*([^*\n]{200,})\*\s*$", testo, flags=re.M)
     if not cand:
         return None
     return max(len(c.split()) for c in cand)

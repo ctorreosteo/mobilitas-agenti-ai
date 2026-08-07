@@ -117,3 +117,33 @@ Una voce per deviazione. Sempre con una **fonte**: una deviazione senza fonte no
 | **Perché è sbagliato** | La convergenza somatosensoriale sul DCN documentata nei modelli animali è **fasica e timing-dipendente**, non tonica: l'unica prova di concetto umana sulla stimolazione bimodale usa un **pairing a 5-10 ms, 30 min/die per 28 giorni, con ritorno al basale nel washout** (Shore, Roberts e Langguth, *Nat Rev Neurol* 2016 — [PMID 26868680](https://pubmed.ncbi.nlm.nih.gov/26868680/)). Un drive tonico dall'ipertono muscolare non è mai stato dimostrato, e nessuno ha misurato attività del DCN o guadagno centrale nell'uomo dopo trattamento manuale. Attribuire alle mani quel meccanismo è un claim di meccanismo presentato come fatto. |
 | **Cosa fa la procedura** | Scrive **riduzione del drive nocicettivo cervico-trigeminale** (l'unico anello documentato nell'uomo) e dichiara la proiezione al nucleo cocleare come **inferenza a due anelli, non misura**. Nella lista "cosa non puoi dire" compare esplicitamente che "plasticità maladattiva" non è ciò che fanno le nostre mani (Parte 0 §Neurologico; Parte III §2). |
 | **Se ratificata** | Correggere la formulazione del meccanismo cervico-uditivo nei documenti di metodo e nel capitolo «Cosa si rompe» di ogni Bibbia che lo tratti: convergenza fasica, non drive tonico. |
+
+---
+
+### D-007 · Segmento di proiezione viscero-somatica di stomaco ed esofago
+
+| | |
+|---|---|
+| **Stato** | `PROPOSTA` |
+| **Aperta il** | 2026-08-04 |
+| **Condizione di emersione** | Reflusso gastroesofageo (Bibbia v1) |
+| **Ambito** | Trasversale — riguarda ogni condizione in cui si cerca la zona riflessa dello stomaco o dell'esofago distale |
+| **Elemento del metodo** | `motore-clinico.md`, §2, 4° Sistema Viscerale: *"Stomaco/esofago (catena anteriore, fascia pre-vertebrale, vago/frenico) → rigidità in flessione, **dolore a C6-C7, spalla sinistra**, chiusura anteriore."* |
+| **Perché è sbagliato** | Confonde due vie distinte. Le afferenze spinali di stomaco ed esofago distale viaggiano con il **nervo grande splancnico, T5-T9**: la zona di riferimento è dorsale media ed epigastrica ([StatPearls, *Anatomy, Thorax, Greater Splanchnic Nerves*, NBK500026](https://www.ncbi.nlm.nih.gov/books/NBK500026/)). La proiezione **C3-C5 / apice della spalla** è un fenomeno **frenico**, generato dall'irritazione del peritoneo e della pleura diaframmatici (segno di Kehr), non dallo stomaco. C6-C7 non appartiene a nessuna delle due. Indirizzare l'indagine sulla cervicale bassa fa cercare la zona riflessa gastrica in un segmento che non la riceve. |
+| **Cosa fa la Bibbia** | Scrive **T5-T9** come segmento di riferimento gastro-esofageo nel capitolo «Le strutture in gioco» e nel modello Neurologico, e mantiene il **frenico C3-C5** come collegamento collo-diaframma, dichiarato separatamente dalla proiezione gastrica. Formulazione usata: *"Lo stomaco proietta su T5-T9: se cerchi il reflusso in cervicale bassa, stai cercando nel posto sbagliato."* |
+| **Se ratificata** | Correggere la riga "Stomaco/esofago" nella sezione Viscerale di `motore-clinico.md`: proiezione dorsale T5-T9 via grande splancnico; la via frenica C3-C5 va indicata a parte, come riferimento diaframmatico e non gastrico. |
+
+---
+
+### D-008 · "Si indaga dall'alto della piramide" letto come coordinata anatomica
+
+| | |
+|---|---|
+| **Stato** | `PROPOSTA` |
+| **Aperta il** | 2026-08-04 |
+| **Condizione di emersione** | Reflusso gastroesofageo (Bibbia v2, rilevata dall'audit di fedeltà sulla v2) |
+| **Ambito** | Trasversale — riguarda ogni condizione sotto il diaframma, e in generale ogni uso del principio del Sistema Dominante |
+| **Elemento del metodo** | `motore-clinico.md`, §1 e §3: *"il sistema dominante è, di norma, il più alto nella piramide che risulti disfunzionale"*, *"si indaga dall'alto verso il basso"*, *"Indaga dall'alto della piramide"*. |
+| **Perché è ambiguo** | "Alto" è una parola con due significati: alto nella **gerarchia funzionale** (il senso voluto) e alto nel **corpo** (il senso che il lettore applica davanti a un paziente). Su una condizione viscerale sotto-diaframmatica la lettura anatomica porta a cercare in cervicale, che è esattamente l'errore corretto da D-007: lo stomaco proietta su T5-T9, non su C6-C7. L'ambiguità non è teorica — è la stessa che genera la riga sbagliata del metodo già registrata. |
+| **Cosa fa la Bibbia** | Sostituisce "dall'alto della piramide" con **"da monte sul piano funzionale"**, e lo dichiara a lettera nel capitolo «Come ragiono davanti a questo paziente»: *"«A monte» non è una coordinata anatomica: non vuol dire più vicino alla testa"*. La gerarchia resta identica: cambia solo la parola che la nomina. |
+| **Se ratificata** | Sostituire "più alto nella piramide" / "dall'alto verso il basso" con "più a monte sul piano funzionale" in `motore-clinico.md` (§1 e §3), mantenendo la piramide come immagine della gerarchia di comando. |

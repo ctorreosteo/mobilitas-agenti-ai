@@ -454,7 +454,18 @@ async function promote(bibIn, mappaIn, bibOut, mappaOut, motivo) {
 // ---- DUE MODALITA D'USO ----
 // A) Bibbie SPECIFICHE: args = ["reflusso"] oppure ["reflusso","cervicalgia", ...]
 // B) TUTTE: args = "tutte" (o "all" / "*") -> carica gli slug dal JSON
-const raw = Array.isArray(args) ? args : (args ? [args] : [])
+// Se args arriva come stringa JSON ('["reflusso-gastrico"]' invece dell'array) lo slug
+// diventerebbe il letterale con parentesi e virgolette, e la cartella si chiamerebbe cosi.
+const parseArgs = (a) => {
+  if (Array.isArray(a)) return a
+  if (typeof a === 'string') {
+    const s = a.trim()
+    if (s.startsWith('[')) { try { const p = JSON.parse(s); if (Array.isArray(p)) return p } catch (e) { /* non e JSON: e uno slug singolo */ } }
+    return s ? [s] : []
+  }
+  return a ? [a] : []
+}
+const raw = parseArgs(args).map((s) => String(s).trim()).filter(Boolean)
 const wantAll = raw.length === 1 && ['tutte', 'tutti', 'all', '*'].includes(String(raw[0]).toLowerCase())
 
 let slugs = raw
