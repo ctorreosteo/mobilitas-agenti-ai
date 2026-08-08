@@ -5,9 +5,11 @@ Passa ogni punto prima di consegnare. Un solo NO = si corregge, non si consegna 
 ## Confine — la Bibbia è teoria
 
 - [ ] Nessuna sequenza di tecniche, nessun protocollo, nessun ordine di manovre.
-- [ ] Nessuna dose, nessuna durata, nessun numero di minuti, nessun piano di sedute.
-- [ ] Nessun esercizio a casa con ripetizioni o frequenza.
+- [ ] Nessuna dose **da somministrare**, nessun piano di sedute, nessun numero di minuti di una tecnica.
+- [ ] Nessun esercizio prescritto al nostro paziente con ripetizioni, frequenza o progressione.
+- [ ] I parametri che compaiono sono **attribuiti a uno studio, al passato**: "nello studio hanno fatto X", mai "fai fare X".
 - [ ] Il Capitolo 11 si ferma al **razionale della leva** e chiude rimandando alla Procedura.
+- [ ] Se c'è il Capitolo 12, chiude con *"Come e quando consegnarlo al tuo paziente sta nella Procedura."*
 - [ ] Nessuna scheda operativa: il secondo deliverable è la **Mappa concettuale**.
 
 ## Leggibilità — la parte che si controlla per ultima e conta di più
@@ -23,12 +25,27 @@ Passa ogni punto prima di consegnare. Un solo NO = si corregge, non si consegna 
 - [ ] Nessun ragionamento spezzato in bullet.
 - [ ] Nessun rimando per numero di paragrafo: i capitoli si citano per nome.
 
+## Italiano — la parte che nessun altro controllo cattura
+
+- [ ] **Prova del traduttore inverso** su dieci frasi a caso: se tradotte parola per parola danno un inglese perfetto, sono calchi. Non più di due su dieci.
+- [ ] Nessun *evidenze* per "prove", *significativo* per "importante", *severo* per "grave", *consistente* per "coerente", *attualmente* per "in realtà", *supportare* per "sostenere".
+- [ ] Nessun **pronome senza padrone**: *questo*, *ciò*, *tale*, *il che* non si riferiscono mai a una frase intera.
+- [ ] Ogni *quindi*, *infatti*, *tuttavia*, *pertanto* annuncia il rapporto logico che c'è davvero.
+- [ ] Nessun gerundio d'apertura al posto di un nesso esplicito ("Trattando il diaframma, si ottiene…").
+- [ ] Nessun soggetto astratto che agisce ("la valutazione permette di identificare…").
+- [ ] Nessun verbo vuoto + nome: *effettuare una valutazione* → *valutare*.
+- [ ] Il repertorio completo sta in `direttore-osteopatico-italiano/references/italiano-vero.md`.
+
 ## Verità
 
 - [ ] Ogni studio citato ha autore, anno, titolo e link PubMed **verificati con ricerca web in questa sessione**.
 - [ ] Ogni percentuale o dato numerico è attribuito a uno studio verificato.
 - [ ] **Claim verificato, non solo PMID:** nessuna frase attribuisce a uno studio un braccio, un confronto o un numero che quello studio non ha prodotto.
 - [ ] L'ancora scientifica è una persona reale con affiliazione verificata.
+- [ ] **I tre cerchi sono stati esplorati**: specifico, trasversale sul meccanismo, fisiologico. Non solo il primo.
+- [ ] **Regola del ponte rispettata:** nessuna fonte del cerchio 2 alza l'etichetta di una leva su questa condizione, e ognuna porta la frase "misurato su X, non su questi pazienti".
+- [ ] Se la letteratura specifica è sottile, la sezione **«Quando la scienza tace»** c'è e contiene tutti e cinque i punti.
+- [ ] L'evidenza **negativa** trovata è citata in "cosa non possiamo dire", non omessa.
 - [ ] **Ogni meccanismo, ogni modello e ogni leva porta la sua etichetta di solidità.** Nessuna affermazione importante senza etichetta.
 - [ ] **Lucchetto chiuso:** ogni meccanismo non validato (Motore Clinico, lesione primaria, CC/CP, effetto del tocco sull'autonomico) è etichettato IPOTESI o RAGIONAMENTO, mai presentato come provato.
 - [ ] Sono usate **solo** le quattro etichette previste. Nessuna quinta inventata.
@@ -36,7 +53,7 @@ Passa ogni punto prima di consegnare. Un solo NO = si corregge, non si consegna 
 
 ## Struttura
 
-- [ ] Tutti i capitoli da 0 a 12 presenti, nell'ordine, più le due appendici.
+- [ ] Tutti i capitoli da 0 a 14 presenti, nell'ordine, più le due appendici. Il Capitolo 12 è l'unico condizionale.
 - [ ] Ogni capitolo apre con `> **In una riga:**` e chiude con **Le tre cose da ricordare** (esattamente tre).
 - [ ] I titoli dei capitoli sono domande o frasi in italiano corrente, non etichette accademiche.
 - [ ] Solo i quattro tipi di box previsti (Definizione / Quanto è solido / Attenzione / Cosa cambia per te).
@@ -44,8 +61,10 @@ Passa ogni punto prima di consegnare. Un solo NO = si corregge, non si consegna 
 - [ ] Capitolo 6: almeno un sottotipo su cui puoi poco, con indicazione di invio.
 - [ ] Capitolo 7: **una sezione breve per modello**, non una tabella unica. Nessun "modello viscerale"; Trauma trattato come modificatore.
 - [ ] Capitolo 9 presente e non annacquato: bandiere rosse con destinatario e urgenza, cancello d'ingresso, farmaci, perimetro legale.
-- [ ] Capitolo 12: script sotto le 100 parole, in corsivo, **zero parole tecniche**.
-- [ ] **8.000–12.000 parole** (escluse le appendici).
+- [ ] Capitolo 12 (strumenti attivi): **c'è se e solo se** uno strumento attivo regge DIMOSTRATO o PROBABILE forte. Se c'è, ha tutte e sei le voci e sta in 600-900 parole.
+- [ ] Capitolo 13: script sotto le 100 parole, in corsivo, **zero parole tecniche**.
+- [ ] Capitolo 14 presente: il filo ricucito, **esattamente tre** cose che cambi da lunedì, chiusura nella voce che motiva. Nessun contenuto nuovo, nessuna promessa di esito, nessun lessico da brochure. 250-400 parole.
+- [ ] **8.000–13.000 parole** (escluse le appendici).
 
 ## Kit di consegna
 

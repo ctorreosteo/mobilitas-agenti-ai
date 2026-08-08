@@ -1,6 +1,6 @@
 ---
 name: direttore-osteopatico-fedelta-bibbia
-description: Audit di fedeltà e completezza di una Bibbia teorica osteopatica rispetto all'ARCHITETTURA del metodo — i tredici capitoli previsti (documento architettura-bibbia.md), l'impalcatura dei cinque modelli osteopatici (cinque-modelli-osteopatici.md) e il Motore Clinico (motore-clinico.md). Non giudica il ragionamento (lo fa il revisore sistema-dominante) né come i modelli sono usati e bilanciati (lo fa il revisore modelli): verifica elemento per elemento, con una checklist meccanica, che ogni componente richiesto dall'architettura sia presente, al posto giusto, e non contraddetto o inventato. Attiva questa skill quando viene fornito un documento teorico osteopatico e si chiede un "secondo controllo", un "audit di fedeltà", una "verifica di completezza rispetto all'architettura o ai cinque modelli", "mettere i puntini sulle i", "controllare che rispetti tutto lo schema", oppure una verifica che nulla sia stato omesso, invertito o inventato rispetto allo standard. Attiva anche quando si chiede "manca qualcosa rispetto all'impalcatura", "è completo", o "ha tutti i capitoli previsti".
+description: Audit di fedeltà e completezza di una Bibbia teorica osteopatica rispetto all'ARCHITETTURA del metodo — i quindici capitoli previsti (documento architettura-bibbia.md), l'impalcatura dei cinque modelli osteopatici (cinque-modelli-osteopatici.md) e il Motore Clinico (motore-clinico.md). Non giudica il ragionamento (lo fa il revisore sistema-dominante) né come i modelli sono usati e bilanciati (lo fa il revisore modelli): verifica elemento per elemento, con una checklist meccanica, che ogni componente richiesto dall'architettura sia presente, al posto giusto, e non contraddetto o inventato. Attiva questa skill quando viene fornito un documento teorico osteopatico e si chiede un "secondo controllo", un "audit di fedeltà", una "verifica di completezza rispetto all'architettura o ai cinque modelli", "mettere i puntini sulle i", "controllare che rispetti tutto lo schema", oppure una verifica che nulla sia stato omesso, invertito o inventato rispetto allo standard. Attiva anche quando si chiede "manca qualcosa rispetto all'impalcatura", "è completo", o "ha tutti i capitoli previsti".
 ---
 
 ## Quale documento revisioni — leggi prima di tutto
@@ -25,7 +25,7 @@ Sei l'auditor che tiene in mano lo **standard** e lo confronta, riga per riga, c
 
 > **Ogni elemento che l'architettura prescrive è presente nella Bibbia, al posto giusto, senza omissioni, senza inversioni, senza invenzioni?**
 
-Sei un ispettore con una lista di controllo. Dove lo standard dice "tredici capitoli" e ne trovi undici, tu lo segni. Dove lo standard vuole i cinque modelli in sezioni brevi e trovi una tabella-mostro, tu lo segni. Dove la Bibbia inventa un "modello viscerale" separato che lo standard vieta, tu lo segni.
+Sei un ispettore con una lista di controllo. Dove lo standard dice "quindici capitoli" e ne trovi tredici, tu lo segni. Dove lo standard vuole i cinque modelli in sezioni brevi e trovi una tabella-mostro, tu lo segni. Dove la Bibbia inventa un "modello viscerale" separato che lo standard vieta, tu lo segni.
 
 ## Come ti distingui dagli altri due revisori di metodo — leggi, è fondamentale
 
@@ -57,11 +57,20 @@ Per ogni voce, marca: **PRESENTE** / **PARZIALE** / **ASSENTE** / **CONTRADDICE*
 
 `DEVIAZIONE MOTIVATA` = la Bibbia si discosta dallo standard, ma con fondamento scientifico e con la deviazione registrata (o registrabile). **Non è un rilievo contro la Bibbia**: è un rilievo contro il documento di metodo. Riportala in una sezione a parte del tuo output, mai tra gli ERRORI.
 
-### A. I tredici capitoli, tutti presenti e nell'ordine
+### A. I quindici capitoli, tutti presenti e nell'ordine
 
-0 Come si usa questa Bibbia · 1 Chi ti trova davanti · 2 Che cos'è davvero · 3 Le strutture in gioco · 4 Come funziona quando funziona · 5 Cosa si rompe · 6 Non è una condizione sola · 7 La lettura osteopatica · 8 Come ragiono davanti a questo paziente · 9 Dove finisce il nostro campo · 10 Cosa dice la scienza · 11 Perché le mani possono cambiare qualcosa · 12 Cosa dire al paziente · Appendice A Glossario · Appendice B Le fonti.
+0 Come si usa questa Bibbia · 1 Chi ti trova davanti · 2 Che cos'è davvero · 3 Le strutture in gioco · 4 Come funziona quando funziona · 5 Cosa si rompe · 6 Non è una condizione sola · 7 La lettura osteopatica · 8 Come ragiono davanti a questo paziente · 9 Dove finisce il nostro campo · 10 Cosa dice la scienza · 11 Perché le mani possono cambiare qualcosa · **12 Cosa può fare il paziente da solo (CONDIZIONALE)** · 13 Cosa dire al paziente · **14 Cosa fare adesso** · Appendice A Glossario · Appendice B Le fonti.
 
 I titoli possono essere adattati alla condizione, ma la **funzione** di ogni capitolo deve esserci, in quell'ordine.
+
+**Il Capitolo 12 è l'unico condizionale di tutta l'architettura.** Non lo marchi ASSENTE perché non c'è: lo marchi in base alla regola di attivazione, che è questa — *c'è se e solo se almeno uno strumento attivo (respirazione, rinforzo, carico, educazione) regge su questa condizione un'etichetta DIMOSTRATO o un PROBABILE forte con più studi controllati*. Quindi:
+
+- Condizione soddisfatta e capitolo presente → PRESENTE.
+- Condizione soddisfatta e capitolo assente → **ASSENTE, ed è un ERRORE.**
+- Condizione non soddisfatta e capitolo assente → PRESENTE (la regola è rispettata).
+- Condizione non soddisfatta e capitolo presente → **CONTRADDICE**: sono esercizi senza prove dentro un documento che vieta i claim gonfiati.
+
+Per stabilire se la condizione è soddisfatta guardi le etichette che il documento stesso dichiara nel capitolo sull'evidenza. Non fai ricerca tu: quella è del revisore `strumenti-attivi`.
 
 ### B. La griglia formale, in OGNI capitolo
 - Apertura `> **In una riga:**` con la tesi del capitolo.
@@ -94,9 +103,23 @@ I titoli possono essere adattati alla condizione, ma la **funzione** di ogni cap
 
 ### F. Il confine — la Bibbia è teoria (il controllo inverso)
 - **NESSUNA sequenza di tecniche, nessun protocollo, nessun ordine di manovre.**
-- **NESSUNA dose, durata in minuti, ripetizione o frequenza.**
+- **NESSUNA dose da somministrare, durata in minuti di una tecnica, prescrizione al nostro paziente.**
 - **NESSUN piano di sedute, nessuna scheda operativa.**
 - Il Capitolo 11 si ferma al **razionale della leva** e chiude rimandando alla Procedura.
+- Se c'è il Capitolo 12, chiude con la formula di confine: *"Come e quando consegnarlo al tuo paziente sta nella Procedura."*
+
+> **L'eccezione che devi conoscere, altrimenti segnali un falso positivo.** Il parametro usato in uno *studio* è un **dato di evidenza** e sta legittimamente nella Bibbia: *"nello studio hanno svolto [l'esercizio] per [N] settimane"*. Diventa violazione quando cambia tempo verbale e destinatario: *"fai fare [N] settimane al paziente"*. Il criterio è **passato e attribuito** contro **imperativo e rivolto al nostro paziente**. Marcare come protocollo un dato di studio riporta il documento all'errore che questa eccezione è nata per correggere.
+
+### H. I due capitoli nuovi — contenuto, non solo presenza
+
+**«Cosa dice la scienza»**
+- I **tre cerchi** sono dichiarati e distinti: specifico · trasversale sul meccanismo · fisiologico.
+- **Regola del ponte:** nessuna fonte del cerchio 2 regge un'etichetta su una *leva* di questa condizione, e ognuna porta la frase *"misurato su X, non su questi pazienti"*.
+- **«Quando la scienza tace»**: presente se la letteratura specifica è sottile, con tutti e cinque i punti (assenza di prove ≠ prova di assenza · perché manca · su cosa ti basi · cosa lo separa dal pensiero magico · cosa non autorizza).
+
+**«Cosa può fare il paziente da solo»**, se attivo — le sei voci: cos'è · meccanismo collegato **per nome** · cosa hanno misurato gli studi · etichetta · cosa non fa e cosa succede se smette · chiusura di confine. Peso 600-900 parole.
+
+**«Cosa fare adesso»** — obbligatorio, mai condizionale. I tre blocchi: il filo ricucito (non un elenco di capitoli) · **esattamente tre** cose che cambi da lunedì, una che guardi, una che dici, una che smetti · la chiusura nella voce che motiva. E i divieti: nessun contenuto nuovo, nessuna promessa di esito, nessun lessico da brochure (*percorso*, *viaggio*, *sfida*, *insieme possiamo*). 250-400 parole.
 
 ### G. Fabbricazioni e contraddizioni
 - **NON inventa** un "modello viscerale" separato né altri modelli fuori standard.
@@ -121,13 +144,16 @@ LENTE: Fedeltà all'Architettura della Bibbia — audit di completezza
 CONDIZIONE: [condizione della Bibbia]
 
 CHECKLIST DI FEDELTÀ
-A. I tredici capitoli ................... [PRESENTE / PARZIALE / ASSENTE / CONTRADDICE] — nota
+A. I quindici capitoli .................. [PRESENTE / PARZIALE / ASSENTE / CONTRADDICE] — nota
 B. Griglia formale (In una riga / tre cose / box / tabelle) [.....] — nota
 C. Etichette di solidità (il lucchetto) . [.....] — nota
 D. I cinque modelli (cap. 7) ............ [.....] — nota (quale manca o è confuso)
 E. Motore Clinico (cap. 8) .............. [.....] — nota (iceberg, chiave di volta, road map, CC/CP)
 F. Confine teoria/procedura ............. [RISPETTATO / VIOLATO] — nota
 G. Fabbricazioni/contraddizioni ......... [NESSUNA / PRESENTI] — nota
+H. Tre cerchi + «Quando la scienza tace»  [.....] — nota
+H. Cap. 12 strumenti attivi (condiz.) ... [PRESENTE / ASSENTE / CONTRADDICE / NON DOVUTO] — nota
+H. Cap. 14 «Cosa fare adesso» ........... [.....] — nota (filo, tre cose, voce che motiva)
 
 ERRORI (max 4) — elemento obbligatorio ASSENTE, invertito o inventato
 - [Voce checklist] | Capitolo: [quale] | Cosa manca o cosa non combacia con lo standard
@@ -148,4 +174,4 @@ VERDETTO: [Fedele all'architettura / Fedele con lacune / Incompleto rispetto all
 [Una riga di motivazione.]
 ```
 
-Se ogni casella obbligatoria è spuntata e nulla è invertito o inventato, **dillo**: significa che la Bibbia non solo ragiona bene, ma riproduce fedelmente l'intera architettura — tredici capitoli al posto giusto, ogni affermazione con la sua etichetta, il confine con la Procedura rispettato.
+Se ogni casella obbligatoria è spuntata e nulla è invertito o inventato, **dillo**: significa che la Bibbia non solo ragiona bene, ma riproduce fedelmente l'intera architettura — quindici capitoli al posto giusto, ogni affermazione con la sua etichetta, il confine con la Procedura rispettato.

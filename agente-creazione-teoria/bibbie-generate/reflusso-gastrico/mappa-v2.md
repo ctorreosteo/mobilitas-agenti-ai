@@ -1,24 +1,20 @@
 # Mappa concettuale — Reflusso gastroesofageo
 
-**Mobilitas · OsteoTouch** — **Ancora:** Ángel Oliva-Pascual-Vaca (terapia manuale) · Ravinder K. Mittal (fisiologia) — **v2.0 intermedia** — agosto 2026
+**Mobilitas · OsteoTouch** — **Ancora clinica:** Ángel Oliva-Pascual-Vaca · **Ancora fisiologica:** Ravinder K. Mittal — **v2.0 intermedia** · agosto 2026
 
 ---
 
 ## 1 · La condizione in tre righe
 
 Il contenuto dello stomaco risale nell'esofago e produce sintomi o danno alla mucosa: è una malattia della barriera, non dell'acido.
-Prevalenza globale 13,98%, circa un miliardo di persone; i sintomi persistono nel 17-32% di chi assume un inibitore di pompa negli studi clinici, fino al 45% negli studi osservazionali.
-È cronica e fluttuante, e nei trial il placebo vale il 18,85%: ogni miglioramento va letto con questo metro.
+Riguarda circa il 14% della popolazione mondiale; fra chi prende un inibitore di pompa il bruciore persiste nel 17-32% negli studi clinici e nel 45% in medicina generale.
+È cronica e fluttuante: nei trial il placebo vale il 18,85%, ma la remissione spontanea è solo il 2,32% l'anno. Oscilla molto, guarisce poco.
 
 ---
 
-## 2 · Le catene causali — una principale, due modificabili
+## 2 · La catena causale
 
-**Principale (nessuna leva manuale):** pasto abbondante → distensione del fondo gastrico → riflesso vagale che rilascia il LES + inibizione centrale che spegne il crus → il contenuto passa e resta a contatto → bruciore, rigurgito, tosse, nodo in gola
-
-**Modificabile A — pressione:** volume o tensione del contenitore addominale ↑ → gradiente stomaco-esofago ↑ → la stessa barriera diventa insufficiente
-
-**Modificabile B — crus:** respiro alto, torace chiuso, dorsale rigida → il crus perde la sua componente pulsante → il picco inspiratorio della barriera si abbassa
+`pasto o pressione addominale ↑ → distensione del fondo gastrico → riflesso vago-vagale che apre insieme LES e crus (inibizione selettiva del solo crus) → barriera aperta con liquido sopra → risalita e contatto con la mucosa → bruciore, rigurgito, tosse notturna`
 
 ---
 
@@ -26,15 +22,14 @@ Prevalenza globale 13,98%, circa un miliardo di persone; i sintomi persistono ne
 
 | Meccanismo | Come lo riconosci | Quanto è solido |
 |---|---|---|
-| Rilasciamenti transitori | Sintomo post-prandiale, eruttazioni | DIMOSTRATO |
-| Separazione dei due sfinteri | Rigurgito da sdraiato, ernia a referto | DIMOSTRATO |
-| Amplificazione percettiva | Referto pulito, farmaco inefficace | DIMOSTRATO (stress→percezione) |
-| Gradiente pressorio addominale | Peggiora piegandosi, addome teso | PROBABILE (volume); IPOTESI (tensione) |
-| Contributo crurale ridotto | Respiro apicale, dorsale rigida | PROBABILE |
+| Rilasciamento transitorio | Solo dopo i pasti, eruttazioni | DIMOSTRATO |
+| Separazione dei due sfinteri | Rigurgito, ernia a referto | DIMOSTRATO |
+| Amplificazione percettiva | Stimolo reale letto troppo forte | DIMOSTRATO il legame attivazione-percezione; PROBABILE la sensibilizzazione periferica |
+| Pressione dal contenitore | Peggiora piegandosi, cintura stretta | PROBABILE per il volume; IPOTESI per la tensione di parete |
+| Contributo crurale ridotto | Respiro apicale, dorsale rigida | PROBABILE come bersaglio, non dimostrato come causa |
 | Clearance notturna assente | Tosse notturna, voce roca al mattino | PROBABILE |
-| Svuotamento gastrico rallentato | Sazietà precoce, gonfiore, pienezza | PROBABILE (meccanismo); IPOTESI (leva) |
 
-**Le mani hanno una leva su tre: amplificazione percettiva, gradiente pressorio, contributo crurale. Mai sul primo.**
+**Le mani hanno una leva solo sul terzo, sul quarto e sul quinto. Le leve con le prove migliori non sono manuali.**
 
 ---
 
@@ -42,33 +37,67 @@ Prevalenza globale 13,98%, circa un miliardo di persone; i sintomi persistono ne
 
 | Sottotipo | Segnale che lo riconosce | Quanto puoi fare |
 |---|---|---|
-| Post-prandiale | Conta il volume, non il cibo | Poco |
-| Pressorio-posturale | Peggiora piegandosi, anche a stomaco vuoto | Abbastanza |
-| Diaframmatico | Segue i periodi di carico e rigidità toracica | Abbastanza |
-| Sproporzionato al referto | Sintomo segue lo stato emotivo | Abbastanza, ma senza input intenso |
-| Notturno-extraesofageo | Tosse, disfonia, nodo in gola | Poco |
-| Strutturale-erosivo | Ernia voluminosa, esofagite, Barrett | Niente: invio |
+| Post-prandiale | Legato al volume, non al cibo | Poco |
+| A svuotamento lento | Sazietà precoce, pienezza che dura | Poco: si segnala |
+| Pressorio-posturale | Peggiora piegandosi, anche a digiuno | Abbastanza (leva IPOTESI) |
+| Diaframmatico | Respiro alto, torace chiuso | Abbastanza |
+| Sproporzionato al referto | Segue lo stato emotivo | Abbastanza |
+| Notturno-extraesofageo | Tosse, voce, nodo in gola | Poco |
+| Strutturale-erosivo | Ernia grande, esofagite, Barrett | Poco: invio |
 
-Quasi sempre ne convivono due o tre: il lavoro è decidere quale comanda oggi.
-
----
-
-## 5 · Le bandiere rosse
-
-- Dolore toracico sotto sforzo, sudorazione, affanno → pronto soccorso → immediata
-- Vomito con sangue o feci nere → pronto soccorso → immediata
-- Epigastralgia in terzo trimestre, non bruciante → ostetrico → immediata
-- Difficoltà o dolore a deglutire, cibo che si ferma → gastroenterologo → giorni
-- Calo di peso involontario → medico di base → giorni
-- Vomito ripetuto che non si ferma → medico di base → giorni
-- Massa addominale pulsante o dolore profondo che non cede → medico di base → prima del ciclo
-- Raucedine o disfonia oltre tre settimane → otorinolaringoiatra → prima del ciclo
-- Sintomi nuovi dopo i 50 anni · anemia o astenia → medico di base → prima del ciclo
-
-**In donna, over-65, diabetico e nefropatico l'ischemia si traveste da bruciore epigastrico senza sforzo e senza irradiazione. Il sollievo con antiacido non esclude nulla.**
+Tre domande separano i quattro più frequenti: *"peggiora per quanto mangi o per quando ti pieghi?"*, *"succede anche a stomaco vuoto?"*, *"ti senti pieno a lungo dopo mangiato?"*.
 
 ---
 
-## 6 · La frase per il paziente
+## 5 · Cosa fa il paziente da solo — le leve con le prove migliori
+
+| Strumento | Su quale meccanismo | Quanto è solido |
+|---|---|---|
+| Esercizio respiratorio diaframmatico | Contributo crurale (e forse i rilasciamenti) | PROBABILE forte |
+| Peso corporeo | Pressione dal contenitore | DIMOSTRATO |
+| Posizione notturna sul fianco sinistro | Clearance notturna | DIMOSTRATO (RCT con sham) |
+| Testata del letto alzata (non il cuscino) | Clearance notturna | PROBABILE — 54% di eventi avversi |
+
+Il guadagno appartiene alla ripetizione: chi smette torna dov'era.
+
+---
+
+## 6 · Le bandiere rosse
+
+- Dolore toracico sotto sforzo, sudorazione, affanno → **pronto soccorso** → immediata
+- Vomito con sangue, feci nere → **pronto soccorso** → immediata
+- Dolore epigastrico in terzo trimestre → **ostetrico** → immediata
+- **Massa pulsante con dolore addominale o lombare** → **pronto soccorso** → immediata
+- **Massa addominale pulsante isolata** → **ecografia dell'aorta** → giorni
+- **Vomito ripetuto che non si ferma** → medico di base → **in giornata**
+- Difficoltà o dolore a deglutire → **gastroenterologo** → giorni
+- Calo di peso involontario → **medico di base** → giorni
+- Voce roca oltre tre settimane → **otorinolaringoiatra** → prima del ciclo
+- Sintomi nuovi dopo i 50 anni → **medico di base** → prima del ciclo
+- Anemia o stanchezza ingiustificata → **medico di base** → prima del ciclo
+
+In donne, over-65, diabetici e nefropatici il filtro cardiaco classico fallisce: bruciore epigastrico isolato è cardiaco fino a prova contraria.
+Nel paziente in anticoagulante o antiaggregante, melena e anemia scendono di un livello di urgenza.
+
+---
+
+## 7 · Le zone che non si premono
+
+- **Collo anteriore**, fra osso ioide e cartilagine tiroidea: guaina carotidea e biforcazione. Non è una leva.
+- **Epigastrio e ipocondrio destro in terzo trimestre**: è la sede del segno di preeclampsia e HELLP.
+- **Addome operato di fresco**, e qualunque **pulsazione espansiva in epigastrio**: la seduta si interrompe.
+- **Gabbia toracica bassa e cerniera dorso-lombare** di un paziente in inibitore di pompa da anni: densità ossea ridotta finché non è escluso.
+
+---
+
+## 8 · I tre limiti da dire ad alta voce
+
+- Non si riduce un'ernia iatale con le mani.
+- Non si riduce l'esposizione acida: nessuno studio di terapia manuale l'ha mai misurata.
+- Non si tocca la terapia farmacologica. Mai.
+
+---
+
+## 9 · La frase per il paziente
 
 *"Non conta quanto è stretto il tappo del tubetto: conta quanto stringi il tubo."*

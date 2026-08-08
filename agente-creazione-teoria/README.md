@@ -10,15 +10,16 @@ risolvere in poche sedute**. Cos'è, perché succede, quali meccanismi la tengon
 quanto è solido ciò che affermiamo, dove finisce il nostro campo, perché le mani possono
 cambiare qualcosa.
 
-**Non è una procedura operativa.** Tecniche, dosi, sequenze e piano delle sedute stanno in un
-documento separato di due pagine, prodotto da `agente-creazione-procedure`.
+**Non è una procedura operativa.** Tecniche, dosi da somministrare, sequenze e piano delle sedute
+stanno in un documento separato di due pagine, prodotto da `agente-creazione-procedure`.
 
 | La Bibbia (qui, ~20 pagine) | La Procedura (altro agente, 2 pagine) |
 |---|---|
 | Che cos'è, perché succede | Cosa fai alla prima seduta |
 | Quali meccanismi la tengono in piedi | Quali tecniche, in che ordine |
 | Come si riconosce il sottotipo | Quanti minuti per blocco |
-| Perché le mani possono agire | Quali esercizi, con che dose |
+| Perché le mani possono agire | Quali tecniche, con che dose |
+| Perché un esercizio funziona, e cosa hanno misurato gli studi | Quale esercizio dai a *questo* paziente, e quando |
 | Quanto è solido tutto questo | Come misuri e quando rivaluti |
 
 Ogni Bibbia produce anche una **Mappa concettuale di sintesi**: una pagina, sei blocchi, quella
@@ -31,7 +32,7 @@ a cui si torna sei mesi dopo.
   direttore-osteopatico-teoria/     AUTORE — redige la Bibbia + la Mappa concettuale
     ├─ SKILL.md
     ├─ references/
-    │   ├─ architettura-bibbia.md      i 13 capitoli e le 5 regole di struttura
+    │   ├─ architettura-bibbia.md      i 15 capitoli e le 5 regole di struttura
     │   ├─ regole-di-scrittura.md      come si scrive (la leggibilità è un requisito)
     │   ├─ cinque-modelli-osteopatici.md  impalcatura del Capitolo 7
     │   ├─ motore-clinico.md           il ragionamento del Capitolo 8
@@ -39,12 +40,12 @@ a cui si torna sei mesi dopo.
     │   ├─ ancore-verificate.md        ancore già validate (cervicale, lombalgia, Achille)
     │   ├─ mappa-concettuale.md        spec del secondo deliverable
     │   ├─ sistema-libreria.md         coerenza del corpus
-    │   ├─ revisione-e-sintesi.md      i cinque livelli e la regola di triage
+    │   ├─ revisione-e-sintesi.md      i sei livelli e la regola di triage
     │   ├─ rubrica-punteggio.md        cancello: sotto 90/100 non si consegna
     │   └─ checklist-qualita.md        cancello: un solo NO = si corregge
     └─ scripts/
         ├─ build_docx.py
-        └─ verifica_conservazione.py   collaudo deterministico v5 vs v6
+        └─ verifica_conservazione.py   collaudo deterministico v5 vs v7
 
   direttore-osteopatico-specialista/       1º liv. — medico specialista di riferimento
   direttore-osteopatico-medico-generale/   1º liv. — MMG che invia i pazienti
@@ -56,23 +57,27 @@ a cui si torna sei mesi dopo.
   direttore-osteopatico-modelli/           1º liv. — uso e bilanciamento dei cinque modelli
   direttore-osteopatico-neuromodulazione/  1º liv. — il meccanismo neurofisiologico
   direttore-osteopatico-clinico-esperto/   1º liv. — "il paziente guarisce davvero?"
+  direttore-osteopatico-strumenti-attivi/  1º liv. — respirazione, rinforzo, carico, educazione
   direttore-osteopatico-fedelta-bibbia/    2º liv. — audit contro l'architettura
+  direttore-osteopatico-evidenza-estesa/   2º liv. — il Ricercatore: i tre cerchi dell'evidenza
   direttore-osteopatico-apprendimento/     3º liv. — il documento insegna o fa solo sapere?
   direttore-osteopatico-editor/            4º liv. — asciugatura
   direttore-osteopatico-chiarezza/         5º liv. — RISCRIVE tutto in linguaggio semplice
-  direttore-osteopatico-collaudo/          CANCELLO — conservazione v5→v6, script + semantica
+  direttore-osteopatico-italiano/          6º liv. — CORREGGE la lingua + metafore di servizio
+  direttore-osteopatico-collaudo/          CANCELLO — conservazione v5→v7, script + semantica
 
 bibbie-generate/
   _dati/livelli.json                manifesto: chi è autore e chi revisore, per livello
   _dati/problemi.json               materia prima (sintomi, obiezioni, red flag)
   _dati/deviazioni-dal-metodo.md    dove il metodo interno è stato trovato sbagliato
+  _dati/registro-lingua.md          calchi ricorrenti e passaggi che restano oscuri
   _workflow/genera-bibbie.workflow.js
-  <slug>/                           lavorazione in markdown, v1 → v6
+  <slug>/                           lavorazione in markdown, v1 → v7
 
 outputs/<slug>/                     Bibbia_<Condizione>.docx + Mappa_<Condizione>.docx
 ```
 
-## L'architettura della Bibbia — i 13 capitoli
+## L'architettura della Bibbia — i 15 capitoli
 
 | # | Capitolo | Cosa contiene |
 |---|---|---|
@@ -86,13 +91,23 @@ outputs/<slug>/                     Bibbia_<Condizione>.docx + Mappa_<Condizione
 | 7 | La lettura osteopatica | I cinque modelli, una sezione breve ciascuno |
 | 8 | Come ragiono davanti a questo paziente | Il Motore Clinico |
 | 9 | Dove finisce il nostro campo | Bandiere rosse, cancello, farmaci, perimetro legale |
-| 10 | Cosa dice la scienza | Ancora, studi verificati, cosa si può dire e cosa no |
+| 10 | Cosa dice la scienza | I tre cerchi, studi verificati, cosa si può dire e cosa no, **«Quando la scienza tace»** |
 | 11 | Perché le mani possono cambiare qualcosa | Razionale delle leve. **Niente protocolli** |
-| 12 | Cosa dire al paziente | Script sotto 100 parole, risposte alle obiezioni |
+| 12 | Cosa può fare il paziente da solo | **CONDIZIONALE** — c'è solo se uno strumento attivo regge DIMOSTRATO o PROBABILE forte |
+| 13 | Cosa dire al paziente | Script sotto 100 parole, risposte alle obiezioni |
+| 14 | Cosa fare adesso | Il filo ricucito, le tre cose che cambi da lunedì, la chiusura che spinge |
 | A | Glossario | Ogni termine tecnico, una riga |
 | B | Le fonti | Bibliografia con link verificati |
 
-**Lunghezza: 8.000–12.000 parole**, appendici escluse.
+**Lunghezza: 8.000–13.000 parole**, appendici escluse.
+
+### Le tre regole che governano il contenuto scientifico
+
+1. **I tre cerchi.** L'evidenza si cerca su tre livelli: *specifico* (quell'intervento su questa condizione), *trasversale* (tocco e terapia manuale sul meccanismo condiviso — regolazione autonomica, modulazione del dolore, interocezione, respiro, contesto), *fisiologico*. Cercare solo il primo produce Bibbie povere sulle condizioni poco studiate, che sono quasi tutte.
+
+2. **La regola del ponte.** L'evidenza trasversale alza l'etichetta del **meccanismo**, mai quella della **leva** su questa condizione, e ogni fonte porta la frase che dichiara il salto. È il lucchetto che impedisce al primo punto di degenerare in *mechanism-mongering*.
+
+3. **Il parametro di uno studio è un dato, non una prescrizione.** *"Nello studio hanno allenato per otto settimane"* sta nella Bibbia; *"fai fare otto settimane al paziente"* sta nella Procedura. Il criterio è il tempo verbale e il destinatario. Senza questa eccezione il confine espelleva dalla teoria proprio la leva con la migliore evidenza al mondo.
 
 ### Le cinque regole di struttura
 
@@ -104,43 +119,118 @@ Sono la parte che il vecchio impianto delle procedure sbagliava, e valgono in og
 4. **Quattro soli tipi di box:** Definizione · Quanto è solido · Attenzione · Cosa cambia per te.
 5. **Tabelle: massimo 4 colonne, massimo 8 parole per cella.** Se non ci sta, è prosa.
 
-## Pipeline editoriale — cinque livelli
+## Pipeline editoriale — sei livelli
 
 Ruoli e livelli sono dichiarati in `bibbie-generate/_dati/livelli.json`: è l'unico file da
 toccare per aggiungere, togliere o spostare un revisore.
 
 1. **`teoria`** redige la v1 (Bibbia + Mappa).
-2. **1º livello** — panel avversariale in parallelo sul contenuto (dieci lenti) → **v2**.
-3. **2º livello** — `fedelta-bibbia`, audit contro l'architettura → **v3**.
+2. **1º livello** — panel avversariale in parallelo sul contenuto (undici lenti) → **v2**.
+3. **2º livello** — `fedelta-bibbia` (audit contro l'architettura) ed `evidenza-estesa`
+   (il Ricercatore: allarga la base scientifica ai tre cerchi) → **v3**.
 4. **3º livello** — `apprendimento`: il documento insegna o fa solo sapere? → **v4**.
 5. **4º livello** — `editor`: toglie ridondanza, riporta nel range → **v5**.
 6. **5º livello** — `chiarezza`: **riscrive l'intero documento da capo** con lessico e sintassi
    semplici, senza perdere una sola informazione → **v6**.
-7. **Cancello** — `collaudo`: verifica che la riscrittura non abbia perso niente → **v6 consegnabile**.
+7. **6º livello** — `italiano`: **corregge la lingua** frase per frase — calchi dall'inglese,
+   nessi logici, pronomi vaghi, collocazioni — e inserisce le **metafore di servizio** → **v7**.
+8. **Cancello** — `collaudo`: verifica che le due riscritture non abbiano perso niente →
+   **v7 consegnabile**.
 
-Il quinto livello non è un revisore che consiglia: è un riscrittore che produce il deliverable.
-L'ordine 4º→5º non è invertibile: **si semplifica un testo già asciutto, non si asciuga un testo
-già semplificato** — l'asciugatura ri-comprimerebbe le frasi e annullerebbe il lavoro.
+Gli ultimi due livelli non consigliano: producono il deliverable.
+
+L'ordine non è invertibile, in nessuno dei due passaggi. **Si semplifica un testo già asciutto**
+(4º→5º): l'asciugatura ri-comprimerebbe le frasi e annullerebbe il lavoro. E **si raddrizza la
+lingua di un testo già semplificato** (5º→6º): una riscrittura integrale dopo la revisione di
+lingua reintrodurrebbe i calchi appena tolti.
 
 Analogamente, l'apprendimento sta **prima** dell'editor apposta: può chiedere qualche riga in
 più, e l'editor asciuga il risultato.
 
+### Perché esiste il sesto livello
+
+Il difetto che sopravviveva a tutta la catena era **l'italiano**. Nessun revisore aveva la lingua
+come mandato: il quinto livello accorcia le frasi e semplifica il lessico, ma una frase corta può
+essere un calco perfetto dall'inglese; il neolaureato segnala che non capisce, ma non sa dire
+perché.
+
+Il risultato era un documento giusto, semplice e scritto in un italiano che nessun madrelingua
+scriverebbe — periodi senza sintassi logica, pronomi appesi a una frase intera, nessi mancanti o
+sbagliati. La divisione fra i due livelli è netta: **il quinto lavora sulla complessità, il sesto
+sulla naturalezza.** Sono due difetti diversi, e risolverli nello stesso passaggio significa
+risolverne male uno.
+
+Il sesto livello **non riscrive**: passa frase per frase e corregge solo quelle che hanno un
+difetto, entro un delta di lunghezza fra −3% e +5%. Se tocca più del 40% delle frasi, il workflow
+lo segnala: o il quinto ha lavorato male, o il sesto ha riscritto.
+
+### Le metafore di servizio
+
+È l'unica cosa che il sesto livello ha licenza di **aggiungere**, e serve per i concetti che
+restano difficili anche dopo la semplificazione — non perché scritti male, ma perché **astratti**:
+il lettore non ha niente nella sua esperienza a cui agganciarli.
+
+Da sei a otto in tutto il documento, massimo una per capitolo, sotto le venti parole, prese dalla
+vita di tutti i giorni — la macchina, la casa, il lavoro, la cucina, il denaro. Sempre **dopo**
+l'affermazione, mai prima: un'immagine senza il concetto davanti è un indovinello. **Mai** su una
+bandiera rossa, su un criterio di invio o dentro un box di solidità, perché un'immagine ammorbidisce
+un avvertimento.
+
+La regola che le rende sicure per il collaudo, ed è anche il test di qualità:
+
+> **Se togliendo la metafora si perde un'informazione, non era una metafora: era contenuto nuovo,
+> e va tolta.**
+
+Non vanno confuse con le **metafore d'ancoraggio** del capitolo sui meccanismi — una per meccanismo,
+in grassetto, isolate su una riga, scelte dall'autore: quelle sono il cuore mnemonico del documento,
+e il sesto livello non le tocca.
+
 ### Il cancello di conservazione
 
-La riscrittura del quinto livello è l'unico passaggio della catena in cui **ogni singola frase
-cambia** — ed era l'unico che nessuno verificava: il documento consegnato era l'unica versione
-mai controllata.
+Fra il quinto e il sesto livello **ogni singola frase del documento cambia** — ed era il tratto
+che nessuno verificava: il documento consegnato era l'unica versione mai controllata.
 
-`collaudo` chiude quel buco. **Non è un sesto revisore** e non giudica la qualità, chiusa a
-monte: confronta v5 e v6 e verifica la sola **conservazione**. Gira in due strati — uno script
-deterministico (`verifica_conservazione.py`: etichette, PMID, numeri, struttura, tabelle,
-lunghezza, promesse e materiale operativo introdotti) e un collaudatore semantico per ciò che
-nessun conteggio vede: etichette riancorate a un altro claim, informazione persa per
-assorbimento, qualificazioni cadute, verbi irrigiditi.
+`collaudo` chiude quel buco. **Non è un settimo revisore** e non giudica la qualità, chiusa a
+monte: confronta la **v5** con la **v7** e verifica la sola **conservazione**. Il confronto è con
+la v5, non con la v6, perché la v5 è l'ultima versione con il contenuto approvato: così le due
+riscritture si collaudano insieme.
 
-Se trova violazioni, il riscrittore fa fino a **due riparazioni chirurgiche**. Se le perdite
-sono diffuse, si consegna la **v5**: meno scorrevole, ma accurata — l'accuratezza sta sopra la
-leggibilità nella gerarchia del metodo.
+Lo script deterministico (`verifica_conservazione.py`) gira **due volte, una per passaggio**:
+
+| Passaggio | Delta ammesso | Identità minima |
+|---|---|---|
+| v5 → v6 (chiarezza) | −5% / +10% | nessuna: ogni frase deve cambiare |
+| v6 → v7 (lingua) | −3% / +5% | **60% delle frasi identiche** |
+
+Misurare due riscritture in blocco le lascia compensare: se la prima perde e la seconda aggiunge,
+i conti tornano e la perdita non si vede. E la **soglia di identità** rende verificabile la regola
+più importante del sesto livello — *correggi, non riscrivere*. Prima era l'agente a dichiarare
+quante frasi aveva toccato, cioè un controllo che non controllava niente. Ora lo conta il codice,
+e sotto il 60% è bloccante come alzare un'etichetta.
+
+La **lettura semantica** si fa invece sull'intera catena, dalla v5 al documento finale: è lì che
+l'inventario delle informazioni si conserva o si perde. Cerca ciò che nessun conteggio vede —
+etichette riancorate a un altro claim, informazione persa per assorbimento, qualificazioni cadute,
+verbi irrigiditi.
+
+Ogni violazione dichiara **in quale dei due passaggi è nata**, così la riparazione va nel punto
+giusto invece che a caso. Chi ha prodotto la finale fa fino a **due riparazioni chirurgiche**. Se
+le perdite sono diffuse, si consegna la **v5**: meno scorrevole, ma accurata — l'accuratezza sta
+sopra la leggibilità nella gerarchia del metodo.
+
+### Il registro della lingua
+
+Gli ultimi due livelli producono, oltre al documento, tre segnali che valgono più del documento:
+i **calchi ricorrenti** (gli stessi errori che l'autore rifà su ogni Bibbia), i **passaggi non
+semplificabili** e i **passaggi rimasti oscuri**. Finivano in una riga di log e svanivano.
+
+Ora li accumula `_dati/registro-lingua.md`, sullo stesso modello del registro delle deviazioni:
+il sesto livello lo legge **prima** di iniziare — sa già cosa cercare — e ci deposita **dopo**;
+l'autore legge le «Correzioni attive» prima di scrivere la v1. La promozione di un pattern da
+osservazione a regola è **umana**.
+
+Il senso è aritmetico: correggere un calco a valle costa una passata su ogni Bibbia, correggerlo
+a monte costa una riga in `regole-di-scrittura.md` e non torna mai più.
 
 ## Come si lancia
 

@@ -1,17 +1,38 @@
 #!/usr/bin/env python3
 """
-Collaudo di conservazione — v5 (asciugata) contro v6 (riscritta in chiaro).
+Collaudo di conservazione — v5 (asciugata) contro la FINALE (riscritta in chiaro e ripulita nella lingua).
 
 Non giudica la qualita': quella e' gia' stata decisa dai cinque livelli di revisione.
-Verifica UNA cosa sola: che la riscrittura integrale del quinto livello non abbia
-perso, alterato o gonfiato niente. E' il controllo della clausola "L'INVIOLABILE".
+Verifica UNA cosa sola: che la riscrittura integrale del quinto livello e la revisione
+di lingua del sesto non abbiano perso, alterato o gonfiato niente. E' il controllo della clausola "L'INVIOLABILE".
 
-Quasi tutti i controlli sono DIFFERENZIALI (v5 contro v6): non richiedono di sapere
+Quasi tutti i controlli sono DIFFERENZIALI (v5 contro finale): non richiedono di sapere
 come e' formattato il documento, solo che le due versioni dicano le stesse cose.
 Questo li rende immuni al fatto che il formato reale delle Bibbie non e' ancora fissato.
 
+Si fa girare UNA VOLTA PER PASSAGGIO, non una volta sola sulla coppia estrema.
+Due riscritture misurate in blocco si compensano a vicenda: se la prima perde e la
+seconda aggiunge, i conti tornano e la perdita non si vede.
+
 Uso:
-    python3 verifica_conservazione.py <v5.md> <v6.md> [--json rapporto.json]
+    # 1) la riscrittura di chiarezza (v5 -> v6): ogni frase cambia, nessuna identita' attesa
+    python3 verifica_conservazione.py v5-intermedia.md v6-chiarezza.md \
+        --etichetta "chiarezza" --delta-min -5 --delta-max 10 --json collaudo-chiarezza.json
+
+    # 2) la revisione di lingua (v6 -> v7): deve CORREGGERE, non riscrivere
+    python3 verifica_conservazione.py v6-chiarezza.md v7-finale.md \
+        --etichetta "lingua" --delta-min -3 --delta-max 5 --min-identita 60 \
+        --json collaudo-lingua.json
+
+Opzioni:
+    --etichetta NOME    nome del passaggio, per l'intestazione del rapporto
+    --delta-min N       variazione di lunghezza minima ammessa, in % (default -5)
+    --delta-max N       variazione di lunghezza massima ammessa, in % (default 10)
+    --min-identita N    percentuale minima di frasi rimaste IDENTICHE fra i due file.
+                        Serve solo per una passata che dichiara di correggere e non
+                        riscrivere: sotto quella soglia ha riscritto, e lo dice il
+                        conteggio invece dell'agente stesso.
+    --json PATH         salva il rapporto
 
 Exit code:
     0 = nessuna violazione bloccante
@@ -33,8 +54,10 @@ FORZA = {"RAGIONAMENTO": 0, "IPOTESI": 1, "PROBABILE": 2, "DIMOSTRATO": 3}
 
 BOX_AMMESSI = ["Definizione", "Quanto è solido", "Attenzione", "Cosa cambia per te"]
 
-PAROLE_MIN, PAROLE_MAX = 8000, 12000
-DELTA_MIN, DELTA_MAX = -5.0, 10.0          # la riscrittura puo' variare solo qui dentro
+PAROLE_MIN, PAROLE_MAX = 8000, 13000
+# Default = budget della riscrittura di chiarezza. Ogni passaggio ha il suo, e si passa
+# da riga di comando: misurare due riscritture con una sola forbice le lascia compensare.
+DELTA_MIN, DELTA_MAX = -5.0, 10.0
 GLOSSARIO_MAX = 40
 SCRIPT_MAX_PAROLE = 100
 TABELLA_MAX_COLONNE = 4
@@ -150,8 +173,35 @@ def glossario(t):
     return len(re.findall(r"^\s*(?:[-*+]\s+|\*\*)\S", m.group(1), flags=re.M))
 
 
+def frasi(t):
+    """Frasi normalizzate. E' l'unita' su cui si misura quanto una passata ha toccato.
+
+    Serve al controllo di IDENTITA': il sesto livello dichiara di correggere frase per
+    frase e non di riscrivere, ma quella dichiarazione la fa l'agente su se stesso e
+    non vale niente. Qui la stessa cosa la conta il codice.
+    """
+    corpo = re.sub(r"^\s*[#>|*+-]+\s*", " ", t, flags=re.M)
+    pezzi = re.split(r"(?<=[.!?:;])\s+|\n{2,}", corpo)
+    out = []
+    for p in pezzi:
+        s = " ".join(p.split())
+        if len(s.split()) >= 5:          # sotto le 5 parole non e' una frase: e' un'etichetta
+            out.append(s)
+    return out
+
+
+def identita(a, b):
+    """Percentuale di frasi di `a` che ricompaiono IDENTICHE in `b`."""
+    fa, fb = Counter(frasi(a)), Counter(frasi(b))
+    tot = sum(fa.values())
+    if not tot:
+        return None
+    uguali = sum((fa & fb).values())
+    return round(100.0 * uguali / tot, 1)
+
+
 def script_paziente(t):
-    """Lo script del capitolo 12: il blocco in corsivo sotto l'intestazione «Lo script».
+    """Lo script del capitolo 13: il blocco in corsivo sotto l'intestazione «Lo script».
 
     La misura e' ancorata alla sezione, non all'intero documento: una coppia
     virgoletta+asterisco distante inghiottiva mezza Bibbia e faceva sembrare lo
@@ -191,7 +241,7 @@ class Rapporto:
         return [v for v in self.voci if v["severita"] == "BLOCCANTE"]
 
 
-def verifica(v5, v6):
+def verifica(v5, v6, delta_min=DELTA_MIN, delta_max=DELTA_MAX, min_identita=None):
     r = Rapporto()
 
     # --- 1. ETICHETTE DI SOLIDITA' — il controllo piu' importante di tutti ---
@@ -294,14 +344,34 @@ def verifica(v5, v6):
     # --- 6. LUNGHEZZA ---
     w5, w6 = conta_parole(v5), conta_parole(v6)
     delta = ((w6 - w5) / w5 * 100) if w5 else 0.0
-    if not (DELTA_MIN <= delta <= DELTA_MAX):
+    if not (delta_min <= delta <= delta_max):
         r.add(True, "DELTA_FUORI_RANGE",
-              f"La v6 varia del {delta:+.1f}% rispetto alla v5 ({w5} → {w6} parole). "
-              f"Ammesso solo fra {DELTA_MIN:+.0f}% e {DELTA_MAX:+.0f}%: "
+              f"La versione dopo varia del {delta:+.1f}% rispetto a quella prima ({w5} → {w6} parole). "
+              f"Ammesso solo fra {delta_min:+.0f}% e {delta_max:+.0f}%: "
               f"{'sotto significa informazione tagliata' if delta < 0 else 'sopra significa contenuto aggiunto'}.")
+    # AVVISO, non bloccante: la lunghezza NON e' una questione di conservazione.
+    # Questo script verifica che fra due versioni non si sia perso niente. Se il documento
+    # sia lungo 12.000 o 17.000 parole e' un giudizio di qualita', e vive nella checklist
+    # e nella rubrica, dove e' gia' presente. Tenerlo qui come bloccante produceva l'assurdo
+    # osservato al primo giro reale: un documento conservato perfettamente veniva dichiarato
+    # NON CONSEGNABILE per un difetto ereditato dalla versione in ingresso, che nessuna
+    # riparazione chirurgica puo' correggere — e i due giri di riparazione si bruciavano
+    # senza toccare i difetti veri.
     if not (PAROLE_MIN <= w6 <= PAROLE_MAX):
-        r.add(True, "PAROLE_FUORI_RANGE",
-              f"La v6 ha {w6} parole (appendici escluse): fuori dal range {PAROLE_MIN}–{PAROLE_MAX}.")
+        r.add(False, "PAROLE_FUORI_RANGE",
+              f"Il documento ha {w6} parole (appendici escluse): fuori dal range {PAROLE_MIN}–{PAROLE_MAX}. "
+              f"Non e' un difetto di conservazione: se il superamento c'era gia' in ingresso, "
+              f"il rilievo appartiene al livello di asciugatura, non a chi ha riscritto.")
+
+    # --- 6-bis. IDENTITA' — ha corretto o ha riscritto? ---
+    # Si applica solo a una passata che dichiara di correggere frase per frase.
+    # E' il controllo che sostituisce l'autodichiarazione dell'agente su se stesso.
+    ident = identita(v5, v6)
+    if min_identita is not None and ident is not None and ident < min_identita:
+        r.add(True, "HA_RISCRITTO_INVECE_DI_CORREGGERE",
+              f"Solo il {ident}% delle frasi e' rimasto identico (soglia {min_identita}%). "
+              f"Questa passata doveva correggere i difetti, non riscrivere il documento: "
+              f"una seconda riscrittura integrale raddoppia la deriva che il collaudo esiste per fermare.")
 
     # --- 7. GLOSSARIO E SCRIPT ---
     g6 = glossario(v6)
@@ -330,15 +400,41 @@ def verifica(v5, v6):
             r.add(True, "PROMESSA_INTRODOTTA",
                   f"La v6 introduce una promessa di esito che la v5 non aveva: {nome}.")
 
-    return r, {"parole_v5": w5, "parole_v6": w6, "delta_pct": round(delta, 1),
-               "etichette_v5": len(e5), "etichette_v6": len(e6),
-               "pmid_v5": len(p5), "pmid_v6": len(p6)}
+    return r, {"parole_prima": w5, "parole_dopo": w6, "delta_pct": round(delta, 1),
+               "identita_pct": ident,
+               "etichette_prima": len(e5), "etichette_dopo": len(e6),
+               "pmid_prima": len(p5), "pmid_dopo": len(p6)}
 
 
 # ---------------------------------------------------------------- main
 
+def opzione(nome, default=None, numerica=True):
+    """Legge --nome VALORE da riga di comando."""
+    if nome not in sys.argv:
+        return default
+    i = sys.argv.index(nome)
+    if i + 1 >= len(sys.argv):
+        return default
+    val = sys.argv[i + 1]
+    if not numerica:
+        return val
+    try:
+        return float(val)
+    except ValueError:
+        return default
+
+
 def main():
     args = [a for a in sys.argv[1:] if not a.startswith("--")]
+    # i valori delle opzioni non sono file: vanno tolti dai posizionali
+    valori = set()
+    for nome in ("--json", "--etichetta", "--delta-min", "--delta-max", "--min-identita"):
+        if nome in sys.argv:
+            i = sys.argv.index(nome)
+            if i + 1 < len(sys.argv):
+                valori.add(sys.argv[i + 1])
+    args = [a for a in args if a not in valori]
+
     if len(args) < 2:
         print(__doc__)
         return 2
@@ -347,19 +443,29 @@ def main():
             print(f"ERRORE: file non trovato: {p}")
             return 2
 
+    etichetta = opzione("--etichetta", "passaggio", numerica=False)
+    dmin = opzione("--delta-min", DELTA_MIN)
+    dmax = opzione("--delta-max", DELTA_MAX)
+    ident_min = opzione("--min-identita", None)
+
     v5, v6 = leggi(args[0]), leggi(args[1])
-    rap, stat = verifica(v5, v6)
+    rap, stat = verifica(v5, v6, dmin, dmax, ident_min)
 
     print("=" * 72)
-    print("COLLAUDO DI CONSERVAZIONE — v5 (asciugata) contro v6 (riscritta)")
+    print(f"COLLAUDO DI CONSERVAZIONE — passaggio «{etichetta}»")
+    print(f"  {Path(args[0]).name}  →  {Path(args[1]).name}")
     print("=" * 72)
-    print(f"parole   {stat['parole_v5']} → {stat['parole_v6']}  ({stat['delta_pct']:+.1f}%)")
-    print(f"etichette {stat['etichette_v5']} → {stat['etichette_v6']}     "
-          f"PMID {stat['pmid_v5']} → {stat['pmid_v6']}")
+    print(f"parole    {stat['parole_prima']} → {stat['parole_dopo']}  ({stat['delta_pct']:+.1f}%)"
+          f"   [ammesso {dmin:+.0f}% … {dmax:+.0f}%]")
+    print(f"etichette {stat['etichette_prima']} → {stat['etichette_dopo']}     "
+          f"PMID {stat['pmid_prima']} → {stat['pmid_dopo']}")
+    if stat["identita_pct"] is not None:
+        soglia = f"   [minimo {ident_min:.0f}%]" if ident_min is not None else "   (nessuna soglia: riscrittura attesa)"
+        print(f"frasi identiche {stat['identita_pct']}%{soglia}")
     print("-" * 72)
 
     if not rap.voci:
-        print("NESSUNA VIOLAZIONE. La riscrittura ha conservato tutto.")
+        print(f"NESSUNA VIOLAZIONE. Il passaggio «{etichetta}» ha conservato tutto.")
     for v in sorted(rap.voci, key=lambda x: x["severita"] != "BLOCCANTE"):
         print(f"\n[{v['severita']}] {v['codice']}\n  {v['messaggio']}")
         for d in v["dettaglio"]:
@@ -375,7 +481,8 @@ def main():
         i = sys.argv.index("--json")
         if i + 1 < len(sys.argv):
             Path(sys.argv[i + 1]).write_text(
-                json.dumps({"esito": esito, "statistiche": stat, "violazioni": rap.voci},
+                json.dumps({"passaggio": etichetta, "esito": esito,
+                            "statistiche": stat, "violazioni": rap.voci},
                            ensure_ascii=False, indent=2), encoding="utf-8")
 
     return 1 if rap.bloccanti else 0

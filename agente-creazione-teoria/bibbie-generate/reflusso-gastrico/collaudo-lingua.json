@@ -1,0 +1,28 @@
+{
+  "passaggio": "lingua",
+  "esito": "NON CONSEGNABILE",
+  "statistiche": {
+    "parole_prima": 16620,
+    "parole_dopo": 16720,
+    "delta_pct": 0.6,
+    "identita_pct": 97.9,
+    "etichette_prima": 26,
+    "etichette_dopo": 28,
+    "pmid_prima": 58,
+    "pmid_dopo": 58
+  },
+  "violazioni": [
+    {
+      "severita": "BLOCCANTE",
+      "codice": "PAROLE_FUORI_RANGE",
+      "messaggio": "La v6 ha 16720 parole (appendici escluse): fuori dal range 8000–13000.",
+      "dettaglio": []
+    },
+    {
+      "severita": "AVVISO",
+      "codice": "GLOSSARIO_TROPPO_LUNGO",
+      "messaggio": "Il glossario ha 45 termini (max 40): la Bibbia è scritta troppo tecnica.",
+      "dettaglio": []
+    }
+  ]
+}

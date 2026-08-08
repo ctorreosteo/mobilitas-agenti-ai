@@ -49,6 +49,37 @@ Un termine tecnico si spiega **nella stessa frase in cui compare**, con un'appos
 
 Ogni termine così definito finisce anche nel **Glossario** (Appendice A).
 
+### Scrivi in italiano, non in italiano tradotto
+
+È il difetto che sopravvive più a lungo di ogni altro, perché non si vede: la frase è corta, corretta, comprensibile — e nessun madrelingua l'avrebbe scritta così. Un revisore di sesto livello la corregge alla fine, ma ogni frase che nasce già italiana è lavoro che nessuno deve rifare.
+
+**La prova che li smaschera tutti:** traduci la frase in inglese, parola per parola, senza aggiustare niente. **Se l'inglese che ne esce è perfetto, la frase italiana è un calco.** L'italiano vero, tradotto alla lettera, produce un inglese storto.
+
+I calchi che ricorrono di più in un testo clinico:
+
+| Non scrivere | Scrivi |
+|---|---|
+| le *evidenze* | le prove, i dati, la letteratura |
+| *significativo* (per "importante") | importante, netto — riservalo alla statistica |
+| *severo* (sintomo, quadro) | grave, intenso |
+| *consistente* (per "coerente") | coerente, costante |
+| *attualmente* (per "in realtà") | in realtà |
+| *supportare* una tesi | sostenere, reggere, confermare |
+| il paziente *presenta* / *sperimenta* | ha, arriva con, lamenta, sente |
+| *effettuare una valutazione* | valutare |
+| *andiamo a* valutare | valuti |
+| *sia… che…* | sia… sia… |
+
+E tre costruzioni da non usare mai:
+
+- **Il gerundio d'apertura.** *"Trattando il diaframma, si ottiene…"* nasconde il rapporto logico: era una causa, una condizione o un tempo? Scrivi il nesso: *"Se tratti il diaframma…"*.
+- **Il soggetto astratto che agisce.** *"La valutazione permette di identificare il sottotipo"* — la valutazione non identifica niente. Il soggetto è il clinico, il paziente o la struttura.
+- **Il pronome senza padrone.** *Questo*, *ciò*, *tale*, *il che* non possono riferirsi a una frase intera: o puntano a un sostantivo lì accanto, o si sostituiscono con il sostantivo. **È la prima causa dei passaggi che risultano incomprensibili**, e costa una parola in più risolverla.
+
+Una regola di logica, non di stile: **ogni *quindi*, *infatti*, *tuttavia*, *pertanto* deve annunciare il rapporto che c'è davvero.** Un connettivo che promette una conseguenza e consegna un limite fa tornare indietro il lettore ogni volta.
+
+Il repertorio completo, con i prima/dopo, sta in `direttore-osteopatico-italiano/references/italiano-vero.md`. Non serve leggerlo per scrivere: serve conoscere questa mezza pagina.
+
 ## Le tre voci
 
 Una Bibbia alterna tre registri. Con uno solo il documento è piatto.
@@ -83,8 +114,21 @@ Già usate — **non riciclarle**:
 - La fascia come **muta da sub**.
 - Il diaframma come **pompa di aspirazione**.
 - L'acufene come **prigione acustica**.
+- Il **freno a mano e il piede sul pedale**, per due sistemi che tengono insieme.
+- La **palestra**, per un guadagno che appartiene alla ripetizione e non alla singola volta.
+- Il **turno del collega coperto**, per un compenso che fa saltare qualcosa di secondario.
+- Il **salvavita tarato troppo sensibile**, per una soglia che si abbassa.
+- L'**elastico della maglietta**, per un tessuto che cede negli anni.
+- Il **termostato contro la stufa**, per effetto di stato contro effetto durevole.
 
-Registri da cui pescarne di nuove: idraulica, meccanica, acustica, elettricità, architettura, cucina. **Mai metafore militari** — "combattere il dolore", "sconfiggere l'infiammazione": è il cliché del marketing sanitario, che non facciamo.
+Registri da cui pescarne di nuove: idraulica, meccanica, acustica, elettricità, architettura, cucina, la macchina, la casa, il lavoro, il denaro. Il criterio è che il lettore l'abbia **vissuta fisicamente**: un'immagine presa dall'ingegneria non aiuta chi non è ingegnere. **Mai metafore militari** — "combattere il dolore", "sconfiggere l'infiammazione": è il cliché del marketing sanitario, che non facciamo.
+
+### Due tipi di metafora, e non vanno confusi
+
+- **Metafora d'ancoraggio** — una per meccanismo, nel Capitolo 5. Fisica, in grassetto, isolata su una riga. È il cuore mnemonico del documento: quello che il lettore ricorda a sei mesi. **La scrivi tu.**
+- **Metafora di servizio** — breve (max 20 parole), dentro la frase, non in grassetto, negli altri capitoli. Serve a superare un passaggio astratto e poi si dimentica. **La inserisce il sesto livello di revisione**, da sei a otto in tutto il documento, e solo dove un concetto resta difficile anche dopo la semplificazione.
+
+La regola che vale per entrambe: **si mette dopo l'affermazione, mai prima.** Prima si dice la cosa, poi si dà l'immagine — un'immagine senza il concetto davanti è un indovinello. E **mai metafore su una bandiera rossa, su un criterio di invio o dentro un box di solidità**: lì il testo resta letterale, perché un'immagine ammorbidisce un avvertimento.
 
 ## Frasi-firma
 
@@ -128,3 +172,5 @@ Ogni Bibbia lo **argomenta** sulla propria condizione, e lo presenta come **corn
 | Meta-commento ("qui si è sbagliato per anni") | Rumore. Scrivi la cosa giusta e basta. |
 | Sequenze, minuti o dosi | Sei uscito dalla Bibbia. Quello sta nella Procedura. |
 | "In conclusione, l'osteopatia offre…" | Registro da tesina. Cancella. |
+| Frase che tradotta in inglese suona perfetta | È un calco. Riscrivila in italiano. |
+| "Questo spiega perché…" senza dire *questo cosa* | Il lettore ricostruisce a caso. Metti il sostantivo. |

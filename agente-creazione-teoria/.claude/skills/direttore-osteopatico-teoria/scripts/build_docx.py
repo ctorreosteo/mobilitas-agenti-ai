@@ -3,9 +3,9 @@
 Converte una Bibbia teorica Mobilitas (o la sua Mappa concettuale) da markdown a .docx.
 
 Uso:
-    python build_docx.py v6-finale.md "Reflusso Gastroesofageo" --slug reflusso
+    python build_docx.py v7-finale.md "Reflusso Gastroesofageo" --slug reflusso
     python build_docx.py mappa-finale.md "Reflusso Gastroesofageo" --slug reflusso
-    python build_docx.py v6-finale.md "Reflusso" -o /percorso/esplicito/Bibbia_Reflusso.docx
+    python build_docx.py v7-finale.md "Reflusso" -o /percorso/esplicito/Bibbia_Reflusso.docx
 
 Senza -o il file finisce in <repo>/outputs/<slug>/, una sottocartella per condizione.
 Lo slug si deduce dal titolo; passa --slug per allinearlo a bibbie-generate/<slug>/.
@@ -27,7 +27,7 @@ from pathlib import Path
 
 # Range di una Bibbia teorica, appendici escluse (vedi architettura-bibbia.md).
 MIN_PAROLE = 8000
-MAX_PAROLE = 12000
+MAX_PAROLE = 13000
 
 
 def word_count(md_path: Path) -> int:

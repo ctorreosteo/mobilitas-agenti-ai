@@ -211,7 +211,7 @@ Non tocchi, non riordini, non "semplifichi per chiarezza":
   proteggere.
 - **Le tre voci** e la Mappa concettuale come oggetto standalone: la Mappa è lo
   scheletro logico, non deve diventare un riassunto della Bibbia.
-- **L'architettura fissa** dei tredici capitoli, con le aperture `In una riga`, le
+- **L'architettura fissa** dei quindici capitoli, con le aperture `In una riga`, le
   chiusure `Le tre cose da ricordare` e i quattro tipi di box.
 
 ---

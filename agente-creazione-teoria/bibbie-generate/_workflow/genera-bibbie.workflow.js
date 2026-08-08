@@ -1,20 +1,21 @@
 export const meta = {
   name: 'genera-bibbie-osteopatiche',
-  description: 'Per ogni condizione: Bibbia teorica (~20 pagine) + Mappa concettuale, revisione su cinque livelli (1o parallelo sul contenuto, 2o fedelta all architettura, 3o logica dell apprendimento, 4o editor di asciugatura, 5o riscrittura integrale in linguaggio semplice), poi COLLAUDO DI CONSERVAZIONE della riscrittura con riparazione mirata. Nessuna versione arriva alla consegna senza cancello. Resiliente: retry sugli agenti critici + fallback di promozione, un singolo fallimento non aborta la catena',
+  description: 'Per ogni condizione: Bibbia teorica (~20 pagine) + Mappa concettuale, revisione su sei livelli (1o parallelo sul contenuto, 2o fedelta all architettura + ampliamento scientifico ai tre cerchi, 3o logica dell apprendimento, 4o editor di asciugatura, 5o riscrittura integrale in linguaggio semplice, 6o revisione di lingua italiana), poi COLLAUDO DI CONSERVAZIONE con riparazione mirata. Nessuna versione arriva alla consegna senza cancello. Resiliente: retry sugli agenti critici + fallback di promozione, un singolo fallimento non aborta la catena',
   whenToUse: 'Genera le Bibbie teoriche Mobilitas in batch a partire da PROBLEMI_OSTEOPATIA.xlsx',
   phases: [
     { title: 'Scoperta', detail: 'trova da solo le skill-revisore presenti nella cartella' },
     { title: 'Draft', detail: 'skill direttore-osteopatico-teoria redige v1 Bibbia + Mappa' },
     { title: 'Revisione', detail: 'TUTTI i revisori di 1o livello, in parallelo, feedback per severita' },
     { title: 'Sintesi intermedia', detail: 'skill autore pesa i feedback e riscrive la v2' },
-    { title: 'Revisione 2o livello', detail: 'fedelta all architettura della Bibbia, sulla v2' },
+    { title: 'Revisione 2o livello', detail: 'fedelta all architettura + evidenza estesa, sulla v2' },
     { title: 'Sintesi v3', detail: 'skill autore applica i feedback di 2o livello -> v3' },
     { title: 'Revisione 3o livello', detail: 'logica dell apprendimento, sulla v3' },
     { title: 'Sintesi v4', detail: 'skill autore applica i rilievi di apprendimento -> v4' },
     { title: 'Revisione 4o livello', detail: 'editor di asciugatura, sulla v4' },
     { title: 'Sintesi v5', detail: 'skill autore applica la mappa di taglio dell editor -> v5' },
     { title: 'Riscrittura finale', detail: 'skill chiarezza riscrive TUTTO da capo in linguaggio semplice -> v6' },
-    { title: 'Collaudo', detail: 'script deterministico + collaudatore semantico sulla coppia v5/v6; riparazione mirata se serve' },
+    { title: 'Revisione di lingua', detail: 'skill italiano toglie i calchi e raddrizza la sintassi -> v7 finale' },
+    { title: 'Collaudo', detail: 'script deterministico + collaudatore semantico sulla coppia v5/v7; riparazione mirata se serve' },
   ],
 }
 
@@ -27,6 +28,10 @@ const DATA = OUT + '/_dati/problemi.json'
 // Registro delle deviazioni dal metodo interno: dove l'architettura e' stata trovata
 // fattualmente sbagliata, vince l'accuratezza scientifica. Trasversale a tutte le condizioni.
 const DEVIAZIONI = OUT + '/_dati/deviazioni-dal-metodo.md'
+// Registro della lingua: i calchi ricorrenti e i passaggi che restano oscuri. Lo scrivono
+// il 5o e il 6o livello, lo legge l'autore prima di scrivere. Chiude il ciclo di
+// apprendimento: senza, ogni Bibbia rinasce con i difetti di scrittura della precedente.
+const REGISTRO_LINGUA = OUT + '/_dati/registro-lingua.md'
 
 // ---- RUOLI E LIVELLI DECISI DAL MANIFESTO, NON DAL CODICE ----
 // L'ESISTENZA dei revisori resta auto-scoperta dalla cartella .claude/skills.
@@ -35,11 +40,25 @@ const DEVIAZIONI = OUT + '/_dati/deviazioni-dal-metodo.md'
 // NON viene usato. Cosi aggiungi/togli/sposti revisori modificando solo quel file.
 const MANIFESTO = OUT + '/_dati/livelli.json'
 
+// ---- NOMI DEI FILE DELLA CATENA ----
+// v5 = ultima versione con il contenuto approvato dai livelli 1-4.
+// v6 = riscrittura integrale in linguaggio semplice (5o livello).
+// v7 = revisione di lingua italiana (6o livello). E' il DELIVERABLE.
+// Il collaudo confronta v5 contro v7: cosi' verifica le due riscritture insieme.
+const F = (slug) => ({
+  v5: `${OUT}/${slug}/v5-intermedia.md`,
+  m5: `${OUT}/${slug}/mappa-v5.md`,
+  v6: `${OUT}/${slug}/v6-chiarezza.md`,
+  m6: `${OUT}/${slug}/mappa-v6.md`,
+  v7: `${OUT}/${slug}/v7-finale.md`,
+  m7: `${OUT}/${slug}/mappa-finale.md`,
+})
+
 // Schema della fase di scoperta: cartelle reali + ruoli/livelli espliciti dal manifesto.
 const DISCOVERY_SCHEMA = {
   type: 'object',
   additionalProperties: false,
-  required: ['tutte_le_skill', 'autore', 'primo_livello', 'secondo_livello', 'terzo_livello', 'quarto_livello', 'quinto_livello', 'collaudo'],
+  required: ['tutte_le_skill', 'autore', 'primo_livello', 'secondo_livello', 'terzo_livello', 'quarto_livello', 'quinto_livello', 'sesto_livello', 'collaudo'],
   properties: {
     tutte_le_skill: { type: 'array', items: { type: 'string' }, description: 'Chiavi (dopo "direttore-osteopatico-") di TUTTE le cartelle skill realmente presenti' },
     autore: { type: 'string', description: 'Chiave dell autore dal manifesto (di norma "teoria")' },
@@ -48,7 +67,8 @@ const DISCOVERY_SCHEMA = {
     terzo_livello: { type: 'array', items: { type: 'string' }, description: 'Chiavi dei revisori di TERZO livello dal manifesto (di norma "apprendimento")' },
     quarto_livello: { type: 'array', items: { type: 'string' }, description: 'Chiavi dei revisori di QUARTO livello dal manifesto (di norma "editor")' },
     quinto_livello: { type: 'array', items: { type: 'string' }, description: 'Chiavi dei riscrittori di QUINTO livello dal manifesto (di norma "chiarezza")' },
-    collaudo: { type: 'array', items: { type: 'string' }, description: 'Chiavi del CANCELLO di conservazione dal manifesto (di norma "collaudo"). Non e un livello di revisione: verifica che la riscrittura non abbia perso niente' },
+    sesto_livello: { type: 'array', items: { type: 'string' }, description: 'Chiavi dei revisori di SESTO livello dal manifesto (di norma "italiano"): la revisione della lingua' },
+    collaudo: { type: 'array', items: { type: 'string' }, description: 'Chiavi del CANCELLO di conservazione dal manifesto (di norma "collaudo"). Non e un livello di revisione: verifica che le riscritture non abbiano perso niente' },
   },
 }
 
@@ -56,9 +76,9 @@ const discoveryPrompt = () => `Devi determinare ruoli e livelli delle skill di q
 
 1) Esegui: ls -1 ${SK}
    Prendi TUTTE le cartelle che iniziano con "direttore-osteopatico-" e per ognuna estrai la chiave = la parte dopo quel prefisso (es. "direttore-osteopatico-compliance" -> "compliance"). Questo e "tutte_le_skill".
-2) Leggi il manifesto ${MANIFESTO} (JSON). Prendi "autore" (una chiave), "primo_livello", "secondo_livello", "terzo_livello", "quarto_livello", "quinto_livello" e "collaudo" (array di chiavi; un array puo mancare o essere vuoto -> restituisci []).
+2) Leggi il manifesto ${MANIFESTO} (JSON). Prendi "autore" (una chiave), "primo_livello", "secondo_livello", "terzo_livello", "quarto_livello", "quinto_livello", "sesto_livello" e "collaudo" (array di chiavi; un array puo mancare o essere vuoto -> restituisci []).
 
-Restituisci l'oggetto strutturato con: tutte_le_skill, autore, primo_livello, secondo_livello, terzo_livello, quarto_livello, quinto_livello, collaudo.
+Restituisci l'oggetto strutturato con: tutte_le_skill, autore, primo_livello, secondo_livello, terzo_livello, quarto_livello, quinto_livello, sesto_livello, collaudo.
 Regole: usa SOLO cartelle realmente presenti; non inventare chiavi; se una chiave del manifesto non ha una cartella corrispondente, NON includerla; riporta i livelli e il collaudo esattamente come stanno nel manifesto (filtrati sulle cartelle esistenti).`
 
 // ---- schema del feedback strutturato di ogni revisore (livelli 1-4) ----
@@ -124,7 +144,8 @@ const COLLAUDO_SCHEMA = {
         additionalProperties: false,
         required: ['tipo', 'capitolo', 'riparazione'],
         properties: {
-          tipo: { type: 'string', description: 'INFORMAZIONE_PERSA / QUALIFICAZIONE_CADUTA / ETICHETTA_RIANCORATA / ETICHETTA_ALZATA / VERBO_IRRIGIDITO / NUMERO_RIATTRIBUITO / PROMESSA_INTRODOTTA / MATERIALE_OPERATIVO / STRUTTURA_ALTERATA' },
+          tipo: { type: 'string', description: 'INFORMAZIONE_PERSA / QUALIFICAZIONE_CADUTA / FRASE_PONTE_CADUTA / ETICHETTA_RIANCORATA / ETICHETTA_ALZATA / VERBO_IRRIGIDITO / NUMERO_RIATTRIBUITO / PROMESSA_INTRODOTTA / MATERIALE_OPERATIVO / STRUTTURA_ALTERATA / HA_RISCRITTO_INVECE_DI_CORREGGERE' },
+          passaggio: { type: 'string', description: 'In quale delle due riscritture e nata: CHIAREZZA (v5->v6) / LINGUA (v6->v7) / INCERTO' },
           capitolo: { type: 'string', description: 'Nome del capitolo, mai il numero' },
           testo_v5: { type: 'string', description: 'Il passaggio come stava nella v5' },
           testo_v6: { type: 'string', description: 'Come sta nella v6, o "assente"' },
@@ -142,12 +163,14 @@ const COLLAUDO_SCHEMA = {
 const draftPrompt = (slug) => `Sei il **Direttore Osteopatico** di Mobilitas (OsteoTouch). Devi redigere la BIBBIA TEORICA della condizione con slug "${slug}".
 
 ## Che documento stai scrivendo — leggi prima di tutto
-Una **Bibbia** e' ~20 pagine con TUTTO quello che un osteopata deve SAPERE su quella condizione per poterla risolvere in poche sedute. NON e' una procedura operativa: **niente tecniche, niente dosi, niente sequenze, niente minuti, niente piani di seduta, niente scheda operativa**. Quelli stanno in un documento separato di 2 pagine, scritto da un altro agente. Il tuo Capitolo 11 arriva fino al RAZIONALE della leva e si ferma li'.
+Una **Bibbia** e' ~20 pagine con TUTTO quello che un osteopata deve SAPERE su quella condizione per poterla risolvere in poche sedute. NON e' una procedura operativa: **niente tecniche, niente dosi da somministrare, niente sequenze, niente minuti, niente piani di seduta, niente scheda operativa**. Quelli stanno in un documento separato di 2 pagine, scritto da un altro agente. Il tuo Capitolo 11 arriva fino al RAZIONALE della leva e si ferma li'.
+
+**UNICA ECCEZIONE al confine, e va capita bene:** il parametro usato in uno STUDIO e' un dato di evidenza, non una prescrizione. *"Nello studio hanno svolto [l'esercizio] per [N] settimane"* sta nella Bibbia; *"fai fare [N] settimane al paziente"* sta nella Procedura. Il criterio e' il TEMPO VERBALE e il DESTINATARIO: passato e attribuito a uno studio = evidenza; imperativo e rivolto al nostro paziente = protocollo.
 
 ## Istruzioni della skill (leggile e seguile INTEGRALMENTE, in quest'ordine)
 1. Leggi ${AUTORE}/SKILL.md
 2. Poi, in quest'ordine, i reference in ${AUTORE}/references/:
-   - architettura-bibbia.md (la struttura fissa dei 13 capitoli e le cinque regole di struttura)
+   - architettura-bibbia.md (la struttura fissa dei 15 capitoli e le cinque regole di struttura)
    - regole-di-scrittura.md (COME si scrive: la leggibilita' e' un requisito, non una preferenza)
    - cinque-modelli-osteopatici.md (impalcatura del Capitolo 7)
    - motore-clinico.md (il ragionamento del Capitolo 8)
@@ -156,20 +179,40 @@ Una **Bibbia** e' ~20 pagine con TUTTO quello che un osteopata deve SAPERE su qu
    - sistema-libreria.md (coerenza col corpus)
 
 ## Precedenza scientifica — leggi PRIMA di scrivere
+Apri ${REGISTRO_LINGUA} e leggi la sezione **Correzioni attive**: sono errori di scrittura gia' corretti a valle su altre condizioni. Non rifarli nella v1 e' il modo piu' economico di averli risolti. Bastano trenta secondi.
+
 Apri ${DEVIAZIONI}. Registra i punti in cui il metodo interno e' stato trovato fattualmente sbagliato, con la formulazione corretta da usare al suo posto. **L'accuratezza scientifica viene prima della fedelta' al metodo**. Se ne trovi uno NUOVO: correggi e apri una voce con stato PROPOSTA e la fonte; NON modificare i documenti di metodo (la ratifica e' umana).
 
 ## Dati del problema
-Apri ${DATA}, trova l'oggetto con "slug": "${slug}" e usa TUTTI i suoi campi (sintomi, soluzioni_provate, farmaci, esami_strumentali, benefici_trattamento, ads_pain_points, red_flag, meccanismo_causa, meccanismo_trattamento, obiezioni_specifiche) come materia prima. Sono la voce del paziente e del mercato: il Capitolo 1 ("Chi ti trova davanti") nasce da li', e il Capitolo 12 risponde a quelle obiezioni.
+Apri ${DATA}, trova l'oggetto con "slug": "${slug}" e usa TUTTI i suoi campi (sintomi, soluzioni_provate, farmaci, esami_strumentali, benefici_trattamento, ads_pain_points, red_flag, meccanismo_causa, meccanismo_trattamento, obiezioni_specifiche) come materia prima. Sono la voce del paziente e del mercato: il Capitolo 1 ("Chi ti trova davanti") nasce da li', e il Capitolo 13 risponde a quelle obiezioni.
 
-## Ricerca scientifica — OBBLIGATORIA
-Prima di scrivere qualunque affermazione di evidenza DEVI cercare sul web e verificare ogni studio: titolo/autore/anno/PMID reali. Se non verifichi uno studio, non citarlo. Scegli l'ancora scientifica (un ricercatore reale, vivente, il piu autorevole al mondo in terapia manuale su questa condizione).
+## Ricerca scientifica — OBBLIGATORIA, e su TRE CERCHI
+Prima di scrivere qualunque affermazione di evidenza DEVI cercare sul web e verificare ogni studio: titolo/autore/anno/PMID reali, e il risultato letto NELL'ABSTRACT. Se non verifichi uno studio, non citarlo.
+
+Non fermarti al primo cerchio: e' l'errore che rendeva povere le Bibbie sulle condizioni poco studiate.
+- **Cerchio 1 — specifico:** quell'intervento su questa condizione. Regge DIMOSTRATO su una LEVA. Quasi sempre e' il cerchio piu' povero.
+- **Cerchio 2 — trasversale sul meccanismo:** tocco e sistema autonomico (HRV, conduttanza, fibre C-tattili), terapia manuale e modulazione del dolore, interocezione e percezione del sintomo, respiro e tono vagale, contesto/aspettativa/alleanza terapeutica, esercizio e carico sulla funzione coinvolta. Regge DIMOSTRATO su un MECCANISMO.
+- **Cerchio 3 — fisiologico:** anatomia e fisiologia misurate. Regge il RAZIONALE, mai l'efficacia.
+
+**REGOLA DEL PONTE, non negoziabile:** l'evidenza del cerchio 2 alza l'etichetta del MECCANISMO, mai quella della LEVA su questa condizione. Ogni fonte del cerchio 2 porta la frase che dichiara il salto: "misurato su X, non su pazienti con questa condizione". Senza questa regola scrivi mechanism-mongering, e un revisore evidence-based lo smonta in dieci minuti portandosi via anche le citazioni corrette.
+
+Scegli **due ancore** se serve: quella clinica (chi ha fatto studi controllati su questa condizione, coi suoi limiti) e quella fisiologica (chi ha stabilito il meccanismo). Su molte condizioni la seconda e' molto piu' autorevole della prima, e dichiararlo e' piu' forte che gonfiare.
+
+**Se la letteratura specifica e' sottile, la sezione «Quando la scienza tace» dentro il Capitolo 10 e' OBBLIGATORIA**, coi suoi cinque punti: assenza di prove non e' prova di assenza · perche' quella letteratura non esiste · su cosa ti basi (meccanismo, ragionamento dichiarato, verifica sul singolo paziente con un marker scelto PRIMA) · cosa lo separa dal pensiero magico (la verifica, e solo quella) · cosa non autorizza. Tono di un direttore che difende il suo mestiere con argomenti, mai di un documento che si scusa.
+
+## Il Capitolo 12 e' CONDIZIONALE
+"Cosa puo' fare il paziente da solo" esiste **se e solo se** almeno uno strumento attivo — respirazione, rinforzo e controllo posturale, carico ed esposizione graduata, educazione — regge su questa condizione un DIMOSTRATO o un PROBABILE forte con piu' studi controllati. Su molte condizioni e' la leva con la MIGLIORE evidenza di tutto il documento, e il vecchio impianto la espelleva perche' somigliava a un protocollo.
+Se la condizione e' soddisfatta: capitolo di 600-900 parole con le sei voci previste dall'architettura. Se NON e' soddisfatta: il capitolo non deve esserci, e non e' un buco.
+
+## Il Capitolo 14 e' OBBLIGATORIO
+"Cosa fare adesso": 250-400 parole, tre blocchi — il filo del documento ricucito in cinque righe (non un elenco di capitoli), esattamente TRE cose che il lettore cambia da lunedi (una che guarda, una che dice, una che smette), e due o tre righe nella voce che motiva. Nessun contenuto nuovo, nessuna promessa di esito, nessun lessico da brochure.
 
 ## L'etichetta di solidita' — il dispositivo centrale
 La prosa AFFERMA; l'onesta' la porta un box separato \`> **Quanto e solido:**\` con una di quattro etichette: DIMOSTRATO / PROBABILE / IPOTESI / RAGIONAMENTO. Ogni meccanismo, ogni modello e ogni leva ne porta una. Vietato qualificare dentro la frase ("potrebbe eventualmente", "pur con le dovute cautele").
 
 ## Output
-Scrivi in markdown, **8.000-12.000 parole** (appendici escluse):
-- ${OUT}/${slug}/v1-bibbia.md → la Bibbia completa (13 capitoli + Appendice A Glossario + Appendice B Fonti)
+Scrivi in markdown, **8.000-13.000 parole** (appendici escluse):
+- ${OUT}/${slug}/v1-bibbia.md → la Bibbia completa (capitoli 0-14, con il 12 condizionale, + Appendice A Glossario + Appendice B Fonti)
 - ${OUT}/${slug}/v1-mappa.md  → la Mappa concettuale (una pagina, sei blocchi)
 Crea la cartella se non esiste. Non convertire in .docx: consegna markdown.
 
@@ -181,8 +224,14 @@ const reviewPrompt = (slug, r) => `Sei il revisore **${r.key}** del panel avvers
 Leggi e segui INTEGRALMENTE ${r.skill}/SKILL.md (e i suoi reference se ne cita). Adotta esattamente quella prospettiva, con lo stesso obbligo di ricerca e la stessa severita.
 
 ## Perimetro — non chiedere protocolli
-Quella che rivedi e' una Bibbia teorica (~20 pagine: cos'e', perche' succede, quali meccanismi, quanto e' solido, perche' le mani possono agire). **Non contiene, e non deve contenere, tecniche, dosi, sequenze o piani di seduta**: quelli stanno in una Procedura separata di 2 pagine. Un rilievo che chieda un protocollo e' fuori perimetro: scartalo da solo. Se invece TROVI un protocollo dentro la Bibbia, quello si segnala come materiale fuori posto.
+Quella che rivedi e' una Bibbia teorica (~20 pagine: cos'e', perche' succede, quali meccanismi, quanto e' solido, perche' le mani possono agire, cosa puo' fare il paziente da solo se la scienza lo sostiene). **Non contiene, e non deve contenere, tecniche, dosi da somministrare, sequenze o piani di seduta**: quelli stanno in una Procedura separata di 2 pagine. Un rilievo che chieda un protocollo e' fuori perimetro: scartalo da solo. Se invece TROVI un protocollo dentro la Bibbia, quello si segnala come materiale fuori posto.
+
+**Eccezione da conoscere prima di segnalare un falso positivo:** il parametro usato in uno STUDIO e' un dato di evidenza e sta legittimamente nella Bibbia ("nello studio hanno allenato per otto settimane"). Diventa protocollo quando cambia tempo verbale e destinatario ("fai fare otto settimane al paziente"). Il criterio e' passato-e-attribuito contro imperativo-e-rivolto-al-nostro-paziente. Allo stesso modo, il Capitolo 12 "Cosa puo' fare il paziente da solo" e' un capitolo previsto dall'architettura quando uno strumento attivo regge DIMOSTRATO o PROBABILE forte: non e' materiale fuori posto.
+
 Nota sulle etichette: ogni affermazione importante porta un box \`> **Quanto e solido:**\` (DIMOSTRATO / PROBABILE / IPOTESI / RAGIONAMENTO). Un'affermazione diretta con etichetta corretta NON e' un claim gonfiato: e' la forma prevista. Il claim gonfiato e' l'etichetta troppo alta, o assente.
+
+## Se la tua SKILL ti impone la ricerca sul web, falla
+Alcune lenti di questo panel hanno un obbligo di ricerca (evidenza, strumenti attivi, specialista). Se e' il tuo caso: ogni studio che citi o proponi va verificato in questa sessione — autore, anno, titolo, PMID, e il risultato letto NELL'ABSTRACT. Uno studio non verificato non si propone. Se non hai accesso alla ricerca web, dichiaralo e declassa i tuoi rilievi.
 
 ## Documento da revisionare
 Leggi ${OUT}/${slug}/v1-bibbia.md (la Bibbia) e ${OUT}/${slug}/v1-mappa.md (la Mappa). Se non esistono, restituisci un rilievo ERRORE che dice che il draft manca.
@@ -197,7 +246,8 @@ const synthPrompt = (slug) => `Sei il **Direttore Osteopatico** di Mobilitas. De
 
 ## Metodo di sintesi (seguilo INTEGRALMENTE)
 Leggi ${AUTORE}/SKILL.md e ${AUTORE}/references/revisione-e-sintesi.md. Regola che protegge il documento: **il feedback si pesa, non si somma**. ERRORE si corregge; RISCHIO si valuta; PREFERENZA si ignora di default. Elimina i doppioni e i conflitti tra lenti. Se la Bibbia cresce oltre il 20%, hai sommato invece di pesare: ferma e ripesa.
-**Scarta d'ufficio ogni rilievo che chieda tecniche, dosi, sequenze o piani di seduta:** sono fuori dal perimetro della Bibbia.
+**Scarta d'ufficio ogni rilievo che chieda tecniche, dosi da somministrare, sequenze o piani di seduta:** sono fuori dal perimetro della Bibbia.
+**NON scartare** i rilievi del revisore degli strumenti attivi che chiedono di riportare i parametri usati NEGLI STUDI, ne' quelli che chiedono il Capitolo 12: sono dentro il perimetro (dato di evidenza, non prescrizione — vedi architettura-bibbia.md, sezione sull'eccezione di confine).
 
 ## Input
 - Draft: ${OUT}/${slug}/v1-bibbia.md e ${OUT}/${slug}/v1-mappa.md
@@ -215,7 +265,12 @@ const secondReviewPrompt = (slug, r) => `Sei il revisore di SECONDO LIVELLO **${
 
 ## Il tuo ruolo e metodo
 Leggi e segui INTEGRALMENTE ${r.skill}/SKILL.md (e i suoi reference se ne cita). Adotta esattamente quella prospettiva, con la stessa severita.
-Lo standard contro cui auditi e' ${AUTORE}/references/architettura-bibbia.md (i 13 capitoli, le cinque regole di struttura, le quattro etichette), piu' ${AUTORE}/references/cinque-modelli-osteopatici.md e ${AUTORE}/references/motore-clinico.md.
+Lo standard contro cui si audita e' ${AUTORE}/references/architettura-bibbia.md (i 15 capitoli con il 12 condizionale, le cinque regole di struttura, le quattro etichette, l'eccezione di confine sui parametri di studio), piu' ${AUTORE}/references/cinque-modelli-osteopatici.md, ${AUTORE}/references/motore-clinico.md e ${AUTORE}/references/ancore-scientifiche.md (i tre cerchi, la regola del ponte, «Quando la scienza tace»).
+
+## Se la tua SKILL ti impone la ricerca sul web, falla
+Il 2o livello ospita anche il Ricercatore, che NON cerca difetti ma la scienza che manca. Se e' il tuo caso: esplora i tre cerchi (specifico / trasversale sul meccanismo / fisiologico), e **ogni studio che proponi va verificato in questa sessione** — autore, anno, titolo, PMID, risultato letto NELL'ABSTRACT. Uno studio non verificato non si propone. Vale la REGOLA DEL PONTE: l'evidenza trasversale alza l'etichetta del meccanismo, mai quella della leva su questa condizione, e ogni aggiunta porta la frase "misurato su X, non su questi pazienti". Se non hai accesso alla ricerca web, dichiaralo e non proporre studi.
+
+**Se aggiungi contenuto, devi anche proteggerlo.** Chiudi il tuo feedback con una sezione **Da proteggere dall'editor** che elenca, riga per riga: ogni **frase-ponte** che dichiara il limite di una fonte trasversale ("misurato su X, non su questi pazienti"), ogni voce nuova di "cosa non possiamo dire", e ogni qualificazione che accompagna un'aggiunta. Senza questa sezione le tue aggiunte arrivano nude all'editor di 4o livello, che legge una cautela come ridondanza e la taglia: resterebbe il PMID e sparirebbe il limite, cioe' il contrario di quello che volevi.
 
 ## Precedenza scientifica — vincolo che sovrascrive la fedelta' al metodo
 Apri ${DEVIAZIONI} PRIMA di formulare rilievi. Stato RATIFICATA = la deviazione e' lo standard. Stato PROPOSTA = marcala "DEVIAZIONE MOTIVATA" e passa oltre. Stato RESPINTA = vince il metodo.
@@ -242,7 +297,7 @@ Leggi ${AUTORE}/SKILL.md e ${AUTORE}/references/revisione-e-sintesi.md. Vale la 
 - ${OUT}/${slug}/v3-intermedia.md → Bibbia v3
 - ${OUT}/${slug}/mappa-v3.md      → Mappa v3
 
-Restituisci SOLO: cosa hai corretto dalla 2a revisione, cosa hai valutato/ignorato, variazione % di lunghezza rispetto alla v2.`
+Restituisci SOLO: cosa hai corretto dalla 2a revisione, cosa hai valutato/ignorato, variazione % di lunghezza rispetto alla v2, e l'elenco dei passaggi marcati **da proteggere dall'editor** nei feedback di 2o livello (riportalo: serve ai livelli successivi).`
 
 // TERZA REVISIONE: la logica dell'apprendimento, sulla v3.
 const thirdReviewPrompt = (slug, r) => `Sei il revisore di TERZO LIVELLO **${r.key}** del panel Mobilitas — la logica dell'apprendimento. La Bibbia e' gia' stata validata dai revisori di 1o e 2o livello: contenuto, sicurezza, compliance e fedelta' all'architettura sono chiusi. Tu guardi il documento non come testo ma come PERCORSO DI APPRENDIMENTO, e rispondi a una domanda sola: chi legge impara davvero a ragionare su questa condizione, o impara solo a sapere delle cose?
@@ -255,7 +310,7 @@ Leggi e segui INTEGRALMENTE ${r.skill}/SKILL.md e il suo reference ${r.skill}/re
 2. **Non asciughi**: dopo di te c'e' l'editor (4o livello). Una ripetizione con funzione didattica e' un pregio: segnalala tra le cose DA PROTEGGERE.
 3. **Non gonfi**: preferisci lo spostamento all'aggiunta. Ogni rilievo che aggiunge testo dichiara quante parole costa. Budget complessivo: crescita netta **<= 5%**.
 
-Rispetta l'INTOCCABILE (bandiere rosse, limiti di campo, etichette di solidita', PMID/dati, hedge di compliance, le tre voci, l'architettura dei 13 capitoli, le aperture "In una riga" e le chiusure "Le tre cose da ricordare"). Se il documento gia' insegna, il verdetto legittimo e' "Insegna".
+Rispetta l'INTOCCABILE (bandiere rosse, limiti di campo, etichette di solidita', PMID/dati, hedge di compliance, le tre voci, l'architettura dei 15 capitoli, le aperture "In una riga" e le chiusure "Le tre cose da ricordare"). Se il documento gia' insegna, il verdetto legittimo e' "Insegna".
 
 ## Documento da revisionare
 Leggi ${OUT}/${slug}/v3-intermedia.md e ${OUT}/${slug}/mappa-v3.md. Se non esistono, restituisci un rilievo ERRORE che dice che la v3 manca.
@@ -283,16 +338,21 @@ Regola specifica di questo livello: **prima si sposta, poi si riscrive, solo in 
 Restituisci SOLO: quali fasi hai colmato e come (spostamento / riscrittura / aggiunta), cosa hai ignorato, la variazione % rispetto alla v3, e l'elenco dei passaggi marcati **da proteggere dall'editor** (riportalo, serve al livello successivo).`
 
 // QUARTA REVISIONE: l'editor di asciugatura, sulla v4. Produce una MAPPA DI TAGLIO.
-const fourthReviewPrompt = (slug, r) => `Sei il revisore di QUARTO LIVELLO **${r.key}** del panel Mobilitas — l'editor di asciugatura. La Bibbia e' gia' validata sul contenuto, sulla fedelta' all'architettura e sull'impianto didattico. Tu NON aggiungi ne' contesti la sostanza: produci una MAPPA DI TAGLIO per togliere ridondanza e riportare il documento nel range **8.000-12.000 parole**, senza perdere informazione e senza spegnere la voce.
+const fourthReviewPrompt = (slug, r) => `Sei il revisore di QUARTO LIVELLO **${r.key}** del panel Mobilitas — l'editor di asciugatura. La Bibbia e' gia' validata sul contenuto, sulla fedelta' all'architettura e sull'impianto didattico. Tu NON aggiungi ne' contesti la sostanza: produci una MAPPA DI TAGLIO per togliere ridondanza e riportare il documento nel range **8.000-13.000 parole**, senza perdere informazione e senza spegnere la voce.
 
 ## Il tuo ruolo e metodo
 Leggi e segui INTEGRALMENTE ${r.skill}/SKILL.md. Rispetta l'INTOCCABILE (bandiere rosse, limiti di campo, **etichette di solidita'**, PMID/dati, hedge di compliance, le tre voci, le aperture "In una riga" e le chiusure "Le tre cose da ricordare", Glossario e Fonti). Se il documento e' gia' nel range e non trovi ridondanza vera, il verdetto legittimo e' "Gia' asciutta".
 
 ## Cosa arriva dopo di te
-Dopo di te gira il 5o livello (**chiarezza**), che riscrive tutto in linguaggio semplice e puo' allungare il testo fino al 10%. Due conseguenze: (a) **non e' compito tuo semplificare** — una frase corretta ma contorta la riscrive lui, tu tagli solo cio' che e' detto due volte; (b) **tieni un margine**: se il documento e' al limite alto del range, punta al centro, non al tetto.
+Dopo di te girano il 5o livello (**chiarezza**), che riscrive tutto in linguaggio semplice e puo' allungare il testo fino al 10%, e il 6o (**italiano**), che raddrizza la lingua entro il +-3%. Tre conseguenze: (a) **non e' compito tuo semplificare** — una frase corretta ma contorta la riscrive il 5o, tu tagli solo cio' che e' detto due volte; (b) **non e' compito tuo far suonare italiana una frase** — se ne occupa il 6o; (c) **tieni un margine**: se il documento e' al limite alto del range, punta al centro, non al tetto.
 
-## Vincolo aggiuntivo: il lavoro del 3o livello
-Leggi anche i file ${OUT}/${slug}/feedback-*-r3.md, in particolare la sezione **Da proteggere dall'editor**. Quei passaggi hanno funzione didattica: una ripetizione che ancora il senso al punto d'uso NON e' ridondanza. Se ritieni comunque che uno vada tagliato, classificalo al massimo come PREFERENZA.
+## Vincolo aggiuntivo: cosa hanno protetto i livelli prima di te
+Leggi la sezione **Da proteggere dall'editor** in DUE posti, ed entrambi sono vincolanti:
+
+1. **${OUT}/${slug}/feedback-*-r3.md** (3o livello) — passaggi con funzione didattica. Una ripetizione che ancora il senso al punto d'uso NON e' ridondanza.
+2. **${OUT}/${slug}/feedback-*-r2.md** (2o livello) — le **frasi-ponte** che dichiarano il limite di una fonte trasversale ("misurato su X, non su pazienti con questa condizione"), le voci di "cosa non possiamo dire", le qualificazioni che accompagnano una fonte aggiunta. Sembrano cautele ridondanti e non lo sono: sono l'unica cosa che impedisce a uno studio vero di sostenere un claim falso. **Tagliare la frase-ponte e lasciare il PMID e' la trasformazione piu' dannosa che tu possa fare a questo documento.**
+
+Se ritieni comunque che uno di questi passaggi vada tagliato, classificalo al massimo come PREFERENZA.
 
 ## Documento da revisionare
 Leggi ${OUT}/${slug}/v4-intermedia.md e ${OUT}/${slug}/mappa-v4.md. Se non esistono, restituisci un rilievo ERRORE che dice che la v4 manca.
@@ -305,12 +365,12 @@ Restituisci l'oggetto strutturato richiesto. In parallelo salva la stessa cosa i
 const fifthSynthPrompt = (slug) => `Sei il **Direttore Osteopatico** di Mobilitas. Devi produrre la v5 della Bibbia "${slug}", applicando la mappa di taglio dell'editor (4o livello) alla v4. NON e' la versione consegnata: dopo di te la v5 va al riscrittore di chiarezza (5o livello), che la riscrive integralmente.
 
 ## Metodo (seguilo INTEGRALMENTE)
-Leggi ${AUTORE}/SKILL.md e ${AUTORE}/references/revisione-e-sintesi.md. Regola: **si asciuga solo se strettamente necessario**. Applica i tagli RIDONDANTE; valuta i COMPRIMIBILE solo se servono a rientrare nel range 8.000-12.000 parole; ignora le PREFERENZE di default. NON toccare l'INTOCCABILE (bandiere rosse, limiti di campo, etichette di solidita', PMID, hedge, le tre voci, Glossario e Fonti) ne' i passaggi marcati **da proteggere** nei feedback di 3o livello (${OUT}/${slug}/feedback-*-r3.md). Se la v4 e' gia' asciutta, copiala nella v5 senza modifiche.
+Leggi ${AUTORE}/SKILL.md e ${AUTORE}/references/revisione-e-sintesi.md. Regola: **si asciuga solo se strettamente necessario**. Applica i tagli RIDONDANTE; valuta i COMPRIMIBILE solo se servono a rientrare nel range 8.000-13.000 parole; ignora le PREFERENZE di default. NON toccare l'INTOCCABILE (bandiere rosse, limiti di campo, etichette di solidita', PMID, **frasi-ponte**, hedge, le tre voci, Glossario e Fonti) ne' i passaggi marcati **da proteggere** nei feedback di 2o livello (${OUT}/${slug}/feedback-*-r2.md) e di 3o livello (${OUT}/${slug}/feedback-*-r3.md). Se la v4 e' gia' asciutta, copiala nella v5 senza modifiche.
 
 ## Input
 - Bibbia v4: ${OUT}/${slug}/v4-intermedia.md e ${OUT}/${slug}/mappa-v4.md
 - Mappa di taglio: leggi TUTTI i file ${OUT}/${slug}/feedback-*-r4.md
-- Da proteggere: la sezione omonima nei file ${OUT}/${slug}/feedback-*-r3.md
+- Da proteggere: la sezione omonima nei file ${OUT}/${slug}/feedback-*-r2.md e ${OUT}/${slug}/feedback-*-r3.md
 
 ## Output
 - ${OUT}/${slug}/v5-intermedia.md → Bibbia v5
@@ -319,12 +379,14 @@ Leggi ${AUTORE}/SKILL.md e ${AUTORE}/references/revisione-e-sintesi.md. Regola: 
 Restituisci SOLO: cosa hai tagliato (RIDONDANTE), cosa hai compresso o lasciato, cosa hai protetto su indicazione del 3o livello, e la lunghezza finale in parole.`
 
 // QUINTO LIVELLO: NON e' una revisione. E' una RISCRITTURA INTEGRALE che produce il deliverable.
-const rewritePrompt = (slug, r) => `Sei il revisore di QUINTO e ULTIMO livello del panel Mobilitas — **il Traduttore**. Non emetti rilievi: **riscrivi da capo l'intero documento**. Quello che produci e' la versione che si consegna.
+const rewritePrompt = (slug, r) => `Sei il revisore di QUINTO livello del panel Mobilitas — **il Traduttore**. Non emetti rilievi: **riscrivi da capo l'intero documento**.
 
 ## Il tuo ruolo e metodo
 Leggi e segui INTEGRALMENTE ${r.skill}/SKILL.md e il suo reference ${r.skill}/references/regole-di-chiarezza.md (i prima/dopo: leggili, sono il metodo).
 
-Prima di te sono girati quattordici revisori: contenuto, sicurezza, compliance, fedelta' al metodo, impianto didattico e lunghezza sono chiusi. **Non tocchi niente di tutto questo.** Il tuo problema e' un altro: il documento e' giusto ma si legge male.
+Prima di te sono girati quindici revisori: contenuto, sicurezza, compliance, fedelta' al metodo, impianto didattico e lunghezza sono chiusi. **Non tocchi niente di tutto questo.** Il tuo problema e' un altro: il documento e' giusto ma si legge male.
+
+Dopo di te c'e' il 6o livello (**italiano**), che toglie i calchi dall'inglese e raddrizza i nessi logici. Due conseguenze: **non fermarti su una frase perche' "non suona"** — se e' chiara va bene, la fa suonare lui; e **non alzare il registro** per farla sembrare piu' italiana, disferesti il tuo stesso lavoro. Tu lavori sulla complessita', lui sulla naturalezza.
 
 > Riscrivi l'intera Bibbia in modo che un osteopata neolaureato la legga dall'inizio alla fine **senza rileggere una sola frase**, e **senza che si perda una sola informazione**.
 
@@ -338,21 +400,116 @@ Prima di te sono girati quattordici revisori: contenuto, sicurezza, compliance, 
 Frasi da 18-20 parole in media, 30 al massimo. Una subordinata per frase, mai una dentro l'altra. Prima la conclusione, poi la spiegazione. Voce attiva. Ogni termine tecnico spiegato dove compare e messo a Glossario. L'incertezza sta nell'etichetta \`> **Quanto e solido:**\`, mai nei giri di parole. Le catene causali diventano passaggi numerati. Lessico corto ("per" non "al fine di", "e'" non "risulta essere").
 
 ## L'INVIOLABILE
-Riscrivi **come e' detto**, mai **cosa e' detto**. Restano identici: ogni numero, percentuale e misura; ogni PMID, autore, anno e titolo; **ogni etichetta di solidita' — non alzarne nessuna, mai**; ogni bandiera rossa, criterio di invio e limite di campo; ogni nome anatomico; l'architettura (capitoli, ordine, titoli, aperture "In una riga", chiusure "Le tre cose da ricordare", i quattro tipi di box); le tre voci e le frasi-firma dello studio.
+Riscrivi **come e' detto**, mai **cosa e' detto**. Restano identici: ogni numero, percentuale e misura; ogni PMID, autore, anno e titolo; **ogni etichetta di solidita' — non alzarne nessuna, mai**; ogni bandiera rossa, criterio di invio e limite di campo; **ogni frase-ponte** che dichiara il limite di una fonte ("misurato su X, non su pazienti con questa condizione"); ogni nome anatomico; l'architettura (capitoli, ordine, titoli, aperture "In una riga", chiusure "Le tre cose da ricordare", i quattro tipi di box); le tre voci e le frasi-firma dello studio.
 
 ## Lunghezza
 Da **-5% a +10%** rispetto al testo che ricevi. Sotto -5% hai tagliato informazione. Sopra +10% hai aggiunto contenuto.
 
 ## Documento da riscrivere
-Leggi ${OUT}/${slug}/v5-intermedia.md (la Bibbia) e ${OUT}/${slug}/mappa-v5.md (la Mappa). Se non esistono, fermati e dillo.
+Leggi ${F(slug).v5} (la Bibbia) e ${F(slug).m5} (la Mappa). Se non esistono, fermati e dillo.
 
-## Output — sono i deliverable
-- ${OUT}/${slug}/v6-finale.md    → la Bibbia FINALE, riscritta integralmente
-- ${OUT}/${slug}/mappa-finale.md → la Mappa FINALE, riscritta con lo stesso criterio
+## Output
+- ${F(slug).v6} → la Bibbia riscritta integralmente
+- ${F(slug).m6} → la Mappa riscritta con lo stesso criterio
 
 Scrivi **tutti** i capitoli e **tutte** le appendici. Non lasciare rimandi al vecchio testo: il file nuovo deve essere completo e autosufficiente.
 
-Restituisci l'oggetto strutturato richiesto. In "passaggi_incomprensibili" metti i punti che non sei riuscito a semplificare perche' il concetto sotto era confuso: e' il segnale piu' prezioso di tutta la catena.`
+## Prima di chiudere: deposita il segnale
+Se hai trovato passaggi che non sei riuscito a semplificare perche' il concetto sotto era confuso, **aggiungili in fondo a ${REGISTRO_LINGUA}**, sezione «Osservazioni», in un blocco intitolato con la condizione "${slug}". Una riga per passaggio: capitolo per nome, di cosa si tratta, perche' non si lasciava semplificare.
+**Solo append: aggiungi in fondo, non riscrivere il file.** Piu' Bibbie possono girare insieme, e riscrivendolo cancelleresti il blocco di un'altra.
+
+Restituisci l'oggetto strutturato richiesto. In "passaggi_incomprensibili" metti gli stessi punti: e' il segnale piu' prezioso di tutta la catena.`
+
+// ---- schema del rapporto di REVISIONE DI LINGUA (6o livello) ----
+const LINGUA_SCHEMA = {
+  type: 'object',
+  additionalProperties: false,
+  required: ['frasi_toccate', 'frasi_totali'],
+  properties: {
+    frasi_toccate: { type: 'number', description: 'Quante frasi hai corretto' },
+    frasi_totali: { type: 'number', description: 'Quante frasi ha il documento (stima)' },
+    variazione_percentuale: { type: 'string', description: 'Delta di lunghezza. Deve stare entro +-3%' },
+    calchi_piu_frequenti: {
+      type: 'array', items: { type: 'string' },
+      description: 'I tre calchi o difetti di lingua piu ricorrenti che hai trovato. Servono a migliorare i livelli a monte.',
+    },
+    passaggi_ancora_oscuri: {
+      type: 'array', items: { type: 'string' },
+      description: 'Punti che non sei riuscito a rendere in italiano vero perche il pensiero sotto era confuso. E il segnale piu prezioso: vanno riportati a Carlos.',
+    },
+    capitolo_finale: { type: 'string', description: 'Stato del capitolo «Cosa fare adesso»: PRESENTE_E_LAVORATO / PRESENTE_DEBOLE / ASSENTE' },
+    metafore_inserite: {
+      type: 'array', items: { type: 'string' },
+      description: 'Le metafore di servizio che hai aggiunto, una riga ciascuna: capitolo + immagine usata. Da 0 a 8. Ognuna deve essere rimovibile senza perdere informazione.',
+    },
+  },
+}
+
+// SESTO LIVELLO: la revisione di lingua. NON riscrive: passa a setaccio e corregge le frasi difettose.
+const linguaPrompt = (slug, r) => `Sei il revisore di SESTO e ULTIMO livello del panel Mobilitas — **il Revisore di Lingua**. Quello che produci e' la versione che si consegna.
+
+## Il tuo ruolo e metodo
+Leggi e segui INTEGRALMENTE ${r.skill}/SKILL.md e il suo reference ${r.skill}/references/italiano-vero.md (il repertorio dei calchi, dei nessi e delle collocazioni: e' il metodo, leggilo prima di toccare una riga).
+
+Prima di te sono girati quindici revisori e un riscrittore. Il contenuto e' corretto, sicuro, conforme, fedele al metodo, didatticamente ordinato, asciutto e semplificato. **Non tocchi niente di tutto questo.**
+
+> **Il documento e' giusto, e' semplice, ed e' scritto in un italiano che non e' italiano.**
+
+E' il difetto che sopravvive a tutta la catena, perche' nessun revisore prima di te ha la lingua come mandato. Una frase corta e semplice puo' essere un calco perfetto dall'inglese.
+
+## Prima di iniziare: leggi il registro
+Apri ${REGISTRO_LINGUA}. Le **Correzioni attive** e le **Osservazioni** dicono quali calchi ricorrono in questo studio: sai gia' cosa cercare, invece di scoprirlo da capo. Costa un minuto e rende la passata molto piu' rapida.
+
+## I tre difetti che cerchi, e nient'altro
+1. **Il calco.** La frase costruita con la sintassi di un'altra lingua e riempita di parole italiane. La **prova del traduttore inverso** li smaschera tutti: traduci la frase in inglese parola per parola; se l'inglese che ne esce e' perfetto, la frase italiana e' un calco.
+2. **La sintassi che non segue la logica.** Connettivo che promette un rapporto e la frase ne fa un altro; nesso assente fra due frasi accostate; soggetto astratto che agisce ("la valutazione permette di identificare"); **pronome senza padrone** (questo / cio' / tale / il che appoggiati a una frase intera invece che a un sostantivo — e' la causa numero uno dei passaggi incomprensibili); ordine rovesciato (il nuovo prima del noto).
+3. **La collocazione sbagliata.** Le parole italiane vanno a coppie fisse: un dolore si irradia, non viaggia; un farmaco agisce, non lavora.
+
+## Il metodo: si passa a setaccio, non si riscrive
+1. Leggi tutto il documento una volta senza toccare niente.
+2. Passa **frase per frase**. Su ognuna, tre domande: e' un calco? il nesso logico regge? le parole stanno insieme? Se tutte e tre danno esito buono, **lasci la frase esattamente com'e'**.
+3. Correggi solo quello che ha risposto male, con la correzione **minima**.
+4. Rileggi ad alta voce ogni capitolo corretto.
+5. Segna i punti che restano ASTRATTI anche dopo la correzione, e non intervenire subito. Alla fine torna sui punti segnati e scegli le 6-8 che meritano una metafora di servizio: sceglierle alla fine, e non mentre correggi, e' cio' che evita di riempirne il documento.
+6. Se hai toccato piu' del 40% delle frasi, stai riscrivendo invece di correggere: fermati e dillo nel rapporto.
+
+## L'INVIOLABILE
+Restano identici: ogni numero, percentuale e misura; ogni PMID, autore, anno e titolo; **ogni etichetta di solidita' — non alzarne nessuna, mai**; ogni bandiera rossa, criterio di invio e limite di campo; **ogni frase-ponte** che dichiara il limite di una fonte; ogni nome anatomico; l'architettura (capitoli, ordine, titoli, aperture "In una riga", chiusure "Le tre cose da ricordare", i quattro tipi di box, le tabelle); le tre voci e le frasi-firma.
+
+**Rischio che e' tuo e di nessun altro:** rendere una frase piu' scorrevole la rende piu' assertiva. "Puo' contribuire" che diventa "contribuisce" e' una violazione bloccante come alzare un'etichetta. Quando raddrizzi una frase cauta, ricontrolla che sia rimasta cauta.
+
+## Il quarto compito: le metafore di servizio
+E' la tua UNICA licenza di aggiungere qualcosa. Alcuni concetti restano difficili anche dopo la semplificazione, perche' sono ASTRATTI e il lettore non ha nulla nella sua esperienza a cui agganciarli. Li' una metafora della vita quotidiana fa quello che nessuna riformulazione puo' fare.
+
+**La regola che la rende sicura, e che ti evita di far fallire il collaudo:** *se togliendo la metafora si perde un'informazione, non era una metafora — era contenuto nuovo, e va tolta.* Una metafora ripete, non estende.
+
+Registri da cui pescare: **la macchina** (motore, freni, spia accesa, serbatoio), **la casa** (interruttore, rubinetto, salvavita, termostato, porta), **il lavoro** (scrivania piena, scadenza, turno coperto), **la cucina** (pentola che bolle, fuoco basso), **il denaro** (conto, debito, anticipo). Il criterio: **il lettore deve averla vissuta fisicamente**.
+
+Le regole: **6-8 in tutto il documento**, massimo **una per capitolo**, **max 20 parole**, dentro la frase e mai in grassetto o isolata su una riga, **dopo** l'affermazione e mai prima, mai spiegata ("cioe' come quando..."), mai due immagini nello stesso passaggio. **MAI** dentro un box "Quanto e solido", su una bandiera rossa, su un criterio di invio o su un limite legale: li' il testo resta letterale, perche' un'immagine ammorbidisce un avvertimento. **Mai metafore militari.**
+
+Non confonderle con le **metafore d'ancoraggio** del capitolo «Cosa si rompe» (una per meccanismo, in grassetto, isolate su una riga): quelle le sceglie l'autore, sono il cuore mnemonico del documento, e **non le tocchi ne' ne aggiungi**.
+
+Gli esempi lavorati e le metafore da non usare stanno in ${r.skill}/references/italiano-vero.md, Parte 5.
+
+## Il capitolo «Cosa fare adesso»
+E' il capitolo che deve MUOVERE qualcuno, non informarlo: e' quello dove la lingua conta di piu'. Se c'e', lavoralo per primo — un finale motivante scritto in italiano tradotto suona come un opuscolo, e deve suonare come una persona che parla a un collega. **Se manca, NON scriverlo tu**: segnalalo nel rapporto (campo "capitolo_finale": ASSENTE). Aggiungere un capitolo qui farebbe fallire il collaudo di conservazione.
+
+## Documento su cui lavorare
+Leggi ${F(slug).v6} (la Bibbia) e ${F(slug).m6} (la Mappa). Se non esistono, fermati e dillo.
+
+## Output — sono i deliverable
+- ${F(slug).v7} → la Bibbia FINALE
+- ${F(slug).m7} → la Mappa FINALE
+
+Riporta **tutti** i capitoli e **tutte** le appendici, completi: i file nuovi sono autosufficienti, nessun rimando al testo precedente. Le parti che non hanno difetti di lingua le ricopi identiche.
+
+Variazione di lunghezza ammessa: **da -3% a +5%**. Il margine in piu' esiste solo per le metafore di servizio. Oltre, non hai fatto una revisione di lingua: hai riscritto.
+
+## Prima di chiudere: deposita il segnale
+Aggiungi in fondo a ${REGISTRO_LINGUA}, sezione «Osservazioni», un blocco intitolato con la condizione "${slug}" che contenga: i **tre calchi piu' frequenti** che hai trovato (servono a correggere l'autore a monte, non a valle) e i **passaggi rimasti oscuri** anche dopo il tuo lavoro. Questi ultimi vanno anche nella sezione «Passaggi che restano oscuri», con condizione, capitolo per nome e di cosa si tratta.
+**Solo append: aggiungi in fondo, non riscrivere il file.** Piu' Bibbie possono girare insieme, e riscrivendolo cancelleresti il blocco di un'altra. Non promuovere niente in «Correzioni attive»: quella e' una decisione di Carlos.
+
+Restituisci l'oggetto strutturato richiesto. In "passaggi_ancora_oscuri" metti gli stessi punti: un passaggio che non si lascia rendere in italiano vero quasi sempre nasconde un pensiero confuso, non una parola sbagliata.`
 
 const SCRIPT_COLLAUDO = AUTORE + '/scripts/verifica_conservazione.py'
 
@@ -361,31 +518,44 @@ const collaudoPrompt = (slug, g) => `Sei il **COLLAUDO DI CONSERVAZIONE** della 
 ## Il tuo ruolo e metodo
 Leggi e segui INTEGRALMENTE ${g.skill}/SKILL.md.
 
-Prima di te sono girati quattordici revisori su cinque livelli, e poi il quinto livello ha **riscritto da capo ogni singola frase** del documento. Quella riscrittura e' l'unico passaggio della catena in cui tutto il testo cambia. Tu verifichi che, cambiando tutte le parole, non sia cambiata nessuna cosa detta.
+Prima di te sono girati quindici revisori su quattro livelli. Poi il 5o livello ha **riscritto da capo ogni singola frase** del documento, e il 6o ne ha raddrizzato la lingua. E' l'unico tratto della catena in cui tutto il testo cambia. Tu verifichi che, cambiando tutte le parole, non sia cambiata nessuna cosa detta.
 
-> **La v6 dice esattamente le stesse cose della v5, o per strada si e' perso, indebolito o gonfiato qualcosa?**
+Confronti la **v5** con la **versione FINALE**, non le due riscritture fra loro: la v5 e' l'ultima versione con il contenuto approvato, e cosi' collaudi i due passaggi insieme.
+
+> **La versione finale dice esattamente le stesse cose della v5, o per strada si e' perso, indebolito o gonfiato qualcosa?**
 
 ## LA REGOLA CHE TI DEFINISCE
-**Non giudichi la qualita'.** Quella ha gia' avuto quattordici risposte. Giudichi solo la CONSERVAZIONE.
+**Non giudichi la qualita'.** Quella ha gia' avuto quindici risposte. Giudichi solo la CONSERVAZIONE.
 Se un contenuto ti sembra debole ma stava identico nella v5, **non e' un tuo rilievo: taci**. Un collaudatore che trova cose nuove riapre decisioni chiuse e fa ripartire un ciclo finito: e' rotto, non severo.
-Uniche eccezioni, perche' nate qui: promesse di esito, materiale operativo (dosi, sequenze, minuti) e affermazioni rafforzate.
+Uniche eccezioni, perche' nate qui: promesse di esito, materiale operativo (dosi da somministrare, sequenze, minuti) e affermazioni rafforzate.
 
 ## PASSO 1 — fai girare il codice, prima di leggere
-Esegui con Bash:
-\`python3 ${SCRIPT_COLLAUDO} ${OUT}/${slug}/v5-intermedia.md ${OUT}/${slug}/v6-finale.md --json ${OUT}/${slug}/collaudo.json\`
+**Due misurazioni separate, una per passaggio.** Misurare le due riscritture in blocco le lascia compensare a vicenda: se la prima perde e la seconda aggiunge, i conti tornano e la perdita non si vede.
 
-Copre gia': etichette perse o alzate, PMID spariti o inventati, numeri persi o comparsi, titoli e struttura, aperture "In una riga" e chiusure "Le tre cose da ricordare", tabelle fuori specifica, delta di lunghezza, glossario, script, materiale operativo e promesse.
-**Quello che lo script trova e' accertato: riportalo in "violazioni_bloccanti", non riverificarlo.** Metti il suo numero di bloccanti in "bloccanti_dal_codice".
+Esegui con Bash, in quest'ordine:
+
+1. La riscrittura di chiarezza — ogni frase cambia, nessuna identita' attesa:
+\`python3 ${SCRIPT_COLLAUDO} ${F(slug).v5} ${F(slug).v6} --etichetta chiarezza --delta-min -5 --delta-max 10 --json ${OUT}/${slug}/collaudo-chiarezza.json\`
+
+2. La revisione di lingua — doveva CORREGGERE, non riscrivere:
+\`python3 ${SCRIPT_COLLAUDO} ${F(slug).v6} ${F(slug).v7} --etichetta lingua --delta-min -3 --delta-max 5 --min-identita 60 --json ${OUT}/${slug}/collaudo-lingua.json\`
+
+La soglia di identita' del secondo comando e' il controllo che sostituisce l'autodichiarazione del sesto livello: se meno del 60% delle frasi e' rimasto identico, ha riscritto invece di correggere, e lo dice il conteggio invece dell'agente stesso. E' una violazione bloccante come le altre.
+
+**Per ogni violazione che riporti, dichiara in quale dei due passaggi e' nata** (campo "passaggio"): serve a riparare nel punto giusto invece che a caso.
+**Quello che gli script trovano e' accertato: riportalo in "violazioni_bloccanti", non riverificarlo.** Metti la somma dei bloccanti dei due comandi in "bloccanti_dal_codice".
+
+Coprono gia': etichette perse o alzate, PMID spariti o inventati, numeri persi o comparsi, titoli e struttura, aperture "In una riga" e chiusure "Le tre cose da ricordare", tabelle fuori specifica, delta di lunghezza, identita' delle frasi, glossario, script, materiale operativo e promesse.
 
 ## PASSO 2 — il tuo lavoro comincia dove il codice si ferma
-Leggi ${OUT}/${slug}/v5-intermedia.md e ${OUT}/${slug}/v6-finale.md e cerca cio' che nessun conteggio vede:
+Leggi ${F(slug).v5} e ${F(slug).v7} e cerca cio' che nessun conteggio vede:
 1. **Etichetta riancorata** — la stessa etichetta ora qualifica un claim diverso. I conteggi tornano, il senso no.
 2. **Informazione persa per assorbimento** — due frasi che dicevano due cose diventano una che ne dice una e sembra completa. Procedi per inventario, capitolo per capitolo.
 3. **Qualificazione caduta** — "nella maggior parte dei casi", "se il paziente non ha X", l'urgenza o il destinatario di una bandiera rossa, il sottotipo su cui si poteva poco.
 4. **Verbo irrigidito** — "puo' contribuire" -> "contribuisce". Frasi corte sono assertive per costruzione: e' l'effetto collaterale strutturale della semplificazione.
 5. **Numero riattribuito** — il valore c'e' ancora ma appartiene a un altro studio.
 
-Controlla anche ${OUT}/${slug}/mappa-v5.md contro ${OUT}/${slug}/mappa-finale.md con lo stesso criterio.
+Controlla anche ${F(slug).m5} contro ${F(slug).m7} con lo stesso criterio.
 
 ## Output
 Ogni violazione porta una **riparazione chirurgica**: cosa rimettere e dove, non una riscrittura. Chi ripara e' il riscrittore, e deve poter agire senza toccare il resto.
@@ -393,22 +563,22 @@ Localizza i capitoli **per nome**, mai per numero.
 "CONSEGNABILE" solo con ZERO bloccanti, del codice e tuoi. Non esiste il consegnabile con riserva.
 Se non trovi niente, dillo: e' l'esito atteso di una riscrittura fatta bene.`
 
-const riparaPrompt = (slug, r, viol, giro) => `Sei il **Traduttore** (5o livello) della Bibbia "${slug}". La tua riscrittura e' stata collaudata e ha ${viol.length} violazioni di conservazione. Questo e' il giro di riparazione ${giro}.
+const riparaPrompt = (slug, r, viol, giro) => `Sei chi ha prodotto la versione FINALE della Bibbia "${slug}" (skill ${r.key}). Il collaudo ha trovato ${viol.length} violazioni di conservazione. Questo e' il giro di riparazione ${giro}.
 
 ## Cosa NON devi fare
 **Non riscrivere il documento. Non rileggerlo per migliorarlo. Non toccare una sola frase che non sia nell'elenco qui sotto.**
-La v6 e' gia' buona: e' semplice, si legge, ed e' il risultato del tuo lavoro. Ha solo perso per strada delle cose che dovevano restare. Le rimetti, e basta.
+La versione finale e' gia' buona: e' semplice, si legge, suona italiana, ed e' il risultato del lavoro di due livelli. Ha solo perso per strada delle cose che dovevano restare. Le rimetti, e basta.
 Ogni modifica fuori dall'elenco riapre il collaudo e allunga il ciclo.
 
 ## Le violazioni da riparare
-${viol.map((v, i) => `${i + 1}. [${v.tipo}] Capitolo «${v.capitolo}»
+${viol.map((v, i) => `${i + 1}. [${v.tipo}] Capitolo «${v.capitolo}»${v.passaggio ? ` — nata nel passaggio ${v.passaggio}` : ''}
    v5 diceva: ${v.testo_v5 || '(vedi rapporto)'}
    v6 dice:   ${v.testo_v6 || 'assente'}
    RIPARAZIONE: ${v.riparazione}`).join('\n')}
 
 ## Come si ripara
-Riapri ${OUT}/${slug}/v6-finale.md (e ${OUT}/${slug}/mappa-finale.md se la violazione e' li') e applica **solo** queste riparazioni.
-Rimetti l'informazione **con il lessico e la sintassi della v6**, non copiando la frase della v5: il documento deve restare semplice. Frasi da 18-20 parole, una subordinata per frase, prima la conclusione.
+Riapri ${F(slug).v7} (e ${F(slug).m7} se la violazione e' li') e applica **solo** queste riparazioni.
+Rimetti l'informazione **con il lessico e la sintassi della versione finale**, non copiando la frase della v5: il documento deve restare semplice e suonare italiano. Frasi da 18-20 parole, una subordinata per frase, prima la conclusione, nessun calco dall'inglese.
 Se una riparazione riguarda un'etichetta, rimetti **esattamente** l'etichetta che aveva la v5: non alzarla mai.
 Se una riparazione riguarda una promessa o del materiale operativo introdotto, **toglilo**, non attenuarlo.
 
@@ -501,7 +671,8 @@ const secondKeys = ((disc && disc.secondo_livello) || []).filter((k) => all.incl
 const thirdKeys = ((disc && disc.terzo_livello) || []).filter((k) => all.includes(k) && k !== autore && !firstKeys.includes(k) && !secondKeys.includes(k))
 const fourthKeys = ((disc && disc.quarto_livello) || []).filter((k) => all.includes(k) && k !== autore && !firstKeys.includes(k) && !secondKeys.includes(k) && !thirdKeys.includes(k))
 const fifthKeys = ((disc && disc.quinto_livello) || []).filter((k) => all.includes(k) && k !== autore && !firstKeys.includes(k) && !secondKeys.includes(k) && !thirdKeys.includes(k) && !fourthKeys.includes(k))
-const gateKeys = ((disc && disc.collaudo) || []).filter((k) => all.includes(k) && k !== autore && !firstKeys.includes(k) && !secondKeys.includes(k) && !thirdKeys.includes(k) && !fourthKeys.includes(k) && !fifthKeys.includes(k))
+const sixthKeys = ((disc && disc.sesto_livello) || []).filter((k) => all.includes(k) && k !== autore && !firstKeys.includes(k) && !secondKeys.includes(k) && !thirdKeys.includes(k) && !fourthKeys.includes(k) && !fifthKeys.includes(k))
+const gateKeys = ((disc && disc.collaudo) || []).filter((k) => all.includes(k) && k !== autore && !firstKeys.includes(k) && !secondKeys.includes(k) && !thirdKeys.includes(k) && !fourthKeys.includes(k) && !fifthKeys.includes(k) && !sixthKeys.includes(k))
 
 const mk = (k) => ({ key: k, skill: SK + '/direttore-osteopatico-' + k })
 const REVIEWERS = firstKeys.map(mk)  // 1o livello
@@ -509,19 +680,21 @@ const SECOND = secondKeys.map(mk)    // 2o livello
 const THIRD = thirdKeys.map(mk)      // 3o livello (logica dell'apprendimento)
 const FOURTH = fourthKeys.map(mk)    // 4o livello (editor di asciugatura)
 const FIFTH = fifthKeys.map(mk)      // 5o livello (riscrittura in chiaro)
-const GATE = gateKeys.map(mk)        // CANCELLO: collaudo di conservazione v5 -> v6
+const SIXTH = sixthKeys.map(mk)      // 6o livello (revisione di lingua italiana)
+const GATE = gateKeys.map(mk)        // CANCELLO: collaudo di conservazione v5 -> finale
 
 // Segnala skill-revisore presenti ma non assegnate a nessun livello: niente cali silenziosi.
-const assegnate = new Set([autore, ...firstKeys, ...secondKeys, ...thirdKeys, ...fourthKeys, ...fifthKeys, ...gateKeys])
+const assegnate = new Set([autore, ...firstKeys, ...secondKeys, ...thirdKeys, ...fourthKeys, ...fifthKeys, ...sixthKeys, ...gateKeys])
 const nonAssegnate = all.filter((k) => !assegnate.has(k))
 if (nonAssegnate.length) log(`ATTENZIONE: skill presenti ma non assegnate a nessun livello nel manifesto (ignorate): ${nonAssegnate.join(', ')}`)
 
-if (!REVIEWERS.length && !SECOND.length && !THIRD.length && !FOURTH.length && !FIFTH.length) {
+if (!REVIEWERS.length && !SECOND.length && !THIRD.length && !FOURTH.length && !FIFTH.length && !SIXTH.length) {
   log('ATTENZIONE: nessun revisore dichiarato nel manifesto. Interrompo.')
   return { errore: 'nessun revisore nei livelli del manifesto ' + MANIFESTO }
 }
-log(`Autore: ${autore} | 1o (${REVIEWERS.length}): ${REVIEWERS.map((r) => r.key).join(', ') || '—'} | 2o (${SECOND.length}): ${SECOND.map((r) => r.key).join(', ') || '—'} | 3o (${THIRD.length}): ${THIRD.map((r) => r.key).join(', ') || '—'} | 4o (${FOURTH.length}): ${FOURTH.map((r) => r.key).join(', ') || '—'} | 5o (${FIFTH.length}): ${FIFTH.map((r) => r.key).join(', ') || '—'} | collaudo: ${GATE.map((r) => r.key).join(', ') || '— NESSUNO (la v6 andrebbe in consegna senza cancello)'}`)
-if (!GATE.length) log('ATTENZIONE: nessun collaudo dichiarato nel manifesto. La riscrittura integrale del 5o livello non verra verificata da nessuno.')
+log(`Autore: ${autore} | 1o (${REVIEWERS.length}): ${REVIEWERS.map((r) => r.key).join(', ') || '—'} | 2o (${SECOND.length}): ${SECOND.map((r) => r.key).join(', ') || '—'} | 3o (${THIRD.length}): ${THIRD.map((r) => r.key).join(', ') || '—'} | 4o (${FOURTH.length}): ${FOURTH.map((r) => r.key).join(', ') || '—'} | 5o (${FIFTH.length}): ${FIFTH.map((r) => r.key).join(', ') || '—'} | 6o (${SIXTH.length}): ${SIXTH.map((r) => r.key).join(', ') || '—'} | collaudo: ${GATE.map((r) => r.key).join(', ') || '— NESSUNO (la finale andrebbe in consegna senza cancello)'}`)
+if (!SIXTH.length) log('ATTENZIONE: nessuna revisione di lingua dichiarata nel manifesto. Il documento uscira semplificato ma non ripulito dai calchi.')
+if (!GATE.length) log('ATTENZIONE: nessun collaudo dichiarato nel manifesto. Le riscritture del 5o e 6o livello non verranno verificate da nessuno.')
 
 const results = await pipeline(
   slugs,
@@ -613,13 +786,14 @@ const results = await pipeline(
     return slug
   },
 
-  // --- STAGE 7: QUINTO LIVELLO — RISCRITTURA INTEGRALE -> v6 FINALE ---
-  // Non e' una revisione seguita da una sintesi: il riscrittore PRODUCE il deliverable.
+  // --- STAGE 7: QUINTO LIVELLO — RISCRITTURA INTEGRALE -> v6 ---
+  // Non e' una revisione seguita da una sintesi: il riscrittore PRODUCE il testo.
   async (slug) => {
+    const f = F(slug)
     if (!FIFTH.length) {
-      await promote(`${OUT}/${slug}/v5-intermedia.md`, `${OUT}/${slug}/mappa-v5.md`, `${OUT}/${slug}/v6-finale.md`, `${OUT}/${slug}/mappa-finale.md`, `nessun 5o livello per ${slug}`)
-      log(`FINALE (v6 = v5, nessuna riscrittura di chiarezza): ${slug}`)
-      return { slug, esito: 'completata (senza riscrittura finale)' }
+      await promote(f.v5, f.m5, f.v6, f.m6, `nessun 5o livello per ${slug}`)
+      log(`v6 (= v5, nessuna riscrittura di chiarezza): ${slug}`)
+      return { slug, esito: 'completata (senza riscrittura di chiarezza)' }
     }
     // Un solo riscrittore per volta: due riscritture concorrenti sullo stesso file si sovrascriverebbero.
     // Se il manifesto ne dichiara piu d'uno, usa il primo e segnala gli altri.
@@ -627,7 +801,7 @@ const results = await pipeline(
     const rw = FIFTH[0]
     const rep = await robustAgent(rewritePrompt(slug, rw), { label: `rev5:${rw.key}:${slug}`, phase: 'Riscrittura finale', schema: RISCRITTURA_SCHEMA, agentType: 'general-purpose' })
     if (!rep) {
-      await promote(`${OUT}/${slug}/v5-intermedia.md`, `${OUT}/${slug}/mappa-v5.md`, `${OUT}/${slug}/v6-finale.md`, `${OUT}/${slug}/mappa-finale.md`, `riscrittura finale non riuscita per ${slug}`)
+      await promote(f.v5, f.m5, f.v6, f.m6, `riscrittura di chiarezza non riuscita per ${slug}`)
       return { slug, esito: 'completata (v6=v5, riscrittura promossa dopo i retry)' }
     }
     if (rep.informazioni_perse && rep.informazioni_perse.length) {
@@ -636,25 +810,68 @@ const results = await pipeline(
     if (rep.passaggi_incomprensibili && rep.passaggi_incomprensibili.length) {
       log(`Segnale per Carlos (${slug}): ${rep.passaggi_incomprensibili.length} passaggi non semplificabili — probabile confusione di contenuto, non di forma`)
     }
-    log(`v6 riscritta: ${slug} — ${rep.parole_prima} → ${rep.parole_dopo} parole (${rep.variazione_percentuale || 'n/d'}). Ora il collaudo.`)
+    log(`v6 riscritta: ${slug} — ${rep.parole_prima} → ${rep.parole_dopo} parole (${rep.variazione_percentuale || 'n/d'}). Ora la lingua.`)
     return { slug, esito: 'completata', riscrittura: rep }
   },
 
-  // --- STAGE 8: COLLAUDO DI CONSERVAZIONE -> RIPARAZIONE MIRATA -> CONSEGNA ---
-  // Il 5o livello riscrive OGNI frase del documento: e' l'unico punto della catena in cui
-  // tutto il testo cambia, ed era l'unico mai verificato. Qui si chiude quel buco.
-  // Non e' un sesto revisore: non giudica la qualita' (chiusa a monte), verifica la
-  // CONSERVAZIONE — che cambiando tutte le parole non sia cambiata nessuna cosa detta.
+  // --- STAGE 8: SESTO LIVELLO — REVISIONE DI LINGUA -> v7 FINALE ---
+  // Il difetto che sopravviveva a tutta la catena: un documento giusto, semplice, e scritto
+  // in un italiano tradotto. Nessun revisore precedente aveva la lingua come mandato.
+  // Non e' una riscrittura: si passa frase per frase e si corregge solo cio' che ha un difetto.
   async (prev, slug) => {
     const base = prev && prev.slug ? prev : { slug, esito: 'sconosciuto' }
+    const f = F(slug)
+
+    if (!SIXTH.length) {
+      await promote(f.v6, f.m6, f.v7, f.m7, `nessun 6o livello per ${slug}`)
+      log(`FINALE (v7 = v6, nessuna revisione di lingua): ${slug}`)
+      return { ...base, esito: 'completata (senza revisione di lingua)' }
+    }
+    if (SIXTH.length > 1) log(`ATTENZIONE: piu di un revisore di lingua nel manifesto. Uso "${SIXTH[0].key}", ignoro: ${SIXTH.slice(1).map((r) => r.key).join(', ')}`)
+    const lr = SIXTH[0]
+    const rep = await robustAgent(linguaPrompt(slug, lr), { label: `rev6:${lr.key}:${slug}`, phase: 'Revisione di lingua', schema: LINGUA_SCHEMA, agentType: 'general-purpose' })
+    if (!rep) {
+      await promote(f.v6, f.m6, f.v7, f.m7, `revisione di lingua non riuscita per ${slug}`)
+      return { ...base, esito: 'completata (v7=v6, lingua promossa dopo i retry)' }
+    }
+
+    const tot = rep.frasi_totali || 0
+    const quota = tot ? Math.round((100 * (rep.frasi_toccate || 0)) / tot) : null
+    if (quota !== null && quota > 40) {
+      log(`ATTENZIONE ${slug}: la revisione di lingua ha toccato il ${quota}% delle frasi. Oltre il 40% non e una revisione: o il 5o livello ha lavorato male, o il 6o ha riscritto.`)
+    }
+    if (rep.capitolo_finale === 'ASSENTE') {
+      log(`ATTENZIONE ${slug}: manca il capitolo «Cosa fare adesso». Va aggiunto a monte (autore o 2o livello): il 6o livello non puo aggiungerlo senza far fallire il collaudo.`)
+    }
+    if (rep.passaggi_ancora_oscuri && rep.passaggi_ancora_oscuri.length) {
+      log(`Segnale per Carlos (${slug}): ${rep.passaggi_ancora_oscuri.length} passaggi restano oscuri anche dopo la lingua — il pensiero sotto e confuso, non la frase`)
+    }
+    if (rep.calchi_piu_frequenti && rep.calchi_piu_frequenti.length) {
+      log(`  ${slug} — calchi ricorrenti da correggere a monte: ${rep.calchi_piu_frequenti.join(' · ')}`)
+    }
+    const nMet = (rep.metafore_inserite || []).length
+    if (nMet > 8) log(`ATTENZIONE ${slug}: ${nMet} metafore di servizio inserite, il tetto e 8. Oltre, distraggono invece di semplificare.`)
+    log(`v7 FINALE pronta: ${slug} — ${rep.frasi_toccate}/${tot} frasi toccate, ${nMet} metafore di servizio (${rep.variazione_percentuale || 'n/d'}). Ora il collaudo.`)
+    return { ...base, esito: 'completata', lingua: rep }
+  },
+
+  // --- STAGE 9: COLLAUDO DI CONSERVAZIONE -> RIPARAZIONE MIRATA -> CONSEGNA ---
+  // Il 5o livello riscrive OGNI frase del documento e il 6o ne ritocca molte: e' l'unico
+  // tratto della catena in cui tutto il testo cambia, ed era l'unico mai verificato.
+  // Non e' un settimo revisore: non giudica la qualita' (chiusa a monte), verifica la
+  // CONSERVAZIONE — che cambiando tutte le parole non sia cambiata nessuna cosa detta.
+  // Confronta v5 contro la FINALE, cosi' collauda le due riscritture insieme.
+  async (prev, slug) => {
+    const base = prev && prev.slug ? prev : { slug, esito: 'sconosciuto' }
+    const f = F(slug)
 
     if (!GATE.length) {
-      log(`ATTENZIONE ${slug}: nessun collaudo nel manifesto — la v6 va in consegna senza cancello.`)
+      log(`ATTENZIONE ${slug}: nessun collaudo nel manifesto — la finale va in consegna senza cancello.`)
       return { ...base, collaudo: 'assente' }
     }
-    // Se non c'e' stata riscrittura (v6 promossa uguale alla v5) non c'e' niente da conservare.
-    if (!base.riscrittura) {
-      log(`Collaudo non necessario per ${slug}: la v6 e' la v5 promossa senza riscrittura.`)
+    // Se non ha riscritto nessuno dei due livelli (finale = v5 promossa) non c'e' niente da conservare.
+    if (!base.riscrittura && !base.lingua) {
+      log(`Collaudo non necessario per ${slug}: la finale e' la v5 promossa senza riscritture.`)
       return { ...base, collaudo: 'non necessario' }
     }
 
@@ -669,7 +886,7 @@ const results = await pipeline(
       })
 
       if (!rap) {
-        log(`ATTENZIONE ${slug}: il collaudo non ha risposto dopo i retry. La v6 resta, ma NON e' stata verificata.`)
+        log(`ATTENZIONE ${slug}: il collaudo non ha risposto dopo i retry. La finale resta, ma NON e' stata verificata.`)
         return { ...base, collaudo: 'non eseguito' }
       }
 
@@ -677,17 +894,17 @@ const results = await pipeline(
       const dalCodice = rap.bloccanti_dal_codice || 0
 
       if (rap.esito === 'CONSEGNABILE' && !viol.length) {
-        log(`COLLAUDO SUPERATO ${slug}${giro > 1 ? ` (dopo ${giro - 1} riparazion${giro === 2 ? 'e' : 'i'})` : ''}: la riscrittura ha conservato tutto.`)
+        log(`COLLAUDO SUPERATO ${slug}${giro > 1 ? ` (dopo ${giro - 1} riparazion${giro === 2 ? 'e' : 'i'})` : ''}: le riscritture hanno conservato tutto.`)
         return { ...base, esito: 'consegnabile', collaudo: 'superato', riparazioni: giro - 1, conservato: rap.conservato }
       }
 
       // Perdite cosi' diffuse che una riparazione chirurgica non basta.
       // Vince la gerarchia dichiarata dal metodo: l'ACCURATEZZA batte la LEGGIBILITA'.
-      // Meglio consegnare la v5 (corretta, meno scorrevole) che una v6 che ha perso informazione.
+      // Meglio consegnare la v5 (corretta, meno scorrevole) che una finale che ha perso informazione.
       if (rap.esito === 'DA_RIFARE') {
         log(`COLLAUDO: ${slug} DA RIFARE (${viol.length} perdite diffuse). Ripristino la v5 come versione finale: l'accuratezza batte la leggibilita.`)
-        await promote(`${OUT}/${slug}/v5-intermedia.md`, `${OUT}/${slug}/mappa-v5.md`, `${OUT}/${slug}/v6-finale.md`, `${OUT}/${slug}/mappa-finale.md`, `riscrittura di ${slug} non conservativa`)
-        return { ...base, esito: 'consegnata la v5', collaudo: 'fallito — riscrittura scartata', violazioni: viol.length }
+        await promote(f.v5, f.m5, f.v7, f.m7, `riscritture di ${slug} non conservative`)
+        return { ...base, esito: 'consegnata la v5', collaudo: 'fallito — riscritture scartate', violazioni: viol.length }
       }
 
       if (giro > MAX_RIPARAZIONI) {
@@ -696,12 +913,12 @@ const results = await pipeline(
       }
 
       log(`Collaudo ${slug}: ${viol.length} violazioni (${dalCodice} dal codice). Riparazione mirata, giro ${giro}.`)
-      const fix = await robustAgent(riparaPrompt(slug, FIFTH[0] || g, viol, giro), {
+      const fix = await robustAgent(riparaPrompt(slug, SIXTH[0] || FIFTH[0] || g, viol, giro), {
         label: `ripara:${slug}#giro${giro}`, phase: 'Collaudo', schema: RISCRITTURA_SCHEMA, agentType: 'general-purpose',
       })
       if (!fix) {
         log(`ATTENZIONE ${slug}: la riparazione non ha risposto. Consegno la v5, che e' l'ultima versione verificata.`)
-        await promote(`${OUT}/${slug}/v5-intermedia.md`, `${OUT}/${slug}/mappa-v5.md`, `${OUT}/${slug}/v6-finale.md`, `${OUT}/${slug}/mappa-finale.md`, `riparazione di ${slug} non riuscita`)
+        await promote(f.v5, f.m5, f.v7, f.m7, `riparazione di ${slug} non riuscita`)
         return { ...base, esito: 'consegnata la v5', collaudo: 'riparazione fallita', violazioni: viol.length }
       }
       if (fix.informazioni_perse && fix.informazioni_perse.length) {

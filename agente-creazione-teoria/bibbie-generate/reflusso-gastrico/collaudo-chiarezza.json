@@ -1,0 +1,43 @@
+{
+  "passaggio": "chiarezza",
+  "esito": "NON CONSEGNABILE",
+  "statistiche": {
+    "parole_prima": 16493,
+    "parole_dopo": 16620,
+    "delta_pct": 0.8,
+    "identita_pct": 85.2,
+    "etichette_prima": 28,
+    "etichette_dopo": 26,
+    "pmid_prima": 58,
+    "pmid_dopo": 58
+  },
+  "violazioni": [
+    {
+      "severita": "BLOCCANTE",
+      "codice": "ETICHETTE_PERSE",
+      "messaggio": "La v6 ha 2 etichette di solidità in meno della v5 (28 → 26). Ogni etichetta persa è un'affermazione ora presentata come certa.",
+      "dettaglio": []
+    },
+    {
+      "severita": "BLOCCANTE",
+      "codice": "TABELLE_FUORI_SPECIFICA",
+      "messaggio": "2 righe di tabella superano 4 colonne o 8 parole per cella.",
+      "dettaglio": [
+        "2 col / 9 parole: | Patologia biliare | Crisi sotto le coste a destra, dopo pasto grasso",
+        "2 col / 9 parole: | Pancreatite | Dolore penetrante verso il dorso, nessuna posizione lo"
+      ]
+    },
+    {
+      "severita": "BLOCCANTE",
+      "codice": "PAROLE_FUORI_RANGE",
+      "messaggio": "La v6 ha 16620 parole (appendici escluse): fuori dal range 8000–13000.",
+      "dettaglio": []
+    },
+    {
+      "severita": "AVVISO",
+      "codice": "GLOSSARIO_TROPPO_LUNGO",
+      "messaggio": "Il glossario ha 45 termini (max 40): la Bibbia è scritta troppo tecnica.",
+      "dettaglio": []
+    }
+  ]
+}

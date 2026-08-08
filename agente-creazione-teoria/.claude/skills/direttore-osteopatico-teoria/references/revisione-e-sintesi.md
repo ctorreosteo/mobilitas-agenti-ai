@@ -1,6 +1,6 @@
 # Come si usa il sistema di revisione
 
-## Le lenti, organizzate su cinque livelli
+## Le lenti, organizzate su sei livelli
 
 Il panel non è fisso: **quali skill rivedono, e a che livello, lo decide il manifesto** `bibbie-generate/_dati/livelli.json`.
 
@@ -16,11 +16,14 @@ Il panel non è fisso: **quali skill rivedono, e a che livello, lo decide il man
 | `modelli` | 1 | Uso e bilanciamento dei cinque modelli | *Quale modello è gonfiato, quale manca?* |
 | `neuromodulazione` | 1 | Il meccanismo neurofisiologico invocato | *Il meccanismo è quello giusto, con tempi plausibili?* |
 | `clinico-esperto` | 1 | Utilità reale della teoria | *Chi legge questo risolve il caso in poche sedute?* |
+| `strumenti-attivi` | 1 | Respirazione, rinforzo, carico, educazione | *La leva con più prove è finita fuori dal documento?* |
 | `fedelta-bibbia` | 2 | Audit meccanico contro `architettura-bibbia.md` | *Ogni pezzo dello standard è presente e al posto giusto?* |
+| `evidenza-estesa` | 2 | **Aggiunge** scienza: i tre cerchi, «Quando la scienza tace» | *Quale scienza vera esiste che questa Bibbia non usa?* |
 | `apprendimento` | 3 | La sequenza che insegna | *Il documento insegna o fa solo sapere?* |
 | `editor` | 4 | Ridondanza e lunghezza | *Cosa si toglie senza perdere sostanza?* |
 | `chiarezza` | 5 | **Riscrive tutto da capo, in chiaro** | *Un neolaureato la legge senza rileggere una frase?* |
-| `collaudo` | **cancello** | **Conservazione**: v5 contro v6, script + semantica | *Cambiando tutte le parole, è cambiata qualche cosa detta?* |
+| `italiano` | 6 | **Corregge la lingua**: calchi, nessi, pronomi, collocazioni | *È scritto in italiano, o è italiano tradotto?* |
+| `collaudo` | **cancello** | **Conservazione**: v5 contro finale, script + semantica | *Cambiando tutte le parole, è cambiata qualche cosa detta?* |
 
 Le lenti divergono per **tipo di attacco**, non per mestiere. È il motivo per cui sono queste e non venti.
 
@@ -31,6 +34,8 @@ Le coppie che sembrano vicine **non** sono duplicati:
 - **Modelli vs fedelta-bibbia** — il primo giudica **come** i modelli sono usati, il secondo che **ci siano tutti** con la loro etichetta.
 - **Neolaureato vs chiarezza** — il neolaureato **segnala** cosa non si capisce, in mezzo agli altri rilievi di contenuto; `chiarezza` **riscrive tutto**, alla fine, quando il contenuto è chiuso. Il primo è diagnosi, il secondo è cura.
 - **Editor vs chiarezza** — l'editor **toglie** ciò che è ripetuto, senza toccare come è scritto il resto; `chiarezza` **riformula** ogni frase, senza togliere informazione. Uno accorcia, l'altro semplifica. Devono girare in quest'ordine: si semplifica un testo già asciutto, non si asciuga un testo già semplificato — l'asciugatura ri-comprimerebbe le frasi e annullerebbe il lavoro.
+- **Chiarezza vs italiano** — `chiarezza` lavora sulla **complessità** (frasi lunghe, subordinate impilate, termini nudi), `italiano` sulla **naturalezza** (calchi, nessi logici, pronomi vaghi, collocazioni). Una frase di dodici parole può essere semplicissima e insieme un calco perfetto dall'inglese: sono due difetti diversi, e chi prova a curarli nello stesso passaggio ne cura male uno. Anche qui l'ordine è vincolato: una riscrittura integrale dopo la revisione di lingua reintrodurrebbe i calchi appena tolti.
+- **Fisioterapista-ebp vs evidenza-estesa** — stessa materia, direzioni opposte. Il primo **toglie**: declassa le etichette che la letteratura non regge. Il secondo **aggiunge**: porta la scienza che manca, dai tre cerchi. Servono entrambi, e il secondo è vincolato dalla regola del ponte proprio per non disfare il lavoro del primo.
 
 ## Il flusso
 
@@ -39,19 +44,20 @@ Il ruolo di ogni skill è dichiarato in `bibbie-generate/_dati/livelli.json`, co
 1. **Draft (v1)** — l'autore redige Bibbia + Mappa.
 2. **1º livello** — tutti i revisori di `primo_livello` attaccano la v1 **in parallelo**, ciascuno in contesto pulito.
 3. **Sintesi v2** — l'autore pesa i feedback e riscrive.
-4. **2º livello** — `fedelta-bibbia` audita la v2 → **sintesi v3**.
+4. **2º livello** — `fedelta-bibbia` audita la v2 ed `evidenza-estesa` la rifornisce di scienza → **sintesi v3**.
 5. **3º livello** — `apprendimento` guarda la v3 come percorso didattico → **sintesi v4**.
 6. **4º livello** — `editor` produce una mappa di taglio sulla v4 → **sintesi v5**.
 7. **5º livello** — `chiarezza` **riscrive integralmente la v5** → **v6**.
-8. **Cancello** — `collaudo` verifica che la riscrittura non abbia perso niente → **v6 consegnabile**.
+8. **6º livello** — `italiano` **corregge la lingua della v6** frase per frase (calchi, nessi, pronomi, collocazioni) → **v7, quella che si consegna**.
+9. **Cancello** — `collaudo` confronta la v5 con la v7 e verifica che le riscritture non abbiano perso niente → **v7 consegnabile**.
 
-Il quinto livello non è un revisore che consiglia: è un riscrittore che produce il deliverable. Non emette rilievi da pesare, emette il documento.
+Gli ultimi due livelli non consigliano: producono il deliverable. Non emettono rilievi da pesare, emettono il documento. E hanno mandati distinti — il quinto lavora sulla **complessità**, il sesto sulla **naturalezza**: una frase corta e semplice può benissimo essere un calco dall'inglese.
 
 ## Il cancello: perché la riscrittura va collaudata
 
 La riscrittura integrale è il punto più pericoloso della catena, per una ragione strutturale: **è l'unico passaggio in cui ogni singola frase del documento cambia**. Tutti gli altri livelli producono rilievi puntuali su un testo che resta; questo produce un testo nuovo. Fino a ieri era anche l'unico passaggio che nessuno verificava — il documento consegnato era l'unica versione mai controllata, e l'unica garanzia era che il riscrittore dichiarasse da sé di non aver perso niente.
 
-`collaudo` **non è un sesto revisore.** Non giudica la qualità: quella ha già avuto quattordici risposte ed è chiusa. Verifica la sola **conservazione** — che cambiando tutte le parole non sia cambiata nessuna cosa detta. Un collaudatore che apre rilievi nuovi riapre decisioni chiuse e fa ripartire un ciclo finito: è rotto, non severo.
+`collaudo` **non è un settimo revisore.** Non giudica la qualità: quella ha già avuto quindici risposte ed è chiusa. Verifica la sola **conservazione** — che cambiando tutte le parole non sia cambiata nessuna cosa detta. Un collaudatore che apre rilievi nuovi riapre decisioni chiuse e fa ripartire un ciclo finito: è rotto, non severo.
 
 Gira in due strati, e la divisione è deliberata:
 
@@ -75,11 +81,14 @@ Se dopo una revisione la Bibbia è cresciuta **oltre il 20%**, hai sommato invec
 ## Conflitti tra lenti
 
 - **EBP contro tutti** — vince l'EBP sul **claim**: se non è provato, l'etichetta scende. Non vince sul contenuto: un meccanismo IPOTESI resta nella Bibbia, etichettato.
-- **Compliance contro voce** — vince il compliance su ciò che **arriva al paziente** (Capitolo 12); il registro interno resta.
+- **Compliance contro voce** — vince il compliance su ciò che **arriva al paziente** (Capitolo 13); il registro interno resta.
 - **Neolaureato contro specialista** — "non si capisce" vs "va detto con precisione". Non è un conflitto: si dice la cosa precisa, in parole semplici, e il termine entra nel Glossario. **La precisione non richiede periodi lunghi.**
 - **Lenti-metodo (sistema-dominante, fedelta-bibbia, modelli) contro EBP/compliance** — pretendono **struttura e ragionamento**, non prove: si applicano entrambi i piani. L'elemento di metodo entra, etichettato RAGIONAMENTO.
 - **Apprendimento contro editor** — l'apprendimento può chiedere righe in più, l'editor le toglie. È voluto: l'apprendimento gira **prima**, e i passaggi che marca *da proteggere* l'editor può classificarli al massimo come PREFERENZA.
 - **Editor contro chiarezza** — non si incontrano mai, perché girano in sequenza. Se `chiarezza` allunga il documento riformulandolo, **è ammesso fino al +10%**: semplificare costa parole. Oltre, ha aggiunto contenuto e ha sbagliato mestiere.
+- **Chiarezza contro italiano** — anche loro girano in sequenza. `italiano` può muoversi solo entro il **±3%**: oltre, ha riscritto invece di correggere, e va fermato. E se tocca più del 40% delle frasi, il problema è a monte: o il quinto livello ha lavorato male, o il sesto ha sconfinato.
+- **Evidenza-estesa contro EBP** — sembrano opposti e non lo sono, purché valga la **regola del ponte**: l'evidenza trasversale alza l'etichetta del *meccanismo*, mai quella della *leva* su questa condizione. Se `evidenza-estesa` propone un'aggiunta che alzerebbe l'etichetta di una leva, **vince l'EBP** e l'aggiunta entra declassata. Se invece l'EBP chiede di togliere una fonte trasversale correttamente qualificata, **non è un suo rilievo**: l'ha già dichiarata per quello che è.
+- **Strumenti-attivi contro il confine** — un rilievo che chiede di riportare i **parametri usati negli studi** è dentro il perimetro (dato di evidenza). Un rilievo che chiede la **prescrizione al nostro paziente** è fuori (materia di Procedura). Il criterio è il tempo verbale e il destinatario. Scartare il primo insieme al secondo è l'errore che teneva fuori dalla Bibbia la leva con più prove.
 
 ## Quando il metodo stesso è sbagliato
 
@@ -115,7 +124,7 @@ Quando non usi il workflow:
 2. **Allega il documento** e invoca la lente **con lo slash** (`/direttore-osteopatico-...`).
 3. **Non dire chi l'ha scritta.** Il revisore deve trovare i problemi, non compiacere.
 4. **Non discutere il verdetto nella stessa chat.** Prendi l'output e chiudi.
-5. **Rispetta l'ordine dei cinque livelli.** In particolare: `chiarezza` per ultimo, sempre, su un documento già asciugato.
+5. **Rispetta l'ordine dei sei livelli.** In particolare: `chiarezza` su un documento già asciugato, e `italiano` per ultimo, su un documento già semplificato. Invertire gli ultimi due reintrodurrebbe i calchi appena tolti.
 
 ## Il tetto di questo sistema
 

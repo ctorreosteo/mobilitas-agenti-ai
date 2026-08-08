@@ -1,115 +1,95 @@
-# Revisione — Clinico Esperto
+# Feedback — Lente Clinico Esperto (sostanza clinica reale)
 
-**Documento revisionato:** `v1-bibbia.md` — La Bibbia del Reflusso Gastroesofageo (v1.0, agosto 2026). La Mappa `v1-mappa.md` è usata solo come riscontro di coerenza.
-
-LENTE: Clinico Esperto (sostanza clinica reale)
-CONDIZIONE: Malattia da reflusso gastroesofageo
+**Documento revisionato:** `bibbie-generate/reflusso-gastrico/v1-bibbia.md` (v1.0, agosto 2026), con la Mappa `v1-mappa.md` come riscontro.
+**Condizione:** Malattia da reflusso gastroesofageo.
+**Ricerca:** eseguita in questa sessione. Ogni studio citato sotto è stato aperto su PubMed e il risultato è letto nell'abstract. PMID indicati.
 
 ---
 
 ## BASTA PER RISOLVERE IL CASO?
 
-Un osteopata che ha studiato solo questo documento sa cosa è la barriera, sa che metà è muscolo scheletrico e sa cosa non deve promettere. Su un paziente pressorio o diaframmatico se la cava.
-
-Ma su chi arriva davvero in studio — il paziente che l'inibitore di pompa non ha risolto — gli mancano tre cose che decidono. Non sa distinguere il reflusso da uno stomaco che non si svuota. Non sa che l'eruttazione continua può essere un comportamento e non un riflesso. E non sa quanto dura quello che fa, quindi non capisce perché il paziente ricade alla terza settimana.
-
-Il documento è onesto e ben etichettato. È però timido esattamente dove servirebbe la mezza conoscenza: sui meccanismi che non ha una fonte pulita, ha preferito tacere invece di scrivere IPOTESI.
+Un osteopata che ha studiato solo questo documento sa **cosa non deve promettere** meglio di quanto sappia **cosa deve guardare**. La fisiologia della barriera è ottima e il capitolo dei meccanismi è onesto. Ma nel momento in cui il paziente è sul lettino, tre cose gli mancano e sono le tre che decidono: (1) non sa che l'escursione costale che sta palpando **non è** un indicatore del crus, cioè della sola leva su cui punta; (2) non ha in testa che una fetta dei "reflussi che non rispondono al farmaco" è una parete toracica, ed è l'unico caso in cui le sue mani risolvono davvero; (3) alla fine della prima seduta non ha nessun modo di sapere se ha lavorato sul piano giusto, perché il documento gli toglie l'unico marker immediato e gli offre solo marker che si leggono in giorni.
 
 ---
 
-## CONOSCENZA MANCANTE (il cuore di questa revisione)
+## CONOSCENZA MANCANTE — il cuore di questa revisione
 
-**1. Lo stomaco che non si svuota, e la dispepsia funzionale sovrapposta.**
-Capitolo dove va: «Cosa si rompe: i meccanismi» (settimo meccanismo) e «Che cos'è davvero», sezione «Cosa non è».
-Perché in stanza fa la differenza: è la metà dei pazienti che dicono "il farmaco non funziona". Non brucia: si sente pieno, si sazia subito, ha il cibo fermo sullo stomaco, si gonfia dopo tre bocconi. Se lo tratti come pressorio non succede niente, perché il contenitore non è teso: è pieno più a lungo del dovuto. E un fondo gastrico che resta disteso alimenta proprio il meccanismo numero 1 della Bibbia.
-Etichetta: PROBABILE per il legame fra ritardo di svuotamento, distensione del fondo e carico di reflusso. IPOTESI per qualunque leva manuale sullo svuotamento.
+### 1. Il crus non si legge dall'escursione costale
+Capitolo dove va: **«Cosa si rompe» meccanismo 5** e **«La lettura osteopatica» — Respiratorio-Circolatorio**.
+Etichetta: **DIMOSTRATO** per la dissociazione misurata; **RAGIONAMENTO** per la conseguenza al lettino.
 
-**2. L'eruttazione sopragastrica (aria aspirata, non aria che sale).**
-Capitolo dove va: «Cosa si rompe», dentro o accanto al meccanismo 1, e «Non è una condizione sola».
-Perché in stanza fa la differenza: oggi la Bibbia scrive che le eruttazioni frequenti sono la manifestazione visibile del rilasciamento transitorio. Vero per quelle gastriche. Ma il paziente che erutta ogni due minuti, che ha il nodo in gola e che smette di eruttare quando dorme non sta refluendo: sta aspirando aria in esofago con una manovra diaframmatica e riespellendola subito. È un comportamento, non un riflesso. Chi non conosce questa distinzione tratta la barriera di un paziente la cui barriera non c'entra — ed è proprio il paziente che nessuno ha capito e che arriva da noi.
-Etichetta: DIMOSTRATO per l'esistenza e la meccanica del fenomeno (documentato con impedenzometria). PROBABILE per la risposta al lavoro respiratorio diaframmatico. RAGIONAMENTO per il riconoscimento clinico a occhio in studio.
+### 2. Il generatore somatico scambiato per reflusso refrattario
+Capitolo dove va: **«Che cos'è davvero» — Cosa non è**.
+Etichetta: **PROBABILE** per l'entità; **IPOTESI** per la quota di casi.
 
-**3. Quanto dura l'effetto della mano.**
-Capitolo dove va: «Perché le mani possono cambiare qualcosa», dentro ogni box "in quanto tempo si vedrebbe".
-Perché in stanza fa la differenza: il capitolo dice sempre quando si vede un effetto, mai quanto resta. La manometria di da Silva è misurata subito dopo la tecnica. Il guadagno pressorio di Nobre e Souza arriva dopo settimane di allenamento ripetuto, e in Eherer il beneficio a nove mesi resta solo in chi ha continuato a esercitarsi. La conclusione clinica è netta: su questa condizione il guadagno di barriera è dose-dipendente e appartiene al ripetuto, non alla seduta. Chi non lo sa vede il paziente migliorare in studio, ricadere in due settimane, e conclude che l'osteopatia sul reflusso non funziona.
-Etichetta: DIMOSTRATO per la dipendenza del guadagno dall'allenamento ripetuto (Nobre e Souza 2013; Eherer 2012, già in bibliografia). RAGIONAMENTO per la durata dell'effetto manuale, che nessuno ha misurato.
+### 3. Il marker che si legge nella stessa seduta
+Capitolo dove va: **«Come ragiono davanti a questo paziente» — La prova della chiave di volta**.
+Etichetta: **RAGIONAMENTO**.
 
-**4. Lo sfintere esofageo superiore e i muscoli che lo circondano.**
-Capitolo dove va: «Le strutture in gioco» e «Perché le mani possono cambiare qualcosa».
-Perché in stanza fa la differenza: lo sfintere superiore non compare mai, né nelle strutture né nel glossario. Eppure è muscolo scheletrico, è raggiungibile, e la sua ipertonia riflessa è ciò che il paziente descrive come nodo in gola. Il sottotipo notturno-extraesofageo resta oggi senza una sola leva nominata, e proprio quello è il paziente che porta più frustrazione. C'è anche un'incoerenza interna: Bitnar 2016, citato dalla Bibbia, misura anche lo sfintere superiore, ed Eguaras usa la mobilità cervicale come marker di esito — mentre il capitolo 3 chiude dicendo che in cervicale non c'è nulla da cercare.
-Etichetta: PROBABILE per l'ipertonia dello sfintere superiore come risposta al reflusso. IPOTESI per l'effetto di una mano su quel tono.
+### 4. Le sorgenti di pressione ripetuta, e il circolo della tosse
+Capitolo dove va: **«Cosa si rompe» meccanismi 4 e 6**, richiamo nella **Road Map**.
+Etichetta: **DIMOSTRATO** per i picchi pressori misurati; **RAGIONAMENTO** per l'uso anamnestico.
 
 ---
 
 ## I SOTTOTIPI SONO QUELLI VERI?
 
-Quasi. Sono sei e sono derivati dai meccanismi, non dalla sala d'attesa. Nella pratica il pressorio-posturale e il diaframmatico sono la stessa persona nella grande maggioranza dei casi: l'addome teso e il respiro alto convivono, e nessuno li vede separati.
-
-Mancano invece due pazienti che arrivano davvero. Il primo è **il post-chirurgico**: fundoplicato che brucia ancora, o che non riesce più a eruttare e si gonfia. Ha una meccanica diversa da tutti gli altri e la Bibbia lo prevede solo come cicatrice in una riga del capitolo 8. Il secondo è **quello che non si svuota**, descritto sopra.
-
-Il sottotipo che invece non serve come categoria a sé è il post-prandiale puro: è dichiarato "poco" su tutte le voci e non è atto osteopatico. Può restare una riga dentro il meccanismo 1.
+Cinque su sei corrispondono alla sala d'attesa, e la coppia pressorio/diaframmatico è separata bene. Mancano due cose. Il **paziente a svuotamento lento** — sazietà precoce, pienezza, gonfiore — è dichiarato nel capitolo dei meccanismi come "una fetta grande dei pazienti che dicono che il farmaco non funziona", e poi **non compare nella tabella dei sottotipi**: chi usa la tabella lo incasella in post-prandiale, che ha segnali diversi. E manca del tutto il **paziente polmonare cronico** (BPCO, asma, fibrosi, forte fumatore), che ha una disfunzione crurale documentata e che il segnale "respiro apicale, torace chiuso" non intercetta, perché il suo torace è aperto e il diaframma è basso.
 
 ---
 
 ## ERRORI — senza questo il lettore non risolve il caso
 
-**E1. Manca il meccanismo dello svuotamento gastrico rallentato e la dispepsia funzionale sovrapposta.**
-Capitolo: «Cosa si rompe» e «Che cos'è davvero» (sezione «Cosa non è»).
-Perché è decisiva: è la fetta più grande dei non-responder all'inibitore di pompa. Il capitolo «Cosa non è» elenca pirosi funzionale, reflusso ipersensibile e acalasia, ma salta la sovrapposizione più frequente in assoluto. Il segno che la riconosce in cinque minuti è la sazietà precoce, non il bruciore.
-Correzione: aggiungere un settimo meccanismo breve, con i suoi segni addosso al paziente, e una riga in «Cosa non è».
-Etichetta proposta: PROBABILE il meccanismo, IPOTESI la leva manuale.
+**E1 — «Cosa si rompe» meccanismo 5 e «La lettura osteopatica»: l'escursione costale è usata come proxy del contributo crurale, e non lo è.**
+Il documento identifica il sottotipo diaframmatico con "escursione costale bassa, respiro apicale, dorsale rigida", e la Road Map al punto 3 chiede "il diaframma escursiona?". È il proxy sbagliato per la struttura che conta. Joshua et al. hanno misurato con manometria ad alta risoluzione pressione transdiaframmatica e pressione della giunzione in 26 pazienti con malattia polmonare restrittiva, 24 con ostruttiva e 20 controlli: i restrittivi avevano Pdi **più alta** dei controlli e pressione della giunzione **più bassa**, con perdita del rapporto temporale fra le due. Conclusione degli autori: disfunzione **selettiva** del crus (Neurogastroenterol Motil 2024, [PMID 37882102](https://pubmed.ncbi.nlm.nih.gov/37882102/)). Tradotto in stanza: un diaframma che lavora, anche tanto, può avere un crus che non fa il suo mestiere; e un torace rigido non è la stessa cosa di una barriera crurale debole.
+**Correzione:** aggiungere al meccanismo 5 un paragrafo che dice che componente costale e componente crurale possono dissociarsi, con l'etichetta **DIMOSTRATO** e la fonte sopra. Riscrivere i "segnali che lo riconoscono" del sottotipo diaframmatico separando ciò che si osserva (escursione, dissociazione respiratoria, chiusura anteriore) da ciò che si vorrebbe misurare (contributo crurale), dichiarando **RAGIONAMENTO** il salto fra i due. Aggiungere il fenotipo polmonare cronico — torace iperinsufflato, diaframma basso e appiattito — come variante che i segnali attuali non intercettano, etichetta **PROBABILE** (stessa fonte, più la prevalenza nota di reflusso nella BPCO).
 
-**E2. Manca la distinzione fra eruttazione gastrica ed eruttazione sopragastrica.**
-Capitolo: «Cosa si rompe», meccanismo 1.
-Perché è decisiva: oggi la Bibbia insegna a leggere le eruttazioni frequenti come conferma del rilasciamento transitorio. In quel modo indirizza il lettore verso una barriera che in questi pazienti tiene benissimo, e gli fa perdere l'unico paziente su cui il lavoro respiratorio ha una resa alta e rapida.
-Correzione: due paragrafi dentro il meccanismo 1, con il segno discriminante — l'eruttazione sopragastrica scompare nel sonno e durante il parlato, quella gastrica no.
-Etichetta proposta: DIMOSTRATO per il fenomeno, PROBABILE per la risposta al lavoro respiratorio.
+**E2 — «Che cos'è davvero — Cosa non è»: sei diagnosi differenziali, tutte mediche, nessuna nostra.**
+Il capitolo elenca acalasia, esofagite eosinofila, dolore cardiaco, pirosi funzionale, reflusso ipersensibile, eruttazione sopragastrica e ruminazione. Manca il quadro che appartiene esattamente a noi: il **dolore di parete toracica anteriore e sotto-costale come generatore primario** — sindrome della costa scivolante, dolore costo-condrale, disfunzione costovertebrale bassa. È descritta in letteratura come causa di dolore addominale alto e toracico persistente, misconosciuta per anni e attribuita all'apparato digerente, e si smaschera in trenta secondi riproducendo il dolore con la manovra a uncino (Spence e Rosato, *Arch Surg* 1983, [PMID 6639342](https://pubmed.ncbi.nlm.nih.gov/6639342/) — "causa di dolore addominale alto poco conosciuta, per mancato riconoscimento più che per rarità"; Fares, *Am J Med Sci* 2019, [PMID 30509726](https://pubmed.ncbi.nlm.nih.gov/30509726/); Bolaños-Vergaray, *A A Case Rep* 2015, [PMID 26528703](https://pubmed.ncbi.nlm.nih.gov/26528703/)). Il documento sfiora la zona quando parla di "soglia dolorosa abbassata sulla parete toracica anteriore", ma la legge **solo** come sensibilizzazione viscero-somatica: cioè come conseguenza dell'organo, mai come causa autonoma. Chi studia questa Bibbia tratterà un diaframma a un paziente che aveva una costa.
+**Correzione:** aggiungere un settimo quadro a «Cosa non è»: il dolore di parete come mimo del reflusso, con il criterio che lo distingue (dolore riproducibile alla palpazione o alla mobilizzazione della costa, indipendente dal pasto, non modificato dall'antiacido). Etichetta **PROBABILE** per l'esistenza dell'entità e per la riproducibilità del dolore, **IPOTESI** per la quota di "reflusso refrattario" che in realtà è questo. Nessuna tecnica: basta la conoscenza del quadro e del segno.
 
-**E3. Manca la durata dell'effetto, e quindi il perché delle ricadute.**
-Capitolo: «Perché le mani possono cambiare qualcosa».
-Perché è decisiva: senza questa riga il lettore attribuisce alla propria tecnica un effetto stabile che la letteratura non mostra, non spiega al paziente che il guadagno va mantenuto, e legge la ricaduta come fallimento. È anche la conoscenza che rende difendibile ciò che promette in prima seduta.
-Correzione: aggiungere a ogni leva una riga "quanto dura", e un capoverso che dichiara che il guadagno duraturo documentato appartiene al ripetuto.
-Etichetta proposta: DIMOSTRATO per la dipendenza dall'allenamento, RAGIONAMENTO per la durata dell'effetto manuale.
+**E3 — «Come ragiono davanti a questo paziente»: il documento toglie l'unico marker immediato e non ne mette un altro.**
+Il capitolo scrive giustamente che rimisurare l'escursione costale dopo aver lavorato sul diaframma non verifica niente, e poi offre come marker onesti latenza pasto-sintomo, risvegli notturni e altezza del cuscino: tutti e tre si leggono in **giorni**. Il risultato pratico è che l'osteopata finisce la prima seduta senza sapere se ha scelto il piano giusto, e la scelta più probabile a quel punto è ripetere la stessa cosa per tre sedute. Il documento fornisce già la materia prima del marker che manca: nel meccanismo 4 e nel sottotipo pressorio dichiara che il sintomo si accende in flessione del tronco, con la cintura stretta, allacciandosi le scarpe. Un sintomo provocabile su richiesta è un marker misurabile prima e dopo, nella stessa seduta, e non appartiene al piano trattato se il lavoro è stato sul diaframma o sull'attivazione.
+**Correzione:** aggiungere alla «prova della chiave di volta» un paragrafo sul **marker di provocazione posizionale**: nel paziente in cui il sintomo è evocabile con una posizione o una compressione, quella provocazione si registra prima di trattare e si ripete dopo. Dire esplicitamente che vale solo dove il sintomo è provocabile, e che nel sottotipo sproporzionato al referto non va usato, perché ripetere l'input in un dolore nociplastico lo riaccende — cosa che il documento già sa e dice due paragrafi sopra. Etichetta **RAGIONAMENTO**.
 
 ---
 
-## RISCHI — risolve, ma si lascia risultato sul tavolo
+## RISCHI — risolve, ma lascia risultato sul tavolo
 
-**R1. Lo sfintere esofageo superiore non esiste nel documento.**
-Capitolo: «Le strutture in gioco» e «Perché le mani possono cambiare qualcosa».
-Cosa si perde: la leva più diretta sul sintomo che il paziente porta con più frustrazione — il nodo in gola. Oggi il sottotipo notturno-extraesofageo è dichiarato "poco" e non ha nemmeno una leva nominata, quindi nessuno la cercherà.
-Come recuperarlo: una scheda struttura come le altre, e una leva nel capitolo 11 etichettata IPOTESI. Ammorbidire la chiusura del capitolo 3 distinguendo il riferimento viscerale (dorsale, T5-T9) dalla risposta muscolare cervico-ioidea, che è un'altra cosa.
+**R1 — «Cosa si rompe» meccanismi 2 e 4, e «Non è una condizione sola» sottotipo strutturale-erosivo: pressione ed ernia sono trattate come silos separati, e il punto clinico è la loro interazione.**
+Il documento assegna al meccanismo 4 "PROBABILE per il volume, IPOTESI per la componente tensiva", e cita come contro-dato il sollevamento delle gambe che fa **salire** la pressione dello sfintere (Bitnar 2016). Quel dato non è un'anomalia: è la barriera competente che si adatta. La revisione sistematica di Siboni e colleghi lo formula così — l'aumento della pressione intra-addominale produce una risposta adattativa di uno sfintere competente **oppure** la rottura della giunzione, "specialmente in presenza di ernia iatale" (*J Clin Gastroenterol* 2022, [PMID 36084164](https://pubmed.ncbi.nlm.nih.gov/36084164/)). La conseguenza in stanza ribalta due righe della Bibbia: la leva pressoria rende **di più** proprio nel paziente con sovrapposizione persa, cioè quello a cui il documento oggi offre solo "meccanica toracica e comfort" e "accompagnare".
+**Correzione:** nel meccanismo 4 aggiungere che il carico pressorio diventa patogeno in funzione di quanto la sovrapposizione fra i due sfinteri è già persa, etichetta **PROBABILE** con la fonte sopra. Nel sottotipo strutturale-erosivo aggiungere che il contributo utile non è il comfort ma la **riduzione del carico pressorio** — e che quella riduzione passa in gran parte fuori dalle nostre mani (peso, volume dei pasti, tosse, ponzamento, sforzi), il che è coerente con tutto il resto del documento.
 
-**R2. Manca il decubito laterale sinistro nella clearance notturna.**
-Capitolo: «Cosa si rompe», meccanismo 6, e la leva corrispondente nel capitolo 11.
-Cosa si perde: la leva a costo zero con la resa più alta su tutto il quadro notturno. La geometria la spiega la Bibbia stessa: sul fianco sinistro la giunzione resta sopra il livello del contenuto, sul destro finisce sotto. Il documento parla di due cuscini e di postura del sonno, ma non nomina il lato — ed è l'unica cosa che quel paziente può fare stanotte.
-Come recuperarlo: due righe nel meccanismo 6, etichetta DIMOSTRATO con la fonte pH-metrica sul decubito.
+**R2 — «Cosa si rompe» meccanismi 4 e 6, e la Road Map: le sorgenti di pressione ripetuta non sono in anamnesi.**
+Il capitolo 4 nomina correttamente tosse, riso e sollevamento come eventi che alzano la pressione, ma nei "come si vede addosso al paziente" del meccanismo 4 non compare **nessuna** di queste: ci sono grasso viscerale, gonfiore, parete rigida, cintura. Restano fuori quattro sorgenti quotidiane e riconoscibili in due domande: la **tosse cronica** (picco di pressione intra-addominale misurato a 139,5 cmH₂O nel colpo volontario e 164,9 cmH₂O nel riflesso, su 11 soggetti — *Cough* 2008, [PMID 18447952](https://pubmed.ncbi.nlm.nih.gov/18447952/)), il **ponzamento da stipsi**, il **sollevamento pesi e il lavoro addominale con manovra di Valsalva** in palestra, e gli **indumenti compressivi**. Nel meccanismo 6 manca poi il circolo: la tosse è elencata solo come sintomo del reflusso, mai come suo generatore, e il paziente con tosse cronica sta dentro un anello che si autoalimenta.
+**Correzione:** aggiungere queste quattro voci ai segni del meccanismo 4 e una riga sul circolo tosse-pressione-reflusso-tosse nel meccanismo 6. Nella Road Map, al punto 4, aggiungere la domanda sul ponzamento e sull'attività fisica con Valsalva. Etichetta **DIMOSTRATO** per i valori pressori misurati, **RAGIONAMENTO** per l'uso anamnestico.
 
-**R3. Manca il paziente operato.**
-Capitolo: «Non è una condizione sola» e «Dove finisce il nostro campo».
-Cosa si perde: il fundoplicato che continua a stare male arriva in studio, e ha una meccanica che non somiglia a nessuno dei sei sottotipi: il crus è stato suturato, l'eruttazione può essere impossibile, il gonfiore sostituisce il bruciore, e la disfagia post-operatoria non ha lo stesso significato di allarme della disfagia in un paziente mai operato. Chi non lo sa applica male anche la tabella delle bandiere rosse.
-Come recuperarlo: un sottotipo breve, o un riquadro in «Dove finisce il nostro campo». Etichetta RAGIONAMENTO per l'approccio, DIMOSTRATO per i fenomeni post-chirurgici noti.
+**R3 — «Cosa può fare il paziente da solo»: manca il sollevamento della testiera del letto, e manca la ragione per cui il cuscino non equivale.**
+Il capitolo 12 ha giustamente due strumenti attivi, e sul sonno riporta solo il decubito laterale sinistro. Il sollevamento della testiera è la seconda leva notturna, e ha prove: revisione sistematica su 5 studi controllati e 228 pazienti, con un crossover di buona qualità che mostra una riduzione clinicamente rilevante del punteggio sintomatico a 6 settimane, RR 2,1 (IC 1,2-3,6), e la conclusione che si tratta di un'alternativa economica e ragionevolmente sicura, pur con limiti metodologici (*BMC Fam Pract* 2021, [PMID 33468060](https://pubmed.ncbi.nlm.nih.gov/33468060/)); e uno studio con pH-metria in cui l'elevazione di 20 cm ha ridotto tempo di reflusso supino, tempo di clearance acida e reflussi ≥5 minuti, su 20 pazienti (*J Gastroenterol Hepatol* 2012, [PMID 22098332](https://pubmed.ncbi.nlm.nih.gov/22098332/)). Conta perché il paziente del capitolo 1 dice già "dormo con due cuscini" e "ho alzato il cuscino", ed è nella lista delle cose che ha provato e non hanno funzionato: i cuscini flettono il tronco e aumentano la pressione addominale, l'inclinazione di tutto il piano no. Oggi la Bibbia usa "l'altezza del cuscino" come marker esterno e non dice mai che è l'implementazione sbagliata della misura giusta.
+**Correzione:** aggiungere al secondo strumento del capitolo 12 il sollevamento della testiera come misura distinta dal cuscino, etichetta **PROBABILE** con le due fonti sopra, e **RAGIONAMENTO** per la spiegazione meccanica della differenza fra inclinare il piano e impilare cuscini. Nessuna istruzione operativa: il come e il quando restano nella Procedura.
+
+**R4 — «Non è una condizione sola»: il sottotipo a svuotamento lento è nel testo dei meccanismi ma non nella tabella dei sottotipi.**
+Il documento lo descrive bene nel meccanismo 1 — sazietà precoce, pienezza, gonfiore, bruciore non primo sintomo, e "se lo tratti come pressorio non succede niente" — e lo dichiara una fetta grande dei refrattari. Poi la tabella dei sottotipi, che è lo strumento che il lettore userà davvero, non lo ha; e le due domande di triage del capitolo ("per quanto mangi o per quando ti pieghi?", "anche a stomaco vuoto?") lo mandano dritto in post-prandiale, che ha segnali diversi (eruttazioni, non pienezza).
+**Correzione:** portarlo in tabella come riga propria — segnale: sazietà precoce e pienezza; meccanismo: distensione prolungata del fondo; quanto puoi fare: poco, si segnala al medico. Aggiungere alle due domande di triage la terza che lo separa: "quanto ci mette lo stomaco a svuotarsi, ti senti pieno a lungo?". Etichetta **RAGIONAMENTO**: è materiale già presente nel documento, va solo messo dove si usa.
 
 ---
 
 ## PREFERENZE
 
-**P1.** Sei sottotipi sono troppi per essere usati davanti al paziente. Pressorio-posturale e diaframmatico sono lo stesso paziente quasi sempre: fonderli in un unico sottotipo meccanico con due varianti, e recuperare lo spazio per quelli che mancano.
+**P1 — «Le strutture in gioco» e «La lettura osteopatica»: la geometria del crus è dichiarata e poi non usata.**
+Il capitolo 3 dice che è il **crus destro** a sdoppiarsi e a formare l'anello dello iato, e che i pilastri si inseriscono su L1-L3, sotto la cerniera. Nessuno dei due dettagli torna mai: i "segnali che pesano" del modello biomeccanico sono simmetrici e tutti costali o dorsali, e l'ancoraggio lombare del crus non compare fra i reperti da cercare. Chi legge non saprà che un reperto a destra pesa più di uno a sinistra su questa giunzione, né che il crus ha un capo caudale lombare e non solo un capo costale. Etichetta **RAGIONAMENTO**: non esiste un dato di lateralità clinica su questa condizione, ed è onesto dirlo mentre lo si scrive.
 
-**P2.** In «Chi ti trova davanti», le tre domande non contengono quella che oggi arriva sempre: *"questa pastiglia la devo prendere per sempre, e mi fa male?"*. Il capitolo 9 dà la risposta giusta, ma il lettore non è preparato a riceverla al minuto due. Aggiungerla come quarta domanda e come obiezione nel capitolo 12, con il richiamo al rimbalzo acido già scritto altrove.
+**P2 — «Chi ti trova davanti»: manca il paziente che non arriva per il reflusso.**
+Il capitolo descrive benissimo chi viene per il bruciore dopo anni di tentativi. In studio, però, una quota consistente di questi pazienti arriva per una dorsalgia alta o una cervicalgia e il reflusso esce solo se lo chiedi, perché lui non lo considera un problema da osteopata. Il documento cita la co-occorrenza dei tre quadri più avanti, nel capitolo dei sottotipi, ma non dice mai che il reflusso va **cercato in anamnesi** in chi non lo racconta. Etichetta **RAGIONAMENTO**.
 
 ---
 
 ## TIENE
 
-L'avvertenza sul vago è la cosa più preziosa del documento: dice al lettore di non ripetere una frase che tutti ripetono, e spiega perché. Va lasciata intatta.
-
-Tiene anche la separazione fra esposizione e percezione, con l'esito dichiarato prima nel paziente ipersensibile — intensità giù a parità di episodi. È la cosa che salva la seconda seduta.
-
-E tiene il capitolo 11 nella sua parte iniziale: dire per primo cosa le mani non fanno è ciò che rende credibile tutto il resto.
+Tre cose sono clinicamente forti e non vanno toccate. La prima è la separazione fra esposizione e percezione, con l'esito dichiarato prima di iniziare — "intensità giù a parità di numero di episodi": è la cosa più utile del documento e nessun altro nel percorso del paziente gliela dice. La seconda è la scelta di elencare i sei meccanismi mettendo per primi quelli su cui non abbiamo leva: è quello che rende il capitolo 11 credibile invece che promozionale. La terza è il doppio tempo dell'effetto sul crus — riflesso nei minuti, riallenamento in settimane — perché è esattamente la conoscenza che spiega la ricaduta a due settimane e impedisce di leggerla come fallimento.
 
 ---
 
-**VERDETTO: Basta a metà.**
+## VERDETTO: Basta a metà
 
-Il paziente meccanico lo risolve. Il paziente che l'inibitore di pompa non ha risolto — che è quello che arriva davvero — resta senza le tre conoscenze che lo distinguono e senza la ragione per cui ricade.
+La Bibbia contiene il meccanismo che decide e lo dichiara con onestà, ma consegna al lettore il proxy sbagliato per riconoscerlo al lettino, gli nasconde il quadro di parete che sarebbe l'unico caso davvero suo, e non gli dà modo di verificare la sua scelta prima che passi una settimana.

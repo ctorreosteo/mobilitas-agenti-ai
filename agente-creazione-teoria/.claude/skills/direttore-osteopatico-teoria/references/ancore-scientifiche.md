@@ -33,6 +33,45 @@ Questi nomi sono ipotesi ragionevoli, **non fatti da citare a memoria**. Cerca, 
 
 Le celle vuote o incerte sono un invito a cercare, non a inventare.
 
+## Dove si cerca — i tre cerchi
+
+Prima del protocollo di verifica viene il protocollo di **ricerca**, ed è il punto in cui le Bibbie sbagliavano di più. Cercando solo "osteopatia + questa condizione" si trovano tre studi piccoli, e si conclude — onestamente ma parzialmente — che si può dire poco.
+
+Ogni Bibbia esplora **tre cerchi**. Nessuno è opzionale.
+
+### Cerchio 1 — L'evidenza specifica
+
+Quell'intervento, su quella condizione. È l'unico che può reggere un **DIMOSTRATO su una leva clinica**. Quasi sempre è il cerchio più povero: non è un difetto del documento, è lo stato del mondo.
+
+Query tipo: `osteopathic manipulative treatment [condizione] randomized`, `manual therapy [condizione] systematic review`, `[condizione] physiotherapy trial`.
+
+### Cerchio 2 — L'evidenza trasversale sul meccanismo
+
+**È il cerchio che manca quasi sempre, ed è quello che cambia la solidità di una Bibbia.** Studi che non riguardano questa condizione, ma il **meccanismo che questa condizione usa**. Sei famiglie, da cercare tutte:
+
+| Famiglia | Cosa cercare |
+|---|---|
+| Tocco e sistema autonomico | contatto manuale e variabilità della frequenza cardiaca, conduttanza cutanea, tono simpatico/parasimpatico; tocco lento affettivo e fibre C-tattili |
+| Terapia manuale e dolore | ipoalgesia da mobilizzazione, modulazione condizionata del dolore, soglia di pressione, sensibilizzazione centrale |
+| Interocezione e percezione | stato di attivazione e soglia a cui un segnale viscerale diventa sintomo, ipervigilanza sintomatica, asse intestino-cervello |
+| Respiro e tono vagale | respirazione lenta e indici autonomici, allenamento dei muscoli respiratori, diaframma |
+| Contesto e alleanza | effetti contestuali in terapia manuale, aspettativa, alleanza terapeutica come predittore, nocebo verbale |
+| Esercizio e carico | quello che è dimostrato per la **funzione** coinvolta, anche fuori da questa condizione |
+
+Il cerchio 2 può reggere un **DIMOSTRATO su un meccanismo**. Non può mai reggere un DIMOSTRATO su una leva clinica per questa condizione.
+
+### Cerchio 3 — La fisiologia di base
+
+Anatomia e fisiologia misurate: la pressione di uno sfintere, l'innervazione di una struttura, la meccanica di un compartimento. Regge il **razionale**, mai l'efficacia. È il cerchio che rende anatomicamente sensato il nostro lavoro.
+
+### La regola del ponte — non negoziabile
+
+> **L'evidenza del cerchio 2 alza l'etichetta del MECCANISMO. Non tocca mai l'etichetta della LEVA su questa condizione.**
+
+Ogni fonte del cerchio 2 che entra nel testo porta con sé la frase che dichiara il salto: *"misurato su [chi], non su pazienti con questa condizione"*.
+
+Senza questa regola, allargare la ricerca produce l'effetto opposto a quello voluto: venti studi veri sul tocco e sul vago diventano la premessa di una deduzione falsa ("quindi funziona"). È il *mechanism-mongering*, ed è il bersaglio numero uno del revisore evidence-based. Un solo ponte attraversato in silenzio si porta via la credibilità di tutte le citazioni corrette.
+
 ## Protocollo di verifica — obbligatorio
 
 Per **ogni** studio che finirà nel documento:
@@ -73,8 +112,24 @@ Ogni meccanismo, modello e leva della Bibbia porta una delle quattro etichette d
 Alcune condizioni non hanno un Michiels. Il reflusso e la stitichezza hanno letteratura sottile su OMT. **Questo si dice, non si nasconde.**
 
 In quel caso:
-- L'ancora diventa un **meccanismo fisiologico solido** (anatomia e fisiologia del LES, motilità colica) più gli studi disponibili anche se pochi.
+- Si separano **due ancore**. L'**ancora clinica** è il gruppo più vicino che ha fatto studi controllati su questa condizione, con i suoi limiti dichiarati. L'**ancora fisiologica** è chi ha stabilito il meccanismo, e di norma è molto più autorevole della prima: è lei che rende anatomicamente sensato il nostro lavoro. Dichiararle entrambe è più onesto e più forte che gonfiarne una.
+- Si va a fondo sui **cerchi 2 e 3**. La povertà del cerchio 1 non è una ragione per scrivere poco: è la ragione per cui gli altri due contano di più.
 - Il Capitolo 10 si intitola onestamente (*"L'evidenza disponibile e i suoi limiti"*) e dichiara dove la ricerca non è ancora arrivata.
 - **Tutte le etichette scendono di un gradino**, e il Capitolo 11 dice per primo cosa le mani non possono fare.
+- **Si scrive la sezione «Quando la scienza tace»** — che diventa obbligatoria. Vedi sotto.
 
 Un documento che ammette un limite è più credibile di uno che gonfia. E l'osteopata che scopre da solo che uno studio non esiste smette di fidarsi di tutto il resto — inclusi i documenti giusti.
+
+## «Quando la scienza tace» — il ragionamento che va scritto per esteso
+
+Dichiarare che la letteratura è sottile, e fermarsi lì, produce un danno che nessuno aveva previsto: **il lettore onesto conclude che allora quella condizione non si tratta.** È una conclusione sbagliata, e il documento deve smontarla — con argomenti, non con l'entusiasmo.
+
+I cinque punti, nell'ordine (la specifica di struttura sta in `architettura-bibbia.md`):
+
+1. **Assenza di prove non è prova di assenza.** Che nessuno abbia studiato un intervento su una condizione non dice niente sulla sua efficacia: dice che nessuno l'ha misurata. Sono due affermazioni diverse, e confonderle è un errore di logica.
+2. **Perché quella letteratura non esiste.** Quasi mai perché gli studi sono stati fatti e sono risultati negativi — quello sarebbe un dato, e andrebbe in «Cosa non possiamo dire». Quasi sempre perché non sono stati fatti: nessun finanziamento, nessun outcome standardizzato per la terapia manuale, nessun placebo credibile per il tocco, campioni piccoli, riviste che non li pubblicano.
+3. **Su cosa ti basi allora**, in ordine di forza: il **meccanismo fisiologico** documentato dai cerchi 2 e 3; il **ragionamento clinico** dichiarato come ragionamento; la **verifica sul singolo paziente**, con un marker scelto *prima* di trattare e misurato prima e dopo.
+4. **Cosa separa tutto questo dal pensiero magico.** La verifica, e nient'altro. Scegliere il marker prima e accettarne il verdetto è scienza applicata a un caso singolo. Scegliere il marker dopo aver visto il paziente migliorare, no. È la stessa distinzione che in ricerca separa un protocollo registrato da un'analisi *post hoc*.
+5. **Cosa non autorizza.** Non a promettere un esito. Non a scrivere DIMOSTRATO dove c'è IPOTESI. Non a dire al paziente che "gli studi lo confermano". La libertà che questo ragionamento dà è quella di **trattare e verificare**, non quella di affermare.
+
+Il tono è quello di un direttore che difende il proprio mestiere con argomenti. Mai quello di un documento che si scusa di esistere.

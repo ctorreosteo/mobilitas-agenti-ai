@@ -1,11 +1,15 @@
 {
-  "_come_si_usa": "Questo file decide il RUOLO e il LIVELLO di ogni skill nel workflow. Usa le CHIAVI = la parte dopo 'direttore-osteopatico-'. L'ESISTENZA delle skill resta auto-scoperta dalla cartella .claude/skills; qui dichiari ESPLICITAMENTE chi e' l'autore e chi e' revisore di PRIMO, SECONDO, TERZO, QUARTO o QUINTO livello. Un revisore presente nella cartella ma NON elencato qui NON viene usato (il workflow lo segnala). Per spostare un revisore di livello, togli la sua chiave da un array e mettila nell'altro. FLUSSO: v1 -> primo_livello (in parallelo) -> sintesi v2 -> secondo_livello sulla v2 -> sintesi v3 -> terzo_livello sulla v3 -> sintesi v4 -> quarto_livello sulla v4 -> sintesi v5 -> quinto_livello RISCRIVE la v5 -> v6 FINALE. Un array vuoto salta il livello (la versione viene promossa senza modifiche). L'automazione e' genera-bibbie.workflow.js.",
+  "_come_si_usa": "Questo file decide il RUOLO e il LIVELLO di ogni skill nel workflow. Usa le CHIAVI = la parte dopo 'direttore-osteopatico-'. L'ESISTENZA delle skill resta auto-scoperta dalla cartella .claude/skills; qui dichiari ESPLICITAMENTE chi e' l'autore e chi e' revisore di PRIMO, SECONDO, TERZO, QUARTO, QUINTO o SESTO livello. Un revisore presente nella cartella ma NON elencato qui NON viene usato (il workflow lo segnala). Per spostare un revisore di livello, togli la sua chiave da un array e mettila nell'altro. FLUSSO: v1 -> primo_livello (in parallelo) -> sintesi v2 -> secondo_livello sulla v2 -> sintesi v3 -> terzo_livello sulla v3 -> sintesi v4 -> quarto_livello sulla v4 -> sintesi v5 -> quinto_livello RISCRIVE la v5 -> v6 -> sesto_livello raddrizza la LINGUA della v6 -> v7 FINALE. Un array vuoto salta il livello (la versione viene promossa senza modifiche). L'automazione e' genera-bibbie.workflow.js.",
 
-  "_ordine_dei_livelli": "1o = panel avversariale sul contenuto (clinica, sicurezza come conoscenza, EBP, compliance, comprensibilita, modelli, neurofisiologia, utilita clinica). 2o = fedelta all'architettura della Bibbia. 3o = logica dell'apprendimento: il documento insegna o fa solo sapere. 4o = editor di asciugatura: toglie ridondanza e riporta nel range 8.000-12.000 parole. 5o = CHIAREZZA: non e' un revisore, e' un riscrittore. Prende la v5 e riscrive l'intero documento da capo con lessico e sintassi semplici, senza perdere una sola informazione. L'ordine 4o poi 5o non e' invertibile: si semplifica un testo gia' asciutto, non si asciuga un testo gia' semplificato.",
+  "_ordine_dei_livelli": "1o = panel avversariale sul contenuto (clinica, sicurezza come conoscenza, EBP, compliance, comprensibilita, modelli, neurofisiologia, utilita clinica, strumenti attivi). 2o = fedelta all'architettura della Bibbia + ampliamento della base scientifica ai tre cerchi. 3o = logica dell'apprendimento: il documento insegna o fa solo sapere. 4o = editor di asciugatura: toglie ridondanza e riporta nel range 8.000-13.000 parole. 5o = CHIAREZZA: non e' un revisore, e' un riscrittore. Prende la v5 e riscrive l'intero documento da capo con lessico e sintassi semplici, senza perdere una sola informazione. 6o = ITALIANO: non riscrive, passa a setaccio. Toglie i calchi dall'inglese, raddrizza i nessi logici, scioglie i pronomi vaghi, sistema le collocazioni, e inserisce da 6 a 8 metafore della vita quotidiana (macchina, casa, lavoro, cucina, denaro) dove un concetto resta astratto — mai su sicurezza ed evidenza, e ognuna rimovibile senza perdere informazione. L'ordine 4o -> 5o -> 6o non e' invertibile: si semplifica un testo gia' asciutto, e si raddrizza la lingua di un testo gia' semplificato. Invertire 5o e 6o reintrodurrebbe i calchi appena tolti.",
 
-  "_perche_esiste_il_collaudo": "Il 5o livello riscrive OGNI frase del documento: e' l'unico passaggio della catena in cui tutto il testo cambia, ed era l'unico che nessuno verificava — la versione consegnata era l'unica mai controllata. Il COLLAUDO chiude quel buco. NON e' un sesto revisore e non giudica la qualita' (chiusa a monte dai cinque livelli): confronta v5 e v6 e verifica la sola CONSERVAZIONE, cioe' che cambiando tutte le parole non sia cambiata nessuna cosa detta. Gira in due strati: (a) lo script deterministico scripts/verifica_conservazione.py, che conta etichette, PMID, numeri, struttura, tabelle e delta di lunghezza e non puo' illudersi di aver controllato; (b) il collaudatore semantico, che cerca cio' che nessun conteggio vede — etichette riancorate a un altro claim, informazione persa per assorbimento, qualificazioni cadute, verbi irrigiditi, numeri riattribuiti. Se trova violazioni, il riscrittore fa una riparazione CHIRURGICA (non una nuova riscrittura), fino a 2 giri. Se le perdite sono diffuse si consegna la v5: l'accuratezza batte la leggibilita', come prescrive la gerarchia del metodo.",
+  "_perche_esiste_il_sesto_livello": "Il difetto che sopravviveva a tutta la catena era l'ITALIANO. Nessuno dei revisori aveva la lingua come mandato: il 5o livello accorcia le frasi e semplifica il lessico, ma una frase corta puo' essere un calco perfetto dall'inglese; il neolaureato segnala che non capisce ma non sa dire perche'. Il risultato era un documento giusto, semplice e scritto in un italiano che nessun madrelingua scriverebbe — periodi senza sintassi logica, pronomi appesi a una frase intera, nessi mancanti o sbagliati. Il 6o livello cura questo e nient'altro. NON riscrive (quello lo fa il 5o): passa frase per frase e corregge solo quelle che hanno un difetto di lingua, entro un delta di lunghezza da -3% a +5%. Il margine in piu' esiste per la sua unica licenza di aggiunta: le METAFORE DI SERVIZIO, che sono sicure per costruzione perche' ripetono senza estendere — se togliendone una si perde un'informazione, non era una metafora ed e' contenuto nuovo.",
 
-  "_confine_del_documento": "Questo agente produce BIBBIE TEORICHE (~20 pagine: cos'e', perche' succede, quali meccanismi, quanto e' solido, perche' le mani possono agire) piu' la Mappa concettuale di sintesi (1 pagina). NON produce procedure operative: tecniche, dosi, sequenze e piani di seduta stanno in un documento separato di 2 pagine, prodotto da agente-creazione-procedure.",
+  "_perche_esiste_il_collaudo": "Il 5o livello riscrive OGNI frase del documento e il 6o ne ritocca molte: e' l'unico tratto della catena in cui tutto il testo cambia, ed era l'unico che nessuno verificava — la versione consegnata era l'unica mai controllata. Il COLLAUDO chiude quel buco. NON e' un settimo revisore e non giudica la qualita' (chiusa a monte dai livelli 1-4): confronta la v5 con la versione FINALE e verifica la sola CONSERVAZIONE, cioe' che cambiando tutte le parole non sia cambiata nessuna cosa detta. La lettura SEMANTICA si fa invece sull'intera catena, v5 contro FINALE: e' li' che l'inventario delle informazioni si conserva o si perde, e la v5 resta l'ultima versione con contenuto approvato. Lo script deterministico gira DUE VOLTE, una per passaggio (v5->v6 con delta -5/+10, v6->v7 con delta -3/+5 e soglia di identita' al 60%): due riscritture misurate in blocco si compensano a vicenda, se la prima perde e la seconda aggiunge i conti tornano e la perdita non si vede. La soglia di IDENTITA' del secondo comando sostituisce l'autodichiarazione del 6o livello — se meno del 60% delle frasi resta identico ha riscritto invece di correggere, e lo dice il conteggio invece dell'agente stesso. Gira poi in due strati: (a) gli script deterministici, che contano etichette, PMID, numeri, struttura, tabelle, delta di lunghezza e identita' delle frasi, e non possono illudersi di aver controllato; (b) il collaudatore semantico, che cerca cio' che nessun conteggio vede — etichette riancorate a un altro claim, informazione persa per assorbimento, qualificazioni cadute, verbi irrigiditi, numeri riattribuiti. Se trova violazioni, chi ha prodotto la finale fa una riparazione CHIRURGICA (non una nuova riscrittura), fino a 2 giri. Se le perdite sono diffuse si consegna la v5: l'accuratezza batte la leggibilita', come prescrive la gerarchia del metodo.",
+
+  "_confine_del_documento": "Questo agente produce BIBBIE TEORICHE (~20 pagine: cos'e', perche' succede, quali meccanismi, quanto e' solido, perche' le mani possono agire, cosa puo' fare il paziente da solo se la scienza lo sostiene) piu' la Mappa concettuale di sintesi (1 pagina). NON produce procedure operative: tecniche, dosi da somministrare, sequenze e piani di seduta stanno in un documento separato di 2 pagine, prodotto da agente-creazione-procedure. UNICA ECCEZIONE: il parametro usato in uno STUDIO e' un dato di evidenza e sta nella Bibbia ('nello studio hanno allenato per otto settimane'); la prescrizione al nostro paziente e' un atto operativo e sta nella Procedura ('fai fare otto settimane al paziente'). Il criterio e' il tempo verbale e il destinatario.",
+
+  "_registro_della_lingua": "Il 5o e il 6o livello producono, oltre al documento, tre segnali che valgono piu' del documento stesso: i calchi ricorrenti (gli stessi errori che l'autore rifa' su ogni Bibbia), i passaggi non semplificabili e i passaggi rimasti oscuri. Finivano in una riga di log e svanivano, e la Bibbia numero dieci nasceva coi difetti della numero uno. Ora li accumula _dati/registro-lingua.md: il 6o livello lo legge PRIMA di iniziare (sa gia' cosa cercare) e ci deposita DOPO; l'autore legge le «Correzioni attive» prima di scrivere la v1. Solo append, mai riscrivere: piu' Bibbie girano insieme. La promozione da «Osservazioni» a «Correzioni attive» e a regole-di-scrittura.md e' umana, come per il registro delle deviazioni.",
 
   "autore": "teoria",
 
@@ -19,11 +23,13 @@
     "sistema-dominante",
     "modelli",
     "neuromodulazione",
-    "clinico-esperto"
+    "clinico-esperto",
+    "strumenti-attivi"
   ],
 
   "secondo_livello": [
-    "fedelta-bibbia"
+    "fedelta-bibbia",
+    "evidenza-estesa"
   ],
 
   "terzo_livello": [
@@ -38,6 +44,10 @@
     "chiarezza"
   ],
 
+  "sesto_livello": [
+    "italiano"
+  ],
+
   "collaudo": [
     "collaudo"
   ],
@@ -46,6 +56,10 @@
     "salta_la_riscrittura_finale": {
       "quarto_livello": ["editor"],
       "quinto_livello": []
+    },
+    "salta_solo_la_revisione_di_lingua": {
+      "quinto_livello": ["chiarezza"],
+      "sesto_livello": []
     },
     "consegna_senza_cancello_SCONSIGLIATO": {
       "collaudo": []

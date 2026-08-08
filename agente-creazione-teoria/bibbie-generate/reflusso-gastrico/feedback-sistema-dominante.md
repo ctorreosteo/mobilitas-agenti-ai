@@ -1,6 +1,6 @@
 # Feedback — Revisore Sistema Dominante (Motore Clinico)
 
-**Documento revisionato:** `v1-bibbia.md` — La Bibbia del Reflusso Gastroesofageo (v1.0, agosto 2026). La Mappa `v1-mappa.md` è stata letta come riscontro, non come bersaglio.
+**Documento revisionato:** `bibbie-generate/reflusso-gastrico/v1-bibbia.md` (v1.0, agosto 2026), con la Mappa `v1-mappa.md` come riscontro.
 
 LENTE: Motore Clinico — ragionamento del Sistema Dominante (aderenza al metodo)
 CONDIZIONE: Malattia da reflusso gastroesofageo
@@ -9,83 +9,109 @@ CONDIZIONE: Malattia da reflusso gastroesofageo
 
 ## VERIFICA DI ADERENZA AL METODO
 
-Il motore c'è e gira sotto l'impalcatura dei cinque modelli. «Come ragiono davanti a questo paziente» porta l'etichetta RAGIONAMENTO al posto giusto, ha punta e sommerso con tre pazienti-tipo, ha la prova della chiave di volta scritta bene e i tre stati del paziente.
+Il motore c'è e in più punti gira bene: il capitolo «Come ragiono davanti a questo paziente» ha la punta e il sommerso, il principio di indagine da monte, la prova della chiave di volta, la Road Map e i tre stati. La correzione «"a monte" non è una coordinata anatomica» è la cosa migliore del documento e va lasciata intatta.
 
-Ma la gerarchia si contraddice da sola. Il paragrafo «Perché si indaga dall'alto» afferma che il contenitore addominale rende insufficiente qualunque barriera, e la Road Map lo mette sotto il diaframma. Il lettore ha due ordini incompatibili e nessuna regola per scegliere.
+Ma il ragionamento si spezza nel punto in cui deve diventare operativo. La regola della chiave di volta è scritta correttamente e poi annullata dai tre marker che la istanziano: sono tutti marker del sintomo, cioè del centro di percezione, cioè della punta. Il principio CC/CP è enunciato con forza e poi mai applicato: nessuna leva del capitolo «Perché le mani possono cambiare qualcosa» sta lontano dalla scena del crimine, e due stanno esattamente dove il paziente sente. E i tre pazienti-tipo sono presentati come alternative paritarie, non letti attraverso la gerarchia che il documento stesso ha appena dichiarato.
 
-E il colpevole resta sempre sulla scena del crimine. Tutte le leve di «Perché le mani possono cambiare qualcosa» stanno nella regione toraco-addominale dove il paziente sente male. Il frenico e il pavimento pelvico sono nominati in «Le strutture in gioco» e poi abbandonati.
+Risultato: la Bibbia sa dire che esiste un dominante, ma non mette il lettore in condizione di dimostrarlo su questo paziente.
 
 ---
 
 ## LE OTTO VERIFICHE — esito secco
 
-1. Trovare il dominante — PRESENTE ma contraddittorio: due ordini incompatibili
-2. Punta e sommerso con pazienti-tipo — PRESENTE: tre casi, indizi distinti, mono-causali
-3. Perché si indaga dall'alto — INCOMPLETA: principio argomentato, conseguenza invertita
-4. Segnali di dominanza — INCOMPLETA: manca lateralità, resistenza a 24h, tessuto del trauma
-5. Prova della chiave di volta — INCOMPLETA: marker corretto, ramo negativo assente
-6. Road Map adattata alla condizione — PRESENTE: cinque passi pensati per il reflusso
-7. I tre stati del paziente — PRESENTE: ciascuno con conseguenza concreta
-8. Colpevole lontano / CC vs CP — ASSENTE: leve tutte locali, cervicale esclusa per iscritto
+1. Trovare il dominante — **INCOMPLETA** — criterio solo pressorio/diaframmatico
+2. Punta e sommerso con pazienti-tipo — **INCOMPLETA** — tre sommersi paritari, gerarchia non applicata
+3. Perché si indaga dall'alto — **PRESENTE** — argomentato, e disambiguato bene
+4. Segnali di dominanza — **INCOMPLETA** — ottimi per i modelli, assenti per il trauma
+5. Prova della chiave di volta (marker su piano non toccato) — **ASSENTE nei fatti** — regola giusta, marker tutti sul sintomo
+6. Road Map adattata alla condizione — **PRESENTE** — condizione-specifica, ordine discutibile
+7. I tre stati del paziente — **PRESENTE** — con conseguenza concreta per ciascuno
+8. Il colpevole lontano dalla scena / CC vs CP — **ASSENTE** — principio enunciato, leve tutte locali
 
 ---
 
 ## ERRORI — il ragionamento è assente, invertito o auto-confermante
 
-**1. La gerarchia dichiarata contraddice la Road Map** | Capitolo: «Come ragiono davanti a questo paziente»
-«Perché si indaga dall'alto» costruisce tre frasi di sovraordinazione. L'ultima dice che *"un contenitore addominale che ha cambiato volume rende insufficiente qualunque barriera, anche perfetta"*. È l'affermazione più forte del paragrafo: mette il contenitore sopra tutto. Poi la Road Map chiede il diaframma al punto 3 e il contenitore al punto 4. Il lettore che segue la Road Map lavora per primo su un piano che il testo, tre paragrafi sopra, ha appena dichiarato subordinato.
-**Cosa serve:** scegliere un ordine solo e difenderlo. Se il contenitore comanda, va al punto 3 e il diaframma al punto 4. Se resta al punto 4, la frase va riscritta dicendo *perché* in questa condizione il diaframma viene prima: per esempio che il contenitore è di norma dominante ma non è nelle tue mani, mentre il diaframma è il piano più alto su cui puoi agire. Quella riga manca ed è l'anello che tiene insieme tutto il capitolo.
+### 1. I marker della prova della chiave di volta stanno tutti sul centro di percezione
+**Capitolo:** «Come ragiono davanti a questo paziente», sezione *La prova della chiave di volta*
 
-**2. Il colpevole non esce mai dalla scena del crimine** | Capitolo: «Perché le mani possono cambiare qualcosa» (con «Le strutture in gioco»)
-Le leve elencate sono diaframma, inserzioni crurali e costali, parete addominale, cerniera dorso-lombare, gabbia toracica bassa. Sono tutte nella regione che duole. «Le strutture in gioco» dichiara che il frenico nasce da C3-C4-C5, che è *"l'unica via motoria del diaframma"* e che *"il collo e il diaframma sono lo stesso circuito"* — e poi lo stesso capitolo chiude con *"se cerchi il reflusso in cervicale bassa, stai cercando nel posto sbagliato"*. La cervicale viene chiusa per iscritto come candidata e riaperta solo come marker in «Come ragiono». Il pavimento pelvico compare una volta come parete del contenitore e non torna mai. Risultato: il documento non ha mai insegnato che il posto che duole e il posto che comanda sono cose diverse, e la Procedura che ne nascerà sarà locale per costruzione.
-**Cosa serve:** una leva dichiarata su un piano fuori dalla regione sintomatica, con il suo razionale e la sua etichetta. Il candidato è il frenico: un diaframma che non escursiona può essere comandato da C3-C5. Va inserito come sesta leva in «Perché le mani possono cambiare qualcosa», con l'etichetta che merita (IPOTESI). E la riga sulla cervicale bassa va disambiguata: la *proiezione sintomatica* del reflusso non è cervicale, ma il *comando motorio* del diaframma sì.
+La regola è scritta perfettamente: *«il marker che decide deve appartenere a un piano che non hai toccato»*. Poi il documento propone come «marker esterni onesti» la latenza fra pasto e sintomo, il numero di risvegli notturni e l'altezza del cuscino. Sono tre misure della **punta**, non di un altro piano. Sono il sintomo, cioè la variabile che questa Bibbia stessa dichiara fluttuante e con un placebo del 18,85% («Che cos'è davvero»). Un lettore che applica gli esempi invece della regola verifica il dominante su un indicatore contaminato — e verificherà quasi sempre di aver ragione.
 
-**3. La prova della chiave di volta non ha ramo negativo** | Capitolo: «Come ragiono davanti a questo paziente»
-Il paragrafo è scritto bene fino a metà: marker scelto prima, su un piano non toccato, con l'esempio della rotazione cervicale di Eguaras. Poi si ferma su *"Se cedono anche gli altri piani, hai trovato la chiave"*. E se non cedono? Il testo non lo dice. Un test senza esito negativo non è un test: l'osteopata resterà sul piano che aveva scelto, spiegandosi il mancato cambiamento con la dose o con il tempo. È esattamente il modo elegante di darsi ragione che il paragrafo dichiara di voler evitare.
-**Cosa serve:** due righe. Se il marker non si muove, il sistema trattato non comandava: si scende di un passo nella Road Map e si ripete la prova. Va anche detto quale marker serve alla prova in seduta e quale serve al ciclo: la rotazione cervicale si rimisura subito, la latenza pasto-sintomo e i risvegli notturni si leggono a giorni, e mescolarli rende il test non interpretabile.
+Peggio: il documento **possiede** il marker giusto e lo butta via. «Le strutture in gioco» spiega che il frenico nasce da C3-C5 e che *«un marker cervicale può muoversi dopo un lavoro sul diaframma senza che tu abbia toccato il collo»*: è la definizione esatta di piano non toccato. Poi lo squalifica per via della magnitudine implausibile di Eguaras — ma quello squalifica il **dato di quello studio**, non il marker come strumento di verifica interna.
+
+**Cosa serve:** sostituire i tre marker sintomatici con almeno due marker su un piano diverso da quello trattato, e dire esplicitamente a quale piano appartengono. Il documento ne ha già tre disponibili al suo interno: mobilità/escursione cervicale dopo lavoro diaframmatico (via frenico), frequenza respiratoria confrontata con la partenza dello stesso paziente (piano dell'allarme), soglia dolorosa sulla parete toracica anteriore già descritta nel modello Neurologico. Le tre misure attuali possono restare, ma etichettate per quello che sono: esiti clinici a giorni, non prove di dominanza.
+
+### 2. Il principio CC/CP è enunciato e mai applicato: tutte le leve stanno sulla scena del crimine
+**Capitoli:** «Come ragiono davanti a questo paziente» (*La prova della chiave di volta*) e «Perché le mani possono cambiare qualcosa»
+
+Il capitolo 8 scrive la regola secca — *«non si tratta quasi mai il centro di percezione»*, *«qui vale due volte»* — e indica dove cercare il centro di coordinazione: *«lungo la catena anteriore del torace e del diaframma»*. Quella frase non viene mai istanziata: non nomina una struttura, non porta un segnale, non compare in nessuna domanda della Road Map.
+
+Poi il capitolo 11 elenca le leve, e sono: epigastrio profondo, arcate costali, inserzioni crurali, parete addominale, cerniera dorso-lombare, regione fra collo e osso ioide. L'epigastrio è dove il paziente sente («controllo continuo delle sensazioni dell'epigastrio», modello Comportamentale). La regione collo-ioide è il nodo in gola, cioè il sintomo stesso. Due leve su sei coincidono col centro di percezione che il capitolo 8 vieta di trattare, e **nessuna delle sei sta lontano dalla zona sintomatica**.
+
+La Procedura che nascerà da questa Bibbia sarà locale per costruzione, e lo sarà con la benedizione di un capitolo che dice il contrario.
+
+**Cosa serve:** o il capitolo 8 nomina il centro di coordinazione con una struttura concreta e un segnale osservabile — la catena anteriore va detta in strutture, non in categoria — oppure il capitolo 11 dichiara apertamente che su questa condizione il CC coincide col contenitore della barriera, e spiega **perché qui il principio si applica in forma attenuata**. La contraddizione lasciata implicita è la cosa che non può restare. E se la leva collo-ioide è deliberatamente sul CP, va detto che è un'eccezione e perché.
+
+### 3. I tre pazienti-tipo sono paritari, e il primo contraddice la gerarchia dichiarata due paragrafi dopo
+**Capitolo:** «Come ragiono davanti a questo paziente», sezione *La punta e il sommerso*
+
+I tre pazienti sono presentati come alternative sullo stesso piano: pressorio, diaframmatico, percettivo. Nessuno dei tre viene letto attraverso la Road Map. In particolare, ai primi due non viene mai chiesta la domanda 2 — *«il sistema è in allarme?»* — che il documento dichiara gerarchicamente superiore: *«su un sistema in allarme nessun lavoro locale tiene»*. Il dispositivo didattico insegna quindi a scegliere fra tre sommersi, mentre il metodo chiede di verificarne uno **prima** degli altri due.
+
+Il paziente 1 è il caso più grave. È *«ingrassato dodici chili in tre anni»*. Per la gerarchia scritta poche righe dopo — *«il contenitore è di norma il piano dominante, e quasi sempre non è nelle tue mani: è peso, volume viscerale, abitudini»* — e per il modello Metabolico dichiarato DIMOSTRATO con relazione dose-risposta, il dominante di quell'uomo è il peso. Il documento invece lo etichetta pressorio e lo manda al sottotipo di cui scrive *«è il sottotipo in cui il tuo lavoro ha il razionale più diretto»*, senza applicargli il preventivo che lui stesso impone: *«quando il dominante non è tuo… lavorare sul piano sotto dà un miglioramento reale ma temporaneo»*.
+
+**Cosa serve:** far passare tutti e tre i pazienti-tipo dalla Road Map, in due righe ciascuno, mostrando quale domanda si è chiusa e quale no. E sul paziente 1, dire esplicitamente che il dominante è metabolico, che la leva manuale agisce sul piano sotto, e che l'esito atteso va messo a preventivo come temporaneo. Serve inoltre almeno un paziente-tipo il cui dominante **non è tuo**: al momento tutti e tre cadono nei tre meccanismi in cui le mani hanno una leva, e questo è esattamente il bias che il capitolo dovrebbe smontare.
 
 ---
 
 ## RISCHI — il ragionamento c'è ma è incompleto
 
-**1. Dei tre segnali viscerali ne è presente uno solo** | Capitolo: «Cosa si rompe: i meccanismi» e «La lettura osteopatica»
-Il legame coi pasti è ovunque, ed è ottimo. Mancano gli altri due. La **lateralità** non compare mai come segnale, benché il documento sappia che il crus destro forma l'anello dello iato e che le afferenze entrano in T5-T9: l'asimmetria di tensione dorsale e sottocostale non viene mai proposta come indizio. Manca la **resistenza al trattamento**: il quadro che torna identico dopo ventiquattro ore. Senza quest'ultimo, il lettore non ha come distinguere un diaframma che comanda da un diaframma che sta solo compensando l'organo o il contenitore.
-**Cosa lo completerebbe:** aggiungere ai segnali del modello Biomeccanico e Neurologico la lateralità sinistra epigastrica e sottocostale, e una riga in «Come ragiono»: se il quadro torna identico a ventiquattro ore, il piano trattato non era il dominante.
+### 1. L'ordine della Road Map è giustificato dalla forza delle prove, non dalla gerarchia di comando
+**Capitolo:** «Come ragiono davanti a questo paziente», sezione *La Road Map*
 
-**2. Il trauma è solo anamnestico** | Capitolo: «Come ragiono davanti a questo paziente», punto 5 della Road Map
-Il trauma è chiamato correttamente modificatore che scavalca l'ordine, e la nota sulla cicatrice da colecistectomia è pertinente. Ma il punto 5 si esaurisce in una domanda da fare al paziente. Non c'è un solo segnale palpatorio per capire se quella cicatrice *comanda davvero* o è solo presente. La maggior parte dei pazienti sopra i cinquanta ha una cicatrice addominale: senza un criterio, il punto 5 diventa un sì per tutti e non decide niente.
-**Cosa lo completerebbe:** i segnali osservabili del trauma dominante — tessuto inerte, denso, freddo, senza motilità propria, e parete che si deforma in modo asimmetrico sotto pressione. Due righe bastano a rendere il punto 5 verificabile invece che anamnestico.
+Il passo 3 è il diaframma, il passo 4 il contenitore. La motivazione data al passo 3 è *«è il piano con il razionale più forte su questa condizione»*: un argomento di evidenza, non di dominanza. Due paragrafi sopra il documento ha scritto che *«il contenitore è di norma il piano dominante»*, e il passo 4 include la componente tensiva e parietale che **è** nelle mani dell'osteopata. La spiegazione fornita — «il diaframma è il piano più a monte su cui tu puoi agire» — regge solo per la componente metabolica del contenitore, non per quella di parete.
 
-**3. Il dominante fuori dalle tue mani non ha conseguenza dichiarata** | Capitolo: «Non è una condizione sola: i sottotipi» e «Come ragiono davanti a questo paziente»
-Il documento riconosce onestamente che nel post-prandiale e nel metabolico il piano che comanda non è raggiungibile. Poi si limita a *"si segnala e si rinvia"*. Manca la conseguenza clinica del metodo: se il dominante non è tuo e lavori sul piano sotto, ottieni un miglioramento reale ma temporaneo, e questo va messo a preventivo prima di cominciare — al paziente e nel proprio calcolo di durata del ciclo. Altrimenti l'osteopata leggerà la ricaduta come un proprio fallimento e aumenterà le sedute.
-**Cosa lo completerebbe:** una riga in «Come ragiono» dopo il punto 4: quando il dominante è metabolico o post-prandiale, si dichiara che il lavoro manuale agisce su un piano subordinato, l'obiettivo è la soglia e la tolleranza, e la ricaduta è attesa se il piano alto non cambia.
+**Perché indebolisce:** insegna a ordinare per quanta letteratura c'è invece che per chi comanda. È il modo più elegante di scivolare fuori dal metodo restando difendibili.
+
+**Cosa lo completerebbe:** separare, nel passo 4, il contenitore metabolico (non tuo, sopra il diaframma nella gerarchia) dal contenitore tensivo-parietale (tuo, e allora dire perché viene dopo il diaframma), oppure riordinare 3 e 4.
+
+### 2. Il passo 6 della Road Map non ha segnali di dominanza
+**Capitolo:** «Come ragiono davanti a questo paziente», sezione *La Road Map*
+
+*«C'è un trauma o una cicatrice che rompe la gerarchia?»* è l'unico passo senza criteri osservabili: si dice solo «si cerca in anamnesi» e che una cicatrice vecchia è un modificatore meccanico. Ma metà dei pazienti sopra i quarant'anni ha una cicatrice addominale. Senza un criterio che distingua la cicatrice **presente** dalla cicatrice che **comanda**, il passo o si scavalca sempre o mai — cioè è inapplicabile.
+
+**Cosa lo completerebbe:** i segnali del trauma dominante nella loro forma osservabile e adattati a questa condizione — tessuto inerte, denso, freddo, senza motilità, mancanza di deformazione della parete sotto pressione respiratoria in quel settore, sintomo che si comporta diversamente a seconda del lato su cui la parete viene caricata. Bastano tre righe, e il passo 6 diventa usabile.
+
+### 3. La prova della chiave di volta non dichiara la sua finestra temporale
+**Capitolo:** «Come ragiono davanti a questo paziente», sezione *La prova della chiave di volta*
+
+*«Tratti in prova il sistema che sospetti dominante, poi rivaluti»* — ma non è mai detto **quando**. Con i marker proposti (risvegli notturni, latenza pasto-sintomo, altezza del cuscino) la rivalutazione non è possibile a fine seduta: sono misure che richiedono giorni. Il lettore che vuole una risposta prima di salutare il paziente ripiegherà sull'unica cosa misurabile subito, cioè il tessuto che ha appena mobilizzato — esattamente ciò che il documento vieta.
+
+**Cosa lo completerebbe:** due finestre dichiarate. Un marker intra-seduta su piano non toccato, letto subito, che serve a decidere se proseguire; e un marker a giorni sul sintomo, che serve a decidere se il piano scelto era il dominante. Con la regola di fallimento già scritta — *«se il marker non si muove, si scende di un passo»* — agganciata alla seconda finestra, non alla prima.
 
 ---
 
 ## PREFERENZE — raffinamenti del metodo
 
-**1.** Il percorso di lettura da venti minuti proposto in «Come si usa questa Bibbia» esclude «Come ragiono davanti a questo paziente». Il lettore di fretta riceve sei meccanismi e nessuno strumento per sceglierne uno. La colonna "Meccanismo che comanda" dei sottotipi lo salva a metà. Aggiungerei «Come ragiono» al percorso breve, e sposterei «Le strutture in gioco» in quello lungo.
+1. Il pavimento pelvico è nominato in «Le strutture in gioco» come terza parete del contenitore e poi non ricompare mai: né segnale, né domanda della Road Map, né leva. Il quarto meccanismo è il gradiente pressorio, e il documento ne lavora due pareti su tre. È il candidato più naturale a «colpevole lontano dalla scena» già presente nel testo, e viene sprecato.
 
-**2.** I tre pazienti-tipo sono mono-causali e puliti: uno per piano, senza sovrapposizioni. Nel reale l'uomo di 52 anni ingrassato ha quasi sempre anche il respiro alto, e a quel punto la Road Map non scioglie il pareggio. Un quarto caso ambiguo, con l'indizio che decide, insegnerebbe più dei tre chiari messi insieme.
+2. Manca il segnale di resistenza al trattamento nella sua forma osservabile: il quadro che **torna identico entro le ventiquattro ore** è il discriminante più affidabile che il dominante non è meccanico e non è tuo. Il documento ha il concetto («miglioramento reale ma temporaneo») ma non lo trasforma in un segno che si legge alla seduta successiva.
 
 ---
 
 ## TIENE
 
-La prova della chiave di volta è formulata come deve esserlo: marker scelto prima di trattare, su un piano non toccato, con un esempio reale preso dalla letteratura del documento stesso. È la parte in cui la maggior parte delle Bibbie si autoinganna, e qui non succede.
-
-I tre stati del paziente portano ciascuno una conseguenza operativa e non una descrizione, e la riga sul paziente in difesa — i tessuti rimbalzano finché non si sente al sicuro — collega correttamente lo stato relazionale al piano neurologico.
-
-La distinzione fra dentro il tubo e fuori dal tubo, in «Chi ti trova davanti» e in «Perché le mani possono cambiare qualcosa», è una forma corretta e ben detta del principio CC/CP. È il seme giusto: va solo portato fuori dalla regione sintomatica.
+La disambiguazione di «a monte» — *«non è una coordinata anatomica: non vuol dire più vicino alla testa»* — è il passaggio migliore del documento e va difeso da qualunque riscrittura: è la frase che impedisce al lettore di andare a cercare il reflusso in cervicale. Il trauma dichiarato modificatore e non livello della gerarchia è corretto. I segnali di dominanza per i cinque modelli («I segnali che ti dicono che pesa in questo paziente») sono osservabili e non concettuali, e i tre stati del paziente portano ciascuno una conseguenza operativa invece di una descrizione.
 
 ---
 
 ## LA PROVA DEL LETTORE
 
-Prendo la donna di 38 anni, dorsale rigida, respiro tutto in alto. Nessuna bandiera rossa. Punto 2 della Road Map, il sistema è in allarme: il respiro alto è il segnale del piano 3, ma la frequenza respiratoria è il segnale del piano 2, e i due si sovrappongono in questa paziente. Trovo il differenziatore, ma non nella Road Map: sta in «La lettura osteopatica», dove l'apnea di trattenimento quando parla di sé separa l'attivazione dalla meccanica. Il lettore deve saltare di capitolo per uscire dal punto 2, e la Road Map non gli dice di farlo. Arrivo al punto 3, diaframma, e mi fermo lì. Ma «Perché si indaga dall'alto» mi ha appena detto che il contenitore rende insufficiente qualunque barriera: non so se ho scelto il piano più alto disfunzionale o quello più comodo da trattare. E se dopo la prova il marker non si muove, il documento non mi dice cosa fare.
+Prendo il paziente 1, l'uomo di 52 anni con dodici chili in più, addome teso e respiro alto, e ragiono usando solo questo documento. Passo 1: nessuna bandiera rossa. Passo 2: il documento non mi dice se è in allarme, e nel paziente-tipo non me lo fa chiedere — salto. Passo 3: il diaframma non escursiona, quindi è mio. Passo 4: il contenitore ha cambiato volume, dodici chili, quindi è metabolico e non è mio. A questo punto ho due piani accesi, e il documento mi ha detto che il contenitore è di norma il dominante — ma la sua Road Map mi ha fatto passare prima dal diaframma e il capitolo dei sottotipi mi dice che qui il mio lavoro «ha il razionale più diretto». Scelgo il diaframma, perché è quello su cui posso agire. Poi vado a verificare, e i tre marker che il documento mi offre sono la latenza pasto-sintomo, i risvegli e il cuscino: tre misure del bruciore. Se migliorano, ho la conferma di aver trovato il dominante — mentre il documento stesso mi ha avvisato che il bruciore fluttua da solo e che il placebo vale il 18,85%.
+
+Arrivo a mettere le mani nel posto giusto. Non arrivo a **sapere** se comandava. E il documento mi lascia credere di sì.
 
 ---
 
-## VERDETTO: Metodo presente ma incompleto
+**VERDETTO: Metodo presente ma incompleto**
 
-Il Motore Clinico c'è, sta nel capitolo giusto con l'etichetta giusta, ma si contraddice sull'ordine dei piani, non esce mai dalla regione che duole e lascia la prova della chiave di volta senza esito negativo.
+Il motore gira sotto l'impalcatura dei cinque modelli e in più punti gira bene, ma i due strumenti che lo rendono verificabile — il marker su piano non toccato e il centro di coordinazione lontano dal sintomo — sono enunciati come regole e contraddetti dagli esempi che dovrebbero insegnarli.

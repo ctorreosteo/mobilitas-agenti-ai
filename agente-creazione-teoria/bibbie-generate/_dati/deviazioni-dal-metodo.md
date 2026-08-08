@@ -87,6 +87,7 @@ Una voce per deviazione. Sempre con una **fonte**: una deviazione senza fonte no
 | **Perché è sbagliato** | È un claim di meccanismo presentato come fatto. L'evidenza sulle variazioni ormonali dopo OMT è minima e di bassa qualità: la revisione sistematica dedicata (*Osteopathic Manipulation as a Method of Cortisol Modification: A Systematic Review*, Cureus 2023, [PMID 37123793](https://pubmed.ncbi.nlm.nih.gov/37123793/)) include **4 soli studi, 135 partecipanti totali** e non consente di quantificare l'effetto. Nessuno studio ha misurato ossitocina, cortisolo o attività talamica dopo trattamento manuale in pazienti con acufene, né alcun effetto "sul filtro talamico". |
 | **Cosa fa la procedura** | Sostituisce il claim con **down-regulation aspecifica dell'attivazione**, dichiarata come parte del contesto terapeutico (contatto lento + respiro) e non come meccanismo neuroendocrino dimostrato. Coerente con D-002 (i sub-occipitali non sono un accesso al vago). |
 | **Se ratificata** | Riformulare il terzo punto della tripletta in `architettura-bibbia.md` (es. *"Modulazione dell'attivazione attraverso il contatto — down-regulation aspecifica, dichiarata come tale"*), con etichetta non superiore a IPOTESI nel capitolo «Perché le mani possono cambiare qualcosa». |
+| **Integrazione 2026-08-07** | Anche la formulazione **sostitutiva** («down-regulation aspecifica») ha ora un dato contro: la meta-analisi più ampia sugli effetti psicofisiologici dell'OMT — 20 RCT — non trova effetto su **ansia** e **stress** e trova la **conduttanza cutanea aumentata** (g=0,67, p=0,05), cioè nella direzione dell'attivazione (Gordon, *BMJ Open* 2025, [PMID 39920074](https://pubmed.ncbi.nlm.nih.gov/39920074/)). La voce non cambia stato: cambia il fatto che nemmeno la **direzione** dell'effetto è stabilita, e va scritto così in ogni Bibbia che invochi il contatto come modulatore dell'attivazione. |
 
 ---
 
@@ -147,3 +148,48 @@ Una voce per deviazione. Sempre con una **fonte**: una deviazione senza fonte no
 | **Perché è ambiguo** | "Alto" è una parola con due significati: alto nella **gerarchia funzionale** (il senso voluto) e alto nel **corpo** (il senso che il lettore applica davanti a un paziente). Su una condizione viscerale sotto-diaframmatica la lettura anatomica porta a cercare in cervicale, che è esattamente l'errore corretto da D-007: lo stomaco proietta su T5-T9, non su C6-C7. L'ambiguità non è teorica — è la stessa che genera la riga sbagliata del metodo già registrata. |
 | **Cosa fa la Bibbia** | Sostituisce "dall'alto della piramide" con **"da monte sul piano funzionale"**, e lo dichiara a lettera nel capitolo «Come ragiono davanti a questo paziente»: *"«A monte» non è una coordinata anatomica: non vuol dire più vicino alla testa"*. La gerarchia resta identica: cambia solo la parola che la nomina. |
 | **Se ratificata** | Sostituire "più alto nella piramide" / "dall'alto verso il basso" con "più a monte sul piano funzionale" in `motore-clinico.md` (§1 e §3), mantenendo la piramide come immagine della gerarchia di comando. |
+
+---
+
+### D-009 · "Il reflusso causa la cervicalgia" come esempio canonico del Motore Clinico
+
+| | |
+|---|---|
+| **Stato** | `PROPOSTA` |
+| **Aperta il** | 2026-08-07 |
+| **Condizione di emersione** | Reflusso gastroesofageo (Bibbia v1, nuovo impianto) |
+| **Ambito** | Trasversale — riguarda ogni Bibbia che colleghi un viscere a un dolore muscolo-scheletrico a distanza |
+| **Elemento del metodo** | `motore-clinico.md`, §4: *"Esempio canonico: una **cervicalgia** (fascia = CP) può essere **causata** da un **reflusso** (viscerale), alimentato da uno stato d'ansia e mantenuto da un diaframma bloccato."* |
+| **Perché è sbagliato** | La catena è presentata come nesso causale, e nessuno studio l'ha stabilita. L'unico dato disponibile che collega reflusso e collo è la mobilità cervicale in Eguaras 2019 ([PMID 31635110](https://pubmed.ncbi.nlm.nih.gov/31635110/)): una differenza fra gruppi di **33,89 gradi dopo una singola tecnica viscerale**, magnitudine implausibile per un'articolazione sana e più compatibile con un problema di misura che con un effetto. Le afferenze gastro-esofagee entrano in T5-T9 (vedi D-007), non in cervicale; il solo ponte anatomico verso il collo è il frenico C3-C5, che è una via **diaframmatica**, non gastrica. Presentare la catena come causale reintroduce, per la porta di servizio, l'errore che D-007 e D-008 hanno già corretto. |
+| **Cosa fa la Bibbia** | Mantiene la co-occorrenza come **cross-reference clinico** in «Non è una condizione sola», con etichetta **IPOTESI** e la frase esplicita: *"che il reflusso **causi** una cervicalgia non è dimostrato"*. Usa la mobilità cervicale come marker solo dichiarandone il limite di misura, in «Come ragiono davanti a questo paziente». Il collegamento collo-diaframma resta descritto come frenico, e separato dalla proiezione gastrica. |
+| **Se ratificata** | Riformulare l'esempio canonico di `motore-clinico.md` §4 come **co-occorrenza clinica su terreno comune** (diaframma, cerniera dorso-lombare, stato di attivazione), non come catena causale, e sostituire la parola "causata" con "che condivide il terreno con". |
+
+---
+
+### D-010 · L'etichetta DIMOSTRATO non copre l'evidenza epidemiologica causale
+
+| | |
+|---|---|
+| **Stato** | `PROPOSTA` |
+| **Aperta il** | 2026-08-07 |
+| **Condizione di emersione** | Reflusso gastroesofageo (Bibbia v2, rilevata dall'audit di fedeltà di 2° livello) |
+| **Ambito** | Trasversale — riguarda ogni condizione in cui il fattore causale meglio stabilito è epidemiologico e non sperimentale |
+| **Elemento del metodo** | `architettura-bibbia.md`: DIMOSTRATO = *"RCT o revisioni sistematiche solide"*. |
+| **Perché è incompleto** | Su alcuni fattori causali il livello di prova più alto che esisterà mai **non è un RCT**. Sul peso e il reflusso la prova migliore al mondo è una coorte con relazione dose-risposta **bidirezionale**: l'indice di massa corporea correla con i sintomi su 10.545 donne, un aumento di oltre 3,5 punti quasi triplica il rischio anche partendo da un peso normale (Jacobson, *N Engl J Med* 2006, [PMID 16738270](https://pubmed.ncbi.nlm.nih.gov/16738270/)), e perdere peso li riduce in proporzione alla perdita (Ness-Jensen, *Am J Gastroenterol* 2013, [PMID 23358462](https://pubmed.ncbi.nlm.nih.gov/23358462/)). Randomizzare le persone a ingrassare non è fattibile né etico. Con la definizione stretta, quel dato va declassato a PROBABILE e finisce sotto una leva manuale che ha prove molto più deboli: l'etichetta smette di ordinare la realtà. |
+| **Cosa fa la Bibbia** | Estende DIMOSTRATO a **coorti ampie con relazione dose-risposta** e a **misura sperimentale diretta nell'uomo**, dichiarando l'estensione nel Capitolo 0 e ripetendola nel punto d'uso (*"DIMOSTRATO come fattore causale, nel senso che il Capitolo 0 dà a coorti ampie… Non sono RCT, e va detto"*). Le quattro etichette restano quattro. |
+| **Se ratificata** | Riscrivere la riga DIMOSTRATO in `architettura-bibbia.md` come *"RCT o revisioni sistematiche solide; coorti ampie con relazione dose-risposta; misura sperimentale diretta nell'uomo — dichiarando quale dei tre"*. |
+
+---
+
+### D-011 · La Mappa concettuale non ha un blocco per gli strumenti attivi
+
+| | |
+|---|---|
+| **Stato** | `PROPOSTA` |
+| **Aperta il** | 2026-08-07 |
+| **Condizione di emersione** | Reflusso gastroesofageo (Mappa v2, rilevata dall'audit di fedeltà di 2° livello) |
+| **Ambito** | Trasversale — riguarda ogni condizione in cui il Capitolo 12 della Bibbia è attivo |
+| **Elemento del metodo** | `mappa-concettuale.md`: *"Sei blocchi, sempre gli stessi, sempre in quest'ordine."* |
+| **Perché è incompleto** | La specifica della Mappa non è stata aggiornata quando l'architettura ha introdotto il **Capitolo 12 condizionale**. Su questa condizione le leve meglio documentate — esercizio respiratorio, peso, posizione notturna — **non sono manuali**: una Mappa a sei blocchi le omette e comunica il contrario di ciò che la Bibbia sa, che è esattamente il ragionamento di proporzione con cui l'architettura giustifica il Capitolo 12. |
+| **Cosa fa la Mappa** | Aggiunge un **settimo blocco condizionale**, «Cosa fa il paziente da solo», attivo solo quando il Capitolo 12 è attivo, e lo dichiara in coda alla pagina. I blocchi fuori standard della v2 («Le zone che non si premono», «I tre limiti da dire ad alta voce») sono invece **riassorbiti**: il primo dentro le bandiere rosse, il secondo in una riga sotto la tabella dei meccanismi. |
+| **Se ratificata** | Aggiungere a `mappa-concettuale.md` un blocco condizionale fra il 4 e il 5, con la stessa condizione di attivazione del Capitolo 12 della Bibbia. |

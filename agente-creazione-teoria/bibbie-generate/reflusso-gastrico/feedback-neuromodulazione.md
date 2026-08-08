@@ -1,67 +1,67 @@
-# Revisione — Neuromodulazione (meccanismo d'azione neurofisiologico)
+# Feedback — Lente Neuromodulazione (meccanismo d'azione neurofisiologico)
 
-**Documento revisionato:** `v1-bibbia.md` — La Bibbia del Reflusso Gastroesofageo (v1.0, agosto 2026). La Mappa è stata letta solo come termine di paragone interno.
-**LENTE:** Neuromodulazione · **CONDIZIONE:** Malattia da reflusso gastroesofageo
-**Perimetro:** nessun materiale di procedura trovato dentro la Bibbia. Non ci sono tecniche, dosi né piani di seduta fuori posto.
+**Documento revisionato:** `bibbie-generate/reflusso-gastrico/v1-bibbia.md` (v1.0, agosto 2026), con la Mappa `v1-mappa.md` come termine di confronto interno.
+**CONDIZIONE:** Malattia da reflusso gastroesofageo.
 
 ---
 
 ## RICERCA SVOLTA
 
-Ho verificato quattro cose prima di giudicare. **Innervazione dello sfintere:** il vago porta due vie efferenti opposte — una eccitatoria colinergica e una inibitoria NANC (NO, VIP); nell'uomo l'atropina a 15 µg/kg abbassa la pressione del LES del 50-70%, quindi il drive colinergico vagale è una quota maggiore del tono basale (Farré, *Br J Pharmacol* 2008; StatPearls NBK557452). **Inibizione crurale nel rilasciamento transitorio:** è documentata elettromiograficamente e coinvolge un'inibizione premotoria diretta ai motoneuroni frenici, più una componente motoria vagale al crus descritta nel 2009-2010 (Mittal, *Gastroenterology* 1990; Young, Page, Blackshaw, *Gastroenterology* 2010). **Classificazione del dolore:** Roma IV colloca *reflux hypersensitivity* e *functional heartburn* fra i disturbi dell'interazione intestino-cervello, con ipersensibilità viscerale e sensibilizzazione centrale come meccanismo. **Zona di allodinia secondaria:** l'acidificazione esofagea distale abbassa la soglia dolorosa sulla parete toracica **anteriore**, con conferma neurofisiologica su potenziali evocati e reversibilità con antagonista NMDA (Willert, *Neurogastroenterol Motil* 2007; Sarkar 2001). **Decorso dell'allenamento:** i protocolli inspiratori che alzano la pressione della giunzione durano 4 settimane, 5 giorni su 7 (Nobre e Souza 2013; m-IMT 2019).
+Ricerca web eseguita in questa sessione. Ho verificato quattro cose.
+
+**Vie.** L'inibizione del crus durante il rilasciamento transitorio è **selettiva per la componente crurale**: il diaframma costale continua a contrarsi e la ventilazione non si interrompe (Mittal, *Gastroenterology* 1990, PMID 2210234; nel modello animale esistono anche motoneuroni vagali diretti al crus — Young, *Gastroenterology* 2010, ferretto). Il blocco colinergico riduce i rilasciamenti transitori da 3,5 a 0,4 e insieme abbassa la pressione basale del LES da 16,4 a 8,7 mmHg (Mittal, *Gastroenterology* 1995, PMID 7557138): la frase della Bibbia sul vago è corretta.
+
+**Mappa segmentaria.** Le afferenze spinali dell'**esofago** entrano da T1 a T10 lungo i tronchi simpatici, con la densità maggiore in **C1-C4 e T3-T5**; oltre il 65% di quei neuroni del corno dorsale riceve anche cute e muscolo di collo, spalla, torace e regione retrosternale, e circa il 25% riceve convergenza cardiaca. Il grande splancnico T5-T9 è la mappa dello **stomaco**, non dell'esofago.
+
+**Sensibilizzazione centrale.** Documentata nell'uomo: l'acidificazione dell'esofago distale produce iperalgesia secondaria nell'esofago prossimale non esposto (Sarkar, *Lancet* 2000, PMID 11030295) e **abbassa la soglia dolorosa della parete toracica**, da 37 a 29 mA su 12 volontari, con reversione dopo antagonista NMDA (Willert, *Neurogastroenterol Motil* 2007, PMID 17391243).
+
+**Marker.** Esiste uno strumento validato e praticabile: la **Esophageal Hypervigilance and Anxiety Scale**, 15 item, α = 0,93 (Taft, *Aliment Pharmacol Ther* 2018, PMID 29528128) — è la scala usata da Wong 2021, che la Bibbia già cita senza nominarla. Sul globo: iperpressione dello sfintere superiore presente solo in circa il 35% dei pazienti e correlata all'ansia (PMID 34858048); e il globo **non risulta associato al reflusso** (Corso, *Dig Dis Sci* 1998, PMID 9690388). Sulla variabilità cardiaca: l'indice HF è confuso dalla frequenza respiratoria e non è valido sotto i 9 atti al minuto; RMSSD è relativamente indipendente dal respiro.
 
 ---
 
 ## MECCANISMO DICHIARATO vs MECCANISMO PLAUSIBILE
 
-**1. Capitolo «Le strutture in gioco» — Il vago e il frenico**
-- **La Bibbia dice:** *"Il vago è la via del rilasciamento della barriera, non del suo rinforzo."*
-- **Fisiologicamente in gioco è:** il vago porta entrambe le direzioni. La via eccitatoria colinergica sostiene una quota maggiore del tono di riposo del LES — bloccarla con atropina fa cadere la pressione del 50-70% nell'uomo. La via inibitoria NANC, che libera ossido nitrico e VIP, è quella che apre la barriera nel rilasciamento transitorio. Stesso nervo, due bersagli, due segni opposti.
-- **Cosa cambia nel documento:** riscrivi in due righe. *"Il vago comanda la barriera in due direzioni opposte: una via colinergica che ne sostiene il tono e una via inibitoria che la apre. È il motivo per cui non esiste una direzione 'giusta' in cui spingere il vago: alzarne l'attività non è un'operazione a segno noto."* La conclusione della Bibbia non cambia — si rinforza, perché smette di poggiare su una premessa falsa che un lettore informato può smontare.
+**1. Capitolo «Le strutture in gioco» — «Il vago e il frenico»**
+La Bibbia dice: il frenico «nasce da C3-C5, ed è la ragione per cui un marker cervicale può muoversi dopo un lavoro sul diaframma».
+Fisiologicamente in gioco è: l'**arco afferente**, non l'origine motoria. Le afferenze freniche terminano nel corno dorsale C3-C5, dove convergono con le afferenze somatiche dei nervi sovraclaveari (C3-C4) e di rami C5. È il substrato documentato del dolore diaframmatico riferito alla spalla. L'origine segmentaria di un nervo motore non muove un'articolazione cervicale.
+Cosa cambia nel documento: riscrivere in «Il frenico porta anche afferenze, che entrano nel corno dorsale di C3-C5 insieme a quelle di collo e spalla. È la via per cui un diaframma irritato si fa sentire in alto. Che un marker cervicale si muova dopo un lavoro sul diaframma resta IPOTESI: nessuno l'ha testato.»
 
-**2. Capitolo «Cosa si rompe» — Attenzione al meccanismo 1**
-- **La Bibbia dice:** *"la farmacologia suggerisce il contrario: il blocco colinergico riduce il numero di questi rilasciamenti."*
-- **Fisiologicamente in gioco è:** vero, ma incompleto in modo che ribalta il senso. Lo stesso blocco colinergico che riduce i rilasciamenti transitori abbassa contemporaneamente il tono di riposo del LES. La farmacologia non indica una direzione opposta: mostra che la stessa via ha effetti opposti sui due componenti della tenuta.
-- **Cosa cambia nel documento:** *"Il blocco colinergico riduce i rilasciamenti transitori e insieme abbassa il tono di riposo del LES. Non è una freccia che punta nell'altro verso: è la prova che su questa barriera il vago non ha un verso solo."*
+**2. Capitolo «Le strutture in gioco» — «La cerniera dorso-lombare e i segmenti splancnici», e capitolo «La lettura osteopatica» (Neurologico)**
+La Bibbia dice: «Lo stomaco proietta su T5-T9: se cerchi il reflusso in cervicale bassa, stai cercando nel posto sbagliato», e mette «corno dorsale di T5-T9» fra gli attori del riflesso viscero-somatico.
+Fisiologicamente in gioco è: due mappe diverse. Lo **stomaco** proietta su T5-T9 via grande splancnico. L'**esofago** — che è l'organo che genera la pirosi e il dolore retrosternale — entra da T1 a T10 con densità massima in T3-T5, più una quota cervicale alta. La zona somatica di riferimento della pirosi è **retrosternale e dorsale medio-alta**, non T5-T9.
+Cosa cambia nel documento: separare le due righe. «Lo stomaco proietta su T5-T9. L'esofago distale proietta più in alto, con il grosso in T3-T5, e su quegli stessi neuroni arriva anche il cuore.» Il segnale che la Bibbia già usa in «La lettura osteopatica» — soglia dolorosa abbassata sulla parete toracica anteriore — sta a T2-T5 e oggi non ha un meccanismo che lo produca nel documento. Con la correzione ce l'ha.
 
-**3. Capitolo «La lettura osteopatica» — modello Neurologico, gli attori**
-- **La Bibbia dice:** fra gli attori, *"gangli e catena simpatica dorsale"*, senza dire se la via è afferente o efferente.
-- **Fisiologicamente in gioco è:** la via T5-T9 è **afferente**. Le fibre sensitive dello stomaco e dell'esofago distale viaggiano con il grande splancnico e entrano nel corno dorsale; è la via del dolore riferito e della sensibilizzazione. Non esiste una leva efferente simpatica sulla barriera documentata nell'uomo.
-- **Cosa cambia nel documento:** sostituisci l'attore con *"afferenze viscerali che salgono con il grande splancnico ai segmenti T5-T9"*. La catena simpatica come attore efferente esce.
+**3. Capitolo «Cosa si rompe» — «Il sintomo che si accende con la stessa quantità di acido»**
+La Bibbia dice: nella forma erosiva il dolore è nocicettivo, «nello spettro non erosivo è nociplastico».
+Fisiologicamente in gioco è: lo spettro non erosivo contiene tre entità diverse. La **NERD vera** ha carico acido aumentato e integrità mucosa alterata: è nocicettiva con sensibilizzazione. Il **reflusso ipersensibile** ha esposizione normale ma correlazione episodio-sintomo: stimolo reale, guadagno alzato. Solo la **pirosi funzionale** è propriamente nociplastica. Roma IV le tiene separate apposta.
+Cosa cambia nel documento: sostituire la frase con «Erosivo: nocicettivo. NERD e reflusso ipersensibile: nocicettivo amplificato, c'è uno stimolo vero letto troppo forte. Pirosi funzionale: nociplastico.» Serve al lettore, perché è quello che decide se ha senso continuare a cercare l'acido.
 
-**4. Capitolo «La lettura osteopatica» — modello Neurologico, i segnali**
-- **La Bibbia dice:** *"Iperalgesia della parete dorsale media"* come segnale che il piano neurologico pesa.
-- **Fisiologicamente in gioco è:** la zona con prova umana diretta di allodinia secondaria da acidificazione esofagea è la parete toracica **anteriore**, non quella dorsale. È lì che la soglia scende in modo misurabile, ed è lì che convergono le afferenze esofagee e cardiache sullo stesso neurone del corno dorsale — lo stesso fatto che rende il capitolo delle bandiere rosse necessario, non difensivo.
-- **Cosa cambia nel documento:** metti la parete anteriore come segnale principale e misurabile, e tieni il dorsale come osservazione clinica accessoria. Aggiungi mezza riga: la convergenza esofago-cuore è il motivo neurofisiologico per cui un bruciore retrosternale non si liquida.
+**4. Capitolo «Cosa si rompe» — «L'esofago che di notte non si pulisce più», e capitolo «Perché le mani possono cambiare qualcosa»**
+La Bibbia dice: «Nodo in gola, che è l'ipertonia riflessa dello sfintere superiore», e una mano può agire «attraverso la meccanica toracica e la regione fra collo e osso ioide».
+Fisiologicamente in gioco è: il riflesso esofago-sfintere superiore esiste in acuto, ma il globo come sintomo clinico non è associato al reflusso, e l'iperpressione dello sfintere si trova in circa un terzo dei pazienti, correlata all'ansia più che al carico acido. Il tono di uno sfintere tenuto alto per via riflessa non si abbassa impastando il tessuto che gli sta intorno: si abbassa se cala il drive che lo tiene su.
+Cosa cambia nel documento: spostare il nodo in gola sotto la leva dell'**amplificazione percettiva**, non sotto quella meccanica. E declassare la frase: «Il nodo in gola viene attribuito all'ipertonia dello sfintere superiore. L'associazione col reflusso è debole, e in questi pazienti pesa di più l'ipervigilanza.»
 
 ---
 
 ## CATENE CON UN ANELLO FALSO
 
-**1. «Cosa si rompe» — meccanismo 1, "La porta che si apre da sola troppo spesso" · passaggio 3-4**
+**1. Meccanismo «Il sintomo che si accende con la stessa quantità di acido» — manca il passaggio fra il 2 e il 3.**
+La catena va da «le terminazioni nervose diventano più accessibili» direttamente a «l'attenzione al sintomo si stabilizza». Salta il midollo. È l'anello centrale, ed è l'unico documentato nell'uomo su questa condizione.
+Passaggio corretto da inserire come nuovo punto 3: «I neuroni del corno dorsale che ricevono l'esofago diventano più eccitabili. Da lì la soglia si abbassa anche dove l'acido non è mai arrivato: nell'esofago alto e sulla parete del torace. È la sensibilizzazione centrale, misurata nell'uomo (Sarkar 2000; Willert 2007).» L'attuale punto 3 diventa il 4.
 
-La catena dice: *"il tronco encefalico risponde con un'efferenza vagale inibitoria → LES e crus si rilasciano insieme"*.
+**2. Meccanismo «Il sintomo che si accende con la stessa quantità di acido» — passaggio 2, il nome è sbagliato.**
+Gli spazi intercellulari dilatati rendono le terminazioni più raggiungibili dagli ioni: è un problema di **barriera**, non di soglia del recettore. La sensibilizzazione periferica vera è l'abbassamento di soglia del nocicettore, con l'espressione aumentata di TRPV1.
+Passaggio corretto: «Gli spazi allargati fanno arrivare l'acido dove prima non arrivava. E i recettori di quelle terminazioni si tarano più in basso: è la sensibilizzazione periferica. Sono due cose, e vengono in quest'ordine.»
 
-L'anello 4 salta un relè. Il crus è muscolo scheletrico e in «Le strutture in gioco» la Bibbia stessa scrive che *"il frenico è l'unica via motoria del diaframma"*. Un'efferenza vagale non può rilasciare un muscolo scheletrico comandato dal frenico: manca il passaggio centrale che collega le due cose, e il documento si contraddice a due capitoli di distanza.
-
-**Passaggio corretto — sostituisci l'anello 4 con:**
-> *"Il tronco encefalico risponde su due vie insieme. Una efferenza vagale inibitoria rilascia il LES. Un'inibizione centrale toglie comando al frenico, e il crus smette di contrarsi per la durata dell'episodio. Il rilasciamento è coordinato dall'alto: non è il vago che raggiunge il muscolo scheletrico."*
-
-**Cosa cambia per l'osteopata, e va scritto:** il crus in quell'istante non è debole, è *spento dal centro*. Nessun lavoro sul muscolo apre o chiude quella finestra. È la giustificazione fisiologica della frase che la Bibbia già afferma in «Perché le mani possono cambiare qualcosa» — nessuna leva sul meccanismo principale — che oggi è affermata senza il perché.
-
-**2. «Le strutture in gioco» — Il vago e il frenico**
-
-*"Il frenico è l'unica via motoria del diaframma"*: è vero per la porzione costale, ma sul crus esiste una componente motoria vagale descritta e tracciata. Detta in forma assoluta genera la contraddizione del punto precedente. **Correzione:** *"Il frenico è la via motoria del diaframma. Il crus riceve in più una componente vagale, ed è il pezzo di diaframma che il cervello può spegnere indipendentemente dal respiro."* Una riga, e la catena del meccanismo 1 torna a chiudere.
+**3. Meccanismo «La porta che si apre da sola troppo spesso» — passaggio 3-4, l'inibizione è più stretta di come è scritta.**
+«Un'inibizione centrale toglie comando al frenico» e «il crus smette di contrarsi» lasciano immaginare un diaframma spento. Non lo è: l'inibizione è selettiva per la componente crurale, il diaframma costale continua a respirare.
+Passaggio corretto: «Un'inibizione centrale spegne la sola parte crurale. Il resto del diaframma continua a respirare, e il paziente non se ne accorge.» Serve, perché è la ragione per cui questa finestra non si vede né si palpa.
 
 ---
 
 ## CLASSIFICAZIONE DEL DOLORE
 
-La Bibbia **non classifica mai** il dolore. Descrive bene sensibilizzazione periferica e centrale nel meccanismo 3, ma non nomina le categorie, e la parola *nociplastico* non compare.
-
-Il quadro atteso qui è misto. C'è una componente **nocicettiva** — acido su mucosa infiammata, ed è quella che risponde all'inibitore di pompa. E c'è una componente **nociplastica** nello spettro non erosivo: Roma IV colloca *reflux hypersensitivity* e *pirosi funzionale* fra i disturbi dell'interazione intestino-cervello, con ipersensibilità viscerale come meccanismo. Nessuna componente neuropatica, salvo quadri chirurgici.
-
-**La classificazione deve diventare la chiave del sottotipo Ipersensibile**, dove oggi c'è solo la descrizione. È l'unica delle sei etichette che cambia davvero cosa il lettore si aspetta: un quadro nociplastico non risponde al carico locale, e la pressione profonda ripetuta su una zona allodinica lo riaccende. La Bibbia dà a questo sottotipo *"Abbastanza"* di leva manuale e non dice da nessuna parte che l'input locale intenso è controproducente. È il buco più concreto del documento.
+La Bibbia **classifica**, ed è un merito raro: nomina nocicettivo e nociplastico, li spiega nel glossario e ne trae la conseguenza giusta — l'input locale intenso riaccende invece di calmare. Il difetto è la mappatura: «tutto il non erosivo è nociplastico» è troppo largo, perché la NERD vera ha un carico acido reale. La classificazione **dovrebbe diventare la chiave del sottotipo «Sproporzionato al referto»**: oggi quel sottotipo è definito dal referto pulito, cioè da un'assenza. Definirlo dal meccanismo del dolore — stimolo reale letto troppo forte, contro dolore senza stimolo — lo rende separabile al lettino e coerente con Roma IV, che la Bibbia già cita.
 
 ---
 
@@ -69,81 +69,76 @@ Il quadro atteso qui è misto. C'è una componente **nocicettiva** — acido su 
 
 | Leva | Meccanismo invocato | Tempo dichiarato | Compatibili? |
 |---|---|---|---|
-| Sul crus che non dà il suo contributo | *"recupero della componente pulsante della barriera"* | *"la manometria mostra effetti immediati; sul sintomo, poche sedute"* | **No.** Sono due fenomeni diversi sotto un'etichetta sola |
-| Sulla separazione dei due sfinteri | contributo pressorio di un crus disallineato | *"effetto pressorio immediato"* | **No.** Se la sovrapposizione è persa, le due pressioni non si sommano: è il meccanismo 2 del documento |
-| Sull'amplificazione percettiva | innalzamento della soglia | *"entro le prime sedute, sul punteggio soggettivo"* | Sì, ma senza marker intra-seduta non è verificabile |
-| Sulla clearance notturna | meccanica toracica e postura | *"se si vede, sul numero di risvegli"* | Sì. Onesta, ed etichettata IPOTESI |
-
-**Riga 1 — la più importante.** Un effetto manometrico immediato dopo una singola manovra di stiramento è un fenomeno **riflesso e viscoelastico**: cambia la lunghezza di riposo e il tono del crus, latenza di minuti, durata non misurata da nessuno. Il *recupero della componente fasica* è **riallenamento**: la letteratura che lo mostra usa 4 settimane a 5 giorni su 7, ed è allenamento, non tocco. Attribuire alla stessa leva l'immediatezza dell'uno e la durata dell'altro è la scorciatoia che questa Bibbia altrove evita.
-
-**Riscrittura della leva sul crus, due righe invece di una:**
-> *"Effetto immediato: modifica riflessa e viscoelastica del tono crurale a riposo. Si vede sulla manometria nei minuti dopo, e quanto duri non l'ha misurato nessuno.*
-> *Effetto durevole: recupero della componente fasica. Richiede ripetizione per settimane, e la prova che esista viene dall'allenamento respiratorio, non dal tocco. Resta non testato che una mano lo produca."*
+| Crus che non dà il suo contributo | Riflesso e viscoelastico / riattivazione a impulsi | «minuti» + «settimane», separati | **Sì.** È l'unico posto del documento dove i due tempi sono tenuti distinti. Da non toccare. |
+| Amplificazione percettiva | Innalzamento della soglia di percezione | «entro le prime sedute» | **No.** Due fenomeni fusi. La riduzione di attivazione è uno **stato**: minuti, e finisce con la seduta. La discesa dell'ipervigilanza è **plasticità**: settimane, e si misura su una finestra di un mese. Falsa è la seconda metà: nessuna soglia si sposta stabilmente in poche sedute. |
+| Nodo in gola | Meccanica del collo e dello ioide sul tono dello sfintere superiore | «entro poche sedute» | **No**, ma prima del tempo è sbagliata la via: uno sfintere tenuto alto per via riflessa non risponde alla meccanica locale. |
+| Pressione che spinge da fuori | Gradiente più basso a parità di volume | «sui sintomi posizionali entro poche sedute» | **Sì per la componente tensiva, no per il gradiente.** Il gradiente misurato dipende dal volume, che cambia in mesi. In poche sedute può muoversi solo la tensione di parete, che il documento stesso etichetta IPOTESI. Scriverlo come «sintomi posizionali», non come «gradiente». |
 
 ---
 
 ## MARKER PROPOSTI
 
-**1. Soglia di pressione dolorosa sulla parete toracica anteriore** (algometro, o pollice calibrato se non ne hai uno), due-tre centimetri lateralmente allo sterno, all'altezza T4-T6, confrontata con un sito lontano di controllo. *Quando si osserva:* prima di trattare, e a distanza di sedute. *Cosa ci si aspetta:* se il meccanismo è l'amplificazione percettiva, la soglia anteriore è più bassa del sito di controllo, e sale quando la soglia sale. È il sito con prova neurofisiologica umana diretta. *Serve alla chiave di volta:* no — è il marker del meccanismo, non della gerarchia.
+**1. EHAS — Esophageal Hypervigilance and Anxiety Scale (15 item; esiste anche la forma breve a 7).**
+Quando si osserva: prima del ciclo e a sei-otto settimane, mai nella stessa seduta.
+Cosa ci si aspetta: se la leva sull'amplificazione percettiva lavora, il punteggio scende mentre il numero di episodi resta uguale — che è esattamente l'esito che la Bibbia dichiara di attendersi. Serve alla prova della chiave di volta: **sì**, è un piano che le mani non toccano. Ed è la scala usata da Wong 2021, già in bibliografia: si guadagna uno strumento senza aggiungere una fonte.
 
-**2. Latenza fra pasto e sintomo, cronometrata dal paziente su sette giorni.** Il documento la nomina già, in mezzo ad altri. Va promossa a discriminante: *se la latenza si allunga a parità di pasto, si è mosso il piano percettivo; se la latenza resta uguale e cambia solo l'intensità legata alla posizione, si è mosso il piano pressorio.* Un marker che separa due sottotipi vale più di tre marker che confermano.
+**2. Soglia dolorosa alla pressione sulla parete toracica anteriore, a T2-T5, fuori dallo sterno.**
+Quando si osserva: prima di trattare e a fine ciclo, dopo che il cancello cardiaco è chiuso.
+Cosa ci si aspetta: se la sensibilizzazione centrale rientra, la soglia sale. È la misura che Willert ha visto scendere con l'acido e risalire con l'antagonista NMDA. Serve alla prova della chiave di volta: **sì**, ed è l'unico marker somatico che il meccanismo prevede.
 
-**3. Conteggio degli episodi al giorno più intensità di picco, diario di sette giorni preso prima di iniziare.** *Serve a:* rendere falsificabile l'esito che la Bibbia dichiara per il sottotipo ipersensibile — *"intensità giù a parità di numero di episodi"*. Oggi quell'esito è scritto ma non contabile: nessuno dice come si contano gli episodi, quindi la promessa non può essere smentita. Senza il conteggio di partenza, qualunque miglioramento verrà letto come successo.
+**3. RMSSD su due minuti a riposo, al posto della componente ad alta frequenza.**
+Quando si osserva: all'ingresso, come misura del gate «il sistema è in allarme» della Road Map.
+Cosa ci si aspetta: sale se l'attivazione cala. Perché RMSSD e non HF: l'indice HF è confuso dalla frequenza respiratoria e non è interpretabile sotto i nove atti al minuto — cioè proprio quando si è appena fatto respirare lento il paziente. Serve alla prova della chiave di volta: **no**, serve al gate.
 
 ---
 
 ## DA TAGLIARE O COMPATTARE
 
-**1.** *"Il frenico è il motivo per cui il collo e il diaframma sono lo stesso circuito."* — Capitolo «Le strutture in gioco». Non cambia niente: non dice cosa riconoscere, cosa aspettarsi o cosa escludere. **Azione: RENDI UTILE.** È la riga che deve giustificare il marker cervicale usato in «Come ragiono davanti a questo paziente», altrimenti quel marker sembra arbitrario. Riscrivi: *"Il frenico nasce da C3-C5. È il motivo per cui un marker cervicale può muoversi dopo un lavoro sul diaframma senza che tu abbia toccato il collo."*
+**1. Le fibre C-tattili e il «fra 1 e 10 centimetri al secondo».** Capitolo «Cosa dice la scienza», cerchio 2, più la voce di glossario.
+Non cambia cosa l'osteopata riconosce, si aspetta o esclude su questa condizione: è misurato sulla piacevolezza del tocco in volontari sani, e la velocità è un parametro di esecuzione che appartiene alla Procedura. Azione: **RENDI UTILE** — una riga sola, spostata in «Cosa non possiamo dire»: «Che il tocco lento agisca sul sintomo viscerale attraverso le fibre C-tattili: sono state studiate sulla piacevolezza, mai su un viscere.» Poi togliere la voce dal glossario.
 
-**2.** *"Il vago scende sull'esofago dividendosi in due tronchi, anteriore e posteriore"* — stesso capitolo. Il dettaglio non è distinguibile sotto le mani e non compare in nessun meccanismo. **Azione: TAGLIA.** Resta *"il vago attraversa lo iato insieme all'esofago"*, che invece serve.
+**2. La bidirezionalità del vago, detta quattro volte.** Compare in «Le strutture in gioco», nell'Attenzione di «Cosa si rompe», nell'Attenzione della «Lettura osteopatica» e in «Cosa fare adesso».
+La prima e l'ultima bastano: una spiega il meccanismo, l'altra vieta la frase. Azione: **TAGLIA** le due intermedie, lasciando un rimando.
 
-**3.** *"Uno stato di attivazione acuta abbassa ulteriormente la soglia"* — passaggio 4 del meccanismo 3. Lo stesso fatto è ripetuto nel box Attenzione due righe sotto, nel modello Comportamentale e ancora nella leva sull'amplificazione percettiva. Quattro volte. **Azione: TAGLIA il passaggio dalla catena** — funziona a quattro anelli — e tieni il box Attenzione, che è la versione operativa.
+**3. «Il vago e il frenico — Cosa fa».** Capitolo «Le strutture in gioco».
+La descrizione dell'andata e ritorno vagale viene rifatta per intero, e meglio, nella catena del primo meccanismo. Azione: **COMPATTA** a una riga e rimanda.
 
 ---
 
 ## ERRORI
 
-**1. Il vago descritto a senso unico** | Capitolo «Le strutture in gioco» | Il vago porta sia la via colinergica eccitatoria che sostiene il tono del LES sia la via inibitoria NANC che lo apre. Scrivi che comanda in due direzioni opposte, e che per questo alzarne l'attività non è un'operazione a segno noto.
+1. **Mappa segmentaria dell'esofago confusa con quella dello stomaco.** Capitolo «Le strutture in gioco» e capitolo «La lettura osteopatica». Al suo posto: stomaco T5-T9 via grande splancnico; esofago distale T1-T10 con densità in T3-T5 e convergenza cardiaca sugli stessi neuroni; zona somatica di riferimento retrosternale e dorsale medio-alta. La correzione dà finalmente un meccanismo al segnale «soglia abbassata sulla parete toracica anteriore» che il documento già usa.
 
-**2. L'anello che salta il relè frenico** | Capitolo «Cosa si rompe», meccanismo 1, passaggio 4 | Un'efferenza vagale non rilascia un muscolo scheletrico comandato dal frenico. L'anello corretto è l'inibizione centrale del comando frenico al crus, in parallelo all'inibizione vagale del LES. Aggiunge il perché alla frase, già presente, che le mani non hanno leva sul meccanismo principale.
+2. **Anello centrale mancante nella catena dell'amplificazione percettiva.** Capitolo «Cosa si rompe». Al suo posto: inserire la sensibilizzazione centrale spinale fra la periferia e l'ipervigilanza, con Sarkar 2000 e Willert 2007. Senza quell'anello la catena passa dal tessuto all'attenzione senza attraversare il midollo, e il sintomo riferito alla parete resta senza spiegazione.
 
-**3. La leva sul crus mette insieme un riflesso e un allenamento** | Capitolo «Perché le mani possono cambiare qualcosa» | Effetto immediato e recupero della componente fasica sono due fenomeni con due decorsi. Vanno separati in due righe: modifica riflessa e viscoelastica nei minuti, durata non misurata; recupero fasico in settimane di ripetizione, dimostrato per l'allenamento e non per il tocco.
-
-**4. Il dolore non è mai classificato** | Capitoli «Cosa si rompe» e «Non è una condizione sola» | Aggiungi la classificazione: componente nocicettiva sulla mucosa infiammata, componente **nociplastica** nello spettro non erosivo, secondo Roma IV. Fai della componente nociplastica la chiave del sottotipo Ipersensibile, e scrivi la conseguenza che oggi manca: in quel quadro l'input locale intenso e ripetuto riaccende il sintomo invece di ridurlo.
+3. **Decorso temporale della leva sull'amplificazione percettiva.** Capitolo «Perché le mani possono cambiare qualcosa». Al suo posto: separare i due tempi come già fatto benissimo per il crus. «Effetto di stato: dentro la seduta, e finisce con lei. Effetto durevole sulla soglia: settimane, e si legge su una scala che guarda l'ultimo mese.»
 
 ---
 
 ## RISCHI
 
-**1. L'effetto pressorio immediato attribuito alla leva sull'ernia** | Capitolo «Perché le mani possono cambiare qualcosa», *Sulla separazione dei due sfinteri* | È incoerente con il meccanismo 2 della Bibbia stessa: se LES e crus non sono più sullo stesso punto, un guadagno pressorio crurale non si somma. Lo studio citato ha misurato pazienti con reflusso, non pazienti selezionati per ernia. **Come chiuderlo:** sposta il claim pressorio sulla leva crurale, dove regge, e lascia qui l'effetto atteso onesto — meccanica toracica e comfort, nessun guadagno di barriera atteso quando la sovrapposizione è persa.
+1. **La leva sul contenitore non è falsificabile.** Capitolo «Perché le mani possono cambiare qualcosa». Manca: cosa si osserva per dire che il gradiente si è mosso. Come chiudere: dichiarare l'esito in termini di sintomo posizionale cronometrato — comparsa del bruciore in flessione anteriore mantenuta, contata prima e dopo — e togliere la parola «gradiente» dall'effetto atteso, perché non è misurabile con le mani.
 
-**2. La contraddizione sul piano cervicale** | Capitoli «Le strutture in gioco» e «Come ragiono davanti a questo paziente» | Il primo dice che cercare il reflusso in cervicale bassa è cercare nel posto sbagliato; il secondo usa rotazione cervicale e soglia su C4 come marker della chiave di volta. Entrambe reggono, ma solo se il documento dice che sono due vie diverse. **Come chiuderlo:** una riga — *"T5-T9 è la via afferente del dolore riferito. Il collegamento cervicale è un'altra cosa: passa dal frenico, C3-C5. Per questo un marker cervicale può muoversi senza che il collo sia il posto dove cercare il reflusso."*
+2. **«Una modifica riflessa e viscoelastica del tono a riposo».** Capitolo «Perché le mani possono cambiare qualcosa». La parola «riflessa» nomina un riflesso che non viene mai identificato: non esiste un arco somato-viscerale documentato verso il LES. Come chiudere: o si scrive quale riflesso, o si toglie l'aggettivo e resta il meccanismo meccanico-viscoelastico più plausibile, con la nota che il mediatore non è stato isolato.
 
-**3. L'esito dichiarato per l'ipersensibile non è contabile** | Capitoli «Non è una condizione sola» e «Perché le mani possono cambiare qualcosa» | *"Intensità giù a parità di numero di episodi"* è l'esito giusto, ma il documento non dice mai come si contano gli episodi. Un esito che non si può smentire non è un esito. **Come chiuderlo:** una riga che prescrive il conteggio di partenza — episodi al giorno e intensità di picco su sette giorni, presi prima di iniziare.
+3. **La variabilità cardiaca è citata nella sua componente HF.** Capitolo «Cosa dice la scienza», cerchio 2. Il rischio non è il claim, che è etichettato bene: è che un lettore la trasformi in marker dopo un lavoro sul respiro, dove HF non è interpretabile. Come chiudere: una nota di quattro parole — «l'indice da usare è RMSSD, HF si sposta col respiro».
 
 ---
 
 ## PREFERENZE
 
-**1.** Nel meccanismo 1 e nel glossario, dai il numero che rende il rilasciamento transitorio riconoscibile: dura dieci secondi o più, tipicamente venti-trenta, contro i cinque-otto di un rilasciamento da deglutizione. È il dato che trasforma "decine di secondi" in un discriminante.
+1. Nel primo meccanismo, aggiungere che l'inibizione del crus è **selettiva**: il resto del diaframma continua a respirare. Una riga, e spegne la fantasia di un diaframma che si ferma.
 
-**2.** In «Come ragiono davanti a questo paziente», la frequenza respiratoria è confrontata con *"la sua baseline"*, che nella prima visita non esiste. Usa la variazione dentro la seduta: conta nel primo minuto, riconta alla fine, e leggi la differenza. Elimina il bisogno di un valore di riferimento che nessuno ha.
+2. Nel sottotipo «Sproporzionato al referto», sostituire la definizione per assenza (referto pulito) con la definizione per meccanismo (stimolo reale letto troppo forte, oppure sintomo senza stimolo). È la stessa informazione, ma diventa una domanda che si può fare al paziente.
 
 ---
 
 ## TIENE
 
-Il box Attenzione sul meccanismo 1 e il rifiuto esplicito di *"alzare il tono vagale riduce il reflusso"* arrivano alla conclusione giusta: la direzione di quella leva non è stabilita. Va sistemata la premessa, non la conclusione.
-
-La separazione fra **esposizione** e **percezione** — lo stress amplifica il sintomo, non genera episodi — è corretta, è la cosa più utile del documento e non va toccata.
-
-La leva sull'amplificazione percettiva è dichiarata *down-regulation aspecifica, non meccanismo neuroendocrino dimostrato*, con il rifiuto esplicito di cortisolo e ossitocina. È il lucchetto applicato bene, ed è raro.
-
-La regola della chiave di volta — marker scelto prima, su un piano non toccato — è il miglior strumento di falsificabilità della Bibbia. La frequenza respiratoria contata su un minuto senza avvisare il paziente è un marker vero, praticabile in studio.
+Il nucleo neurofisiologico è corretto e, in tre punti, migliore di quanto si legga di solito. Il rilasciamento transitorio è descritto come **apertura programmata e comandata dall'alto**, con la conseguenza giusta: nessun lavoro sul muscolo apre o chiude quella finestra. La bidirezionalità del vago è affermata con l'argomento farmacologico esatto, e la frase «alzare il tono vagale riduce il reflusso» è vietata per il motivo giusto. La distinzione fra amplificatore della percezione e generatore di episodi, applicata allo stress, è precisa e regge sui dati umani. La doppia lettura del crus — riflesso nei minuti, riallenamento in settimane — è l'esempio di come vanno scritte tutte le altre leve. E i marker clinici già scelti (latenza pasto-sintomo, risvegli notturni, altezza del cuscino) sono onesti, appartengono al paziente e sono lontani dalle mani: sono un buon impianto, cui mancano solo i due strumenti proposti sopra.
 
 ---
 
 ## VERDETTO: Da calibrare
 
-Le vie invocate sono in gran parte quelle giuste, ma il vago è descritto a senso unico quando ne ha due, la catena del rilasciamento transitorio salta il relè frenico e la leva sul crus mette lo stesso cartellino su un riflesso di minuti e su un allenamento di settimane.
+La via principale è quella giusta e le etichette non gonfiano, ma tre cose vanno riscritte: la mappa segmentaria è quella dello stomaco applicata all'esofago, la catena dell'amplificazione salta il midollo, e la leva sulla percezione promette in poche sedute un cambiamento che è plasticità.

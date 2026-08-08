@@ -50,7 +50,7 @@ Elenco secco. Ogni voce: **segnale → a chi lo mandi → con che urgenza.** Nes
 
 ### Blocco 6 — La frase per il paziente
 
-Una sola frase, in corsivo, senza parole tecniche. La stessa del Capitolo 12 della Bibbia, non una nuova.
+Una sola frase, in corsivo, senza parole tecniche. La stessa del Capitolo 13 della Bibbia, non una nuova.
 
 ## Regole
 

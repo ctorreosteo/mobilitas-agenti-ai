@@ -1,200 +1,227 @@
-# Revisione — Osteopata Neolaureato
+# Feedback — Revisore Neolaureato (primo livello)
+
+**Documento revisionato:** `bibbie-generate/reflusso-gastrico/v1-bibbia.md` (con `v1-mappa.md` come documento gemello di sintesi).
 
 LENTE: Osteopata Neolaureato (comprensibilità)
-DOCUMENTO REVISIONATO: `v1-bibbia.md` (con `v1-mappa.md` come termine di paragone)
 CONDIZIONE: Malattia da reflusso gastroesofageo
 
 ---
 
 ## PROVA DI LETTURA
 
-L'ho letta tutta, in un colpo, senza saltare capitoli. Mi sono fermato cinque volte:
-al box vagale del meccanismo 1, alla frase su Michiels, quando ho provato a contare
-quali sono "i tre meccanismi" su cui posso agire, alla riga "il sistema più alto che
-risulta disfunzionale", e quando ho cercato di capire se il paziente ipersensibile è
-un paziente con reflusso o no. Sono arrivato in fondo. A voce saprei spiegare la
-fisiologia della barriera senza guardare gli appunti — è il pezzo migliore. Non
-saprei invece rispondere se un collega mi chiedesse "quindi su quanti meccanismi
-puoi agire, e quali?", perché il documento dice tre in un punto e due venti righe
-dopo.
+Sono arrivato in fondo in una sola sessione e senza mai perdere il filo generale: la
+struttura «funziona → si rompe → chi comanda → cosa posso io» regge e si ricorda.
+Mi sono fermato sette volte. Cinque di quelle volte per rileggere una frase, due volte
+per tornare indietro a cercare cosa fosse "il primo meccanismo" o "il quarto".
+Dopo la lettura saprei spiegare a voce cos'è il reflusso, perché la barriera è doppia e
+perché il farmaco non basta. **Non** saprei spiegare a voce come si fa la verifica con il
+marker, e non saprei difendere davanti a un collega l'etichetta del sottotipo pressorio-
+posturale, perché il documento me la dà in due modi diversi in due capitoli.
 
 ---
 
-## ERRORI (mi sono perso davvero)
+## ERRORI (4) — non ho capito, o ho dovuto rileggere
 
-**1 · Cap. 10 — "Il reflusso non ha il suo Michiels."**
-Frase testuale: *"Il reflusso non ha il suo Michiels."*
-Chi è Michiels. Non è spiegato qui, non è nel Glossario, non è in Appendice B, non
-compare in nessun'altra riga del documento. Se questa Bibbia è la mia unica fonte,
-quel nome è un buco. Ho dovuto rileggere il paragrafo tre volte pensando di essermi
-perso una citazione prima.
-**Correzione:** o si esplicita ("non ha un ricercatore-ancora paragonabile a quelli
-di altre condizioni — nessun gruppo con RCT ampi e follow-up lunghi"), o si mette una
-riga di contesto su chi è Michiels e su cosa. Un nome proprio usato come metro di
-paragone deve essere leggibile da solo.
+**1. Il dato che va in direzione opposta resta aperto.**
+Frase: *"IPOTESI per la componente tensiva e posturale: nessuno l'ha isolata, e un dato va
+in direzione opposta. Alzare la pressione addominale con un sollevamento delle gambe fa
+salire la pressione dello sfintere (Bitnar, J Bodyw Mov Ther 2016). La barriera compensa,
+finché ce la fa."*
+Capitolo: 5 — Cosa si rompe, meccanismo 4.
+Perché mi sono perso: il capitolo mi ha appena insegnato che più pressione addominale =
+più reflusso. Poi mi dice che alzare la pressione addominale **migliora** la barriera.
+Poi chiude la contraddizione con sei parole — *"La barriera compensa, finché ce la fa"* —
+che non mi dicono **quando** smette di farcela, né cosa distingue una pressione che il
+crus compensa da una che lo sopraffà. Rimango con due affermazioni opposte in testa e
+nessun criterio per usarle davanti a un paziente.
+Correzione: due righe in più che dicano il criterio di separazione — pressione **acuta e
+breve** (che il crus anticipa e compensa) contro pressione **sostenuta o strutturale**
+(volume viscerale, cintura, gravidanza), che non ha un anticipo riflesso a cui appoggiarsi.
+E spiegare che Bitnar ha misurato la prima, non la seconda.
 
-**2 · Cap. 2 «Cosa non è» vs Cap. 6 «I sottotipi» — l'ipersensibile è o non è reflusso?**
-Cap. 2 lo mette fra i quadri che **non sono** reflusso: *"Il **reflusso ipersensibile**
-è esposizione acida normale, ma ogni episodio viene percepito."* Cap. 6 lo mette fra
-i **sottotipi di reflusso**, con "Quanto puoi fare: Abbastanza", e Cap. 5 ne fa il
-meccanismo 3 etichettato DIMOSTRATO. Arrivato al Cap. 6 mi sono chiesto se stessi
-leggendo dello stesso paziente, e sono tornato indietro a rileggere il Cap. 2.
-**Correzione:** una riga di raccordo nel Cap. 6, del tipo: "in nosologia (Roma IV)
-l'ipersensibile è classificato fuori dalla GERD; in questa Bibbia lo teniamo come
-sottotipo operativo perché arriva da te con la stessa richiesta". Senza quella riga
-i due capitoli si contraddicono.
+**2. Il sottotipo pressorio-posturale ha due etichette diverse in due capitoli.**
+Frase: *"È il sottotipo in cui il tuo lavoro ha il razionale più diretto. Agisci sulla
+parete del contenitore, non sulla valvola."*
+Capitolo: 6 — I sottotipi, sezione «Pressorio-posturale».
+Perché mi sono perso: il capitolo 5 ha appena etichettato **IPOTESI** la componente
+tensiva e posturale, e il capitolo 7 (Biomeccanico) ripete *"IPOTESI per la componente
+posturale: estensione dorsale, cerniera T12-L1 e tensione di parete non sono state
+testate da nessuno di quegli studi"*. La sola parte PROBABILE di quel meccanismo è il
+**volume**, che il documento stesso dice non essere nelle mie mani. Quindi il sottotipo
+in cui "il mio lavoro ha il razionale più diretto" è esattamente quello in cui la mia leva
+è etichettata IPOTESI. Poi il capitolo 11 aggiunge un terzo valore: *"PROBABILE per il
+razionale, che sta in «Cosa si rompe»"* — ma in «Cosa si rompe» quel razionale è IPOTESI.
+Tre capitoli, tre etichette per la stessa leva.
+Correzione: allineare. O il capitolo 6 dice "razionale più diretto **ma etichetta IPOTESI**,
+ed è una tensione dichiarata di questo documento", o il capitolo 11 smette di scrivere
+PROBABILE. Non possono restare tutte e tre.
 
-**3 · Cap. 5 / Cap. 6 / Cap. 11 — tre meccanismi o due? E quali?**
-Cap. 5, riga d'apertura: *"sei modi diversi di far risalire lo stesso acido, e solo su
-**tre** le tue mani hanno qualcosa da dire"*. Ventitré righe dopo, nelle "tre cose da
-ricordare" dello stesso capitolo: *"I **due** meccanismi su cui puoi agire — pressione
-dal contenitore e contributo del crus"*. Cap. 11 chiude con *"solo su tre dei sei
-meccanismi — e sapere quali sono i tre è ciò che ti rende un clinico invece che un
-venditore"* — **e i tre non vengono mai elencati**. Ho provato a ricavarli da solo e
-non torna: per le etichette del Cap. 11 le leve PROBABILI sono i meccanismi 2, 4 e 5;
-per la tabella del Cap. 6 gli "Abbastanza" sono i sottotipi che corrispondono ai
-meccanismi 3, 4 e 5 — e il meccanismo 2 lì diventa "Niente: invio". Due liste diverse
-di tre.
-**Correzione:** fissare un numero solo e nominare i tre meccanismi per esteso in
-Cap. 5, Cap. 6 e Cap. 11, con le stesse parole. E allineare la colonna "Quanto puoi
-fare" del Cap. 6 alle etichette delle leve del Cap. 11: oggi "Abbastanza" sta su una
-leva IPOTESI (ipersensibile) e "Niente" su una leva PROBABILE (separazione dei due
-sfinteri).
+**3. "Attività a impulsi" è il perno del capitolo 11 e non è mai definita.**
+Frase: *"Il diaframma perde escursione, e la componente crurale perde attività a impulsi"*
+(cap. 5, meccanismo 5) → *"Il secondo è durevole: il recupero dell'attività a impulsi, che
+richiede settimane di ripetizione"* (cap. 11).
+Capitolo: 5, 11 e 12.
+Perché mi sono perso: su questa espressione poggia la distinzione più importante del
+capitolo 11 — effetto riflesso nei minuti contro riallenamento in settimane — cioè la cosa
+che devo saper spiegare a un paziente per non farlo ricadere. Ma non so cosa sia
+"attività a impulsi": è la frequenza di scarica del crus? l'ampiezza del picco inspiratorio?
+la resistenza alla fatica? Il capitolo 4 aveva usato una parola diversa e chiara — *"la
+barriera pulsa"*, "il crus aggiunge il picco" — e poi non la riprende.
+Correzione: usare una sola espressione in tutto il documento (il "picco inspiratorio della
+barriera", che il capitolo 4 ha già insegnato) e definirla in Glossario. "Attività a
+impulsi" o sparisce o entra nel Glossario con una riga.
 
-**4 · Cap. 6 / Cap. 5 — non so distinguere pressorio-posturale da diaframmatico.**
-È il buco di riconoscimento. I segni si sovrappongono: il meccanismo 4 elenca *"respiro
-alto con addome trattenuto"* e *"addome teso e poco mobile in respirazione"*, il
-meccanismo 5 elenca *"escursione costale bassa, respiro apicale"* e *"cerniera
-dorso-lombare rigida"*. Anche le leve del Cap. 11 si sovrappongono: "cerniera
-dorso-lombare" e "gabbia toracica bassa" compaiono in entrambe. Ma il Cap. 8 mi dice
-che devo scegliere quale comanda, perché *"tratta tutti e tre allo stesso modo e ne
-migliori uno per caso"*. L'unica domanda discriminante che mi viene data
-(*"peggiora per quanto mangi o per quando ti pieghi?"*) separa il post-prandiale dal
-pressorio, non il pressorio dal diaframmatico.
-**Correzione:** aggiungere al Cap. 6 una riga "come lo distingui dal vicino" per questi
-due sottotipi — un criterio anamnestico e uno di osservazione (es. sintomo legato alla
-posizione/pressione anche a stomaco vuoto vs sintomo legato a periodi di carico e
-rigidità toracica). Non chiedo una tecnica: chiedo il criterio che li separa.
-
----
-
-## RISCHI (l'ho capita, ma con fatica)
-
-**1 · Cap. 5, meccanismo 1, box Attenzione — vagale inibitorio e blocco colinergico.**
-Frase: *"Il riflesso che apre la barriera è vagale, e la sua efferenza è inibitoria …
-e la farmacologia suggerisce il contrario: il blocco colinergico riduce il numero di
-questi rilasciamenti."* Ho riletto due volte: se l'efferenza finale è inibitoria (e
-quindi non colinergica), perché bloccare l'acetilcolina riduce i rilasciamenti? La
-risposta esiste — la via afferente/centrale del riflesso è colinergica, l'efferenza
-terminale no — ma il documento non me la dà, e "blocco colinergico" non è nel
-Glossario.
-**Cosa lo renderebbe chiaro:** una riga in più che separi i due tratti della via
-(innesco centrale colinergico, efferenza terminale inibitoria) e la voce a Glossario.
-
-**2 · Cap. 8 «Perché si indaga dall'alto» — "alto" in che senso?**
-Frase: *"il sistema che comanda è, di norma, il più alto che risulta disfunzionale,
-perché comanda su tutti quelli sotto."* Alto anatomicamente (cranio, torace) o alto
-gerarchicamente (nervoso sopra meccanico)? Il paragrafo che segue usa il secondo
-senso — allarme, poi diaframma, poi contenitore — ma "alto" da solo mi ha fatto
-pensare al primo, e per due righe ho letto la gerarchia sbagliata.
-**Cosa lo renderebbe chiaro:** sostituire "il più alto" con "il più a monte nella
-gerarchia funzionale", o dichiarare in una riga che qui "alto" non è una coordinata
-anatomica.
-
-**3 · `v1-mappa.md`, §2 «La catena causale» — fonde due meccanismi che la Bibbia tiene separati.**
-La catena è: *"riflesso vagale che rilascia insieme LES e crus → il crus non aggiunge
-più il suo picco pressorio"*. Letta da sola — e la Mappa è la cosa che mi porto in
-testa — sembra dire che il deficit crurale fa parte della catena principale
-dimostrata. Nella Bibbia sono due meccanismi distinti: il primo è DIMOSTRATO e senza
-alcuna leva manuale, il quinto è PROBABILE ed è la mia leva migliore. Chi studia solo
-la Mappa esce con il modello sbagliato e promette troppo.
-**Cosa lo renderebbe chiaro:** nella Mappa, separare la catena principale
-(TLESr → contenuto che risale) dalle due catene modificabili (gradiente pressorio;
-contributo crurale), anche solo con due frecce distinte.
-
-**4 · Termini tecnici mai spiegati e assenti dal Glossario.**
-Elenco secco, con verifica sul Glossario dell'Appendice A:
-- *blocco colinergico* (Cap. 5) — Glossario: **no**
-- *attività fasica* / componente fasica del crus (Cap. 5) — Glossario: **no**
-- *manometria posturale* (Cap. 5) — Glossario: **no**
-- *riflesso vago-vagale* (Cap. 4, prima occorrenza senza definizione) — Glossario:
-  c'è "Vago", non l'espressione — **no**
-- *co-regolazione* (Cap. 7) — Glossario: **no**
-- *down-regulation aspecifica* (Cap. 11) — Glossario: **no**
-- *densificazione* della parete (Cap. 8) — Glossario: **no**
-- *soglia di pressione su C4* (Cap. 8) — Glossario: **no** (e non è detto che sia una
-  soglia di dolore alla pressione)
-- *dissociazione respiratoria* (Cap. 8, punto 3 della Road Map) — Glossario: **no**
-- *GerdQ* — Glossario: **sì**, ma senza il range del punteggio: al Cap. 10 leggo
-  "1,49 punti di differenza fra gruppi" e non ho un metro per sapere se è tanto o
-  poco. Stessa cosa per "dimensione dell'effetto di 0,80".
-- *procinetici* (Cap. 3) — Glossario: **no**; spiegati solo sei capitoli dopo, nella
-  tabella del Cap. 9.
-Il Glossario si chiude con *"Trenta termini. Sotto la soglia dei quaranta."*: c'è
-spazio per queste voci senza sforare.
-
-**5 · Cap. 0 vs Cap. 2 e Cap. 4 — la regola delle etichette non vale per tutti i capitoli.**
-Cap. 0 mi insegna: *"Ogni affermazione importante ha la sua etichetta di solidità: se
-manca, è un claim gonfiato."* Applico la regola e trovo interi capitoli senza nessun
-box: tutto il Cap. 4 («Come funziona quando funziona», con numeri: 10-30 mmHg, il crus
-che anticipa lo sforzo) e i dati epidemiologici del Cap. 2. Sono probabilmente
-fisiologia consolidata, ma con la regola in mano leggo "gonfiato" e non so se sia colpa
-mia o del documento.
-**Cosa lo renderebbe chiaro:** o un box unico a inizio Cap. 4 ("tutta la catena che
-segue è DIMOSTRATO"), o riformulare la regola in Cap. 0 dicendo a quali capitoli si
-applica (meccanismi, modelli, leve) e a quali no.
+**4. Non so materialmente come si fa la verifica con il marker.**
+Frasi: *"I marker esterni onesti su questa condizione sono clinici, e appartengono al
+paziente: la latenza fra pasto e sintomo, il numero di risvegli notturni, l'altezza del
+cuscino"* e *"E se il marker non si muove, il sistema che hai trattato non comandava. Si
+scende di un passo nella Road Map e si ripete la prova"*.
+Capitolo: 8 — Come ragiono davanti a questo paziente.
+Perché mi sono perso: due buchi che si sommano. Primo, il capitolo 10 mi dice *"un marker
+scelto prima di trattare, misurato prima e dopo"*, ma nessuno dei tre marker onesti si può
+misurare "dopo" nella stessa seduta: i risvegli notturni e l'altezza del cuscino si
+misurano su giorni. Il documento non mi dice mai a quale distanza si rimisura, e senza
+quello la regola non è applicabile — e non è un protocollo, è la logica della verifica.
+Secondo, *"si scende di un passo nella Road Map"* non ha un referente: la Road Map è una
+sequenza di sei **domande di screening**, non una scala di piani trattabili. Scendere dal
+punto 3 (diaframma) porta al punto 4 (contenitore), ma scendere dal 4 porta al punto 5
+(un farmaco nuovo) che non è un piano da trattare.
+Correzione: dire esplicitamente che i marker clinici si rileggono **fra una seduta e
+l'altra**, non nella stessa; e riscrivere la frase come "si passa al piano successivo fra
+quelli trattabili (diaframma → contenitore → attivazione)", oppure numerare
+separatamente i piani dalla Road Map di screening.
 
 ---
 
-## PREFERENZE (non bloccanti)
+## RISCHI (4) — l'ho capita, ma con fatica
 
-**1 · Conteggi che non tornano.** Cap. 11: *"Se queste sei righe non sono chiare nella
-tua testa…"* — le righe sopra sono cinque. Le ho ricontate due volte pensando di
-aver saltato una negazione. Stessa famiglia: Cap. 2 dice "17-32% negli studi clinici e
-fino al 45% negli osservazionali", la Mappa compatta in "17-45%".
+**1. Il sottotipo "sproporzionato al referto": lo riconosco io o no?**
+Capitolo: 6.
+La tabella dei sottotipi me lo fa riconoscere da *"Referto pulito, farmaco inefficace"*.
+Sei righe dopo, il box dice: *"Reflusso ipersensibile e pirosi funzionale sono etichette
+di Roma IV, e si assegnano solo con la pH-impedenzometria. Qui le leggi in un referto,
+non le assegni al lettino."* Ho dovuto rileggere per capire che sono due cose diverse: un
+**sottotipo operativo interno** che posso sospettare, e una **etichetta diagnostica** che
+non posso assegnare. Il documento non lo dice mai in chiaro.
+Cosa lo renderebbe chiaro: una riga che separi i due piani — "il sottotipo lo sospetti tu,
+l'etichetta la scrive il referto" — prima del box Attenzione.
 
-**2 · Frasi belle che non mi lasciano niente in mano.** Cap. 3, chiusura della sezione
-sulla cerniera: *"È il piano su cui il reflusso si scrive addosso al rachide, e su cui
-il rachide può scriversi addosso al reflusso."* L'ho riletta per vedere se conteneva
-un'istruzione, e non ce n'era. Stessa categoria: *"Buon nutrimento!"* alla fine del
-Cap. 0, che stona con il registro del resto.
+**2. Non so quali studi posso citare per cosa.**
+Capitolo: 10 e 11.
+Il capitolo 11 sostiene l'etichetta PROBABILE con *"tre studi controllati diretti
+(da Silva 2013; Martínez-Hurtado 2019; Eguaras 2019)"*. Sono andato a cercarli nella
+tabella «Cerchio 1 — gli studi cardine» e **Martínez-Hurtado non c'è**, pur essendo
+nominato fra i quattro studi controllati esistenti in «Dove la letteratura è sottile».
+Inoltre in quella tabella Eguaras autorizza a *"Citare i sintomi, solo a brevissimo
+termine"* — non la pressione — e il capitolo 8 lo aveva appena screditato
+(*"è una magnitudine implausibile, e segnala un problema di misura più che un effetto"*).
+Se devo rispondere a un gastroenterologo, non so cosa mi è permesso dire di Eguaras.
+Cosa lo renderebbe chiaro: aggiungere Martínez-Hurtado alla tabella dei cardine con la sua
+riga "cosa ti autorizza a fare"; e nel capitolo 8 precisare che il problema di misura
+riguarda **l'esito mobilità cervicale**, non il punteggio dei sintomi.
+
+**3. Il Glossario è buono ma ha dei buchi proprio sui termini operativi.**
+Capitolo: Appendice A.
+Il Glossario copre bene l'anatomia e la clinica. Salta invece quasi tutto quello che devo
+usare **con le mani o con i numeri**. Elenco nella sezione dedicata più sotto.
+Cosa lo renderebbe chiaro: aggiungere le voci mancanti, in particolare i tre segni
+palpatori che la Road Map mi chiede di valutare e che non sono descritti da nessuna parte.
+
+**4. La Mappa alza un'etichetta che la Bibbia teneva bassa.**
+Documento: `v1-mappa.md`, sezioni 3 e 1.
+La Mappa è quello che rileggo in tre minuti prima del paziente, e mi dà
+*"Pressione dal contenitore | PROBABILE"* senza la distinzione volume (PROBABILE) /
+tensione-postura (IPOTESI) che è tutta la sostanza del capitolo 5. Subito sotto scrive
+*"Le mani hanno una leva solo sul terzo, sul quarto e sul quinto"*: leggendo solo la Mappa
+esco convinto di avere una leva PROBABILE dove la Bibbia dice IPOTESI. Stessa cosa, più
+piccola, sul dato di persistenza: la Mappa scrive *"17-45%"* come se fosse un intervallo
+unico, mentre la Bibbia distingue 17-32% negli studi clinici e 45% negli osservazionali.
+Cosa lo renderebbe chiaro: nella riga della Mappa scrivere "PROBABILE per il volume /
+IPOTESI per la tensione di parete", e "17-32% studi clinici, 45% medicina generale".
+
+---
+
+## PREFERENZE (2) — mi aiuterebbe, ma non è bloccante
+
+**1. Due frasi del capitolo 0 le ho lette due volte.**
+*"Il secondo sta in quella lista perché senza i suoi sette punti «Cosa si rompe» resta un
+elenco"* — mi ha costretto a tornare indietro e contare i titoli per capire quale fosse
+"il secondo". Basterebbe nominarlo: "«Come funziona quando funziona» sta in quella lista
+perché…".
+*"Non la portano la fisiologia consolidata e i dati citati con il loro studio accanto:
+quelli non sono affermazioni da difendere, sono descrizione"* — la frase inizia con il
+complemento oggetto invertito ("Non la portano…") e la conclusione arriva in fondo dopo i
+due punti. Girata in positivo si legge al primo colpo: "Fisiologia consolidata e dati con
+lo studio accanto non portano etichetta: sono descrizione, non affermazioni da difendere."
+
+**2. I meccanismi sono richiamati per numero d'ordine, e devo tornare indietro a contare.**
+Succede nel capitolo 2 (*"la variante lenta del primo meccanismo"*), nel capitolo 5
+(*"le tue leve stanno sul terzo, quarto e quinto"*), nel capitolo 11 e nel 14. Il capitolo
+12 fa la cosa giusta — *"sul quarto meccanismo, la pressione dal contenitore"* — e lì non
+mi sono fermato. Ripetere sempre il nome breve accanto al numero costa quattro parole e mi
+risparmia un salto all'indietro ogni volta.
+
+---
+
+## TERMINI MAI SPIEGATI
+
+| Termine | Dove | Nel Glossario? |
+|---|---|---|
+| "attività a impulsi" / "componente pulsante" | cap. 5 §5, cap. 11, cap. 12 | no |
+| "non è un'operazione a segno noto" (cap. 3, il vago) | cap. 3 | no — metafora matematica opaca, riscrivere in parole |
+| "i tessuti che rimbalzano" | cap. 8, Road Map punto 2 | no — ed è un reperto che devo saper riconoscere |
+| "presa sotto-costale" | cap. 7, Biomeccanico | no |
+| "chiusura anteriore del torace" | cap. 3, cap. 8 | no |
+| "guadagno" (nel senso di amplificazione) | cap. 5 §3 | no — l'analogia del differenziale arriva solo a fine sezione |
+| "effetto 0,80" | cap. 10 | no — non è detto che sia una dimensione dell'effetto né cosa valga 0,80 |
+| "eterogeneità alta" | cap. 7, cap. 12 | no |
+| "sham" | cap. 10, tabella | no |
+| "differenza minima clinicamente rilevante" | cap. 10, Glossario voce GerdQ | citata ma mai definita |
+
+Bene invece: *crus*, *pirosi*, *tasca acida*, *eruttazione sopragastrica*, *nociplastico*,
+*centro di coordinazione/percezione* sono tutti definiti nel punto in cui servono **e**
+ripresi in Glossario.
 
 ---
 
 ## TIENE
 
-Il Cap. 4 «Come funziona quando funziona» è il capitolo migliore che abbia letto in un
-documento interno: sette passaggi numerati, ognuno una frase, e il punto 7 che ribalta
-tutto («la barriera ha un'apertura programmata»). Dopo averlo letto una volta sola lo
-so ripetere. Funziona perché descrive il normale prima del guasto e perché ogni punto
-fa una cosa sola. Anche il Cap. 9 è netto: la tabella delle bandiere rosse con
-destinatario e urgenza non lascia margini di interpretazione, e la regola sui farmaci
-("non si commenta, mai") è impossibile da fraintendere.
+Il capitolo 4 è la parte migliore del documento: sette punti numerati, ognuno una riga,
+e il punto 7 che ribalta tutto (*"la barriera ha un'apertura programmata, non solo una
+chiusura"*). Dopo averlo letto, il capitolo 5 si legge da solo. Funziona perché insegna il
+funzionamento **prima** del guasto e perché non mette un'etichetta per punto, spiegando
+in una riga perché non serve. Molto buono anche il capitolo 9: la tabella delle bandiere
+rosse ha tre colonne e celle di quattro parole, e la nota sul filtro cardiaco che fallisce
+in donne, anziani, diabetici e nefropatici è la cosa che ricorderò più a lungo.
 
 ---
 
 ## LA PROVA DEL RICONOSCIMENTO
 
-Con questo documento in mano: il paziente entra, dice che gli sale un calore dallo
-sterno alla gola, dorme con due cuscini, prende un IPP da anni e la gastroscopia è
-pulita. So che la gastroscopia pulita non esclude niente (Cap. 2) e che è la forma più
-frequente. So chiedere "peggiora per quanto mangi o per quando ti pieghi?" e con quella
-domanda separo il post-prandiale — che rimando — dal resto. So riconoscere il
-notturno-extraesofageo dalla tosse secca, dalla voce roca al mattino e dal cuscino. So
-riconoscere lo strutturale-erosivo dal referto e dalle bandiere rosse, e so che non è
-mio. So riconoscere l'ipersensibile perché il sintomo segue lo stato emotivo a dieta
-invariata.
-**Mi blocco qui:** davanti al paziente che peggiora piegandosi *e* respira in alto *e*
-ha la dorsale rigida — cioè la maggior parte — non ho un criterio per dire se comanda
-il contenitore o il crus, perché i segni elencati per i due meccanismi si sovrappongono
-e le leve del Cap. 11 puntano in parte sulle stesse strutture. E non so quanti dei
-sottotipi possa avere contemporaneamente lo stesso paziente: il documento li presenta
-come "sei pazienti diversi", ma quello che ho davanti sembra due o tre insieme.
+Provo, usando solo questo documento. Uomo che indica lo sterno con due dita, brucia da
+anni, gastroscopia pulita, inibitore di pompa a dose piena, ha già tolto tutto dal piatto.
+Prima cosa: bandiere rosse — dolore sotto sforzo, sudorazione, disfagia, calo di peso,
+anemia, esordio dopo i 50. Se è donna, anziano, diabetico o nefropatico, alzo l'asticella
+e mando comunque. Poi le due domande che il documento mi dà e che funzionano:
+*"peggiora per quanto mangi o per quando ti pieghi?"* e *"succede anche a stomaco vuoto?"*.
+Sì a stomaco vuoto → pressorio. No, ma con torace rigido e respiro alto → diaframmatico.
+Fin qui ci arrivo senza esitare, ed è merito del capitolo 8.
+
+**Mi blocco al passo successivo, e mi blocco due volte.**
+Primo: ho deciso che è pressorio, e il documento mi dice che è il sottotipo con "il
+razionale più diretto" — ma tre capitoli fa mi ha detto che quella leva è IPOTESI. Non so
+cosa dire al paziente sul mio grado di fiducia, e quel numero è esattamente ciò che il
+capitolo 0 mi prometteva ("sai dire a un gastroenterologo cosa possiamo affermare e cosa no").
+Secondo: devo scegliere il marker prima di trattare, su un piano che non ho toccato. Scelgo
+"latenza fra pasto e sintomo". Tratto. E adesso? Il documento non mi dice se rimisuro oggi,
+fra sette giorni o alla seduta dopo — e se non si muove, "scendo di un passo nella Road
+Map", ma il passo sotto al mio è "il sintomo è iniziato con un farmaco nuovo", che non è un
+piano da trattare. Da qui in poi il documento non mi accompagna più.
 
 ---
 
 ## VERDETTO: Si legge con fatica
 
-Si segue dall'inizio alla fine e la fisiologia resta in testa; a bloccarmi sono i
-conteggi che non coincidono fra capitoli e un buco di riconoscimento fra i due
-sottotipi su cui il documento stesso mi dice che posso lavorare di più.
+Si segue dall'inizio alla fine e insegna davvero la fisiopatologia; ma nei due punti che
+decidono cosa faccio davvero — quanto vale la mia leva sul sottotipo pressorio, e come si
+chiude il ciclo verifica-marker — il documento si contraddice o si ferma un passo prima.

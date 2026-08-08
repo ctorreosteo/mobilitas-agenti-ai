@@ -16,10 +16,13 @@ Scrivi un solo tipo di documento: la **Bibbia** di una condizione. Venti pagine 
 | Che cos'è, perché succede | Cosa fai alla prima seduta |
 | Quali meccanismi la tengono in piedi | Quali tecniche, in che ordine |
 | Come si riconosce il sottotipo | Quanti minuti per blocco |
-| Perché le mani possono agire | Quali esercizi, con che dose |
+| Perché le mani possono agire | Quali tecniche, con che dose |
+| Perché un esercizio funziona, e cosa hanno misurato gli studi | Quale esercizio dai a *questo* paziente, e quando |
 | Quanto è solido tutto questo | Come misuri e quando rivaluti |
 
-**Se ti ritrovi a scrivere una sequenza, un numero di minuti o una dose, sei uscito dalla Bibbia.** Il tuo Capitolo 11 arriva fino al razionale della leva — *"il collo può agire sull'acufene perché C2 proietta sul nucleo cocleare, ed ecco quanto è solido"* — e si ferma lì.
+**Se ti ritrovi a scrivere una sequenza, un numero di minuti o una dose da somministrare, sei uscito dalla Bibbia.** Il tuo Capitolo 11 arriva fino al razionale della leva — *"il collo può agire sull'acufene perché C2 proietta sul nucleo cocleare, ed ecco quanto è solido"* — e si ferma lì.
+
+**Una sola eccezione, e va capita bene:** il parametro usato in uno *studio* è un dato di evidenza, non una prescrizione. *"Nello studio hanno svolto [l'esercizio] per [N] settimane"* sta nella Bibbia; *"fai fare [N] settimane al paziente"* sta nella Procedura. Il criterio è il tempo verbale e il destinatario.
 
 Una Bibbia fa tre cose insieme, e se ne manca una il documento è fallito:
 
@@ -91,7 +94,7 @@ Ogni meccanismo, ogni modello e ogni leva ne porta una. Un'affermazione importan
 
 Se ne trovi uno **nuovo**: correggi, e apri una voce con stato `PROPOSTA` e la fonte. Non modificare i documenti di metodo: la ratifica è di Carlos.
 
-## Architettura — i tredici capitoli
+## Architettura — i quindici capitoli
 
 Struttura fissa, nell'ordine. La specifica completa è in `references/architettura-bibbia.md`; qui la mappa.
 
@@ -107,15 +110,23 @@ Struttura fissa, nell'ordine. La specifica completa è in `references/architettu
 | 7 | La lettura osteopatica | I cinque modelli, una sezione breve ciascuno |
 | 8 | Come ragiono davanti a questo paziente | Il Motore Clinico, etichetta RAGIONAMENTO |
 | 9 | Dove finisce il nostro campo | Bandiere rosse, cancello, farmaci, perimetro legale |
-| 10 | Cosa dice la scienza | Ancora, studi verificati, cosa si può dire e cosa no |
+| 10 | Cosa dice la scienza | I tre cerchi, studi verificati, cosa si può dire e cosa no, **«Quando la scienza tace»** |
 | 11 | Perché le mani possono cambiare qualcosa | Razionale delle leve. **Niente protocolli** |
-| 12 | Cosa dire al paziente | Script sotto 100 parole, risposte alle obiezioni |
+| 12 | Cosa può fare il paziente da solo | **CONDIZIONALE.** C'è solo se uno strumento attivo regge DIMOSTRATO o PROBABILE forte |
+| 13 | Cosa dire al paziente | Script sotto 100 parole, risposte alle obiezioni |
+| 14 | Cosa fare adesso | Il filo ricucito, le tre cose che cambi da lunedì, la chiusura che spinge |
 | A | Glossario | Ogni termine tecnico, una riga |
 | B | Le fonti | Bibliografia con link verificati |
 
 Le cinque regole di struttura che valgono **in ogni capitolo**: un capitolo = una domanda; apertura `> **In una riga:**` e chiusura **Le tre cose da ricordare**; l'incertezza esce dal testo; quattro soli tipi di box; tabelle da massimo 4 colonne e 8 parole per cella.
 
-**Lunghezza: 8.000–12.000 parole**, appendici escluse.
+**Lunghezza: 8.000–13.000 parole**, appendici escluse.
+
+### Le due regole nuove che cambiano cosa cerchi e cosa scrivi
+
+1. **I tre cerchi dell'evidenza.** Non cercare solo studi di osteopatia su questa condizione: quel cerchio è quasi sempre povero. Cerca anche la letteratura **trasversale** sul meccanismo — tocco e regolazione autonomica, terapia manuale e modulazione del dolore, interocezione, respiro, contesto — e la fisiologia di base. Con **la regola del ponte**: quell'evidenza alza l'etichetta del *meccanismo*, mai quella della *leva* su questa condizione, e ogni fonte porta con sé la frase che dichiara il salto. Metodo e query in `references/ancore-scientifiche.md`.
+
+2. **Il parametro di uno studio è un dato, non una prescrizione.** *"Nello studio hanno svolto [l'esercizio] per [N] settimane"* è evidenza, e sta qui. *"Fai fare [N] settimane al paziente, consegnandogli la scheda alla seconda seduta"* è protocollo, e sta nella Procedura. Il criterio è il tempo verbale e il destinatario. Questa eccezione esiste perché il vecchio confine espelleva dalla Bibbia proprio la leva con la migliore evidenza al mondo.
 
 ## Voce
 
@@ -140,7 +151,7 @@ Il dettaglio completo sta in `references/regole-di-scrittura.md`. **Leggilo prim
 
 ## Cosa produci
 
-1. **Bibbia completa** `.docx` — 8.000-12.000 parole.
+1. **Bibbia completa** `.docx` — 8.000-13.000 parole.
 2. **Mappa concettuale** `.docx` — una pagina, sei blocchi. Spec in `references/mappa-concettuale.md`. Senza, la Bibbia si studia una volta e si dimentica.
 3. **Voce per l'indice maestro** — vedi `references/sistema-libreria.md`.
 
@@ -155,17 +166,20 @@ La lavorazione sta in markdown sotto `bibbie-generate/<slug>/`; i deliverable `.
 3. Renderizza in PDF/immagine e **guarda**: tabelle spezzate o heading persi si vedono solo così.
 4. I file finiscono in `outputs/<slug>/` (`Bibbia_<Condizione>.docx`, `Mappa_<Condizione>.docx`): presentali insieme.
 
-## Revisione avversariale — cinque livelli
+## Revisione avversariale — sei livelli
 
 Una Bibbia non si consegna senza revisione. I ruoli sono dichiarati nel manifesto `bibbie-generate/_dati/livelli.json`:
 
-- **1º livello** — dieci lenti in parallelo sul contenuto: specialista, medico-generale, sicurezza-tecniche, fisioterapista-ebp, compliance, neolaureato, sistema-dominante, modelli, neuromodulazione, clinico-esperto → **v2**
-- **2º livello** — `fedelta-bibbia`, audit contro l'architettura → **v3**
+- **1º livello** — undici lenti in parallelo sul contenuto: specialista, medico-generale, sicurezza-tecniche, fisioterapista-ebp, compliance, neolaureato, sistema-dominante, modelli, neuromodulazione, clinico-esperto, **strumenti-attivi** → **v2**
+- **2º livello** — `fedelta-bibbia` (audit contro l'architettura) e **`evidenza-estesa`** (il Ricercatore: allarga la base scientifica ai tre cerchi e impone «Quando la scienza tace») → **v3**
 - **3º livello** — `apprendimento`, la logica didattica → **v4**
 - **4º livello** — `editor`, asciugatura → **v5**
-- **5º livello** — `chiarezza`, **riscrive tutto da capo in linguaggio semplice** → **v6, quella che si consegna**
+- **5º livello** — `chiarezza`, **riscrive tutto da capo in linguaggio semplice** → **v6**
+- **6º livello** — `italiano`, il Revisore di Lingua: toglie i calchi dall'inglese, raddrizza la sintassi, scioglie i riferimenti vaghi → **v7, quella che si consegna**
 
-Il quinto livello non consiglia: produce il deliverable. Non è una scusa per consegnargli un testo illeggibile — la v1 deve già rispettare `regole-di-scrittura.md`.
+Gli ultimi due livelli non consigliano: producono il deliverable. E non sono una scusa per consegnargli un testo illeggibile — la v1 deve già rispettare `regole-di-scrittura.md`.
+
+L'ordine 5º→6º non è invertibile, per la stessa ragione per cui non lo è il 4º→5º: **si raddrizza la lingua di un testo già semplificato, non si semplifica un testo già raddrizzato.** Una riscrittura integrale dopo la revisione di lingua reintrodurrebbe i calchi che il sesto livello ha appena tolto.
 
 Quando Carlos ti porta i verdetti dei revisori, **il tuo compito è la sintesi**: elimina i doppioni, applica il triage, restituisci la lista corta. La regola che protegge il documento: **il feedback si pesa, non si somma** — ERRORE si corregge, RISCHIO si valuta, PREFERENZA si ignora di default. Se dopo una revisione la Bibbia è cresciuta oltre il 20%, hai sommato invece di pesare.
 

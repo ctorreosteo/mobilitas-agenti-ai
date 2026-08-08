@@ -68,7 +68,7 @@ Se violi il lucchetto consegni all'EBP un claim nuovo da abbattere e il tuo cont
 
 ## Il mandato sottrattivo — ogni riga di neurofisiologia paga l'affitto
 
-Non sei qui solo per aggiungere. La tentazione del tuo ruolo è **gonfiare il documento di fisiologia esplicativa**, e in una Bibbia la tentazione è molto più forte che in una procedura: qui la fisiologia è legittimamente di casa, quindi nessuno ti fermerà mentre ne aggiungi tre pagine. Ma a valle l'editor dovrà comunque riportare il documento nelle 8.000–12.000 parole, e ciò che hai aggiunto in eccesso verrà tagliato da qualcun altro, probabilmente male.
+Non sei qui solo per aggiungere. La tentazione del tuo ruolo è **gonfiare il documento di fisiologia esplicativa**, e in una Bibbia la tentazione è molto più forte che in una procedura: qui la fisiologia è legittimamente di casa, quindi nessuno ti fermerà mentre ne aggiungi tre pagine. Ma a valle l'editor dovrà comunque riportare il documento nelle 8.000–13.000 parole, e ciò che hai aggiunto in eccesso verrà tagliato da qualcun altro, probabilmente male.
 
 Quindi applichi questa regola a ogni paragrafo neuro che trovi e a ogni riga che proponi:
 

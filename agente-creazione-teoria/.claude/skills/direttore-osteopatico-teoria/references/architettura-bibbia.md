@@ -11,10 +11,25 @@ Una Bibbia è **tutto quello che devi sapere su una condizione per poterla risol
 | Che cos'è, perché succede | Cosa fai alla prima seduta |
 | Quali meccanismi la tengono in piedi | Quali tecniche, in che ordine |
 | Come si riconosce il sottotipo | Quanti minuti per blocco |
-| Perché le mani possono agire | Quali esercizi, con che dose |
+| Perché le mani possono agire | Quali tecniche, con che dose |
+| Perché un esercizio funziona, e cosa hanno misurato gli studi | Quale esercizio dai a *questo* paziente, e quando |
 | Quanto è solido tutto questo | Come misuri e quando rivaluti |
 
-**Confine netto:** la Bibbia arriva fino al **razionale della leva** ("il collo può agire sull'acufene perché C2 proietta sul nucleo cocleare, e questo è quanto è solido"). Si ferma **prima** del gesto ("inibizione dei sub-occipitali, 3 minuti"). Se ti ritrovi a scrivere una sequenza, dei minuti o una dose, sei uscito dalla Bibbia.
+**Confine netto:** la Bibbia arriva fino al **razionale della leva** ("il collo può agire sull'acufene perché C2 proietta sul nucleo cocleare, e questo è quanto è solido"). Si ferma **prima** del gesto ("inibizione dei sub-occipitali, 3 minuti"). Se ti ritrovi a scrivere una sequenza, dei minuti o una dose **da somministrare**, sei uscito dalla Bibbia.
+
+### La sola eccezione: il parametro di uno studio è un dato, non una prescrizione
+
+Serve perché il confine, preso alla lettera, produceva un assurdo: su molte condizioni la leva con la **migliore evidenza al mondo** è un esercizio — respirazione, carico, rinforzo — e il documento teorico la espelleva perché "esercizio" somigliava a "protocollo". Il risultato era una Bibbia che taceva proprio dove la scienza parlava più forte.
+
+> **Il parametro usato in uno studio è un dato di evidenza, e sta nella Bibbia.**
+> **La prescrizione al nostro paziente è un atto operativo, e sta nella Procedura.**
+
+Il criterio è il **tempo verbale e il destinatario**:
+
+- *"Nello studio i pazienti hanno svolto [l'esercizio] per [N] settimane, e [la misura] è passata da [X] a [Y]"* → **dato di evidenza**, al passato, attribuito a chi l'ha misurato. Sta qui.
+- *"Fai fare [N] settimane al paziente, consegnandogli la scheda alla seconda seduta"* → **prescrizione**, all'imperativo, rivolta al nostro paziente. Sta nella Procedura.
+
+Lo schema è volutamente vuoto: quale esercizio, quante settimane e quale misura lo scopri cercando, condizione per condizione. Se questo file ti desse un esempio pieno, su quella condizione smetteresti di cercare.
 
 Chiusura obbligatoria del Capitolo 11: *"Il come si fa non è qui. Sta nella Procedura di [condizione]: due pagine, tecniche, dosi e piano delle sedute."*
 
@@ -189,6 +204,36 @@ Il capitolo che rende la Bibbia consegnabile. Obbligatorio, mai accorciato.
 - **Cosa possiamo dire e cosa no** — due elenchi affiancati, brutalmente espliciti. È la sezione che ti fa reggere davanti a uno specialista.
 - **Dove la letteratura è sottile**, dichiarato. Su molte condizioni non esiste un ricercatore-ancora: in quel caso si dichiara, si sceglie il gruppo di ricerca più vicino e si abbassa il tono di tutte le etichette. Una Bibbia onesta su un'evidenza povera vale più di una gonfiata.
 
+#### I tre cerchi — dove si cerca la scienza
+
+Cercare solo studi di osteopatia su *questa* condizione è il modo più rapido per scrivere una Bibbia povera. Su moltissime condizioni quel materiale è tre studi piccoli, e la conclusione onesta ("si può dire poco") è vera e **incompleta**. Il metodo completo sta in `ancore-scientifiche.md`; qui la regola di struttura.
+
+Ogni Bibbia esplora **tre cerchi**, e dichiara a quale appartiene ogni fonte:
+
+| Cerchio | Cosa contiene | Cosa può reggere |
+|---|---|---|
+| **1 — Specifico** | quell'intervento, su quella condizione | DIMOSTRATO su una **leva** |
+| **2 — Trasversale** | tocco e terapia manuale sul **meccanismo** condiviso: regolazione autonomica, modulazione del dolore, interocezione, respiro, contesto | DIMOSTRATO su un **meccanismo** |
+| **3 — Fisiologico** | anatomia e fisiologia misurate della funzione coinvolta | il **razionale**, mai l'efficacia |
+
+> **La regola del ponte.** L'evidenza del cerchio 2 alza l'etichetta del **meccanismo**, mai quella della **leva** su questa condizione. Ogni fonte del cerchio 2 porta con sé la frase che dichiara il salto: *"misurato su [chi], non su pazienti con questa condizione"*.
+
+Senza questa regola il capitolo diventa *mechanism-mongering*: una catena fisiologica elegante da cui si deduce che la tecnica funzioni. È l'errore che un collega evidence-based smonta in dieci minuti, portandosi via la credibilità anche delle citazioni corrette.
+
+#### «Quando la scienza tace» — obbligatoria se il cerchio 1 è povero
+
+Sezione dedicata, dentro questo capitolo. **Si attiva quando la letteratura specifica sulla condizione è sottile**, che è il caso più frequente. Non è una scusa: è il pezzo di ragionamento che dice all'osteopata cosa fare quando gli studi non bastano — e senza il quale un lettore onesto conclude, sbagliando, che allora non si tratta.
+
+Cinque punti, in quest'ordine, senza giri di parole:
+
+1. **Assenza di prove non è prova di assenza.** Che nessuno abbia studiato un intervento non dice niente sulla sua efficacia: dice che nessuno l'ha misurata. Confondere le due cose è un errore di logica, non un eccesso di prudenza.
+2. **Perché la letteratura è sottile.** Quasi mai perché gli studi sono stati fatti e sono risultati negativi. Quasi sempre perché non sono stati fatti: nessun finanziamento, nessun outcome standardizzato, nessun placebo credibile per il tocco, campioni piccoli.
+3. **Su cosa ti basi allora**, in ordine: il **meccanismo fisiologico** documentato (cerchi 2 e 3); il **ragionamento clinico**, dichiarato come tale; la **verifica sul paziente** — un marker scelto *prima*, misurato prima e dopo.
+4. **Cosa separa questo dal pensiero magico.** La verifica, e solo quella. Scegliere il marker prima di trattare e accettare il risultato è scienza applicata a un caso singolo. Scegliere il marker dopo aver visto migliorare il paziente, no.
+5. **Cosa questo non autorizza.** Non a promettere un esito. Non a scrivere DIMOSTRATO dove c'è IPOTESI. Non a dire al paziente che "gli studi lo confermano".
+
+Il registro è quello di un direttore che difende il proprio mestiere con argomenti, mai quello di un documento che si scusa.
+
 ### Capitolo 11 — Perché le mani possono cambiare qualcosa
 
 Il razionale delle leve. **Nessun protocollo, nessuna dose, nessuna sequenza, nessun minuto.**
@@ -205,13 +250,56 @@ Poi, sempre:
 - **Cosa non possono fare le mani** su questa condizione, detto per primo se il limite è importante.
 - La chiusura obbligatoria che rimanda alla Procedura.
 
-### Capitolo 12 — Cosa dire al paziente
+### Capitolo 12 — Cosa può fare il paziente da solo — CONDIZIONALE
+
+**Questo capitolo c'è se serve, e non c'è se non serve.** La condizione di attivazione è una sola:
+
+> **Se almeno uno strumento attivo, su questa condizione, regge un'etichetta DIMOSTRATO — o un PROBABILE forte con più studi controllati — allora quello strumento ha un capitolo suo.**
+
+Il motivo è di proporzione, non di completezza. Il lettore dedica attenzione in base allo spazio, non all'etichetta: se il pezzo con la migliore evidenza del documento sta in tre righe dentro il capitolo sulla scienza, la Bibbia comunica il contrario di quello che sa. Su molte condizioni la leva meglio documentata al mondo **non è il tocco**: è un esercizio. Quando la ricerca dice questo, il documento deve dirlo con lo spazio, non solo con l'etichetta.
+
+Vale il contrario con la stessa forza: **se nessuno strumento attivo regge più di IPOTESI, il capitolo non deve esserci.** Un capitolo di esercizi senza prove è il difetto che tutto il resto del documento combatte.
+
+Le cinque famiglie da controllare, sempre: **respirazione** · **rinforzo e controllo posturale** · **carico ed esposizione graduata** · **educazione** · **leve di stile di vita legate a un meccanismo**.
+
+Struttura fissa, sei voci, in quest'ordine:
+
+1. **Cos'è lo strumento**, in due righe, senza gergo.
+2. **Su quale meccanismo agisce** — con il rimando esplicito, **per nome**, al meccanismo di «Cosa si rompe». Uno strumento scollegato dai meccanismi è un esercizio generico, e qui non ci sta.
+3. **Cosa hanno misurato gli studi** — effetto, dimensione, campione, tempo, con i parametri che *gli studi* hanno usato. Al passato e attribuiti (vedi l'eccezione di confine, in apertura di questo file).
+4. **`> Quanto è solido:`** l'etichetta, come per ogni altra cosa.
+5. **Cosa NON fa**, detto per primo se il limite è importante — e, se documentato, **cosa succede quando il paziente smette**. È la conoscenza che spiega le ricadute, e non sta in nessun altro capitolo.
+6. **La chiusura di confine**, obbligatoria: *"Come e quando consegnarlo al tuo paziente sta nella Procedura."*
+
+**Peso: 600-900 parole.** Oltre, hai trasformato una Bibbia in un manuale di esercizi.
+
+Il capitolo «Perché le mani possono cambiare qualcosa» e questo devono essere coerenti su un punto che gli osteopati sbagliano spesso: **l'effetto della singola seduta e quello della ripetizione sono cose diverse.** Un guadagno che appartiene all'allenamento, attribuito alla tecnica, porta a concludere che "su questa condizione non funziona niente".
+
+### Capitolo 13 — Cosa dire al paziente
 
 Conoscenza, non copione di vendita.
 
 - **Lo script di spiegazione:** massimo 100 parole, interamente in corsivo, tra virgolette, pronto da recitare, con la metafora centrale della Bibbia e **zero parole tecniche**.
 - **Le obiezioni e le risposte oneste:** le `obiezioni_specifiche` da `problemi.json`, ciascuna con una risposta che non promette l'esito.
 - **Cosa non promettere mai**, in tre righe.
+
+### Capitolo 14 — Cosa fare adesso
+
+Il capitolo che chiude, e l'unico che deve **muovere qualcuno** invece di informarlo. Senza, una Bibbia finisce sull'ultima obiezione del paziente e si spegne: venti pagine di conoscenza che non diventano un comportamento.
+
+Mezza pagina scarsa — **250-400 parole** — con tre blocchi e nient'altro.
+
+1. **Il filo, ricucito.** Cinque o sei righe che ripercorrono il ragionamento del documento dall'inizio alla fine: chi è il paziente, cosa si rompe, cosa comanda, dove sono le tue leve, dove finisce il tuo campo. **Non un riassunto dei capitoli** — nessun elenco, nessun "nel capitolo X abbiamo visto". È il documento raccontato come un'unica idea, quella che resta a sei mesi.
+2. **Le tre cose che cambi da lunedì.** Esattamente tre, all'imperativo, concrete e verificabili: una cosa che **guardi** e prima non guardavi, una che **dici** al paziente e prima non dicevi, una che **smetti** di fare o di promettere. Sono le tre decisioni che distinguono chi ha letto la Bibbia da chi non l'ha letta.
+3. **La chiusura che spinge.** Due o tre righe nella **voce che motiva** — corsivo, ritmo lungo. È una delle due o tre volte in tutta la Bibbia in cui quella voce compare, e va spesa qui.
+
+Regole rigide, perché è il capitolo dove il registro scivola più facilmente:
+
+- **Nessuna promessa di esito.** Si motiva sul mestiere e sul metodo, mai sul risultato del paziente. La compliance vale qui come ovunque.
+- **Niente contenuto nuovo.** Se compare un meccanismo, un limite o uno studio che il documento non aveva già detto, il capitolo è sbagliato.
+- **Niente lessico da brochure.** *Percorso*, *viaggio*, *sfida*, *insieme possiamo*, *fare la differenza*: sono le parole del marketing sanitario, che non facciamo.
+- **Niente metafore militari.**
+- Chiude, come ogni capitolo, con **Le tre cose da ricordare**. Che qui coincidono con le tre cose che cambi da lunedì: si ripetono apposta.
 
 ### Appendice A — Glossario
 
@@ -227,22 +315,26 @@ Bibliografia completa: autore, anno, titolo, rivista, **link PubMed verificato**
 
 ## Lunghezza e distribuzione
 
-**8.000–12.000 parole** — circa venti pagine. Sotto le 7.000 non è una Bibbia, è un riassunto. Sopra le 13.000 nessuno la finisce.
+**8.000–13.000 parole** — circa venti pagine. Sotto le 7.000 non è una Bibbia, è un riassunto. Sopra le 14.000 nessuno la finisce.
+
+Il tetto è stato alzato da 12.000 a 13.000 quando sono entrati il capitolo condizionale sugli strumenti attivi e il capitolo di chiusura. Non è un permesso di dilagare: è lo spazio esatto dei due capitoli nuovi.
 
 | Capitolo | Quota |
 |---|---|
-| 0–1 (uso, paziente) | ~8% |
-| 2–3 (cos'è, strutture) | ~14% |
-| 4 (fisiologia normale) | ~8% |
-| 5 (meccanismi) | ~20% |
-| 6 (sottotipi) | ~8% |
-| 7 (cinque modelli) | ~12% |
-| 8 (ragionamento) | ~10% |
+| 0–1 (uso, paziente) | ~7% |
+| 2–3 (cos'è, strutture) | ~12% |
+| 4 (fisiologia normale) | ~7% |
+| 5 (meccanismi) | ~18% |
+| 6 (sottotipi) | ~6% |
+| 7 (cinque modelli) | ~10% |
+| 8 (ragionamento) | ~8% |
 | 9 (limiti di campo) | ~7% |
-| 10 (scienza) | ~8% |
-| 11–12 (leve, paziente) | ~5% |
+| 10 (scienza, tre cerchi, quando tace) | ~9% |
+| 11 (leve delle mani) | ~5% |
+| 12 (strumenti attivi, se presente) | ~6% |
+| 13–14 (paziente, chiusura) | ~5% |
 
-Le appendici non contano nel totale.
+Le appendici non contano nel totale. Se il Capitolo 12 non si attiva, la sua quota si redistribuisce e il documento sta più vicino al fondo del range: è normale, non è un buco.
 
 ---
 
