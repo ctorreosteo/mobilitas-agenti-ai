@@ -49,7 +49,7 @@ Il principio che tiene insieme i sei passi: **questa Bibbia si studia contro i p
 - Questa Bibbia arriva fino al razionale della leva e si ferma lì.
 - Ogni affermazione importante ha la sua etichetta. Se manca, è un claim gonfiato.
 - Sulla vertigine cervicogenica esistono studi controllati veri, pochi e piccoli. Questo documento li usa e ne dichiara i limiti.
-- **Perché ci sei tu.** Tutta la letteratura controllata al mondo sul trattamento manuale della vertigine cervicogenica sono 13 studi randomizzati su 898 pazienti (De Vestel, 2022, PMID 35383538). Questo ti autorizza a dire che il tuo lavoro poggia su studi controllati con placebo. Non ti autorizza a dire che poggia su molti.
+- **Perché ci sei tu.** Tutta la letteratura controllata al mondo sul trattamento manuale della vertigine cervicogenica sono 13 studi randomizzati su 898 pazienti (De Vestel, PMID 35383538). Ti autorizza a dire che il tuo lavoro poggia su studi controllati con placebo. Non ti autorizza a dire che poggia su molti.
 
 Buon nutrimento!
 
@@ -65,15 +65,15 @@ Non dice "instabilità posturale". Dice *"cammino sulla gommapiuma"*, *"come sul
 
 Poi c'è l'altra frase: *"la testa è dentro una bolla"*. Ovattata, piena di cotone, staccata dal mondo. Non è dolore e non è vertigine vera. È un non-esserci che al medico non riesce a descrivere, e che quindi finisce fuori dal referto.
 
-Dice *"appena mi giro nel letto la stanza parte"*. Dice *"mi tira da un lato per un secondo, e quel secondo mi resta addosso tutto il giorno"*. Dice *"il supermercato è il posto peggiore del mondo"*: la fila, le luci, gli scaffali che sembrano vibrare.
+Dice *"appena mi giro nel letto la stanza parte"*. Dice *"mi tira da un lato per un secondo, e quel secondo mi resta addosso tutto il giorno"*. Dice *"il supermercato è il posto peggiore del mondo"*: la fila, le luci, gli scaffali che vibrano.
 
 E dice le due frasi che spiegano perché è diffidente prima di sedersi: *"mi hanno detto che è l'ansia"* e *"mi hanno detto che è l'età e devo conviverci"*.
 
 ### Cosa ha già fatto
 
-Ha fatto il giro completo, ed è stato un giro corretto. Visita otorinolaringoiatrica con le manovre diagnostiche. Videonistagmografia e prove caloriche. Audiometria e impedenzometria. Risonanza magnetica dell'encefalo. Spesso una visita neurologica e un controllo della pressione.
+Ha fatto il giro completo, ed è stato un giro corretto: visita otorinolaringoiatrica con le manovre diagnostiche, videonistagmografia e prove caloriche, audiometria, risonanza magnetica dell'encefalo, spesso una visita neurologica e un controllo della pressione.
 
-Ha preso la betaistina, quasi sempre. Ha preso antivertiginosi e antiemetici nella crisi, forse una benzodiazepina per qualche giorno, forse un cortisonico. Ha provato le manovre liberatorie, e a volte hanno funzionato benissimo per una settimana. Ha comprato integratori per la circolazione.
+Ha preso la betaistina, quasi sempre. Antivertiginosi e antiemetici nella crisi, forse una benzodiazepina, forse un cortisonico. Ha provato le manovre liberatorie, e a volte hanno funzionato benissimo per una settimana. Ha comprato integratori per la circolazione.
 
 E l'instabilità è rimasta.
 
@@ -81,15 +81,13 @@ Poi c'è la frase che ha sentito più spesso, ed è anche l'intuizione più vici
 
 ### Cosa nessuno ha guardato
 
-Il percorso che ha fatto guarda **l'orecchio e il cervello**. Sono i due posti giusti da guardare per primi.
-
-Ma l'equilibrio ha tre ingressi, non due. Il terzo è il **collo**: la posizione della testa sul tronco, misurata dai muscoli profondi del rachide cervicale. Nessuno gliel'ha misurata — né il riposizionamento del capo, né la rotazione con il collo in flessione, né come sta in piedi a occhi chiusi con un piede davanti all'altro.
+Il percorso che ha fatto guarda **l'orecchio e il cervello**, che sono i due posti giusti da guardare per primi. Ma l'equilibrio ha tre ingressi, non due. Il terzo è il **collo**: la posizione della testa sul tronco, misurata dai muscoli profondi del rachide cervicale. Nessuno gliel'ha misurata — né il riposizionamento del capo, né la rotazione con il collo in flessione, né come sta in piedi a occhi chiusi con un piede davanti all'altro.
 
 E nessuno ha guardato la seconda cosa: **come si tiene in piedi adesso**. Da mesi cammina irrigidito, guarda per terra, tiene il collo bloccato per non far partire niente. Quella non è la sua postura, è la sua difesa. Ed è entrata nel meccanismo.
 
 Sono due cose del tuo campo.
 
-**Ma non è sempre lui.** Quello che hai letto è l'adulto autonomo con esami negativi, il paziente più frequente. Tre altri cambiano le regole, e stanno in «Non è una condizione sola»: chi ha una vertigine a scatti di pochi secondi, chi ha una storia di emicrania, e chi gira la testa solo quando si alza.
+**Ma non è sempre lui.** Quello che hai letto è l'adulto autonomo con esami negativi, il paziente più frequente. Tre altri cambiano le regole, e stanno in «Non è una condizione sola»: la vertigine a scatti di pochi secondi, la storia di emicrania, il capogiro che compare solo alzandosi.
 
 ### Le tre domande che ti farà
 
@@ -106,7 +104,7 @@ Nei primi cinque minuti, quasi sempre in quest'ordine.
 - Arriva con esami negativi e una vita che si è ristretta di mese in mese.
 - Il percorso ha guardato orecchio e cervello. Il terzo ingresso dell'equilibrio, il collo, non l'ha misurato nessuno.
 - La sua postura rigida non è una causa che hai trovato: è una difesa che dura da mesi, ed è dentro il meccanismo.
-- **Perché ci sei tu.** In 8 persone su 10 che hanno avuto una vertigine di origine vestibolare, quella vertigine ha prodotto una visita medica, l'interruzione delle attività o giorni di assenza dal lavoro; misurato su un campione di popolazione generale tedesca, non su pazienti di uno studio osteopatico (Neuhauser, *Neurology* 2005, PMID 16186531). **Per te:** l'esito che misuri è la disabilità — cosa è tornato a fare — non il numero di giramenti. Questo ti autorizza a impostare l'obiettivo sulla vita che si è ristretta. Non ti autorizza a promettere che la sensazione sparisce.
+- **Perché ci sei tu.** In 8 persone su 10 che hanno avuto una vertigine vestibolare, quella vertigine ha prodotto una visita medica, l'interruzione delle attività o giorni di assenza dal lavoro; misurato sulla popolazione generale tedesca (Neuhauser, PMID 16186531). **Per te:** l'esito che misuri è la disabilità, non il numero di giramenti. Questo ti autorizza a impostare l'obiettivo sulla vita che si è ristretta. Non ti autorizza a promettere che la sensazione sparisce.
 
 ---
 
@@ -123,13 +121,13 @@ Il vocabolario internazionale distingue quattro sintomi vestibolari, e li tiene 
 - **Instabilità posturale**: la sensazione di non essere stabile, in piedi o camminando. La gommapiuma.
 - **Sintomi vestibolo-visivi**: la scena che oscilla, le righe che si spostano, lo scaffale che vibra.
 
-Il tuo paziente li usa tutti e quattro come sinonimi. Tu no. Chiedigli di scegliere: *"gira la stanza, o sei tu che non ti senti stabile?"* La risposta orienta metà del ragionamento.
+Il tuo paziente li usa come sinonimi. Tu no. Chiedigli di scegliere: *"gira la stanza, o sei tu che non ti senti stabile?"* La risposta orienta metà del ragionamento.
 
 ### Quanto è diffusa
 
 Quasi 8 persone su 100 hanno avuto nella vita almeno un episodio di vertigine di origine vestibolare, e circa 5 su 100 ne hanno avuta una nell'ultimo anno; misurato su un campione rappresentativo della popolazione adulta tedesca (Neuhauser, *Neurology* 2005, PMID 16186531). Colpisce più le donne, cresce con l'età, e si associa ad acufene, depressione, ipertensione e dislipidemia.
 
-**Per te:** è una condizione da grandi numeri, e la fetta che arriva da te non è quella acuta: è quella che è rimasta dopo.
+**Per te:** la fetta che arriva da te non è quella acuta: è quella che è rimasta dopo.
 
 ### Come evolve se non fai nulla
 
@@ -150,13 +148,11 @@ La vertigine posizionale a scatti guarisce spesso da sola: la durata mediana di 
 | Risonanza dell'encefalo | Se c'è una lesione strutturale | Perché sta male |
 | Audiometria | Se l'udito è coinvolto | Nulla sull'equilibrio del collo |
 
-Due letture sbagliate ricorrono, e le trovi entrambe nei referti che ti porta.
+Due letture sbagliate ricorrono nei referti che ti porta.
 
-La prima: **"esami vestibolari normali" non vuol dire "non ha niente"**. Vuol dire che i due labirinti rispondono. Un labirinto che risponde bene in un paziente che sta male sposta la ricerca altrove.
+**"Esami vestibolari normali" non vuol dire "non ha niente"**: vuol dire che i due labirinti rispondono, e un labirinto che risponde bene in un paziente che sta male sposta la ricerca altrove.
 
-La seconda: **"deficit vestibolare residuo" non vuol dire "questo spiega il sintomo"**. Un deficit misurato e un paziente ben ricalibrato stanno benissimo insieme; un deficit piccolo e un paziente terrorizzato stanno male insieme. La corrispondenza fra danno e sintomo, qui, è debole.
-
-E poi c'è **"labirintite"**: una parola che nei referti italiani copre tutto e non individua niente. Quando la leggi, chiedi cosa hanno misurato davvero.
+**"Deficit vestibolare residuo" non vuol dire "questo spiega il sintomo"**: un deficit misurato e un paziente ben ricalibrato stanno benissimo insieme, un deficit piccolo e un paziente terrorizzato stanno male insieme. La corrispondenza fra danno e sintomo, qui, è debole.
 
 ### Cosa non è
 
@@ -173,7 +169,7 @@ La **vertigine percettiva posturale persistente** è instabilità quasi quotidia
 - Fatti scegliere fra "gira la stanza" e "non sono stabile": è la prima biforcazione del ragionamento.
 - Esami vestibolari normali non chiudono il caso: spostano la ricerca.
 - La forma cronica più comune non è vestibolare in senso stretto, è percettiva.
-- **Perché ci sei tu.** La vertigine posizionale a scatti riguarda circa 2 persone su 100 nell'arco della vita, ma solo 8 su 100 di chi ce l'ha ha ricevuto un trattamento efficace; misurato sulla popolazione generale tedesca (von Brevern, *J Neurol Neurosurg Psychiatry* 2007, PMID 17135456). **Per te:** una fetta consistente di chi ti si siede davanti ha un quadro posizionale mai trattato, e il tuo compito è riconoscerlo in trenta secondi di anamnesi. Questo ti autorizza a riconoscerlo e a mandarlo a chi esegue le manovre. Non ti autorizza a trattarlo tu.
+- **Perché ci sei tu.** La vertigine posizionale a scatti riguarda circa 2 persone su 100 nella vita, ma solo 8 su 100 di chi ce l'ha ha ricevuto un trattamento efficace; misurato sulla popolazione generale tedesca (von Brevern, PMID 17135456). **Per te:** una parte di chi ti si siede davanti ha un quadro posizionale mai trattato. Questo ti autorizza a riconoscerlo e a mandarlo a chi esegue le manovre. Non ti autorizza a trattarlo tu.
 
 ---
 
@@ -183,31 +179,31 @@ La **vertigine percettiva posturale persistente** è instabilità quasi quotidia
 
 ### Il labirinto posteriore
 
-**Cos'è:** tre canali semicircolari e due organi otolitici, dentro l'osso temporale. **Cosa fa:** i canali misurano l'accelerazione angolare della testa, gli otoliti quella lineare e la gravità. **Perché conta qui:** misura la testa **nello spazio**, non la testa **sul corpo**. È il limite che rende necessario il collo.
+**Cos'è:** tre canali semicircolari e due organi otolitici, dentro l'osso temporale. **Cosa fa:** i canali misurano l'accelerazione angolare della testa, gli otoliti quella lineare e la gravità. **Perché conta qui:** misura la testa **nello spazio**, non **sul corpo**. È il limite che rende necessario il collo.
 
 ### I nuclei vestibolari
 
-**Cosa sono:** quattro nuclei nel tronco encefalico, al confine fra bulbo e ponte. **Cosa fanno:** ricevono il labirinto, ma anche la vista, la propriocezione di collo e tronco, e la copia di quello che il cervello ha appena ordinato ai muscoli. **Perché contano qui:** è il tavolo. Se due testimoni raccontano storie diverse, il conflitto nasce lì.
+**Cosa sono:** quattro nuclei nel tronco encefalico. **Cosa fanno:** ricevono il labirinto, ma anche la vista, la propriocezione di collo e tronco, e la copia di quello che il cervello ha appena ordinato ai muscoli. **Perché contano qui:** è il tavolo. Se due testimoni raccontano storie diverse, il conflitto nasce lì.
 
 ### I muscoli sub-occipitali e il lungo del collo
 
-**Cosa sono:** i muscoli profondi del rachide cervicale — retti posteriori della testa, obliqui, e sul davanti il **lungo del collo**. **Cosa fanno:** più che muovere, misurano. Il lungo del collo ha un'alta densità di fusi neuromuscolari, cioè di sensori di stiramento, e quella densità non cambia con l'età (Boyd-Clark, *Spine* 2002, PMID 11923661). **Perché contano qui:** sono l'organo di senso che dice al tronco encefalico dove sta la testa rispetto al corpo.
+**Cosa sono:** i muscoli profondi del rachide cervicale — retti posteriori della testa, obliqui, e sul davanti il **lungo del collo**. **Cosa fanno:** più che muovere, misurano. Il lungo del collo ha un'alta densità di fusi neuromuscolari, cioè di sensori di stiramento, e quella densità non cambia con l'età (Boyd-Clark, PMID 11923661). **Perché contano qui:** dicono al tronco encefalico dove sta la testa rispetto al corpo.
 
 ### L'articolazione atlanto-assiale (C1-C2)
 
-**Cos'è:** l'articolazione fra prima e seconda vertebra cervicale. **Cosa fa:** porta circa metà della rotazione dell'intero rachide cervicale. **Perché conta qui:** è il segmento più denso di informazione posizionale, ed è quello su cui la meta-analisi più recente trova l'effetto del trattamento manuale.
+**Cos'è:** l'articolazione fra prima e seconda vertebra cervicale. **Cosa fa:** porta circa metà della rotazione dell'intero rachide. **Perché conta qui:** è il segmento su cui la meta-analisi più recente trova l'effetto del trattamento manuale.
 
 ### Il riflesso cervico-oculare
 
 **Cos'è:** un riflesso che muove gli occhi in risposta alla rotazione del tronco sotto la testa ferma. **Cosa fa:** stabilizza lo sguardo come il riflesso vestibolo-oculare, ma partendo dal collo invece che dall'orecchio.
 
-Ed è la chicca di questo capitolo. **Nella persona sana è debole e incostante.** Nei pazienti privi di funzione vestibolare diventa netto e compensatorio: il collo prende il posto dell'orecchio nel tenere fermo lo sguardo, misurato su 12 pazienti senza funzione labirintica e 13 controlli (Bronstein & Hood, *Brain Res* 1986, PMID 3487371).
+**Nella persona sana è debole e incostante.** Nei pazienti privi di funzione vestibolare diventa netto e compensatorio: il collo prende il posto dell'orecchio nel tenere fermo lo sguardo, misurato su 12 pazienti senza funzione labirintica e 13 controlli (Bronstein & Hood, *Brain Res* 1986, PMID 3487371).
 
 > **Cosa cambia per te.** Il peso del collo dentro l'equilibrio non è fisso: **cresce quando il labirinto perde colpi.** È il motivo fisiologico per cui il collo conta di più nel paziente reduce da un evento vestibolare che nel paziente sano — e per cui ha senso guardarlo proprio dopo la "labirintite".
 
 ### Il complesso trigemino-cervicale
 
-**Cos'è:** la zona del tronco dove le fibre del trigemino e quelle delle prime radici cervicali terminano insieme. **Cosa fa:** raccoglie sullo stesso ingresso il segnale di mandibola, denti e cervicale alta. **Perché conta qui:** è la **catena** che porta il paziente che serra i denti e quello che ha il collo bloccato dallo stesso lato del tavolo.
+**Cos'è:** la zona del tronco dove le fibre del trigemino e quelle delle prime radici cervicali terminano insieme. **Cosa fa:** raccoglie sullo stesso ingresso il segnale di mandibola, denti e cervicale alta. **Perché conta qui:** è la **catena** per cui il paziente che serra i denti e quello che ha il collo bloccato arrivano dallo stesso lato del tavolo.
 
 > **Definizione.** Una **catena** è un insieme di strutture collegate che si influenzano a distanza, per continuità meccanica o per via nervosa. Spiega perché un problema in un punto può manifestarsi in un altro.
 
@@ -220,7 +216,7 @@ Ed è la chicca di questo capitolo. **Nella persona sana è debole e incostante.
 - Il labirinto misura la testa nello spazio; solo il collo dice dov'è la testa rispetto al corpo.
 - Il peso del collo nell'equilibrio cresce quando il labirinto perde funzione.
 - Nausea, sudore e pallore non accompagnano il sintomo: sono il sintomo, per via vestibolo-autonomica.
-- **Perché ci sei tu.** I muscoli profondi del collo sono organi di senso ad alta densità di fusi, e quella densità non cala con l'età (Boyd-Clark, *Spine* 2002, PMID 11923661). **Per te:** il "è l'età" che il paziente si è sentito dire non vale per il recettore che tu vai a valutare. Questo ti autorizza a trattare il collo come un ingresso sensoriale e non solo come una struttura dolente. Non ti autorizza a dire che il tuo tocco lo ricalibra.
+- **Perché ci sei tu.** I muscoli profondi del collo sono organi di senso ad alta densità di fusi, e quella densità non cala con l'età (Boyd-Clark, PMID 11923661). **Per te:** il "è l'età" che si è sentito dire non vale per il recettore che vai a valutare. Questo ti autorizza a trattare il collo come un ingresso sensoriale. Non ti autorizza a dire che il tuo tocco lo ricalibra.
 
 ---
 
@@ -228,7 +224,7 @@ Ed è la chicca di questo capitolo. **Nella persona sana è debole e incostante.
 
 > **In una riga:** stare in equilibrio non è un senso, è un confronto — e quando il confronto torna, non senti niente.
 
-La catena, in ordine.
+La sequenza, in ordine.
 
 1. **Tre sorgenti misurano la stessa cosa da tre punti diversi.** Il labirinto misura come si muove la testa nello spazio, gli occhi come si muove la scena, il collo dove sta la testa rispetto al tronco.
 
@@ -255,7 +251,7 @@ Questo è il sistema che funziona. Ora vediamo dove si rompe.
 - L'equilibrio normale è un confronto che torna, e per questo non si sente.
 - Il labirinto da solo non distingue "ho girato la testa" da "ho girato il corpo": quella differenza la porta il collo.
 - Senza movimento non c'è errore, e senza errore non c'è ricalibrazione.
-- **Perché ci sei tu.** Spegnere il segnale di un lato del collo con un anestetico produce atassia e sensazione di caduta in persone con l'orecchio perfettamente funzionante (de Jong, *Ann Neurol* 1977, PMID 407834). **Per te:** quando il paziente ti dice "l'otorino ha detto che è tutto a posto", questo è il dato che rende la sua domanda una buona domanda invece che un vicolo cieco. Questo ti autorizza ad affermare che il collo può generare instabilità. Non ti autorizza a dire che la sua viene da lì.
+- **Perché ci sei tu.** Spegnere il segnale di un lato del collo con un anestetico produce atassia e sensazione di caduta in persone con l'orecchio perfettamente funzionante (de Jong, PMID 407834). **Per te:** è il dato che rende buona la domanda del paziente che ti dice "l'otorino ha detto che è tutto a posto". Ti autorizza ad affermare che il collo può generare instabilità. Non ti autorizza a dire che la sua viene da lì.
 
 ---
 
@@ -276,7 +272,7 @@ I meccanismi sono in ordine di solidità, dal più solido al meno. Non in ordine
 
 > **Quanto è solido:** DIMOSTRATO *(studi sull'uomo, solidi)* — che l'esercizio vestibolare migliori sintomi e stabilità dello sguardo è sostenuto da 39 studi su 2.441 partecipanti (McDonnell & Hillier, *Cochrane* 2015, PMID 25581507) e da una linea guida con raccomandazione forte (Hall, *J Neurol Phys Ther* 2022, PMID 34864777). Che i sedativi vestibolari vadano evitati di routine è raccomandazione esplicita della linea guida sulla vertigine posizionale (Bhattacharyya, *Otolaryngol Head Neck Surg* 2017, PMID 28248609).
 
-**Come si vede addosso al paziente.** Racconta un giorno preciso in cui è cominciato tutto. La crisi vera è finita da mesi. Cammina bene in corridoio e male in mezzo alla gente. Si muove poco, gira il busto invece della testa, e ha in casa una scatola di antivertiginosi mezza vuota.
+**Come si vede addosso al paziente.** Racconta un giorno preciso in cui è cominciato tutto, e la crisi vera è finita da mesi. Cammina bene in corridoio e male in mezzo alla gente. Si muove poco, gira il busto invece della testa, e ha in casa una scatola di antivertiginosi mezza vuota.
 
 **La ruota di scorta montata e mai più cambiata: la macchina cammina, ma non oltre gli ottanta e non in curva.**
 
@@ -290,7 +286,7 @@ I meccanismi sono in ordine di solidità, dal più solido al meno. Non in ordine
 
 > **Quanto è solido:** DIMOSTRATO *(studi sull'uomo, solidi)* — come entità clinica con criteri diagnostici internazionali (Staab, *J Vestib Res* 2017, PMID 29036855) ed è la causa più comune di sintomi vestibolari cronici (Staab, *Neurol Clin* 2023, PMID 37775196). Il modello di controllo posturale che la spiega è in evoluzione: quello resta PROBABILE *(razionale forte, prove parziali)*.
 
-**Come si vede addosso al paziente.** Sta male tutti i giorni, non a crisi. Sta peggio in piedi che seduto. Il supermercato, le scale mobili e i corridoi lunghi sono i posti peggiori. Il sintomo migliora quando è distratto o sdraiato. Se lo guardi camminare, cammina come su una lastra di ghiaccio.
+**Come si vede addosso al paziente.** Sta male tutti i giorni, non a crisi, e peggio in piedi che seduto. Supermercato, scale mobili e corridoi lunghi sono i posti peggiori. Migliora quando è distratto o sdraiato. Cammina come su una lastra di ghiaccio.
 
 **Camminare tutto il giorno come si cammina sul ghiaccio: irrigidisci tutto e guardi i piedi, funziona per dieci metri e ti sfinisce in un chilometro.**
 
@@ -327,12 +323,12 @@ Fra i pazienti con vertigine cronica valutati in un centro specialistico, circa 
 ### 5. Gli ingressi che si sommano sullo stesso nucleo
 
 1. Le fibre del trigemino — mandibola, denti, articolazione temporo-mandibolare — terminano nel tronco insieme a quelle delle prime radici cervicali.
-2. Serramento notturno, morso sbilanciato o dolore mandibolare aggiungono traffico su quell'ingresso.
-3. La cervicale alta risponde alzando il tono, perché condivide il canale. Il segnale posizionale del collo peggiora per una ragione che sta fuori dal collo.
+2. Serramento notturno, morso sbilanciato o dolore mandibolare aggiungono traffico su quell'ingresso, e la cervicale alta risponde alzando il tono.
+3. Il segnale posizionale del collo peggiora per una ragione che sta fuori dal collo.
 
-> **Quanto è solido:** IPOTESI *(meccanismo coerente, nessuno studio)* — la convergenza anatomica è nota. Che il carico masticatorio produca instabilità per questa via, e che trattarlo la riduca, non è stato misurato.
+> **Quanto è solido:** IPOTESI *(meccanismo coerente, nessuno studio)* — la convergenza anatomica è nota. Che il carico masticatorio produca instabilità per questa via non è stato misurato.
 
-**Come si vede addosso al paziente.** Mandibola stanca al risveglio, usura dentale, apertura asimmetrica o rumorosa. Il sintomo peggiora nei periodi di serramento.
+**Come si vede addosso al paziente.** Mandibola stanca al risveglio, usura dentale, apertura asimmetrica o rumorosa. Peggiora nei periodi di serramento.
 
 **Due inquilini sullo stesso contatore: nessuno dei due consuma troppo, e il contatore stacca lo stesso.**
 
@@ -341,7 +337,7 @@ Fra i pazienti con vertigine cronica valutati in un centro specialistico, circa 
 - I due meccanismi meglio documentati — ricalibrazione a metà e soglia abbassata — non sono meccanici, e sono i più frequenti nel cronico.
 - Il segnale cervicale è il tuo terreno, ha una base fisiologica solida e nessun test che lo confermi.
 - L'ordine con cui li hai letti non è l'ordine in cui li tratterai: quello lo decide il paziente.
-- **Perché ci sei tu.** La forma cronica più comune di sintomo vestibolare non è un guasto d'organo, è percettiva e posturale (Staab, *Neurol Clin* 2023, PMID 37775196). **Per te:** su questo paziente non hai un bersaglio d'organo, e il lavoro sta sull'attivazione, sulla strategia posturale e sull'esposizione. Questo ti autorizza a riconoscerlo e a lavorarci con le leve che ci sono. Non ti autorizza a chiamarlo cervicale.
+- **Perché ci sei tu.** La forma cronica più comune di sintomo vestibolare non è un guasto d'organo: è percettiva e posturale (Staab, PMID 37775196). **Per te:** qui non hai un bersaglio d'organo, e il lavoro sta sull'attivazione, sulla strategia posturale e sull'esposizione. Ti autorizza a riconoscerlo e a lavorarci con le leve che ci sono. Non ti autorizza a chiamarlo cervicale.
 
 ---
 
@@ -358,13 +354,13 @@ Fra i pazienti con vertigine cronica valutati in un centro specialistico, circa 
 | Emicranico | Episodi di ore, fastidio a luce | Centrale | Poco — invio |
 | Ortostatico | Solo alzandosi, pochi secondi | Adattamento pressorio | Niente — invio |
 
-**Il posizionale a scatti.** Dura secondi, si accende con un movimento preciso e sempre lo stesso — girarsi nel letto, guardare in alto — e passa da solo se sta fermo. Ha il trattamento più efficace di tutta la vertigine, e non è tuo: la procedura di riposizionamento aumenta di quasi cinque volte la probabilità di risoluzione completa rispetto al controllo, su 11 studi e 745 pazienti (Hilton & Pinder, *Cochrane* 2014, PMID 25485940). Il tuo compito è riconoscerlo in trenta secondi di anamnesi e mandarlo.
+**Il posizionale a scatti**, che nei referti si chiama *vertigine posizionale parossistica benigna*. Dura secondi, si accende con un movimento preciso e sempre lo stesso — girarsi nel letto, guardare in alto — e passa da solo se sta fermo. Ha il trattamento più efficace di tutta la vertigine, e non è tuo: la procedura di riposizionamento aumenta di quasi cinque volte la probabilità di risoluzione completa, su 11 studi e 745 pazienti (Hilton & Pinder, PMID 25485940). Il tuo compito è riconoscerlo in trenta secondi di anamnesi e mandarlo.
 
-**Il post-acuto non ricalibrato.** Ricorda il giorno. Giorni di vertigine violenta, poi mesi di instabilità e testa nella bolla. Gli esami dicono che l'orecchio è a posto o che il deficit è modesto. Qui il collo pesa più del solito, perché il suo peso cresce quando il labirinto perde colpi. Rimando alla Bibbia della labirintite.
+**Il post-acuto non ricalibrato.** Ricorda il giorno: vertigine violenta, poi mesi di instabilità e testa nella bolla. Gli esami dicono che l'orecchio è a posto o che il deficit è modesto. Qui il collo pesa più del solito, perché il suo peso cresce quando il labirinto perde colpi. Rimando alla Bibbia della labirintite.
 
-**Il cervicogenico.** Instabilità e sbandamento, non rotazione. Dolore o rigidità cervicale che salgono e scendono insieme al sintomo. Peggiora con le posture di lavoro. È il sottotipo su cui esistono i tuoi studi controllati.
+**Il cervicogenico.** Instabilità e sbandamento, non rotazione. Dolore o rigidità cervicale che salgono e scendono insieme al sintomo. È il sottotipo su cui esistono i tuoi studi controllati.
 
-**Il percettivo persistente.** Tutti i giorni da almeno tre mesi, peggio in piedi e nei luoghi visivamente affollati, meglio quando è distratto. Qui il collo può esserci, ma non comanda. Ne parla anche la Bibbia dell'ansia somatizzata.
+**Il percettivo persistente.** Tutti i giorni da almeno tre mesi, peggio in piedi e nei luoghi affollati, meglio quando è distratto. Il collo può esserci, ma non comanda. Ne parla anche la Bibbia dell'ansia somatizzata.
 
 **L'emicranico.** Episodi da minuti a ore, con fastidio per luce e rumore, in chi ha o ha avuto emicrania anche molti anni prima. Riconoscerlo cambia il percorso del paziente più di qualunque cosa tu faccia con le mani.
 
@@ -377,7 +373,7 @@ Fra i pazienti con vertigine cronica valutati in un centro specialistico, circa 
 - Prima di scegliere cosa fai, decidi in quale delle sei righe sta il paziente.
 - Su due sottotipi il tuo lavoro è riconoscere e mandare, e farlo bene vale quanto trattare.
 - Il collo pesa di più nel post-acuto che nel paziente che non ha mai avuto un evento vestibolare.
-- **Perché ci sei tu.** L'emicrania vestibolare riguarda circa 2,7 adulti su 100, e solo 1 su 10 di chi ne soddisfa i criteri si è sentito dire che l'emicrania c'entrava con i suoi giramenti; misurato su 21.781 adulti di un'indagine nazionale statunitense (Formeister, *Otol Neurotol* 2018, PMID 30020261). **Per te:** la domanda "hai mai sofferto di mal di testa forti, anche anni fa?" ti costa dieci secondi e cambia la destinazione del paziente. Questo ti autorizza a riconoscerlo e a mandarlo al neurologo. Non ti autorizza a trattarlo.
+- **Perché ci sei tu.** L'emicrania vestibolare riguarda circa 2,7 adulti su 100, e solo 1 su 10 di chi ne soddisfa i criteri si è sentito dire che l'emicrania c'entrava con i suoi giramenti; misurato su 21.781 adulti statunitensi (Formeister, PMID 30020261). **Per te:** la domanda "hai mai sofferto di mal di testa forti, anche anni fa?" costa dieci secondi e cambia la destinazione del paziente. Ti autorizza a riconoscerlo e a mandarlo al neurologo. Non ti autorizza a trattarlo.
 
 ---
 
@@ -391,7 +387,7 @@ Fra i pazienti con vertigine cronica valutati in un centro specialistico, circa 
 
 **Gli attori.** Articolazione atlanto-assiale, sub-occipitali, lungo del collo, cerniera cervico-dorsale.
 
-**I segnali che ti dicono che pesa in questo paziente.** Rotazione ridotta da un lato con il collo in flessione. Dolore cervicale che segue lo stesso andamento del sintomo. Peggioramento con le posture mantenute. Errore di riposizionamento del capo alterato.
+**I segnali che ti dicono che pesa in questo paziente.** Rotazione ridotta da un lato con il collo in flessione. Dolore cervicale che segue l'andamento del sintomo. Peggioramento con le posture mantenute. Riposizionamento del capo alterato.
 
 > **Definizione.** La **disfunzione somatica** è un'alterazione della funzione di una parte del sistema muscolo-scheletrico e delle strutture collegate, riconoscibile all'esame manuale. È una descrizione di funzione, non una diagnosi di malattia.
 
@@ -421,7 +417,7 @@ Fra i pazienti con vertigine cronica valutati in un centro specialistico, circa 
 
 ### Modello Metabolico-Energetico
 
-**Cosa governa qui.** Le condizioni che rendono instabile una persona a prescindere dal suo equilibrio: sonno, farmaci, pressione, idratazione, alcol.
+**Cosa governa qui.** Le condizioni che rendono instabile una persona a prescindere dal suo equilibrio.
 
 **Gli attori.** Non strutture, ma variabili: sedativi e benzodiazepine assunti a lungo, ipotensione ortostatica, poco sonno, alcol.
 
@@ -437,14 +433,14 @@ Fra i pazienti con vertigine cronica valutati in un centro specialistico, circa 
 
 **I segnali che ti dicono che pesa in questo paziente.** L'elenco dei posti dove non va più si allunga ogni mese. Ha smesso di guidare. Cerca appoggi mentre cammina in corridoio. Ti chiede se il trattamento gli farà venire la vertigine prima di salire sul lettino.
 
-> **Quanto è solido:** DIMOSTRATO *(studi sull'uomo, solidi)* che i fattori contestuali — aspettativa, rituale terapeutico, relazione — modulino l'esito nei disturbi muscolo-scheletrici (Rossettini, *BMC Musculoskelet Disord* 2018, PMID 29357856); misurato sul dolore muscolo-scheletrico, non su pazienti con vertigine. Come leva su questa condizione resta PROBABILE *(razionale forte, prove parziali)*.
+> **Quanto è solido:** DIMOSTRATO *(studi sull'uomo, solidi)* che i fattori contestuali modulino l'esito nei disturbi muscolo-scheletrici (Rossettini, PMID 29357856); misurato sul dolore muscolo-scheletrico, non su pazienti con vertigine. Come leva su questa condizione resta PROBABILE *(razionale forte, prove parziali)*.
 
 **Le tre cose da ricordare, più una**
 
 - Il Biomeccanico regge su un dato preciso: cervicale alta sì, approccio globale no.
 - Il Comportamentale non è il modello di riserva quando gli altri non spiegano: qui è spesso il primo.
 - Il Metabolico-Energetico si valuta e si scrive al medico, non si tratta.
-- **Perché ci sei tu.** La meta-analisi 2025 trova un effetto per la terapia manuale mirata alla **cervicale alta** e nessuna differenza per gli approcci manuali globali (Carrasco-Uribarren, *BMC Musculoskelet Disord* 2025, PMID 40618099). **Per te:** l'evidenza che hai non premia il trattamento generico; premia il bersaglio. Questo ti autorizza a mettere la cerniera cranio-cervicale al centro della valutazione. Non ti autorizza a estendere quel risultato a un lavoro diffuso su tutto il rachide.
+- **Perché ci sei tu.** La meta-analisi 2025 trova un effetto per la terapia manuale mirata alla **cervicale alta** e nessuna differenza per gli approcci globali (Carrasco-Uribarren, PMID 40618099). **Per te:** l'evidenza non premia il trattamento generico, premia il bersaglio. Ti autorizza a mettere la cerniera cranio-cervicale al centro della valutazione. Non ti autorizza a estenderla a un lavoro diffuso su tutto il rachide.
 
 ---
 
@@ -496,7 +492,7 @@ I primi due misurano il piano che tratti; il terzo e il quarto stanno su un pian
 
 **Per te:** è il marker su un piano che non tratti, quello che serve alla prova della chiave di volta. Ma l'errore di misura è vicino alla differenza che cerchi: tre prove per lato, sempre, e uno scarto di un grado non è un cambiamento.
 
-**4. Andatura in tandem a occhi chiusi.** Dieci passi tallone-punta, si contano i passi corretti. Insieme al questionario sul dolore cervicale è il test che ha discriminato meglio la componente cervicogenica fra i pazienti con vertigine cronica (De Vestel, *Musculoskelet Sci Pract* 2022, PMID 35364427). **Soglia:** variazione di almeno due passi corretti su dieci. Piano che non tratti.
+**4. Andatura in tandem a occhi chiusi.** Dieci passi tallone-punta, si contano i passi corretti. Con il questionario sul dolore cervicale è il test che ha discriminato meglio la componente cervicogenica (De Vestel, PMID 35364427). **Soglia:** variazione di almeno due passi corretti su dieci. Piano che non tratti.
 
 > **Attenzione.** Nello studio randomizzato di riferimento la terapia manuale ha migliorato l'escursione cervicale in tutte e sei le direzioni e **non** ha migliorato né il riposizionamento del capo né l'equilibrio (Reid, *Arch Phys Med Rehabil* 2014, PMID 24792139). Se il tuo paziente migliora e il riposizionamento resta identico, il tuo lavoro ha fatto qualcosa d'altro: non ha ricalibrato la propriocezione. Va saputo prima, non scoperto dopo.
 
@@ -515,7 +511,7 @@ Sei domande, in quest'ordine.
 
 **In difesa** — teso, monosillabi, ti guarda le mani. Qui è lo stato più frequente, perché ha paura che tu gli faccia partire la vertigine. Parla al bisogno di sicurezza: annuncia ogni movimento prima di farlo, e non muovergli mai la testa senza dirlo.
 
-**Emotivo** — racconta, associa il sintomo a un periodo della vita, si commuove parlando di quello che non fa più. Parla al bisogno di essere capito. Qui il Comportamentale è spesso il dominante.
+**Emotivo** — racconta, associa il sintomo a un periodo della vita, si commuove parlando di quello che non fa più. Parla al bisogno di essere capito: qui il Comportamentale è spesso il dominante.
 
 **Razionale** — arriva con la cartellina degli esami in ordine cronologico. Parla al bisogno di logica: mostragli i numeri dei marker prima e dopo.
 
@@ -524,7 +520,7 @@ Sei domande, in quest'ordine.
 - "A monte" è una gerarchia funzionale, non una coordinata anatomica.
 - Scegli il marker prima di trattare, e scegline almeno uno su un piano che non tocchi.
 - Il paziente in allarme è quello in cui hai più da fare: la leva è l'attivazione, e ce l'hai.
-- **Perché ci sei tu.** Nello studio randomizzato di riferimento la terapia manuale ha migliorato l'escursione cervicale in tutte e sei le direzioni, e non ha migliorato riposizionamento del capo né equilibrio (Reid, *Arch Phys Med Rehabil* 2014, PMID 24792139). **Per te:** hai un effetto documentato e ne conosci il confine, il che è più di quanto sappia chiunque altro nel percorso di questo paziente. Questo ti autorizza a usare l'escursione come marker del tuo gesto. Non ti autorizza a presentarla come prova di aver ricalibrato l'equilibrio.
+- **Perché ci sei tu.** Nello studio randomizzato di riferimento la terapia manuale ha migliorato l'escursione cervicale in tutte e sei le direzioni, e non ha migliorato riposizionamento del capo né equilibrio (Reid, PMID 24792139). **Per te:** hai un effetto documentato e ne conosci il confine. Ti autorizza a usare l'escursione come marker del tuo gesto. Non ti autorizza a presentarla come prova di aver ricalibrato l'equilibrio.
 
 ---
 
@@ -534,7 +530,7 @@ Sei domande, in quest'ordine.
 
 ### Le bandiere rosse
 
-Prese dai documenti che indicano l'accertamento specialistico su questa condizione: le linee guida sulla vertigine posizionale (Bhattacharyya, PMID 28248609) e sull'ipoacusia improvvisa (Chandrasekhar, PMID 31369359), l'esame a tre passi validato sulla sindrome vestibolare acuta (Kattah, PMID 19762709), il quadro internazionale per l'esame del rachide cervicale prima di un intervento manuale (Rushton, PMID 36099171).
+Prese dai documenti che indicano l'accertamento specialistico su questa condizione: le linee guida sulla vertigine posizionale (Bhattacharyya, PMID 28248609) e sull'ipoacusia improvvisa (Chandrasekhar, PMID 31369359), l'esame a tre passi sulla sindrome vestibolare acuta (Kattah, PMID 19762709), il quadro internazionale per l'esame del rachide cervicale (Rushton, PMID 36099171).
 
 | Bandiera rossa | A chi si manda | Tempi |
 |---|---|---|
@@ -551,23 +547,23 @@ Prese dai documenti che indicano l'accertamento specialistico su questa condizio
 
 Tre persone su cento che arrivano in pronto soccorso per vertigine, capogiro o instabilità hanno un evento cerebrovascolare; misurato su una popolazione statunitense di ultra-quarantaquattrenni che accedeva al pronto soccorso, non su pazienti cronici di uno studio (Kerber, *Stroke* 2006, PMID 16946161).
 
-**Per te:** il tuo paziente cronico con esami negativi da mesi non è quel 3%, e questo ti toglie l'ansia di trattarlo. Ma il paziente che ti arriva **oggi** con un sintomo comparso ieri sta in quella popolazione, e la tabella qui sopra non si negozia.
+**Per te:** il tuo paziente cronico con esami negativi da mesi non è quel 3%. Ma quello che ti arriva **oggi** con un sintomo comparso ieri sta in quella popolazione, e la tabella qui sopra non si negozia.
 
 ### Il cancello d'ingresso
 
-Il cancello non serve a stabilire se il paziente ha diritto al trattamento. Serve a stabilire **quale delle tre situazioni hai davanti**, perché in ciascuna il tuo comportamento è diverso.
+Il cancello non stabilisce se il paziente ha diritto al trattamento. Stabilisce **quale delle tre situazioni hai davanti**, perché in ciascuna il tuo comportamento è diverso.
 
 > **Definizione.** Il **reperto disfunzionale** è quello che trovi tu con le mani e con i test, e che scrivi in cartella: una zona che si muove meno, un tessuto che risponde diversamente, una funzione che non si esprime. Non è la diagnosi del paziente — è il bersaglio del tuo lavoro.
 
 > **Definizione.** Il **marker** è un segno misurabile che scegli **prima** di trattare e che rimisuri dopo, per sapere se quello che hai fatto ha cambiato qualcosa. Non è il sintomo del paziente: è il segno che ti dice se la tua ipotesi era giusta.
 
-**Il tuo mandato non nasce dalla diagnosi medica.** Nasce da un reperto disfunzionale che hai trovato e documentato, e da un marker che si muove quando lo tratti. Se hai quelli, hai un motivo per lavorare, indipendentemente da quali accertamenti siano stati fatti. **Se non hai quelli, non hai un motivo per lavorare nemmeno con la diagnosi in mano.**
+**Il tuo mandato non nasce dalla diagnosi medica.** Nasce da un reperto disfunzionale che hai trovato e documentato, e da un marker che si muove quando lo tratti. Se hai quelli hai un motivo per lavorare, indipendentemente dagli accertamenti fatti. **Se non hai quelli, non hai un motivo per lavorare nemmeno con la diagnosi in mano.**
 
-**Un reperto positivo giustifica il tuo lavoro, non sostituisce l'inquadramento medico.** Trovare una rotazione ridotta a C1-C2 e un riposizionamento del capo alterato non esclude nulla: significa che hai **qualcosa da trattare**, non che **sai cosa ha il paziente**. Le due cose convivono, e vanno dette al paziente come conviventi.
+**Un reperto positivo giustifica il tuo lavoro, non sostituisce l'inquadramento medico.** Trovare una rotazione ridotta a C1-C2 e un riposizionamento alterato non esclude nulla: hai **qualcosa da trattare**, non **sai cosa ha il paziente**. Le due cose convivono, e vanno dette al paziente come conviventi.
 
 **ROSSO — Stop.** Anche una sola bandiera rossa. Non si apre un ciclo, non si rimanda alla prossima seduta. Il paziente esce con un'indicazione medica esplicita e scritta, e con i tempi dichiarati. Se coesiste una disfunzione cervicale autonoma la si può trattare, ma il documento del trattamento dichiara che il sintomo vertiginoso è in attesa di inquadramento e **non è il bersaglio**. Nessuna eccezione, e nessun reperto positivo scavalca questa uscita.
 
-**GIALLO — Si lavora, in parallelo.** Nessuna bandiera rossa, inquadramento assente o incompleto. Qui "incompleto" ha un significato preciso: una risonanza normale e nient'altro; una visita otorinolaringoiatrica senza manovre diagnostiche posizionali; un referto che dice "labirintite" senza dire cosa è stato misurato. **È la situazione più frequente, e non è un motivo per rimandare il paziente fuori.** Si lavora a quattro condizioni.
+**GIALLO — Si lavora, in parallelo.** Nessuna bandiera rossa, inquadramento assente o incompleto. Qui "incompleto" vuol dire: una risonanza normale e nient'altro; una visita otorinolaringoiatrica senza manovre diagnostiche posizionali; un referto che dice "labirintite" senza dire cosa è stato misurato. **È la situazione più frequente, e non è un motivo per rimandare il paziente fuori.** Si lavora a quattro condizioni.
 
 1. **Un reperto tuo, positivo e scritto in cartella.** Non "il paziente ha vertigini", ma la restrizione, l'errore di riposizionamento, il test di provocazione cervicale positivo.
 2. **Il paziente sa cosa tratti e cosa no.** Frase da usare: *"io lavoro sulla componente cervicale che ho trovato. La vertigine va comunque inquadrata dal tuo medico, e nel frattempo io non aspetto."*
@@ -580,23 +576,21 @@ Il cancello non serve a stabilire se il paziente ha diritto al trattamento. Serv
 
 **La scadenza.** L'inquadramento **decade** se il sintomo cambia carattere, sede o intensità: se l'instabilità diventa rotazione vera, se compare un orecchio, se le crisi si allungano. **Un quadro che cambia forma torna al triage, dall'inizio.**
 
-**Il vincolo che non si negozia.** Tutte e tre le uscite poggiano su qualcosa di **scritto**: l'indicazione medica del ROSSO, il reperto in cartella e la comunicazione al curante del GIALLO, la revisione programmata di entrambi. **Quello che non è scritto non esiste.** Un triage non documentato è un'intenzione, e le intenzioni non reggono un perimetro professionale.
+**Il vincolo che non si negozia.** Tutte e tre le uscite poggiano su qualcosa di **scritto**: l'indicazione medica del ROSSO, il reperto in cartella e la comunicazione al curante del GIALLO, la revisione programmata di entrambi. **Quello che non è scritto non esiste**, e un triage non documentato è un'intenzione.
 
-**Perché questa versione protegge di più.** Il cancello vecchio dichiarava un requisito e poi, nella pratica, veniva aggirato. **Una regola scritta e disattesa vale meno di nessuna regola**, perché fa credere che un controllo esista. Questo dichiara cosa fai davvero in ciascuna situazione, tiene il ROSSO rigido, e mette per iscritto l'unico elemento che rende difendibile il GIALLO: il reperto tuo, il marker, il canale medico attivato, il tempo definito.
+**Perché questa versione protegge di più.** Il cancello vecchio dichiarava un requisito che nella pratica veniva aggirato. **Una regola scritta e disattesa vale meno di nessuna regola**, perché fa credere che un controllo esista. Questo dichiara cosa fai davvero in ciascuna situazione, tiene il ROSSO rigido, e mette per iscritto l'unico elemento che rende difendibile il GIALLO.
 
 ### I farmaci che ha in borsa
 
 Non li commenti mai: decide il prescrittore. Quello che ti serve è capire cosa fanno.
 
-La **betaistina** è il farmaco più prescritto per la vertigine in Italia. **Antivertiginosi e antiemetici** sedano sistema vestibolare e nausea nella crisi. Le **benzodiazepine** riducono ansia e attività vestibolare. I **cortisonici** si usano in cicli brevi nelle forme acute.
-
-I primi tre sono sedativi vestibolari, pensati per giorni e non per mesi. Un terzo delle persone sopra i 65 anni che si presenta con vertigine ne ritira uno entro trenta giorni, e chi lo ritira ha un rischio di cadute con accesso alle cure più che triplo: 8 su 100 contro 2 su 100, su 190.348 persone (Marmor, *J Am Geriatr Soc* 2025, PMID 39902815).
+La **betaistina** è il farmaco più prescritto per la vertigine in Italia. **Antivertiginosi e antiemetici** sedano sistema vestibolare e nausea nella crisi. Le **benzodiazepine** riducono ansia e attività vestibolare. I **cortisonici** si usano in cicli brevi nelle forme acute. I primi tre sono sedativi vestibolari, pensati per giorni e non per mesi. Un terzo delle persone sopra i 65 anni che si presenta con vertigine ne ritira uno entro trenta giorni, e chi lo ritira ha un rischio di cadute con accesso alle cure più che triplo: 8 su 100 contro 2 su 100, su 190.348 persone (Marmor, *J Am Geriatr Soc* 2025, PMID 39902815).
 
 **Per te:** l'anziano instabile e sedato può cadere mentre è in studio da te, e questo cambia come lo fai alzare dal lettino e cosa scrivi al curante.
 
 ### Il perimetro legale su questa condizione
 
-**Cosa dichiari nel consenso, qui e non altrove.** Tre cose.
+**Cosa dichiari nel consenso, qui e non altrove.**
 
 - Che l'oggetto del trattamento è la **disfunzione cervicale documentata** e non la cura della vertigine, e che il sintomo resta in carico all'inquadramento otorinolaringoiatrico o neurologico.
 - Che il **cambio di posizione durante la seduta può evocare transitoriamente il sintomo**, e che questo è previsto e gestito con posizioni intermedie.
@@ -604,18 +598,18 @@ I primi tre sono sedativi vestibolari, pensati per giorni e non per mesi. Un ter
 
 **Il confine di atto, dove questa condizione lo mette alla prova.** Dire al paziente "hai i cristalli spostati" è formulare una diagnosi. Eseguire una manovra di riposizionamento canalare è il trattamento di una diagnosi otologica, e la presuppone. Il tuo atto è riconoscere il pattern dall'anamnesi e dai test funzionali, documentarlo, e mandarlo a chi quella diagnosi la pone.
 
-**Il rapporto con il prescrittore.** Qui la comunicazione scritta al curante ha due contenuti fissi: il reperto cervicale con il marker scelto, e la richiesta esplicita di ciò che manca nell'inquadramento. Se il paziente assume sedativi vestibolari da mesi, quello che passi è la tua osservazione sull'instabilità e sul rischio di caduta, non un parere sulla terapia.
+**Il rapporto con il prescrittore.** La comunicazione scritta al curante ha due contenuti fissi: il reperto cervicale con il marker scelto, e la richiesta esplicita di ciò che manca nell'inquadramento. Se il paziente assume sedativi vestibolari da mesi, quello che passi è la tua osservazione sull'instabilità e sul rischio di caduta.
 
 Il riferimento normativo, come ancora: DPR 131/2021 e DPCM 2026.
 
-**Se sbagli campo.** Il danno non è la manovra: è il tempo. Un paziente trattenuto in studio sei settimane mentre il suo quadro chiedeva un accertamento ha perso sei settimane, e nessuna cartella scritta bene le restituisce.
+**Se sbagli campo.** Il danno non è la manovra: è il tempo. Un paziente trattenuto in studio sei settimane mentre il suo quadro chiedeva un accertamento ha perso sei settimane, e nessuna cartella le restituisce.
 
 **Le tre cose da ricordare, più una**
 
 - "Inquadramento incompleto" qui vuol dire una risonanza normale e nient'altro: è la situazione più frequente, ed è GIALLO, non VERDE.
 - Se il sintomo cambia carattere, sede o intensità, l'inquadramento decade e si ricomincia dal triage.
 - Il reperto giustifica il tuo lavoro e non sostituisce l'inquadramento: le due cose convivono, e vanno dette al paziente come conviventi.
-- **Perché ci sei tu.** Un terzo degli over-65 con vertigine ritira un sedativo vestibolare entro trenta giorni, e chi lo ritira cade più del triplo (Marmor, *J Am Geriatr Soc* 2025, PMID 39902815). **Per te:** nel paziente anziano il primo contributo che dai non è una tecnica, è un'osservazione scritta sul rischio di caduta che arriva a chi prescrive. Questo ti autorizza a osservare e a scrivere. Non ti autorizza a commentare la terapia, né con il paziente né con il medico.
+- **Perché ci sei tu.** Un terzo degli over-65 con vertigine ritira un sedativo vestibolare entro trenta giorni, e chi lo ritira cade più del triplo (Marmor, PMID 39902815). **Per te:** nell'anziano il primo contributo che dai è un'osservazione scritta sul rischio di caduta che arriva a chi prescrive. Ti autorizza a osservare e a scrivere. Non ti autorizza a commentare la terapia.
 
 ---
 
@@ -657,13 +651,13 @@ La meta-analisi più recente separa due cose che prima stavano insieme. La terap
 
 Aggiungere un allenamento sensomotorio cervicale al trattamento locale migliora il senso di posizione articolare e l'equilibrio più del solo trattamento locale, su 152 pazienti seguiti fino a dodici mesi (Sremakaew, *Musculoskelet Sci Pract* 2023, PMID 36414518); **misurato su pazienti con dolore cervicale, non su pazienti con vertigine come sintomo principale.**
 
-La respirazione lenta si accompagna a un aumento della variabilità della frequenza cardiaca e a una riduzione dell'ansia (Zaccaro, *Front Hum Neurosci* 2018, PMID 30245619); **misurato su soggetti sani.** I fattori contestuali — aspettativa, rituale terapeutico, relazione — modulano l'esito del trattamento (Rossettini, *BMC Musculoskelet Disord* 2018, PMID 29357856); **misurato sul dolore muscolo-scheletrico.**
+La respirazione lenta si accompagna a maggiore variabilità della frequenza cardiaca e a meno ansia (Zaccaro, PMID 30245619); **misurato su soggetti sani.** I fattori contestuali — aspettativa, rituale, relazione — modulano l'esito (Rossettini, PMID 29357856); **misurato sul dolore muscolo-scheletrico.**
 
 Sugli effetti psicofisiologici del trattamento manuale osteopatico, la meta-analisi su 20 studi randomizzati non trova effetto su ansia e stress, e trova la conduttanza cutanea aumentata (Gordon, *BMJ Open* 2025, PMID 39920074); **misurato su popolazioni miste, non su pazienti con vertigine.** Nemmeno la direzione dell'effetto è stabilita, e va detto così.
 
 > **La regola del ponte.** Queste fonti alzano l'etichetta del **meccanismo**, mai quella della **leva** su questa condizione. Un meccanismo elegante non è un risultato clinico.
 
-**Cerchio 3 — la fisiologia.** L'anestetico locale nella muscolatura cervicale di un lato produce atassia e sensazione di caduta nell'uomo (de Jong, 1977, PMID 407834). Il riflesso cervico-oculare è debole nel sano e diventa compensatorio nell'areflessia vestibolare (Bronstein & Hood, 1986, PMID 3487371). I muscoli profondi del collo hanno alta densità di fusi (Boyd-Clark, 2002, PMID 11923661). Reggono il razionale, mai l'efficacia.
+**Cerchio 3 — la fisiologia.** L'anestetico locale nella muscolatura cervicale produce atassia e sensazione di caduta nell'uomo (de Jong, PMID 407834). Il riflesso cervico-oculare è debole nel sano e diventa compensatorio nell'areflessia vestibolare (Bronstein & Hood, PMID 3487371). I muscoli profondi del collo hanno alta densità di fusi (Boyd-Clark, PMID 11923661). Reggono il razionale, mai l'efficacia.
 
 ### Cosa possiamo dire e cosa no
 
@@ -677,7 +671,7 @@ Sugli effetti psicofisiologici del trattamento manuale osteopatico, la meta-anal
 **Non possiamo dire:**
 
 - Che esista un test che dimostri l'origine cervicale della vertigine: è una diagnosi di esclusione.
-- Che il trattamento manuale "ricalibri la propriocezione" o "resetti il sistema vestibolare". Chi ha misurato il riposizionamento del capo non l'ha visto cambiare.
+- Che il trattamento manuale "ricalibri la propriocezione" o "resetti il sistema vestibolare": chi ha misurato il riposizionamento non l'ha visto cambiare.
 - Che il tocco riduca l'attivazione autonomica in una direzione prevedibile.
 - Che un lavoro sulle suture craniche modifichi il deflusso venoso o la pressione dell'orecchio interno.
 - Che il nostro lavoro sia un'alternativa alla riabilitazione vestibolare quando esiste un deficit documentato.
@@ -686,9 +680,11 @@ Sugli effetti psicofisiologici del trattamento manuale osteopatico, la meta-anal
 
 **Primo: assenza di prove non è prova di assenza.** Che nessuno abbia misurato l'effetto del trattamento manuale sul riflesso cervico-oculare non dice che quell'effetto non esista. Dice che nessuno l'ha misurato. Confondere le due cose è un errore di logica, non un eccesso di prudenza.
 
-**Secondo: perché questa letteratura è sottile.** Non perché gli studi siano stati fatti e siano risultati negativi — dove è successo, il dato è nell'elenco qui sopra. È sottile perché non sono stati fatti: manca un finanziatore, manca un placebo credibile per il tocco, manca un esito standardizzato, e soprattutto manca un criterio diagnostico oggettivo per la vertigine cervicogenica, il che rende quasi impossibile arruolare una popolazione omogenea. Dei 13 studi randomizzati esistenti, solo 3 dichiaravano la causa (De Vestel, 2022, PMID 35383538).
+**Secondo: perché questa letteratura è sottile.** Non perché gli studi siano stati fatti e siano risultati negativi — dove è successo, il dato è nell'elenco qui sopra. È sottile perché non sono stati fatti: manca un finanziatore, manca un placebo credibile per il tocco, manca un esito standardizzato, e soprattutto manca un criterio diagnostico oggettivo, il che rende quasi impossibile arruolare una popolazione omogenea. Dei 13 studi randomizzati esistenti, solo 3 dichiaravano la causa (De Vestel, PMID 35383538).
 
 **Terzo: su cosa ti basi allora**, in ordine di forza. Sul **meccanismo fisiologico** dei cerchi 2 e 3. Sul **ragionamento clinico**, dichiarato come ragionamento. Sulla **verifica sul singolo paziente**: un marker scelto prima di trattare, misurato prima e dopo, con la soglia dichiarata.
+
+> **Definizione.** Il **marker** è un segno misurabile che scegli **prima** di trattare e che rimisuri dopo, per sapere se quello che hai fatto ha cambiato qualcosa. Non è il sintomo del paziente: è il segno che ti dice se la tua ipotesi era giusta.
 
 **Quarto: cosa separa questo dal pensiero magico.** La verifica, e nient'altro. Scegliere il marker prima e accettarne il verdetto è scienza applicata a un caso singolo. Sceglierlo dopo aver visto il paziente migliorare, no. È la stessa distinzione che in ricerca separa un protocollo registrato da un'analisi fatta a posteriori.
 
@@ -699,7 +695,7 @@ Sugli effetti psicofisiologici del trattamento manuale osteopatico, la meta-anal
 - Il dato migliore che hai vale circa venti punti su cento di intensità, su un numero limitato di sedute.
 - L'effetto documentato è sulla vertigine, non sul dolore cervicale: non spostare la promessa.
 - Non esiste un test che dimostri l'origine cervicale: è e resta una diagnosi di esclusione.
-- **Perché ci sei tu.** Dei 13 studi randomizzati esistenti sulla vertigine cervicogenica, solo 3 dichiaravano quale fosse la causa nei pazienti arruolati (De Vestel, 2022, PMID 35383538). **Per te:** puoi dire a un medico che l'evidenza è di qualità moderata su una popolazione mal definita, ed è esattamente la frase che ti fa prendere sul serio. Questo ti autorizza a citare gli studi. Non ti autorizza a dire che valgono per il paziente che hai davanti.
+- **Perché ci sei tu.** Dei 13 studi randomizzati sulla vertigine cervicogenica, solo 3 dichiaravano la causa nei pazienti arruolati (De Vestel, PMID 35383538). **Per te:** puoi dire a un medico che l'evidenza è di qualità moderata su una popolazione mal definita, ed è la frase che ti fa prendere sul serio. Ti autorizza a citare gli studi. Non ti autorizza a dire che valgono per il paziente che hai davanti.
 
 ---
 
@@ -717,7 +713,7 @@ Meccanismo per meccanismo, nell'ordine in cui li hai letti.
 
 ### Sulla soglia abbassata e la postura irrigidita
 
-**Su cosa può agire una mano.** Sul livello di attivazione, con il contatto lento e prevedibile, il ritmo del respiro e il tempo dedicato. E sulla strategia rigida, restituendo escursione dove il paziente si è bloccato. **Che effetto ci si aspetta:** dentro la seduta, meno attivazione; nelle settimane, una soglia di esposizione più alta. **In quanto tempo:** l'effetto di stato è dentro la seduta e non dura da solo; lo spostamento della soglia appartiene alla ripetizione, non alla singola volta.
+**Su cosa può agire una mano.** Sul livello di attivazione, con il contatto lento e prevedibile, il ritmo del respiro e il tempo dedicato. E sulla strategia rigida, restituendo escursione dove il paziente si è bloccato. **Che effetto ci si aspetta:** dentro la seduta, meno attivazione; nelle settimane, una soglia di esposizione più alta. **In quanto tempo:** l'effetto di stato non dura da solo; lo spostamento della soglia appartiene alla ripetizione.
 
 > **Quanto è solido:** IPOTESI *(meccanismo coerente, nessuno studio)* — la meta-analisi sugli effetti psicofisiologici del trattamento manuale osteopatico non trova effetto su ansia e stress e trova la conduttanza cutanea aumentata (Gordon, *BMJ Open* 2025, PMID 39920074). Non è stabilita nemmeno la direzione. Questo non toglie la leva: la toglie dalle cose dimostrate.
 
@@ -743,15 +739,15 @@ Meccanismo per meccanismo, nell'ordine in cui li hai letti.
 
 Tre cose, e sono sui meccanismi.
 
-**Misura il terzo ingresso.** Il percorso otologico e neurologico misura labirinto e sistema nervoso centrale. Il segnale posizionale del collo non lo misura nessun esame che il paziente abbia fatto.
+**Misura il terzo ingresso.** Il segnale posizionale del collo non lo misura nessun esame che il paziente abbia fatto.
 
-**Toglie l'ostacolo invece di sopprimere il segnale.** La strategia farmacologica della fase acuta abbassa il guadagno del sistema. Il lavoro manuale va nella direzione opposta: restituisce movimento, che è la materia prima della ricalibrazione.
+**Toglie l'ostacolo invece di sopprimere il segnale.** La strategia farmacologica della fase acuta abbassa il guadagno del sistema; il lavoro manuale va nella direzione opposta e restituisce movimento, che è la materia prima della ricalibrazione.
 
-**Guarda i tre anelli insieme.** Collo, respiro e livello di attivazione stanno in tre percorsi e in tre referti diversi. Nella tua valutazione stanno in una stanza sola.
+**Guarda i tre anelli insieme.** Collo, respiro e attivazione stanno in tre percorsi e in tre referti diversi. Nella tua valutazione stanno in una stanza sola.
 
 ### Cosa non possono fare le mani
 
-Non spostano gli otoliti, e la vertigine posizionale a scatti non è un tuo bersaglio. Non ricalibrano il sistema vestibolare: quella la fa il movimento ripetuto. Negli studi che li hanno misurati non hanno cambiato riposizionamento del capo né equilibrio. Non modificano il decorso di un'emicrania vestibolare. E non sostituiscono la riabilitazione vestibolare quando esiste un deficit documentato.
+Non spostano gli otoliti. Non ricalibrano il sistema vestibolare: quella la fa il movimento ripetuto. Negli studi che li hanno misurati non hanno cambiato riposizionamento del capo né equilibrio. Non modificano il decorso di un'emicrania vestibolare. E non sostituiscono la riabilitazione vestibolare quando esiste un deficit documentato.
 
 *Il come si fa non è qui. Sta nella Procedura delle Vertigini: due pagine, tecniche, dosi e piano delle sedute.*
 
@@ -760,7 +756,7 @@ Non spostano gli otoliti, e la vertigine posizionale a scatti non è un tuo bers
 - Su cinque meccanismi, la leva manuale documentata è una: il segnale cervicale, e mirata alla cerniera.
 - Sull'attivazione hai una leva reale con etichetta IPOTESI: la direzione è quella, la certezza non c'è.
 - Il tuo lavoro rende possibile l'esercizio; l'esercizio fa la ricalibrazione.
-- **Perché ci sei tu.** La terapia manuale mirata alla cervicale alta ha ridotto l'intensità della vertigine di circa 19 punti su 100 rispetto al controllo (Carrasco-Uribarren, 2025, PMID 40618099). **Per te:** hai un numero da mettere accanto a una promessa modesta, e un numero rende una promessa modesta più credibile di un'affermazione ampia. Questo ti autorizza a dire che una mano può cambiare l'intensità del sintomo. Non ti autorizza a dire che cambia l'equilibrio misurato.
+- **Perché ci sei tu.** La terapia manuale mirata alla cervicale alta ha ridotto l'intensità della vertigine di circa 19 punti su 100 rispetto al controllo (Carrasco-Uribarren, PMID 40618099). **Per te:** un numero rende una promessa modesta più credibile di un'affermazione ampia. Ti autorizza a dire che una mano può cambiare l'intensità del sintomo. Non ti autorizza a dire che cambia l'equilibrio misurato.
 
 ---
 
@@ -772,7 +768,7 @@ Non spostano gli otoliti, e la vertigine posizionale a scatti non è un tuo bers
 
 **Cos'è.** Due famiglie di esercizi. La prima chiede di tenere lo sguardo fisso su un bersaglio mentre si muove la testa. La seconda chiede di stare in equilibrio togliendo riferimenti: piedi vicini, poi in linea, poi occhi chiusi, poi superficie morbida.
 
-**Su quale meccanismo agisce.** Sul primo: «La ricalibrazione che si ferma a metà». Il primo gruppo ricrea l'errore fra immagine e movimento della testa, che è il segnale su cui il sistema riaggiusta i guadagni. Il secondo obbliga a ripesare le sorgenti togliendo quella su cui il paziente si è appoggiato.
+**Su quale meccanismo agisce.** Sul primo: «La ricalibrazione che si ferma a metà». La prima famiglia ricrea l'errore fra immagine e movimento della testa, che è il segnale su cui il sistema riaggiusta i guadagni. La seconda obbliga a ripesare le sorgenti togliendo quella su cui il paziente si è appoggiato.
 
 **Cosa hanno misurato gli studi.** La revisione Cochrane ha incluso 39 studi randomizzati su 2.441 partecipanti con disfunzione vestibolare periferica unilaterale, con evidenza da moderata a forte che l'esercizio vestibolare sia sicuro ed efficace (McDonnell & Hillier, *Cochrane* 2015, PMID 25581507). La linea guida raccomanda con evidenza forte di offrirlo agli adulti con deficit vestibolare, e raccomanda **contro** i movimenti oculari isolati usati da soli (Hall, *J Neurol Phys Ther* 2022, PMID 34864777). Nelle forme croniche unilaterali i protocolli degli studi impiegavano 20 minuti al giorno distribuiti in 3-5 volte, per 4-6 settimane.
 
@@ -780,23 +776,23 @@ Non spostano gli otoliti, e la vertigine posizionale a scatti non è un tuo bers
 
 > **Quanto è solido:** DIMOSTRATO *(studi sull'uomo, solidi)* — per il deficit vestibolare periferico. Su altri sottotipi il dato non è trasferibile.
 
-**Cosa non fa.** Non serve alla vertigine posizionale a scatti. Non è studiato per la vertigine cervicogenica pura. E all'inizio **peggiora temporaneamente il sintomo**, perché il suo principio attivo è proprio l'errore che il paziente sta evitando: se non gliel'ha spiegato nessuno, smette dopo due giorni. Sulla sospensione gli studi non danno una risposta chiara; quello che si osserva è che il guadagno appartiene alla ripetizione.
+**Cosa non fa.** Non serve alla vertigine posizionale a scatti e non è studiato per la vertigine cervicogenica pura. All'inizio **peggiora temporaneamente il sintomo**, perché il suo principio attivo è proprio l'errore che il paziente sta evitando: se non gliel'ha spiegato nessuno, smette dopo due giorni. Sulla sospensione gli studi non danno risposte chiare; il guadagno appartiene alla ripetizione.
 
 *Come e quando consegnarlo al tuo paziente sta nella Procedura.*
 
 ### Strumento 2 — L'allenamento sensomotorio cervicale
 
-**Cos'è.** Esercizi di riposizionamento del capo — tornare a un punto con gli occhi chiusi — combinati con esercizi di controllo dello sguardo e con esercizi di equilibrio.
+**Cos'è.** Esercizi di riposizionamento del capo — tornare a un punto con gli occhi chiusi — combinati con controllo dello sguardo ed equilibrio.
 
 **Su quale meccanismo agisce.** Sul terzo: «Il segnale del collo che non corrisponde». Allena esattamente la funzione che il test di riposizionamento misura.
 
-**Cosa hanno misurato gli studi.** Su 152 pazienti con dolore cervicale, randomizzati in quattro bracci per sei settimane, aggiungere al trattamento locale un programma combinato di riposizionamento, controllo oculomotorio ed equilibrio ha migliorato il senso di posizione articolare e l'equilibrio più del solo trattamento locale, e ha mantenuto meglio i risultati su dolore e disabilità fra i sei e i dodici mesi (Sremakaew, *Musculoskelet Sci Pract* 2023, PMID 36414518).
+**Cosa hanno misurato gli studi.** Su 152 pazienti con dolore cervicale, randomizzati in quattro bracci per sei settimane, aggiungere al trattamento locale un programma combinato di riposizionamento, controllo oculomotorio ed equilibrio ha migliorato il senso di posizione articolare e l'equilibrio, e ha mantenuto meglio i risultati su dolore e disabilità fra i sei e i dodici mesi (Sremakaew, *Musculoskelet Sci Pract* 2023, PMID 36414518).
 
-**Per te:** è la leva che compensa esattamente il limite delle tue mani. Il tuo trattamento manuale non ha mosso il riposizionamento del capo negli studi che l'hanno misurato; questo lo muove. Le due cose non competono: si completano.
+**Per te:** compensa esattamente il limite delle tue mani. Il trattamento manuale non ha mosso il riposizionamento del capo negli studi che l'hanno misurato; questo lo muove. Non competono: si completano.
 
 > **Quanto è solido:** PROBABILE *(razionale forte, prove parziali)* — misurato su pazienti con dolore cervicale, non su pazienti con vertigine come sintomo principale. Il ponte è dichiarato, non attraversato in silenzio.
 
-**Cosa non fa.** Non sostituisce l'esercizio vestibolare quando c'è un deficit vestibolare documentato. E non funziona se il paziente lo esegue guardando: il senso del test e dell'esercizio è che gli occhi siano chiusi.
+**Cosa non fa.** Non sostituisce l'esercizio vestibolare quando c'è un deficit documentato. E non funziona se il paziente lo esegue guardando: il senso è che gli occhi siano chiusi.
 
 *Come e quando consegnarlo al tuo paziente sta nella Procedura.*
 
@@ -819,7 +815,7 @@ Non spostano gli otoliti, e la vertigine posizionale a scatti non è un tuo bers
 - La leva con più prove di tutto il documento è un esercizio, e non è tua da eseguire: è tua da conoscere e da spiegare.
 - L'esercizio vestibolare peggiora il sintomo all'inizio: se non lo dici prima, il paziente smette.
 - L'allenamento sensomotorio cervicale muove ciò che le tue mani non hanno mosso negli studi.
-- **Perché ci sei tu.** L'esercizio vestibolare è sicuro ed efficace su 39 studi e 2.441 partecipanti (McDonnell & Hillier, *Cochrane* 2015, PMID 25581507). **Per te:** la parte meglio documentata della cura di questo paziente si insegna, e nel suo percorso quasi nessuno gliel'ha insegnata. Questo ti autorizza a insegnarla. Non ti autorizza a sostituirti al percorso riabilitativo vestibolare quando esiste un deficit documentato.
+- **Perché ci sei tu.** L'esercizio vestibolare è sicuro ed efficace su 39 studi e 2.441 partecipanti (McDonnell & Hillier, PMID 25581507). **Per te:** la parte meglio documentata della cura di questo paziente si insegna, e quasi nessuno gliel'ha insegnata. Ti autorizza a insegnarla. Non ti autorizza a sostituirti al percorso riabilitativo vestibolare quando esiste un deficit documentato.
 
 ---
 
@@ -843,7 +839,7 @@ La paura c'è, e dopo mesi così sarebbe strano il contrario. Ma quasi sempre ar
 Può succedere che un cambio di posizione le dia una sensazione, e per questo glielo dico prima. Si lavora con tecniche lente, annunciando ogni movimento, dentro il limite che decide lei, e si può interrompere in qualunque momento.
 
 **"Il mio caso è trattabile?"**
-È la prima cosa che devo capire, ed è lo scopo della valutazione. Misuro due o tre cose all'inizio e le rimisuro dopo. Se non si muovono nel tempo che abbiamo concordato, glielo dico e la indirizzo altrove.
+È la prima cosa che devo capire, ed è lo scopo della valutazione. Misuro due o tre cose all'inizio e le rimisuro dopo. Se non si muovono nel tempo concordato, glielo dico e la indirizzo altrove.
 
 ### La convivenza, con le stesse parole del capitolo sui limiti
 
@@ -858,7 +854,7 @@ Non promettere che la vertigine sparisce. Non dire che gli studi confermano che 
 - La frase che convince non promette la guarigione: dice cosa nessuno gli ha misurato.
 - "È ansia" si risponde separando le due cose, non negando la paura.
 - Annuncia il rischio di evocare il sintomo prima di salire sul lettino, non dopo.
-- **Perché ci sei tu.** La betaistina è il farmaco più prescritto per la vertigine in Italia, e nello studio randomizzato più ampio sulla malattia di Menière non ha ridotto il numero di attacchi rispetto al placebo, su 221 pazienti seguiti nove mesi (Adrion, *BMJ* 2016, PMID 26797774); misurato sulla malattia di Menière, non sull'insieme dei pazienti con vertigine. **Per te:** il paziente che continua a stare male con la pastiglia in tasca non è un caso strano, ed è utile saperlo per non trattare la terapia in corso come un tetto. Questo ti autorizza a offrire un percorso in parallelo. Non ti autorizza a commentare il farmaco con lui.
+- **Perché ci sei tu.** La betaistina è il farmaco più prescritto per la vertigine in Italia, e nello studio randomizzato più ampio sulla malattia di Menière non ha ridotto il numero di attacchi rispetto al placebo, su 221 pazienti seguiti nove mesi (Adrion, PMID 26797774); misurato sulla malattia di Menière, non su tutti i pazienti con vertigine. **Per te:** chi continua a stare male con la pastiglia in tasca non è un caso strano. Ti autorizza a offrire un percorso in parallelo. Non ti autorizza a commentare il farmaco con lui.
 
 ---
 
@@ -866,11 +862,13 @@ Non promettere che la vertigine sparisce. Non dire che gli studi confermano che 
 
 > **In una riga:** tre decisioni distinguono chi ha letto questa Bibbia da chi non l'ha letta.
 
+> **Definizione.** Il **marker** è un segno misurabile che scegli **prima** di trattare e che rimisuri dopo, per sapere se quello che hai fatto ha cambiato qualcosa. Non è il sintomo del paziente: è il segno che ti dice se la tua ipotesi era giusta.
+
 Ti arriva una persona a cui hanno guardato l'orecchio e il cervello, le hanno detto che è tutto a posto, e che intanto ha smesso di guidare. L'equilibrio si regge su tre ingressi, e il terzo — il collo — non l'ha misurato nessuno. Nel cronico i due guasti più frequenti non sono meccanici: la ricalibrazione ferma a metà e la soglia che si è abbassata. Il segnale cervicale alterato è il terzo, ed è il tuo, con una leva che vale circa venti punti su cento di intensità e nessun test che ne dimostri l'origine. Tutto quello che fai poggia su un marker scelto prima. E davanti a una bandiera rossa, o a un pattern posizionale a scatti, il tuo lavoro migliore è riconoscere e mandare.
 
 **Le tre cose che cambi da lunedì.**
 
-**Guarda** la rotazione con il collo in flessione e l'errore di riposizionamento del capo, su ogni paziente che ti dice "non sono stabile". Sono due misure, costano tre minuti, e ti dicono se hai un bersaglio o no.
+**Guarda** la rotazione con il collo in flessione e l'errore di riposizionamento del capo, su ogni paziente che ti dice "non sono stabile". Due misure, tre minuti, e sai se hai un bersaglio.
 
 **Di'** al paziente la frase della convivenza, per intero e in una volta sola: *"io lavoro sulla componente cervicale che ho trovato, la vertigine va comunque inquadrata dal tuo medico, e nel frattempo io non aspetto."*
 
@@ -883,7 +881,7 @@ Ti arriva una persona a cui hanno guardato l'orecchio e il cervello, le hanno de
 - Misura rotazione in flessione e riposizionamento del capo su ogni paziente instabile.
 - Di' la frase della convivenza per intero, alla prima seduta.
 - Scegli il marker e la soglia prima di toccare, sempre.
-- **Perché ci sei tu.** Circa 3 pazienti su 10 con vertigine cronica valutati in un centro specialistico avevano una componente cervicogenica (De Vestel, *Musculoskelet Sci Pract* 2022, PMID 35364427). **Per te:** vale la pena cercarla in tutti, e non vale mai la pena darla per scontata. Questo ti autorizza a mettere il collo dentro la valutazione di ogni paziente instabile. Non ti autorizza a presumerlo prima di averlo misurato.
+- **Perché ci sei tu.** Circa 3 pazienti su 10 con vertigine cronica valutati in un centro specialistico avevano una componente cervicogenica (De Vestel, PMID 35364427). **Per te:** vale la pena cercarla in tutti e non vale mai la pena darla per scontata. Ti autorizza a mettere il collo dentro la valutazione di ogni paziente instabile. Non ti autorizza a presumerlo prima di averlo misurato.
 
 ---
 
@@ -896,7 +894,7 @@ Ti arriva una persona a cui hanno guardato l'orecchio e il cervello, le hanno de
 - **DIMOSTRATO** — etichetta di solidità: studi sull'uomo, solidi.
 - **Disfunzione somatica** — alterazione della funzione di una parte del sistema muscolo-scheletrico e delle strutture collegate, riconoscibile all'esame manuale. È una descrizione di funzione, non una diagnosi di malattia.
 - **Errore di riposizionamento del capo** — scarto fra la posizione neutra vera e quella che il paziente ritrova a occhi chiusi dopo aver ruotato la testa.
-- **Fuso neuromuscolare** — sensore di stiramento dentro il muscolo. Nei muscoli profondi del collo è particolarmente abbondante.
+- **Fusi neuromuscolari** — sensori di stiramento dentro il muscolo. Nei muscoli profondi del collo sono particolarmente abbondanti.
 - **Instabilità posturale** — sensazione di non essere stabile, in piedi o camminando. La "gommapiuma".
 - **IPOTESI** — etichetta di solidità: meccanismo coerente, nessuno studio.
 - **Ipocapnia** — riduzione dell'anidride carbonica nel sangue, tipica dell'iperventilazione. Riduce il flusso ematico cerebrale.
