@@ -61,6 +61,7 @@ a cui si torna sei mesi dopo.
   direttore-osteopatico-fedelta-bibbia/    2º liv. — audit contro l'architettura
   direttore-osteopatico-evidenza-estesa/   2º liv. — il Ricercatore: i tre cerchi dell'evidenza
   direttore-osteopatico-apprendimento/     3º liv. — il documento insegna o fa solo sapere?
+  direttore-osteopatico-coerenza/          3º liv. — le nove giunture: il documento si contraddice?
   direttore-osteopatico-editor/            4º liv. — asciugatura
   direttore-osteopatico-chiarezza/         5º liv. — RISCRIVE tutto in linguaggio semplice
   direttore-osteopatico-italiano/          6º liv. — CORREGGE la lingua + metafore di servizio
@@ -128,7 +129,8 @@ toccare per aggiungere, togliere o spostare un revisore.
 2. **1º livello** — panel avversariale in parallelo sul contenuto (undici lenti) → **v2**.
 3. **2º livello** — `fedelta-bibbia` (audit contro l'architettura) ed `evidenza-estesa`
    (il Ricercatore: allarga la base scientifica ai tre cerchi) → **v3**.
-4. **3º livello** — `apprendimento`: il documento insegna o fa solo sapere? → **v4**.
+4. **3º livello** — `apprendimento` (il documento insegna o fa solo sapere?) e `coerenza`
+   (l'ispettore delle giunture: due capitoli alla volta, si contraddicono?) → **v4**.
 5. **4º livello** — `editor`: toglie ridondanza, riporta nel range → **v5**.
 6. **5º livello** — `chiarezza`: **riscrive l'intero documento da capo** con lessico e sintassi
    semplici, senza perdere una sola informazione → **v6**.

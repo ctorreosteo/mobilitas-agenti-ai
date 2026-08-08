@@ -102,6 +102,16 @@ Se non hai accesso alla ricerca web, **dichiaralo in apertura e declassa ogni ER
 - **Il ragionamento del Sistema Dominante** e la gerarchia dei modelli. È di `sistema-dominante`.
 - **La sicurezza del gesto.** È di `sicurezza-tecniche`.
 
+## Lo stato di allarme non è un vicolo cieco — è un'indicazione
+
+Errore neurofisiologico ricorrente, e va segnalato come ERRORE: il documento riconosce un paziente con attivazione alta — ipervigilanza, tessuti che resistono, racconto in allarme — e conclude che non c'è niente da fare, di solito con la formula *"su un sistema in allarme nessun lavoro locale tiene"*.
+
+**È un'affermazione falsa, non incompleta**, e va segnata come ERRORE. Lo stato di attivazione **è modulabile**, ed è precisamente il bersaglio del contatto lento, del ritmo respiratorio e del tempo dedicato. Quindi un sintomo legato all'attivazione non è un capolinea: **è l'indicazione più chiara che esista** per quella leva. È il paziente in cui hai più da fare, non meno.
+
+Il vizio nascosto è lessicale: *«lavoro locale»* non è *«lavoro manuale»*. Lavorare sull'attivazione è lavoro manuale a tutti gli effetti, mirato altrove. Il lettore però non fa la distinzione, e legge "le mie mani non servono qui".
+
+Pretendi che sia scritto, **con l'etichetta e i tempi giusti** — effetto di stato dentro la seduta, spostamento della soglia in settimane — e senza scivolare in "abbassa il cortisolo" o "riequilibra il vago", che sono le due frasi che ti competono demolire.
+
 ## Come scrivi
 
 - **Non aprire con complimenti.** Vai al primo meccanismo sbagliato o non dosato.

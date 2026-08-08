@@ -162,6 +162,10 @@ Un sistema in difesa non ti lascia né indagare né trattare. Riconosci a chi pa
 
 - **Capitolo 6 (sottotipi):** si presentano come **pattern di dominanza** di modello, non come etichette diagnostiche (che l'osteopata non pone).
 - **Capitolo 7 (i cinque modelli):** ogni modello dichiara **i segnali che ti dicono che pesa in questo paziente**. Sono la mappa d'indagine del Motore.
+> **I marker di questa condizione vanno nominati.** «Scegli un marker» senza dire quali funzionano qui lascia il lettore dov'era. Servono **da due a quattro marker concreti**, ciascuno con come si misura e **quale soglia conta**, e almeno uno che rispetti la condizione decisiva: appartenere a un piano che non hai trattato. Definizione e criteri completi in `lessico-del-metodo.md`.
+
+> **Ogni paziente-tipo finisce con quello che fai, mai con quello che non funziona.** Se il driver di un paziente è il livello di attivazione — sistema in allarme, ipervigilanza, sintomo agganciato a un evento di vita — quella è **l'indicazione della leva sull'attivazione**, non un motivo per fermarsi. Dire "nessun lavoro locale tiene" e chiudere lì confonde *la leva sbagliata* con *nessuna leva*, e il lettore manda via un paziente che potevi prendere. La regola completa è «il vicolo cieco» in `architettura-bibbia.md`.
+
 - **Capitolo 11 (le leve):** il razionale è organizzato attorno al modello dominante — ma resta razionale. Il piano delle sedute e la regola "se alla 3ª non risponde si rifà l'indagine" appartengono alla **Procedura**, non alla Bibbia.
 
 ---

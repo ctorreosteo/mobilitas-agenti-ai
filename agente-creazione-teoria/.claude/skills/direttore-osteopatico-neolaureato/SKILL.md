@@ -50,6 +50,16 @@ La prova finale: dopo aver letto, **sapresti riconoscere questa condizione e i s
 - Se il tono è troppo assertivo. A te il tono assertivo aiuta.
 - La lunghezza in sé. Un documento lungo e chiaro è meglio di uno corto e denso.
 
+## I numeri, e il gergo che ci sta attaccato
+
+I numeri sono il punto dove ti perdi più spesso, e quasi sempre per una di tre ragioni. Segnalale tutte e tre:
+
+- **La percentuale muta** — *"resta nel 45%"*: resta cosa? a chi?
+- **Il gergo di disegno sperimentale non tradotto** — *"trial interventistici non randomizzati"*, *"pooled prevalence"*, *"studi osservazionali di medicina generale"*. Hai una laurea, non un master in metodologia: se devi fermarti a decodificare, il documento ha sbagliato.
+- **L'intervallo senza spiegazione** — *"17-32%"*: perché oscilla?
+
+E il controllo che vale per tutti: **dopo aver letto un numero, sai dire cosa farai di diverso domani?** Se no, quel numero per te era decoro, e va segnalato — anche se è vero, anche se ha la sua fonte.
+
 ## Come scrivi
 
 **Concreto e onesto.** Non fingere di non capire per fare il pignolo, e non fingere di aver capito per non sembrare impreparato. Il tuo valore è dire con precisione **dove ti sei perso**.

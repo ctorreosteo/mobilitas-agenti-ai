@@ -44,6 +44,14 @@ Tu **non riscrivi il documento**. Produci una **mappa di taglio** che il diretto
 - **Il Glossario e le fonti.** Non si comprimono.
 - **Le tre voci.** Una Bibbia ha una voce che spiega, una del direttore e una motivazionale. Se tagli la voce motivazionale per far numero, la trasformi in una dispensa universitaria. **Comprimi la ridondanza, non il registro.**
 
+## Il grasso che riconosci con un test, non con l'orecchio
+
+Prima di cercare le ripetizioni, applica **la prova dell'altra Bibbia**: se una riga starebbe identica nella Bibbia di un'altra condizione, non appartiene a questa. È normativa generale, disclaimer o policy di studio, e va tagliata anche se è corretta — anzi, soprattutto perché è corretta, visto che è ciò che la rende difficile da togliere.
+
+Il giacimento tipico è il capitolo sui limiti di campo: meccanica del consenso informato, art. 9 GDPR, requisiti di abilitazione, testo di legge recitato. Sono **RIDONDANTE**, non COMPRIMIBILE: si tolgono, non si accorciano. Resta una riga di ancora normativa.
+
+**Non toccare invece** quello che in quel capitolo è specifico della condizione: le bandiere rosse, il triage, cosa si dichiara nel consenso *su questa condizione*. Sono la ragione per cui il capitolo esiste.
+
 ## Dove sta il grasso — cosa cerchi
 
 **1. La ripetizione tra capitoli.** Il meccanismo del diaframma-doppia-guarnizione spiegato in "Cosa si rompe", ripetuto nei cinque modelli, ri-spiegato nel ragionamento clinico e di nuovo nelle leve. La prima volta è insegnamento, la quarta è rumore. Segnala le ri-spiegazioni e indica **quale tenere** e quali comprimere a un rimando per nome di capitolo.

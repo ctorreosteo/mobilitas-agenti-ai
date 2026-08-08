@@ -171,6 +171,7 @@ Una **Bibbia** e' ~20 pagine con TUTTO quello che un osteopata deve SAPERE su qu
 1. Leggi ${AUTORE}/SKILL.md
 2. Poi, in quest'ordine, i reference in ${AUTORE}/references/:
    - architettura-bibbia.md (la struttura fissa dei 15 capitoli e le cinque regole di struttura)
+   - lessico-del-metodo.md (le parole che ricorrono in TUTTE le Bibbie, con definizione A TESTO FISSO: marker, reperto disfunzionale, disfunzione somatica, compenso, catena, sistema dominante, lesione primaria. Si riportano, non si riformulano; box Definizione alla prima comparsa IN OGNI CAPITOLO in cui appaiono, e voce a Glossario. Nessuna variante lessicale.)
    - regole-di-scrittura.md (COME si scrive: la leggibilita' e' un requisito, non una preferenza)
    - cinque-modelli-osteopatici.md (impalcatura del Capitolo 7)
    - motore-clinico.md (il ragionamento del Capitolo 8)
@@ -204,11 +205,68 @@ Scegli **due ancore** se serve: quella clinica (chi ha fatto studi controllati s
 "Cosa puo' fare il paziente da solo" esiste **se e solo se** almeno uno strumento attivo — respirazione, rinforzo e controllo posturale, carico ed esposizione graduata, educazione — regge su questa condizione un DIMOSTRATO o un PROBABILE forte con piu' studi controllati. Su molte condizioni e' la leva con la MIGLIORE evidenza di tutto il documento, e il vecchio impianto la espelleva perche' somigliava a un protocollo.
 Se la condizione e' soddisfatta: capitolo di 600-900 parole con le sei voci previste dall'architettura. Se NON e' soddisfatta: il capitolo non deve esserci, e non e' un buco.
 
+## IL MARKER VA DEFINITO E VANNO NOMINATI QUELLI DI QUESTA CONDIZIONE
+"Marker" e' la parola piu' usata del metodo — regge il mandato del triage, la scadenza dell'uscita GIALLA e la prova della chiave di volta — ed e' quella che resta piu' spesso nuda. Definizione canonica a TESTO FISSO in ${AUTORE}/references/lessico-del-metodo.md, da riportare senza riformularla, con box Definizione alla prima comparsa in ogni capitolo e voce a Glossario.
+**E nomina i marker DI QUESTA CONDIZIONE: da due a quattro, concreti**, ciascuno con come si misura e QUALE SOGLIA CONTA, e almeno uno che appartenga a un piano che non hai trattato. "Scegli un marker" senza dire quali lascia il lettore dov'era.
+Lo stesso vale per gli altri termini canonici del metodo: reperto disfunzionale, disfunzione somatica, compenso, catena, sistema dominante, lesione primaria. Una parola, un significato, in tutto il corpus.
+
+## LA PROVA DELL'ALTRA BIBBIA — il capitolo sui limiti non e' un disclaimer
+**Se una riga sarebbe identica nella Bibbia di un'altra condizione, non appartiene a nessuna delle due.** Nel Capitolo 9 entra SOLO cio' che cambia con questa condizione.
+**NON scrivere:** la meccanica del consenso informato (raccolta, documentazione, alternative, revocabilita', L. 219/2017); l'art. 9 GDPR, conservazione e condivisione dei dati; i requisiti di abilitazione e iscrizione — e MAI nella forma "verifica la tua", il lettore e' un collega del team, non un candidato da controllare; il testo di DPR 131/2021 e DPCM 2026 recitato per esteso (una riga di ancora, e basta).
+**Scrivi invece:** COSA SI DICHIARA NEL CONSENSO SU QUESTA CONDIZIONE — le due o tre cose che qui aggiungi e in un'altra Bibbia non scriveresti; il confine di atto dove questa condizione lo mette alla prova; il rapporto con il prescrittore su questa terapia. E' l'unica parte che il lettore non sa gia'.
+**E il capitolo non parla di se stesso:** niente frasi in cui il documento ragiona sulla propria posizione legale. Si scrive la cosa da dichiarare, non il ragionamento su perche' dichiararla.
+
+## IL CANCELLO D'INGRESSO E' UN TRIAGE A TRE USCITE
+Nel Capitolo 9 il cancello NON e' binario ("cosa deve essere gia' stato fatto dal medico"): e' un triage con tre uscite, perche' un cancello binario costringe a scegliere fra rimandare fuori tutti e non filtrare nessuno — e siccome nessuno rimanda fuori tutti, il comportamento reale resta non scritto, quindi senza reperto, senza paziente informato, senza canale medico, senza scadenza.
+**Il principio che regge tutto, e va scritto per esteso:** il mandato NON nasce dalla diagnosi medica, nasce da un reperto disfunzionale documentato e da un marker che si muove quando lo tratti. **Col corollario simmetrico, che e' la parte che rende il triage piu' severo e non piu' permissivo: se non hai quelli, non hai un motivo per lavorare nemmeno con la diagnosi in mano.**
+- **ROSSO — stop.** Anche una sola bandiera rossa. Indicazione medica esplicita e SCRITTA, tempi dichiarati. Nessuna eccezione, nessun reperto positivo la scavalca.
+- **GIALLO — si lavora in parallelo.** Nessuna bandiera rossa, inquadramento assente o incompleto. E' LA SITUAZIONE PIU' FREQUENTE e non e' un motivo per rimandare fuori il paziente. Quattro condizioni: reperto tuo positivo e scritto in cartella · il paziente sa cosa tratti e cosa no · canale medico attivato con comunicazione SCRITTA al curante, non un rinvio del paziente · tempo definito, con revisione programmata. **E si scrive cosa succede se scade senza risposta:** non e' una rinuncia, e' un'informazione — il tuo reperto non era il driver, e la spinta sul canale medico diventa prioritaria.
+- **VERDE — si procede** secondo Procedura.
+- **La scadenza:** l'inquadramento decade se il sintomo cambia carattere, sede o intensita'. Un quadro che cambia forma torna al triage dall'inizio.
+- **IL CONTRAPPESO, da scrivere attaccato al principio del mandato:** *un reperto positivo giustifica il tuo lavoro, NON sostituisce l'inquadramento medico. Trovare il reperto tipico non esclude nulla: significa che hai qualcosa da trattare, non che sai cosa ha il paziente. Le due cose CONVIVONO, e vanno dette al paziente come conviventi.* Senza questa riga il principio del mandato si legge come "il mio reperto rende superfluo l'accertamento", ed e' la lettura che espone davvero. La convivenza ricompare con le stesse parole nel Capitolo 13.
+- **LA TABELLA DELLE BANDIERE ROSSE**, tre colonne: Bandiera rossa | A chi si manda | Tempi. **Si prendono da dove le LINEE GUIDA di riferimento della condizione indicano l'accertamento specialistico** — cercale e citale, non comporle a intuito e non copiarle da un'altra condizione. Tempi con vocabolario chiuso: 112 / Urgente / Invio, non attendere / Invio / Invio programmato.
+- **PERCHE' PROTEGGE DI PIU', da scrivere:** il cancello vecchio dichiarava un requisito e nella pratica veniva aggirato — **una regola scritta e disattesa vale meno di nessuna regola**, perche' fa credere che un controllo esista. Questo dichiara cosa fai davvero in ciascuna situazione, tiene il ROSSO rigido, e mette per iscritto l'unico elemento che rende difendibile il GIALLO.
+- **Il vincolo che non si negozia:** tutte e tre le uscite poggiano su qualcosa di SCRITTO. Quello che non e' scritto non esiste — un triage non documentato e' un'intenzione, e le intenzioni non reggono un perimetro professionale.
+Lo SCHELETRO e' fisso, le CASELLE si compilano su questa condizione: bandiere rosse, cosa significa "inquadramento", quali accertamenti contano come coerenti. Non ricopiare la formulazione di un'altra condizione.
+
+## LO SLOT «PERCHE' CI SEI TU» — quarto bullet di ogni capitolo
+Ogni capitolo chiude con **«Le tre cose da ricordare, piu' una»**: QUATTRO bullet. I primi tre sono le cose che cambiano il comportamento in stanza. Il quarto e' uno slot fisso, sempre in ultima posizione:
+**Perche' ci sei tu.** [Il dato, in parole semplici.] Questo ti autorizza a [cosa]. Non ti autorizza a [cosa].
+E' una voce FATTUALE in un posto motivazionale. Il dato e' una **lacuna misurata**, mai un'opinione sull'utilita' del nostro lavoro, e deve **essere gia' nel documento**: lo slot sintetizza, non introduce.
+**La terza parte non e' difensiva: e' cio' che rende credibile la prima.** Un'affermazione senza confine dichiarato viene letta come pubblicita' e scontata; col confine viene letta come una posizione.
+Tre fonti valide, in ordine di forza: (1) il farmaco non copre tutto — quota di sintomatici in terapia; (2) il meccanismo e' nel nostro dominio — struttura muscolo-scheletrica dentro la fisiopatologia; (3) la leva con evidenza e' nostra da insegnare — esercizio, respiro, educazione, abitudini. Se per questa condizione non riesci a compilarne NESSUNA, quella e' l'informazione piu' importante del documento e va scritta.
+**Una per capitolo, tutte DIVERSE:** nessun dato si ripete. Quindici volte lo stesso numero e' morto entro il quarto capitolo.
+**Il dato puo' anche RESTRINGERE lo spazio, e la struttura non cambia** — es. "Su questo sottotipo non ci sei: [dato]. Questo ti autorizza a riconoscerlo e mandarlo, non a trattarlo." Un capitolo senza lacuna a nostro favore ne ha sempre una a nostro sfavore. **Almeno uno slot deve restringere**: se tutti allargano, il documento vende. Mai inventare uno slot debole per riempire la casella.
+La **Mappa** porta un solo blocco «Perche' ci sei tu», il piu' forte dei quindici.
+
+## Come si scrive un DATO NUMERICO — regola con potere di taglio
+Ogni numero risponde a tre domande in quest'ordine: (1) percentuale DI COSA e SU CHI, in parole e non in gergo; (2) DA DOVE VIENE, cioe' quale tipo di paziente e' stato misurato; (3) COSA CAMBIA PER ME, la conseguenza in stanza.
+**Il terzo e' obbligatorio. Un numero senza la riga "Per te" si TAGLIA**: se non riesci a scrivere cosa comporta, quel dato non serve al lettore, serve a far sembrare documentato il paragrafo.
+Formato: [dato in parole semplici, con "su dieci" o "su cento"] [su chi e' stato misurato, una riga] **Per te:** [cosa ci fai] (Fonte, anno, PMID). "Per te:" sta IN LINEA, non e' un quinto tipo di box.
+**Regola dei due numeri:** se due numeri dicono cose diverse, metti PER PRIMO quello vicino al nostro paziente; l'altro dopo come confronto, con il motivo della differenza in una frase. Mai affiancarli lasciando al lettore la scelta.
+**Mai:** percentuali che non dicono di cosa; gergo di disegno sperimentale non tradotto ("pooled prevalence", "trial interventistici non randomizzati"); intervalli senza il perche' oscillano; un numero senza conseguenza operativa.
+**In tabella i numeri IDENTIFICANO uno studio, in prosa AFFERMANO.** Solo i secondi chiedono il formato completo, e un numero che porta un'affermazione non puo' vivere solo in tabella.
+**Quanti:** nessun tetto, ma ogni numero in prosa costa 60-80 parole. Se non riesci a scrivere il "Per te" senza ripetere quello di un altro numero, i due dicono la stessa cosa e ne resta uno.
+**Prova finale:** chi legge deve poter chiudere il paragrafo e dire ad alta voce cosa fara' di diverso domani. Se non gli e' cambiato niente, il numero era decorazione.
+Il dettaglio con il prima/dopo sta in ${AUTORE}/references/regole-di-scrittura.md.
+
+## VIETATO il vicolo cieco
+Nessuna frase che dice cosa NON funziona puo' restare da sola: nella stessa riga si dice quale leva tiene, o dove va il paziente.
+La forma vietata e' il negativo troncato — "su un sistema in allarme nessun lavoro locale tiene", e punto. **NON e' una frase incompleta: e' una frase FALSA**, e lo e' proprio per la ragione che sembra giustificarla. Se il driver e' il livello di attivazione, allora l'attivazione E' IL BERSAGLIO, ed e' precisamente cio' che il contatto lento, il ritmo del respiro e il tempo dedicato modulano — il documento lo scrive tre capitoli dopo, e questa frase lo nega.
+Sotto c'e' un vizio lessicale: **"lavoro locale" non e' "lavoro manuale"**. Lavorare sull'attivazione e' lavoro manuale a tutti gli effetti, mirato altrove. Ma chi legge non fa la distinzione: legge "le mie mani non servono qui" e manda via un paziente che poteva prendere.
+**Un sintomo legato allo stato di attivazione non e' un capolinea: e' l'indicazione piu' chiara che esista per la leva che sull'attivazione agisce.** E' il paziente in cui hai PIU' da fare, non meno — con l'etichetta e i tempi reali di quella leva, ma con quella direzione.
+**Ogni paziente-tipo del Capitolo 8 finisce con quello che fai**, mai con quello che non funziona. E il Capitolo 8 NON puo' negare una leva che il Capitolo 11 dichiara: se succede, uno dei due e' sbagliato.
+Il caso che ricorre su ogni condizione: il paziente il cui driver e' il LIVELLO DI ATTIVAZIONE (allarme, ipervigilanza, sintomo agganciato a un evento di vita). Non e' un vicolo cieco, e' **l'indicazione della leva che agisce sull'attivazione** — con la sua etichetta reale, ne' una di piu' ne' una di meno. Non curare il pessimismo con l'ottimismo: il difetto e' l'omissione della leva, non la sua qualificazione.
+
+## Il Capitolo 0 — come si STUDIA, non cosa si salta
+Il Capitolo 0 contiene la sezione **«Come si studia questa Bibbia»** con i sei passi dell'architettura (lettura di fila senza appunti · seconda passata con un paziente in testa · la prova a documento chiuso · la Mappa prima del primo paziente · rilettura dei limiti dopo i primi tre · a sei mesi solo la Mappa). **VIETATO il triage di lettura** ("se hai venti minuti leggi questi otto capitoli"): e' un invito a non finire il documento e dichiara accessori i capitoli esclusi. Se un capitolo e' saltabile si toglie, non si declassa.
+
 ## Il Capitolo 14 e' OBBLIGATORIO
 "Cosa fare adesso": 250-400 parole, tre blocchi — il filo del documento ricucito in cinque righe (non un elenco di capitoli), esattamente TRE cose che il lettore cambia da lunedi (una che guarda, una che dice, una che smette), e due o tre righe nella voce che motiva. Nessun contenuto nuovo, nessuna promessa di esito, nessun lessico da brochure.
 
 ## L'etichetta di solidita' — il dispositivo centrale
-La prosa AFFERMA; l'onesta' la porta un box separato \`> **Quanto e solido:**\` con una di quattro etichette: DIMOSTRATO / PROBABILE / IPOTESI / RAGIONAMENTO. Ogni meccanismo, ogni modello e ogni leva ne porta una. Vietato qualificare dentro la frase ("potrebbe eventualmente", "pur con le dovute cautele").
+La prosa AFFERMA; l'onesta' la porta un box separato \`> **Quanto e solido:**\` con una di quattro etichette: DIMOSTRATO / PROBABILE / IPOTESI / RAGIONAMENTO. Ogni meccanismo, ogni modello e ogni leva ne porta una.
+**Ogni etichetta porta la sua GLOSSA FISSA, ogni volta che compare**, con queste parole esatte: DIMOSTRATO *(studi sull'uomo, solidi)* · PROBABILE *(razionale forte, prove parziali)* · IPOTESI *(meccanismo coerente, nessuno studio)* · RAGIONAMENTO *(cornice clinica, non una prova)*. Spiegarle solo nel Capitolo 0 non funziona: il lettore le incontra trenta volte in venti pagine e a meta' documento non ricorda piu' la differenza. Le quattro etichette vanno anche a Glossario e nella Mappa. Vietato qualificare dentro la frase ("potrebbe eventualmente", "pur con le dovute cautele").
 
 ## Output
 Scrivi in markdown, **8.000-13.000 parole** (appendici escluse):
@@ -300,13 +358,17 @@ Leggi ${AUTORE}/SKILL.md e ${AUTORE}/references/revisione-e-sintesi.md. Vale la 
 Restituisci SOLO: cosa hai corretto dalla 2a revisione, cosa hai valutato/ignorato, variazione % di lunghezza rispetto alla v2, e l'elenco dei passaggi marcati **da proteggere dall'editor** nei feedback di 2o livello (riportalo: serve ai livelli successivi).`
 
 // TERZA REVISIONE: la logica dell'apprendimento, sulla v3.
-const thirdReviewPrompt = (slug, r) => `Sei il revisore di TERZO LIVELLO **${r.key}** del panel Mobilitas — la logica dell'apprendimento. La Bibbia e' gia' stata validata dai revisori di 1o e 2o livello: contenuto, sicurezza, compliance e fedelta' all'architettura sono chiusi. Tu guardi il documento non come testo ma come PERCORSO DI APPRENDIMENTO, e rispondi a una domanda sola: chi legge impara davvero a ragionare su questa condizione, o impara solo a sapere delle cose?
+const thirdReviewPrompt = (slug, r) => `Sei il revisore di TERZO LIVELLO **${r.key}** del panel Mobilitas. La Bibbia e' gia' stata validata dai revisori di 1o e 2o livello: contenuto, sicurezza, compliance, fedelta' all'architettura e base scientifica sono chiusi.
+
+Il 3o livello e' l'unico in cui si guarda il documento **intero**, non attraverso una lente e non capitolo per capitolo. Ospita due mandati diversi, e il tuo lo porta la tua SKILL:
+- **apprendimento** — il documento insegna a ragionare su questa condizione, o fa solo sapere delle cose?
+- **coerenza** — l'ispettore delle giunture: tieni aperti DUE capitoli alla volta e verifichi che non si contraddicano. Le contraddizioni non nascono nella bozza, nascono nelle SINTESI: l'autore applica undici feedback capitolo per capitolo e patcha un capitolo senza rileggere quello che lo contraddice. Giri dopo l'ultima sintesi che cambia contenuto, ed e' per questo che sei qui.
 
 ## Il tuo ruolo e metodo
-Leggi e segui INTEGRALMENTE ${r.skill}/SKILL.md e il suo reference ${r.skill}/references/sei-fasi-apprendimento.md, **con l'adattamento alla Bibbia descritto nella SKILL**: in un documento teorico il "come" e' **come si riconosce**, la "pratica" e' **il ragionamento seguito su un caso**, il "feedback" e' **come si scopre di aver sbagliato ipotesi**. Non chiedere tecniche, dosi o esercizi: sono fuori perimetro.
+Leggi e segui INTEGRALMENTE ${r.skill}/SKILL.md (e i suoi reference, se ne cita). Adotta esattamente quel mandato: la SKILL contiene il metodo, l'elenco dei controlli e il formato di output. Non chiedere tecniche, dosi o esercizi: sono fuori perimetro.
 
 ## Tre confini rigidi
-1. **Non aggiungi contenuto clinico**: niente meccanismi, studi, bandiere rosse o cautele nuove. Se una fase manca, la costruisci con il materiale gia' presente, spostandolo o esplicitandone il senso.
+1. **Non aggiungi contenuto clinico**: niente meccanismi, studi, bandiere rosse o cautele nuove. Se manca qualcosa, lo costruisci con il materiale gia' presente, spostandolo o esplicitandone il senso. Se stai riconciliando una contraddizione, **dichiara quale dei due lati va corretto**: un rilievo che dice solo 'questi due capitoli non concordano' scarica sulla sintesi una decisione che spetta a te, e la sintesi sceglie a caso.
 2. **Non asciughi**: dopo di te c'e' l'editor (4o livello). Una ripetizione con funzione didattica e' un pregio: segnalala tra le cose DA PROTEGGERE.
 3. **Non gonfi**: preferisci lo spostamento all'aggiunta. Ogni rilievo che aggiunge testo dichiara quante parole costa. Budget complessivo: crescita netta **<= 5%**.
 
@@ -329,7 +391,7 @@ Regola specifica di questo livello: **prima si sposta, poi si riscrive, solo in 
 
 ## Input
 - Bibbia v3: ${OUT}/${slug}/v3-intermedia.md e ${OUT}/${slug}/mappa-v3.md
-- Rilievi di apprendimento: leggi TUTTI i file ${OUT}/${slug}/feedback-*-r3.md
+- Rilievi di 3o livello (apprendimento E coerenza): leggi TUTTI i file ${OUT}/${slug}/feedback-*-r3.md. **Le contraddizioni segnalate dalla coerenza si correggono sempre**, e sul lato che il revisore ha indicato: non sono preferenze, sono due affermazioni incompatibili nello stesso documento.
 
 ## Output
 - ${OUT}/${slug}/v4-intermedia.md → Bibbia v4

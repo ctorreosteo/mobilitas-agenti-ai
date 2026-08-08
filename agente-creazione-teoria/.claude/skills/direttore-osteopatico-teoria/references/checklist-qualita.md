@@ -20,6 +20,10 @@ Passa ogni punto prima di consegnare. Un solo NO = si corregge, non si consegna 
 - [ ] **Ogni sezione dice la conclusione nella prima riga**, poi la spiega.
 - [ ] **Nessuna qualificazione dentro la prosa**: niente *potrebbe eventualmente*, *sembrerebbe*, *pur con le dovute cautele*. L'incertezza sta nell'etichetta.
 - [ ] Ogni termine tecnico è spiegato **nella frase in cui compare** ed è nel Glossario.
+- [ ] **I termini del metodo hanno la definizione canonica** di `lessico-del-metodo.md`, riportata a testo fisso e non riformulata: `marker`, `reperto disfunzionale`, `disfunzione somatica`, `compenso`, `catena`, `sistema dominante`, `lesione primaria`.
+- [ ] Ognuno di essi è definito con un box `> **Definizione.**` **alla prima comparsa in ogni capitolo** in cui appare, ed è a Glossario.
+- [ ] **Nessuna variante** dei termini canonici ("indicatore", "segno di verifica" al posto di *marker*).
+- [ ] La Bibbia **nomina da due a quattro marker concreti** per questa condizione, con come si misurano e quale soglia conta. Almeno uno appartiene a un piano che non hai trattato.
 - [ ] Il Glossario non supera i 40 termini. Se li supera, la Bibbia è scritta troppo tecnica.
 - [ ] **Nessuna tabella con celle sopra le 8 parole. Nessuna tabella sopra le 4 colonne.**
 - [ ] Nessun ragionamento spezzato in bullet.
@@ -40,6 +44,12 @@ Passa ogni punto prima di consegnare. Un solo NO = si corregge, non si consegna 
 
 - [ ] Ogni studio citato ha autore, anno, titolo e link PubMed **verificati con ricerca web in questa sessione**.
 - [ ] Ogni percentuale o dato numerico è attribuito a uno studio verificato.
+- [ ] **Ogni numero in prosa ha le tre parti**: di cosa e su chi (in parole, non in gergo) · su quale tipo di paziente è stato misurato · la riga **Per te** con la conseguenza in stanza.
+- [ ] **Nessun numero senza "Per te".** Se la conseguenza non si riesce a scrivere, il numero è stato tolto, non lasciato lì.
+- [ ] **Due numeri diversi:** quello vicino al nostro paziente sta per primo, l'altro dopo come confronto, con il motivo della differenza in una frase.
+- [ ] Nessun gergo di disegno sperimentale non tradotto, nessun intervallo senza il perché oscilla, nessuna percentuale che non dice di cosa.
+- [ ] Nessun numero che porta un'affermazione vive **solo** dentro una tabella.
+- [ ] **Prova finale:** dopo ogni numero il lettore sa dire cosa farà di diverso domani.
 - [ ] **Claim verificato, non solo PMID:** nessuna frase attribuisce a uno studio un braccio, un confronto o un numero che quello studio non ha prodotto.
 - [ ] L'ancora scientifica è una persona reale con affiliazione verificata.
 - [ ] **I tre cerchi sono stati esplorati**: specifico, trasversale sul meccanismo, fisiologico. Non solo il primo.
@@ -49,20 +59,43 @@ Passa ogni punto prima di consegnare. Un solo NO = si corregge, non si consegna 
 - [ ] **Ogni meccanismo, ogni modello e ogni leva porta la sua etichetta di solidità.** Nessuna affermazione importante senza etichetta.
 - [ ] **Lucchetto chiuso:** ogni meccanismo non validato (Motore Clinico, lesione primaria, CC/CP, effetto del tocco sull'autonomico) è etichettato IPOTESI o RAGIONAMENTO, mai presentato come provato.
 - [ ] Sono usate **solo** le quattro etichette previste. Nessuna quinta inventata.
+- [ ] **Ogni box di solidità porta la sua glossa fissa**, sempre, con le stesse quattro parole di `architettura-bibbia.md`.
+- [ ] Le quattro etichette hanno una voce nel **Glossario** e compaiono nella **Mappa concettuale**.
 - [ ] L'Appendice B contiene tutte le fonti citate, e solo quelle.
 
 ## Struttura
 
 - [ ] Tutti i capitoli da 0 a 14 presenti, nell'ordine, più le due appendici. Il Capitolo 12 è l'unico condizionale.
-- [ ] Ogni capitolo apre con `> **In una riga:**` e chiude con **Le tre cose da ricordare** (esattamente tre).
+- [ ] Ogni capitolo apre con `> **In una riga:**` e chiude con **«Le tre cose da ricordare, più una»**: **quattro bullet**, l'ultimo è lo slot **«Perché ci sei tu»**.
+- [ ] **Ogni slot ha i tre elementi**: il dato · "questo ti autorizza a" · "non ti autorizza a". Il terzo non è mai generico.
+- [ ] Il dato dello slot è una **lacuna misurata già presente nel documento**, mai un'opinione sull'utilità del nostro lavoro.
+- [ ] **Nessun dato dello slot è ripetuto** in due capitoli.
+- [ ] **Almeno uno slot restringe** lo spazio invece di allargarlo. Se tutti allargano, il documento sta vendendo.
+- [ ] La Mappa porta il blocco «Perché ci sei tu» unico, il più forte.
 - [ ] I titoli dei capitoli sono domande o frasi in italiano corrente, non etichette accademiche.
 - [ ] Solo i quattro tipi di box previsti (Definizione / Quanto è solido / Attenzione / Cosa cambia per te).
 - [ ] Capitolo 5: da 3 a 6 meccanismi, ordinati **dal più solido al meno solido**, ciascuno con catena numerata, etichetta, segni sul paziente e **una** metafora.
 - [ ] Capitolo 6: almeno un sottotipo su cui puoi poco, con indicazione di invio.
 - [ ] Capitolo 7: **una sezione breve per modello**, non una tabella unica. Nessun "modello viscerale"; Trauma trattato come modificatore.
+- [ ] **Nessun vicolo cieco:** ogni frase che dice cosa non funziona dice anche cosa funziona, o dove va il paziente. Ogni paziente-tipo finisce con un'azione.
+- [ ] Il Capitolo 8 non nega nessuna leva che il Capitolo 11 dichiara. In particolare: il paziente con attivazione alta è un'**indicazione** per la leva sull'attivazione, non un motivo per fermarsi.
+- [ ] **Il cancello è un triage a tre uscite**, non una porta binaria. ROSSO senza eccezioni · GIALLO con le sue quattro condizioni · VERDE.
+- [ ] È scritto che **il mandato nasce dal reperto documentato e dal marker**, non dalla diagnosi medica — con il corollario che vale anche al contrario.
+- [ ] È scritto **cosa succede se il GIALLO scade** senza che il marker si muova.
+- [ ] È scritto il **vincolo di documentazione**: quello che non è scritto non esiste.
+- [ ] È scritto il **contrappeso**: un reperto positivo giustifica il lavoro, **non sostituisce** l'inquadramento. Avere un bersaglio non è avere una diagnosi, e le due cose convivono.
+- [ ] La **convivenza è detta al paziente**, con le stesse parole, nel GIALLO e in «Cosa dire al paziente».
+- [ ] **Tabella delle bandiere rosse a tre colonne** (bandiera / a chi / tempi), presa dalle **linee guida di riferimento** della condizione e non composta a intuito, con la fonte verificata.
+- [ ] I **tempi** usano il vocabolario chiuso: `112` · `Urgente` · `Invio, non attendere` · `Invio` · `Invio programmato`.
+- [ ] È scritto **perché il triage protegge di più** del cancello binario.
+- [ ] **Prova dell'altra Bibbia** sul capitolo dei limiti: nessuna riga starebbe identica nella Bibbia di un'altra condizione. Fuori la meccanica del consenso, l'art. 9 GDPR, i requisiti di abilitazione, il testo di legge recitato.
+- [ ] Nessun *"verifica la tua"* o formula che tratti il lettore come un candidato da controllare: è un collega del team.
+- [ ] C'è invece **cosa si dichiara nel consenso su questa condizione** — le due o tre cose che in un'altra Bibbia non scriveresti.
+- [ ] Nessun **meta-commento legale**: il documento non ragiona sulla propria posizione, scrive la cosa da dichiarare.
 - [ ] Capitolo 9 presente e non annacquato: bandiere rosse con destinatario e urgenza, cancello d'ingresso, farmaci, perimetro legale.
 - [ ] Capitolo 12 (strumenti attivi): **c'è se e solo se** uno strumento attivo regge DIMOSTRATO o PROBABILE forte. Se c'è, ha tutte e sei le voci e sta in 600-900 parole.
 - [ ] Capitolo 13: script sotto le 100 parole, in corsivo, **zero parole tecniche**.
+- [ ] Capitolo 0: c'è la sezione **«Come si studia questa Bibbia»** con i sei passi, e **NON** c'è il triage di lettura ("se hai venti minuti…").
 - [ ] Capitolo 14 presente: il filo ricucito, **esattamente tre** cose che cambi da lunedì, chiusura nella voce che motiva. Nessun contenuto nuovo, nessuna promessa di esito, nessun lessico da brochure. 250-400 parole.
 - [ ] **8.000–13.000 parole** (escluse le appendici).
 

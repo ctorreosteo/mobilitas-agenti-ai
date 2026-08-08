@@ -49,7 +49,33 @@ I capitoli si citano **per nome**, mai per numero: *"come hai visto in «Cosa si
 
 **Apertura — `> **In una riga:** …`** — la tesi del capitolo in una frase sola, prima di qualunque spiegazione. È l'unica cosa che il lettore di fretta leggerà: deve bastargli.
 
-**Chiusura — `**Le tre cose da ricordare**`** — esattamente tre bullet, una riga ciascuno. Non un riassunto: le tre cose che cambiano il tuo comportamento in stanza.
+**Chiusura — `**Le tre cose da ricordare, più una**`** — **quattro bullet**, una riga ciascuno. I primi tre non sono un riassunto: sono le tre cose che cambiano il tuo comportamento in stanza. Il quarto è uno slot fisso, descritto qui sotto.
+
+#### Lo slot «Perché ci sei tu» — quarto bullet, sempre
+
+L'ultimo bullet di ogni chiusura è fisso, e porta **il dato che rende legittimo il nostro spazio**. Non è una voce motivazionale in un posto fattuale: è **una voce fattuale in un posto motivazionale.**
+
+**Struttura obbligatoria, tre elementi:**
+
+> **Perché ci sei tu.** [Il dato, in parole semplici.] Questo ti autorizza a [cosa]. Non ti autorizza a [cosa].
+
+**La terza parte non è una limitazione difensiva: è ciò che rende credibile la prima.** Un'affermazione senza confine dichiarato viene letta come pubblicità, e il lettore la sconta — insieme a tutto il resto. Con il confine dichiarato viene letta come una posizione, e la tiene. È lo stesso dispositivo della frase-ponte e della riga *"Per te"*: **in questo metodo il limite è ciò che rende leggibile l'affermazione.**
+
+**Da dove viene il dato.** Deve essere una **lacuna misurata**, mai un'opinione sull'utilità del nostro lavoro, e deve **essere già nel documento** — questo slot sintetizza, non introduce. Tre fonti valide, in ordine di forza:
+
+1. **Il farmaco non copre tutto** — quota di pazienti sintomatici in terapia.
+2. **Il meccanismo è nel nostro dominio** — struttura muscolo-scheletrica dimostrata dentro la fisiopatologia.
+3. **La leva con evidenza è nostra da insegnare** — esercizio, respiro, educazione, abitudini.
+
+Se per una condizione non riesci a compilare **nessuna** delle tre, **quella è l'informazione più importante del documento e va scritta**: significa che lì il nostro spazio è più stretto di quanto pensavamo.
+
+**Una per capitolo, e tutte diverse.** Lo slot c'è in ogni chiusura, e **nessun dato si ripete**. Quindici volte lo stesso numero è morto entro il quarto capitolo: il lettore impara a saltare lo slot, ed è esattamente l'effetto-pubblicità che la regola esiste per evitare. Le tre fonti si distribuiscono quasi da sole — la lacuna terapeutica vive dove si parla di percorso e di scienza, il meccanismo dove si parla di strutture e di guasto, la leva attiva dove si parla di mani e di esercizio.
+
+**Il dato può anche restringere lo spazio, e la struttura non cambia.** È il punto che tiene onesto tutto il meccanismo. In un capitolo sui sottotipi o sui limiti di campo, la forma corretta è spesso:
+
+> **Perché ci sei tu.** Su questo sottotipo non ci sei: [dato]. Questo ti autorizza a riconoscerlo e a mandarlo, non a trattarlo.
+
+Un capitolo che non ha una lacuna a nostro favore **ne ha sempre una a nostro sfavore**, ed è altrettanto utile da sapere. Quello che non si fa mai è inventare uno slot debole per riempire la casella: **un «Perché ci sei tu» fiacco fa più danno di uno che restringe**, perché insegna a saltarlo.
 
 ### 3. L'incertezza esce dal testo
 
@@ -68,12 +94,43 @@ cocleare dorsale, e ne cambia il guadagno.
 
 Le quattro etichette, e nient'altro:
 
-| Etichetta | Quando si usa |
-|---|---|
-| **DIMOSTRATO** | RCT o revisioni sistematiche solide, fonte citata |
-| **PROBABILE** | razionale forte + evidenza parziale, indiretta o solo animale |
-| **IPOTESI** | meccanismo fisiologico coerente, nessuno studio diretto sul punto |
-| **RAGIONAMENTO** | cornice clinica interna (Motore Clinico, CC/CP, lesione primaria) — si scrive "si ipotizza", mai come fatto |
+| Etichetta | Quando si usa | **Glossa fissa, obbligatoria** |
+|---|---|---|
+| **DIMOSTRATO** | RCT o revisioni sistematiche solide, fonte citata | *(studi sull'uomo, solidi)* |
+| **PROBABILE** | razionale forte + evidenza parziale, indiretta o solo animale | *(razionale forte, prove parziali)* |
+| **IPOTESI** | meccanismo fisiologico coerente, nessuno studio diretto sul punto | *(meccanismo coerente, nessuno studio)* |
+| **RAGIONAMENTO** | cornice clinica interna (Motore Clinico, CC/CP, lesione primaria) — si scrive "si ipotizza", mai come fatto | *(cornice clinica, non una prova)* |
+
+##### I termini del metodo hanno una definizione fissa
+
+Alcune parole non appartengono a questa condizione ma al **metodo**, e ricompaiono in tutte le Bibbie: **marker**, **reperto disfunzionale**, **disfunzione somatica**, **compenso**, **catena**, **sistema dominante**, **lesione primaria**. La loro definizione è **canonica e a testo fisso** in `lessico-del-metodo.md`: si riporta, non si riformula.
+
+Tre obblighi, gli stessi delle etichette e per la stessa ragione:
+
+- **Box `> **Definizione.**` alla prima comparsa in ogni capitolo** in cui il termine appare — non solo alla prima del documento. Chi apre a metà deve capire lo stesso.
+- **Voce in Appendice A**, con lo stesso testo.
+- **Nessuna variante.** Non "indicatore" al posto di *marker*, non "segno di verifica". Una parola, un significato, in tutto il corpus.
+
+Il caso che ha reso necessaria questa regola: **`marker`** compariva sedici volte in una Bibbia, senza una definizione e senza voce a Glossario — mentre reggeva tre regole del metodo (il mandato del triage, la scadenza dell'uscita gialla, la prova della chiave di volta). Un termine che regge una regola e non è definito rende inapplicabile la regola.
+
+##### L'etichetta si spiega dove compare — sempre
+
+Spiegare le quattro etichette una volta sola, nel Capitolo 0, **non funziona.** Il lettore le incontra trenta volte in venti pagine, e a pagina dodici non ricorda più che differenza passi fra PROBABILE e IPOTESI. Torna indietro, o — più spesso — tira a indovinare.
+
+Quindi **ogni box porta la sua glossa, ogni volta**, nella forma fissa della colonna qui sopra:
+
+```
+> **Quanto è solido:** PROBABILE *(razionale forte, prove parziali)* — dimostrato
+> nell'animale (Shore, Nat Rev Neurol 2016). Nell'uomo il ponte è un ragionamento.
+```
+
+Tre vincoli, e non sono negoziabili:
+
+- **La glossa è testo fisso**, identica ovunque e in ogni Bibbia. Non è prosa da variare: è parte del marcatore. Ripetuta uguale diventa automatica e si smette di leggerla, che è esattamente lo scopo.
+- **Sempre, non solo alla prima comparsa in un capitolo.** Chi apre il documento a metà deve capire lo stesso.
+- **Costa quattro parole per box.** Su trenta box sono centoventi parole, ed è il miglior investimento di leggibilità dell'intero documento.
+
+Le quattro etichette vanno anche **in Appendice A (Glossario)** e nella **Mappa concettuale**: sono i termini tecnici più usati del documento, ed è assurdo che siano gli unici senza voce.
 
 Ogni meccanismo, ogni leva e ogni modello ne porta **una**. Un'affermazione senza etichetta è un'affermazione presentata come certa: se non lo è, è un claim gonfiato.
 
@@ -88,7 +145,11 @@ Sempre come blockquote, sempre con la stessa apertura in grassetto. Non inventar
 
 ### 5. Le tabelle sono griglie, non paragrafi in gabbia
 
-**Massimo 4 colonne. Massimo 8 parole per cella. Nessuna eccezione.** Se il contenuto non ci sta, non è una tabella: è prosa. La tabella dei cinque modelli della vecchia procedura acufeni aveva celle da 150 parole — è il modo più efficace conosciuto per rendere illeggibile un'informazione importante.
+**Massimo 4 colonne. Massimo 8 parole per cella. Nessuna eccezione.**
+
+**In tabella i numeri identificano, in prosa i numeri affermano.** Sono due atti diversi: *"38, RCT con sham"* risponde a *"quale studio è questo"* ed è un'etichetta; *"il 45% ha ancora bruciore"* risponde a *"cosa devo fare"* ed è un'affermazione. Solo il secondo tipo chiede il formato completo delle tre parti (`regole-di-scrittura.md`, «Come si scrive un dato numerico»).
+
+Da cui: **un numero che porta un'affermazione non può vivere solo in una tabella.** Se conta, esce e va scritto in prosa. La tabella orienta, la prosa insegna. Se il contenuto non ci sta, non è una tabella: è prosa. La tabella dei cinque modelli della vecchia procedura acufeni aveva celle da 150 parole — è il modo più efficace conosciuto per rendere illeggibile un'informazione importante.
 
 ---
 
@@ -101,10 +162,25 @@ Mezza pagina. Serve a orientare, non a introdurre.
 - **A chi parla:** l'osteopata del team.
 - **Cosa c'è qui e cosa no:** la tabella Bibbia/Procedura di apertura, in due righe.
 - **Come si leggono le etichette:** le quattro etichette di solidità, spiegate una volta per tutte.
-- **Due modi di leggerla:** i capitoli da leggere in venti minuti prima del primo paziente; quelli da studiare con calma.
+- **Come si studia:** il metodo qui sotto, riportato per intero.
 - Chiusura fissa: **"Buon nutrimento!"**
 
 Niente saluti, niente premesse sull'importanza della condizione.
+
+#### Come si studia questa Bibbia — sezione obbligatoria, testo fisso
+
+> **Vietato il triage di lettura.** Niente *"se hai venti minuti leggi questi otto capitoli, se hai una sera aggiungi questi tre"*. È un invito a non finire il documento, e dichiara accessori i capitoli che restano fuori. Non lo sono: **se un capitolo è saltabile, si toglie — non si declassa.** E un elenco di titoli non è un metodo: è l'indice, ripetuto.
+
+Al suo posto va un metodo di studio vero, adattato alla condizione ma con questi sei passi, in quest'ordine:
+
+1. **Prima lettura, tutta di fila, senza appunti.** Serve la mappa d'insieme, non i dettagli. Quello che non torna si segna e si lascia lì: ci si torna dopo.
+2. **Seconda passata con un paziente in testa** — uno vero, che hai già visto. Si rileggono solo «Cosa si rompe» e «Come ragiono davanti a questo paziente», e su ogni meccanismo ci si chiede: *era lui?*
+3. **La prova che conta: chiudi il documento e parla.** Prova a dire ad alta voce quali sono i meccanismi e da cosa si riconosce ciascuno. **Quello che non sai dire, non l'hai imparato** — e torni solo lì. Le **tre cose da ricordare** in fondo a ogni capitolo sono la traccia di questa prova, non un riassunto.
+4. **Prima del primo paziente: la Mappa concettuale, due minuti.** Non la Bibbia.
+5. **Dopo i primi tre pazienti: rileggi «Dove finisce il nostro campo» e «Cosa dice la scienza».** Dicono una cosa diversa quando hai avuto qualcuno davanti.
+6. **A sei mesi: solo la Mappa.** Se un blocco non ti riaccende il capitolo, quello è il capitolo da rileggere.
+
+Il principio che tiene insieme i sei passi, e che va scritto: **questa Bibbia si studia contro i pazienti, non contro l'orologio.**
 
 ### Capitolo 1 — Chi ti trova davanti
 
@@ -187,14 +263,128 @@ Contenuto, in quest'ordine:
 4. **La Road Map**, 5 o 6 passi numerati, in ordine di priorità.
 5. **I tre stati del paziente** (in difesa / emotivo / razionale) e cosa cambia nel modo di parlargli.
 
+#### Il vicolo cieco — l'errore vietato in questo capitolo e ovunque
+
+**Nessuna frase che dice cosa non funziona può restare da sola.** Ogni volta che la Bibbia dichiara che una leva non tiene, nella stessa riga dice **quale tiene** — o, se davvero nessuna tiene, **dove va il paziente**. La forma vietata è il negativo troncato:
+
+> ❌ *"Su un sistema in allarme nessun lavoro locale tiene."* E punto.
+
+**Non è una frase incompleta. È una frase falsa**, e lo è proprio per la ragione che sembra giustificarla: se il driver è il **livello di attivazione**, allora l'attivazione è **il bersaglio** — ed è precisamente ciò che il contatto lento, il ritmo del respiro e il tempo dedicato modulano. Il documento stesso lo scrive tre capitoli dopo.
+
+Sotto c'è un vizio lessicale che la fa passare inosservata: **«lavoro locale» non è «lavoro manuale».** Lavorare sull'attivazione è lavoro manuale a tutti gli effetti, solo mirato altrove. Ma chi legge quella frase non fa la distinzione: legge *"le mie mani non servono qui"*, e manda via un paziente che poteva prendere.
+
+**Classificazione: ERRORE, non imprecisione.** Quando una frase nega una capacità che il documento dichiara altrove, non è un'omissione da completare — è un'affermazione falsa da correggere, e il revisore che la incontra la segna come tale.
+
+> ✅ *"Su un sistema in allarme il lavoro locale non tiene: la leva è l'attivazione, e ce l'hai — contatto lento, ritmo del respiro, tempo dedicato. Vedi «Perché le mani possono cambiare qualcosa»."*
+
+**Il caso che ricorre su ogni condizione** è il paziente il cui driver è il **livello di attivazione**: sistema in allarme, ipervigilanza, sintomo agganciato a un evento di vita, soglia di percezione abbassata.
+
+> **Un sintomo legato allo stato di attivazione non è un capolinea: è l'indicazione più chiara che esista per la leva che sull'attivazione agisce.** Il trattamento manuale può modificarne il livello, modulandolo. È il caso in cui hai *più* da fare, non meno.
+
+Con l'etichetta che quella leva porta nel capitolo delle leve, né una di più né una di meno — e con i suoi tempi reali, effetto di stato dentro la seduta e spostamento della soglia in settimane. Ma la direzione è quella, e va scritta.
+
+L'errore da cui nasce tutto è uno solo, e ha un nome: **confondere la leva sbagliata con nessuna leva.**
+
+**Vincolo di coerenza fra i capitoli.** «Come ragiono davanti a questo paziente» **non può negare una leva che «Perché le mani possono cambiare qualcosa» dichiara.** Se succede, uno dei due capitoli è sbagliato: si corregge quello, non si lascia la contraddizione. Vale anche al contrario — una leva promessa nel capitolo delle leve e mai richiamata dove serve al letto del paziente è una leva che nessuno userà.
+
+**Conseguenza sui pazienti-tipo.** Ogni paziente-tipo del Capitolo 8 **finisce con quello che fai**, non con quello che non funziona. Un paziente-tipo che si chiude sul negativo va riscritto: il suo scopo è insegnare una decisione, e "niente" non è una decisione.
+
+Attenzione a non curare l'eccesso di pessimismo con l'eccesso opposto: **la leva si dichiara con la sua etichetta reale**, e se è IPOTESI resta IPOTESI. Il difetto da correggere è l'omissione della leva, non la sua qualificazione.
+
 ### Capitolo 9 — Dove finisce il nostro campo
 
 Il capitolo che rende la Bibbia consegnabile. Obbligatorio, mai accorciato.
 
 - **Le bandiere rosse**, in elenco, ciascuna con **a chi si manda** e **con che urgenza**. Non annacquate, non generiche.
-- **Il cancello d'ingresso:** cosa deve essere già stato fatto dal medico prima che tu apra un ciclo.
+- **Il cancello d'ingresso:** un **triage a tre uscite**, nella forma fissa qui sotto.
+
+#### Il cancello d'ingresso — struttura obbligatoria
+
+Un cancello binario ha un difetto strutturale: costringe a scegliere fra rimandare fuori tutti e non filtrare nessuno. E siccome nessuno rimanda fuori tutti, il comportamento reale finisce per non essere scritto da nessuna parte — quindi senza reperto documentato, senza paziente informato, senza canale medico, senza scadenza. **Il triage non allenta un controllo: mette quattro condizioni dove non ce n'era nessuna.**
+
+Va scritto in ogni Bibbia con questa struttura. Le parti in **grassetto** sono fisse e si riportano quasi alla lettera; le parti fra parentesi quadre si compilano sulla condizione.
+
+**L'apertura, e il principio che regge tutto**
+
+> Il cancello non serve a stabilire se il paziente ha diritto al trattamento. Serve a stabilire **quale delle tre situazioni hai davanti**, perché in ciascuna il tuo comportamento è diverso.
+>
+> **Il tuo mandato non nasce dalla diagnosi medica.** Nasce da un reperto disfunzionale che hai trovato e documentato, e da un marker che si muove quando lo tratti. Se hai quelli, hai un motivo per lavorare — indipendentemente da quali accertamenti siano stati fatti. **Se non hai quelli, non hai un motivo per lavorare nemmeno con la diagnosi in mano.**
+
+La seconda metà è ciò che impedisce al triage di essere un allentamento. Senza, è una scusa per aprire cicli; con, è uno standard **più alto** del cancello binario — che si accontentava della diagnosi di qualcun altro.
+
+**E il contrappeso, che va scritto attaccato al principio e non altrove:**
+
+> **Un reperto positivo giustifica il tuo lavoro, non sostituisce l'inquadramento medico.** Trovare [un diaframma disfunzionale / il reperto tipico della condizione] non esclude nulla: significa che hai **qualcosa da trattare**, non che **sai cosa ha il paziente**. Le due cose convivono, e vanno dette al paziente come conviventi.
+
+Senza questa riga, il principio del mandato si legge come "il mio reperto rende superfluo l'accertamento", ed è la lettura che espone davvero. **Avere un bersaglio non è avere una diagnosi.** La convivenza non è una cautela da mettere in fondo: è ciò che il paziente deve sentire, ed è già la seconda condizione del GIALLO — *"io lavoro sulla componente meccanica che ho trovato, il sintomo va comunque inquadrato dal tuo medico, e nel frattempo io non aspetto"*. Il capitolo «Cosa dire al paziente» riprende la stessa convivenza, con le stesse parole.
+
+**🔴 ROSSO — Stop.** Anche una sola bandiera rossa.
+
+Non si apre un ciclo, non si rimanda alla prossima seduta. Il paziente esce con un'indicazione medica **esplicita e scritta**, e con i tempi dichiarati. Se coesiste una disfunzione muscolo-scheletrica autonoma la si può trattare, ma il documento del trattamento dichiara che il sintomo [della condizione] è in attesa di inquadramento e **non è il bersaglio**.
+
+**Nessuna eccezione, e nessun reperto positivo scavalca questa uscita.**
+
+**🟡 GIALLO — Si lavora, in parallelo.** Nessuna bandiera rossa, inquadramento assente o incompleto.
+
+**È la situazione più frequente, e non è un motivo per rimandare il paziente fuori.** Si lavora a quattro condizioni, tutte verificabili:
+
+1. **Un reperto tuo, positivo e scritto in cartella** — non "il paziente ha [condizione]", ma il reperto meccanico che hai trovato e che giustifica la manovra.
+2. **Il paziente sa cosa tratti e cosa no.** Frase da usare: *«io lavoro sulla componente meccanica che ho trovato. Il sintomo [X] va comunque inquadrato dal tuo medico, e nel frattempo io non aspetto.»*
+3. **Canale medico attivato senza interrompere il lavoro** — una comunicazione scritta al curante, non un rinvio del paziente. Il paziente resta con te; l'informazione va da chi di dovere.
+4. **Tempo definito:** entro il numero di sedute previsto dalla Procedura, il marker si muove o il quadro cambia uscita. **La revisione è programmata, non lasciata all'iniziativa.**
+
+**Se il tempo scade e il marker non si è mosso**, non è una rinuncia: è un'informazione. Il tuo reperto non era il driver, e la spinta sul canale medico da parallela diventa prioritaria. Va scritto, perché è l'ultimo punto in cui il lettore potrebbe leggere "non c'è niente da fare" dove invece c'è una decisione precisa.
+
+**🟢 VERDE — Si procede.** Nessuna bandiera rossa e una fra: sintomi tipici già valutati dal medico; ciclo di terapia [della condizione] già in corso o già fatto; accertamenti eseguiti e negativi o coerenti. Il ciclo si apre secondo Procedura.
+
+**La scadenza.** Qualunque sia l'uscita, l'inquadramento **decade** se il sintomo cambia carattere, sede o intensità rispetto all'ultima valutazione medica. Un quadro che cambia forma **torna al triage, dall'inizio**.
+
+**Il vincolo che non si negozia.** Tutte e tre le uscite poggiano su qualcosa di **scritto**: l'indicazione medica del ROSSO, il reperto in cartella e la comunicazione al curante del GIALLO, la revisione programmata di entrambi. **Quello che non è scritto non esiste** — né per il collega che riprende il paziente, né per il medico, né per chi dovesse chiedere conto di una scelta a distanza di due anni. Un triage non documentato non è un triage: è un'intenzione, e le intenzioni non reggono un perimetro professionale.
+
+#### La parte variabile — le bandiere rosse della condizione
+
+Tabella dedicata, in ogni Bibbia, **tre colonne**: `Bandiera rossa | A chi si manda | Tempi`. Tre e non due, perché *"invio"* senza destinatario non è un'istruzione — e sta comunque dentro il limite delle quattro colonne.
+
+**Da dove si prendono, ed è la regola che le rende verificabili invece che inventate:**
+
+> Le bandiere rosse di una condizione sono **quelle che le linee guida di riferimento indicano come indicazione all'accertamento specialistico**.
+
+Non si compongono a intuito e non si copiano da un'altra Bibbia. Si cerca il documento di riferimento della condizione — quello che il revisore-specialista userà per controllarti — e si prendono da lì, con la fonte. Questo rende la tabella difendibile davanti a un medico, che è l'unico test che conta per questo capitolo.
+
+I **tempi** usano un vocabolario chiuso, sempre lo stesso: `112` · `Urgente` · `Invio, non attendere` · `Invio` · `Invio programmato`. Un'urgenza scritta in prosa non si esegue.
+
+#### Perché questa versione protegge di più, non di meno
+
+Va scritto nel documento, perché è la ragione per cui il lettore accetta il triage invece di considerarlo una concessione:
+
+> Il cancello vecchio dichiarava un requisito e poi, nella pratica, veniva aggirato. **Una regola scritta e disattesa vale meno di nessuna regola**, perché fa credere che un controllo esista. Questo dichiara cosa fai davvero in ciascuna situazione, tiene il ROSSO assolutamente rigido, e mette per iscritto l'unico elemento che rende difendibile il GIALLO: il reperto tuo, il marker, il canale medico attivato, il tempo definito.
+
+> **Attenzione all'esempio.** La formulazione sviluppata sul reflusso è **bruciata**: non va ricopiata su un'altra condizione. Cambiano le bandiere rosse, cambia cosa significa "inquadramento" (gastroenterologico, ORL, neurologico, imaging), cambia quali accertamenti contano come coerenti. Lo scheletro è fisso, le caselle si compilano cercando.
 - **Cosa fanno i farmaci** che il paziente prende, e perché non li commenti mai. Nessuna valutazione, nessun suggerimento di modifica: decide il prescrittore.
-- **Il perimetro legale:** DPR 131/2021 (tecniche esclusivamente manuali, non invasive, esterne; diagnosi riservata al medico), status di professione sanitaria (DPCM 2026), consenso informato e dati di salute (art. 9 GDPR).
+- **Il perimetro legale — solo la parte che cambia con questa condizione.**
+
+#### La prova dell'altra Bibbia
+
+> **Se una riga è identica nella Bibbia di un'altra condizione, non appartiene a nessuna delle due.**
+
+È il test che governa tutto questo capitolo, ed è meccanico: prendi la frase, immagina di trovarla tale e quale nella Bibbia del tendine d'Achille. Se ci sta senza cambiare una parola, non è conoscenza della condizione — è **policy dello studio**, e vive nel consenso informato, nel registro dei trattamenti e nelle procedure interne, non qui.
+
+**Cosa NON entra** (vale per ogni paziente che entra in studio, e ripeterlo 58 volte non lo rende più vero):
+
+- La meccanica del consenso informato: che va raccolto, documentato, che comprende le alternative, che è revocabile, la L. 219/2017.
+- L'articolo 9 del GDPR, la conservazione dei dati, la condivisione autorizzata.
+- I requisiti di abilitazione e iscrizione all'albo — e **mai** nella forma *"verifica la tua"*: il lettore è un collega del team, non un candidato da controllare.
+- Il testo del DPR 131/2021 e del DPCM 2026 recitati per esteso.
+
+**Cosa entra**, ed è la parte che vale:
+
+- **Cosa dichiari nel consenso *su questa condizione*** — le due o tre cose che aggiungi qui e che in un'altra Bibbia non scriveresti. Sul reflusso, per dire, sono di questo tipo: che l'oggetto del trattamento è la disfunzione somatica e non la cura della condizione; che l'evidenza di terapia manuale è limitata e a breve termine; che il trattamento si affianca alla terapia medica e non la sostituisce. **Questa è la parte specifica, ed è l'unica che il lettore non sa già.**
+- **Il confine di atto** dove questa condizione lo mette alla prova: quali gesti sarebbero fuori dal nostro perimetro *per questa condizione*, quali affermazioni sconfinerebbero nella diagnosi.
+- **Il rapporto con il prescrittore** su questa terapia specifica.
+
+Il riferimento normativo si cita **una volta, in una riga**, come ancora — non si espone.
+
+**E il capitolo non parla di se stesso.** Frasi del tipo *"una Bibbia che scrive «letteratura sottile» e un consenso che non lo dice sono due carte che mostrano che si sapeva e non si è detto"* sono meta-commento: il documento che ragiona sulla propria posizione legale. Si scrive la cosa da dichiarare, non il ragionamento su perché dichiararla. È già vietato in `regole-di-scrittura.md`, e questo capitolo è il punto in cui la violazione rientra più spesso.
 - **Cosa succede se sbagli campo** — detto una volta, senza drammatizzare.
 
 ### Capitolo 10 — Cosa dice la scienza

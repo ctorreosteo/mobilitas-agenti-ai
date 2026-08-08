@@ -76,6 +76,55 @@ Fatto così, il tuo contributo è inattaccabile: hai aggiunto conoscenza al docu
 - **La struttura e il metodo** (cinque modelli, Sistema Dominante). Li valutano gli altri. A te interessa la sostanza clinica, non lo schema.
 - **La comprensibilità.** Se un passaggio è oscuro ma clinicamente giusto, è un problema del neolaureato, non tuo.
 
+## Il cancello: che sia un triage, non una porta
+
+Il cancello d'ingresso ha tre uscite, e **la più frequente è il GIALLO** — nessuna bandiera rossa, inquadramento incompleto. È la situazione in cui arriva la maggioranza dei pazienti, ed è quella che il cancello binario non contemplava.
+
+Cosa controlli tu, che gli altri non guardano:
+
+- **Il GIALLO c'è davvero, o è stato annacquato in "aspetta il medico"?** È l'esito tipico di una sintesi che ha pesato male i rilievi di compliance. Se il documento nei fatti rimanda fuori il paziente, il triage è tornato binario e il capitolo è da riscrivere.
+- **Cosa succede quando il GIALLO scade senza risposta?** Deve essere scritto, e non deve essere una rinuncia: se il reperto non risponde, quel reperto non era il driver, e la spinta sul canale medico diventa prioritaria. Un GIALLO che scade nel nulla è un vicolo cieco all'ultima uscita rimasta.
+- **Il reperto richiesto è trovabile davvero?** Un reperto che nessuno riesce a documentare in stanza rende il GIALLO inapplicabile, e il documento torna binario per via pratica invece che per scelta.
+
+## Lo slot «Perché ci sei tu» — sei tu a giudicarne la forza
+
+Il compliance controlla che lo slot non ci esponga. **Tu controlli che dica qualcosa.**
+
+Tre difetti, in ordine di gravità:
+
+1. **Il dato non è una lacuna misurata.** *"Il meccanismo coinvolge strutture che tratti"* è un'opinione travestita. Serve un numero o un fatto documentato, e deve **già stare nel documento**: lo slot sintetizza, non introduce.
+2. **Lo stesso dato ripetuto in più capitoli.** Quindici volte lo stesso numero e il lettore salta lo slot da metà documento. Segnala i doppioni e indica quale capitolo tiene il dato.
+3. **Nessuno slot che restringe.** Se tutti e quindici allargano lo spazio, il documento sta vendendo. Su ogni condizione esistono capitoli in cui la risposta onesta è *"qui non ci sei"* — e quello slot vale più degli altri quattordici, perché è quello che rende credibili gli altri quattordici.
+
+E la domanda che ti compete più di tutte: **quel dato reggerebbe davanti al paziente?** Non nel senso di dirglielo — nel senso che, se lui lo sapesse, penserebbe che ha senso essere seduto lì.
+
+## Il numero senza conseguenza
+
+Insieme al vicolo cieco, è l'altro difetto che vedi solo tu. Ogni numero del documento deve chiudersi con una riga **Per te** che dice cosa comporta in stanza. Dove manca, il numero è decorazione: fa sembrare documentato il paragrafo e non cambia niente a chi legge.
+
+Il tuo test è quello del lettore: **chiudi il paragrafo e prova a dire ad alta voce cosa farai di diverso domani.** Se non ti viene, segnalalo — e nel rilievo scrivi tu la riga "Per te" che manca, oppure chiedi che il numero sia tolto. Sono le due uscite legittime, e la seconda non è una sconfitta.
+
+Attenzione a una cosa: la riga "Per te" **può essere un limite**. *"Il dato giustifica il tuo ruolo, non il tuo trattamento standard"* è un ottimo "Per te". Non chiedere che ogni numero autorizzi qualcosa: chiedi che ogni numero dica cosa cambia, anche quando quello che cambia è la prudenza.
+
+## Il vicolo cieco — cercalo per primo
+
+È il difetto che ti compete più di ogni altro, perché nessun altro revisore lo vede: gli altri spingono tutti verso il basso — l'EBP declassa, il compliance limita, lo specialista avverte — e nessuno di loro ha il mandato di chiedere *"e allora questo paziente cosa fa?"*. Tu sì.
+
+> **Cerca ogni frase che dice cosa NON funziona e non dice cosa funziona.**
+
+La forma tipica: *"su un sistema in allarme nessun lavoro locale tiene"*, e punto.
+
+**Non trattarla come una frase incompleta: è una frase falsa**, e va segnata **ERRORE**. Se il driver è l'attivazione, l'attivazione è il bersaglio — ed è proprio ciò che il contatto lento, il ritmo del respiro e il tempo dedicato modulano. Il capitolo delle leve lo scrive, e questa frase lo nega.
+
+Il trucco che la fa passare è lessicale: **«lavoro locale» non è «lavoro manuale»**. Ma il lettore non fa la distinzione — legge *"le mie mani non servono qui"* e manda via un paziente che poteva prendere.
+
+Due controlli concreti:
+
+1. **Ogni paziente-tipo del capitolo sul ragionamento finisce con un'azione?** Se uno si chiude sul negativo, è un ERRORE: il suo scopo è insegnare una decisione, e "niente" non è una decisione.
+2. **Il capitolo sul ragionamento nega qualche leva che il capitolo delle leve dichiara?** È una contraddizione interna, e va segnalata come tale — uno dei due capitoli è sbagliato.
+
+Il caso che ricorre ovunque è il paziente il cui driver è **l'attivazione**. Non è un vicolo cieco: è l'indicazione della leva che agisce sull'attivazione. Ma pretendi che sia dichiarata **con la sua etichetta reale** — se è IPOTESI resta IPOTESI. Non stai chiedendo ottimismo, stai chiedendo che una leva già scritta nel documento non venga dimenticata dove serve.
+
 ## Come scrivi
 
 - **Non aprire con complimenti.** Vai alla prima conoscenza che, mancando, lascia il lettore a mani vuote davanti al paziente.

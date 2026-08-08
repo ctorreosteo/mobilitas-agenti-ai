@@ -74,16 +74,22 @@ Per stabilire se la condizione è soddisfatta guardi le etichette che il documen
 
 ### B. La griglia formale, in OGNI capitolo
 - Apertura `> **In una riga:**` con la tesi del capitolo.
-- Chiusura **Le tre cose da ricordare**, esattamente tre voci.
+- Chiusura **«Le tre cose da ricordare, più una»**: **esattamente quattro bullet**. I primi tre sono le cose che cambiano il comportamento; il quarto è lo slot fisso **«Perché ci sei tu»**, sempre in ultima posizione.
+- **Lo slot ha tutti e tre gli elementi**: il dato · *"questo ti autorizza a"* · *"non ti autorizza a"*. Con due elementi su tre è PARZIALE. Senza il terzo è ERRORE.
+- **Nessun dato dello slot si ripete** fra capitoli. Un dato riusato è PARZIALE.
+- La **Mappa concettuale** porta un blocco «Perché ci sei tu» unico, il più forte dei quindici.
 - **Solo i quattro box previsti:** Definizione / Quanto è solido / Attenzione / Cosa cambia per te. Nessun quinto tipo inventato.
 - **Nessuna tabella oltre 4 colonne o con celle oltre le 8 parole.**
 - Rimandi **per nome di capitolo**, mai per numero di paragrafo.
 
 ### C. Le etichette di solidità — il lucchetto
 - **Quattro etichette e solo quelle:** DIMOSTRATO / PROBABILE / IPOTESI / RAGIONAMENTO. Nessuna quinta.
+- **Ogni box porta la glossa fissa**, ogni volta: *(studi sull'uomo, solidi)* · *(razionale forte, prove parziali)* · *(meccanismo coerente, nessuno studio)* · *(cornice clinica, non una prova)*. Un box senza glossa è PARZIALE; glosse variate da un box all'altro è CONTRADDICE (il testo è fisso, non è prosa).
+- **Capitolo 0:** c'è «Come si studia questa Bibbia» con i sei passi. Se al suo posto c'è un triage di lettura ("se hai venti minuti leggi questi otto capitoli"), è **CONTRADDICE**: lo standard lo vieta.
 - **Ogni meccanismo (cap. 5), ogni modello (cap. 7) e ogni leva (cap. 11) ne porta una.**
 - **Nessun claim gonfiato:** i meccanismi non validati (CC/CP, acido ialuronico sol/gel, corazza reichiana, effetto vagale del tocco) sono IPOTESI o RAGIONAMENTO, mai presentati come fatti.
 - Ogni studio citato ha autore, anno e link, e ricompare nell'Appendice B.
+- **Ogni numero in prosa ha le tre parti** (di cosa e su chi · su quale paziente misurato · la riga **Per te**). Numero senza "Per te" = PARZIALE. Numero che porta un'affermazione e vive solo in tabella = PARZIALE.
 
 ### D. I cinque modelli (Capitolo 7)
 - Tutti e cinque presenti: Biomeccanico-Strutturale, Respiratorio-Circolatorio, Neurologico, Metabolico-Energetico, Comportamentale-Biopsicosociale.
@@ -99,6 +105,8 @@ Per stabilire se la condizione è soddisfatta guardi le etichette che il documen
 - **Road Map** decisionale in passi numerati.
 - **CC vs CP di Stecco** + la regola "non trattare il CP".
 - **I tre stati del paziente** (in difesa / emotivo / razionale).
+- **Nessun vicolo cieco:** ogni paziente-tipo e ogni passo della Road Map finisce con un'azione. Una frase che dice cosa non funziona senza dire cosa funziona è PARZIALE. **Se nega una leva che il capitolo delle leve dichiara, è CONTRADDICE e si segna come ERRORE**: non è un'omissione, è un'affermazione falsa — il documento dice due cose opposte, e il lettore crede a quella che ha in mano col paziente davanti.
+- **Il caso canonico:** un paziente il cui driver è il livello di attivazione liquidato con "nessun lavoro locale tiene". Il capitolo delle leve dichiara che una mano modula l'attivazione: quella frase la contraddice.
 - Etichettato **RAGIONAMENTO**, mai presentato come dottrina o prova.
 
 ### F. Il confine — la Bibbia è teoria (il controllo inverso)
@@ -109,6 +117,23 @@ Per stabilire se la condizione è soddisfatta guardi le etichette che il documen
 - Se c'è il Capitolo 12, chiude con la formula di confine: *"Come e quando consegnarlo al tuo paziente sta nella Procedura."*
 
 > **L'eccezione che devi conoscere, altrimenti segnali un falso positivo.** Il parametro usato in uno *studio* è un **dato di evidenza** e sta legittimamente nella Bibbia: *"nello studio hanno svolto [l'esercizio] per [N] settimane"*. Diventa violazione quando cambia tempo verbale e destinatario: *"fai fare [N] settimane al paziente"*. Il criterio è **passato e attribuito** contro **imperativo e rivolto al nostro paziente**. Marcare come protocollo un dato di studio riporta il documento all'errore che questa eccezione è nata per correggere.
+
+### H-bis. Il cancello d'ingresso — è un triage, non una porta
+
+Nel capitolo sui limiti di campo il cancello deve avere **tre uscite** — ROSSO / GIALLO / VERDE — con tutti questi elementi:
+
+- **Il principio del mandato:** nasce dal reperto disfunzionale documentato e dal marker che risponde, non dalla diagnosi medica. **Col corollario simmetrico**, che è la parte che si perde più spesso: *senza quelli non si lavora nemmeno con la diagnosi in mano*. Se manca il corollario, è PARZIALE — il triage sembra un allentamento invece di uno standard più alto.
+- **ROSSO senza eccezioni**, e nessun reperto positivo lo scavalca.
+- **Le quattro condizioni del GIALLO:** reperto scritto in cartella · paziente informato di cosa tratti e cosa no · canale medico attivato con comunicazione scritta al curante, senza rimandare fuori il paziente · tempo definito con revisione programmata.
+- **Cosa succede se il GIALLO scade** senza che il marker si muova.
+- **La scadenza dell'inquadramento**: un quadro che cambia forma torna al triage dall'inizio.
+- **Il vincolo di documentazione.**
+- **Il contrappeso al mandato:** *"un reperto positivo giustifica il lavoro, non sostituisce l'inquadramento"*, con la convivenza detta anche al paziente. Se manca, è PARZIALE: il principio del mandato senza il suo limite si legge come "il reperto rende superfluo l'accertamento".
+- **La tabella delle bandiere rosse:** tre colonne (`Bandiera rossa | A chi si manda | Tempi`), fonte delle linee guida citata, vocabolario dei tempi chiuso (`112` / `Urgente` / `Invio, non attendere` / `Invio` / `Invio programmato`). Una bandiera senza destinatario o senza tempo è PARZIALE.
+- **Il perimetro legale contiene SOLO la parte specifica della condizione.** La meccanica del consenso, l'art. 9 GDPR, i requisiti di abilitazione e il testo di legge recitato **non devono esserci**: se ci sono, è CONTRADDICE — lo standard li vieta con la *prova dell'altra Bibbia* (una riga identica in un'altra Bibbia non appartiene a questa). Deve invece esserci **cosa si dichiara nel consenso su questa condizione**: se manca, è ASSENTE.
+- **La ragione dichiarata:** il documento spiega perché il triage protegge di più del cancello binario ("una regola scritta e disattesa vale meno di nessuna regola"). Se manca, il lettore legge il GIALLO come una concessione.
+
+Un cancello **binario** — nella forma "cosa deve essere già stato fatto dal medico prima che tu apra un ciclo" — è **CONTRADDICE**: è lo standard vecchio, e va segnalato come tale.
 
 ### H. I due capitoli nuovi — contenuto, non solo presenza
 
@@ -127,6 +152,8 @@ Per stabilire se la condizione è soddisfatta guardi le etichette che il documen
 - **NON rimette il Sistema Dominante come spina dorsale visibile**: l'impalcatura sono i cinque modelli.
 - **NON attribuisce** a un modello segnali di un altro.
 - **Il Glossario copre tutti i termini tecnici usati, e solo quelli.**
+- **I termini canonici del metodo** (`marker`, `reperto disfunzionale`, `disfunzione somatica`, `compenso`, `catena`, `sistema dominante`, `lesione primaria`) portano la **definizione fissa** di `lessico-del-metodo.md`, hanno un box `Definizione` alla prima comparsa in ogni capitolo e una voce a Glossario. Definizione riformulata = CONTRADDICE (è testo fisso). Termine usato e mai definito = ASSENTE. Variante lessicale ("indicatore" per *marker*) = CONTRADDICE.
+- **I marker della condizione sono nominati**, da due a quattro, con misura e soglia. «Scegli un marker» senza dire quali = PARZIALE.
 
 ## Come scrivi
 

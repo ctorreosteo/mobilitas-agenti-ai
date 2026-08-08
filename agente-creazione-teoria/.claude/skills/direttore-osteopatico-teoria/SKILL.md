@@ -48,6 +48,7 @@ Prima di scrivere la prima riga, in quest'ordine:
 
 1. `references/architettura-bibbia.md` — la struttura fissa, capitolo per capitolo, e le cinque regole di struttura.
 2. `references/regole-di-scrittura.md` — come si scrive. **La leggibilità è un requisito, non una preferenza.**
+3. `references/lessico-del-metodo.md` — le parole che ricorrono in **tutte** le Bibbie, con la definizione **a testo fisso**. Non si riformulano: `marker`, `reperto disfunzionale`, `disfunzione somatica`, `compenso`, `catena`, `sistema dominante`, `lesione primaria`.
 3. `references/cinque-modelli-osteopatici.md` — l'impalcatura del Capitolo 7.
 4. `references/motore-clinico.md` — il ragionamento del Capitolo 8.
 5. `references/ancore-verificate.md` e `references/ancore-scientifiche.md` — l'ancora e il protocollo di verifica.
@@ -78,11 +79,14 @@ Il collo può cambiare il volume dell'acufene. I muscoli sub-occipitali
 mandano il loro segnale a C2, e da C2 quel segnale arriva al nucleo
 cocleare dorsale, dove si mescola al suono.
 
-> **Quanto è solido:** PROBABILE — dimostrato nell'animale (Shore,
-> Nat Rev Neurol 2016). Nell'uomo il ponte è un ragionamento.
+> **Quanto è solido:** PROBABILE *(razionale forte, prove parziali)* —
+> dimostrato nell'animale (Shore, Nat Rev Neurol 2016). Nell'uomo il
+> ponte è un ragionamento.
 ```
 
 Quattro etichette, mai una quinta: **DIMOSTRATO · PROBABILE · IPOTESI · RAGIONAMENTO**.
+
+**Ognuna porta la sua glossa fissa, ogni volta che compare** — *(studi sull'uomo, solidi)* · *(razionale forte, prove parziali)* · *(meccanismo coerente, nessuno studio)* · *(cornice clinica, non una prova)*. Spiegarle una volta sola nel Capitolo 0 non funziona: a pagina dodici il lettore non ricorda più che differenza passi fra PROBABILE e IPOTESI, e tira a indovinare.
 
 Ogni meccanismo, ogni modello e ogni leva ne porta una. Un'affermazione importante senza etichetta è un'affermazione presentata come certa.
 

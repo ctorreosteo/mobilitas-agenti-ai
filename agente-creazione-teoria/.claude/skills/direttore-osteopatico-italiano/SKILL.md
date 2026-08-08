@@ -105,6 +105,9 @@ Riscrivi **come è detto**, mai **cosa è detto**. Restano identici, parola per 
 - **Ogni PMID, autore, anno, titolo di studio.**
 - **Ogni etichetta di solidità** (DIMOSTRATO / PROBABILE / IPOTESI / RAGIONAMENTO). Non alzarne nessuna, mai.
 - **Ogni bandiera rossa, criterio di invio, limite di campo, avvertenza legale.**
+- **Lo slot `Perché ci sei tu` in fondo a ogni capitolo**, con tutti e tre i suoi elementi. Somiglia a una chiusura retorica ed è invece l'unico punto in cui il documento dichiara il proprio spazio con un dato. Il pezzo che si tende a tagliare è il terzo — *«non ti autorizza a»* — ed è quello che tiene in piedi gli altri due.
+- **La riga `Per te:` di ogni dato numerico.** Ha l'aria di un commento ed è la prima cosa che si tende ad accorpare o togliere. È il motivo per cui quel numero è nel documento: senza, il numero diventa decorazione e andrebbe cancellato.
+- **La glossa fissa di ogni etichetta** — *(razionale forte, prove parziali)* e le altre tre. È testo fisso, non prosa: non riformularla, non abbreviarla, non toglierla perché "si ripete". Si ripete apposta.
 - **Ogni frase-ponte** che dichiara il limite di una fonte — *"misurato su X, non su pazienti con questa condizione"*.
 - **Ogni nome anatomico e ogni nome di condizione.**
 - **L'architettura**: capitoli, ordine, titoli, aperture `> **In una riga:**`, chiusure **Le tre cose da ricordare**, i quattro tipi di box, le tabelle.

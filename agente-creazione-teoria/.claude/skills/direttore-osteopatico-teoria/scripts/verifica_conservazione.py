@@ -137,12 +137,21 @@ def marcatori(t):
     }
 
 
-def blocchi_tre_cose(t):
-    """Per ogni chiusura, quanti bullet la seguono. Devono essere esattamente tre."""
+def blocchi_chiusura(t):
+    """Per ogni chiusura di capitolo: (n_bullet, ha_lo_slot_perche_ci_sei_tu).
+
+    Lo standard e' «Le tre cose da ricordare, piu' una»: QUATTRO bullet, e il quarto
+    apre con «Perche' ci sei tu». Lo slot e' il pezzo piu' facile da perdere in una
+    riscrittura, perche' somiglia a una chiusura retorica ed e' invece l'unico punto
+    in cui il documento dichiara il proprio spazio con un dato.
+    """
     out = []
-    for m in re.finditer(r"\*\*Le tre cose da ricordare\*\*(.*?)(?=^#{1,4}\s|\Z)",
+    for m in re.finditer(r"\*\*Le tre cose da ricordare[^*]*\*\*(.*?)(?=^#{1,4}\s|\Z)",
                          t, flags=re.S | re.M | re.I):
-        out.append(len(re.findall(r"^\s*[-*+]\s+\S", m.group(1), flags=re.M)))
+        blocco = m.group(1)
+        bullets = re.findall(r"^\s*[-*+]\s+(.{0,60})", blocco, flags=re.M)
+        slot = any(re.match(r"\**\s*Perch[ée]\s+ci\s+sei\s+tu", b, flags=re.I) for b in bullets)
+        out.append((len(bullets), slot))
     return out
 
 
@@ -198,6 +207,57 @@ def identita(a, b):
         return None
     uguali = sum((fa & fb).values())
     return round(100.0 * uguali / tot, 1)
+
+
+# Termini canonici del metodo che devono avere una voce a Glossario quando usati.
+# Solo quelli non ambigui: "catena" e "compenso" sono parole italiane comuni e
+# produrrebbero falsi positivi, e li lascia ai revisori.
+LESSICO = ["marker", "disfunzione somatica", "reperto disfunzionale",
+           "sistema dominante", "lesione primaria"]
+LESSICO_MIN = 2          # sotto due usi non e' ancora un termine portante
+
+
+def lessico_senza_glossario(t):
+    """Termini del metodo usati nel corpo e assenti dal Glossario.
+
+    E' il difetto che questo controllo nasce per intercettare: «marker» comparso
+    sedici volte in una Bibbia, mai definito e mai a Glossario — mentre reggeva
+    tre regole del metodo. Un termine che regge una regola e non e' definito
+    rende inapplicabile la regola.
+    """
+    corpo = re.split(r"^#{1,3}\s*Appendice\s+A\b", t, flags=re.M | re.I)[0]
+    m = re.search(r"^#{1,3}\s*Appendice\s+A\b(.*?)(?=^#{1,3}\s*Appendice\s+B\b|\Z)",
+                  t, flags=re.S | re.M | re.I)
+    gloss = m.group(1) if m else ""
+    fuori = []
+    for x in LESSICO:
+        usi = len(re.findall(re.escape(x), corpo, flags=re.I))
+        if usi >= LESSICO_MIN and not re.search(re.escape(x), gloss, flags=re.I):
+            fuori.append(f"{x} ({usi} usi)")
+    return fuori
+
+
+def triage(t):
+    """Gli elementi del cancello a tre uscite che una riscrittura tende a fondere.
+
+    E' la sezione piu' lunga e piu' strutturata del documento, quindi la piu' esposta
+    a essere compattata: due uscite che diventano una, le quattro condizioni del GIALLO
+    che diventano tre, i tempi delle bandiere rosse assorbiti nella prosa.
+    """
+    return {
+        "uscite": len(re.findall(r"\b(ROSSO|GIALLO|VERDE)\b", t)),
+        "tempi": len(re.findall(r"\b(112|Urgente|Invio,?\s+non\s+attendere|Invio\s+programmato|Invio)\b", t, flags=re.I)),
+    }
+
+
+def righe_per_te(t):
+    """Le righe «Per te:» che chiudono un dato numerico.
+
+    Sono il pezzo piu' fragile del documento: hanno l'aria di un commento, e la
+    riscrittura tende ad accorparle nella frase precedente o a toglierle. Ma sono
+    il motivo per cui quel numero e' nel documento — senza, il numero e' decorazione.
+    """
+    return len(re.findall(r"\*\*Per te[:.]?\*\*", t, flags=re.I))
 
 
 def script_paziente(t):
@@ -318,10 +378,23 @@ def verifica(v5, v6, delta_min=DELTA_MIN, delta_max=DELTA_MAX, min_identita=None
             r.add(True, "APERTURE_CHIUSURE_PERSE",
                   f"{nome}: da {m5[k]} a {m6[k]}. L'architettura le impone in ogni capitolo.")
 
-    sbagliati = [n for n in blocchi_tre_cose(v6) if n != 3]
+    ch5, ch6 = blocchi_chiusura(v5), blocchi_chiusura(v6)
+    sbagliati = [n for n, _ in ch6 if n != 4]
     if sbagliati:
-        r.add(True, "TRE_COSE_NON_TRE",
-              f"{len(sbagliati)} chiusure non hanno esattamente tre bullet: {sbagliati}.")
+        r.add(True, "CHIUSURA_NON_TRE_PIU_UNA",
+              f"{len(sbagliati)} chiusure non hanno esattamente quattro bullet: {sbagliati}. "
+              f"Lo standard e' «Le tre cose da ricordare, piu' una»: tre cose piu' lo slot «Perche' ci sei tu».")
+
+    slot5 = sum(1 for _, s in ch5 if s)
+    slot6 = sum(1 for _, s in ch6 if s)
+    senza = sum(1 for _, s in ch6 if not s)
+    if senza:
+        r.add(True, "SLOT_PERCHE_CI_SEI_TU_ASSENTE",
+              f"{senza} chiusure su {len(ch6)} non hanno lo slot «Perche' ci sei tu» come ultimo bullet.")
+    if slot6 < slot5:
+        r.add(True, "SLOT_PERCHE_CI_SEI_TU_PERSO",
+              f"{slot5 - slot6} slot «Perche' ci sei tu» sono spariti nella riscrittura ({slot5} → {slot6}). "
+              f"E' l'unico punto in cui il documento dichiara il proprio spazio con un dato: non si accorpa.")
 
     b6 = tipi_box(v6)
     intrusi = {k: v for k, v in b6.items()
@@ -373,6 +446,33 @@ def verifica(v5, v6, delta_min=DELTA_MIN, delta_max=DELTA_MAX, min_identita=None
               f"Questa passata doveva correggere i difetti, non riscrivere il documento: "
               f"una seconda riscrittura integrale raddoppia la deriva che il collaudo esiste per fermare.")
 
+    # --- 6-ter. LE RIGHE «PER TE» ---
+    pt5, pt6 = righe_per_te(v5), righe_per_te(v6)
+    if pt6 < pt5:
+        r.add(True, "PER_TE_PERSE",
+              f"{pt5 - pt6} righe «Per te» sono sparite ({pt5} → {pt6}). "
+              f"Sono la conseguenza operativa di un dato numerico: senza, quel numero "
+              f"e' decorazione e andrebbe cancellato, non lasciato nudo.")
+
+    # --- 6-quater. IL CANCELLO A TRE USCITE ---
+    tg5, tg6 = triage(v5), triage(v6)
+    if tg6["uscite"] < tg5["uscite"]:
+        r.add(True, "TRIAGE_COMPATTATO",
+              f"I marcatori delle tre uscite del cancello calano da {tg5['uscite']} a {tg6['uscite']}. "
+              f"ROSSO, GIALLO e VERDE non si fondono: in ciascuna il comportamento e' diverso.")
+    if tg6["tempi"] < tg5["tempi"]:
+        r.add(True, "TEMPI_INVIO_PERSI",
+              f"{tg5['tempi'] - tg6['tempi']} indicazioni di tempo per le bandiere rosse sono sparite "
+              f"({tg5['tempi']} → {tg6['tempi']}). Un'urgenza assorbita nella prosa non si esegue.")
+
+    # --- 6-quinquies. IL LESSICO DEL METODO ---
+    nudi = lessico_senza_glossario(v6)
+    if nudi:
+        r.add(True, "LESSICO_DEL_METODO_NUDO",
+              f"{len(nudi)} termini canonici del metodo sono usati nel testo e non hanno "
+              f"una voce a Glossario. Vanno definiti col testo fisso di lessico-del-metodo.md.",
+              nudi)
+
     # --- 7. GLOSSARIO E SCRIPT ---
     g6 = glossario(v6)
     if g6 is None:
@@ -401,7 +501,9 @@ def verifica(v5, v6, delta_min=DELTA_MIN, delta_max=DELTA_MAX, min_identita=None
                   f"La v6 introduce una promessa di esito che la v5 non aveva: {nome}.")
 
     return r, {"parole_prima": w5, "parole_dopo": w6, "delta_pct": round(delta, 1),
-               "identita_pct": ident,
+               "identita_pct": ident, "per_te_prima": pt5, "per_te_dopo": pt6,
+               "slot_prima": slot5, "slot_dopo": slot6,
+               "uscite_prima": tg5["uscite"], "uscite_dopo": tg6["uscite"],
                "etichette_prima": len(e5), "etichette_dopo": len(e6),
                "pmid_prima": len(p5), "pmid_dopo": len(p6)}
 
@@ -458,7 +560,9 @@ def main():
     print(f"parole    {stat['parole_prima']} → {stat['parole_dopo']}  ({stat['delta_pct']:+.1f}%)"
           f"   [ammesso {dmin:+.0f}% … {dmax:+.0f}%]")
     print(f"etichette {stat['etichette_prima']} → {stat['etichette_dopo']}     "
-          f"PMID {stat['pmid_prima']} → {stat['pmid_dopo']}")
+          f"PMID {stat['pmid_prima']} → {stat['pmid_dopo']}     "
+          f"«Per te» {stat['per_te_prima']} → {stat['per_te_dopo']}     "
+          f"«Perché ci sei tu» {stat['slot_prima']} → {stat['slot_dopo']}")
     if stat["identita_pct"] is not None:
         soglia = f"   [minimo {ident_min:.0f}%]" if ident_min is not None else "   (nessuna soglia: riscrittura attesa)"
         print(f"frasi identiche {stat['identita_pct']}%{soglia}")

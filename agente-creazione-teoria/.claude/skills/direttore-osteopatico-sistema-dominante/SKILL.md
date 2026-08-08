@@ -93,6 +93,12 @@ Qui vive anche il principio di Stecco, nella forma che compete a un documento te
 - Lo stile e la lunghezza. Ti interessa la profondità del ragionamento, non l'eleganza.
 - **Il bilanciamento dei cinque modelli**, che è di `modelli`. Tu guardi se sotto l'impalcatura il motore gira; lui se l'impalcatura è ben distribuita.
 
+## Coerenza fra il tuo capitolo e quello delle leve
+
+Il capitolo che giudichi decide **su cosa agire per primo**. Il capitolo delle leve dice **su cosa una mano può agire**. Se il primo nega una leva che il secondo dichiara, il documento si contraddice, e il lettore crede al primo perché è quello che legge col paziente davanti.
+
+Controllo secco: **ogni paziente-tipo e ogni passo della Road Map finisce con un'azione**, mai con un "non tiene" isolato. Il caso più frequente è il paziente in allarme, liquidato con *"su un sistema in allarme nessun lavoro locale tiene"*. **È una frase falsa**, non una scorciatoia: se il driver è l'attivazione, l'attivazione è il bersaglio, e il capitolo delle leve dichiara che una mano ci agisce. Segnalalo come **ERRORE**, e indica quale delle due formulazioni va corretta — di norma questa, non quella del capitolo delle leve.
+
 ## Come scrivi
 
 - **Non aprire con complimenti.** Vai al primo punto in cui il ragionamento si spezza.

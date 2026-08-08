@@ -80,6 +80,74 @@ Una regola di logica, non di stile: **ogni *quindi*, *infatti*, *tuttavia*, *per
 
 Il repertorio completo, con i prima/dopo, sta in `direttore-osteopatico-italiano/references/italiano-vero.md`. Non serve leggerlo per scrivere: serve conoscere questa mezza pagina.
 
+## Come si scrive un dato numerico
+
+Ogni numero risponde a **tre domande, in quest'ordine**. Se ne manca una, il numero non è scrivibile.
+
+1. **Percentuale di cosa, su chi** — in parole, non in gergo.
+2. **Da dove viene** — quale tipo di paziente è stato misurato.
+3. **Cosa cambia per me** — la conseguenza in stanza.
+
+**Il terzo punto è obbligatorio.** Un numero senza la riga *"Per te"* si taglia: se non riusciamo a scrivere cosa comporta, quel dato non serve al lettore — serve solo a far sembrare documentato il paragrafo.
+
+### Il formato
+
+> [Il dato in parole semplici, con "su dieci" o "su cento".] [Su chi è stato misurato, in una riga.]
+> **Per te:** [cosa ci fai].
+> (Fonte, anno, PMID)
+
+`Per te:` sta **in linea**, dentro il blocco del numero. Non è un quinto tipo di box: il box `> **Cosa cambia per te.**` chiude un ragionamento, questa riga chiude un dato.
+
+### La regola dei due numeri
+
+Quando i numeri sono due e dicono cose diverse, **si sceglie quello più vicino al nostro paziente e si mette per primo.** L'altro va dopo, come confronto, con in una frase il motivo della differenza.
+
+Mai affiancarli e lasciare al lettore il compito di capire quale lo riguarda.
+
+### Cosa non si scrive mai
+
+- Percentuali senza dire di cosa (*"resta nel 45%"* — resta cosa? a chi?)
+- Gergo di disegno sperimentale non tradotto (*"trial interventistici non randomizzati"*, *"pooled prevalence"*)
+- Intervalli buttati lì (*"17-32%"*) senza dire perché il valore oscilla
+- Due numeri contrapposti senza indicare quale conta per noi
+- Un numero senza la sua conseguenza operativa
+
+### L'esempio, prima e dopo
+
+> **Questo esempio è bruciato: non riusarlo.** Serve a far vedere la forma. Il dato che contiene è reale e va comunque ri-cercato e ri-verificato da chi scrive, non copiato da qui.
+
+**Com'era scritto:**
+
+> Negli studi clinici resta nel 17-32% dei pazienti. Negli studi osservazionali di medicina generale resta nel 45% (El-Serag, *Aliment Pharmacol Ther* 2010).
+
+Tre difetti: non dice **cosa** resta, usa una distinzione metodologica che il lettore non ha motivo di conoscere, e non dice **quale dei due numeri** riguarda il paziente che ha davanti.
+
+**Come va scritto:**
+
+> Quasi un paziente su due continua ad avere sintomi pur prendendo il farmaco. Nella medicina di tutti i giorni, fra chi assume un inibitore di pompa, il 45% ha ancora bruciore o rigurgito. Negli studi clinici la quota è più bassa — fra il 17% e il 32% — ma quelli selezionano pazienti più semplici, con dosi e assunzione controllate.
+>
+> **Per te:** il numero che ti riguarda è il 45%, perché i tuoi pazienti arrivano dal medico di base, non da un trial. Chi ti si siede davanti con il farmaco che funziona a metà non è un caso raro: è la norma. Ma attenzione: buona parte di quel 45% non ha un problema di barriera — ha una soglia abbassata. Il dato giustifica il tuo ruolo, non il tuo trattamento standard.
+>
+> (El-Serag, *Aliment Pharmacol Ther* 2010 — PMID 20662774)
+
+Guarda cosa fa il *"Per te"* in quell'esempio: sceglie il numero, spiega perché è quello, e **poi mette un limite**. Non è la riga dove si vende. È la riga dove si dice cosa il numero autorizza **e cosa no**.
+
+### Quanti numeri
+
+Nessun tetto fisso, ma un prezzo: ogni numero in prosa costa 60-80 parole. Se sono venti, il documento è una rassegna, non una Bibbia.
+
+Il filtro che li seleziona da solo: **se non riesci a scrivere il "Per te" senza ripetere quello di un altro numero, quei due numeri dicono la stessa cosa e ne resta uno.**
+
+### Il test finale, una riga
+
+> **Chi legge deve poter chiudere il paragrafo e dire ad alta voce cosa farà di diverso domani.**
+
+Se dopo il numero non gli è cambiato niente, il numero era decorazione.
+
+### Un effetto collaterale utile
+
+Il punto 1 — *percentuale di cosa, su chi* — obbliga a leggere il **denominatore vero** nell'abstract. Ed è esattamente il punto in cui nascono i numeri inventati attaccati a studi reali: la regola è anche un antidoto all'allucinazione più insidiosa che questo sistema conosca.
+
 ## Le tre voci
 
 Una Bibbia alterna tre registri. Con uno solo il documento è piatto.
@@ -170,7 +238,12 @@ Ogni Bibbia lo **argomenta** sulla propria condizione, e lo presenta come **corn
 | Termine tecnico mai definito | Ogni termine non definito è un lettore perso. |
 | Rimandi per numero ("vedi §5.2") | Si cita per nome di capitolo. |
 | Meta-commento ("qui si è sbagliato per anni") | Rumore. Scrivi la cosa giusta e basta. |
+| Il documento che ragiona sulla propria posizione legale | Scrivi la cosa da dichiarare, non il perché dichiararla. |
+| Riga che starebbe identica in un'altra Bibbia | È policy di studio, non conoscenza della condizione. Fuori. |
 | Sequenze, minuti o dosi | Sei uscito dalla Bibbia. Quello sta nella Procedura. |
 | "In conclusione, l'osteopatia offre…" | Registro da tesina. Cancella. |
 | Frase che tradotta in inglese suona perfetta | È un calco. Riscrivila in italiano. |
+| Numero senza la riga "Per te" | Decorazione. O scrivi la conseguenza, o togli il numero. |
+| "resta nel 45%" senza dire cosa resta e a chi | Percentuale muta. Il lettore non sa se lo riguarda. |
+| Due percentuali affiancate senza dire quale conta | Scarichi sul lettore la decisione che dovevi prendere tu. |
 | "Questo spiega perché…" senza dire *questo cosa* | Il lettore ricostruisce a caso. Metti il sostantivo. |

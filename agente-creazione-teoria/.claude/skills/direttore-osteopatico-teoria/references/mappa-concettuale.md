@@ -58,3 +58,21 @@ Una sola frase, in corsivo, senza parole tecniche. La stessa del Capitolo 13 del
 - **Zero tecniche, zero dosi, zero minuti.**
 - **Zero prosa di raccordo.** Niente "come abbiamo visto", niente frasi di collegamento tra blocchi.
 - Intestazione: condizione, ancora scientifica, versione, data.
+
+## La legenda delle etichette — obbligatoria
+
+In fondo alla pagina, una riga sola, sempre uguale:
+
+> **DIMOSTRATO** studi sull'uomo, solidi · **PROBABILE** razionale forte, prove parziali · **IPOTESI** meccanismo coerente, nessuno studio · **RAGIONAMENTO** cornice clinica, non una prova
+
+La Mappa è ciò che si riguarda a sei mesi, quando della Bibbia è rimasto poco. Se le etichette compaiono qui senza il loro significato, a sei mesi sono quattro parole in maiuscolo che non vogliono dire niente.
+
+## Il blocco «Perché ci sei tu» — uno solo, il più forte
+
+La Bibbia porta lo slot in **ogni** chiusura di capitolo, uno diverso per capitolo. La Mappa ne porta **uno solo**: il più forte dei quindici, quello che risponde alla domanda al livello della condizione, non del capitolo.
+
+Stessa struttura, senza eccezioni:
+
+> **Perché ci sei tu.** [Il dato.] Questo ti autorizza a [cosa]. Non ti autorizza a [cosa].
+
+È il blocco che a sei mesi risponde alla domanda che uno si fa davvero prima di aprire lo studio la mattina: *"su questa condizione, io che ci faccio?"*. Se la Mappa non ce l'ha, quella domanda resta senza risposta proprio nel documento fatto per essere riguardato.
