@@ -300,3 +300,19 @@ Una voce per deviazione. Sempre con una **fonte**: una deviazione senza fonte no
 | **Perché è incompleto** | Nessuno dei sei blocchi contiene il **Motore Clinico**: né la road map, né i marker con le loro soglie, né la regola che il marker della prova appartiene a un piano non trattato. La Mappa è ciò che si riguarda a sei mesi prima di un paziente, ed è esattamente il momento in cui serve l'ordine delle domande e la misura da prendere prima di toccare. Una Mappa che porta i meccanismi e non porta come si sceglie fra loro riassume il **cosa** e perde il **come si decide**, che è il capitolo più caratteristico del metodo. |
 | **Cosa fa la Mappa** | Aggiunge un blocco «Come decidi, e su cosa verifichi» fra le bandiere rosse e la frase per il paziente: la road map in sette passi su una riga, i quattro marker con la soglia in tabella, e la riga sulla relazione fra marker e piano trattato. La deviazione è dichiarata in coda alla pagina. |
 | **Se ratificata** | Aggiungere a `mappa-concettuale.md` un blocco fisso per il ragionamento clinico, con il vincolo di stare in una riga di road map più una tabella di marker da due a quattro righe. |
+
+---
+
+### D-019 · Il tetto di 8.000-13.000 parole non è compatibile con l'insieme delle protezioni dei livelli 2 e 3
+
+| | |
+|---|---|
+| **Stato** | `PROPOSTA` |
+| **Aperta il** | 2026-08-08 |
+| **Condizione di emersione** | Cervicalgia (v5, asciugatura di 4º livello) |
+| **Ambito** | Trasversale — riguarda ogni Bibbia che attraversi l'intera catena a sei livelli |
+| **Elemento del metodo** | `architettura-bibbia.md`: *"Lunghezza: 8.000-13.000 parole, appendici escluse."* |
+| **Perché è incompleto** | La v4 arriva al 4º livello a 18.747 parole di corpo. La mappa di taglio dell'editor è stata applicata per intero — quindici voci RIDONDANTE e diciotto COMPRIMIBILE — e vale ~1.300 parole reali, non le ~4.900 stimate. La differenza non è pigrizia del taglio: è che gli elementi dichiarati **da proteggere** dai livelli 2 (`evidenza-estesa`, dodici voci) e 3 (`apprendimento`, dieci voci; `coerenza`, otto voci) più l'INTOCCABILE dell'editor stesso coprono il **38% del corpo** in blocchi misurabili (aperture, chiusure con i quindici slot «Perché ci sei tu», box di solidità, tabelle) e una quota ulteriore in prosa protetta (metafore, «Come si vede addosso», script al paziente, note di sicurezza). Il tetto e le protezioni sono due regole del metodo che, su una condizione ampia, non possono valere insieme. |
+| **Cosa fa la Bibbia** | Dichiara la lunghezza in testa al documento, con la ragione: il residuo è **ampiezza**, non ridondanza. Non taglia una frase-ponte, un'etichetta, un PMID, una bandiera rossa o uno slot di chiusura per rientrare in un numero. |
+| **Se ratificata** | O il tetto diventa **condizionato all'ampiezza dichiarata** (numero di meccanismi, di modelli con prove, di leve e di strumenti attivi), oppure la catena acquisisce un cancello di ampiezza **prima** del 1º livello, che fissi quanti meccanismi e quante leve la Bibbia sviluppa: sommare undici lenti che aggiungono e poi chiedere all'editor di togliere ~26% del corpo senza toccare niente di quello che hanno aggiunto è una richiesta che non si può soddisfare. |
+

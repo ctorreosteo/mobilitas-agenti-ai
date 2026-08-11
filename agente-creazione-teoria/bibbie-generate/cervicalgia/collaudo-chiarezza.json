@@ -1,0 +1,72 @@
+{
+  "passaggio": "chiarezza",
+  "esito": "NON CONSEGNABILE",
+  "statistiche": {
+    "parole_prima": 17095,
+    "parole_dopo": 17414,
+    "delta_pct": 1.9,
+    "identita_pct": 64.4,
+    "per_te_prima": 8,
+    "per_te_dopo": 8,
+    "slot_prima": 15,
+    "slot_dopo": 15,
+    "uscite_prima": 3,
+    "uscite_dopo": 3,
+    "etichette_prima": 9,
+    "etichette_dopo": 9,
+    "pmid_prima": 78,
+    "pmid_dopo": 78
+  },
+  "violazioni": [
+    {
+      "severita": "AVVISO",
+      "codice": "ETICHETTE_RIANCORATE",
+      "messaggio": "7 etichette seguono un testo diverso dalla v5. Può essere solo riformulazione — va guardato dal collaudatore semantico.",
+      "dettaglio": [
+        "DIMOSTRATO: …*(studi sull'uomo, solidi)* per l'esito clinico — 200 pazien",
+        "DIMOSTRATO: …*(studi sull'uomo, solidi)* — 83 casi ogni 100.000 abitanti ",
+        "IPOTESI: …*(meccanismo coerente, nessuno studio)* — la revisione Cochr",
+        "PROBABILE: …*(razionale forte, prove parziali)* — il ritardo è misurato ",
+        "PROBABILE: …*(razionale forte, prove parziali)* — l'effetto ipoalgesico ",
+        "PROBABILE: …*(razionale forte, prove parziali)* — nel ratto la stimolazi",
+        "PROBABILE: …*(razionale forte, prove parziali)* — subito dopo la mobiliz"
+      ]
+    },
+    {
+      "severita": "AVVISO",
+      "codice": "BOX_NON_PREVISTI",
+      "messaggio": "4 tipi di box fuori dai quattro ammessi.",
+      "dettaglio": [
+        "«DIMOSTRATO» (×1)",
+        "«PROBABILE» (×4)",
+        "«IPOTESI» (×2)",
+        "«Sono due leve con due vie diverse» (×1)"
+      ]
+    },
+    {
+      "severita": "BLOCCANTE",
+      "codice": "TABELLE_FUORI_SPECIFICA",
+      "messaggio": "6 righe di tabella superano 4 colonne o 8 parole per cella.",
+      "dettaglio": [
+        "3 col / 17 parole: | Cefalea da uso eccessivo di farmaci | Cefalea 15+ giorni al mese, an",
+        "3 col / 12 parole: | Polimialgia reumatica | Bilaterale ai cingoli, oltre i 50 anni, rigi",
+        "3 col / 11 parole: | Cuffia o conflitto sub-acromiale | Si riproduce coi movimenti della ",
+        "3 col / 10 parole: | Capsulite adesiva | Limitazione passiva e globale, rotazione esterna",
+        "3 col / 14 parole: | Tunnel carpale | Notturno, prime tre dita, spesso bilaterale; 39,3% ",
+        "3 col / 10 parole: | Polineuropatia | Distale, simmetrica, \"a calza e guanto\", piedi prim"
+      ]
+    },
+    {
+      "severita": "AVVISO",
+      "codice": "PAROLE_FUORI_RANGE",
+      "messaggio": "Il documento ha 17414 parole (appendici escluse): fuori dal range 8000–13000. Non e' un difetto di conservazione: se il superamento c'era gia' in ingresso, il rilievo appartiene al livello di asciugatura, non a chi ha riscritto.",
+      "dettaglio": []
+    },
+    {
+      "severita": "AVVISO",
+      "codice": "GLOSSARIO_TROPPO_LUNGO",
+      "messaggio": "Il glossario ha 47 termini (max 40): la Bibbia è scritta troppo tecnica.",
+      "dettaglio": []
+    }
+  ]
+}
