@@ -1,0 +1,119 @@
+# Feedback — Revisore Neuromodulazione (neurofisiologo clinico)
+
+Documento revisionato: `v1-draft.md` (Osteopatia ed Ernia del Disco), con la `v1-scheda.md` come allegato operativo. Nessun altro documento è oggetto del verdetto.
+
+LENTE: Neuromodulazione (meccanismo d'azione neurofisiologico)
+CONDIZIONE: Ernia discale con dolore spinale irradiato all'arto
+
+---
+
+## RICERCA SVOLTA
+
+Ho verificato quattro blocchi di fisiologia. **(1) Escursione e strain del nervo:** in vivo, l'escursione longitudinale dello sciatico durante SLR modificato è ~6-15 mm a 30° di flessione d'anca e ~5-20 mm a 60° (media ~10-12 mm), cioè **millimetri, non centimetri**; durante una manovra terapeutica la differenza slider vs tensore sullo sciatico è di **0,6 mm** (Ellis, JOSPT 2012), mentre nel modello cadaverico all'arto superiore la differenza di **strain** è 0,8% (slider) vs 6,8% (tensore) — Coppieters & Butler, Man Ther 2008. **(2) Soglie ischemiche del nervo:** il flusso ematico intraneurale cala a partire da ~6-8% di allungamento (~50% di riduzione a 8%, recupero in ~30 min) e si arresta quasi del tutto a ~15%; in compressione il flusso venulare è già compromesso a 20-30 mmHg (Rydevik/Lundborg 1981; Olmarker su radici). **(3) Dose e finestra della terapia manuale:** per il massimo effetto ipoalgesico locale servono **≥4 serie** di mobilizzazione oscillatoria (30 vs 60 s indifferenti — Pentelka, Man Ther 2012); la durata dell'ipoalgesia post-manuale è contesa (picco a ~5 min e minimizzata a 10 min negli asintomatici; ≥30 min in un RCT; **nessuna evidenza sufficiente** di effetto immediato sulla PPT nella meta-analisi Physical Therapy 2023). **(4) Leva autonomica:** ~6 atti/min è la frequenza di risonanza del baroriflesso (0,1 Hz); sessioni da 5, 10, 15 e 20 min producono lo stesso effetto acuto su RMSSD (Laborde 2021), e il cambiamento della **frequenza respiratoria a riposo** richiede ~1 mese di pratica quotidiana. Ho inoltre verificato criteri IASP 2021 per il dolore nociplastico, cut-off CSI (40 generale; 35 proposto nella lombalgia cronica), cut-off DN4 (≥4/10) e painDETECT (>18 probabile, 13-18 ambiguo), e le proprietà di misura dello SLR con inclinometro (ICC intra-operatore 0,95-0,98; MDC 1,5-3,4° in soggetti sani).
+
+**Lucchetto applicato in tutto il documento:** ciò che segue sostituisce meccanismi *dichiarati* con meccanismi *plausibili e coerenti con la fisiologia*. Che una via esista non implica che il tocco la sposti in modo clinicamente rilevante. Ogni riscrittura proposta va scritta in quella forma.
+
+---
+
+## MECCANISMO DICHIARATO vs MECCANISMO PLAUSIBILE
+
+**1. Sezione: PARTE III §2 "I tre fattori" + PARTE IV Sistema Neurologico-Anatomico (incipit e §2)**
+La procedura dice: *"Il nervo deve scivolare di centimetri fra flessione ed estensione d'anca"* e *"il nervo è l'unico tessuto del corpo che per stare bene deve scorrere: fermo, si asfissia"*. Il razionale dello slider poggia quindi sull'**escursione**.
+Fisiologicamente in gioco è: l'escursione dello sciatico è millimetrica (~1 cm al massimo del range di SLR, ~3 mm durante uno slider terapeutico, **0,6 mm in più di un tensore**). Il discriminante reale slider/tensore non è quanto il nervo scorre ma **quanto tira**: 0,8% vs 6,8% di strain nel modello cadaverico. E l'ischemia intraneurale non nasce dall'immobilità ("si asfissia") ma dalla **tensione oltre ~6-8% di allungamento** e dalla **compressione** (flusso venulare già compromesso a 20-30 mmHg). L'immobilità prolungata produce edema e perdita di scorrimento all'interfaccia, non asfissia.
+Cosa cambia nel documento: riscrivere il razionale come *"lo slider mantiene il nervo sotto la soglia di allungamento a cui l'irrorazione intraneurale cala; il tensore ci si avvicina. Non è questione di quanti millimetri scorre, è questione di quanto tira."* Cambia una decisione concreta: nel paziente irritabile **non si progredisce aumentando l'ampiezza** (che alza lo strain), si progredisce riducendo la co-tensione all'estremità opposta. E la frase "fermo si asfissia" va sostituita con "fermo si edemizza e si incolla all'interfaccia".
+
+**2. Sezione: PARTE II "Diagnosi funzionale" + PARTE I "Efficacia basata sull'eziologia"**
+La procedura dice: la classificazione del dolore è la triade Schmid 2023 — somatico riferito / radicolare / radicolopatia.
+Fisiologicamente in gioco è: quella triade classifica la **sorgente** del dolore alla gamba, non il **meccanismo di elaborazione**. Manca il terzo meccanismo IASP, il **nociplastico**, che nel dolore irradiato cronico è frequente e coesiste con la componente radicolare (quadro misto). Nel documento compare solo travestito: come "dolore persistente >3 mesi con dominanza comportamentale" e come riga di tabella *"Sistema centrale | Amplificazione"*. Ricondurre l'amplificazione centrale al modello **comportamentale** è un errore di categoria: il nociplastico è un meccanismo di elaborazione del segnale, non una credenza.
+Cosa cambia nel documento: aggiungere in Parte I un quarto pattern esplicito con i criteri IASP 2021 (distribuzione regionale/diffusa, >3 mesi, segni di ipersensibilità non spiegati dall'input nocicettivo o neuropatico, comorbilità: sonno non ristoratore, affaticamento, difficoltà cognitive) e la conseguenza operativa: **in quadro prevalentemente nociplastico i gradi dello SLR smettono di essere un marker valido** (la meccanosensibilità è diffusa, non segmentaria), il carico locale non è la leva, e la dose neurodinamica scende ulteriormente.
+
+**3. Sezione: PARTE IV Sistema Psico-Emotivo §1**
+La procedura dice: *"dopo la seduta il paziente ha venti minuti in cui il corpo risponde meglio, e quella finestra va riempita di movimento"*.
+Fisiologicamente in gioco è: i "venti minuti" non hanno una base. L'ipoalgesia post-manuale misurata sulla PPT ha picco a ~5 min e risulta minimizzata a 10 min negli asintomatici; un RCT la trova a ≥30 min; la meta-analisi più recente conclude che **non c'è evidenza sufficiente** di un effetto ipoalgesico immediato della terapia manuale spinale.
+Cosa cambia nel documento: scrivere *"se una finestra esiste, è dell'ordine dei minuti ed è contesa in letteratura"* e trarne la conseguenza operativa vera, che oggi manca: **l'esposizione al movimento temuto va eseguita dentro la seduta, subito dopo il blocco manuale**, non affidata al paziente sulla fiducia di venti minuti che non si sa se ci siano.
+
+**4. Sezione: PARTE IV Tabella di sintesi neurologica (riga "Sistema centrale") + PARTE 0 modello Respiratorio + Red flags**
+La procedura dice: il **dolore notturno** è, a seconda della pagina, (a) pattern congestizio venoso peri-radicolare, (b) segno di amplificazione centrale → esposizione graduale, (c) red flag da inviare al medico. Tre meccanismi, un solo segno, **nessun criterio di discriminazione**.
+Fisiologicamente in gioco è: il discriminatore esiste ed è banale da usare in stanza. Congestizio/meccanico = **cambia col movimento e col cambio di posizione** (si alza, cammina, cala). Nociplastico = diffuso, con sonno non ristoratore, affaticamento e ipersensibilità multi-sito. Non meccanico = **non cambia con nulla e cresce notte dopo notte**.
+Cosa cambia nel documento: scrivere la regola a tre vie una volta sola e agganciare le tre occorrenze a quella. Senza il discriminatore, la riga di tabella *"dolore diffuso, notturno → esposizione graduale"* non solo non è falsificabile: colloca in un percorso di esposizione un paziente che il documento stesso, dieci pagine prima, manda dal medico.
+
+**5. Sezione: PARTE III "Follow-up" / "Il piano delle 5 sedute" / "Il bivio della 3ª seduta"**
+La procedura dice: se a 3 sedute SLR e VAS gamba non si muovono, si ripesa il dominante; alla 5ª-6ª, se non c'è risposta, si chiude l'OMT. La regola è applicata **indifferenziatamente a tutti i dominanti**.
+Fisiologicamente in gioco è: i tempi giusti dipendono dal meccanismo. Un cambiamento di **meccanosensibilità periferica** è a latenza di minuti-giorni: giudicarlo a 2-3 sedute è corretto. Una **riduzione della sensibilizzazione centrale** e la ricostruzione della tolleranza al carico richiedono settimane di esposizione ripetuta: dichiarare non-responder a 3 sedute un quadro nociplastico significa leggere rumore e chiudere prima che il meccanismo invocato abbia avuto il tempo di esistere. Il documento se ne accorge a metà — riconosce che Danazumi ha usato 24 sedute — ma poi non differenzia la finestra decisionale.
+Cosa cambia nel documento: due finestre distinte. **Periferico meccanosensibile:** bivio a 2-3 sedute, marker = gradi SLR. **Centrale/nociplastico:** finestra 4-6 settimane di esposizione continuativa, marker = funzione (minuti di cammino prima del sintomo, tolleranza alla seduta in auto), **non** VAS, che in quel quadro è il numero meno mobile.
+
+---
+
+## CLASSIFICAZIONE DEL DOLORE
+
+La procedura classifica la **sorgente** (somatico riferito / radicolare / radicolopatia, Schmid 2023) e screena il neuropatico (DN4/painDETECT) — è più di quanto fa la media dei documenti di questo tipo, e va riconosciuto. Ma non classifica il **meccanismo**: il nociplastico non è mai nominato, il quadro misto (radicolare + nociplastico, la norma nel cronico) non esiste nel documento, e gli strumenti di screening sono citati senza cut-off, quindi non producono nessuna decisione. È un difetto strutturale, non un dettaglio: rende cieca la progressione delle sedute e la scelta della dose esattamente nel sottogruppo in cui sbagliare dose costa di più.
+
+---
+
+## PARAMETRI MANCANTI
+
+- **Slider sciatico in stanza (Parte III B; Reset Neurale punto 4; Scheda §4)** | Parametro assente: numero di **serie**, **velocità** dell'oscillazione, pausa fra serie. Ci sono solo "6-10 oscillazioni lente". | Valore proponibile: 3-4 serie da 6-10 oscillazioni, ~2-3 s per ciclo completo, 30-60 s fra le serie. Base: la dose oscillatoria con supporto migliore richiede **≥4 serie** perché l'effetto ipoalgesico locale si esprima (Pentelka 2012); "6-10 oscillazioni" secche sono verosimilmente sotto-dose.
+- **Pompage in decoaptazione, trazione manuale ritmica (Parte III A; Scheda §4)** | Parametro assente: durata di ciascuna serie e numero di serie. | Valore proponibile: 4 serie da 30-60 s (30 vs 60 s è indifferente in letteratura: usa 30 s e fai le serie).
+- **Inibizione QL / paravertebrali / psoas; release sotto-piriforme e ischiocrurali prossimali (Parte III A e B; Reset Neurale 2-3; Reset di Catena 2-3)** | Parametro assente: durata della "pressione sostenuta". | Valore proponibile: 60-90 s per punto, con criterio d'uscita esplicito = **VAS gamba invariata o in calo** (se sale, esci prima). Il criterio d'uscita conta più della durata.
+- **SMWLM in decubito laterale (Parte III A; Scheda §4)** | Parametro assente: **qualsiasi dose** — serie, ripetizioni, frequenza. È presentata come "la tecnica del braccio vincente di Danazumi" senza riportarne la dose. | Valore proponibile: 3 serie da 6-10 ripetizioni per seduta, e — soprattutto — scrivere che il braccio vincente citato ha ricevuto **2 sedute/settimana per 12 settimane (~24 sedute)**, contro il ciclo di 5-6 qui proposto. Non è un errore proporre un ciclo breve; è un errore proporlo senza dire che è un quarto della dose che ha prodotto il risultato che stai citando.
+
+---
+
+## DECORSO TEMPORALE
+
+La tabella "cosa aspettarsi" è **compatibile** con i meccanismi invocati e non ha l'errore che cerco di solito: 1-2 sedute → "prime variazioni di meccanosensibilità" (latenza di minuti, corretta); 6+ sedute → "plausibile riduzione della sensibilizzazione" (settimane, corretta), ed è etichettata onestamente come aspettativa clinica e non come dato. Le due incompatibilità sono altrove: la **finestra dei venti minuti** (Parte IV Psico-Emotivo §1), che è un numero senza base in mezzo a letteratura contrastante, e il **bivio decisionale a 3 sedute** applicato anche al quadro centrale, il cui meccanismo dichiarato richiede settimane (Follow-up e Piano delle 5 sedute). Terza, minore: la **respirazione a 6 atti/min** non ha decorso dichiarato — l'effetto acuto compare dentro la sessione e si esaurisce in minuti, mentre il cambiamento della frequenza respiratoria **a riposo** richiede ~1 mese di pratica quotidiana. Senza dirlo, il paziente e l'osteopata si aspettano dalla prima settimana un effetto che appartiene alla quarta.
+
+---
+
+## MARKER PROPOSTI
+
+- **Gradi dello SLR misurati con inclinometro (o app da smartphone), non a occhio** | Quando: baseline, prima/dopo ogni blocco neurodinamico, a ogni seduta, stesso operatore e stessa stabilizzazione del bacino; si registra sempre l'**angolo al sintomo familiare**, non l'angolo massimo. | Cosa aspettarsi: con inclinometro l'ICC intra-operatore è 0,95-0,98 e la MDC 1,5-3,4° (in sani); **dichiara nel documento una soglia di cambiamento clinicamente rilevante di ≥10°**, prudenziale perché quella MDC non è stata stabilita su pazienti sintomatici con endpoint "sintomo familiare". Senza strumento e senza soglia, il bivio della 3ª seduta si decide sul rumore di misura.
+- **Frequenza respiratoria a riposo su 60 secondi** | Quando: baseline in prima seduta, poi a ogni seduta prima di toccare, e prima/dopo i 5 minuti di respirazione 4/6. | Cosa aspettarsi: calo di 2-4 atti/min entro la sessione stessa (effetto acuto); calo della **baseline** solo dopo ~4 settimane di pratica quotidiana. È l'unico marker autonomico praticabile che il documento già possiede — è citato una volta in Parte 0 e poi non compare mai più.
+- **Marker della componente centrale, oggi assente in tutto il documento** | Quando: ingresso e 5ª seduta. | Cosa: **CSI** (cut-off 40; 35 nelle popolazioni con lombalgia cronica) più un **test sensoriale al letto extraterritoriale** — tocco leggero e freddo (dorso di un cucchiaio metallico) confrontando arto sintomatico, controlaterale e un sito fuori territorio (es. avambraccio). Se la sensibilità è alterata **fuori dal dermatomero**, il quadro non è puramente radicolare, la dose locale non è la leva e la finestra decisionale è quella lunga. In alternativa gratuita: **minuti di cammino prima della comparsa del sintomo** — il documento prescrive già la camminata frazionata con progressione +2 min/settimana ma non registra mai il tempo di comparsa, buttando via un marker funzionale che ha già in mano.
+
+---
+
+## DA TAGLIARE O COMPATTARE
+
+- **La tesi "la compressione da sola non spiega i sintomi" esposta quattro volte** — introduzione (riga 12), modello Neurologico di Parte 0 (riga 48), citazione Schmid a chiusura di Parte II (riga 275), Parte III §1-2 (righe 283-291), più il riepilogo in apertura di Parte IV (righe 387-389). | Non cambia: nessuna decisione, nessun parametro, nessuna aspettativa dopo la prima esposizione. | Azione: **TAGLIA**. Tenere estesa solo Parte III (che contiene lo script per il paziente ed è il punto di consegna), ridurre le altre a un rimando di una riga. Recupero stimato: 250-300 parole.
+- **"Il DRG ha una barriera ematica più permeabile e una soglia di scarica che l'infiammazione abbassa in fretta... Non lo raggiungi con le mani, ma capisci perché la dose deve essere piccola" (Parte IV Neurologico §1)** | Fisiologicamente è **corretto** — il DRG ha effettivamente una barriera emato-nervosa incompleta — ma l'unica conseguenza operativa ("la dose deve essere piccola") è già scritta in altri tre punti. | Azione: **COMPATTA** in una riga attaccata direttamente alla regola di dose, non come paragrafo autonomo.
+- **"Down-regulation aspecifica dell'attivazione" (Parte I "Cosa fanno le mani", due occorrenze; Reset di Catena punto 1)** | Non è un meccanismo, è un'etichetta: non dice cosa si down-regola, non ha parametro, non ha marker. | Azione: **RENDI OPERATIVO**. Sostituire con la sola leva parametrabile che il documento possiede: *"respirazione a ~6 atti/min (in 4 / out 6), che è la frequenza di risonanza del baroriflesso; l'effetto compare dentro la sessione, si esaurisce in minuti, e si usa per aprire la finestra prima del movimento temuto — resta non testato che modifichi il decorso di questo quadro"*. Con marker: atti/min contati su 60 s prima e dopo.
+
+---
+
+## ERRORI
+
+1. **Il razionale dello slider poggia sull'escursione anziché sullo strain, e l'escursione è sovrastimata di un ordine di grandezza** | PARTE III §2 + PARTE IV Sistema Neurologico-Anatomico (incipit e §2), ripreso nello script paziente e in Scheda §6 | Meccanismo corretto: escursione millimetrica (~3 mm in uno slider, 0,6 mm in più di un tensore); il discriminante è lo strain (0,8% vs 6,8%) e la soglia a cui l'irrorazione intraneurale cala (~6-8% di allungamento; in compressione, flusso venulare già a 20-30 mmHg). Va corretto anche "il nervo è l'unico tessuto che per stare bene deve scorrere: fermo, si asfissia" → fermo si edemizza e si incolla all'interfaccia; si asfissia se tirato o compresso. Conseguenza operativa: nel paziente irritabile si progredisce riducendo la co-tensione, non aumentando l'ampiezza.
+2. **Il meccanismo nociplastico non è mai classificato, e l'amplificazione centrale è assegnata al modello comportamentale** | PARTE I "Efficacia basata sull'eziologia" + PARTE II "Diagnosi funzionale" + PARTE IV tabella neurologica | Meccanismo corretto: aggiungere il quarto pattern con criteri IASP 2021 e quadro misto radicolare+nociplastico; conseguenza dichiarata: in quel quadro i gradi dello SLR non sono più un marker valido, il carico locale non è la leva, la dose scende.
+3. **Il bivio decisionale a 3 sedute e la chiusura a 5-6 sono applicati anche al dominante centrale, il cui meccanismo richiede settimane** | PARTE III "Follow-up", "Il piano delle 5 sedute", "Il bivio della 3ª seduta" | Meccanismo corretto: due finestre distinte — 2-3 sedute con marker SLR per il periferico meccanosensibile; 4-6 settimane con marker funzionale (minuti di cammino, tolleranza alla seduta) per il centrale.
+4. **La "finestra di venti minuti" post-seduta è un numero senza base** | PARTE IV Sistema Psico-Emotivo §1 | Meccanismo corretto: finestra dell'ordine dei minuti e contesa (picco ~5 min, minimizzata a 10 min negli asintomatici; meta-analisi 2023 negativa sull'effetto immediato sulla PPT). Conseguenza da scrivere al suo posto: **l'esposizione al movimento temuto si esegue dentro la seduta, subito dopo il blocco manuale**.
+5. **Il dolore notturno è attribuito a tre meccanismi diversi senza alcun discriminatore** | PARTE 0 modello Respiratorio + PARTE IV tabella neurologica riga "Sistema centrale" + Red flags | Meccanismo corretto: regola a tre vie scritta una volta — cambia col movimento = congestizio/meccanico; diffuso con sonno non ristoratore e ipersensibilità multi-sito = nociplastico; non cambia con nulla e cresce notte dopo notte = non meccanico, invia. Senza il discriminatore la riga di tabella instrada verso "esposizione graduale" un paziente che il documento stesso manderebbe dal medico.
+
+---
+
+## RISCHI
+
+1. **Dose manuale senza serie né durata** (slider 6-10 oscillazioni e basta; pompage, trazione ritmica, inibizioni, release tutti senza durata) | Manca: numero di serie, velocità, pausa, criterio d'uscita | Chiusura: 3-4 serie da 6-10 oscillazioni a 2-3 s/ciclo per la neurodinamica; ≥4 serie da 30 s per la mobilizzazione oscillatoria; 60-90 s per punto sulle inibizioni con criterio d'uscita "VAS gamba non sale".
+2. **I gradi dello SLR sono eletti a parametro decisionale principale senza strumento di misura né soglia di cambiamento** | Manca: inclinometro/app, standardizzazione della posizione, soglia minima | Chiusura: inclinometro obbligatorio, stesso operatore, angolo al sintomo familiare, soglia dichiarata ≥10°. Va scritto nel draft **e** in Scheda §3, altrimenti in stanza non esiste.
+3. **DN4/painDETECT prescritti senza cut-off e senza conseguenza; nessun marker della componente centrale in tutto il documento né nella scheda** | Manca: soglie e strumento | Chiusura: DN4 ≥4/10, painDETECT >18 probabile e 13-18 ambiguo; CSI ≥40 (≥35 nella lombalgia cronica) all'ingresso e alla 5ª; test sensoriale extraterritoriale al letto. Ogni soglia va accompagnata dalla decisione che produce sulla dose.
+4. **"Down-regulation aspecifica dell'attivazione" resta un'etichetta non definita, non dosata e non verificata** | Manca: cosa si down-regola, con che parametro, con che marker | Chiusura: sostituirla con la respirazione a ~6 atti/min descritta come risonanza baroriflessa, con latenza (dentro la sessione) e durata (minuti) dichiarate, e con gli atti/min su 60 s come marker.
+5. **Marker orfano: la frequenza respiratoria a riposo è citata una volta in Parte 0 e non compare più** | Manca: presenza in Follow-up, nel Piano delle 5 sedute e nella Scheda | Chiusura: portarla nella Scheda accanto a VAS gamba e gradi SLR. Un marker che non è sulla scheda da stanza non viene misurato.
+6. **SMWLM presentata come tecnica di punta senza dose, e ciclo proposto pari a ~1/4 della dose del trial citato** | Manca: serie/ripetizioni; confronto esplicito con le 24 sedute di Danazumi | Chiusura: 3 serie da 6-10 ripetizioni, e una riga che dichiara la differenza di dose rispetto al trial da cui deriva il default "mobilizza, non spingere".
+
+---
+
+## PREFERENZE
+
+1. **La fitta da tosse è spiegata due volte come se fossero due meccanismi concorrenti** — picco pressorio (Parte 0 respiratorio, Parte IV pressorio) e scarica dal DRG (Parte IV neurologico). Sono un solo evento in due passaggi: il picco pressorio è **l'input**, il DRG sensibilizzato è **il generatore**. Compattare in una riga con la conseguenza operativa già presente nel documento: sull'input hai accesso (educazione alla tosse), sul generatore no.
+2. **Lo script per il paziente e Scheda §6 ereditano l'errore n. 1** — "restituisco scorrimento" va riformulato in "faccio muovere il nervo senza tirarlo": è la frase che il paziente si porta a casa, ed è anche più facile da capire.
+
+---
+
+## TIENE
+
+La neurofisiologia corretta e operativa di questo documento non è poca, e va lasciata stare. **La riga più intelligente è quella di riga 46:** *"in questa condizione il modello Neurologico non è primariamente l'autonomico — il protagonista è l'asse neurale periferico"*. È esattamente la correzione che di solito devo imporre io, e qui è già scritta: evita all'intero documento la deriva vagale che rovina la maggior parte dei razionali neurologici in terapia manuale. Sono corretti anche: il DRG come struttura a barriera emato-nervosa incompleta e quindi chimicamente reattiva; la logica slider→tensore come progressione (giusta nella direzione, sbagliata nella giustificazione — vedi errore 1); i **10 sollevamenti monopodalici sul tallone** per S1, che è la calibrazione giusta perché la forza plantare eccede la resistenza manuale dell'esaminatore; la **periferizzazione** come stop-rule, che è un marker gratuito e genuinamente falsificabile; la stop-rule numerica "gamba oltre +2 punti"; la scelta di misurare la VAS **della gamba** e non quella lombare. E la respirazione **in 4 / out 6** è, senza che il documento lo sappia, il parametro giusto: ~6 atti/min è la frequenza di risonanza del baroriflesso, e i 5 minuti proposti sono nel range studiato (5, 10, 15 e 20 min danno lo stesso effetto acuto). Va solo dichiarato perché quel numero, non un altro. Infine, l'onestà delle etichette **PLAUSIBILE (non dimostrato)** su drenaggio peri-radicolare, effetto autonomico del tocco e contributo del tocco ai fattori psicosociali è esattamente il registro giusto: il documento non chiede al lettore di credere a più di quanto sappia.
+
+---
+
+**VERDETTO: Da calibrare**
+Il documento invoca la via giusta — asse neurale periferico, non autonomico — ma la giustifica con il parametro sbagliato (escursione anziché strain), non classifica il meccanismo nociplastico in una condizione dove il quadro misto è la norma, e applica una finestra decisionale periferica a un meccanismo centrale che richiede settimane.

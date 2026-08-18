@@ -281,7 +281,19 @@ async function promote(procIn, schedaIn, procOut, schedaOut, motivo) {
 // ---- DUE MODALITA D'USO ----
 // A) Procedure SPECIFICHE: args = ["reflusso"] oppure ["reflusso","cervicalgia", ...]
 // B) TUTTE le procedure: args = "tutte" (o "all" / "*") -> carica gli slug dal JSON
-const raw = Array.isArray(args) ? args : (args ? [args] : [])
+// NORMALIZZAZIONE: args puo' arrivare come STRINGA JSON ('["lombalgia"]') invece che come array.
+// Senza questa riparazione lo slug diventa letteralmente '["lombalgia"]' e le cartelle nascono
+// col nome sbagliato (bug che ha rotto il batch del 18/08/2026).
+function normalizeArgs(a) {
+  let v = a
+  if (typeof v === 'string') {
+    const t = v.trim()
+    if (t.startsWith('[') || t.startsWith('"')) { try { v = JSON.parse(t) } catch (e) { v = t } }
+  }
+  const arr = Array.isArray(v) ? v : (v ? [v] : [])
+  return arr.map((x) => String(x).trim().replace(/^\[+/, '').replace(/\]+$/, '').replace(/^"+/, '').replace(/"+$/, '').trim()).filter(Boolean)
+}
+const raw = normalizeArgs(args)
 const wantAll = raw.length === 1 && ['tutte', 'tutti', 'all', '*'].includes(String(raw[0]).toLowerCase())
 
 let slugs = raw
