@@ -50,7 +50,12 @@ def build(md_path: Path, titolo: str, out_path: Path) -> None:
         "pandoc",
         str(md_path),
         "-o", str(out_path),
-        "--from", "markdown+pipe_tables+raw_html",
+        # -yaml_metadata_block: senza questo, un "---" di separazione a meta' documento viene
+        # letto da pandoc come inizio di un blocco YAML e la conversione fallisce sulla prima
+        # riga che contiene due punti (tipicamente una voce bibliografica dell'Appendice B).
+        # Successo su mal-di-testa-tensivo, 20/08/2026. Nel documento "---" e' sempre una riga
+        # orizzontale, mai metadati: i metadati li passiamo noi con --metadata.
+        "--from", "markdown+pipe_tables+raw_html-yaml_metadata_block",
         "--metadata", "author=Mobilitas — Direzione Osteopatica",
         "--metadata", "lang=it-IT",
     ]
