@@ -316,3 +316,318 @@ Una voce per deviazione. Sempre con una **fonte**: una deviazione senza fonte no
 | **Cosa fa la Bibbia** | Dichiara la lunghezza in testa al documento, con la ragione: il residuo è **ampiezza**, non ridondanza. Non taglia una frase-ponte, un'etichetta, un PMID, una bandiera rossa o uno slot di chiusura per rientrare in un numero. |
 | **Se ratificata** | O il tetto diventa **condizionato all'ampiezza dichiarata** (numero di meccanismi, di modelli con prove, di leve e di strumenti attivi), oppure la catena acquisisce un cancello di ampiezza **prima** del 1º livello, che fissi quanti meccanismi e quante leve la Bibbia sviluppa: sommare undici lenti che aggiungono e poi chiedere all'editor di togliere ~26% del corpo senza toccare niente di quello che hanno aggiunto è una richiesta che non si può soddisfare. |
 
+
+---
+
+### D-020 · La restrizione «il principio del Centro di Percezione vale per l'indagine» non discrimina, e va sostituita dalla rimozione dichiarata
+
+| | |
+|---|---|
+| **Stato** | `PROPOSTA` |
+| **Aperta il** | 2026-08-19 |
+| **Condizione di emersione** | Lombalgia (Bibbia v1) |
+| **Ambito** | Trasversale — riguarda ogni condizione muscolo-scheletrica in cui l'intervento con la migliore evidenza si applica sulla regione sintomatica (lombalgia, cervicalgia, tendinopatie, spalla) |
+| **Elemento del metodo** | La correzione proposta in **D-014**: restringere *"NON trattare quasi mai il CP"* all'**indagine** e non alla scelta del bersaglio. |
+| **Perché è insufficiente** | La formulazione attenuata è stata rilevata come **passaggio non semplificabile su tre condizioni su tre** (reflusso v6/v7, vertigini v6/v7, cervicalgia v6/v7 — vedi `registro-lingua.md`, «Passaggi che restano oscuri»). Scritta in italiano piano, la regola si annulla da sola: la ricerca va a monte, la mano resta dove fa male, e non resta nessun criterio che discrimini un comportamento da un altro. Una regola che, formulata in chiaro, non separa più due condotte non è una regola conservativa: è una regola che occupa spazio e non decide. |
+| **Cosa fa la Bibbia** | Non attenua il principio: lo **toglie** da questa condizione, con il motivo scritto a lettera in «Come ragiono davanti a questo paziente» — *"la regola «non trattare il punto in cui il paziente sente» non si applica alla scelta del bersaglio, e non viene attenuata: viene tolta. Il motivo è un fatto — gli interventi con le prove migliori si applicano proprio sulla regione lombare e sul movimento che fa male."* Quello che resta, intatto e con potere di discriminare, è la regola di verifica: **il marker con cui rivaluti appartiene a un piano che non hai trattato.** |
+| **Se ratificata** | In `motore-clinico.md` §2 (6° Sistema Fasciale), separare due regole distinte invece di una attenuata: (a) regola di **indagine** — *"cerca a monte prima di concludere che la causa sia dove fa male"*; (b) regola di **verifica** — *"il marker della prova appartiene a un piano non trattato"*. Il divieto di trattare la zona sintomatica sparisce come regola, e con lui la formulazione «in forma attenuata» che tre revisioni di lingua su tre hanno segnalato come non scrivibile in chiaro. |
+
+---
+
+### D-021 · La conversione gel→sol dell'acido ialuronico presentata come effetto del gesto manuale
+
+| | |
+|---|---|
+| **Stato** | `PROPOSTA` |
+| **Aperta il** | 2026-08-19 |
+| **Condizione di emersione** | Lombalgia (Bibbia v1) |
+| **Ambito** | Trasversale — riguarda ogni condizione in cui si invoca la densificazione fasciale come bersaglio del trattamento manuale |
+| **Elemento del metodo** | `motore-clinico.md`, §2, 6° Sistema Fasciale: *"Biochimica (sol/gel): stress, freddo, trauma, pH acido rendono l'acido ialuronico «appiccicoso»; la manipolazione (attrito → calore) lo riporta fluido."* Scritto come fatto, senza etichetta. |
+| **Perché è sbagliato** | È un modello, non una misura. Nessuno ha misurato viscosità o stato dell'acido ialuronico nella fascia umana prima e dopo un trattamento manuale. Quello che **è** stato misurato sulla fascia toracolombare umana è altro: lo scorrimento fra gli strati è ridotto di circa un quinto nelle persone con lombalgia cronica rispetto a chi non ha dolore (Langevin, *BMC Musculoskelet Disord* 2011, [PMID 21929806](https://pubmed.ncbi.nlm.nih.gov/21929806/)) — un dato trasversale, che gli autori attribuiscono a schemi di movimento alterati **o** a una alterazione intrinseca del connettivo, senza stabilire la direzione né misurare l'effetto di un trattamento. E la sola cosa nota sull'innervazione utile a spiegare il dolore riguarda la distribuzione delle terminazioni nocicettive, confinate allo strato esterno e al sottocute (Tesarz, *Neuroscience* 2011, [PMID 21839150](https://pubmed.ncbi.nlm.nih.gov/21839150/)). |
+| **Cosa fa la Bibbia** | Non usa la catena sol/gel. Scrive la fascia toracolombare come **tessuto innervato e come piano di scorrimento misurato**, con il dato di Langevin dichiarato come differenza fra gruppi e non come bersaglio che la mano ripristina. La leva manuale sul terzo meccanismo porta PROBABILE sull'effetto clinico e nessuna affermazione sul substrato biochimico. |
+| **Se ratificata** | Riscrivere la riga «Biochimica (sol/gel)» di `motore-clinico.md` come **modello esplicativo con etichetta IPOTESI**, e sostituire il claim di effetto (*"la manipolazione lo riporta fluido"*) con la formulazione misurata: *"nelle persone con lombalgia cronica lo scorrimento fra gli strati della fascia toracolombare è ridotto; che il gesto manuale lo ripristini non è stato misurato."* |
+
+---
+
+### D-020 · La gerarchia del Motore Clinico mette in fondo il piano su cui, in questa condizione, poggia l'evidenza migliore
+
+| | |
+|---|---|
+| **Stato** | `PROPOSTA` |
+| **Aperta il** | 2026-08-19 |
+| **Condizione di emersione** | Artrosi (Bibbia v1) |
+| **Ambito** | Trasversale — riguarda ogni condizione in cui l'intervento con la migliore evidenza agisce sul muscolo peri-articolare o sul carico, cioè sul piano esecutore (artrosi, tendinopatie, gonalgia, coxalgia, spalla, lombalgia da decondizionamento) |
+| **Elemento del metodo** | `motore-clinico.md`, §1 e §3: *"il sistema dominante è, di norma, il più alto nella piramide che risulti disfunzionale"*, e §2, 6° Sistema Fasciale come ultimo livello di comando. Il muscolo esecutore non compare come piano autonomo e finisce, per costruzione, in fondo. |
+| **Perché è incompleto** | Su questa condizione la leva con le prove migliori al mondo appartiene esattamente al piano che la gerarchia colloca in fondo. La debolezza degli estensori del ginocchio **precede** l'artrosi sintomatica su 46.819 persone in 11 studi longitudinali ([Øiestad, *Br J Sports Med* 2022, PMID 34916210](https://pubmed.ncbi.nlm.nih.gov/34916210/)); l'esercizio a terra riduce il dolore di 12 punti su 100 con prove di alta qualità su 54 studi ([Fransen, *Cochrane* 2015, PMID 25569281](https://pubmed.ncbi.nlm.nih.gov/25569281/)); e l'effetto **non dipende dalla gravità radiografica né dal dolore di partenza**, mentre dipende dalla supervisione e dalla specificità del bersaglio muscolare ([Juhl, *Arthritis Rheumatol* 2014, PMID 24574223](https://pubmed.ncbi.nlm.nih.gov/24574223/)). Applicata come regola di **priorità terapeutica** invece che di **ordine d'indagine**, la piramide porta a spendere il ciclo sui piani a monte e a lasciare fuori l'unico intervento con una revisione sistematica di alta qualità alle spalle. |
+| **Cosa fa la Bibbia** | Separa i due usi della gerarchia e lo dichiara a lettera in «Come ragiono davanti a questo paziente»: *"la gerarchia ordina l'indagine, non la forza delle leve. Su questa condizione la leva con le prove migliori appartiene al piano esecutore, che nella gerarchia sta in fondo: il muscolo."* Mantiene la road map ordinata con **un solo metro** — quanto un piano sequestra la capacità di adattamento — e tiene le bandiere rosse **fuori** dalla lista, come cancello che la precede, per non mescolare due metri d'ordine nella stessa sequenza numerata. |
+| **Se ratificata** | Aggiungere a `motore-clinico.md` §3 la distinzione fra **ordine d'indagine** (la piramide) e **ordine d'intervento** (la forza dell'evidenza disponibile su quella condizione), con la regola che quando le due divergono la Bibbia lo dichiara nel Capitolo 8 invece di lasciare che il lettore le confonda. |
+
+---
+
+### D-020 · La tensione cervicale trattata come innesco dell'attacco, quando in due casi su tre è parte dell'attacco
+
+| | |
+|---|---|
+| **Stato** | `PROPOSTA` |
+| **Aperta il** | 2026-08-19 |
+| **Condizione di emersione** | Emicrania (Bibbia v1) |
+| **Ambito** | Trasversale — riguarda ogni condizione in cui un reperto muscolo-scheletrico co-occorrente viene assunto come causa del sintomo (emicrania, cefalea tensiva, acufene, vertigini, dolore facciale) |
+| **Elemento del metodo** | La formulazione di partenza del problema (`problemi.json`, campo `meccanismo_causa`): *"gli attacchi partono più facilmente quando il sistema è già sotto pressione: collo rigido, mandibola serrata… sono la **legna sul fuoco**"*, e per estensione la logica del Motore Clinico che legge un ipertono periferico come ingresso che alimenta il sintomo. |
+| **Perché è sbagliato** | Sull'emicrania la direzione prevalente è l'opposta. Su 391 emicranici, 166 riferivano dolore al collo durante l'attacco: in 53 (32%) il dolore al collo funzionava da innesco, in 113 (68%) era **parte** della sintomatologia dell'attacco ([Pradhan, *Neurol India* 2018, PMID 29547158](https://pubmed.ncbi.nlm.nih.gov/29547158/)). Con diario elettronico su 97 pazienti, il collo rigido compare nel **50%** degli attacchi preceduti da sintomi premonitori, terzo per frequenza dopo stanchezza e difficoltà di concentrazione: è quindi un fenomeno della fase premonitoria, cioè già l'attacco ([Giffin, *Neurology* 2003, PMID 12654956](https://pubmed.ncbi.nlm.nih.gov/12654956/)). E la fisiologia conferma la direzione testa→collo: la stimolazione nocicettiva della dura madre sensibilizza i neuroni di secondo ordine e **aumenta** le risposte all'ingresso cervicale, allargando il campo recettivo nel 71% dei neuroni ([Bartsch & Goadsby, *Brain* 2003, PMID 12821523](https://pubmed.ncbi.nlm.nih.gov/12821523/)). Scrivere la tensione cervicale come "legna sul fuoco" senza qualificarla porta a trattare un sintomo credendo di trattare una causa, e a promettere al paziente una riduzione degli attacchi che quel reperto non regge. È lo stesso errore che D-009 ha già corretto sul reflusso e il collo, in un'altra condizione. |
+| **Cosa fa la Bibbia** | Scrive la convergenza come **bidirezionale** e dichiara la proporzione: *"il collo partecipa quasi sempre, ma in due casi su tre partecipa come sintomo e non come causa, e distinguere i due casi è il lavoro"*. Usa la palpazione sostenuta dei segmenti cervicali alti come **test di stratificazione** — 11% senza dolore, 42% dolore locale, 47% dolore riferito in testa ([Luedtke & May, *J Headache Pain* 2017, PMID 28952052](https://pubmed.ncbi.nlm.nih.gov/28952052/)) — invece che come conferma di una catena causale. Nel Capitolo 9 il confine di atto vieta esplicitamente la frase *"il suo mal di testa viene dalla cervicale"*, dichiarandola sia diagnosi sia affermazione falsa in due casi su tre. |
+| **Se ratificata** | Riformulare il campo `meccanismo_causa` dell'emicrania e la logica generale del Motore Clinico sui reperti co-occorrenti: un reperto muscolo-scheletrico che accompagna un sintomo va classificato come **candidato bidirezionale** finché non è stato stratificato con un test di provocazione, e la Bibbia deve dichiararne la proporzione quando esiste un dato. Sostituire la metafora "legna sul fuoco" con una formulazione che non attribuisca la direzione prima di averla verificata. |
+### D-020 · «Ogni cicatrice è una densificazione permanente e diventa il punto prioritario finché non la liberi»
+
+| | |
+|---|---|
+| **Stato** | `PROPOSTA` |
+| **Aperta il** | 2026-08-19 |
+| **Condizione di emersione** | Cicatrici da cesareo (Bibbia v1) |
+| **Ambito** | Trasversale — riguarda ogni condizione in cui compare una cicatrice chirurgica in anamnesi |
+| **Elemento del metodo** | `motore-clinico.md`, §2, 5° Trauma: *"**Cicatrici = tiranti invisibili:** ogni cicatrice è una densificazione permanente. «Tiri un filo della maglia sul fondo (addome), la scollatura (collo) si deforma.» Una cicatrice diventa il punto prioritario finché non la liberi."* |
+| **Perché è sbagliato** | Tre affermazioni presentate come fatti, e nessuna delle tre regge. (1) **«Densificazione permanente»**: la differenza fra cicatrice da cesareo e pelle non cicatriziale della stessa donna è reale ma parziale e specifica — tono, rigidità, scorrimento viscoso e tempo di rilassamento meccanico differiscono, l'**elasticità no** (Gilbert, *Skin Res Technol* 2021, [PMID 33084197](https://pubmed.ncbi.nlm.nih.gov/33084197/)). Dire "densificazione" senza dire quale proprietà è cambiata rende il reperto non misurabile e non falsificabile. (2) **«Ogni cicatrice»**: la formazione di aderenze non è universale e dipende dalla propensione individuale più che dal numero di interventi — il 43% di 160 donne aveva aderenze importanti già dopo il primo cesareo, e chi le aveva alla seconda operazione aveva un rischio 1,88 volte maggiore alla terza (Herzberger, *Arch Gynecol Obstet* 2015, [PMID 25877223](https://pubmed.ncbi.nlm.nih.gov/25877223/)). (3) **«Diventa il punto prioritario finché non la liberi»**: è una regola di priorità scritta come fatto, e su questa condizione porta a un ritardo di invio. Oltre metà delle donne esaminate con dolore moderato o grave dopo incisione soprapubica trasversa aveva un **intrappolamento nervoso** (17 su 32), il cui percorso efficace è medico e chirurgico, non manuale (Loos, *Obstet Gynecol* 2008, [PMID 18378742](https://pubmed.ncbi.nlm.nih.gov/18378742/); Loos, *Ann Surg* 2008, [PMID 18948818](https://pubmed.ncbi.nlm.nih.gov/18948818/)). Infine, la trasmissione a distanza della tensione cicatriziale — «il collo si deforma» — non è mai stata misurata. |
+| **Cosa fa la Bibbia** | Scrive la cicatrice come tessuto con differenze **misurate e parziali**, nominando quali proprietà cambiano e quale no. Mette il **nervo intrappolato come primo meccanismo da escludere**, non come ultimo. Etichetta l'aderenza dei piani PROBABILE e il compenso a distanza IPOTESI, dichiarando che nessuno ha misurato la relazione fra scorrimento della cicatrice e dolore lombare. E toglie la priorità dalla regola di metodo per rimetterla nel triage e nella road map, dove la decide il quadro della singola paziente. |
+| **Se ratificata** | Riformulare la voce "Cicatrici" di `motore-clinico.md` §2 (5° Trauma) in tre punti: la cicatrice **può** avere proprietà meccaniche diverse dal tessuto vicino, e quali; la formazione di aderenze **non è universale** e dipende dalla propensione individuale; la cicatrice è **un bersaglio da valutare**, non un punto prioritario per definizione — e prima di trattarla va escluso l'intrappolamento nervoso quando il dolore ha un punto e un territorio. |
+
+---
+
+
+### D-020 · L'ATM e il bruxismo elencati fra gli "inquinatori recettoriali" che tengono il sistema in loop
+
+| | |
+|---|---|
+| **Stato** | `PROPOSTA` |
+| **Aperta il** | 2026-08-19 |
+| **Condizione di emersione** | Bruxismo (Bibbia v1) |
+| **Ambito** | Trasversale — riguarda ogni condizione in cui il metodo elenca l'ATM o il bruxismo fra i recettori "inquinatori" (bruxismo, ATM, cefalea, acufeni, cervicalgia, problemi posturali) |
+| **Elemento del metodo** | `motore-clinico.md`, §2, 1° Sistema Neurologico: *"I tre «Inquinatori» (recettori): Occhio, **ATM** (il nucleo del trigemino arriva alle prime cervicali C1-C3: **bruxismo o morso sbilanciato tengono il sistema in loop di contrazione**), Vestibolo."* Il bruxismo compare come input periferico che alimenta lo stato di allarme. |
+| **Perché è sbagliato sulla condizione in cui il bruxismo è il sintomo** | Inverte la direzione della catena, e la direzione è misurata. Il bruxismo del sonno è un'attività oromotoria **secondaria** a una sequenza di riattivazione del sonno: l'aumento dell'attività simpatica comincia **8 minuti** prima dell'episodio, i microrisvegli 4 minuti prima, poi si attivano corteccia, cuore, sopraioidei e solo alla fine gli elevatori ([Huynh, *J Sleep Res* 2006, PMID 16911037](https://pubmed.ncbi.nlm.nih.gov/16911037/); [Lavigne, *Arch Oral Biol* 2007, PMID 17313939](https://pubmed.ncbi.nlm.nih.gov/17313939/)). Il masticatorio è l'**esecutore**, non la sorgente. Le sintesi cliniche collocano la regolazione del bruxismo del sonno a livello centrale e **non** nei fattori morfologici, cioè non nell'occlusione ([Yap & Chua, *J Conserv Dent* 2016, PMID 27656052](https://pubmed.ncbi.nlm.nih.gov/27656052/)); il consenso internazionale ha inoltre smesso di considerarlo un disturbo, definendolo un comportamento in un continuum ([Lobbezoo, *J Oral Rehabil* 2018, PMID 29926505](https://pubmed.ncbi.nlm.nih.gov/29926505/)). Conseguenza pratica dell'errore: chi legge "inquinatore" cerca la causa nel morso e nel muscolo, e non guarda l'unico piano su cui esistono studi controllati con effetto — quello comportamentale da sveglio e quello cervicale. Nota: la revisione Cochrane sull'aggiustamento occlusale (Koh & Robinson 2003) è stata **ritirata nel 2016** e non va citata a sostegno. |
+| **Cosa fa la Bibbia** | Non usa la categoria "inquinatore" per l'ATM né per il bruxismo. Descrive il bruxismo del sonno come evento del sonno generato a monte, con il masticatorio come esecutore, e riserva la parola *ingresso* a ciò che è stato misurato come tale: l'acidificazione esofagea ([Ohmure, *J Dent Res* 2011, PMID 21248360](https://pubmed.ncbi.nlm.nih.gov/21248360/)), alcol, tabacco e caffeina ([Bertazzo-Silveira, *JADA* 2016, PMID 27522154](https://pubmed.ncbi.nlm.nih.gov/27522154/)) e alcuni antidepressivi ([Garrett & Hawley, *Neurol Clin Pract* 2018, PMID 29708207](https://pubmed.ncbi.nlm.nih.gov/29708207/)). L'occlusione è dichiarata non causa e non bersaglio. |
+| **Se ratificata** | In `motore-clinico.md` §2 limitare la voce "ATM" fra gli inquinatori alle condizioni in cui il sintomo **non** è mandibolare, togliere "morso sbilanciato" dalla formulazione, e aggiungere che quando il sintomo presentato è il bruxismo il generatore è centrale e il masticatorio è l'esecutore. |
+
+---
+
+### D-020 · «Resistenza al trattamento entro 24 ore» come segno di dominanza viscerale
+
+| | |
+|---|---|
+| **Stato** | `PROPOSTA` |
+| **Aperta il** | 2026-08-19 |
+| **Condizione di emersione** | Ernia del disco lombare (Bibbia v1) |
+| **Ambito** | Trasversale — riguarda ogni condizione con una componente radicolare o neuropatica periferica (ernia discale, radicolopatia cervicale, sindromi da intrappolamento) |
+| **Elemento del metodo** | `motore-clinico.md`, §2, 4° Sistema Viscerale: *"I tre segnali chiave di dominanza viscerale: … (3) **resistenza al trattamento** (hai trattato la struttura in modo perfetto, ma dopo 24 ore la contrattura è tornata **identica**)."* |
+| **Perché è sbagliato** | Nella radicolopatia da ernia il ritorno della contrattura di difesa entro 24-48 ore è il **comportamento atteso di una radice chimicamente irritata**, non un segno viscerale. L'applicazione di nucleo polposo autologo alle radici della cauda equina, **senza nessuna compressione meccanica**, riduce la velocità di conduzione per giorni e produce danno istologico delle fibre (Olmarker, Rydevik e Nordborg, *Spine* 1993, [PMID 8235812](https://pubmed.ncbi.nlm.nih.gov/8235812/)); l'effetto è mediato dal TNF-alfa presente nelle cellule del nucleo, e bloccarlo impedisce il calo di conduzione (Olmarker e Larsson, *Spine* 1998, [PMID 9854752](https://pubmed.ncbi.nlm.nih.gov/9854752/)). Il segnale, preso come indicatore viscerale, porta a cercare un organo dove c'è una radice infiammata — e a spostare l'indagine su un piano che non contiene il driver, mentre il tempo su questa condizione è la variabile che produce il danno permanente. |
+| **Cosa fa la Bibbia** | Elenca la ricomparsa identica a 24-48 ore fra i segni del **primo meccanismo** (la chimica sulla radice), in «Cosa si rompe», con la formulazione: *"la contrattura di difesa ritorna identica entro ventiquattro-quarantotto ore da qualunque cosa tu faccia"*, e la richiama in «Perché le mani possono cambiare qualcosa» come *"non un fallimento: la firma del meccanismo"*. Non usa la resistenza a 24 ore come segnale viscerale. |
+| **Se ratificata** | In `motore-clinico.md` §2, 4° Sistema Viscerale, condizionare il terzo segnale: la resistenza al trattamento vale come indicatore viscerale **solo in assenza di una componente radicolare o neuropatica periferica documentata**; in presenza di quella, il segnale appartiene alla chimica perineurale e non all'organo. |
+
+---
+
+### D-020 · Il «re-test immediato» senza soglia di misura non è interpretabile
+
+| | |
+|---|---|
+| **Stato** | `PROPOSTA` |
+| **Aperta il** | 2026-08-19 |
+| **Condizione di emersione** | Sciatalgia (Bibbia v1) |
+| **Ambito** | Trasversale — riguarda ogni condizione in cui la verifica poggia su un segno misurato in gradi, centimetri o millimetri di pressione |
+| **Elemento del metodo** | `motore-clinico.md`, §2, 6° Sistema Fasciale: *"**Re-test immediato:** liberato il CC, il CP migliora *istantaneamente*. Se non migliora, hai sbagliato CC o piano di movimento."* |
+| **Perché è sbagliato** | La regola è formulata come dicotomia — migliora / non migliora — su un segno che ha un errore di misura noto e grande. Sul test di elevazione della gamba tesa, la differenza minima davvero rilevabile è fra **13 e 20 gradi**, e gli autori concludono che l'errore di misura *"probabilmente impedisce di usare l'escursione del SLR per le decisioni cliniche"* (Nee, Coppieters e Boyd, *Musculoskelet Sci Pract* 2022, [PMID 35245880](https://pubmed.ncbi.nlm.nih.gov/35245880/)). Applicata alla lettera, la regola trasforma un'oscillazione dello strumento in una conferma del ragionamento: è il meccanismo con cui la prova della chiave di volta smette di essere una verifica e diventa un auto-inganno, cioè esattamente ciò che `lessico-del-metodo.md` chiede di evitare con la quarta condizione del marker. Il problema non è il re-test, che resta valido: è la sua formulazione senza soglia. |
+| **Cosa fa la Bibbia** | Riformula il re-test come **confronto contro una soglia dichiarata prima**, e la scrive per ogni marker della condizione. Su questa Bibbia la soglia del SLR è fissata a **≥ 20°** — sopra l'estremo superiore dell'errore riportato — e le altre tre soglie sono dichiarate come convenzioni di misura del metodo, scelte sopra l'errore dello strumento e non desunte dalla letteratura. Formulazione usata in «Come ragiono davanti a questo paziente»: *"un guadagno di dieci gradi non è un risultato, è rumore dello strumento."* Inoltre il marker misurato è il **punto di comparsa del sintomo distale**, non l'escursione massima, perché la seconda dipende anche dalla catena posteriore. |
+| **Se ratificata** | Riscrivere la voce del re-test in `motore-clinico.md` §2 come *"re-test immediato contro una soglia dichiarata prima di trattare: senza soglia, un re-test non distingue un effetto da un errore di misura"*, e aggiungere la stessa condizione alla descrizione della prova della chiave di volta in `architettura-bibbia.md`. |
+
+### D-022 · Il reperto palpatorio come fondamento del mandato clinico e come marker
+
+| | |
+|---|---|
+| **Stato** | `PROPOSTA` |
+| **Aperta il** | 2026-08-19 |
+| **Condizione di emersione** | Lombalgia (sintesi v3, 2º livello — `evidenza-estesa`) |
+| **Ambito** | Trasversale — riguarda ogni condizione in cui il mandato clinico e la verifica poggiano su un reperto trovato con le mani |
+| **Elemento del metodo** | `architettura-bibbia.md`, cancello d'ingresso, e `motore-clinico.md`, regola sui marker: il mandato nasce da *"un reperto disfunzionale che hai trovato e documentato, e da un marker che si muove quando lo tratti"*, **senza distinguere fra tipi di reperto**. |
+| **Perché è incompleto** | L'evidenza contraddice quell'indistinzione. Su 49 studi, fra quelli che usano il kappa hanno affidabilità accettabile fra esaminatori il 64% dei test di provocazione del dolore, il 58% dei test di movimento, il 33% dei punti di repere e lo **0%** dei test palpatori sui tessuti molli paraspinali; l'escursione regionale è più affidabile della segmentale, e disciplina, esperienza, consenso sulla procedura e training appena precedente **non migliorano** l'affidabilità (Seffinger, *Spine* 2004, [PMID 15454722](https://pubmed.ncbi.nlm.nih.gov/15454722/)). I test attivi di controllo del movimento reggono, ma non tutti: kappa 0,24-0,71, sei su dieci sopra 0,6 (Luomajoki, *BMC Musculoskelet Disord* 2007, [PMID 17850669](https://pubmed.ncbi.nlm.nih.gov/17850669/)). E scegliere il segmento "giusto" non cambia l'esito: certezza moderata di nessuna differenza fra manipolazione mirata e non mirata su 931 pazienti (Sørensen, *J Orthop Sports Phys Ther* 2023, [PMID 37506306](https://pubmed.ncbi.nlm.nih.gov/37506306/); corroborato da Nim, *Sci Rep* 2021, [PMID 34862434](https://pubmed.ncbi.nlm.nih.gov/34862434/)). Un mandato professionale che poggia su un reperto di cui non si dichiara la riproducibilità è una regola non verificabile. |
+| **Cosa fa la Bibbia** | Dichiara il criterio invece di applicarlo in silenzio. Reggono come marker e come reperto documentato: provocazione del dolore con un carico definito, escursione **regionale** misurata, test di controllo del movimento, tempo su un compito funzionale, soglia algometrica. La palpazione dei tessuti molli e la valutazione della mobilità **segmentale** restano parte dell'esame e dell'orientamento, ma **non fondano il mandato e non funzionano da marker**. La stessa specificazione entra nella prima condizione del GIALLO. E il reperto viene dichiarato per quello che è: dice che hai qualcosa da trattare e dove il paziente tollera il contatto, non che quel segmento è la causa. |
+| **Se ratificata** | Integrare la `regola sui marker` di `motore-clinico.md` con il criterio di **riproducibilità misurata**, e la descrizione del cancello d'ingresso in `architettura-bibbia.md` con la distinzione fra reperto che fonda il mandato e reperto che orienta soltanto. |
+
+---
+
+### D-023 · Il lavoro intra-orale sui masticatori come tecnica ammissibile
+
+| | |
+|---|---|
+| **Stato** | `PROPOSTA` |
+| **Aperta il** | 2026-08-19 |
+| **Condizione di emersione** | Bruxismo (sintesi v3, 2º livello — `fedelta-bibbia` ed `evidenza-estesa`) |
+| **Ambito** | Trasversale — riguarda ogni condizione del distretto orofacciale (bruxismo, dolori mandibolari, cefalea di origine masticatoria) |
+| **Elemento del metodo** | La tradizione osteopatica sul distretto temporo-mandibolare, che prevede l'accesso intra-orale ai muscoli masticatori — in particolare allo pterigoideo laterale — come parte dell'arsenale. |
+| **Perché è sbagliato** | Due ragioni indipendenti, e la prima da sola basta. **Normativa:** il DPR 131/2021, art. 2 co. 2 lett. a) definisce l'atto osteopatico come costituito da tecniche *esclusivamente manuali, non invasive ed **esterne***. Una manovra dentro la cavità orale non è esterna, e non esiste un consenso informato che renda ammissibile un atto fuori dal profilo professionale. **Tecnica:** il bersaglio non è raggiungibile. Lo pterigoideo laterale è praticamente irraggiungibile alla palpazione intra-orale, quello che si palpa è altro tessuto, la regione è dolente anche nei soggetti sani — quindi un reperto positivo è un falso positivo per costruzione — e gli autori concludono che la procedura va abbandonata (Türp & Minagi, *J Dent* 2001, [PMID 11809325](https://pubmed.ncbi.nlm.nih.gov/11809325/)). |
+| **Cosa fa la Bibbia** | Dichiara il lavoro intra-orale **fuori perimetro in modo assoluto**, non rimandato a una valutazione caso per caso, e ne scrive entrambe le ragioni in «Dove finisce il nostro campo». Al paziente che lo chiede la risposta è che è fuori dal profilo professionale, non che è pericoloso. |
+| **Se ratificata** | Rimuovere l'accesso intra-orale dall'arsenale dei documenti di metodo per il distretto orofacciale, e citare il vincolo normativo accanto all'esclusione. |
+
+---
+
+### D-024 · Il triangolo anteriore del collo e il pavimento della bocca come bersaglio
+
+| | |
+|---|---|
+| **Stato** | `PROPOSTA` |
+| **Aperta il** | 2026-08-19 |
+| **Condizione di emersione** | Bruxismo (sintesi v3, 2º livello) |
+| **Ambito** | Trasversale — riguarda ogni condizione in cui i sopraioidei, gli scaleni anteriori o la regione sotto-mandibolare compaiono fra gli attori del meccanismo |
+| **Elemento del metodo** | Il principio per cui una struttura che partecipa al meccanismo è, per ciò stesso, un candidato al trattamento. |
+| **Perché è incompleto** | Il principio non distingue fra *attore* e *bersaglio*. Sul bruxismo i sopraioidei sono attori centrali — si attivano prima degli elevatori in ogni episodio notturno — ma la regione che li contiene contiene anche la guaina carotidea, e gli eventi avversi gravi dopo procedure fisiche sul collo sono vascolari nel 58% dei casi, alcuni dopo mobilizzazioni gentili e non solo dopo manipolazione ad alta velocità (Leung, *J Bodyw Mov Ther* 2025, [PMID 39663097](https://pubmed.ncbi.nlm.nih.gov/39663097/)). Non esiste nessuna misura di beneficio su quel distretto in questa condizione: il bilancio è rischio noto contro guadagno non misurato. |
+| **Cosa fa la Bibbia** | Dichiara il triangolo anteriore del collo e il pavimento della bocca **non bersaglio** su questa condizione, pur tenendo i sopraioidei fra gli attori del meccanismo, e scrive la distinzione a lettera in «Le strutture in gioco» e in «Perché le mani possono cambiare qualcosa». Prevale la sicurezza sul completamento dell'arsenale. |
+| **Se ratificata** | Aggiungere ai documenti di metodo la distinzione fra **attore del meccanismo** e **bersaglio del gesto**, con il criterio esplicito: una struttura diventa bersaglio quando esiste una misura di beneficio, non quando esiste un razionale. |
+
+---
+
+### D-025 · Il Capitolo 12 ammette solo strumenti provati sulla condizione stessa
+
+| | |
+|---|---|
+| **Stato** | `PROPOSTA` |
+| **Aperta il** | 2026-08-19 |
+| **Condizione di emersione** | Bruxismo (sintesi v3, 2º livello) |
+| **Ambito** | Trasversale — riguarda ogni condizione in cui la migliore evidenza sullo strumento attivo viene da una popolazione vicina e non dalla condizione stessa |
+| **Elemento del metodo** | `architettura-bibbia.md`, Capitolo 12: il capitolo esiste *"solo se uno strumento attivo regge DIMOSTRATO o PROBABILE forte"* — implicitamente, su questa condizione. |
+| **Perché è incompleto** | Sul bruxismo l'informazione con autogestione ha uno studio randomizzato su dolore muscolare masticatorio (Michelotti, *JADA* 2012, [PMID 22207667](https://pubmed.ncbi.nlm.nih.gov/22207667/)) e una raccomandazione forte su dolore cronico temporo-mandibolare (Busse, *BMJ* 2023, [PMID 38101929](https://pubmed.ncbi.nlm.nih.gov/38101929/)), non sul bruxismo. La lettura stretta la escluderebbe dal capitolo, e terrebbe fuori dalla Bibbia una delle leve con le prove migliori dell'intero documento — che è esattamente l'errore che il Capitolo 12 condizionale è nato per correggere. |
+| **Cosa fa la Bibbia** | Ammette lo strumento con l'**estrapolazione dichiarata** e l'etichetta tenuta a PROBABILE, e scrive nel box di solidità quale popolazione ha prodotto il dato e perché l'etichetta non sale. |
+| **Se ratificata** | Aggiungere al Capitolo 12 la condizione: uno strumento attivo sostenuto da una popolazione vicina entra, purché il salto di popolazione sia dichiarato nel punto d'uso e l'etichetta non superi PROBABILE. |
+
+---
+
+### D-026 · Le leve di stile di vita appartengono per definizione al modello Metabolico-Energetico
+
+| | |
+|---|---|
+| **Stato** | `PROPOSTA` |
+| **Aperta il** | 2026-08-19 |
+| **Condizione di emersione** | Bruxismo (sintesi v3, 2º livello — `fedelta-bibbia`) |
+| **Ambito** | Trasversale — riguarda ogni condizione in cui alcol, tabacco, caffeina, farmaci o alimentazione compaiono fra i fattori |
+| **Elemento del metodo** | `cinque-modelli-osteopatici.md`: la checklist assegna al **Metabolico-Energetico** le leve di stile di vita, con lo scope *"si segnalano e si rinvia, non si prescrive"*. |
+| **Perché è incompleto** | L'assegnazione è fatta per categoria di leva, non per meccanismo. Sul bruxismo alcol, tabacco, caffeina e farmaci non agiscono sul metabolismo del muscolo: agiscono sulla **soglia del microrisveglio**, cioè sul generatore neurologico (Bertazzo-Silveira, *JADA* 2016, [PMID 27522154](https://pubmed.ncbi.nlm.nih.gov/27522154/); de Baat, *J Oral Rehabil* 2021, [PMID 32716523](https://pubmed.ncbi.nlm.nih.gov/32716523/)). Lasciarle nel Metabolico-Energetico separa la leva dal meccanismo su cui agisce, ed è la stessa classe di errore che la checklist esiste per impedire. |
+| **Cosa fa la Bibbia** | Colloca quelle leve nel modello **Neurologico**, come *modificatori esogeni del generatore*, con il motivo scritto nel punto d'uso, e **conserva per intero lo scope** prescritto dalla checklist: *"nessuno di loro si lavora con le mani: si valutano, si nominano, si rinviano"*. |
+| **Se ratificata** | Riscrivere la voce in `cinque-modelli-osteopatici.md` come: *le leve di stile di vita appartengono al modello che governa il meccanismo su cui agiscono, non per definizione al Metabolico-Energetico; lo scope di segnalazione-e-rinvio le segue.* |
+
+---
+
+### D-027 · Il box `Definizione` alla prima comparsa **in ogni capitolo** non è sostenibile insieme al tetto di lunghezza
+
+| | |
+|---|---|
+| **Stato** | `PROPOSTA` |
+| **Aperta il** | 2026-08-19 |
+| **Condizione di emersione** | Emicrania (Bibbia v3, rilevata dall'audit di fedeltà di 2º livello sulla v2) |
+| **Ambito** | Trasversale — riguarda ogni Bibbia che usi i sette termini canonici del metodo |
+| **Elemento del metodo** | `lessico-del-metodo.md`, «Come si usano», punto 1: *"Box `> **Definizione.**` alla prima comparsa in ogni capitolo in cui il termine appare. Non solo alla prima comparsa nel documento."* |
+| **Perché è incompleto** | Sui sette termini canonici la regola produce, su una Bibbia ampia, fra dodici e venti box identici — `catena` compare in sei capitoli, `marker` in cinque, `compenso` in tre. Il costo è di 400-600 parole di testo letteralmente ripetuto, su un documento che l'editor di 4º livello deve già riportare sotto un tetto che D-019 dichiara non raggiungibile. Le due regole del metodo — testo fisso ripetuto per capitolo e tetto di 8.000-13.000 parole — non possono valere insieme sulle condizioni ampie. Il problema **non** è il testo canonico: quello resta intoccabile e va riportato per intero (è la parte che questa Bibbia aveva abbreviato a Glossario, ed è stata ripristinata). |
+| **Cosa fa la Bibbia** | Riporta il **testo canonico integrale** delle sette voci in Appendice A, senza riformulazioni. Mette il box `Definizione` alla prima comparsa **operativa** del termine — quella in cui il termine regge una regola di condotta — e non in ogni capitolo: `catena` e `disfunzione somatica` nei capitoli in cui il concetto entra nel ragionamento, `sistema dominante` e `marker` nel capitolo del Motore Clinico. Dichiara la scelta nel testo (*"le altre parole del metodo stanno nel Glossario, e ciascuna compare per esteso una volta sola"*). |
+| **Se ratificata** | Riscrivere il punto 1 di `lessico-del-metodo.md` come *"box `Definizione` alla prima comparsa **operativa** del termine — quella in cui regge una regola di condotta — più la voce integrale a Glossario; la ripetizione per capitolo resta obbligatoria solo per i termini che cambiano il significato di una regola di sicurezza"*. |
+
+---
+
+### D-028 · L'eccezione alla regola del ponte è scritta per il solo Capitolo 12
+
+| | |
+|---|---|
+| **Stato** | `PROPOSTA` |
+| **Aperta il** | 2026-08-19 |
+| **Condizione di emersione** | Sciatalgia (sintesi v3, 2º livello — `fedelta-bibbia`) |
+| **Ambito** | Trasversale — riguarda ogni condizione in cui una leva, e non solo uno strumento attivo, poggia su un intervento a esito clinico testato su una popolazione contigua |
+| **Elemento del metodo** | `ancore-scientifiche.md`, regola del ponte: l'evidenza trasversale alza l'etichetta del *meccanismo*, mai quella della *leva*. L'unica eccezione registrata, **D-025**, è scritta per il solo Capitolo 12. |
+| **Perché è incompleto** | Sulla sciatalgia l'intervento con l'esito clinico migliore disponibile (Kent, *Lancet* 2023, [PMID 37146623](https://pubmed.ncbi.nlm.nih.gov/37146623/), 492 adulti con lombalgia cronica disabilitante) sostiene una **leva** dei Capitoli 7 e 11 — spiegazione ed esposizione graduata — prima ancora che uno strumento attivo del Capitolo 12. La lettura stretta di D-025 obbligherebbe a scrivere IPOTESI sulla stessa leva che nel Capitolo 12 regge PROBABILE, cioè due etichette diverse per lo stesso intervento a due pagine di distanza. |
+| **Cosa fa la Bibbia** | Estende l'eccezione dichiarata a **qualunque leva** sostenuta da un intervento a esito clinico su popolazione contigua, con tre vincoli scritti nel punto d'uso: l'etichetta **scende di un grado** e non supera PROBABILE; la **popolazione si scrive accanto** ogni volta; **un indice fisiologico misurato in volontari sani non regge mai una leva** e resta meccanismo. La formulazione è nel capitolo «La lettura osteopatica». |
+| **Se ratificata** | Riscrivere D-025 come regola generale: *l'eccezione alla regola del ponte vale per qualunque leva sostenuta da un intervento a esito clinico su popolazione contigua, non solo per gli strumenti attivi del Capitolo 12; l'etichetta scende di un grado, la popolazione si scrive accanto in ogni punto d'uso, e un indice fisiologico su volontari sani non regge mai una leva.* |
+
+---
+
+> **Nota di servizio al direttore — collisione di numerazione da sanare.** Il registro contiene **sette** voci distinte numerate `D-020` (cervicalgia/lombalgia, artrosi, emicrania, cicatrici, bruxismo, ernia, sciatalgia). Finché la collisione resta, ogni rimando a `D-020` è interpretabile solo con il registro aperto accanto, e le Bibbie devono citare la voce per titolo oltre che per numero. La rinumerazione è una decisione a monte: non la applico qui.
+
+---
+
+### D-029 · La misura con cui la letteratura documenta l'effetto immediato non soddisfa le condizioni del marker
+
+| | |
+|---|---|
+| **Stato** | `PROPOSTA` |
+| **Aperta il** | 2026-08-19 |
+| **Condizione di emersione** | Cervicobrachialgia (Bibbia v1) |
+| **Ambito** | Trasversale — riguarda ogni condizione in cui l'outcome misurato negli studi coincide con la struttura trattata (cervicobrachialgia, sciatalgia, tendinopatie, spalla, ATM) |
+| **Elemento del metodo** | `lessico-del-metodo.md`, voce `marker`, condizione 3: *"Appartiene a un piano che non hai trattato. Se rimisuri quello su cui hai appena lavorato, stai misurando l'effetto immediato del tuo gesto, non il cambiamento del sistema."* |
+| **Perché è incompleto** | Presa alla lettera, la condizione 3 esclude proprio la misura su cui poggia l'unico effetto immediato documentato su questa condizione. Nell'RCT che ha confrontato una mobilizzazione cervicale con un comparatore attivo, gli esiti misurati erano l'escursione al test neurodinamico dell'arto superiore, l'area del sintomo e il dolore — cioè esattamente il piano trattato (Coppieters, *JOSPT* 2003, [PMID 12918862](https://pubmed.ncbi.nlm.nih.gov/12918862/): estensione del gomito da 137,3° a 156,7°, area del sintomo −43,4%, nessun cambiamento con ultrasuoni). Applicare la regola senza distinguere porta a uno di due errori opposti: buttare via la misura che la letteratura valida, oppure usarla come prova della chiave di volta e prendere per conferma sistemica l'effetto meccanico immediato del gesto appena fatto. |
+| **Cosa fa la Bibbia** | Separa due ruoli invece di sovrapporli. La misura sul piano trattato — punto di comparsa del sintomo distale, area e direzione del sintomo, escursione cervicale — è dichiarata **misura di effetto immediato del gesto**, con la soglia presa sotto il cambiamento riportato in letteratura e sopra l'errore dello strumento. La **prova della chiave di volta** poggia su una misura che appartiene a un piano non trattato: la **sensibilità al freddo su sito remoto**, confrontata col lato sano (Tampin, *Pain* 2012, [PMID 22980746](https://pubmed.ncbi.nlm.nih.gov/22980746/)). **Aggiornamento v2/v3:** la forza **non** è la chiave di volta ed è stata riclassificata come **misura di confine** — dipende da C8-T1 mentre le radici più colpite sono C7 e C6, e *"il numero che decide se invii non può essere lo stesso che ti dà ragione"*. La formulazione della v1, che assegnava alla forza di presa il ruolo di chiave di volta, è superata. |
+| **Se ratificata** | Integrare la voce `marker` di `lessico-del-metodo.md` distinguendo due funzioni: la **misura di effetto immediato**, che può appartenere al piano trattato purché la soglia sia dichiarata, e il **marker della prova della chiave di volta**, per il quale la condizione 3 resta vincolante. Ogni Bibbia nomina almeno uno di ciascun tipo. |
+
+---
+
+### D-030 · «Ogni meccanismo porta **una** etichetta» produce un claim gonfiato quando i componenti hanno forza diversa
+
+| | |
+|---|---|
+| **Stato** | `PROPOSTA` |
+| **Aperta il** | 2026-08-20 |
+| **Condizione di emersione** | Cervicobrachialgia (sintesi v3, 2º livello — `fedelta-bibbia`) |
+| **Ambito** | Trasversale — riguarda ogni meccanismo o strumento composto da più anelli con basi di prova diverse |
+| **Elemento del metodo** | `architettura-bibbia.md` e SKILL: *«Ogni meccanismo, ogni modello e ogni leva ne porta una»* etichetta di solidità. |
+| **Perché è incompleto** | La regola presuppone che un meccanismo sia un'affermazione sola. Non lo è quasi mai. Il primo meccanismo di questa condizione ne contiene tre con basi diverse: la **geometria** del forame è misurata direttamente nell'uomo (Yoo, *Spine* 1992, [PMID 1440000](https://pubmed.ncbi.nlm.nih.gov/1440000/)) e regge DIMOSTRATO; l'**anello vascolare** poggia su radici lombari animali (Olmarker 1989; Kobayashi 2008) e regge PROBABILE; il **passo clinico** — che sia questo a far male a questo paziente — poggia sullo Spurling a certezza da bassa a molto bassa e regge PROBABILE. Un'etichetta unica sui tre pezzi è per forza sbagliata: se prende la più alta gonfia il claim, se prende la più bassa butta via una misura diretta. Lo stesso vale per il Capitolo 12, dove scorrimento, educazione, gestione posizionale e rinforzo hanno quattro basi diverse e il rinforzo ha contro un randomizzato negativo. |
+| **Cosa fa la Bibbia** | Quando i componenti di un'affermazione hanno forza diversa, **spezza l'etichetta** e ne assegna una per componente, dentro lo stesso box `Quanto è solido`, con l'apertura fissa *«l'etichetta si spezza, perché i pezzi non hanno la stessa forza»*. Il numero di etichette del documento non cambia il vincolo: nessuna quinta etichetta, glossa fissa su ognuna. Applicata al primo e al terzo meccanismo, al modello Metabolico-Energetico e al Capitolo 12. |
+| **Se ratificata** | Integrare la regola come: *ogni meccanismo, modello e leva porta almeno un'etichetta; quando l'affermazione si scompone in componenti con basi di prova diverse, l'etichetta si spezza per componente e ciascuna porta la propria glossa fissa.* |
+
+---
+
+### D-031 · La scheda dei cinque modelli non ha una voce che agganci il modello ai meccanismi
+
+| | |
+|---|---|
+| **Stato** | `PROPOSTA` |
+| **Aperta il** | 2026-08-20 |
+| **Condizione di emersione** | Cervicobrachialgia (sintesi v3, 2º livello — `fedelta-bibbia`) |
+| **Ambito** | Trasversale — riguarda il Capitolo 7 di ogni Bibbia |
+| **Elemento del metodo** | `cinque-modelli-osteopatici.md`: ogni modello porta quattro voci — *Cosa governa qui*, *Gli attori*, *I segnali che pesa in questo paziente*, *Quanto è solido* — «e nient'altro». |
+| **Perché è incompleto** | Con quelle quattro voci il Capitolo 7 resta una descrizione parallela al Capitolo 5, e nessun revisore può verificare che i cinque modelli coprano i meccanismi dichiarati né che un meccanismo non resti orfano. È il controllo che rende falsificabile l'intero capitolo, e con le quattro voci non è eseguibile. |
+| **Cosa fa la Bibbia** | Aggiunge una quinta voce, **«Quali meccanismi governa»**, che nomina i meccanismi del Capitolo 5 per titolo. Costa una riga per modello e rende verificabile l'aggancio: sulla cervicobrachialgia mostra che il Metabolico-Energetico non governa nessun meccanismo in proprio — *«sposta la prognosi»* — che è un'informazione clinica, non una lacuna. |
+| **Se ratificata** | Portare la scheda a cinque voci in `cinque-modelli-osteopatici.md`, con «Quali meccanismi governa» in seconda posizione. |
+
+---
+
+### D-032 · «Un blocco dorsale stimola costantemente l'allarme» — la catena del simpatico davanti alle teste costali come leva autonomica
+
+| | |
+|---|---|
+| **Stato** | `PROPOSTA` |
+| **Aperta il** | 2026-08-20 |
+| **Condizione di emersione** | Dorsalgia (Bibbia v1) |
+| **Ambito** | Trasversale — riguarda ogni condizione in cui il segmento dorsale viene invocato come via di regolazione del sistema nervoso autonomo (dorsalgia, reflusso, ansia, cefalea, sindromi funzionali) |
+| **Elemento del metodo** | `motore-clinico.md`, §2, 1° Sistema Neurologico: *"**Catena del simpatico:** corre davanti alle teste delle coste. Un blocco dorsale stimola costantemente l'allarme → iperalgesia."* Scritto come fatto, senza etichetta, e usato per giustificare il lavoro dorsale come leva sull'attivazione. |
+| **Perché è sbagliato** | Il contatto anatomico è reale e frequentissimo — osteofiti che comprimono le strutture simpatiche toraciche in **655 cadaveri su 1.000**, con picco a T8-T10 (Nathan, *Spine* 1987, [PMID 3660077](https://pubmed.ncbi.nlm.nih.gov/3660077/)) — ma è una topografia, non una misura di effetto. Dove l'effetto è stato misurato, non c'è: la revisione sistematica con meta-analisi dedicata alla mobilizzazione e alla manipolazione **dorsale** — 20 studi, 863 partecipanti, sintomatici e asintomatici — non trova nessun effetto sui marcatori del sistema nervoso autonomo (rapporto LF/HF, conduttanza cutanea, RMSSD), e conclude che **la direzione dei cambiamenti è ambigua** (Hansen, *J Man Manip Ther* 2025, [PMID 40232939](https://pubmed.ncbi.nlm.nih.gov/40232939/)). È il corrispettivo dorsale di quanto D-004 ha già stabilito sul tocco in generale e sulla cervicale: qui però la misura esiste, è specifica del distretto, ed è negativa. |
+| **Cosa fa la Bibbia** | Tiene la relazione anatomica in «Le strutture in gioco» con l'etichetta spezzata — **DIMOSTRATO** il contatto, **IPOTESI** la rilevanza clinica — e scrive nel modello Neurologico e in «Perché le mani possono cambiare qualcosa» che l'effetto sui marcatori autonomici, dove è stato cercato su questo distretto, non è stato trovato. Nella lista «cosa non possiamo dire» compare a lettera: *"che il trattamento manuale dorsale regoli il sistema nervoso autonomo"*. La leva sull'attivazione resta dichiarata e usata, ma con etichetta IPOTESI e senza attribuirle il meccanismo simpatico. |
+| **Se ratificata** | Riscrivere la voce «Catena del simpatico» di `motore-clinico.md` §2 come relazione **anatomica** con etichetta IPOTESI sull'effetto, e togliere la formulazione causale *"un blocco dorsale stimola costantemente l'allarme"*, sostituendola con: *"le strutture simpatiche toraciche sono a contatto con le teste costali; che il lavoro manuale dorsale ne modifichi l'attività non è stato trovato dove è stato misurato."* |
+
+---
+
+### D-033 · La postura seduta scritta come causa della dorsalgia
+
+| | |
+|---|---|
+| **Stato** | `PROPOSTA` |
+| **Aperta il** | 2026-08-20 |
+| **Condizione di emersione** | Dorsalgia (Bibbia v1) |
+| **Ambito** | Trasversale — riguarda ogni condizione in cui una postura o una posizione di lavoro viene assunta come causa del sintomo (dorsalgia, cervicalgia, lombalgia, spalla, cefalea tensiva) |
+| **Elemento del metodo** | La formulazione di partenza del problema (`problemi.json`, campo `meccanismo_causa` della dorsalgia): *"Quando stai curvo per ore, il torace si chiude, le costole si muovono meno e le vertebre dorsali restano ferme. Il corpo scarica lì la tensione."* Scritta al presente indicativo, come catena causale stabilita. |
+| **Perché è sbagliato** | La relazione fra postura e dolore è misurata, e non è causale. L'umbrella review su **41 revisioni sistematiche** valutate con i criteri di Bradford Hill conclude che non c'è consenso sulla causalità fra posture spinali o esposizione fisica e dolore, con associazioni sia positive sia nulle e prove miste sulla precedenza temporale e sulla relazione dose-risposta (Swain, *J Biomech* 2020, [PMID 31451200](https://pubmed.ncbi.nlm.nih.gov/31451200/)). Sulla regione dorsale in particolare, c'è un livello **moderato** di evidenza di **nessuna differenza** di cifosi toracica fra chi ha e chi non ha dolore di spalla, mentre resta forte l'evidenza che l'escursione disponibile cambia con l'assetto (Barrett, *Man Ther* 2016, [PMID 27475532](https://pubmed.ncbi.nlm.nih.gov/27475532/)). E il dato che collega sedentarietà e mobilità dorsale — 64,8 gradi di rotazione in chi sta seduto oltre sette ore contro 75,0 in chi è attivo — viene da uno studio **trasversale** su 92 giovani adulti, i cui autori chiedono esplicitamente ricerca sulla causalità (Heneghan, *BMJ Open* 2018, [PMID 29730619](https://pubmed.ncbi.nlm.nih.gov/29730619/)). Scritta come causa, la frase produce due danni: una promessa di risultato legata alla correzione posturale, e un paziente che si colpevolizza per come sta seduto. |
+| **Cosa fa la Bibbia** | Separa la misura dall'attribuzione causale e lo dichiara nel punto d'uso, con l'etichetta spezzata sul primo meccanismo: **DIMOSTRATO** che la mobilità dorsale sia ridotta in chi sta seduto molto, **IPOTESI** che la riduzione causi il dolore. In «Cosa dice la scienza» la frase *"che la postura seduta causi la dorsalgia"* compare nell'elenco di ciò che non possiamo dire, e in «Cosa si rompe» lo slot di chiusura vieta a lettera di attribuirlo al paziente. La leva resta: cambia l'oggetto — si lavora sull'escursione disponibile e sulla durata della posizione, non sulla correzione della forma. |
+| **Se ratificata** | Riformulare il campo `meccanismo_causa` della dorsalgia come **associazione misurata**, non come catena causale: *"chi passa molte ore fermo ha, in media, un torace che gira di meno; che sia quello a produrre il dolore non è stabilito"*. Estendere la regola a ogni condizione in cui la postura compare fra i fattori: si scrive cosa è stato misurato, e la direzione si dichiara solo se qualcuno l'ha stabilita. |
+
+---
+
+### D-036 · Il tetto «da 3 a 6 sottotipi» non distingue un pattern clinico da un cancello di condotta
+
+| | |
+|---|---|
+| **Stato** | `PROPOSTA` |
+| **Aperta il** | 2026-08-20 |
+| **Condizione di emersione** | Mal di testa tensivo (sintesi v3, 2º livello — `fedelta-bibbia`) |
+| **Ambito** | Trasversale — riguarda ogni condizione la cui nosografia o il cui triage impongano divisioni che non sono varianti di presentazione |
+| **Elemento del metodo** | `architettura-bibbia.md`, Capitolo 6 «Non è una condizione sola»: *"da 3 a 6 sottotipi"*, senza distinzione di natura fra le voci. |
+| **Perché è incompleto** | Sulla cefalea di tipo tensivo il Capitolo 6 ha **otto** voci, e tre non sono varianti di pattern: sono cancelli imposti da fuori. «Senza dolorabilità pericranica» è la divisione che l'**ICHD-3** stabilisce con le mani, ed è l'unico elemento della classificazione internazionale delle cefalee che l'osteopata determina; «tensiva in chi ha anche emicrania» cambia il **metodo di misura dell'esito**, perché i giorni al mese vanno contati separati per tipo; «con uso eccessivo di farmaci» cambia l'**uscita del triage**. Comprimere a sei significherebbe togliere un cancello per rispettare un conteggio, cioè far pagare alla sicurezza e alla misura una regola di forma. |
+| **Cosa fa la Bibbia** | Tiene le otto voci, e distingue nel testo le cinque che sono pattern clinici dalle tre che sono cancelli: ciascuna delle tre porta la propria etichetta **RAGIONAMENTO** *(cornice clinica, non una prova)* e dichiara cosa cambia — il mandato, il conteggio, l'uscita del triage. La tabella di apertura del capitolo resta a quattro colonne. |
+| **Se ratificata** | Riscrivere il tetto del Capitolo 6 come: *"da 3 a 6 **pattern clinici**; un sottotipo che cambia l'uscita del triage, il mandato o il metodo di misura dell'esito non conta nel tetto, si dichiara come **cancello** e porta la sua etichetta"*. |

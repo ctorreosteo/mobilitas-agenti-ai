@@ -670,6 +670,8 @@ async function robustAgent(prompt, opts, tries = RETRIES) {
   return null
 }
 
+const PROMOZIONI_FALLITE = []
+
 async function promote(bibIn, mappaIn, bibOut, mappaOut, motivo) {
   log(`  [resilienza] ${motivo}: promuovo ${bibIn.split('/').pop()} -> ${bibOut.split('/').pop()} senza modifiche`)
   const r = await robustAgent(
@@ -677,7 +679,15 @@ async function promote(bibIn, mappaIn, bibOut, mappaOut, motivo) {
     { label: `promuovi:${bibOut.split('/').pop()}`, phase: 'Sintesi', agentType: 'general-purpose' },
     2
   )
-  if (!r) log(`  [resilienza] ATTENZIONE: anche la promozione verso ${bibOut.split('/').pop()} non ha confermato — controlla i file a mano`)
+  // BUG STORICO (notte 18-19/08/2026): il limite di sessione ha fatto fallire promozioni e sintesi
+  // di sette Bibbie, e il workflow ha comunque restituito "completata (v7=v6, lingua promossa)".
+  // Sul disco non c'era nessuna v7. Da qui in poi la promozione fallita e' un fatto registrato,
+  // e l'esito finale si decide guardando il disco, non i report degli agenti.
+  if (!r) {
+    const msg = `PROMOZIONE NON CONFERMATA verso ${bibOut.split('/').pop()} (${motivo}): il file potrebbe NON esistere`
+    log(`  [resilienza] ATTENZIONE: ${msg}`)
+    PROMOZIONI_FALLITE.push(msg)
+  }
   return r
 }
 
@@ -697,7 +707,16 @@ const parseArgs = (a) => {
   }
   return a ? [a] : []
 }
-const raw = parseArgs(args).map((s) => String(s).trim()).filter(Boolean)
+// ---- RIPRESA: stato precalcolato dal chiamante ----
+// BUG STORICO (18-19/08/2026): il limite di sessione ha ucciso sette catene a meta'; rilanciarle
+// da zero avrebbe buttato 15,6 milioni di token di lavoro gia' su disco. Da qui in poi args
+// accetta anche { slugs: [...], stati: { slug: ["v1-bibbia.md", ...] } }: ogni stadio il cui
+// file di uscita ESISTE GIA' viene saltato, e la catena riprende dal primo anello mancante.
+// Lo stato si ricava con un `ls`, cioe' senza spendere un solo agente.
+const argObj = (args && typeof args === 'object' && !Array.isArray(args)) ? args : null
+const STATI = (argObj && argObj.stati) || {}
+const fatto = (slug, file) => ((STATI[slug] || []).includes(file))
+const raw = parseArgs(argObj ? argObj.slugs : args).map((s) => String(s).trim()).filter(Boolean)
 const wantAll = raw.length === 1 && ['tutte', 'tutti', 'all', '*'].includes(String(raw[0]).toLowerCase())
 
 let slugs = raw
@@ -763,6 +782,7 @@ const results = await pipeline(
 
   // --- STAGE 1: DRAFT (v1) ---
   async (slug) => {
+    if (fatto(slug, 'v1-bibbia.md')) { log(`[ripresa] ${slug}: v1 gia' su disco, salto il draft`); return slug }
     const r = await robustAgent(draftPrompt(slug), { label: `draft:${slug}`, phase: 'Draft', agentType: 'general-purpose' })
     // Il draft e l'unico stadio senza fallback: senza bozza non c'e nulla da revisionare.
     // Il throw qui, dentro pipeline(), scarta SOLO questo slug (gli altri proseguono).
@@ -773,18 +793,23 @@ const results = await pipeline(
 
   // --- STAGE 2: REVISIONE 1o LIVELLO (in parallelo) ---
   async (slug) => {
+    if (fatto(slug, 'v2-intermedia.md')) { log(`[ripresa] ${slug}: v2 gia' su disco, salto il 1o livello`); return slug }
+    const mancanti = REVIEWERS.filter((rv) => !fatto(slug, `feedback-${rv.key}.md`))
+    if (mancanti.length < REVIEWERS.length) log(`[ripresa] ${slug}: ${REVIEWERS.length - mancanti.length}/${REVIEWERS.length} feedback di 1o livello gia' presenti`)
+    if (!mancanti.length) return slug
     const fbs = await parallel(
-      REVIEWERS.map((rv) => () =>
+      mancanti.map((rv) => () =>
         agent(reviewPrompt(slug, rv), { label: `rev1:${rv.key}:${slug}`, phase: 'Revisione', schema: FEEDBACK_SCHEMA, agentType: 'general-purpose' })
       )
     )
     const ok = fbs.filter(Boolean).length
-    log(`Revisione 1o livello ${slug}: ${ok}/${REVIEWERS.length}${ok === 0 ? ' — nessun feedback: la sintesi promuovera la v1' : ''}`)
+    log(`Revisione 1o livello ${slug}: ${ok}/${mancanti.length}${ok === 0 ? ' — nessun feedback: la sintesi promuovera la v1' : ''}`)
     return slug
   },
 
   // --- STAGE 3: SINTESI INTERMEDIA (v2) ---
   async (slug) => {
+    if (fatto(slug, 'v2-intermedia.md')) { log(`[ripresa] ${slug}: v2 gia' su disco, salto la sintesi`); return slug }
     const r = await robustAgent(synthPrompt(slug), { label: `sintesi-v2:${slug}`, phase: 'Sintesi intermedia', agentType: 'general-purpose' })
     if (!r) await promote(`${OUT}/${slug}/v1-bibbia.md`, `${OUT}/${slug}/v1-mappa.md`, `${OUT}/${slug}/v2-intermedia.md`, `${OUT}/${slug}/mappa-v2.md`, `sintesi v2 non riuscita per ${slug}`)
     else log(`v2 pronta: ${slug}`)
@@ -793,6 +818,7 @@ const results = await pipeline(
 
   // --- STAGE 4: REVISIONE 2o LIVELLO -> SINTESI v3 ---
   async (slug) => {
+    if (fatto(slug, 'v3-intermedia.md')) { log(`[ripresa] ${slug}: v3 gia' su disco, salto il 2o livello`); return slug }
     if (!SECOND.length) {
       await promote(`${OUT}/${slug}/v2-intermedia.md`, `${OUT}/${slug}/mappa-v2.md`, `${OUT}/${slug}/v3-intermedia.md`, `${OUT}/${slug}/mappa-v3.md`, `nessun 2o livello per ${slug}`)
       log(`v3 (= v2, nessun 2o livello): ${slug}`)
@@ -812,6 +838,7 @@ const results = await pipeline(
 
   // --- STAGE 5: REVISIONE 3o LIVELLO (apprendimento) -> SINTESI v4 ---
   async (slug) => {
+    if (fatto(slug, 'v4-intermedia.md')) { log(`[ripresa] ${slug}: v4 gia' su disco, salto il 3o livello`); return slug }
     if (!THIRD.length) {
       await promote(`${OUT}/${slug}/v3-intermedia.md`, `${OUT}/${slug}/mappa-v3.md`, `${OUT}/${slug}/v4-intermedia.md`, `${OUT}/${slug}/mappa-v4.md`, `nessun 3o livello per ${slug}`)
       log(`v4 (= v3, nessun 3o livello): ${slug}`)
@@ -831,6 +858,7 @@ const results = await pipeline(
 
   // --- STAGE 6: REVISIONE 4o LIVELLO (editor) -> SINTESI v5 ---
   async (slug) => {
+    if (fatto(slug, 'v5-intermedia.md')) { log(`[ripresa] ${slug}: v5 gia' su disco, salto l'editor`); return slug }
     if (!FOURTH.length) {
       await promote(`${OUT}/${slug}/v4-intermedia.md`, `${OUT}/${slug}/mappa-v4.md`, `${OUT}/${slug}/v5-intermedia.md`, `${OUT}/${slug}/mappa-v5.md`, `nessun 4o livello per ${slug}`)
       log(`v5 (= v4, nessun 4o livello): ${slug}`)
@@ -852,6 +880,7 @@ const results = await pipeline(
   // Non e' una revisione seguita da una sintesi: il riscrittore PRODUCE il testo.
   async (slug) => {
     const f = F(slug)
+    if (fatto(slug, 'v6-chiarezza.md')) { log(`[ripresa] ${slug}: v6 gia' su disco, salto la riscrittura di chiarezza`); return { slug, esito: 'ripresa: v6 gia presente' } }
     if (!FIFTH.length) {
       await promote(f.v5, f.m5, f.v6, f.m6, `nessun 5o livello per ${slug}`)
       log(`v6 (= v5, nessuna riscrittura di chiarezza): ${slug}`)
@@ -884,6 +913,7 @@ const results = await pipeline(
     const base = prev && prev.slug ? prev : { slug, esito: 'sconosciuto' }
     const f = F(slug)
 
+    if (fatto(slug, 'v7-finale.md')) { log(`[ripresa] ${slug}: v7 gia' su disco, salto la revisione di lingua`); return { ...base, esito: 'ripresa: v7 gia presente' } }
     if (!SIXTH.length) {
       await promote(f.v6, f.m6, f.v7, f.m7, `nessun 6o livello per ${slug}`)
       log(`FINALE (v7 = v6, nessuna revisione di lingua): ${slug}`)
@@ -992,4 +1022,43 @@ const results = await pipeline(
   }
 )
 
-return results.filter(Boolean)
+// --- VERIFICA FINALE SUL DISCO ---
+// L'unico giudice di "fatto" e' il file system. Gli agenti riferiscono, non provano: nella notte
+// del 18/08 sette Bibbie si sono dichiarate completate ferme alla v2.
+const esiti = results.filter(Boolean)
+const VERIFICA_SCHEMA = {
+  type: 'object', additionalProperties: false, required: ['stato'],
+  properties: {
+    stato: {
+      type: 'array',
+      items: {
+        type: 'object', additionalProperties: false, required: ['slug', 'ultima_versione', 'ha_v7', 'ha_mappa_finale'],
+        properties: {
+          slug: { type: 'string' },
+          ultima_versione: { type: 'string', description: 'Il file di versione piu avanzato presente (es. v3-intermedia.md)' },
+          ha_v7: { type: 'boolean' },
+          ha_mappa_finale: { type: 'boolean' },
+        },
+      },
+    },
+  },
+}
+const ver = await robustAgent(
+  `Per ognuno di questi slug — ${slugs.join(', ')} — esegui: ls -1 ${OUT}/<slug>
+Riporta il file di versione piu avanzato presente, seguendo l'ordine v1-bibbia.md, v2-intermedia.md, v3-intermedia.md, v4-intermedia.md, v5-intermedia.md, v6-chiarezza.md, v7-finale.md, e di' se esistono v7-finale.md e mappa-finale.md.
+Non inventare: riporta solo cio' che ls mostra.`,
+  { label: 'verifica-finale-sul-disco', phase: 'Collaudo', schema: VERIFICA_SCHEMA, agentType: 'general-purpose' }, 2
+)
+
+if (!ver) {
+  return { esiti, avviso: 'NON VERIFICATO sul disco: gli esiti qui sopra sono dichiarazioni degli agenti, non fatti. Controlla a mano.', promozioni_fallite: PROMOZIONI_FALLITE }
+}
+const perSlug = new Map((ver.stato || []).map((s) => [s.slug, s]))
+const consegnabili = [], incomplete = []
+for (const e of esiti) {
+  const s = perSlug.get(e.slug)
+  if (s && s.ha_v7 && s.ha_mappa_finale) consegnabili.push({ ...e, verificata: true })
+  else incomplete.push({ slug: e.slug, dichiarato: e.esito, realta: s ? `ferma a ${s.ultima_versione}` : 'cartella non leggibile' })
+}
+if (incomplete.length) log(`ATTENZIONE: ${incomplete.length} Bibbie dichiarate completate NON hanno la v7 sul disco: ${incomplete.map((i) => i.slug).join(', ')}`)
+return { consegnabili, incomplete, promozioni_fallite: PROMOZIONI_FALLITE }
