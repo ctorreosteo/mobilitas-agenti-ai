@@ -1,0 +1,52 @@
+{
+  "passaggio": "chiarezza",
+  "esito": "CONSEGNABILE",
+  "statistiche": {
+    "parole_prima": 17781,
+    "parole_dopo": 17842,
+    "delta_pct": 0.3,
+    "identita_pct": 82.7,
+    "per_te_prima": 5,
+    "per_te_dopo": 5,
+    "slot_prima": 15,
+    "slot_dopo": 15,
+    "uscite_prima": 11,
+    "uscite_dopo": 11,
+    "etichette_prima": 25,
+    "etichette_dopo": 25,
+    "pmid_prima": 62,
+    "pmid_dopo": 62
+  },
+  "violazioni": [
+    {
+      "severita": "AVVISO",
+      "codice": "ETICHETTE_RIANCORATE",
+      "messaggio": "2 etichette seguono un testo diverso dalla v5. Può essere solo riformulazione — va guardato dal collaudatore semantico.",
+      "dettaglio": [
+        "IPOTESI: …su questa condizione. Il meccanismo plausibile ha tre gambe:",
+        "IPOTESI: …— e **l'unica misura disponibile va nel verso opposto**: nel"
+      ]
+    },
+    {
+      "severita": "AVVISO",
+      "codice": "BOX_NON_PREVISTI",
+      "messaggio": "2 tipi di box fuori dai quattro ammessi.",
+      "dettaglio": [
+        "«Sulla lunghezza» (×1)",
+        "«Sulla prima gamba il meccanismo sale» (×1)"
+      ]
+    },
+    {
+      "severita": "AVVISO",
+      "codice": "PAROLE_FUORI_RANGE",
+      "messaggio": "Il documento ha 17842 parole (appendici escluse): fuori dal range 8000–13000. Non e' un difetto di conservazione: se il superamento c'era gia' in ingresso, il rilievo appartiene al livello di asciugatura, non a chi ha riscritto.",
+      "dettaglio": []
+    },
+    {
+      "severita": "AVVISO",
+      "codice": "GLOSSARIO_TROPPO_LUNGO",
+      "messaggio": "Il glossario ha 52 termini (max 40): la Bibbia è scritta troppo tecnica.",
+      "dettaglio": []
+    }
+  ]
+}

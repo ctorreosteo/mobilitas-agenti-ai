@@ -1,0 +1,67 @@
+# Feedback — Lente Medico di Medicina Generale
+
+LENTE: Medico di Medicina Generale
+CONDIZIONE: Cicatrici da cesareo
+DOCUMENTO REVISIONATO: `v1-bibbia.md` (con `v1-mappa.md` come termine di riscontro)
+
+## RICERCA SVOLTA
+
+Ho verificato in questa sessione, leggendo gli abstract: l'ernia incisionale dopo cesareo (Paulsen, *Eur J Obstet Gynecol Reprod Biol* 2020, PMID 31785469 — occorrenza fra 0,0% e 5,6% con follow-up da sei mesi a dieci anni; Aabakke, *PLoS One* 2014, PMID 25268746 — riparazione entro dieci anni nello 0,197%, intervallo mediano dal cesareo 1,36 anni, 79% oltre il primo anno). La presentazione dell'endometriosi di parete (Horton, *Am J Surg* 2008, PMID 18513698 — 445 casi: massa nel 96%, dolore nell'87%, sintomi **ciclici solo nel 57%**, intervallo dall'intervento 3,6 anni). Il trattamento del dolore cronico dopo cesareo (Nogueira, *Rev Bras Ginecol Obstet* 2016, PMID 26883861 — infiltrazione di anestetico sui trigger point, antidepressivi triciclici e duloxetina, anticonvulsivanti; FANS non indicati sul dolore neuropatico). La salute mentale perinatale dopo cesareo d'urgenza (Orovou, *BMC Psychol* 2025, PMID 39789649 — dieci studi, 4.995 partecipanti: prevalenza di PTSD dal 2,2% al 41,2% dopo cesareo d'urgenza, OR 3,68 verso cesareo elettivo fra sei settimane e dodici mesi). L'ematoma della guaina dei retti in corso di eparina a basso peso molecolare (Sullivan, *BMC Res Notes* 2014, PMID 25178308).
+
+## IL PAZIENTE DEL CAPITOLO 1 ESISTE?
+
+Sì, e questa è la parte migliore del documento: la donna di «Chi ti trova davanti» parla come parlano le mie assistite, senso di colpa compreso. Ma è **una sola** donna, e sempre la stessa: sana, a distanza di anni, con una cicatrice chiusa e nessun'altra patologia. Nel documento non compaiono mai le parole obesità, diabete, anticoagulante, eparina, puerperio, contraccezione, ernia. Mancano tre persone della mia sala d'attesa: la donna a due mesi dal parto ancora in profilassi con eparina, che il documento contempla di sfuggita ("un miglioramento avvenuto a otto settimane dal parto") senza mai nominarne le condizioni; la donna obesa e diabetica con due cesarei, che è quella a cui il rigonfiamento sopra il taglio può non essere grasso né fascia; la donna senza ciclo — Mirena, progestinico, allattamento — su cui metà delle bandiere rosse ginecologiche semplicemente non si accende.
+
+## ERRORI (max 3) — rischio concreto per un paziente reale
+
+**1. La massa o il rigonfiamento sulla linea del taglio ha tre spiegazioni che non sono tue, e la Bibbia ne insegna una sola, con il segnale sbagliato.**
+Capitolo: «Dove finisce il nostro campo» (bandiere rosse), con ricaduta su «Le strutture in gioco» (la chicca del gradino) e «Che cos'è davvero».
+Paziente a rischio: la donna con due cesarei, obesa, con diabete gestazionale pregresso, che mostra un rigonfiamento sopra il taglio comparso nel secondo anno.
+Prova: l'ernia incisionale dopo cesareo è riportata fra 0,0% e 5,6% (Paulsen 2020, PMID 31785469), con intervallo mediano dall'intervento alla riparazione di 1,36 anni e il 79% dei casi oltre il primo anno (Aabakke 2014, PMID 25268746). L'endometriosi di parete si presenta con una massa nel 96% dei casi ma con sintomi **ciclici solo nel 57%** (Horton 2008, PMID 18513698). L'unica riga di bandiera rossa disponibile è "nodulo duro che cresce", e la parola "ernia" compare una volta sola in tutto il documento, in una negazione senza criteri ("non è un'ernia della parete"). Nel frattempo «Le strutture in gioco» insegna al lettore che il gradino sopra il taglio è geometria del grasso e lo eleva a "reperto visibile" da palpare e confrontare in due posizioni.
+Correzione: aggiungere al Blocco B una riga unica — *"qualunque massa o rigonfiamento nuovo o persistente sulla linea del taglio"* — con i tre discriminanti scritti accanto: si riduce da sdraiata e sporge con tosse o ponzamento → chirurgo, non ginecologo; duro, fisso, dolente, con o senza rapporto con il ciclo → ginecologo; caldo, arrossato, con secrezione → curante o PS. E aggiungere una riga in «Le strutture in gioco» che dica che prima di attribuire il gradino al grasso si verifica che non si riduca in clinostatismo e non aumenti con la tosse.
+
+**2. «Cosa fanno i farmaci che prende» apre dicendo una cosa falsa: che una terapia farmacologica non esiste.**
+Capitolo: «Dove finisce il nostro campo», paragrafo «Cosa fanno i farmaci che prende».
+Paziente a rischio: la donna con dolore neuropatico da intrappolamento, in terapia con amitriptilina o pregabalin, e la donna che allatta.
+Prova: sul dolore cronico di parete dopo cesareo sono raccomandati infiltrazione di anestetico locale sui trigger point, antidepressivi (amitriptilina, duloxetina) e anticonvulsivanti (carbamazepina, pregabalin, gabapentin), mentre i FANS non sono indicati sul dolore neuropatico (Nogueira 2016, PMID 26883861); il blocco nervoso ha valore diagnostico e terapeutico nel percorso chirurgico già citato dalla Bibbia (Loos, *Ann Surg* 2008, PMID 18948818). Il documento stesso si contraddice: «Non è una condizione sola» manda il sottotipo neuropatico a "blocco nervoso diagnostico", e poi il capitolo dei farmaci dichiara che farmaci non ce ne sono. Il danno è doppio. Un osteopata che ha studiato solo questo non sa che la sua paziente può arrivare con un farmaco che dà sonnolenza, capogiro e ipotensione ortostatica quando si scende dal lettino, né che alcuni di questi farmaci hanno un problema di compatibilità con l'allattamento che decide il medico. E soprattutto: la frase "non esiste una terapia farmacologica" detta a una paziente a cui il medico ha appena proposto amitriptilina è esattamente il modo in cui una donna smette una terapia che ho prescritto io.
+Correzione: riscrivere il paragrafo in tre righe. Prima: per il dolore neuropatico esistono percorsi farmacologici e infiltrativi con prove, e sono la ragione per cui il sottotipo neuropatico si manda. Seconda: cosa puoi trovarti davanti — antidepressivi triciclici, gabapentinoidi, anestetico locale infiltrato, e nel puerperio profilassi eparinica — con l'effetto pratico che ti riguarda, cioè sedazione e capogiro. Terza: non li commenti, non ne suggerisci la modifica, non li definisci inutili; se la paziente ti chiede se "servono", la risposta è che lo decide chi li ha prescritti.
+
+**3. La salute mentale perinatale è trattata come materiale clinico da lavorare e non ha mai una porta d'uscita.**
+Capitolo: «La lettura osteopatica» (modello Comportamentale-Biopsicosociale) e «Come ragiono davanti a questo paziente» (la terza donna), con l'omissione che sta in «Dove finisce il nostro campo».
+Paziente a rischio: la donna con cesareo d'urgenza dopo un travaglio lungo, che racconta il parto trattenendo il respiro — la stessa che il documento porta in esempio.
+Prova: dopo cesareo d'urgenza la prevalenza di disturbo post-traumatico da stress va dal 2,2% al 41,2%, con OR 3,68 rispetto al cesareo elettivo fra sei settimane e dodici mesi dal parto (Orovou, *BMC Psychol* 2025, PMID 39789649). Nella Bibbia il vissuto del parto, il senso di colpa, l'evitamento del contatto e l'irrigidimento anticipatorio sono descritti bene, elevati a bersaglio ("il primo bersaglio è il livello di attivazione") e poi lasciati lì: le parole depressione e ansia compaiono solo dentro la descrizione di una meta-analisi, e in nessuna delle nove righe di bandiera rossa c'è un criterio psichico. Un osteopata che riapre il racconto del parto a ogni seduta, per mesi, in una donna con un PTSD non riconosciuto, non sta facendo un lavoro neutro.
+Correzione: aggiungere in «Dove finisce il nostro campo» un Blocco C di tre righe, scritte come le altre — umore depresso persistente o perdita di interesse, incubi o immagini intrusive del parto con evitamento, pensieri di fare del male a sé o al bambino — con destinatario (curante, e per l'ultima riga contatto immediato) e tempi. E una riga in «Chi ti trova davanti» che dica che il senso di colpa può essere un sintomo di una condizione trattabile, non solo il motivo per cui lei tace.
+
+## RISCHI (max 3) — gestibile, ma da sistemare
+
+**1. La puerpera è ammessa nel documento senza essere mai descritta.**
+Capitolo: «Chi ti trova davanti», con riflesso su «Che cos'è davvero» e «Cosa può fare il paziente da solo».
+Perché mi preoccupa: «Chi ti trova davanti» dichiara la donna a distanza di anni, ma «Che cos'è davvero» ammette la paziente a otto settimane dal parto e tutto il Capitolo 12 poggia su studi condotti nel primo anno dopo il parto. Quella donna non è la stessa: può essere ancora in profilassi con eparina a basso peso molecolare, essere anemica, allattare, avere una ferita che non ha finito di maturare. L'ematoma della guaina dei retti è una complicanza nota dell'eparina a basso peso molecolare, e la parete addominale femminile stirata dalla gravidanza è tra le condizioni predisponenti (Sullivan, *BMC Res Notes* 2014, PMID 25178308). Nessuna di queste parole è nel documento.
+Mitigazione: due righe in «Chi ti trova davanti» che dichiarino la finestra temporale — da quando in poi la parete è materiale tuo — e che nella donna ancora dentro il puerperio si chiede sempre se è in terapia anticoagulante, prima di qualunque valutazione della parete. Non serve una controindicazione a una manovra che qui non esiste: serve che la domanda venga in mente.
+
+**2. La scadenza del GIALLO è contata in sedute, e le sedute stanno in un altro documento.**
+Capitolo: «Dove finisce il nostro campo», uscita GIALLO, condizione 4.
+Perché mi preoccupa: il resto del cancello è la parte più solida del documento — reperto scritto, comunicazione al curante, revisione programmata, ROSSO senza eccezioni. Ma "entro il numero di sedute previsto dalla Procedura" non è una data. Una paziente vista ogni tre settimane consuma sei sedute in quattro mesi e mezzo, con l'inquadramento ginecologico ancora aperto, senza che nessuna regola sia stata violata. E chi legge la Bibbia senza avere la Procedura sotto mano non ha alcun termine.
+Mitigazione: affiancare al conteggio delle sedute un tetto di calendario scritto nella Bibbia stessa ("e comunque non oltre N settimane dalla prima seduta") e imporre che la data della revisione sia scritta in cartella il giorno in cui il GIALLO si apre.
+
+**3. Le bandiere rosse ginecologiche presuppongono una donna con il ciclo.**
+Capitolo: «Dove finisce il nostro campo» (Blocco B) e «Non è una condizione sola» (sottotipo uterino o ginecologico).
+Perché mi preoccupa: due righe su cinque del Blocco B — dolore ciclico a ogni mestruazione, perdite ematiche dopo la fine del ciclo — non si accendono nella donna in amenorrea da allattamento, con spirale a progestinico o in contraccezione continua, che nel mio ambulatorio è una quota grande delle donne dopo un cesareo. Nella stessa donna, per il verso opposto, lo spotting da progestinico può far scattare un allarme che allarme non è. E l'endometriosi di parete, che la Bibbia descrive due volte come "nodulo dolente a ogni ciclo", nella casistica più ampia è ciclica solo nel 57% dei casi (Horton 2008, PMID 18513698).
+Mitigazione: aggiungere lo stato del ciclo e il metodo contraccettivo fra le cose che si chiedono sempre, e riformulare le due righe in modo che reggano anche senza ciclo: dolore o massa che cambia nel tempo senza una causa meccanica riconoscibile, e sanguinamento anomalo per quella donna. Correggere in «Che cos'è davvero» e in «Non è una condizione sola» la descrizione dell'endometriosi di parete, che non è sempre ciclica.
+
+## PREFERENZE (max 2) — opinabile, decide il direttore
+
+- In «Il rapporto con il prescrittore»: specificare che la comunicazione scritta contiene il reperto e la mappa dell'area insensibile, non un'impressione. Un medico che riceve una misura la legge; una lettera che dice "ho trovato tensione" finisce nel cassetto, e il canale che dovrebbe reggere il GIALLO non regge.
+- In «Cosa dire al paziente», alla risposta "La massaggio già da sola": mezza riga che dica che quello che fa lei non sostituisce i controlli o le terapie che il medico le ha dato. Costa nulla e chiude una porta.
+
+## TIENE
+
+Il tono verso di me è corretto e non denigratorio: «Cosa nessuno ha guardato» dice che il controllo dei quaranta giorni è quello per cui esiste e che il resto "non è di quel campo", non che il medico non guarda. Il ROSSO senza eccezioni, il vincolo dello scritto e «Cosa succede se sbagli campo» — che chiama il ritardo con il suo nome — sono la parte che rende questo documento affidabile. E «Cosa non promettere mai» è la pagina che mi fa stare tranquillo su cosa la mia paziente si sentirà dire.
+
+## MANDEREI I MIEI PAZIENTI QUI?
+
+Sì, e non con riserva di principio: questo documento è più onesto sui propri limiti di molte relazioni specialistiche che ricevo. Ma oggi manderei solo la donna a distanza di anni, senza comorbilità, con ciclo regolare e senza massa palpabile — che è esattamente l'unica descritta. Non manderei ancora la puerpera in profilassi eparinica, la donna con un rigonfiamento sul taglio, né quella che dopo un cesareo d'urgenza sta ancora male di testa oltre che di pancia. Perché diventino sì bastano quattro aggiunte brevi: la riga sulla massa, il paragrafo dei farmaci riscritto, le tre righe di bandiera rossa psichica, e la domanda sull'anticoagulante.
+
+## VERDETTO: Da correggere
+
+Impianto di sicurezza solido e cancello ben costruito, ma la Bibbia conosce una paziente sola: le tre correzioni sopra sono tutte aggiunte di poche righe e nessuna tocca la struttura.
