@@ -1,0 +1,42 @@
+{
+  "passaggio": "chiarezza",
+  "esito": "CONSEGNABILE",
+  "statistiche": {
+    "parole_prima": 17186,
+    "parole_dopo": 17316,
+    "delta_pct": 0.8,
+    "identita_pct": 74.1,
+    "per_te_prima": 11,
+    "per_te_dopo": 11,
+    "slot_prima": 15,
+    "slot_dopo": 15,
+    "uscite_prima": 7,
+    "uscite_dopo": 7,
+    "etichette_prima": 22,
+    "etichette_dopo": 22,
+    "pmid_prima": 79,
+    "pmid_dopo": 79
+  },
+  "violazioni": [
+    {
+      "severita": "AVVISO",
+      "codice": "BOX_NON_PREVISTI",
+      "messaggio": "1 tipi di box fuori dai quattro ammessi.",
+      "dettaglio": [
+        "«Le parole del metodo» (×1)"
+      ]
+    },
+    {
+      "severita": "AVVISO",
+      "codice": "PAROLE_FUORI_RANGE",
+      "messaggio": "Il documento ha 17316 parole (appendici escluse): fuori dal range 8000–13000. Non e' un difetto di conservazione: se il superamento c'era gia' in ingresso, il rilievo appartiene al livello di asciugatura, non a chi ha riscritto.",
+      "dettaglio": []
+    },
+    {
+      "severita": "AVVISO",
+      "codice": "GLOSSARIO_TROPPO_LUNGO",
+      "messaggio": "Il glossario ha 42 termini (max 40): la Bibbia è scritta troppo tecnica.",
+      "dettaglio": []
+    }
+  ]
+}
