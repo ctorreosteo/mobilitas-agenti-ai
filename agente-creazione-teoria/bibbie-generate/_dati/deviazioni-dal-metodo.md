@@ -631,3 +631,78 @@ Una voce per deviazione. Sempre con una **fonte**: una deviazione senza fonte no
 | **Perché è incompleto** | Sulla cefalea di tipo tensivo il Capitolo 6 ha **otto** voci, e tre non sono varianti di pattern: sono cancelli imposti da fuori. «Senza dolorabilità pericranica» è la divisione che l'**ICHD-3** stabilisce con le mani, ed è l'unico elemento della classificazione internazionale delle cefalee che l'osteopata determina; «tensiva in chi ha anche emicrania» cambia il **metodo di misura dell'esito**, perché i giorni al mese vanno contati separati per tipo; «con uso eccessivo di farmaci» cambia l'**uscita del triage**. Comprimere a sei significherebbe togliere un cancello per rispettare un conteggio, cioè far pagare alla sicurezza e alla misura una regola di forma. |
 | **Cosa fa la Bibbia** | Tiene le otto voci, e distingue nel testo le cinque che sono pattern clinici dalle tre che sono cancelli: ciascuna delle tre porta la propria etichetta **RAGIONAMENTO** *(cornice clinica, non una prova)* e dichiara cosa cambia — il mandato, il conteggio, l'uscita del triage. La tabella di apertura del capitolo resta a quattro colonne. |
 | **Se ratificata** | Riscrivere il tetto del Capitolo 6 come: *"da 3 a 6 **pattern clinici**; un sottotipo che cambia l'uscita del triage, il mandato o il metodo di misura dell'esito non conta nel tetto, si dichiara come **cancello** e porta la sua etichetta"*. |
+
+---
+
+### D-034 · «Il mal di testa nasce nei muscoli che reggono la testa» — dolore al collo e disfunzione cervicale trattati come la stessa cosa
+
+| | |
+|---|---|
+| **Stato** | `PROPOSTA` |
+| **Aperta il** | 2026-08-21 |
+| **Condizione di emersione** | Cefalea (Bibbia v1) |
+| **Ambito** | Trasversale — riguarda ogni condizione in cui un reperto cervicale co-occorrente viene assunto come generatore del sintomo (cefalea, emicrania, cefalea tensiva, acufeni, vertigini, dolore facciale) |
+| **Elemento del metodo** | Il campo `meccanismo_causa` di questa condizione in `problemi.json`: *"la maggior parte dei mal di testa quotidiani non nasce nella testa: nasce nei muscoli che la reggono… finché quel flusso resta aperto, ogni pastiglia spegne l'allarme senza chiudere il rubinetto"*. Scritto al presente indicativo, come catena causale stabilita. Per estensione, la logica del Motore Clinico che legge un ipertono periferico come generatore del sintomo. |
+| **Perché è sbagliato** | Confonde due reperti che i dati separano nettamente. Il **dolore al collo** è quasi universale e non discrimina: la prevalenza a un anno è del 68,4% nella popolazione generale, dell'85,7% in chi ha una cefalea primaria contro il 56,7% in chi non ne ha, ed è alta in tutti i sottotipi — 89,3% nelle forme miste, 88,4% nella tensiva pura, 76,2% nell'emicrania pura (Ashina S, *Cephalalgia* 2015, [PMID 24853166](https://pubmed.ncbi.nlm.nih.gov/24853166/)). La **disfunzione muscolo-scheletrica cervicale** è invece specifica di un solo sottotipo: la combinazione di movimento ridotto, disfunzione articolare cervicale alta palpabile e alterazione del test di flessione cranio-cervicale identifica la cefalea cervicogenica con sensibilità 100% e specificità 94%, e nei gruppi emicrania e cefalea di tipo tensivo **non c'era alcun segno** di alterazione muscolo-scheletrica cervicale (Jull, *Cephalalgia* 2007, [PMID 17598761](https://pubmed.ncbi.nlm.nih.gov/17598761/)). Nelle forme concomitanti i segni isolati non discriminano più (Amiri, *Cephalalgia* 2007, [PMID 17608813](https://pubmed.ncbi.nlm.nih.gov/17608813/)). Anche la riproduzione del dolore in testa alla pressione sostenuta sul collo alto non è diagnostica: specificità 0,845 e sensibilità 0,466, con 11 controlli sani su 73 che riferiscono comunque dolore in testa (Luedtke & May, *J Headache Pain* 2017, [PMID 28952052](https://pubmed.ncbi.nlm.nih.gov/28952052/)). Conseguenza pratica dell'errore: si tratta un reperto aspecifico credendo di trattare la causa, si promette al paziente una riduzione degli attacchi che quel reperto non regge, e si dice la frase *"il suo mal di testa viene dalla cervicale"* — che è insieme una diagnosi e un'affermazione falsa nella maggior parte dei casi in cui viene detta. È la stessa classe di errore già corretta da D-009 sul reflusso e dalla voce D-020 sull'emicrania, qui su tutta la famiglia delle cefalee. |
+| **Cosa fa la Bibbia** | Separa **dolore al collo** (frequente, aspecifico, misura di stato) da **disfunzione cervicale** (rara, specifica, identificata da un cluster di tre test) e lo dichiara a lettera. Colloca il cluster di Jull come quarto meccanismo e come unico sottotipo con «Quanto puoi fare: Molto». Nel Capitolo 9 il confine di atto vieta esplicitamente sia l'assegnazione del tipo di cefalea sia la frase *"viene dalla cervicale"*, e la prima condizione del GIALLO esclude la dolorabilità palpatoria dai reperti che fondano il mandato (coerente con D-022). Usa la pressione sostenuta su C1-C3 come **test di stratificazione dentro una diagnosi già posta**, mai come conferma di una catena causale. |
+| **Se ratificata** | Riformulare il campo `meccanismo_causa` della cefalea come associazione misurata e non come catena causale: *"chi ha mal di testa ricorrente ha quasi sempre anche dolore al collo; che sia il collo a produrre il mal di testa è vero in un sottogruppo, e quel sottogruppo si riconosce con tre test, non con la palpazione"*. Aggiungere ai documenti di metodo la distinzione generale fra **reperto co-occorrente aspecifico** e **reperto discriminante validato**: solo il secondo fonda un'attribuzione causale, e la Bibbia deve dichiarare quale dei due sta usando. |
+
+---
+
+### D-037 · La glossa fissa «studi sull'uomo, solidi» viene attaccata a un dato animale
+
+| | |
+|---|---|
+| **Stato** | `PROPOSTA` |
+| **Aperta il** | 2026-08-21 |
+| **Condizione di emersione** | Cefalea (Bibbia v2, ratificata come voce di registro in v3) |
+| **Ambito** | Trasversale — riguarda ogni Bibbia il cui razionale poggi su fisiologia animale (cefalea, emicrania, acufeni, vertigini, viscerale) |
+| **Elemento del metodo** | `architettura-bibbia.md`, regola 3: quattro etichette e quattro glosse fisse, senza varianti. **DIMOSTRATO** porta sempre *(studi sull'uomo, solidi)*. |
+| **Perché è incompleto** | Su questa condizione il meccanismo centrale — la convergenza trigemino-cervicale misurata nei due versi — è **DIMOSTRATO nel ratto anestetizzato** (Bartsch & Goadsby, *Brain* 2002, [PMID 12077000](https://pubmed.ncbi.nlm.nih.gov/12077000/); *Brain* 2003, [PMID 12821523](https://pubmed.ncbi.nlm.nih.gov/12821523/)). Con le sole quattro etichette disponibili l'autore ha due strade, entrambe sbagliate: scrivere **DIMOSTRATO** *(studi sull'uomo, solidi)* su un dato di ratto, cioè un'etichetta falsa; oppure declassare a **PROBABILE** un fatto misurato con registrazione unitaria, cioè sottostimare la prova. La specie non è una sfumatura: è ciò che decide se il ponte all'uomo esiste o è un ragionamento. |
+| **Cosa fa la Bibbia** | Introduce la forma **DIMOSTRATO nell'animale** *(studi solidi, ma su ratto anestetizzato)*, con la specie dentro l'etichetta e non in una nota. Nella Mappa la stessa forma compare nella legenda. Il claim sull'uomo resta separato e porta la sua etichetta più bassa. |
+| **Se ratificata** | Aggiungere alla regola 3 la clausola: *«quando il dato non è umano, la specie e la preparazione entrano nell'etichetta e sostituiscono la glossa: DIMOSTRATO nell'[animale] (studi solidi, ma su [preparazione]). Non è una quinta etichetta: è la prima, qualificata.»* |
+
+---
+
+### D-038 · Sensibilità e specificità calcolate sul campione che le ha generate reggono l'etichetta più alta
+
+| | |
+|---|---|
+| **Stato** | `PROPOSTA` |
+| **Aperta il** | 2026-08-21 |
+| **Condizione di emersione** | Cefalea (Bibbia v2, registrata in v3) |
+| **Ambito** | Trasversale — riguarda ogni Bibbia che poggi su un cluster di test o su una regola di predizione clinica |
+| **Elemento del metodo** | `architettura-bibbia.md`, regola 3: **DIMOSTRATO** = *studi sull'uomo, solidi*. Nessuna clausola distingue accuratezza **derivata** e accuratezza **validata**. |
+| **Perché è incompleto** | Il cluster dei tre test cervicali riporta sensibilità 100% e specificità 94% sulla cefalea cervicogenica (Jull, *Cephalalgia* 2007, [PMID 17598761](https://pubmed.ncbi.nlm.nih.gov/17598761/)). È uno studio sull'uomo e i numeri sono altissimi: letta alla lettera, la regola imporrebbe DIMOSTRATO. Ma i cervicogenici erano **18 su 73**, e i due valori escono da un'analisi calcolata **sullo stesso campione che li ha generati**, senza coorte di validazione indipendente. Un'accuratezza derivata è, per costruzione, la migliore che quel test otterrà mai: fuori dal campione scende sempre. Etichettarla DIMOSTRATO produce un claim gonfiato con una fonte vera sotto, che è l'errore più difficile da vedere. |
+| **Cosa fa la Bibbia** | Assegna **PROBABILE** *(razionale forte, prove parziali)* al cluster, e scrive il motivo accanto al dato: 18 casi su 73, valori derivati e mai riprodotti su una coorte indipendente. La stessa riga compare nella Mappa. |
+| **Se ratificata** | Aggiungere alla regola 3: *«un'accuratezza diagnostica (sensibilità, specificità, area sotto la curva) ricavata dallo stesso campione che l'ha generata non regge DIMOSTRATO fino alla validazione esterna: si etichetta PROBABILE e si dichiara la mancata riproduzione.»* |
+
+---
+
+### D-039 · Il vocabolario chiuso dei tempi di invio non regge le condizioni con finestre di ore e di giorni
+
+| | |
+|---|---|
+| **Stato** | `PROPOSTA` |
+| **Aperta il** | 2026-08-21 |
+| **Condizione di emersione** | Cefalea (Bibbia v2, rilevata da `fedelta-bibbia` in 2ª passata) |
+| **Ambito** | Trasversale — riguarda ogni condizione le cui linee guida diano finestre temporali numeriche |
+| **Elemento del metodo** | `architettura-bibbia.md`, Capitolo 9: *«I tempi usano un vocabolario chiuso, sempre lo stesso: `112` · `Urgente` · `Invio, non attendere` · `Invio` · `Invio programmato`. Un'urgenza scritta in prosa non si esegue.»* |
+| **Perché è incompleto** | La ragione della regola è giusta — un'urgenza in prosa non si esegue — ma su questa famiglia le finestre reali sono di ore e di giorni, e sono **fontate**. L'arterite a cellule giganti può togliere la vista in giorni e i tempi di invio hanno una linea guida (BSR, *Rheumatology* 2020;59:e1); la dissezione arteriosa cervicale ha un'ora d'oro; la cefalea in gravidanza oltre la ventesima settimana con pressione alta non aspetta l'appuntamento. Fra `Urgente` e `Invio programmato` il vocabolario chiuso non ha nulla, e schiaccia su una parola sola finestre che vanno da ventiquattro ore a sette giorni. Una scadenza in giorni si esegue; *«Urgente»* si interpreta — che è precisamente il difetto che la regola esiste per impedire. |
+| **Cosa fa la Bibbia** | Tiene il vocabolario chiuso come **etichetta di classe** (`112`, `Urgente`, `Invio programmato`) e vi affianca la **finestra numerica** quando la linea guida la dà: `In giornata`, `Entro 24 ore`, `Entro 48 ore`, `Entro 3 giorni`, `Entro 7 giorni`. La finestra non sostituisce mai `112`. |
+| **Se ratificata** | Riscrivere la regola come: *«il vocabolario chiuso resta l'etichetta di classe; quando una linea guida di riferimento fissa una finestra numerica, la finestra la specifica e si cita la fonte. Senza fonte si torna al vocabolario chiuso.»* |
+
+---
+
+### D-040 · La regola del ponte assume che il salto sia sempre di popolazione
+
+| | |
+|---|---|
+| **Stato** | `PROPOSTA` |
+| **Aperta il** | 2026-08-21 |
+| **Condizione di emersione** | Cefalea (Bibbia v3, rilevata da `evidenza-estesa` in 2ª passata) |
+| **Ambito** | Trasversale — riguarda ogni Bibbia che usi fonti del cerchio 2 |
+| **Elemento del metodo** | `architettura-bibbia.md` e `ancore-scientifiche.md`, la regola del ponte: *«ogni fonte del cerchio 2 porta con sé la frase che dichiara il salto: "misurato su [chi], non su pazienti con questa condizione"»*. |
+| **Perché è incompleto** | La formula ha **una sola forma**, e presuppone che ciò che cambia sia la popolazione. Esistono fonti di cerchio 2 misurate **su questi stessi pazienti** con un altro intervento: Kam-Hansen (*Sci Transl Med* 2014, [PMID 24401940](https://pubmed.ncbi.nlm.nih.gov/24401940/)) misura l'effetto dell'informazione su 66 emicranici e 459 attacchi, ma su un farmaco d'attacco. Applicata alla lettera, la regola obbligherebbe a scrivere *«non su pazienti con questa condizione»*, che è **letteralmente falso**, oppure a scartare la fonte meglio ancorata del capitolo. Lo stesso vale per il salto di **erogatore**: un intervento provato quando lo eroga un medico non è provato quando lo eroga un osteopata, e la popolazione è la stessa. |
+| **Cosa fa la Bibbia** | La frase-ponte dichiara **l'asse su cui avviene il salto** — popolazione, intervento o erogatore — invece di assumere che sia sempre la popolazione. Esempi usati: *«misurato su dolore muscolo-scheletrico in generale, non su questi pazienti»* (popolazione); *«misurato su un farmaco d'attacco in questi stessi pazienti, non su un trattamento manuale»* (intervento); *«quando è il medico a erogarlo»* (erogatore). |
+| **Se ratificata** | Riscrivere la regola del ponte come: *«ogni fonte del cerchio 2 dichiara l'asse del salto e la sua direzione: "misurato su [popolazione] / con [intervento] / erogato da [chi], non su [quello che fai tu]". L'etichetta del meccanismo può salire; quella della leva su questa condizione no, qualunque sia l'asse.»* |

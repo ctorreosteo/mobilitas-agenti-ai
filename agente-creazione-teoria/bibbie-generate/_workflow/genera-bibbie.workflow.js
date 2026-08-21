@@ -16,6 +16,7 @@ export const meta = {
     { title: 'Riscrittura finale', detail: 'skill chiarezza riscrive TUTTO da capo in linguaggio semplice -> v6' },
     { title: 'Revisione di lingua', detail: 'skill italiano toglie i calchi e raddrizza la sintassi -> v7 finale' },
     { title: 'Collaudo', detail: 'script deterministico + collaudatore semantico sulla coppia v5/v7; riparazione mirata se serve' },
+    { title: 'Consegna', detail: 'genera Bibbia_<Condizione>.docx e Mappa_<Condizione>.docx in outputs/<slug>/, se non ci sono gia' },
   ],
 }
 
@@ -647,6 +648,43 @@ Se una riparazione riguarda una promessa o del materiale operativo introdotto, *
 Salva sugli stessi file. Restituisci l'oggetto strutturato: in "informazioni_perse" lascia vuoto se hai riparato tutto, altrimenti elenca cosa non sei riuscito a rimettere e perche'.`
 
 // promuovi un documento a versione successiva senza modifiche (quando un livello e' vuoto)
+// CONSEGNA: i .docx si generano DENTRO la catena, non a mano dopo.
+// Fino al 21/08/2026 la conversione era un passo manuale: la Bibbia risultava "completata"
+// mentre in outputs/ non c'era niente, e chi guardava la cartella non trovava il deliverable.
+const docxPrompt = (slug) => `Sei l'addetto alla CONSEGNA della Bibbia "${slug}". Devi produrre i due file .docx finali. Non giudichi il contenuto e non lo modifichi: converti e verifichi.
+
+## 1. Controlla se serve
+Esegui: ls -l ${ROOT}/outputs/${slug}/ 2>/dev/null
+Se esistono gia' sia il file Bibbia_*.docx sia il file Mappa_*.docx **ed entrambi sono piu' recenti** di ${OUT}/${slug}/v7-finale.md e ${OUT}/${slug}/mappa-finale.md, non c'e' niente da fare: riporta "gia' presenti e aggiornati" e fermati.
+
+## 2. Ricava il titolo della condizione
+Leggi la prima riga di intestazione (#) di ${OUT}/${slug}/v7-finale.md: da li' ricavi il nome leggibile della condizione (es. slug "mal-di-testa-tensivo" -> "Mal di Testa Tensivo"). Se non lo ricavi, usa lo slug con i trattini sostituiti da spazi e le iniziali maiuscole.
+
+## 3. Converti ENTRAMBI i file
+Esegui, uno alla volta, dalla cartella ${ROOT}:
+  python3 .claude/skills/direttore-osteopatico-teoria/scripts/build_docx.py bibbie-generate/${slug}/v7-finale.md "<Titolo>" --slug ${slug}
+  python3 .claude/skills/direttore-osteopatico-teoria/scripts/build_docx.py bibbie-generate/${slug}/mappa-finale.md "<Titolo>" --slug ${slug}
+Lo script stampa "OK  -> <percorso>" quando riesce. Gli avvisi su lunghezza o numero di parole NON sono errori: si ignorano.
+**Se pandoc fallisce**, leggi il messaggio e riporta l'errore esatto: non inventare un successo.
+
+## 4. Verifica che i file esistano davvero
+Esegui di nuovo: ls -l ${ROOT}/outputs/${slug}/
+Riporta i nomi e le dimensioni dei file trovati. Se manca uno dei due, dillo esplicitamente.
+
+Restituisci l'oggetto strutturato richiesto.`
+
+const DOCX_SCHEMA = {
+  type: 'object',
+  additionalProperties: false,
+  required: ['bibbia_docx', 'mappa_docx'],
+  properties: {
+    bibbia_docx: { type: 'boolean', description: 'true se Bibbia_*.docx esiste in outputs/<slug>/ dopo la conversione' },
+    mappa_docx: { type: 'boolean', description: 'true se Mappa_*.docx esiste in outputs/<slug>/ dopo la conversione' },
+    titolo: { type: 'string' },
+    errore: { type: 'string', description: 'Il messaggio esatto se pandoc ha fallito; stringa vuota se tutto ok' },
+  },
+}
+
 const promotePrompt = (bibIn, mappaIn, bibOut, mappaOut) =>
   `Copia senza modifiche ${bibIn} in ${bibOut} e ${mappaIn} in ${mappaOut}. Poi conferma in una riga.`
 
@@ -1019,6 +1057,29 @@ const results = await pipeline(
     }
 
     return { ...base, esito: 'NON CONSEGNABILE', collaudo: 'non superato' }
+  },
+
+  // --- STAGE 10: CONSEGNA — i .docx, sempre ---
+  // Gira SEMPRE, anche se il collaudo non e' passato: se la v7 esiste, il documento si consegna
+  // (la lunghezza e gli avvisi non fermano una consegna). Se i .docx ci sono gia' e sono
+  // aggiornati, l'agente se ne accorge e non fa nulla.
+  async (prev, slug) => {
+    const base = prev && prev.slug ? prev : { slug }
+    const r = await robustAgent(docxPrompt(slug), {
+      label: `docx:${slug}`, phase: 'Consegna', schema: DOCX_SCHEMA, agentType: 'general-purpose',
+    }, 2)
+    if (!r) {
+      log(`ATTENZIONE ${slug}: la conversione in .docx non ha risposto. I markdown ci sono, i .docx no: convertili a mano.`)
+      return { ...base, docx: 'non eseguita' }
+    }
+    if (r.errore) log(`ATTENZIONE ${slug}: pandoc ha segnalato — ${r.errore}`)
+    if (!r.bibbia_docx || !r.mappa_docx) {
+      const mancano = [!r.bibbia_docx && 'Bibbia', !r.mappa_docx && 'Mappa'].filter(Boolean).join(' e ')
+      log(`ATTENZIONE ${slug}: manca il .docx di ${mancano} in outputs/${slug}/`)
+      return { ...base, docx: `incompleta (manca ${mancano})` }
+    }
+    log(`CONSEGNA ${slug}: Bibbia e Mappa in .docx pronte in outputs/${slug}/`)
+    return { ...base, docx: 'pronta' }
   }
 )
 

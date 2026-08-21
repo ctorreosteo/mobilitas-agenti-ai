@@ -1,0 +1,60 @@
+LENTE: Sicurezza del Gesto Manuale (su documento teorico)
+CONDIZIONE: Cefalea
+DOCUMENTO REVISIONATO: `bibbie-generate/cefalea/v1-bibbia.md` (v1.0), con la Mappa `v1-mappa.md` letta come allegato operativo dello stesso corpus.
+
+RICERCA SVOLTA
+Ricerca web eseguita in questa sessione; ogni fonte citata sotto e' stata letta nell'abstract su PubMed.
+- Eventi avversi del rachide cervicale: Biller, *Stroke* 2014, PMID 25104849 — la dissezione cervicale e' piu' frequente nel rachide cervicale ALTO e si presenta con cefalea unilaterale, dolore cervicale posteriore, paralisi oculosimpatica (Horner), acufene pulsante, paralisi di nervi cranici; raccomanda esplicitamente di informare il paziente prima della manipolazione cervicale.
+- Chaibi & Russell, *Ann Med* 2019, PMID 30889367 — cefalea e/o cervicalgia sono il sintomo iniziale piu' comune della dissezione; strategia passo-passo per escluderla prima della terapia manuale.
+- Framework di screening: Rushton et al., *JOSPT* 2023, PMID 36099171 — International IFOMPT Cervical Framework: le patologie vascolari del collo sono rare ma riconoscibili se le domande giuste vengono poste in anamnesi.
+- Instabilita' del cervicale alto: Hutting et al., *Phys Ther* 2013, PMID 23886844 — cervicalgia, cefalea, torcicollo o segni neurologici impongono lo screening per instabilita' del cervicale alto, che e' una bandiera rossa per l'intervento fisioterapico; i test hanno specificita' sufficiente ma sensibilita' variabile.
+- Incidenza, per non gonfiare: Pankrath, *Pain Physician* 2024, PMID 38805524 — meta-analisi di 14 RCT su HVLA cervicale: nessun evento avverso serio o moderato riportato, nessuna differenza rispetto ai controlli; gli RCT non sono pero' il disegno adatto a intercettare eventi rari.
+- Verificato inoltre Luedtke, *Man Ther* 2016, PMID 27183831 (gli 11 test di consenso citati dalla Bibbia: confermati, e nessuno di essi e' un test di screening vascolare o di instabilita').
+
+ERRORI (max 3) — la teoria porta il lettore a un gesto pericoloso senza avvertirlo
+
+- **La dissezione dell'arteria cervicale e' nominata una volta sola e senza un solo segno riconoscibile | «Dove finisce il nostro campo» → «Il confine di atto» e «Le bandiere rosse», e la Mappa**
+  Rischio: mettere le mani sul cervicale alto di un paziente con una dissezione in evoluzione, il cui unico sintomo finora e' esattamente il motivo del consulto.
+  Prova: Biller, *Stroke* 2014, PMID 25104849 — presentazione con cefalea unilaterale, dolore cervicale posteriore, Horner, acufene pulsante, deficit di nervi cranici; sede piu' frequente il cervicale alto. Chaibi & Russell, *Ann Med* 2019, PMID 30889367.
+  Cosa manca: la Bibbia scrive «il sintomo per cui il paziente e' venuto e il sintomo d'esordio della complicanza coincidono» e si ferma li'. Il lettore esce sapendo che il pericolo esiste e non sapendo da cosa lo riconosce. Le parole «arteria vertebrale» non compaiono mai nel documento. Aggiungere **una riga al Blocco A** delle bandiere rosse: *«Cefalea o dolore cervicale NUOVI e diversi da quelli abituali, a esordio brusco, strettamente da un lato — soprattutto se accompagnati da palpebra calante e pupilla piccola dallo stesso lato, acufene pulsante di nuova insorgenza, o disturbo transitorio di vista, parola, equilibrio → Pronto soccorso, 112»*. La stessa riga va replicata nel blocco «Le bandiere rosse» della **Mappa**, che oggi non ne porta traccia ed e' l'unico documento che la Bibbia prescrive di leggere «due minuti prima del primo paziente» e «a sei mesi». Aggiungere anche mezza riga sulla rarita' (PMID 38805524), perche' il rilievo non diventi allarmismo.
+
+- **C1-C2 e' dichiarata la leva dove «la tua mano vale di piu'» e non porta una sola parola sull'insufficienza legamentosa di quel segmento | «Le strutture in gioco» → «L'articolazione atlanto-epistrofea, C1-C2», ripresa in «Biomeccanico-Strutturale» e in «Sulla ruota che sfrega sul parafango»**
+  Rischio: lavorare in escursione su un segmento la cui stabilita' e' interamente legamentosa, in un paziente in cui quel legamento e' incompetente.
+  Prova: Hutting et al., *Phys Ther* 2013, PMID 23886844 — «patients with neck pain, headache, torticollis, or neurological signs should be screened carefully for upper cervical spine instability, as these conditions are red flags for applying physical therapy interventions»; i test disponibili hanno sensibilita' variabile, quindi l'esclusione e' anamnestica prima che manuale. Cornice: IFOMPT Cervical Framework, PMID 36099171.
+  Cosa manca: e' un fatto della ZONA, non del paziente — l'atlanto-epistrofea e' l'unico livello del rachide senza incastro osseo, e la Bibbia lo elegge a bersaglio elencando fra le afferenze proprio «i legamenti alto-cervicali» senza mai dire che possono essere incompetenti. Aggiungere un box **Attenzione** in «L'articolazione atlanto-epistrofea, C1-C2»: *«La stabilita' di questo piano e' legamentosa, non ossea. Artrite reumatoide e artropatie infiammatorie, sindrome di Down, trauma cervicale recente e disturbi ereditari del tessuto connettivo la rendono insufficiente. In questi quadri C1-C2 non e' una leva: e' una domanda per il medico, e la si pone prima di aprire la Procedura. La domanda si fa in anamnesi: i test manuali di instabilita' non hanno sensibilita' sufficiente per escluderla.»*
+
+- **Il paziente esce senza sapere quale segnale, nelle ore e nei giorni dopo, impone il pronto soccorso | «Dove finisce il nostro campo» → «Cosa dichiari nel consenso su questa condizione», e «Cosa dire al paziente»**
+  Rischio: un paziente che, dopo il lavoro sul cervicale alto, sviluppa una cefalea nuova e diversa dalla propria e telefona allo studio invece di andare in pronto soccorso — perche' tutto il documento gli ha insegnato che il mal di testa e' il suo motivo di consulto.
+  Prova: Biller, *Stroke* 2014, PMID 25104849, raccomanda esplicitamente che il paziente sia informato prima della manipolazione cervicale; la sovrapposizione fra sintomo abituale e sintomo d'esordio della complicanza e' gia' dichiarata dalla Bibbia stessa.
+  Cosa manca: le tre righe del consenso parlano di oggetto del trattamento, entita' degli effetti attesi e comunicazione al curante, e non contengono il segnale d'allarme. Aggiungere una quarta riga: *«Il paziente esce sapendo che una cefalea o un dolore al collo nuovi e diversi dai suoi, o qualunque disturbo di vista, parola, forza o equilibrio nelle ore e nei giorni successivi, si portano in pronto soccorso e non allo studio.»* La stessa cosa, in una riga, fra le obiezioni di «Cosa dire al paziente».
+
+RISCHI (max 3) — gestibile, ma da blindare
+
+- **«Lo esegui su ogni cefalea, non solo su quelle che sospetti cervicogeniche» | «Come ragiono davanti a questo paziente» → «La prova della chiave di volta», e «Cosa fare adesso» → «Le tre cose che cambi da lunedi'», punto 1**
+  Perche' mi preoccupa: e' l'unico imperativo incondizionato del documento, e riguarda un test di flessione e rotazione tenuto a fine corsa sul cervicale alto. Nel capitolo del ragionamento il cancello e' dichiarato altrove («le bandiere rosse stanno fuori da questa lista: sono il cancello che la precede»), ma nell'ultima pagina la stessa istruzione ricompare nuda, in un elenco fatto apposta per essere letto da solo.
+  Mitigazione: due parole in entrambe le occorrenze — *«a cancello superato, lo esegui su ogni cefalea»* e *«su ogni paziente con mal di testa che ha passato il triage»*.
+
+- **Arterite a cellule giganti: la riga di invio c'e', la zona resta aperta | «Le bandiere rosse» → Blocco B, e «La Road Map» punto 5**
+  Perche' mi preoccupa: il Blocco B autorizza a «trattare un altro distretto», e il temporale e' fra «gli attori» del modello Biomeccanico mentre la Road Map chiede «quanto carico c'e' sui pericranici e sulla mandibola». Un lettore puo' leggere la regione temporale come «un altro distretto» e caricarla mentre l'invio e' pendente. La GCA e' l'unica bandiera di questo documento con esito potenzialmente irreversibile sulla vista.
+  Mitigazione: mezza riga sotto la tabella del Blocco B — *«con la riga dell'arterite aperta, la regione temporale non e' un altro distretto: non si palpa e non si carica finche' il medico non ha risposto.»*
+
+- **Il DPR 131/2021 e' citato ma mai tradotto sulle strutture di questa condizione | «Il confine di atto»**
+  Perche' mi preoccupa: il documento indica il carico mandibolare e massetere come oggetto di valutazione e rimanda alla Bibbia del Bruxismo, e cita il DPR come «tecniche esclusivamente manuali, non invasive ed esterne» senza mai dire che la via intra-orale ai muscoli mandibolari — la conclusione ovvia per chi ha appena letto quel passaggio — sta fuori da quella definizione. Un perimetro enunciato in astratto e mai applicato agli attori nominati non trattiene nessuno.
+  Mitigazione: mezza riga dopo la citazione del DPR, che nomini l'approccio intra-orale come esempio di cio' che quella definizione esclude.
+
+PREFERENZE (max 2) — opinabile, decide il direttore
+
+- La riga sulla dissezione vive dentro «Il confine di atto», dove il registro e' normativo e il lettore la legge come un vincolo di competenza. Andrebbe duplicata dove la decisione di lavorare sul cervicale alto viene presa davvero: «Sulla ruota che sfrega sul parafango», in «Perche' le mani possono cambiare qualcosa».
+- La rarita' va nominata con un numero, non lasciata implicita: in 14 RCT su HVLA cervicale nessun evento avverso serio o moderato e' stato riportato (Pankrath, PMID 38805524), con l'avvertenza che quel disegno non intercetta gli eventi rari. Serve a impedire che il rilievo sulla dissezione venga letto come divieto.
+
+TIENE
+Il Blocco A con la formula «nessuna eccezione, e nessun reperto positivo scavalca questa uscita» e' la miglior protezione del documento: non lasciarla ammorbidire. La regola per cui l'inquadramento **decade** se la cefalea cambia carattere, sede o intensita', con ritorno al triage a ogni seduta, e' in pratica la migliore rete di sicurezza contro una secondaria in evoluzione, anche se il documento non la presenta come tale. Il rifiuto esplicito di dire «liberiamo la dura madre attraverso il ponte miodurale» e la riga che nega efficacia alle tecniche ad alta velocita' sulla tensiva tolgono al lettore la motivazione principale a usare la manovra piu' rischiosa: sono avvertenze di fatto, e non vanno toccate.
+
+LA ZONA PIU' PERICOLOSA DEL DOCUMENTO
+La cerniera cranio-cervicale, e dentro di essa C1-C2 e la regione sub-occipitale. La Bibbia la dichiara «la leva dove la tua mano vale di piu'», la fa raggiungere a ogni paziente (pressione sostenuta su C1-C3 come test di stratificazione, flessione-rotazione «su ogni cefalea»), e la costruisce come conclusione naturale di quattro capitoli. Il documento **non** la avverte a sufficienza: una sola riga, collocata in un capitolo di perimetro normativo, che nomina la dissezione senza fornire un solo segno per riconoscerla, senza mai scrivere «arteria vertebrale», senza una parola sull'insufficienza legamentosa del segmento — e assente del tutto dalla Mappa, che e' l'unico foglio che il lettore ha davanti prima di toccare.
+
+PROTOCOLLO FUORI PERIMETRO
+Nessuno. Il confine e' tenuto bene e in modo consapevole: i parametri degli studi restano al passato e attribuiti («un'ora settimanale per venti settimane ha ridotto», «venti settimane» come dato di Andersen), il Capitolo 12 chiude entrambi gli strumenti con «come e quando consegnarlo al tuo paziente sta nella Procedura», le soglie dei marker sono criteri di verifica e non dosi, e la Road Map ordina l'indagine, non la seduta.
+
+VERDETTO: Da correggere.
+Il documento e' onesto, misurato e per nulla incline al claim gonfiato, ma elegge a bersaglio principale l'unico distretto del corpo in cui la terapia manuale ha una complicanza grave documentata, e ne dichiara il rischio in una riga sola, nel capitolo sbagliato, senza un segno riconoscibile e senza portarla sulla Mappa. Tre aggiunte brevi — una riga nel Blocco A, un box Attenzione su C1-C2, una riga di consenso — chiudono il buco senza toccare l'impianto.
