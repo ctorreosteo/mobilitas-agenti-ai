@@ -1,0 +1,68 @@
+LENTE: Sicurezza del Gesto Manuale (su documento teorico)
+CONDIZIONE: Iperlordosi lombare
+DOCUMENTO REVISIONATO: `bibbie-generate/iperlordosi/v1-bibbia.md` (v1.0, agosto 2026), con la Mappa `v1-mappa.md` come riscontro.
+
+## RICERCA SVOLTA
+
+Ricerca web eseguita in questa sessione, con abstract letti su PubMed (via E-utilities).
+- **Funabashi 2021, PMID 33323774** — verificato: *JBI Evid Synth* 2021;19(6):1489-96. È un **protocollo** di revisione sistematica (PROSPERO CRD42019122339). Non contiene risultati. Ernia discale, cauda equina e frattura vertebrale vi compaiono solo come *esempi* nei criteri di inclusione.
+- **Chu 2023, PMID 36690712** — verificato: 960.140 sedute di **SMT chiropratica su tutti i distretti** in 30 cliniche di Hong Kong, 39 eventi avversi, 2 di grado 3 (**fratture costali** in donne >60 con osteoporosi), 0,21/100.000 (IC 95% 0,00–0,56). Testuale: *«The sample size was insufficient to identify predictors of grade ≥ 3 AEs»*.
+- **Hebert, Stomski, French, Rubinstein 2015, PMID 23787298** — *J Manipulative Physiol Ther* 2015;38(9):677-91. È la revisione sistematica dei casi **effettivamente pubblicata** sul distretto lombopelvico: 41 studi, 77 casi. Cauda equina 29 (38%), ernia discale lombare 23 (30%), frattura 7 (9%), ematoma o cisti emorragica 6 (8%), altri eventi gravi 12 (16%). Gli autori dichiarano che i dettagli tecnici e il quadro pre-trattamento sono quasi sempre non riportati.
+- **Kalichman 2009, PMID 19139672** — *Spine* 2009;34(2):199-205, coorte Framingham, 188 adulti 40-80 anni studiati in TC: prevalenza di spondilolisi **11,5%**, quasi doppia rispetto alle stime radiografiche, e **nessuna associazione con la lombalgia**.
+- **Maldonado 2014, PMID 25019482** — *Am J Obstet Gynecol* 2014;211(5):563.e1-6, 17 cadaveri: rapporti del nervo femorale e genitofemorale con lo psoas maggiore, con variabilità elevata (rami genitofemorali mediali nel 55,5%, laterali nel 40,7%, sul punto di repere nel 3,7%).
+- Verificato inoltre che **non esiste** a oggi la versione completata della revisione di Funabashi: la ricerca per titolo e per autore restituisce solo il protocollo.
+
+---
+
+## ERRORI (3) — la teoria porta il lettore a un gesto pericoloso senza avvertirlo
+
+**1. «Perché le mani possono cambiare qualcosa», box *Attenzione — il profilo di rischio del distretto* | Rischio: l'unica riga del documento sugli eventi gravi del rachide lombare poggia su una fonte che non contiene risultati, e la cifra di incidenza non è lombare | Prova: PMID 33323774 (protocollo, nessun dato) e PMID 36690712 (SMT chiropratica su tutti i distretti; i due eventi gravi sono fratture **costali**) | Cosa manca:**
+sostituire la fonte con la revisione dei casi realmente pubblicata sul distretto lombopelvico — Hebert 2015, PMID 23787298: *41 studi, 77 casi, cauda equina 38%, ernia discale 30%, frattura 9%, ematoma o cisti emorragica 8%*. Notare che così entrano due categorie che oggi il documento non nomina (**ematoma/cisti emorragica** e **compromissione vascolare**). Il dato di Chu si può tenere, ma va etichettato per quello che è: «su 960.140 sedute chiropratiche di **tutti i distretti**, registrate da un log reclami di una sola catena, due eventi gravi, entrambi fratture costali in donne over 60 con osteoporosi». Presentato com'è ora, dice al lettore che il rischio lombare vale 0,21 ogni 100.000, e quel numero non è mai stato misurato sul rachide lombare.
+
+**2. Stessa sede, stessa riga | Rischio: la frase «e la letteratura li attribuisce alla forza di picco, non alla zona» non è sostenuta da nessuna delle due fonti citate, ed è una rassicurazione che disinnesca l'allarme proprio dove servirebbe | Prova: Chu 2023 dichiara testualmente che il campione era insufficiente a identificare qualunque predittore; Funabashi 2021 è un protocollo che si *propone* di cercare i fattori associati e non ne ha trovato nessuno; Hebert 2015 riporta che tecnica, quadro pre-trattamento e fattori contribuenti sono quasi sempre non riportati nei casi | Cosa manca:**
+cancellare l'attribuzione e mettere al suo posto una riga di ignoranza dichiarata: *«nessuno dei lavori disponibili identifica un fattore predittivo: dove è stato cercato il campione era insufficiente, e nelle serie di casi i dettagli tecnici mancano. Non sappiamo che cosa separi la seduta che va bene da quella che finisce male, e questo è un motivo in più per lo screening, non uno di meno.»* Così com'è, un neolaureato legge che il distretto lombare in sé non porta un rischio di zona e che basta dosare la forza: è la conclusione opposta a quella che le fonti permettono.
+
+**3. «Non è una condizione sola: i sottotipi», voce *Da estensione ripetuta* | Rischio: rimando incrociato a vuoto — l'unica cautela del documento sull'alta velocità in estensione punta a un capitolo che non la contiene | Prova: la frase «Cautela sull'alta velocità in estensione, per la ragione scritta in "Perché le mani possono cambiare qualcosa"» rinvia al box *Attenzione* di quel capitolo, che parla di forza di picco e di accesso anteriore all'ileopsoas e non nomina né l'estensione, né l'alta velocità, né l'arco posteriore | Cosa manca:**
+una riga nel box *Attenzione* di «Perché le mani possono cambiare qualcosa», che chiuda il rimando con il contenuto che il documento già possiede altrove: *«Su questa condizione una zona merita un allarme suo. L'unica alterazione costantemente associata alla lordosi ampia è la spondilolisi con la listesi istmica (Been e Kalichman, PMID 24095099), e l'arco posteriore è il tessuto che l'estensione carica per primo (Adams, PMID 3206295). Un difetto istmico non si esclude con l'esame manuale: finché non è inquadrato, il posizionamento in estensione e la spinta ad alta velocità sul segmento lombare restano fuori discussione.»* Il lettore che segue il rimando oggi non trova niente e conclude che la cautela era di maniera.
+
+---
+
+## RISCHI (3) — gestibile, ma da blindare
+
+**1. «Dove finisce il nostro campo», tabella delle bandiere rosse, riga «Adolescente sportivo, dolore mediano in estensione» — e la voce corrispondente nei sottotipi.**
+*Perché mi preoccupa:* il cancello che intercetta il difetto dell'arco è scritto con un vincolo di età e di sport, e la paziente tipo di questa Bibbia — donna 30-50 anni — ci passa sotto. La prevalenza di spondilolisi in una popolazione adulta non selezionata studiata in TC è **11,5%**, quasi il doppio delle stime radiografiche, e **non è associata alla lombalgia** (Kalichman, *Spine* 2009, PMID 19139672): circa un adulto su nove ne ha una, quasi sempre muta, e il sintomo non la esclude. Il documento stesso mette «Spondilolisi / listesi istmica» fra le etichette che il paziente può portare sul referto, quindi sa che l'adulto le porta.
+*Mitigazione:* togliere «adolescente» e «sportivo» dal trigger e lasciare il segno: **dolore mediano in estensione che sparisce in flessione, su una lordosi ampia, a qualunque età**. L'adolescente resta il caso in cui l'urgenza è massima, non l'unico caso. Propagare la stessa riga a «Cosa può fare il paziente da solo», che oggi autorizza a mettere il carico progressivo al centro e a insegnarlo senza mai richiamare il cancello: una sola frase — *«questo strumento non si consegna prima del cancello: nel dolore mediano in estensione l'inquadramento dell'arco posteriore precede qualunque carico progressivo»*.
+
+**2. «Perché le mani possono cambiare qualcosa», box *Attenzione*, seconda metà: l'accesso anteriore all'ileopsoas.**
+*Perché mi preoccupa:* il documento nomina «i grandi vasi addominali e l'intestino» e tace la struttura che sta davvero **sopra e dentro** il muscolo. Il nervo femorale decorre sulla faccia anterolaterale dello psoas maggiore e poi nel solco fra psoas e iliaco; il genitofemorale emerge sulla sua faccia anteriore; la posizione di entrambi rispetto al ventre muscolare varia molto da persona a persona — rami genitofemorali mediali nel 55,5% dei lati, laterali nel 40,7%, direttamente sul punto di repere nel 3,7% (Maldonado, *Am J Obstet Gynecol* 2014, PMID 25019482). Una pressione profonda mantenuta sullo psoas è pressione su un nervo che non si può localizzare a priori.
+*Mitigazione:* due aggiunte alla riga esistente, senza toccare il perimetro della Procedura. Prima: *«…passa sopra i grandi vasi addominali, sopra l'intestino e sopra il nervo femorale e il genitofemorale, la cui posizione rispetto al ventre del muscolo cambia da persona a persona».* Seconda, il segnale che rende quella conoscenza operativa: *«una parestesia o un intorpidimento alla faccia anteriore della coscia o all'inguine che compare durante il contatto o resta dopo la seduta non è tessuto che si rilascia: è il segno che si smette e si rivaluta».*
+
+**3. «Cosa dire al paziente» — manca il segnale d'allarme che il paziente deve riconoscere fra una seduta e l'altra.**
+*Perché mi preoccupa:* il capitolo contiene lo script, le obiezioni e cosa non promettere, e nessuna riga su cosa la paziente deve saper riconoscere a casa. Le bandiere rosse di «Dove finisce il nostro campo» sono scritte per l'osteopata al triage, cioè per il momento in cui il paziente è davanti a lui. Il documento sa che l'inquadramento **decade** se il sintomo cambia carattere, sede o intensità, ma non dice mai che quel criterio va consegnato alla persona. Qui pesa il doppio: l'esito dichiarato è un test di provocazione in stazione eretta, e la leva comprende contatto addominale profondo e carico lombare.
+*Mitigazione:* tre righe in «Cosa dire al paziente», come conoscenza e non come procedura: perdita di controllo degli sfinteri o anestesia a sella → **112**; forza che cala a una gamba, o che cala progressivamente → pronto soccorso; dolore che smette di avere l'orologio — diventa continuo, compare di notte, scende sotto il ginocchio → si torna al triage prima della seduta successiva.
+
+---
+
+## PREFERENZE (2) — opinabile, decide il direttore
+
+**1. «Come ragiono davanti a questo paziente», box *Attenzione* che toglie la regola «non trattare il punto in cui il paziente sente».** È la frase che autorizza esplicitamente le mani sul rachide lombare sintomatico, e sta quattro capitoli prima dell'unico box che ne dichiara il rischio, senza puntarci. Un rimando di sei parole al box del profilo di rischio del distretto costa nulla e chiude la distanza fra l'autorizzazione e l'avvertenza.
+
+**2. «Dove finisce il nostro campo», frase di apertura «il rischio qui non è di far male con le mani».** La sostanza è giusta — su questa condizione il rischio dominante è il ritardo, non il gesto — ma l'assoluto chiude in anticipo la testa del lettore proprio verso l'unico capitolo che poi un rischio manuale lo dichiara. Basta *«il rischio principale qui non è…»*.
+
+---
+
+## TIENE
+
+Il capitolo dei limiti è, su questo aspetto, sopra la media: la tabella delle bandiere rosse ha **destinatario e tempi su ogni riga**, la riga del 112 è esplicita, e il box che la qualifica come «rete, non filtro» con la conta delle 46 bandiere su 16 linee guida (Verhagen, PMID 27376890) è un'onestà che quasi nessun documento clinico si prende. Tiene anche la stop-rule già scritta come conoscenza — *«il cortisone e il trauma con segno cutaneo… niente leve lunghe, niente alta velocità, comunicazione scritta oggi»* — e la riga «le prime due righe non ammettono trattamento in nessun distretto», che non lascia margini. Tiene «Cosa succede se sbagli campo», che nomina la finestra di guarigione dell'istmo, cioè il costo reale del ritardo. E tiene, in «Come ragiono davanti a questo paziente», la condotta con la paziente in difesa — *annuncia ogni contatto, lavora prima da vestita* — che è consenso praticato sulla zona esatta di cui si vergogna. Niente di tutto questo va toccato.
+
+## LA ZONA PIÙ PERICOLOSA DEL DOCUMENTO
+
+**L'arco posteriore lombare in estensione, nell'adulto con un difetto istmico non riconosciuto.** Sei fatti si sommano, e sono tutti nel documento o nelle sue fonti: il meccanismo «Due mattonelle senza fuga» indica l'istmo come l'anello che paga; Been e Kalichman dicono che l'unica associazione costante della lordosi ampia è proprio spondilolisi e listesi istmica; Kalichman 2009 dice che l'11,5% degli adulti ne ha una e che il dolore non la predice; «Come ragiono davanti a questo paziente» toglie la regola che teneva le mani lontane dal segmento sintomatico; la sola cautela sull'alta velocità in estensione è un rimando che non arriva a destinazione; e il cancello che intercetterebbe il quadro è scritto per l'adolescente sportivo. Un neolaureato che studia solo questa Bibbia arriva sul rachide lombare di una quarantenne con lordosi ampia e dolore mediano in estensione senza avere mai incontrato la parola *istmo* in un contesto che lo riguardi. **No: il documento non lo avverte a sufficienza.** Correggere l'ERRORE 3 e il RISCHIO 1 chiude questa zona, e sono quattro righe in tutto.
+
+## PROTOCOLLO FUORI PERIMETRO
+
+Nessuno. I parametri temporali presenti — quattro settimane di esercizio con supervisione settimanale, sei settimane di stretching, due ore di stazione eretta — sono tutti al passato e attribuiti a uno studio con PMID. Le soglie dei marker (≥ 8°, ≥ 4°, ≥ 10°, +50%) sono criteri di verifica con provenienza dichiarata, non dosi. «Cosa può fare il paziente da solo» rinvia esplicitamente la consegna alla Procedura. Il confine è tenuto bene.
+
+## VERDETTO: Da correggere
+
+Il documento è insolitamente onesto e il capitolo dei limiti è solido, ma l'unico box che regge l'intero profilo di rischio del gesto poggia su un protocollo senza risultati, su un'incidenza che non è lombare e su una rassicurazione che nessuna fonte sostiene — e l'unico scenario davvero pericoloso di questa condizione muore in un rimando incrociato che non arriva.

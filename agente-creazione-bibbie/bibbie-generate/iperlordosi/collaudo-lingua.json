@@ -1,0 +1,44 @@
+{
+  "passaggio": "lingua",
+  "esito": "CONSEGNABILE",
+  "statistiche": {
+    "parole_prima": 18843,
+    "parole_dopo": 18876,
+    "delta_pct": 0.2,
+    "identita_pct": 97.2,
+    "per_te_prima": 9,
+    "per_te_dopo": 9,
+    "slot_prima": 15,
+    "slot_dopo": 15,
+    "uscite_prima": 7,
+    "uscite_dopo": 7,
+    "etichette_prima": 0,
+    "etichette_dopo": 0,
+    "pmid_prima": 80,
+    "pmid_dopo": 80
+  },
+  "violazioni": [
+    {
+      "severita": "AVVISO",
+      "codice": "BOX_NON_PREVISTI",
+      "messaggio": "3 tipi di box fuori dai quattro ammessi.",
+      "dettaglio": [
+        "«Sul rachide lombare» (×1)",
+        "«Una zona merita un allarme suo» (×1)",
+        "«Sull'anca anteriore il rischio è di via» (×1)"
+      ]
+    },
+    {
+      "severita": "AVVISO",
+      "codice": "PAROLE_FUORI_RANGE",
+      "messaggio": "Il documento ha 18876 parole (appendici escluse): fuori dal range 8000–13000. Non e' un difetto di conservazione: se il superamento c'era gia' in ingresso, il rilievo appartiene al livello di asciugatura, non a chi ha riscritto.",
+      "dettaglio": []
+    },
+    {
+      "severita": "AVVISO",
+      "codice": "GLOSSARIO_TROPPO_LUNGO",
+      "messaggio": "Il glossario ha 47 termini (max 40): la Bibbia è scritta troppo tecnica.",
+      "dettaglio": []
+    }
+  ]
+}

@@ -1,0 +1,65 @@
+{
+  "passaggio": "chiarezza",
+  "esito": "NON CONSEGNABILE",
+  "statistiche": {
+    "parole_prima": 18643,
+    "parole_dopo": 18843,
+    "delta_pct": 1.1,
+    "identita_pct": 67.7,
+    "per_te_prima": 9,
+    "per_te_dopo": 9,
+    "slot_prima": 15,
+    "slot_dopo": 15,
+    "uscite_prima": 7,
+    "uscite_dopo": 7,
+    "etichette_prima": 0,
+    "etichette_dopo": 0,
+    "pmid_prima": 80,
+    "pmid_dopo": 80
+  },
+  "violazioni": [
+    {
+      "severita": "AVVISO",
+      "codice": "BOX_NON_PREVISTI",
+      "messaggio": "3 tipi di box fuori dai quattro ammessi.",
+      "dettaglio": [
+        "«Sul rachide lombare» (×1)",
+        "«Una zona merita un allarme suo» (×1)",
+        "«Sull'anca anteriore il rischio è di via» (×1)"
+      ]
+    },
+    {
+      "severita": "BLOCCANTE",
+      "codice": "TABELLE_FUORI_SPECIFICA",
+      "messaggio": "12 righe di tabella superano 4 colonne o 8 parole per cella.",
+      "dettaglio": [
+        "3 col / 9 parole: | Arresto duro o doloroso, rotazione interna ridotta, dolore inguinale",
+        "3 col / 9 parole: | Estensione **eccessiva**, tessuti anteriori lunghi | Non è questo me",
+        "4 col / 9 parole: | Morfologico ad alta incidenza | Curva ampia da sempre, indolore | Va",
+        "2 col / 12 parole: | Anca, contenitore lombo-pelvico, torace | Soglia di pressione doloro",
+        "2 col / 13 parole: | Da estensione ripetuta | Comportamento del dolore in una provocazion",
+        "2 col / 11 parole: | Da corsa persa dall'anca | Gradi al Thomas **più** un compito quotid",
+        "3 col / 12 parole: | Gravida con dolore ritmico e ricorrente, perdite, febbre o dolore al",
+        "3 col / 12 parole: | Dolore lombare non meccanico in over 60 con fattori di rischio vasco"
+      ]
+    },
+    {
+      "severita": "AVVISO",
+      "codice": "PAROLE_FUORI_RANGE",
+      "messaggio": "Il documento ha 18843 parole (appendici escluse): fuori dal range 8000–13000. Non e' un difetto di conservazione: se il superamento c'era gia' in ingresso, il rilievo appartiene al livello di asciugatura, non a chi ha riscritto.",
+      "dettaglio": []
+    },
+    {
+      "severita": "AVVISO",
+      "codice": "GLOSSARIO_TROPPO_LUNGO",
+      "messaggio": "Il glossario ha 47 termini (max 40): la Bibbia è scritta troppo tecnica.",
+      "dettaglio": []
+    },
+    {
+      "severita": "BLOCCANTE",
+      "codice": "SCRIPT_TROPPO_LUNGO",
+      "messaggio": "Lo script per il paziente ha 138 parole (max 100).",
+      "dettaglio": []
+    }
+  ]
+}
