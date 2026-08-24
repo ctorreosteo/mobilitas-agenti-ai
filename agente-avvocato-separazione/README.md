@@ -27,10 +27,14 @@ vere. Ogni riferimento si verifica sul web e si registra in `fascicolo/_dati/reg
 come `CONFERMATA` — e la riconosce nella forma in cui gli atti italiani la scrivono davvero,
 *«Cass. civ., sez. I, 12 marzo 2020, n. 9764»*, non solo nella forma comoda.
 
-**2. Nessun fatto senza documento.** Ogni fatto porta la sua etichetta, fuori dalla prosa —
-`PROVATO` · `DOCUMENTABILE` · `ALLEGABILE` · `NON SOSTENIBILE` — e l'ultima **non entra mai in un
-atto**. Un'affermazione falsa costa più di dieci affermazioni mancanti: la controparte la smonta
-e con quella contamina i fatti veri che le stanno accanto.
+**2. Nessun fatto senza documento, e nessun fatto dedotto.** Ogni fatto porta la sua etichetta,
+fuori dalla prosa — `PROVATO` · `DOCUMENTABILE` · `ALLEGABILE` · `NON SOSTENIBILE` — e l'ultima
+**non entra mai in un atto**. Un'affermazione falsa costa più di dieci affermazioni mancanti: la
+controparte la smonta e con quella contamina i fatti veri che le stanno accanto. E ciò che il
+fascicolo non sa non si indovina: `caso.json` nasce pieno di `null`, e un modello che deve scrivere
+un ricorso senza il reddito dell'assistito non si ferma — scrive una cifra verosimile, perché la
+cifra verosimile è ciò che sa produrre. **Un reddito dedotto vale quanto una sentenza inventata**, e
+`verifica_caso.py` impedisce che l'atto parta prima dei fatti.
 
 **3. Il perimetro è tattica, non moralismo.** Otto condotte non si consigliano mai —
 registrazioni e accessi illeciti, trattenimento del minore, sospensione del mantenimento,
@@ -40,20 +44,22 @@ indagato**, e sono anche quelle che funzionano peggio. Un secondo hook le blocca
 nella *forma consiglio* e non nella semplice menzione — perché il briefing deve poter scrivere
 «non sospendere mai il bonifico».
 
-**4. Ciò che nessuno verifica non esiste.** Tre hook e due script fanno rispettare in modo
+**4. Ciò che nessuno verifica non esiste.** Tre hook e tre script fanno rispettare in modo
 meccanico quello che il metodo dichiara. Una regola ripetuta in cinque documenti e verificata da
 nessuno vale finché il modello se la ricorda, cioè finché il contesto non si riempie — che è
 esattamente il momento in cui si scrive l'atto finale. Il terzo hook blocca PAS, `NON SOSTENIBILE`
 e attacchi alla persona dentro un atto; `verifica_atto.py` collauda il piede, le domande in prima
-pagina, le glosse, gli allegati e il contenuto che il rito pretende. `./scripts/test-hooks.py`
-prova tutto su **50 casi, e metà sono falsi positivi da non commettere**: un cancello che blocca
-il lavoro legittimo viene spento, ed è peggio di non averlo.
+pagina, le glosse, gli allegati e il contenuto che il rito pretende; `verifica_caso.py` è l'unico
+che guarda **a monte**, e ferma l'atto prima che sia scritto se i fatti non ci sono o si
+contraddicono. `./scripts/test-hooks.py` prova tutto su **64 casi, e metà sono falsi positivi da
+non commettere**: un cancello che blocca il lavoro legittimo viene spento, ed è peggio di non
+averlo.
 
 ## Struttura
 
 ```
 CLAUDE.md                         la costituzione: caso, regole non negoziabili, metodo
-scripts/test-hooks.py             collauda le protezioni: 50 casi, blocca e passa
+scripts/test-hooks.py             collauda le protezioni: 64 casi, blocca e passa
 
 .claude/
   settings.json                   permessi + i tre hook
@@ -93,6 +99,7 @@ scripts/test-hooks.py             collauda le protezioni: 50 casi, blocca e pass
       │   └─ checklist-qualita.md           cancello: un solo NO = si corregge
       └─ scripts/
           ├─ riferimenti.py                 gli estrattori, condivisi con gli hook
+          ├─ verifica_caso.py               cancello A MONTE: i fatti, prima dell'atto
           ├─ verifica_atto.py               cancello su UNA versione
           └─ verifica_citazioni.py          conservazione fra DUE versioni
 
@@ -226,8 +233,12 @@ scorrevole, ma verificata. In un atto l'accuratezza sta sopra la leggibilità, s
 ## Come si lancia
 
 ```bash
-# collauda le protezioni prima di lavorare: 50 casi, e metà sono falsi positivi
+# collauda le protezioni prima di lavorare: 64 casi, e metà sono falsi positivi
 ./scripts/test-hooks.py
+
+# e il fascicolo, prima di scrivere: i campi vuoti si chiedono, non si deducono
+python3 .claude/skills/difensore-famiglia-strategia/scripts/verifica_caso.py \
+  fascicolo/_dati/caso.json --tipo ricorso
 ```
 
 Poi, in sessione: `/fascicolo` → `/strategia` → `/atto` → `/penale` → `/accordo` → `/udienza`,

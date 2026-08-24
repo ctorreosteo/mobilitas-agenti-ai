@@ -5,7 +5,7 @@ export const meta = {
   phases: [
     { title: 'Scoperta', detail: 'legge il manifesto dei livelli e le skill realmente presenti' },
     { title: 'Ricerca', detail: 'ricercatore-giurisprudenza verifica e registra le fonti che serviranno' },
-    { title: 'Draft', detail: 'skill strategia redige la v1 dell atto' },
+    { title: 'Draft', detail: 'cancello sui fatti, poi la skill strategia redige la v1 dell atto' },
     { title: 'Revisione', detail: 'le dodici lenti di 1o livello, in parallelo' },
     { title: 'Sintesi v2', detail: 'l autore pesa i feedback e riscrive' },
     { title: 'Fonti', detail: '2o livello: prima verifica le citazioni, poi allarga la base' },
@@ -35,6 +35,7 @@ const SCADENZE = DATI + '/scadenze.md'
 const MANIFESTO = DATI + '/livelli.json'
 const SCRIPT = AUTORE + '/scripts/verifica_citazioni.py'
 const SCRIPT_ATTO = AUTORE + '/scripts/verifica_atto.py'
+const SCRIPT_CASO = AUTORE + '/scripts/verifica_caso.py'
 
 const RETRIES = 3
 const MAX_RIPARAZIONI = 2
@@ -174,6 +175,15 @@ const draftPrompt = (slug, tipo) => `Sei IL DIFENSORE. Redigi la v1 dell atto "$
 
 ## Metodo — leggi tutto prima di scrivere una riga
 ${AUTORE}/SKILL.md, e nell ordine i reference: verifica-delle-fonti.md, quadro-normativo.md, rito-e-processo.md, termini-e-adempimenti.md, figlio-infra-triennale.md, affidamento-e-collocamento.md, mantenimento-e-spese.md, casa-familiare.md, convivenza-senza-matrimonio.md, accordo-e-negoziazione.md, penale-della-famiglia.md, prove-e-trappole.md, dopo-la-prima-udienza.md, architettura-atto.md.
+
+## PRIMA DI TUTTO: il cancello sui fatti
+Gli altri cancelli guardano l atto. Questo guarda da dove vengono i fatti, ed e l unico che puo fermarti PRIMA che il danno sia scritto:
+
+python3 ${SCRIPT_CASO} ${CASO} --tipo ${tipo}
+
+Se esce con BLOCCANTI, NON SCRIVERE L ATTO. Restituisci l elenco dei campi vuoti e delle incoerenze, e fermati: i campi si chiedono al cliente e si registrano in ${CASO}, non si riempiono con un valore verosimile. Un reddito plausibile in un ricorso e una busta paga in mano alla controparte, e vale come una sentenza inventata.
+
+Gli AVVISI non ti fermano: leggili, perche sono i rischi che il fascicolo rende gia visibili — a cominciare dall art. 337-sexies c.c. sulla casa.
 
 ## I fatti — non inventarne altri
 - ${CASO} : i fatti del caso. I campi null sono DA COMPILARE: non riempirli, elencali.

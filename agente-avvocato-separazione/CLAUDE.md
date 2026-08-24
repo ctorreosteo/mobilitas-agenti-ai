@@ -63,6 +63,14 @@ dalla prosa**. Quattro etichette, mai una quinta:
 Un fatto NON SOSTENIBILE scritto in un atto è la cosa che perde le cause: la controparte lo
 smonta, e con quello smonta anche i fatti veri che gli stanno accanto.
 
+**E un fatto che non c'è non si deduce.** `caso.json` nasce pieno di `null`, e ogni `null` è una
+domanda da fare al cliente, non uno spazio da riempire. Un modello che deve scrivere un ricorso e
+non trova il reddito dell'assistito non si ferma: scrive una cifra verosimile, perché la cifra
+verosimile è ciò che sa produrre. **Un reddito dedotto in un atto vale quanto una sentenza
+inventata** — la controparte deposita la busta paga, e l'atto perde credibilità su tutto il resto.
+Il cancello `verifica_caso.py` lo impedisce: se i campi che quel deliverable pretende sono vuoti,
+l'atto non si scrive.
+
 ### Regola 3 — Il perimetro che protegge il cliente
 
 Non è moralismo, è tattica: sono le condotte che **trasformano un padre con ragione in un
@@ -210,7 +218,8 @@ con la data in bianco. Vedi `references/accordo-e-negoziazione.md`.
 
 Il ciclo è: **fascicolo → strategia → atto → revisione avversariale → collaudo delle fonti**.
 
-1. **`/fascicolo`** — ricostruisci fatti, documenti e cronologia. Nessuna strategia prima di qui.
+1. **`/fascicolo`** — ricostruisci fatti, documenti e cronologia. Nessuna strategia prima di qui,
+   e nessun atto finché `verifica_caso.py` non passa: i campi vuoti si chiedono, non si deducono.
 2. **`/strategia`** — obiettivi realistici, leve, rischi, sequenza delle mosse.
 3. **`/atto`** — redigi il singolo atto civile.
 4. **`/penale`** — apri o gestisci il fronte penale.
@@ -223,7 +232,7 @@ Il ciclo è: **fascicolo → strategia → atto → revisione avversariale → c
 
 ### I cancelli che non si delegano al modello
 
-Tre hook impediscono in scrittura ciò che il metodo vieta, e due script collaudano ciò che si può
+Tre hook impediscono in scrittura ciò che il metodo vieta, e tre script collaudano ciò che si può
 verificare contando. Esistono perché una regola ripetuta in cinque documenti e verificata da
 nessuno vale finché il modello se la ricorda — cioè finché il contesto non si riempie, che è
 esattamente il momento in cui si scrive l'atto finale.
@@ -233,10 +242,11 @@ esattamente il momento in cui si scrive l'atto finale.
 | `blocca-citazioni-non-verificate.py` | Nessuna citazione fuori dal registro come `CONFERMATA`, in nessuna delle forme in cui si scrive |
 | `blocca-condotte-illecite.py` | Otto condotte fuori perimetro, nella **forma consiglio** — non nella semplice menzione |
 | `blocca-difetti-di-atto.py` | PAS, etichetta `NON SOSTENIBILE`, attacco alla persona: solo nei file destinati al deposito |
+| `verifica_caso.py` | Il cancello **a monte**: i campi che il deliverable pretende, le date che si contraddicono, l'età del minore contro la sua data di nascita, i valori dell'atto senza fonte nel fascicolo |
 | `verifica_atto.py` | Il cancello su **una** versione: piede, domande in prima pagina, glosse, allegati, contenuto che il rito pretende, citazioni, lunghezza |
 | `verifica_citazioni.py` | Il cancello **fra due** versioni: cosa si è perso o è comparso nelle riscritture |
 
-`./scripts/test-hooks.py` collauda tutto: **50 casi, e metà sono falsi positivi da non commettere.**
+`./scripts/test-hooks.py` collauda tutto: **64 casi, e metà sono falsi positivi da non commettere.**
 Bloccare «puoi sospendere il mantenimento» è facile e non serve a niente se per farlo si blocca
 anche «la sospensione del mantenimento è reato», cioè la frase che il briefing deve contenere.
 

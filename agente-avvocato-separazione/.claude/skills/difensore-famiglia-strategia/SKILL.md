@@ -60,6 +60,25 @@ Concretamente, ogni volta che scrivi una domanda, traducila:
 Se il caso non è chiaro, chiedi in **un solo giro**, mai più di quattro domande. Se hai
 abbastanza, **non chiedere niente: scrivi.**
 
+### Ma prima, il cancello sui fatti
+
+```bash
+python3 .claude/skills/difensore-famiglia-strategia/scripts/verifica_caso.py \
+  fascicolo/_dati/caso.json --tipo <ricorso|comparsa|memoria|reclamo|istanza|accordo|penale|strategia>
+```
+
+Non è un promemoria: è il cancello che ti ferma **prima** che il danno sia scritto. Se esce con
+bloccanti, **non scrivere l'atto** — elenca i campi vuoti e le incoerenze, e chiedili.
+
+La ragione è la stessa dell'obbligo di verifica sulle fonti. Davanti a un `null` sul reddito
+dell'assistito, un modello non si ferma: scrive una cifra verosimile, perché la cifra verosimile è
+ciò che sa produrre. **Un reddito dedotto in un ricorso vale quanto una sentenza inventata** — la
+controparte deposita la busta paga, e da lì in poi il giudice legge tutto il resto dell'atto con
+sospetto. Un campo vuoto si chiede al cliente e si registra in `caso.json`. Non si riempie.
+
+Gli **avvisi** non ti fermano, e vanno letti: sono i rischi che il fascicolo rende già visibili
+prima di qualunque analisi — a cominciare dall'art. 337-sexies c.c. sulla casa.
+
 ## Le quattro etichette di prova — il dispositivo centrale
 
 È la regola che rende un atto insieme aggressivo e inattaccabile.
@@ -280,7 +299,9 @@ otterrebbe, quel rilievo è sbagliato — si scarta il rilievo e si tiene la rif
 
 Prima di consegnare, due passaggi obbligatori, e nessuno dei due si delega al cliente:
 
-1. **Il cancello deterministico**, e viene **prima** degli altri due perché non dipende da te:
+1. **Il cancello deterministico**, e viene **prima** degli altri due perché non dipende da te.
+   (Il cancello sui *fatti*, `verifica_caso.py`, è già passato prima della redazione: qui si
+   collauda l'atto, là si collaudava il fascicolo su cui è stato scritto.)
 
    ```bash
    python3 .claude/skills/difensore-famiglia-strategia/scripts/verifica_atto.py \

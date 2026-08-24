@@ -19,7 +19,11 @@ E se l'udienza va male: **`/reclamo`**, entro **dieci giorni perentori** dalla p
 ## Controlli obbligatori prima di consegnare
 
 ```bash
-# le protezioni funzionano? 50 casi, metà falsi positivi da non commettere
+# i fatti reggono? Va per primo: è l'unico cancello a monte dell'atto
+python3 .claude/skills/difensore-famiglia-strategia/scripts/verifica_caso.py \
+  fascicolo/_dati/caso.json --tipo ricorso --atto <v7>
+
+# le protezioni funzionano? 64 casi, metà falsi positivi da non commettere
 ./scripts/test-hooks.py
 
 # l'atto finale, da solo: piede, domande, glosse, allegati, adempimenti, citazioni

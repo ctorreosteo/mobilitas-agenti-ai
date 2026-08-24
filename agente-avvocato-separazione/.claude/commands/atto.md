@@ -17,9 +17,20 @@ Redigi l'atto indicato in `$ARGUMENTS` e portalo fino al collaudo.
 2. **Ricerca delle fonti.** Lancia `ricercatore-giurisprudenza` per ciò che serve alle domande e
    non è ancora nel registro. Priorità assoluta all'orientamento sull'età e i pernottamenti.
 
-3. **Redazione v1.** Con `redattore-atti`, o direttamente seguendo `architettura-atto.md`.
+3. **Il cancello sui fatti** — prima di scrivere una riga:
 
-4. **Primo livello** — lancia **in parallelo, nello stesso messaggio**, le dodici lenti:
+   ```bash
+   python3 .claude/skills/difensore-famiglia-strategia/scripts/verifica_caso.py \
+     fascicolo/_dati/caso.json --tipo <tipo>
+   ```
+
+   Se esce con bloccanti, **fermati e chiedi**: i campi vuoti si domandano al cliente e si
+   registrano in `caso.json`, non si riempiono con un valore verosimile. Un reddito dedotto in un
+   ricorso si smonta con una busta paga, e porta con sé la credibilità di tutto l'atto.
+
+4. **Redazione v1.** Con `redattore-atti`, o direttamente seguendo `architettura-atto.md`.
+
+5. **Primo livello** — lancia **in parallelo, nello stesso messaggio**, le dodici lenti:
    `avversario`, `giudice`, `pubblico-ministero`, `curatore-minore`, `ctu`, `penalista`,
    `patrimoniale`, `prove`, `decadenze`, `negoziatore`, `cliente`, `deontologia`.
    → sintesi **v2**.
@@ -28,18 +39,18 @@ Redigi l'atto indicato in `$ARGUMENTS` e portalo fino al collaudo.
    preferenze — una domanda riservata invece che formulata è sempre un ERRORE — e `negoziatore`
    non chiede mai di indebolire una domanda, chiede di renderla accettabile a parità di sostanza.
 
-5. **Secondo livello** — `fonti` **poi** `cassazione`. L'ordine conta: si ripulisce prima di
+6. **Secondo livello** — `fonti` **poi** `cassazione`. L'ordine conta: si ripulisce prima di
    ampliare. → **v3**.
 
-6. **Terzo livello** — `coerenza`. → **v4**.
+7. **Terzo livello** — `coerenza`. → **v4**.
 
-7. **Quarto livello** — `editor`. → **v5**.
+8. **Quarto livello** — `editor`. → **v5**.
 
-8. **Quinto livello** — `chiarezza` riscrive. → **v6**.
+9. **Quinto livello** — `chiarezza` riscrive. → **v6**.
 
-9. **Sesto livello** — `italiano-giuridico`. → **v7**.
+10. **Sesto livello** — `italiano-giuridico`. → **v7**.
 
-10. **Collaudo** — `collaudo`, con due script e tre esecuzioni.
+11. **Collaudo** — `collaudo`, con due script e tre esecuzioni.
 
 **La conservazione lungo la catena**, due volte, una per passaggio — misurate in blocco le due
 riscritture si compensano, e la perdita non si vede:

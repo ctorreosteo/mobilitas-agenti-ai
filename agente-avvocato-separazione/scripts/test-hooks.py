@@ -221,6 +221,8 @@ CASI = [
 
 VERIFICA_ATTO = (RADICE / '.claude' / 'skills' / 'difensore-famiglia-strategia'
                  / 'scripts' / 'verifica_atto.py')
+VERIFICA_CASO = (RADICE / '.claude' / 'skills' / 'difensore-famiglia-strategia'
+                 / 'scripts' / 'verifica_caso.py')
 REGISTRO = RADICE / 'fascicolo' / '_dati' / 'registro-fonti.md'
 
 ATTO_PULITO = """# RICORSO ex art. 473-bis.12 c.p.c.
@@ -306,6 +308,133 @@ CASI_ATTO = [
 ]
 
 
+# =============================================================================
+# Il cancello sui FATTI, prima che diventino un atto
+# =============================================================================
+# Stesso criterio degli altri: un fascicolo completo deve passare, uno bucato o
+# incoerente deve fermare il lavoro, e si dichiara QUALE difetto ci si aspetta.
+# I casi che passano contano quanto quelli che bloccano: un cancello che ferma
+# un fascicolo in ordine viene spento il primo giorno.
+
+CASO_PIENO = {
+    "assistito": {"nome": "A", "residenza": "Milano",
+                  "reddito_annuo_lordo": 32000, "fonte_reddito": "CUD 2025"},
+    "controparte": {"nome": "B", "residenza": "Milano", "reddito_annuo_lordo": None,
+                    "capacita_reddituale_potenziale": "diplomata, 34 anni"},
+    "minore": {"nome": "C", "data_nascita": "2025-08-10", "eta_mesi_attuale": 12,
+               "residenza_anagrafica": "Milano"},
+    "relazione": {"inizio_convivenza": "2022-01-01", "data_nascita_figlio": "2025-08-10",
+                  "data_cessazione_convivenza": "2025-12-10",
+                  "mesi_di_convivenza_dopo_il_parto": 4},
+    "casa": {"titolo": "proprieta", "intestazione": "assistito",
+             "e_stata_casa_familiare": False, "chi_la_occupa_oggi": "madre",
+             "rata_mensile": 650},
+    "situazione_attuale": {"tribunale": "Trib. Milano", "rg": "1234/2026",
+                           "fase": "prima udienza", "modalita_versamento": "bonifico con causale",
+                           "mantenimento_versato_oggi": 400,
+                           "frequentazione_attuale": "due pomeriggi a settimana, senza pernotto"},
+    "fronte_penale": {"denunce_ricevute": [], "denunce_sporte": []},
+    "obiettivi_del_cliente": {"dichiarati": "affido", "realistici": "progressione",
+                              "irrinunciabili": "pernottamenti entro 18 mesi"},
+}
+
+OGGI = '2026-08-24'
+
+
+def muta(**sezioni):
+    """CASO_PIENO con alcune sezioni sovrascritte campo per campo."""
+    d = json.loads(json.dumps(CASO_PIENO))
+    for sezione, campi in sezioni.items():
+        d.setdefault(sezione, {}).update(campi)
+    return d
+
+
+# (descrizione, caso, tipo, atto o None, codice atteso o None se deve passare)
+CASI_CASO = [
+    ('fascicolo completo: nessun bloccante', CASO_PIENO, 'ricorso', None, None),
+
+    ('FALSO POSITIVO: la madre non ha reddito, ma ha capacita reddituale',
+     muta(controparte={'reddito_annuo_lordo': None,
+                       'capacita_reddituale_potenziale': 'diplomata, 34 anni'}),
+     'accordo', None, None),
+
+    ('reddito dell assistito non compilato',
+     muta(assistito={'reddito_annuo_lordo': None}), 'ricorso', None, 'CAMPO_MANCANTE'),
+
+    ('segnaposto travestito da valore compilato',
+     muta(assistito={'nome': 'DA COMPILARE'}), 'ricorso', None, 'CAMPO_MANCANTE'),
+
+    ('eta del minore non aggiornata rispetto alla data di nascita',
+     muta(minore={'eta_mesi_attuale': 4}), 'ricorso', None, 'ETA_NON_AGGIORNATA'),
+
+    ('due date di nascita diverse per lo stesso bambino',
+     muta(relazione={'data_nascita_figlio': '2025-09-10'}),
+     'ricorso', None, 'DATE_DISCORDANTI'),
+
+    ('la convivenza cessa prima che il figlio nasca',
+     muta(relazione={'data_cessazione_convivenza': '2025-01-10'}),
+     'ricorso', None, 'CRONOLOGIA_IMPOSSIBILE'),
+
+    ('i mesi dopo il parto non tornano con le date',
+     muta(relazione={'mesi_di_convivenza_dopo_il_parto': 18}),
+     'ricorso', None, 'MESI_DOPO_IL_PARTO_INCOERENTI'),
+
+    ('mantenimento versato in contanti',
+     muta(situazione_attuale={'modalita_versamento': 'in contanti brevi manu'}),
+     'ricorso', None, 'MANTENIMENTO_IN_CONTANTI'),
+
+    ('denuncia senza autorita e senza stato del procedimento',
+     muta(fronte_penale={'denunce_ricevute': [{'data': '2026-01-05', 'reato': '572 c.p.'}]}),
+     'penale', None, 'VOCE_PENALE_INCOMPLETA'),
+
+    ('difesa penale senza alcun procedimento da difendere',
+     CASO_PIENO, 'penale', None, 'NESSUN_PROCEDIMENTO_PENALE'),
+
+    ('memoria senza numero di ruolo',
+     muta(situazione_attuale={'rg': None}), 'memoria', None, 'CAMPO_MANCANTE'),
+
+    ('atto gia scritto su un fascicolo vuoto: i valori non hanno fonte',
+     {'assistito': {}, 'minore': {}, 'relazione': {}, 'casa': {},
+      'controparte': {}, 'situazione_attuale': {}, 'obiettivi_del_cliente': {}},
+     'ricorso',
+     "Il ricorrente percepisce € 32.000,00 annui. In data 10/12/2025 e' cessata la convivenza.",
+     'ATTO_SCRITTO_SU_FASCICOLO_INCOMPLETO'),
+
+    ('FALSO POSITIVO: stesso atto, ma il fascicolo e completo',
+     CASO_PIENO, 'ricorso',
+     "Il ricorrente percepisce € 32.000,00 annui. In data 10/12/2025 e' cessata la convivenza.",
+     None),
+]
+
+
+def collauda_caso():
+    print(f"\n--- verifica_caso.py (cancello sui fatti, prima dell atto) ---")
+    falliti = []
+    with tempfile.TemporaryDirectory() as d:
+        for desc, caso, tipo, atto, atteso in CASI_CASO:
+            fc = Path(d) / 'caso.json'
+            fc.write_text(json.dumps(caso), encoding='utf-8')
+            cmd = [sys.executable, str(VERIFICA_CASO), str(fc), '--tipo', tipo, '--oggi', OGGI]
+            if atto is not None:
+                fa = Path(d) / 'atto.md'
+                fa.write_text(atto, encoding='utf-8')
+                cmd += ['--atto', str(fa)]
+            p = subprocess.run(cmd, capture_output=True, text=True, timeout=30)
+            out = p.stdout
+            if atteso is None:
+                ok = p.returncode == 0
+                dett = 'nessun bloccante' if ok else f"ha bloccato: {out.strip().splitlines()[-1][:70]}"
+            else:
+                ok = p.returncode == 1 and f'[{atteso}]' in out
+                dett = atteso if ok else f"atteso {atteso}, non trovato"
+            if not ok:
+                falliti.append((desc, dett))
+            print(f"  [{'ok  ' if ok else 'FALLITO'}] {desc}")
+            if not ok:
+                print(f"           {dett}")
+    return falliti
+
+
 def collauda_atto():
     print(f"\n--- verifica_atto.py (cancello su una versione sola) ---")
     falliti = []
@@ -367,8 +496,9 @@ def main():
         if not ok:
             print(f"           atteso {atteso}, ottenuto {reale}")
     falliti_atto = collauda_atto()
-    totale = len(CASI) + len(CASI_ATTO)
-    guasti = len(falliti) + len(falliti_atto)
+    falliti_caso = collauda_caso()
+    totale = len(CASI) + len(CASI_ATTO) + len(CASI_CASO)
+    guasti = len(falliti) + len(falliti_atto) + len(falliti_caso)
 
     print()
     if guasti:
@@ -377,6 +507,8 @@ def main():
             print(f"  - {d}  ({h}: atteso {a}, ottenuto {r})")
         for d, dett in falliti_atto:
             print(f"  - {d}  (verifica_atto.py: {dett})")
+        for d, dett in falliti_caso:
+            print(f"  - {d}  (verifica_caso.py: {dett})")
         return 1
     print(f"Tutti i {totale} casi superati: le protezioni bloccano cio' che deve essere "
           f"bloccato e NON bloccano il lavoro legittimo.")
