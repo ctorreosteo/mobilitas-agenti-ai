@@ -3,7 +3,7 @@
 **Condizione:** protrazione delle spalle (spalle arrotolate in avanti, torace chiuso)
 **Ancora fisiologica:** Paula M. Ludewig, University of Minnesota — cinematica scapolare e dolore di spalla
 **Ancora clinica:** Jeremy Lewis, Regno Unito — postura e spalla, con i suoi limiti dichiarati
-**Versione:** v6 (chiarezza, dopo il 5º livello — riscrittura) · **Data:** 22 agosto 2026 · **Autore:** Direttore Osteopatico Mobilitas
+**Versione:** v7 (revisione di lingua, 6º livello) · **Data:** 24 agosto 2026 · **Autore:** Direttore Osteopatico Mobilitas
 
 ---
 
@@ -29,7 +29,7 @@
 **Le tre cose da ricordare, più una**
 
 - La prosa afferma, l'etichetta qualifica. Se un'affermazione non ha etichetta, è un errore del documento.
-- Su questa condizione il verbo giusto quasi sempre non è "correggere": è "restituire escursione".
+- Su questa condizione quasi sempre il verbo giusto non è "correggere": è "restituire escursione".
 - Le soglie dei marker di questa Bibbia sono convenzioni dichiarate, non numeri presi dalla letteratura. Trovi scritto ogni volta da dove vengono.
 - **Perché ci sei tu.** Lo spazio dentro la spalla cambia di 1,2 millimetri fra assetto normale ed eretto, e solo a braccio sollevato (Kalra, 2010, PMID 20710092). Questo ti autorizza a spiegare il tuo lavoro come recupero di movimento, che è la grandezza che si sposta davvero. Non ti autorizza a spiegarlo come "faccio spazio nella spalla".
 
@@ -47,9 +47,9 @@ Buon nutrimento!
 
 Due frasi meritano attenzione clinica. *"Quella posizione per il mio corpo è la più comoda"* è una descrizione esatta, non una scusa. *"Mi vedo mio padre addosso"* porta con sé una domanda: è già scritto? La risposta cambia il modo in cui il paziente lavorerà con te.
 
-**Cosa ha già fatto.** Il percorso è lungo e ha una sua logica. Conviene riconoscerla invece di smontarla. Ha allenato petto e spalle "per aprirsi", e ha ottenuto il risultato opposto. Ha portato un correttore posturale per due settimane. Ha fatto stretching sullo stipite della porta, con un'apertura che durava ore. Poi massaggi fra le scapole, una sedia nuova, pilates e ginnastica posturale con benefici veri. Quando la spalla ha iniziato a fare male sono arrivati gli antinfiammatori. Se c'è dolore di spalla, spesso ha in mano un'ecografia o una risonanza: quegli esami guardano tendini e borsa, cioè l'articolazione, e non la posizione in cui la fanno lavorare.
+**Cosa ha già fatto.** Il percorso è lungo e ha una sua logica. Conviene riconoscerla invece di smontarla. Ha allenato petto e spalle "per aprirsi", e ha ottenuto il risultato opposto. Ha portato un correttore posturale per due settimane. Ha fatto stretching sullo stipite della porta, con un'apertura che durava ore. Poi massaggi fra le scapole, una sedia nuova, pilates e ginnastica posturale con benefici veri. Quando la spalla ha iniziato a fare male sono arrivati gli antinfiammatori. Se c'è dolore di spalla, spesso ha in mano un'ecografia o una risonanza: quegli esami guardano tendini e borsa, cioè l'articolazione, e non la posizione in cui quell'articolazione lavora.
 
-**Cosa nessuno ha guardato.** Il torace. Non la spalla, non la scapola, non il muscolo che brucia: la gabbia sotto di loro, e quanto si apre davvero. È il pezzo che manca in tutti i tentativi che ha fatto, ed è quello su cui hai qualcosa da misurare prima e dopo.
+**Cosa nessuno ha guardato.** Il torace. Non la spalla, non la scapola, non il muscolo che brucia: la gabbia sotto di loro, e quanto si apre davvero. È il pezzo che manca in tutti i tentativi che ha fatto, ed è quello su cui hai qualcosa da misurare prima e dopo. È come asciugare il pavimento ogni sera senza cercare da dove entra l'acqua.
 
 **Le tre domande che ti farà.** *"Faccio già palestra, non basta?"* ha risposta in «Cosa può fare il paziente da solo». *"Ormai sono fatto così?"* in «Che cos'è davvero». *"Quando smetto torna tutto come prima?"* in «Cosa dice la scienza». L'ultima non ti piacerà del tutto.
 
@@ -68,7 +68,7 @@ Due frasi meritano attenzione clinica. *"Quella posizione per il mio corpo è la
 
 > **In una riga:** la protrazione delle spalle non è una malattia e non è una diagnosi: è una misura di posizione, molto frequente, che spiega bene la limitazione del movimento e molto male il dolore.
 
-**Definizione.** Si chiama protrazione la posizione in cui l'acromion si trova più avanti rispetto alla linea del tronco. La scapola è ruotata verso l'interno e inclinata in avanti sulla gabbia. Si misura, non si diagnostica. Le misure sono tre: distanza acromion-parete in piedi, distanza acromion-lettino da supino, lunghezza del piccolo pettorale rapportata all'altezza (Carvalho, 2019, PMID 31000344).
+**Definizione.** Si chiama protrazione la posizione in cui l'acromion si trova più avanti rispetto alla linea del tronco. La scapola è ruotata verso l'interno e inclinata in avanti sulla gabbia. Si misura, non si diagnostica: è come l'altezza, la prendi con il metro e non è una malattia. Le misure sono tre: distanza acromion-parete in piedi, distanza acromion-lettino da supino, lunghezza del piccolo pettorale rapportata all'altezza (Carvalho, 2019, PMID 31000344).
 
 **Quanto è diffusa.** Fra i lavoratori d'ufficio con dolore al collo e alla scapola è praticamente universale. Su 99 impiegati sintomatici tutti avevano le spalle arrotondate, e in tutti il piccolo pettorale era corto (Vongsirinavarat, *Int J Occup Saf Ergon* 2023, PMID 34927576).
 **Per te:** un segno presente nel cento per cento dei sintomatici non seleziona nessuno. Trovare le spalle avanti dice che hai trovato una caratteristica della popolazione che ti viene in studio, non la causa del dolore. Il criterio con cui decidi di trattare sta in «Come ragiono davanti a questo paziente».
@@ -117,7 +117,7 @@ Questi sei sono diagnosi da escludere. I sei pattern di «Non è una condizione 
 
 ## Capitolo 3 — Le strutture in gioco
 
-> **In una riga:** la scapola non ha un cardine con il tronco e gli appoggia sopra; il cingolo un cardine ce l'ha, ed è uno solo — e ogni struttura di questo capitolo serve a spiegare cosa succede quando l'appoggio cambia forma.
+> **In una riga:** la scapola non ha un cardine con il tronco e ci appoggia sopra; il cingolo un cardine ce l'ha, ed è uno solo — e ogni struttura di questo capitolo serve a spiegare cosa succede quando l'appoggio cambia forma.
 
 **La gabbia toracica.** È la superficie su cui la scapola scorre. Non c'è un cardine: la scapola galleggia su una pista curva fatta di coste e muscoli. Se la pista si arrotonda, la scapola scivola in avanti e in dentro senza che nessun muscolo lo decida. **Perché conta qui:** è l'unica struttura del capitolo che sposta le spalle cambiando forma, senza contrarre niente.
 
@@ -125,7 +125,7 @@ Questi sei sono diagnosi da escludere. I sei pattern di «Non è una condizione 
 
 **La clavicola e l'articolazione sterno-clavicolare.** È l'unico contatto osseo fra arto superiore e scheletro assiale: tutto il resto del cingolo appoggia. **Perché conta qui:** mentre il braccio sale la clavicola ruota all'indietro, ed è il movimento più grande in gradi di tutta l'elevazione. Sono 31 gradi alla sterno-clavicolare contro 19 di inclinazione scapolare, misurati con sensori fissati su perni ossei (Ludewig, *J Bone Joint Surg Am* 2009, PMID 19181982; **DIMOSTRATO** *(studi sull'uomo, solidi)* — misura sperimentale diretta nell'uomo). Un cingolo che non retrae lì non torna indietro, qualunque cosa tu faccia al dorso. Ed è l'unico punto della regione dove senti un movimento articolare vero.
 
-**Il piccolo pettorale.** Nasce da terza, quarta e quinta costa e si inserisce sul processo coracoideo. È l'unico muscolo che tira la scapola in avanti e in basso attaccandosi direttamente all'osso. **Perché conta qui:** è la struttura più citata di questa condizione, e quella su cui le prove sono più contraddittorie. Accanto a lui, **gran pettorale e gran dorsale** ruotano l'omero verso l'interno: sono i muscoli che il paziente ha allenato di più, e il segno dei dorsi delle mani in avanti viene da lì. Fra il piccolo pettorale e la parete corre poi il fascio vascolo-nervoso: lo spazio subcoracoideo è uno dei tre siti di compressione del plesso brachiale (Connolly, 2021, PMID 33220766). Una parestesia che compare mentre lavori lì è un segnale di uscire dalla zona, non di rilascio.
+**Il piccolo pettorale.** Nasce da terza, quarta e quinta costa e si inserisce sul processo coracoideo. È l'unico muscolo che tira la scapola in avanti e in basso attaccandosi direttamente all'osso. **Perché conta qui:** è la struttura più citata di questa condizione, e quella su cui le prove sono più contraddittorie. Accanto a lui, **gran pettorale e gran dorsale** ruotano l'omero verso l'interno: sono i muscoli che il paziente ha allenato di più, e il segno dei dorsi delle mani in avanti viene da lì. Fra il piccolo pettorale e la parete corre poi il fascio vascolo-nervoso: lo spazio subcoracoideo è uno dei tre siti di compressione del plesso brachiale (Connolly, 2021, PMID 33220766). Una parestesia che compare mentre lavori lì è il segnale per uscire dalla zona, non un segno di rilascio.
 
 **Il dentato anteriore.** Avvolge la gabbia dal davanti e si attacca al bordo mediale della scapola. La tiene aderente alle coste e l'accompagna in rotazione verso l'alto. **Perché conta qui:** quando smette di lavorare la scapola si stacca. È il muscolo del segno "ad ali" nella maggior parte dei casi non neurologici.
 
@@ -150,7 +150,7 @@ Questi sei sono diagnosi da escludere. I sei pattern di «Non è una condizione 
 
 La sequenza, in cinque passaggi.
 
-1. **Il torace si estende e si apre.** La colonna alta esce dalla flessione e le coste ruotano verso l'alto. Non è un movimento grande e non si vede: è il presupposto degli altri quattro.
+1. **Il torace si estende e si apre.** La colonna alta esce dalla flessione e le coste ruotano verso l'alto. Non è un movimento grande e non si vede: è il presupposto degli altri quattro. Come il forno acceso prima di infornare: non si vede nel piatto, e senza non viene niente.
 2. **La scapola ruota verso l'alto.** La cavità glenoidea si orienta in alto e in fuori. Senza, l'omero finirebbe la corsa a metà.
 3. **La scapola si inclina all'indietro e la clavicola ruota indietro con lei.** Il bordo superiore della scapola va indietro: è il movimento che allontana l'acromion dalla testa dell'omero mentre il braccio sale, ed è il passaggio che si perde per primo nelle spalle protratte. Il pezzo più grande, in gradi, è però clavicolare: 31 alla sterno-clavicolare contro 19 di inclinazione scapolare (Ludewig, 2009, PMID 19181982).
 4. **Il dentato anteriore tiene la scapola sulla gabbia** e accompagna la rotazione; il trapezio inferiore la stabilizza in basso.
@@ -158,7 +158,7 @@ La sequenza, in cinque passaggi.
 
 Quanto pesa il primo passaggio si vede quando lo togli.
 
-Passando da una seduta eretta a una seduta accasciata, l'abduzione attiva del braccio si riduce in media di 23,6 gradi. La forza in abduzione a novanta gradi scende del 16,2%. Trentaquattro adulti sani, misurati con un digitalizzatore tridimensionale nella stessa seduta (Kebaetse, *Arch Phys Med Rehabil* 1999, PMID 10453773).
+Fra una seduta eretta e una seduta accasciata l'abduzione attiva del braccio si riduce in media di 23,6 gradi. La forza in abduzione a novanta gradi scende del 16,2%. Trentaquattro adulti sani, misurati con un digitalizzatore tridimensionale nella stessa seduta (Kebaetse, *Arch Phys Med Rehabil* 1999, PMID 10453773).
 **Per te:** ventitré gradi non sono una sfumatura. Sono la differenza fra un braccio che arriva alla mensola e uno che ci arriva strisciando. E sono ottenuti cambiando solo l'assetto del torace, senza toccare la spalla. È la ragione fisiologica per cui su questa condizione il primo bersaglio non è il cingolo.
 (Kebaetse, 1999 — PMID 10453773)
 
@@ -203,9 +203,9 @@ L'ordine pesa il legame fra meccanismo e condizione, non l'etichetta più alta c
 
 > **Quanto è solido:** l'etichetta si spezza.
 > **PROBABILE** *(razionale forte, prove parziali)* che la cinematica scapolare sia alterata in chi ha dolore di spalla. Su 52 operai edili, chi aveva sintomi mostrava meno rotazione verso l'alto, più inclinazione in avanti e meno attività del dentato rispetto a colleghi con la stessa esposizione (Ludewig e Cook, *Phys Ther* 2000, PMID 10696154).
-> **IPOTESI** *(meccanismo coerente, prove contrarie)* che il piccolo pettorale corto sia la causa di quella cinematica. Dividendo per lunghezza del muscolo si trovano differenze di inclinazione (Borstad e Ludewig, 2005, PMID 15901124). Ma lo studio che l'ha cercato direttamente non trova differenze né di allungamento né di movimento scapolo-toracico (Ebaugh, 2018, PMID 29914856 — Cerchio 1).
+> **IPOTESI** *(meccanismo coerente, prove contrarie)* che il piccolo pettorale corto sia la causa di quella cinematica. Quando si divide per lunghezza del muscolo, si trovano differenze di inclinazione (Borstad e Ludewig, 2005, PMID 15901124). Ma lo studio che l'ha cercato direttamente non trova differenze né di allungamento né di movimento scapolo-toracico (Ebaugh, 2018, PMID 29914856 — Cerchio 1).
 
-Un terzo numero ridimensiona la parte meccanica di questo meccanismo. Passando da assetto normale ad eretto, lo spazio fra acromion e testa dell'omero aumenta di **1,2 millimetri**, e solo a braccio sollevato (Kalra, *JOSPT* 2010, PMID 20710092). Non è quello il motivo per cui il paziente sta meglio quando gli apri il torace: quello che si sposta davvero è la traiettoria, e si misura in gradi.
+Un terzo numero ridimensiona la parte meccanica di questo meccanismo. Fra assetto normale ed eretto lo spazio fra acromion e testa dell'omero aumenta di **1,2 millimetri**, e solo a braccio sollevato (Kalra, *JOSPT* 2010, PMID 20710092). Non è quello il motivo per cui il paziente sta meglio quando gli apri il torace: quello che si sposta davvero è la traiettoria, e si misura in gradi.
 
 **Come si vede addosso al paziente.** Fastidio nei gesti sopra la testa, non a riposo. Scapola che si stacca nella discesa del braccio. Trapezio superiore che si accende presto. Miglioramento immediato se gli guidi la scapola con una mano mentre alza il braccio.
 
@@ -247,7 +247,7 @@ Un terzo numero ridimensiona la parte meccanica di questo meccanismo. Passando d
 
 È il meccanismo che spiega perché tutti i tentativi del paziente sono durati trenta secondi.
 
-1. In posizione chiusa il costo muscolare è più basso. Passando da seduta eretta ad accasciata, l'attività dell'erettore spinale toracico basso **scende** di circa il 3% della contrazione massima (Nairn, *Man Ther* 2013, PMID 23632369).
+1. In posizione chiusa il costo muscolare è più basso. Fra seduta eretta e seduta accasciata l'attività dell'erettore spinale toracico basso **scende** di circa il 3% della contrazione massima (Nairn, *Man Ther* 2013, PMID 23632369).
 2. Il sistema adotta l'assetto che costa meno, e il riferimento propriocettivo si ricalibra su quello. Quella posizione diventa quella che il paziente **sente** dritta.
 3. L'autocorrezione è un comando volontario, e ha bisogno di attenzione continua. L'attenzione va altrove appena il paziente lavora.
 4. La posizione torna, e il paziente conclude di essere fatto così.
@@ -290,9 +290,9 @@ Due dei cinque meccanismi non definiscono un pattern proprio: il respiro e la po
 
 **Il contenitore rigido.** L'adulto sedentario, spesso senza dolore, che viene per come si vede. Il torace non si estende, le coste alte non si muovono, le spalle stanno avanti perché non hanno alternativa. Il segno che lo separa dalla curva fissa si prende in dieci secondi: **muovi passivamente il torace e guarda le spalle** — qui si spostano. È il pattern in cui il tuo ruolo è più chiaro. Ed è quello in cui il paziente ha meno pazienza, perché non ha un dolore che lo motivi.
 
-**Il cingolo squilibrato.** Arriva perché la spalla fa male nei gesti sopra la testa. Il torace può essere ragionevole; quello che non funziona è come la scapola accompagna il braccio. Qui la leva con le prove migliori non è la tua mano da sola: è l'esercizio scapolare, che riduce il dolore **senza** cambiare la posizione della spalla, come sviluppa «Cosa dice la scienza».
+**Il cingolo squilibrato.** Arriva perché la spalla fa male nei gesti sopra la testa. Il torace può essere ragionevole; quello che non funziona è come la scapola accompagna il braccio. Qui la leva con le prove migliori non è la tua mano da sola: è l'esercizio scapolare, che riduce il dolore **senza** cambiare la posizione della spalla, come spiega «Cosa dice la scienza».
 
-**L'interscapolare da attivazione.** Bruciore fra le scapole come sintomo principale, meglio nelle vacanze lunghe e non con una notte di riposo, torace che si apre meglio di quanto ci si aspetterebbe. Il driver non è la struttura: è il livello a cui il sistema sta acceso. **Non è un capolinea, ed è il paziente su cui hai più da fare, non meno.** Il bersaglio è lo stato di attivazione, e le leve che lo modulano sono lavoro manuale a tutti gli effetti, mirato altrove. Le trovi in «Perché le mani possono cambiare qualcosa» con l'etichetta reale che portano lì, e in «Cosa può fare il paziente da solo», dove su questo meccanismo la prova più diretta non è manuale.
+**L'interscapolare da attivazione.** Bruciore fra le scapole come sintomo principale, meglio nelle vacanze lunghe e non con una notte di riposo, torace che si apre meglio di quanto ci si aspetterebbe. Quello che comanda non è la struttura: è il livello a cui il sistema sta acceso. **Non è un capolinea, ed è il paziente su cui hai più da fare, non meno.** Il bersaglio è lo stato di attivazione, e le leve che lo modulano sono lavoro manuale a tutti gli effetti, mirato altrove. Le trovi in «Perché le mani possono cambiare qualcosa» con l'etichetta reale che portano lì, e in «Cosa può fare il paziente da solo», dove su questo meccanismo la prova più diretta non è manuale.
 
 **La chiave che lo definisce non è «brucia il pomeriggio»: è il tipo di dolore.** Le famiglie sono tre. Il **nocicettivo** è proporzionato a un tessuto irritato e si riproduce con un gesto. Il **neuropatico** viene da un nervo leso o compresso, ha un territorio e spesso un deficit. Il **nociplastico** è sproporzionato al reperto, diffuso oltre il territorio di una struttura, e non risponde al carico locale. Questo pattern è la forma nociplastica. E nel dolore di spalla i segni di sensibilizzazione centrale riguardano un **sottogruppo**, non tutti (Sanchis, *Semin Arthritis Rheum* 2015, PMID 25523242). Ne discendono due condotte: **non progredire il carico locale**, e **leggere la verifica in settimane**.
 
@@ -311,7 +311,7 @@ Due dei cinque meccanismi non definiscono un pattern proprio: il respiro e la po
 **Le tre cose da ricordare, più una**
 
 - Il pattern si decide su cosa **cambia** quando lo tocchi, non su come appare la fotografia.
-- Il paziente il cui driver è l'attivazione è il paziente in cui hai più da fare, non meno.
+- Il paziente in cui comanda l'attivazione è il paziente in cui hai più da fare, non meno.
 - Dolore forte e improvviso seguito da debolezza: non è un pattern, è un cancello.
 - **Perché ci sei tu.** Sul pattern con la curva fissa da vertebre cedute, la curva non si rialza, e non esiste leva manuale che lo faccia. Questo ti autorizza a riconoscerlo, a dirlo prima di iniziare e a segnalarlo al medico. Non ti autorizza a trattarlo come gli altri quattro e a misurare il risultato sulla forma della schiena.
 
@@ -339,9 +339,9 @@ Due dei cinque meccanismi non definiscono un pattern proprio: il respiro e la po
 
 **I segnali che pesa in questo paziente.** Respiro apicale con spalle che salgono, addome fermo, torace che non si allarga sotto le tue mani nell'inspirazione.
 
-> **Attenzione.** Restrizione di scope, dichiarata: qui si usa la sola meccanica ventilatoria. La metà circolatoria — ritorno venoso, drenaggio, gradienti pressori — non viene invocata, perché nessuno ha misurato quelle grandezze prima e dopo un trattamento del cingolo o del dorso. Il modello resta uno dei cinque; è il perimetro a essere ristretto.
+> **Attenzione.** Restrizione di perimetro, dichiarata: qui si usa la sola meccanica ventilatoria. La metà circolatoria — ritorno venoso, drenaggio, gradienti pressori — non viene invocata, perché nessuno ha misurato quelle grandezze prima e dopo un trattamento del cingolo o del dorso. Il modello resta uno dei cinque; è il perimetro a essere ristretto.
 
-E c'è una parte che la restrizione non deve portarsi via. Il respiro lento, sotto i dieci atti al minuto, aumenta variabilità cardiaca e aritmia sinusale respiratoria (Zaccaro, 2018, PMID 30245619). È la via che collega questo modello al paziente il cui driver è l'attivazione, ed è agganciata alla quinta leva. Regola del ponte: quella misura alza l'etichetta del **meccanismo**, non della leva, perché è ottenuta su volontari sani.
+E c'è una parte che la restrizione non deve portarsi via. Il respiro lento, sotto i dieci atti al minuto, aumenta variabilità cardiaca e aritmia sinusale respiratoria (Zaccaro, 2018, PMID 30245619). È la via che collega questo modello al paziente in cui comanda l'attivazione, ed è agganciata alla quinta leva. Regola del ponte: quella misura alza l'etichetta del **meccanismo**, non della leva, perché è ottenuta su volontari sani.
 
 > **Quanto è solido:** **DIMOSTRATO** *(studi sull'uomo, solidi)* che l'assetto seduto cambia capacità vitale e flussi (Lin, 2006, PMID 16571389 — misura sperimentale diretta nell'uomo). **IPOTESI** *(meccanismo coerente, nessuno studio)* che un lavoro manuale su coste e diaframma modifichi quelle misure in questi pazienti.
 
@@ -363,17 +363,17 @@ E c'è una parte che la restrizione non deve portarsi via. Il respiro lento, sot
 
 **Quali meccanismi governa.** Del quinto, la **componente di credenza e di aderenza**: quella per cui l'autocorrezione non regge e il programma si interrompe.
 
-**I segnali che pesa in questo paziente.** Il motivo dichiarato è estetico, ha già comprato oggetti, ha in casa un genitore con la stessa figura. E la frase *"ormai sono fatto così"*, che è una previsione e non una descrizione.
+**I segnali che pesa in questo paziente.** Il motivo dichiarato è estetico. Ha già comprato oggetti, e ha in casa un genitore con la stessa figura. E la frase *"ormai sono fatto così"*, che è una previsione e non una descrizione.
 
 > **Quanto è solido:** **PROBABILE** *(razionale forte, prove parziali)*. Su 1.030 pazienti con dolore di spalla in riabilitazione, **aspettativa di guarigione** e **autoefficacia sul dolore** predicevano l'esito a sei settimane e sei mesi; i reperti d'esame legati a una diagnosi strutturale no (Chester, *Br J Sports Med* 2018, PMID 27445360). Il secondo risultato vale doppio: dà a questo modello una fonte propria, e ripete dall'esterno la tesi portante del documento.
 
 ### Metabolico-energetico
 
-**Cosa governa qui.** Niente in proprio, su questa condizione. Sposta la prognosi, non il meccanismo.
+**Cosa governa qui.** Niente in proprio, su questa condizione. Sposta la prognosi, non il meccanismo: è il traffico sulla strada che hai scelto, non cambia il percorso, cambia quando arrivi.
 
 **Quali meccanismi governa.** Nessuno. Entra come domanda — quanto di questo caso sta fuori dalle mie mani? — e non come bersaglio.
 
-**I segnali che pesa in questo paziente.** Più di sette ore al giorno seduto e meno di 150 minuti alla settimana di attività: è la combinazione in cui la mobilità del torace è misurata più bassa (Heneghan, 2018, PMID 29730619). E l'allenamento sbilanciato sulla catena anteriore, che il paziente porta come merito. **Lo scope non cambia:** nessuna di queste leve si lavora con le mani. Si valutano, si nominano, e dove serve si rinvia. Una però è stata randomizzata, e non sul sintomo ma sull'**esposizione**: il tempo seduto è modificabile, e di quanto lo trovi in «Cosa può fare il paziente da solo» (Shrestha, 2018, PMID 30556590).
+**I segnali che pesa in questo paziente.** Più di sette ore al giorno seduto e meno di 150 minuti alla settimana di attività: è la combinazione in cui la mobilità del torace è misurata più bassa (Heneghan, 2018, PMID 29730619). E l'allenamento sbilanciato sulla catena anteriore, che il paziente porta come merito. **Il perimetro non cambia:** su nessuna di queste leve si lavora con le mani. Si valutano, si nominano, e dove serve si rinvia. Una però è stata randomizzata, e non sul sintomo ma sull'**esposizione**: il tempo seduto è modificabile, e di quanto lo trovi in «Cosa può fare il paziente da solo» (Shrestha, 2018, PMID 30556590).
 
 > **Quanto è solido:** **IPOTESI** *(meccanismo coerente, nessuno studio)* che questo modello sposti il sintomo o l'assetto. La relazione fra sedentarietà e mobilità dorsale è misurata ma trasversale, e nessuna leva di questo modello è mai stata randomizzata **su questo esito**. **PROBABILE** *(razionale forte, prove parziali)* sul solo meccanismo dell'esposizione (Shrestha, 2018, PMID 30556590). Attenzione a non prendere in prestito la prova sbagliata: la revisione che non trova prevenzione (Hoe, 2018, PMID 30350850) ha randomizzato **ergonomia**, e smentisce quel modello, non questo.
 
@@ -404,11 +404,11 @@ Qui l'indirizzo è preciso. Il bruciore fra le scapole è **dove il compenso ha 
 
 **Paziente B — il sommerso è il cingolo.** Trentotto anni, palestra con molto lavoro di spinta, dolore nei gesti sopra la testa. Il torace si estende ragionevolmente; quello che non funziona è come la scapola accompagna il braccio, che si stacca in discesa. **Cosa fai:** lavori sul cingolo e verifichi sul contenitore, con la rotazione del torace. E la leva che decide è l'esercizio, non il lettino: il paziente deve saperlo.
 
-**Paziente C — il sommerso è il livello di attivazione.** Cinquant'anni, bruciore fra le scapole da due anni, peggiorato dopo un cambio di ruolo. Il torace si apre meglio di quanto la fotografia lasci pensare, il tessuto si contrae appena appoggi le mani, sta meglio in vacanza e non nei fine settimana. **Cosa fai:** è il paziente in cui hai più da fare, non meno. Il bersaglio è lo stato di attivazione, e le leve che lo modulano sono lavoro manuale — contatto ampio e lento, appoggio lungo, respiro guidato — con l'etichetta che portano in «Perché le mani possono cambiare qualcosa», che è IPOTESI e non di più. In parallelo lavori sul contenitore, che ti dà un numero subito. Ma il numero che verifica **lui** è la soglia di pressione dolorosa su un sito lontano dalla scena: è l'unico che risponda alla domanda giusta — si è mosso lo stato, o solo il punto?
+**Paziente C — il sommerso è il livello di attivazione.** Cinquant'anni, bruciore fra le scapole da due anni, peggiorato dopo un cambio di ruolo. Il torace si apre meglio di quanto la fotografia lasci pensare, il tessuto si contrae appena appoggi le mani, e lui sta meglio in vacanza e non nei fine settimana. **Cosa fai:** è il paziente in cui hai più da fare, non meno. Il bersaglio è lo stato di attivazione, e le leve che lo modulano sono lavoro manuale — contatto ampio e lento, appoggio lungo, respiro guidato — con l'etichetta che portano in «Perché le mani possono cambiare qualcosa», che è IPOTESI e non di più. In parallelo lavori sul contenitore, che ti dà un numero subito. Ma il numero che verifica **lui** è la soglia di pressione dolorosa su un sito lontano dalla scena: è l'unico che risponda alla domanda giusta — si è mosso lo stato, o solo il punto?
 
 ### Perché si indaga da monte
 
-**«A monte» non è una coordinata anatomica.** È ciò che, se non si muove, rende inutile il lavoro su quello che dipende da lui. Qui il contenitore sta a monte del cingolo, perché la scapola appoggia sul torace e non il contrario.
+**«A monte» non è una coordinata anatomica.** È ciò che, se non si muove, rende inutile il lavoro su quello che dipende da lui. È la firma che manca in fondo alla pratica: tutto il resto è pronto, e non si muove. Qui il contenitore sta a monte del cingolo, perché la scapola appoggia sul torace e non il contrario.
 
 **La gerarchia ordina l'indagine, non la forza delle leve.** L'intervento con le prove migliori — l'esercizio scapolare — agisce sul cingolo, che sta a valle. E lo stato di attivazione, che nel metodo sta all'apice, qui si interroga per terzo: è l'unico dei tre piani che non ti dà un numero nella stessa seduta. **Se il tessuto rimbalza a ogni correzione, la terza domanda diventa la prima.**
 
@@ -433,7 +433,7 @@ Come si prende ciascuna misura, e le alternative per chi non tollera quelle posi
 
 **Fuori dalla tabella, di proposito:** la distanza acromion-lettino. È riproducibile fra operatori (Carvalho, 2019, PMID 31000344) e utile in cartella per fotografare il punto di partenza. Ma è una misura di **posizione**, e la posizione è la grandezza che gli interventi migliori non spostano nemmeno quando il paziente migliora (Saito, 2018, PMID 29351510). In tabella restano solo misure di **escursione** e di **comparsa del sintomo**. Nel paziente con curva fissa, poi, misura la sua cifosi e non la posizione del cingolo.
 
-**Il quarto marker** si prende su due siti: il punto interscapolare più sensibile e uno lontano dalla scena. Nel quadro nociplastico anche il lontano parte abbassato. Se la leva sta lavorando è **quello lontano** che risale: se sale solo il locale hai un effetto locale, non uno stato che si è mosso.
+**Il quarto marker** si prende su due siti: il punto interscapolare più sensibile e uno lontano dalla scena. Nel quadro nociplastico anche il lontano parte abbassato. Se la leva sta agendo è **quello lontano** che risale: se sale solo il locale hai un effetto locale, non uno stato che si è mosso.
 
 > **Attenzione — è l'eccezione alla regola della regione non trattata.** La soglia a distanza è proprio ciò che la manipolazione sposta a distanza: la manipolazione spinale alza la soglia di pressione dolorosa, e l'effetto è significativo **ai siti remoti** rispetto al punto stimolato (Coronado, 2012, PMID 22296867 — Cerchio 2). *Misurato su popolazioni miste con dolore muscoloscheletrico e su volontari, con manipolazione spinale, non su persone con le spalle protratte.* Se in quella seduta hai manipolato il dorso, **il marker è confuso**: può essersi mosso per la manipolazione e non perché lo stato è sceso. Il verdetto si legge sulla seduta in cui non hai manipolato, o a quattro-sei settimane.
 
@@ -468,7 +468,7 @@ Le bandiere rosse stanno fuori: sono il cancello che precede questa lista. Qui c
 
 - Scegli il marker della prova **prima** di trattare, e prendilo sulla regione che non tratterai.
 - Le soglie di questa Bibbia sono convenzioni dichiarate. Dirlo al paziente non le indebolisce: le rende usabili.
-- Il paziente il cui driver è l'attivazione si verifica in settimane, non a fine seduta. Cambia l'orologio, non la direzione.
+- Il paziente in cui comanda l'attivazione si verifica in settimane, non a fine seduta. Cambia l'orologio, non la direzione.
 - **Perché ci sei tu.** Tre delle quattro misure di questa condizione non hanno un cambiamento minimo rilevabile pubblicato, e la quarta ce l'ha (Walton, 2011, PMID 21885906). Questo ti autorizza a dichiarare le tue soglie e a usarle in modo coerente su ogni paziente. Non ti autorizza a presentarle come dati di letteratura, né a scriverle in una relazione senza la riga che dice da dove vengono.
 ---
 
@@ -512,7 +512,7 @@ Cinque righe meritano una spiegazione.
 
 **Dolore forte improvviso, poi debolezza.** È la sequenza dell'amiotrofia nevralgica, e nella maggior parte dei casi il recupero non è completo (Gstoettner, 2020, PMID 32487526). La scapola che si stacca sembra quella della protrazione. La differenza è che qui il dolore violento è venuto prima e la debolezza dopo.
 
-**La pupilla piccola e la palpebra calante.** È la sindrome di Horner, e la riga si spezza perché le due letture hanno tempi diversi. **Recente**, con dolore a collo o testa, è una dissecazione della carotide interna finché non è escluso: un rischio di ictus che si misura in ore, e il ritardo ne compromette l'esito (Flaherty e Flynn, 2011, PMID 18790590). **Di vecchia data** e senza dolore acuto, resta la lettura polmonare: valutazione dell'apice, dove può stare un tumore di Pancoast (Brindisino, 2022, PMID 32459135; Shanmugathas, 2019, PMID 30683661).
+**La pupilla piccola e la palpebra calante.** È la sindrome di Horner, e la riga si spezza perché le due letture hanno tempi diversi. **Recente**, con dolore a collo o testa, è una dissecazione della carotide interna finché non è esclusa: un rischio di ictus che si misura in ore, e il ritardo ne compromette l'esito (Flaherty e Flynn, 2011, PMID 18790590). **Di vecchia data** e senza dolore acuto, resta la lettura polmonare: valutazione dell'apice, dove può stare un tumore di Pancoast (Brindisino, 2022, PMID 32459135; Shanmugathas, 2019, PMID 30683661).
 
 **Le altre.** Un deficit **obiettivo o persistente** di forza o sensibilità alla mano richiede l'inquadramento della radicolopatia cervicale (Childress, 2016, PMID 27175952). Va distinto da una **parestesia posizionale senza deficit**: formicolio notturno alle ultime dita, o col braccio sopra la testa, che cambia se cambi la posizione del cingolo. Quello è il quadro compressivo del secondo meccanismo, esce GIALLO, con il canale medico attivato in parallelo. La domanda da scrivere in cartella è una: c'è un deficit che puoi obiettivare, o solo un sintomo che si muove con la posizione? Nel dubbio vale il ROSSO. La spalla calda e gonfia con febbre è un'artrite settica finché non è dimostrato il contrario (Wu, 2024, PMID 39061278). E il cingolo dolente su due lati sopra i cinquant'anni è la polimialgia reumatica di «Che cos'è davvero».
 
@@ -591,7 +591,7 @@ Questo cerchio è **l'unica sede della descrizione piena** degli studi trasversa
 - **Specifico contro generale.** Sei studi randomizzati, 231 partecipanti: **prove insufficienti** per affermare o escludere una differenza fra esercizio mirato alla cinematica ed esercizio generico (Shire, 2017, PMID 28416022). *Misurato sul dolore subacromiale, non sull'assetto — e assenza di prove non è prova di assenza, nemmeno qui.*
 - **Attività muscolare e dolore.** Su 93 lavoratrici del terziario l'attività del trapezio durante il lavoro era bassa e uguale fra chi aveva dolore e chi no; nel tempo libero scendeva solo in chi non aveva dolore (Holte e Westgaard, 2002, PMID 12071492). Il substrato plausibile è il reclutamento continuo delle unità motorie a bassa soglia (Zennaro, 2003, PMID 12586517). *Misurato su lavoratrici del terziario, non su pazienti con protrazione.*
 - **Tocco e attivazione.** Nella revisione più ampia — venti studi randomizzati — la conduttanza cutanea dopo trattamento manuale risulta più alta, al limite della significatività (g = 0,67, IC 0,00–1,34; Gordon, 2025, PMID 39920074). Quanti studi entrino in quella stima l'abstract non lo dice, e finché non è letto nel testo pieno il numero non si scrive. Sul collo contro placebo la direzione è la stessa (Sterling, 2001, PMID 11414776). È un indice **fasico**, e accompagna l'ipoalgesia invece di escluderla (Vicenzino, 1998, PMID 9777544). Nello stesso lavoro gli interventi osteopatici riducono la depressione, g = −0,47 (IC −0,86/−0,09), con effetto maggiore in chi ha dolore, g = −0,61 (IC −1,06/−0,17), contro nessun trattamento o finto trattamento; gli autori dichiarano intervalli di previsione ampi ed eterogeneità moderata. *Sullo stato tonico non dice niente, e il braccio positivo misura la depressione, non l'attivazione, subito dopo l'intervento.*
-- **Terapia manuale e soglia del dolore.** Su venti studi entrati in revisione, la manipolazione spinale alza la soglia di pressione dolorosa, e l'effetto è significativo **ai siti remoti** rispetto al punto stimolato: il che sostiene una via centrale (Coronado, 2012, PMID 22296867). *Misurato su popolazioni miste con dolore muscoloscheletrico e su volontari, con manipolazione spinale, non su persone con le spalle protratte.* Il rovescio sta nel confronto contro finto trattamento. Su quattro studi randomizzati, **una seduta singola** di terapia manuale toracica non è risultata superiore a una seduta singola di placebo, misurata subito dopo (dolore presente SMD −0,02, IC −0,35/0,32; dolore in movimento SMD −0,12, IC −0,45/0,21), con **qualità delle prove da molto bassa a bassa** (Bizzarri, 2018, PMID 29055216). *Misurato su pazienti con disfunzione di spalla e su una singola seduta, non su persone selezionate per la posizione della spalla né su un ciclo.*
+- **Terapia manuale e soglia del dolore.** Su venti studi entrati in revisione, la manipolazione spinale alza la soglia di pressione dolorosa, e l'effetto è significativo **ai siti remoti** rispetto al punto stimolato, e un effetto a distanza sostiene una via centrale (Coronado, 2012, PMID 22296867). *Misurato su popolazioni miste con dolore muscoloscheletrico e su volontari, con manipolazione spinale, non su persone con le spalle protratte.* Il rovescio sta nel confronto contro finto trattamento. Su quattro studi randomizzati, **una seduta singola** di terapia manuale toracica non è risultata superiore a una seduta singola di placebo, misurata subito dopo (dolore presente SMD −0,02, IC −0,35/0,32; dolore in movimento SMD −0,12, IC −0,45/0,21), con **qualità delle prove da molto bassa a bassa** (Bizzarri, 2018, PMID 29055216). *Misurato su pazienti con disfunzione di spalla e su una singola seduta, non su persone selezionate per la posizione della spalla né su un ciclo.*
 - **Affidabilità dell'algometria.** Errore standard e cambiamento minimo rilevabile della soglia di pressione dolorosa sono stati calcolati sull'angolo del trapezio superiore e sul ventre del tibiale anteriore. Il campione: 60 volontari sani e 40 persone con dolore cervicale acuto, con valutatori inesperti addestrati. Affidabilità intra-operatore 0,94-0,97, inter-operatore 0,79-0,90, test-retest 0,76-0,79 (Walton, *JOSPT* 2011, PMID 21885906). *Misurato su persone con dolore cervicale acuto e su volontari sani, non su questi pazienti: l'affidabilità si trasferisce perché lo strumento e i siti sono gli stessi, i valori assoluti no.* Il numero puntuale del cambiamento minimo rilevabile non compare nell'abstract e va letto nel testo pieno prima di scriverlo.
 - **Contesto e aspettativa.** Su otto studi randomizzati che confrontano esercizio e placebo, la quota di miglioramento attribuibile agli **effetti contestuali** è 0,60 sul dolore e 0,69 sulla disabilità, con certezza **bassa** (de Roode, 2024, PMID 39443961). *Misurato sulla lombalgia, non sulla spalla né sulla protrazione: dice che una quota grande dell'effetto viaggia con il contesto, non quanto grande sia qui.*
 - **Tempo seduto.** Le scrivanie regolabili in altezza riducono il tempo seduto al lavoro di circa cento minuti al giorno a breve termine, e di 57 a tre-dodici mesi. **Pause brevi di uno-due minuti ogni mezz'ora** lo riducono di quaranta minuti al giorno rispetto a due pause lunghe, su **un solo studio**. Informazione e counselling da soli non cambiano niente a breve termine. Trentaquattro studi, 3.397 partecipanti, **prove di bassa qualità** (Shrestha, *Cochrane* 2018, PMID 30556590). *Misura il tempo seduto, non il sintomo e non la posizione della spalla.*
@@ -661,7 +661,7 @@ Il cerchio 1 è povero in un punto preciso: **nessuno ha misurato cosa succede a
 
 **In quanto tempo si vedrebbe:** dentro la seduta, sui gradi di comparsa. Con un limite: in Lewis 2005 lo spostamento è ottenuto **con il nastro addosso**, cioè con un vincolo presente durante la misura, e quanto duri dopo un gesto manuale non è stabilito. Cambia cosa dici sulla durata, non sull'effetto.
 
-**Sul terzo meccanismo — il muscolo che non torna a zero.** Agisce sul tessuto interscapolare, con contatto ampio e appoggio lungo. Effetto atteso: sollievo di ore, che rende possibile il lavoro e non lo sostituisce. Il contatto è ampio anche per una ragione meccanica: su una parete costale **distribuisce il carico invece di concentrarlo**. È il motivo per cui la richiesta più frequente di questa condizione — *"mi prema lì con il gomito"* — si accoglie nell'intenzione e non nella forma.
+**Sul terzo meccanismo — il muscolo che non torna a zero.** Agisce sul tessuto interscapolare, con contatto ampio e appoggio lungo. Effetto atteso: sollievo di ore, che rende possibile il lavoro e non lo sostituisce. È un anticipo, non il saldo. Il contatto è ampio anche per una ragione meccanica: su una parete costale **distribuisce il carico invece di concentrarlo**. È il motivo per cui la richiesta più frequente di questa condizione — *"mi prema lì con il gomito"* — si accoglie nell'intenzione e non nella forma.
 > **Quanto è solido:** **IPOTESI** *(meccanismo coerente, nessuno studio)*. Nessuno ha misurato l'attività del trapezio nel tempo libero prima e dopo un ciclo di trattamento manuale.
 
 **In quanto tempo si vedrebbe:** ore, e va detto prima e non dopo. Quella latenza è la firma di un effetto analgesico, non di un cambiamento di tessuto. Qui la leva migliore non è la tua mano: è il rinforzo mirato di «Cosa può fare il paziente da solo».
@@ -702,7 +702,7 @@ Il come si fa sta nella Procedura di protrazione: due pagine, tecniche, dosi e p
 
 **Su quale meccanismo agisce.** Su quattro dei cinque: il secondo, il terzo — dove ha la prova più diretta di tutto il capitolo — il quarto, e la componente di credenza e aderenza del quinto. Sul primo agisce solo se il contenitore è già disponibile.
 
-**E su cosa agisce davvero.** Non su lunghezza e forza. A otto settimane quello che si misura cambiare è **neurale**: l'attività di trapezio superiore e dentato si riorganizza (Yaghoubitajani, 2022) e la propriocezione migliora (Depreli, 2024, PMID 38533585). Il substrato è apprendimento motorio. Tenersi indietro è un comando volontario e dura trenta secondi; l'esercizio ripetuto cambia il riferimento e tiene.
+**E su cosa agisce davvero.** Non su lunghezza e forza. A otto settimane quello che si vede cambiare è **neurale**: l'attività di trapezio superiore e dentato si riorganizza (Yaghoubitajani, 2022) e la propriocezione migliora (Depreli, 2024, PMID 38533585). Il substrato è apprendimento motorio. Tenersi indietro è un comando volontario e dura trenta secondi; l'esercizio ripetuto cambia il riferimento e tiene. È la differenza fra cercare i tasti e scrivere senza guardare.
 
 **Cosa hanno misurato gli studi.** Nelle persone con spalle arrotondate, testa avanti e curva dorsale aumentata, gli esercizi terapeutici hanno migliorato tutti e tre gli angoli misurati: ventidue studi in una revisione sistematica con meta-analisi (Sepehri, *BMC Musculoskelet Disord* 2024, PMID 38302926).
 **Per te:** è l'unico punto della Bibbia in cui la misura che il paziente ti chiede di cambiare — come si vede — è quella che si è mossa negli studi. Quello che sposta la fotografia è il suo lavoro; il tuo rende disponibile il movimento in cui lo fa.
@@ -716,7 +716,7 @@ In uno studio randomizzato su impiegati con dolore di collo e spalla, otto setti
 > **Quanto è solido:** **PROBABILE** *(razionale forte, prove parziali)* su angoli e pressioni; **IPOTESI** *(meccanismo coerente, prove contrarie)* sul dolore. Mai più in alto: il salto da anziani con broncopneumopatia a impiegati con protrazione è grande.
 
 **Il rinforzo mirato, sul terzo meccanismo.** Quarantadue lavoratrici con mialgia del trapezio, dieci settimane, randomizzate a rinforzo specifico, a fitness generale in bicicletta o a niente: il dolore è sceso del 42-49% **solo** nel rinforzo specifico (Andersen, *J Appl Physiol* 2008, PMID 18948442).
-**Per te:** è «l'attività non scende quando la giornata finisce», misurato e mosso. Il fitness generale non si è mosso: «faccia più movimento» non sostituisce il rinforzo mirato. **PROBABILE** *(razionale forte, prove parziali)*, per il salto di popolazione.
+**Per te:** è «l'attività non scende quando la giornata finisce», misurato e mosso. Con il fitness generale il dolore non si è mosso: «faccia più movimento» non sostituisce il rinforzo mirato. **PROBABILE** *(razionale forte, prove parziali)*, per il salto di popolazione.
 (Andersen, 2008 — PMID 18948442)
 
 > **Quanto è solido:** l'etichetta si spezza, perché i pezzi non hanno la stessa forza.
@@ -793,7 +793,7 @@ Due frasi sono fuori perimetro. La prima è *"il suo dolore alla spalla viene da
 
 > **In una riga:** hai un'ipotesi meccanica forte sul movimento, prove contrarie sulla posizione come causa del dolore, e un modo per non sbagliarti che si chiama misurare prima.
 
-Arriva una persona che si vede chiusa e ha già provato tutto quello che agisce sopra le spalle. Sotto c'è un torace arrotondato. Su quella pista la scapola scivola avanti senza che nessun muscolo lo decida: è il meccanismo con le prove più forti di questa Bibbia, e vale ventitré gradi di braccio. Quello che comanda cambia da paziente a paziente. Lo decidi indagando da monte e verificando su una misura che non hai toccato. Le tue leve sono tre: torace e coste, traiettoria della scapola, stato con cui il paziente sta sul lettino. Il tuo campo finisce dove l'anamnesi racconta un dolore violento seguito da debolezza, o un braccio che dopo uno strappo non tiene più.
+Arriva una persona che si vede chiusa e ha già provato tutto quello che agisce sopra le spalle. Sotto c'è un torace arrotondato. Su quella pista la scapola scivola avanti senza che nessun muscolo lo decida: è il meccanismo con le prove più forti di questa Bibbia, e vale ventitré gradi di braccio. Quello che comanda cambia da paziente a paziente. Lo decidi se indaghi da monte e verifichi su una misura che non hai toccato. Le tue leve sono tre: torace e coste, traiettoria della scapola, stato con cui il paziente sta sul lettino. Il tuo campo finisce dove l'anamnesi racconta un dolore violento seguito da debolezza, o un braccio che dopo uno strappo non tiene più.
 
 **Quando sei autonomo.** Quando separi contenitore rigido, curva fissa e cingolo ipotonico senza esitare. Quando riconosci il paziente su cui puoi poco, e glielo dici prima di iniziare. Quando sai dire a un medico cosa possiamo affermare e cosa no. Non conta quante volte hai letto: conta quali casi sai sciogliere.
 
@@ -914,7 +914,7 @@ Arriva una persona che si vede chiusa e ha già provato tutto quello che agisce 
 
 **Reclutamento continuo (ipotesi Cinderella)** — Le unità motorie a bassa soglia sono reclutate per prime e lasciate accese per ultime: in un lavoro leggero e lungo non si spengono mai, e si sensibilizzano.
 
-**Regola del ponte** — La regola che governa l'uso della letteratura trasversale: un'evidenza ottenuta su un'altra popolazione o con un altro intervento alza l'etichetta del **meccanismo**, mai quella della **leva** su questa condizione.
+**Regola del ponte** — La regola che governa l'uso della letteratura trasversale: una prova ottenuta su un'altra popolazione o con un altro intervento alza l'etichetta del **meccanismo**, mai quella della **leva** su questa condizione.
 
 **Regressione alla media** — Una misura presa quando il paziente sta peggio tende a migliorare da sola alla ripetizione.
 
