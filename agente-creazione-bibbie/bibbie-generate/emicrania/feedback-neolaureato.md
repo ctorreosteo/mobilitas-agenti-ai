@@ -2,7 +2,7 @@
 
 LENTE: Osteopata Neolaureato (comprensibilità)
 CONDIZIONE: Emicrania
-DOCUMENTO REVISIONATO: `/Users/carlitos/mobilitas-agenti-ai/agente-creazione-teoria/bibbie-generate/emicrania/v1-bibbia.md` (v1.0, agosto 2026). La Mappa `v1-mappa.md` è stata letta solo come termine di paragone.
+DOCUMENTO REVISIONATO: `/Users/carlitos/mobilitas-agenti-ai/agente-creazione-bibbie/bibbie-generate/emicrania/v1-bibbia.md` (v1.0, agosto 2026). La Mappa `v1-mappa.md` è stata letta solo come termine di paragone.
 
 ## PROVA DI LETTURA
 

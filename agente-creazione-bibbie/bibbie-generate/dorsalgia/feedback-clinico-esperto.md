@@ -1,6 +1,6 @@
 # Feedback — Revisore Clinico Esperto (primo livello)
 
-**Documento revisionato:** `/Users/carlitos/mobilitas-agenti-ai/agente-creazione-teoria/bibbie-generate/dorsalgia/v1-bibbia.md` (v1.0, agosto 2026), con la Mappa `v1-mappa.md` come termine di riscontro.
+**Documento revisionato:** `/Users/carlitos/mobilitas-agenti-ai/agente-creazione-bibbie/bibbie-generate/dorsalgia/v1-bibbia.md` (v1.0, agosto 2026), con la Mappa `v1-mappa.md` come termine di riscontro.
 
 **Ricerca:** fatta in questa sessione. Ogni PMID che propongo è stato letto nell'abstract via PubMed: 9252002 (Fukui 1996), 15996607 (Slipman 2005), 30078490 (McMahon 2018), 27475532 (Barrett 2016), 2402682 (Dwyer 1990).
 

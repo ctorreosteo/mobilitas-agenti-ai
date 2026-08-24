@@ -1,6 +1,6 @@
 # Feedback — Revisore Clinico Esperto (PRIMO livello)
 
-**Documento revisionato:** `/Users/carlitos/mobilitas-agenti-ai/agente-creazione-teoria/bibbie-generate/artrosi/v1-bibbia.md` (v1.0, agosto 2026), con la Mappa `v1-mappa.md` come riscontro.
+**Documento revisionato:** `/Users/carlitos/mobilitas-agenti-ai/agente-creazione-bibbie/bibbie-generate/artrosi/v1-bibbia.md` (v1.0, agosto 2026), con la Mappa `v1-mappa.md` come riscontro.
 
 **LENTE:** Clinico Esperto (sostanza clinica reale)
 **CONDIZIONE:** Artrosi

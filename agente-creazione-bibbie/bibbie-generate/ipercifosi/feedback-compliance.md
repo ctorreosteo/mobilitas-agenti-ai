@@ -1,6 +1,6 @@
 # Feedback — Lente Compliance e Responsabilità Professionale
 
-**Documento revisionato:** `/Users/carlitos/mobilitas-agenti-ai/agente-creazione-teoria/bibbie-generate/ipercifosi/v1-bibbia.md` (v1.0, agosto 2026). Letta anche `v1-mappa.md`, che replica alcune formulazioni e va corretta in parallelo.
+**Documento revisionato:** `/Users/carlitos/mobilitas-agenti-ai/agente-creazione-bibbie/bibbie-generate/ipercifosi/v1-bibbia.md` (v1.0, agosto 2026). Letta anche `v1-mappa.md`, che replica alcune formulazioni e va corretta in parallelo.
 
 LENTE: Compliance e Responsabilità Professionale
 CONDIZIONE: Ipercifosi

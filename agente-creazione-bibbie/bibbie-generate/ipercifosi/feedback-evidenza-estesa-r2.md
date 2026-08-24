@@ -1,6 +1,6 @@
 # Feedback — Evidenza estesa (il Ricercatore), 2ª passata
 
-**Documento revisionato:** `/Users/carlitos/mobilitas-agenti-ai/agente-creazione-teoria/bibbie-generate/ipercifosi/v2-intermedia.md` (21.684 parole di corpo) e `mappa-v2.md`. Nessun altro documento è oggetto di questa revisione.
+**Documento revisionato:** `/Users/carlitos/mobilitas-agenti-ai/agente-creazione-bibbie/bibbie-generate/ipercifosi/v2-intermedia.md` (21.684 parole di corpo) e `mappa-v2.md`. Nessun altro documento è oggetto di questa revisione.
 
 LENTE: Evidenza estesa — il Ricercatore
 CONDIZIONE: Ipercifosi

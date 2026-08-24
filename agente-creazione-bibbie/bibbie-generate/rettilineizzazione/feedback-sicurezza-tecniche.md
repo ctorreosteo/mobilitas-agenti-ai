@@ -1,6 +1,6 @@
 # Feedback — Sicurezza del Gesto Manuale
 
-**Documento revisionato:** `/Users/carlitos/mobilitas-agenti-ai/agente-creazione-teoria/bibbie-generate/rettilineizzazione/v1-bibbia.md` (v1.0, agosto 2026), con la Mappa `v1-mappa.md` come allegato di sintesi.
+**Documento revisionato:** `/Users/carlitos/mobilitas-agenti-ai/agente-creazione-bibbie/bibbie-generate/rettilineizzazione/v1-bibbia.md` (v1.0, agosto 2026), con la Mappa `v1-mappa.md` come allegato di sintesi.
 
 LENTE: Sicurezza del Gesto Manuale (su documento teorico)
 CONDIZIONE: Rettilineizzazione cervicale

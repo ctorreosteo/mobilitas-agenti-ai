@@ -1,6 +1,6 @@
 # Feedback 4º livello — Editor di asciugatura
 
-**Documento revisionato:** `/Users/carlitos/mobilitas-agenti-ai/agente-creazione-teoria/bibbie-generate/bruxismo/v4-intermedia.md` — corpo (Cap. 0-14, appendici escluse) **~20.860 parole**; documento intero con Glossario, Fonti e Nota di redazione ~24.750.
+**Documento revisionato:** `/Users/carlitos/mobilitas-agenti-ai/agente-creazione-bibbie/bibbie-generate/bruxismo/v4-intermedia.md` — corpo (Cap. 0-14, appendici escluse) **~20.860 parole**; documento intero con Glossario, Fonti e Nota di redazione ~24.750.
 
 ```
 LENTE: Editor di Asciugatura (lunghezza e ridondanza)

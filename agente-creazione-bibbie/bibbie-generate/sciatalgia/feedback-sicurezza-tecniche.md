@@ -1,6 +1,6 @@
 # Feedback — Lente: Sicurezza del Gesto Manuale (su documento teorico)
 
-**Documento revisionato:** `/agente-creazione-teoria/bibbie-generate/sciatalgia/v1-bibbia.md` (v1.0, agosto 2026). La Mappa `v1-mappa.md` è stata letta come derivato e compare in un solo rilievo.
+**Documento revisionato:** `/agente-creazione-bibbie/bibbie-generate/sciatalgia/v1-bibbia.md` (v1.0, agosto 2026). La Mappa `v1-mappa.md` è stata letta come derivato e compare in un solo rilievo.
 **CONDIZIONE:** Sciatalgia.
 **Revisore:** direttore-osteopatico-sicurezza-tecniche (primo livello).
 

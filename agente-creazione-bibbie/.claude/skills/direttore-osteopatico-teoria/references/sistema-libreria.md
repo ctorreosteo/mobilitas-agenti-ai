@@ -8,7 +8,7 @@ Ogni condizione ha **due** documenti, prodotti da due agenti diversi:
 
 | Documento | Chi lo scrive | Cosa contiene |
 |---|---|---|
-| `Bibbia_<Condizione>.docx` | agente-creazione-teoria | 20 pagine di teoria |
+| `Bibbia_<Condizione>.docx` | agente-creazione-bibbie | 20 pagine di teoria |
 | `Procedura_<Condizione>.docx` | agente-creazione-procedure | 2 pagine operative |
 
 La Bibbia produce anche `Mappa_<Condizione>.docx` (una pagina).

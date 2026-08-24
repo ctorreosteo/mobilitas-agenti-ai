@@ -1,6 +1,6 @@
 LENTE: Osteopata Neolaureato (comprensibilità)
 CONDIZIONE: Artrosi
-DOCUMENTO REVISIONATO: /Users/carlitos/mobilitas-agenti-ai/agente-creazione-teoria/bibbie-generate/artrosi/v1-bibbia.md (con la Mappa v1-mappa.md usata come termine di paragone interno)
+DOCUMENTO REVISIONATO: /Users/carlitos/mobilitas-agenti-ai/agente-creazione-bibbie/bibbie-generate/artrosi/v1-bibbia.md (con la Mappa v1-mappa.md usata come termine di paragone interno)
 
 PROVA DI LETTURA
 

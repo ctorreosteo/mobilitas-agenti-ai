@@ -1,6 +1,6 @@
 # Feedback — Revisore Strumenti attivi (primo livello)
 
-**Documento revisionato:** `/Users/carlitos/mobilitas-agenti-ai/agente-creazione-teoria/bibbie-generate/cervicalgia/v1-bibbia.md` (v1.0, 15.288 parole) e `v1-mappa.md`.
+**Documento revisionato:** `/Users/carlitos/mobilitas-agenti-ai/agente-creazione-bibbie/bibbie-generate/cervicalgia/v1-bibbia.md` (v1.0, 15.288 parole) e `v1-mappa.md`.
 
 ```
 LENTE: Strumenti attivi — respirazione, rinforzo, carico, educazione

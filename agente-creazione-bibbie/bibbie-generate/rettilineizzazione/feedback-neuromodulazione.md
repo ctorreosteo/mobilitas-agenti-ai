@@ -1,6 +1,6 @@
 LENTE: Neuromodulazione (meccanismo d'azione neurofisiologico)
 CONDIZIONE: Rettilineizzazione cervicale
-DOCUMENTO REVISIONATO: /Users/carlitos/mobilitas-agenti-ai/agente-creazione-teoria/bibbie-generate/rettilineizzazione/v1-bibbia.md (con v1-mappa.md come termine di riscontro)
+DOCUMENTO REVISIONATO: /Users/carlitos/mobilitas-agenti-ai/agente-creazione-bibbie/bibbie-generate/rettilineizzazione/v1-bibbia.md (con v1-mappa.md come termine di riscontro)
 
 ---
 

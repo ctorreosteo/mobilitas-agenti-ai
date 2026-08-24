@@ -1,6 +1,6 @@
 LENTE: Strumenti attivi — respirazione, rinforzo, carico, educazione
 CONDIZIONE: Rettilineizzazione cervicale
-DOCUMENTO REVISIONATO: /Users/carlitos/mobilitas-agenti-ai/agente-creazione-teoria/bibbie-generate/rettilineizzazione/v1-bibbia.md (con la Mappa v1-mappa.md)
+DOCUMENTO REVISIONATO: /Users/carlitos/mobilitas-agenti-ai/agente-creazione-bibbie/bibbie-generate/rettilineizzazione/v1-bibbia.md (con la Mappa v1-mappa.md)
 
 ## RICERCA SVOLTA
 

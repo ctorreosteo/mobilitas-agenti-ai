@@ -12,7 +12,7 @@ export const meta = {
 }
 
 // ---- percorsi (assoluti: i subagent non ereditano la working dir) ----
-const ROOT = '/Users/carlitos/mobilitas-agenti-ai/agente-creazione-teoria'
+const ROOT = '/Users/carlitos/mobilitas-agenti-ai/agente-creazione-bibbie'
 const SK = ROOT + '/.claude/skills'
 const AUTORE = SK + '/direttore-osteopatico-teoria'
 const OUT = ROOT + '/bibbie-generate'

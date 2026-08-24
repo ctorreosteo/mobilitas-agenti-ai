@@ -1,6 +1,6 @@
 LENTE: Strumenti attivi — respirazione, rinforzo, carico, educazione
 CONDIZIONE: Bruxismo (del sonno e della veglia)
-DOCUMENTO REVISIONATO: /Users/carlitos/mobilitas-agenti-ai/agente-creazione-teoria/bibbie-generate/bruxismo/v1-bibbia.md (Bibbia teorica v1), con la Mappa v1-mappa.md come riscontro.
+DOCUMENTO REVISIONATO: /Users/carlitos/mobilitas-agenti-ai/agente-creazione-bibbie/bibbie-generate/bruxismo/v1-bibbia.md (Bibbia teorica v1), con la Mappa v1-mappa.md come riscontro.
 
 RICERCA SVOLTA
 Ricerca web disponibile e usata: PubMed via E-utilities (esearch/efetch), abstract letti per intero. Ho cercato le cinque famiglie su bruxismo e sul campo vicino dei disturbi temporo-mandibolari: esercizio mandibolare e posturale, autosservazione/EMA, educazione e autogestione, rilassamento e respiro, biofeedback, aderenza e compliance. Ho verificato uno per uno gli studi già citati nel Capitolo 12 (Bracci 29574964, Graham 41735990, Karabicak 40369740, Armijo-Olivo 26294683, Valiente Lopez 25413839, Michelotti 22207667) e quelli del Capitolo 10 usati come sponda (Jokubauskas 29577362, de Oliveira Souza 42497348). Sono tutti reali, correttamente attribuiti e coerenti con l'abstract, con due eccezioni segnalate sotto. Ho trovato due lavori assenti dal documento e piu forti di tutto quello che il capitolo cita: BMJ 2023, network meta-analisi (PMID 38101924) e la linea guida collegata (PMID 38101929). Ho cercato il rovescio: aderenza e ritenzione nei protocolli EMA (PMID 37069016, PMID 42427139) e i risultati negativi (Valiente Lopez, Medina Flores).

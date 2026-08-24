@@ -1,6 +1,6 @@
 # Feedback — Revisore strumenti attivi (PRIMO livello)
 
-**Documento revisionato:** `/Users/carlitos/mobilitas-agenti-ai/agente-creazione-teoria/bibbie-generate/cicatrici-cesareo/v1-bibbia.md` (Bibbia teorica, v1.0) con la Mappa `v1-mappa.md`.
+**Documento revisionato:** `/Users/carlitos/mobilitas-agenti-ai/agente-creazione-bibbie/bibbie-generate/cicatrici-cesareo/v1-bibbia.md` (Bibbia teorica, v1.0) con la Mappa `v1-mappa.md`.
 
 LENTE: Strumenti attivi — respirazione, rinforzo, carico, educazione
 CONDIZIONE: Cicatrici da taglio cesareo

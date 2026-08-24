@@ -1,6 +1,6 @@
 # Feedback — Revisore Cinque Modelli Osteopatici
 
-**Documento revisionato:** `/Users/carlitos/mobilitas-agenti-ai/agente-creazione-teoria/bibbie-generate/rettilineizzazione/v1-bibbia.md` (v1.0, con la Mappa `v1-mappa.md`).
+**Documento revisionato:** `/Users/carlitos/mobilitas-agenti-ai/agente-creazione-bibbie/bibbie-generate/rettilineizzazione/v1-bibbia.md` (v1.0, con la Mappa `v1-mappa.md`).
 
 LENTE: Cinque Modelli Osteopatici
 CONDIZIONE: Rettilineizzazione cervicale

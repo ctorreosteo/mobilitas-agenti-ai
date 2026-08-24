@@ -1,6 +1,6 @@
 # Feedback — Revisore Sistema Dominante (Motore Clinico)
 
-**Documento revisionato:** `/Users/carlitos/mobilitas-agenti-ai/agente-creazione-teoria/bibbie-generate/cicatrici-cesareo/v1-bibbia.md` (v1.0, agosto 2026), con la Mappa `v1-mappa.md` usata solo come riscontro.
+**Documento revisionato:** `/Users/carlitos/mobilitas-agenti-ai/agente-creazione-bibbie/bibbie-generate/cicatrici-cesareo/v1-bibbia.md` (v1.0, agosto 2026), con la Mappa `v1-mappa.md` usata solo come riscontro.
 
 LENTE: Motore Clinico — ragionamento del Sistema Dominante (aderenza al metodo)
 CONDIZIONE: Cicatrici da cesareo

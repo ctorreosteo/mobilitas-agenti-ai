@@ -1,6 +1,6 @@
 # Feedback — Revisore strumenti attivi (primo livello)
 
-**Documento revisionato:** `/Users/carlitos/mobilitas-agenti-ai/agente-creazione-teoria/bibbie-generate/ipercifosi/v1-bibbia.md` (Bibbia teorica), con la Mappa `v1-mappa.md` come riscontro.
+**Documento revisionato:** `/Users/carlitos/mobilitas-agenti-ai/agente-creazione-bibbie/bibbie-generate/ipercifosi/v1-bibbia.md` (Bibbia teorica), con la Mappa `v1-mappa.md` come riscontro.
 
 LENTE: Strumenti attivi — respirazione, rinforzo, carico, educazione
 CONDIZIONE: Ipercifosi

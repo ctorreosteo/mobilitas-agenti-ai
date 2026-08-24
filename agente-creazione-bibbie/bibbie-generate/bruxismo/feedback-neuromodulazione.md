@@ -1,6 +1,6 @@
 # Feedback — Lente Neuromodulazione (PRIMO livello)
 
-**Documento revisionato:** `/Users/carlitos/mobilitas-agenti-ai/agente-creazione-teoria/bibbie-generate/bruxismo/v1-bibbia.md` (Bibbia Mobilitas — Bruxismo, v1). Letta anche `v1-mappa.md` come termine di riscontro.
+**Documento revisionato:** `/Users/carlitos/mobilitas-agenti-ai/agente-creazione-bibbie/bibbie-generate/bruxismo/v1-bibbia.md` (Bibbia Mobilitas — Bruxismo, v1). Letta anche `v1-mappa.md` come termine di riscontro.
 
 ```
 LENTE: Neuromodulazione (meccanismo d'azione neurofisiologico)

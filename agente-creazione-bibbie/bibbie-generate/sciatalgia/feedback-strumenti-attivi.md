@@ -1,6 +1,6 @@
 LENTE: Strumenti attivi — respirazione, rinforzo, carico, educazione
 CONDIZIONE: Sciatalgia
-DOCUMENTO REVISIONATO: /Users/carlitos/mobilitas-agenti-ai/agente-creazione-teoria/bibbie-generate/sciatalgia/v1-bibbia.md (con la Mappa v1-mappa.md come riscontro)
+DOCUMENTO REVISIONATO: /Users/carlitos/mobilitas-agenti-ai/agente-creazione-bibbie/bibbie-generate/sciatalgia/v1-bibbia.md (con la Mappa v1-mappa.md come riscontro)
 
 RICERCA SVOLTA
 

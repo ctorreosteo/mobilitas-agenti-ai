@@ -1,6 +1,6 @@
 # Feedback — Revisore Strumenti attivi (PRIMO livello)
 
-**Documento revisionato:** `/Users/carlitos/mobilitas-agenti-ai/agente-creazione-teoria/bibbie-generate/dorsalgia/v1-bibbia.md` (con `v1-mappa.md` come riscontro).
+**Documento revisionato:** `/Users/carlitos/mobilitas-agenti-ai/agente-creazione-bibbie/bibbie-generate/dorsalgia/v1-bibbia.md` (con `v1-mappa.md` come riscontro).
 
 LENTE: Strumenti attivi — respirazione, rinforzo, carico, educazione
 CONDIZIONE: Dorsalgia (dolore dorsale non specifico)

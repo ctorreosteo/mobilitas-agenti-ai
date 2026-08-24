@@ -1,6 +1,6 @@
 # Feedback — Evidenza estesa (Il Ricercatore) · SECONDA PASSATA
 
-**Documento revisionato:** `/Users/carlitos/mobilitas-agenti-ai/agente-creazione-teoria/bibbie-generate/emicrania/v2-intermedia.md` (v2.0 intermedia, 17.885 parole). **La Mappa `mappa-v2.md` non esiste nella cartella:** c'è solo `v1-mappa.md`. Vedi ERRORE 3.
+**Documento revisionato:** `/Users/carlitos/mobilitas-agenti-ai/agente-creazione-bibbie/bibbie-generate/emicrania/v2-intermedia.md` (v2.0 intermedia, 17.885 parole). **La Mappa `mappa-v2.md` non esiste nella cartella:** c'è solo `v1-mappa.md`. Vedi ERRORE 3.
 
 LENTE: Evidenza estesa — il Ricercatore
 CONDIZIONE: Emicrania

@@ -1,6 +1,6 @@
 # Feedback — Lente Compliance e Responsabilità Professionale
 
-**Documento revisionato:** `/agente-creazione-teoria/bibbie-generate/artrosi/v1-bibbia.md` (v1.0, agosto 2026), con la Mappa `v1-mappa.md` come allegato operativo.
+**Documento revisionato:** `/agente-creazione-bibbie/bibbie-generate/artrosi/v1-bibbia.md` (v1.0, agosto 2026), con la Mappa `v1-mappa.md` come allegato operativo.
 
 LENTE: Compliance e Responsabilità Professionale
 CONDIZIONE: Artrosi
