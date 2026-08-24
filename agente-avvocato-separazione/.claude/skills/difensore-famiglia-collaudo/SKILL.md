@@ -1,6 +1,6 @@
 ---
 name: difensore-famiglia-collaudo
-description: IL CANCELLO — collaudo di conservazione e di integrità delle citazioni: confronta la versione approvata dell'atto con quella finale, dopo le due riscritture, e verifica che nessuna informazione, etichetta di prova, citazione, data o richiamo ad allegato sia andato perso, alterato o rafforzato. Non giudica la qualità, chiusa a monte. Attiva questa skill quando si chiede di "collaudare la versione finale", "verificare che non si sia perso niente", "controllare le citazioni prima del deposito", "la finale è fedele", oppure per l'ultimo controllo prima della consegna.
+description: IL CANCELLO — collaudo di conservazione e di integrità delle citazioni: confronta la versione approvata dell'atto con quella finale, dopo le due riscritture, e verifica che nessuna informazione, etichetta di prova, citazione, data o richiamo ad allegato sia andato perso, alterato o rafforzato. Fa girare anche il cancello deterministico sulla versione finale da sola — piede, domande in prima pagina, glosse, allegati, contenuto che il rito pretende. Non giudica la qualità, chiusa a monte. Attiva questa skill quando si chiede di "collaudare la versione finale", "verificare che non si sia perso niente", "controllare le citazioni prima del deposito", "la finale è fedele", oppure per l'ultimo controllo prima della consegna.
 ---
 
 ## Quale documento revisioni — leggi prima di tutto
@@ -68,6 +68,13 @@ monte poteva prevenire: un'affermazione più forte di quella che sostituisce, un
 prima non c'era, e una promessa o un impegno che l'atto prima non conteneva. Quelle le segnali
 anche se sono nuove, perché sono **nate qui**.
 
+**E una precisazione che vale quanto la regola.** «Taci» riguarda **il tuo giudizio**, non ciò che
+il codice accerta. Se `verifica_atto.py` rileva che manca il piede, che un'etichetta è priva della
+glossa o che a un atto introduttivo manca il piano genitoriale, quello non è un tuo rilievo di
+qualità: è un fatto misurato, e i fatti misurati si riportano sempre — anche quando il difetto
+c'era già nella v1. In quel caso lo dichiari nato in **ORIGINE**, non in una riscrittura, così la
+riparazione non va a cercarlo nella v5 dove starebbe uguale.
+
 ## Prima di leggere: fai girare il codice
 
 Buona parte del collaudo è meccanica, e una macchina non può illudersi di aver controllato.
@@ -93,6 +100,35 @@ lunghezza, identità delle frasi, presenza del piede.
 
 **Quello che lo script trova è già accertato: non riverificarlo, riportalo.** Il tuo lavoro
 comincia dove il codice si ferma.
+
+### E poi il cancello sulla versione finale, da sola
+
+I due comandi qui sopra **confrontano**: vedono ciò che si è perso, non ciò che non c'è mai stato.
+Un atto può attraversare tutta la catena conservando fedelmente un difetto che aveva dalla prima
+riga — e il collaudo di conservazione, per costruzione, gli darebbe ragione.
+
+**Esegui `scripts/verifica_atto.py` sulla FINALE**, con il tipo di atto, il registro delle fonti,
+la mappa delle prove e la cronologia:
+
+```
+python3 .claude/skills/difensore-famiglia-strategia/scripts/verifica_atto.py \
+  <v7-finale.md> --tipo <ricorso|comparsa|memoria|reclamo|istanza> \
+  --registro fascicolo/_dati/registro-fonti.md \
+  --prove <prove.md> --timeline fascicolo/_dati/timeline.md
+```
+
+Copre il piede, le domande numerate in prima pagina, la sezione sull'interesse del minore, la
+glossa di ogni etichetta, l'indice degli allegati, gli allegati citati e non mappati, il contenuto
+che il rito pretende in un atto introduttivo — piano genitoriale, dichiarazioni dei redditi ed
+estratti conto del triennio — le citazioni non registrate come `CONFERMATA`, e la lunghezza.
+
+Due regole nel riportarlo:
+
+- **I suoi BLOCCANTI sono violazioni**, con passaggio `ORIGINE`. Nessuno si supera con una
+  motivazione.
+- **I suoi AVVISI non sono violazioni.** Sono le cose che una macchina non può decidere — le date
+  che non stanno in cronologia, i periodi lunghi, il burocratese. Li elenchi a parte, per chi
+  legge, e non bloccano niente.
 
 ## Cosa controlli tu, che il codice non può
 
@@ -159,9 +195,13 @@ per caso giusto.
 COLLAUDO — v5 → FINALE
 DOCUMENTO: [quale]
 
-RAPPORTO DEL CODICE
+RAPPORTO DEL CODICE — conservazione
 [Esito delle due esecuzioni di verifica_citazioni.py: bloccanti e avvisi, riportati
 non riverificati. Con il passaggio in cui sono nati.]
+
+RAPPORTO DEL CODICE — cancello sulla finale
+[Esito di verifica_atto.py. I BLOCCANTI come violazioni con passaggio ORIGINE.
+Gli AVVISI in elenco separato: non bloccano, vanno guardati a mano.]
 
 INVENTARIO — copertura
 [Voci inventariate dalla v5 / ritrovate nella FINALE / perse.]

@@ -17,36 +17,50 @@ procedimento civile sul bambino e ogni fronte penale connesso.
 c.c.` può assegnarla alla madre collocataria **anche se ne è l'unico proprietario e anche senza
 matrimonio**. Si presidia prima, non dopo.
 
-## Le tre idee che reggono l'agente
+## Le quattro idee che reggono l'agente
 
 **1. Nessuna fonte non verificata.** Il numero di una sentenza è il punto in cui un modello
 linguistico inventa con la massima verosimiglianza. Una citazione inesistente in un atto non fa
 perdere quel punto: fa perdere la credibilità su tutto l'atto, comprese le venti affermazioni
 vere. Ogni riferimento si verifica sul web e si registra in `fascicolo/_dati/registro-fonti.md`;
-**un hook impedisce materialmente** che una citazione non registrata entri in un atto.
+**un hook impedisce materialmente** che entri in un atto una citazione che non sia registrata
+come `CONFERMATA` — e la riconosce nella forma in cui gli atti italiani la scrivono davvero,
+*«Cass. civ., sez. I, 12 marzo 2020, n. 9764»*, non solo nella forma comoda.
 
 **2. Nessun fatto senza documento.** Ogni fatto porta la sua etichetta, fuori dalla prosa —
 `PROVATO` · `DOCUMENTABILE` · `ALLEGABILE` · `NON SOSTENIBILE` — e l'ultima **non entra mai in un
 atto**. Un'affermazione falsa costa più di dieci affermazioni mancanti: la controparte la smonta
 e con quella contamina i fatti veri che le stanno accanto.
 
-**3. Il perimetro è tattica, non moralismo.** Sei condotte non si consigliano mai — registrazioni
-e accessi illeciti, trattenimento del minore, sospensione del mantenimento, occultamento di
-redditi, prove fabbricate, denunce strumentali. Non perché siano brutte: perché **trasformano un
-padre con ragione in un indagato**, e sono anche quelle che funzionano peggio. Un secondo hook le
-blocca in scrittura.
+**3. Il perimetro è tattica, non moralismo.** Otto condotte non si consigliano mai —
+registrazioni e accessi illeciti, trattenimento del minore, sospensione del mantenimento,
+occultamento di redditi, prove fabbricate, denunce strumentali, **istruzione di un testimone**,
+**distruzione di prove**. Non perché siano brutte: perché **trasformano un padre con ragione in un
+indagato**, e sono anche quelle che funzionano peggio. Un secondo hook le blocca in scrittura,
+nella *forma consiglio* e non nella semplice menzione — perché il briefing deve poter scrivere
+«non sospendere mai il bonifico».
+
+**4. Ciò che nessuno verifica non esiste.** Tre hook e due script fanno rispettare in modo
+meccanico quello che il metodo dichiara. Una regola ripetuta in cinque documenti e verificata da
+nessuno vale finché il modello se la ricorda, cioè finché il contesto non si riempie — che è
+esattamente il momento in cui si scrive l'atto finale. Il terzo hook blocca PAS, `NON SOSTENIBILE`
+e attacchi alla persona dentro un atto; `verifica_atto.py` collauda il piede, le domande in prima
+pagina, le glosse, gli allegati e il contenuto che il rito pretende. `./scripts/test-hooks.py`
+prova tutto su **50 casi, e metà sono falsi positivi da non commettere**: un cancello che blocca
+il lavoro legittimo viene spento, ed è peggio di non averlo.
 
 ## Struttura
 
 ```
 CLAUDE.md                         la costituzione: caso, regole non negoziabili, metodo
-scripts/test-hooks.py             collauda le protezioni: 9 casi, blocca e passa
+scripts/test-hooks.py             collauda le protezioni: 50 casi, blocca e passa
 
 .claude/
-  settings.json                   permessi + i due hook
+  settings.json                   permessi + i tre hook
   hooks/
-    blocca-citazioni-non-verificate.py   nessun numero di sentenza fuori dal registro
-    blocca-condotte-illecite.py          le sei condotte fuori perimetro
+    blocca-citazioni-non-verificate.py   solo le fonti CONFERMATE entrano in un atto
+    blocca-condotte-illecite.py          le otto condotte fuori perimetro
+    blocca-difetti-di-atto.py            PAS, NON SOSTENIBILE, attacco alla persona
   agents/
     ricercatore-giurisprudenza.md  cerca e VERIFICA, poi registra in append
     verificatore-citazioni.md      controlla una per una le citazioni di un atto
@@ -54,6 +68,9 @@ scripts/test-hooks.py             collauda le protezioni: 9 casi, blocca e passa
     avvocato-avversario.md         scrive l'atto della controparte contro di noi
   commands/
     /fascicolo  /strategia  /atto  /penale  /udienza  /tutto
+    /reclamo    dieci giorni perentori: prima si contano, poi si decide
+    /accordo    la proposta conciliativa e la strada per chiuderla
+    /verifica   tutti i cancelli deterministici su una pratica
   skills/
     difensore-famiglia-strategia/  AUTORE — strategia, atti, briefing
       ├─ SKILL.md
@@ -61,17 +78,23 @@ scripts/test-hooks.py             collauda le protezioni: 9 casi, blocca e passa
       │   ├─ verifica-delle-fonti.md        il protocollo. Si legge per primo
       │   ├─ quadro-normativo.md            cosa si applica a una coppia mai sposata
       │   ├─ rito-e-processo.md             il rito unico, e l'udienza che decide tutto
+      │   ├─ termini-e-adempimenti.md       cosa si perde per sempre, e quando
       │   ├─ figlio-infra-triennale.md      IL CUORE: il bambino ha un anno
       │   ├─ affidamento-e-collocamento.md  dove si vince davvero
       │   ├─ mantenimento-e-spese.md        i numeri, e la trappola dei quindici anni
       │   ├─ casa-familiare.md              il rischio patrimoniale maggiore
       │   ├─ convivenza-senza-matrimonio.md cosa non si può chiedere, e cosa sì
+      │   ├─ accordo-e-negoziazione.md      quando chiuderla, e come si chiude bene
       │   ├─ penale-della-famiglia.md       i reati, da entrambi i lati
       │   ├─ prove-e-trappole.md            cosa prova cosa, e le nove trappole
+      │   ├─ dopo-la-prima-udienza.md       reclamo, modifica, attuazione
       │   ├─ architettura-atto.md           la forma del deliverable
       │   ├─ rubrica-punteggio.md           cancello: sotto 90/100 non si consegna
       │   └─ checklist-qualita.md           cancello: un solo NO = si corregge
-      └─ scripts/verifica_citazioni.py      collaudo deterministico v5 vs finale
+      └─ scripts/
+          ├─ riferimenti.py                 gli estrattori, condivisi con gli hook
+          ├─ verifica_atto.py               cancello su UNA versione
+          └─ verifica_citazioni.py          conservazione fra DUE versioni
 
     difensore-famiglia-avversario/         1º liv. — l'avvocato della madre
     difensore-famiglia-giudice/            1º liv. — chi decide
@@ -81,6 +104,8 @@ scripts/test-hooks.py             collauda le protezioni: 9 casi, blocca e passa
     difensore-famiglia-penalista/          1º liv. — l'esposizione penale
     difensore-famiglia-patrimoniale/       1º liv. — i numeri
     difensore-famiglia-prove/              1º liv. — ogni fatto ha il suo documento?
+    difensore-famiglia-decadenze/          1º liv. — è stato proposto tutto, e in tempo?
+    difensore-famiglia-negoziatore/        1º liv. — si può chiudere per accordo?
     difensore-famiglia-cliente/            1º liv. — cosa farà il cliente
     difensore-famiglia-deontologia/        1º liv. — il perimetro lecito
     difensore-famiglia-fonti/              2º liv. — le citazioni reggono?
@@ -97,6 +122,7 @@ fascicolo/
     livelli.json                  manifesto: chi rivede, e a quale livello
     registro-fonti.md             le uniche fonti citabili. Solo append
     timeline.md                   cronologia unica, civile e penale. Solo append
+    scadenze.md                   i termini aperti. L'unica cosa che non si recupera
     deviazioni-dal-metodo.md      dove questo metodo è stato trovato sbagliato
   prove/                          i documenti del fascicolo
   _workflow/genera-difesa.workflow.js
@@ -109,9 +135,10 @@ Ruoli e livelli stanno in `fascicolo/_dati/livelli.json`: è l'unico file da toc
 un revisore.
 
 1. **`strategia`** redige la v1 (atto + mappa delle prove + briefing).
-2. **1º livello** — dieci lenti **in parallelo**, e sono le persone vere che decideranno o
-   attaccheranno: avvocato della madre, giudice, PM, curatore del minore, CTU, penalista,
-   patrimoniale, prove, cliente, deontologia → **v2**
+2. **1º livello** — dodici lenti **in parallelo**: le persone vere che decideranno o attaccheranno
+   — avvocato della madre, giudice, PM, curatore del minore, CTU, penalista, patrimoniale, prove,
+   cliente, deontologia — più le due che non guardano il merito, **decadenze** e **negoziatore**
+   → **v2**
 3. **2º livello** — `fonti` **poi** `cassazione`, in quest'ordine → **v3**
 4. **3º livello** — `coerenza`: contraddizioni interne, col fascicolo, fra civile e penale → **v4**
 5. **4º livello** — `editor`: asciugatura → **v5**
@@ -123,6 +150,23 @@ un revisore.
 
 `fonti` **ripulisce**, `cassazione` **amplia**. Invertirli significa costruire su una base marcia
 e raddoppiare il lavoro di entrambi. È l'unico livello che non gira in parallelo, ed è voluto.
+
+### Perché decadenze e negoziatore sono di primo livello
+
+Perché sono i due modi di perdere una causa che nessuna delle altre lenti guarda, e nessuno dei
+due riguarda il merito.
+
+**Decadenze.** Nel rito unificato quasi tutto va proposto nell'atto introduttivo o nella finestra
+giusta, e ciò che non c'è non si recupera con nessun argomento. Un revisore di merito, davanti a
+una domanda riservata, non vede niente di sbagliato: *«ci si riserva di»* ha l'aspetto della
+prudenza. Serve una lente che legga l'atto **come lo legge il calendario**.
+
+**Negoziatore.** La maggior parte di questi procedimenti finisce con un accordo, e un accordo in
+tre mesi vale più di un provvedimento migliore in diciotto — perché l'assetto povero che regge due
+anni diventa «consolidato» e rovescia l'onere. In un accordo si ottengono anche cose che un
+giudice non concede: gli **automatismi a date certe**, che sono la partita di questo caso. La
+lente non chiede di indebolire le domande, chiede che siano formulate in modo che l'altra parte
+possa accettarle **senza dichiararsi perdente**.
 
 ### Perché il cliente è un revisore di primo livello
 
@@ -143,7 +187,7 @@ può salire da `ALLEGABILE` a `PROVATO`, un allegato può finire sotto un fatto 
 può cambiare portata.
 
 `collaudo` chiude quel buco. Non giudica la qualità — chiusa a monte — e confronta la **v5** con la
-**finale**. Gira in due strati:
+**finale**. Gira in tre strati:
 
 **(a) Lo script deterministico**, `verifica_citazioni.py`, **due volte, una per passaggio**:
 
@@ -161,6 +205,17 @@ Lo script confronta anche ogni sentenza citata con il registro: **una citazione 
 riscrittura è bloccante sempre**, anche se il numero fosse per caso giusto, perché non è mai
 passata da una verifica.
 
+**(a-bis) Il cancello sulla finale da sola**, `verifica_atto.py`. I due comandi qui sopra
+confrontano: vedono ciò che si è perso, non ciò che non c'è mai stato. Un atto può attraversare
+tutta la catena conservando fedelmente un difetto che aveva dalla v1, e il collaudo di
+conservazione gli darebbe ragione. Questo strato guarda il documento finito: il piede, le domande
+numerate in prima pagina, la sezione sull'interesse del minore, la glossa di **ogni** etichetta,
+l'indice degli allegati, gli allegati citati e non mappati in `prove.md`, il contenuto che il rito
+pretende in un atto introduttivo — piano genitoriale, dichiarazioni dei redditi ed estratti conto
+del triennio — le citazioni non `CONFERMATA`, la lunghezza. Esiste perché rubrica e checklist le
+compilava lo stesso modello che aveva appena scritto l'atto: **un controllo che non può fallire
+non è debole, è assente.**
+
 **(b) Il collaudatore semantico**, che cerca ciò che nessun conteggio vede: etichette riancorate a
 un altro fatto, allegati che ora sostengono un fatto diverso, informazione persa per assorbimento,
 qualificazioni cadute, verbi irrigiditi, e **domande con la portata cambiata**.
@@ -171,11 +226,13 @@ scorrevole, ma verificata. In un atto l'accuratezza sta sopra la leggibilità, s
 ## Come si lancia
 
 ```bash
-# collauda le protezioni prima di lavorare
+# collauda le protezioni prima di lavorare: 50 casi, e metà sono falsi positivi
 ./scripts/test-hooks.py
 ```
 
-Poi, in sessione: `/fascicolo` → `/strategia` → `/atto` → `/penale` → `/udienza`, oppure `/tutto`.
+Poi, in sessione: `/fascicolo` → `/strategia` → `/atto` → `/penale` → `/accordo` → `/udienza`,
+oppure `/tutto`. Prima di consegnare, `/verifica`. Se l'udienza va male, `/reclamo` — e la prima
+cosa da fare sono i **dieci giorni**, non la decisione.
 
 Il workflow `fascicolo/_workflow/genera-difesa.workflow.js` accetta:
 
@@ -196,6 +253,13 @@ clausola ci sia.
 minorenni e per le famiglie* è prorogata al **31 ottobre 2026** (`D.L. 117/2025`). Fino ad allora
 la competenza resta del **Tribunale ordinario**. Siamo a ridosso: **riverificala prima di ogni atto
 introduttivo.**
+
+**E i termini che decidono le cause**, verificati il 24/08/2026 sul testo in Gazzetta Ufficiale e
+registrati: contenuto obbligatorio dell'atto introduttivo — piano genitoriale, redditi ed estratti
+conto del **triennio** (`artt. 473-bis.12` e `473-bis.16 c.p.c.`); memorie integrative a ritroso
+dall'udienza, **20 · 10 · 5 giorni** (`art. 473-bis.17`); reclamo contro i provvedimenti provvisori,
+**dieci giorni perentori** dalla pronuncia in udienza (`art. 473-bis.24`). Questo agente non calcola
+termini come se fossero certi: indica la norma, e il conteggio lo verifica chi deposita.
 
 ## Note operative
 

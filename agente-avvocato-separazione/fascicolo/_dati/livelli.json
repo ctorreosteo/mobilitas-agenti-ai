@@ -1,16 +1,10 @@
 {
   "_come_si_usa": "Questo file decide il RUOLO e il LIVELLO di ogni skill nella catena difensiva. Usa le CHIAVI = la parte dopo 'difensore-famiglia-'. L'ESISTENZA delle skill resta auto-scoperta dalla cartella .claude/skills; qui dichiari ESPLICITAMENTE chi e' l'autore e chi rivede, e a quale livello. Una skill presente nella cartella ma NON elencata qui NON viene usata (il workflow lo segnala). Per spostare un revisore di livello, togli la sua chiave da un array e mettila in un altro. FLUSSO: v1 -> primo_livello (in parallelo) -> sintesi v2 -> secondo_livello sulla v2 -> sintesi v3 -> terzo_livello sulla v3 -> sintesi v4 -> quarto_livello -> v5 -> quinto_livello RISCRIVE -> v6 -> sesto_livello raddrizza la lingua -> v7 FINALE -> collaudo. Un array vuoto salta il livello (la versione viene promossa senza modifiche).",
-
-  "_ordine_dei_livelli": "1o = il panel avversariale, e sono le persone vere che decideranno o attaccheranno: l'avvocato della madre, il giudice, il PM, il curatore del minore, il CTU, il penalista, il patrimoniale, chi controlla le prove, chi conosce il cliente e chi presidia la deontologia. Girano INSIEME perche' un atto deve reggere a tutti contemporaneamente, non a uno alla volta. 2o = le FONTI: prima 'fonti' verifica una per una le citazioni gia' presenti (esistono? dicono quello che gli facciamo dire?), poi 'cassazione' ALLARGA la base giurisprudenziale cercando cio' che manca. L'ordine e' questo: si ripulisce prima di ampliare, altrimenti si amplia su una base marcia. 3o = COERENZA su tutto l'atto e su tutti gli atti del fascicolo: le contraddizioni nascono nelle SINTESI, quando l'autore applica dieci feedback su paragrafi diversi senza rileggere l'insieme, ed e' l'ultimo livello in cui il contenuto puo' ancora cambiare. 4o = editor: toglie ridondanza e riporta l'atto nel range. 5o = CHIAREZZA: non e' un revisore, e' un riscrittore. 6o = ITALIANO GIURIDICO: non riscrive, passa frase per frase. L'ordine 4o -> 5o -> 6o non e' invertibile: si semplifica un testo gia' asciutto, e si raddrizza la lingua di un testo gia' semplificato.",
-
+  "_ordine_dei_livelli": "1o = il panel avversariale, e sono le persone vere che decideranno o attaccheranno, piu' le due lenti che guardano l'atto da fuori dal merito: l'avvocato della madre, il giudice, il PM, il curatore del minore, il CTU, il penalista, il patrimoniale, chi controlla le prove, chi guarda TERMINI E DECADENZE, chi chiede se la cosa si possa chiudere per ACCORDO, chi conosce il cliente e chi presidia la deontologia. Girano INSIEME perche' un atto deve reggere a tutti contemporaneamente, non a uno alla volta. 2o = le FONTI: prima 'fonti' verifica una per una le citazioni gia' presenti (esistono? dicono quello che gli facciamo dire?), poi 'cassazione' ALLARGA la base giurisprudenziale cercando cio' che manca. L'ordine e' questo: si ripulisce prima di ampliare, altrimenti si amplia su una base marcia. 3o = COERENZA su tutto l'atto e su tutti gli atti del fascicolo: le contraddizioni nascono nelle SINTESI, quando l'autore applica dieci feedback su paragrafi diversi senza rileggere l'insieme, ed e' l'ultimo livello in cui il contenuto puo' ancora cambiare. 4o = editor: toglie ridondanza e riporta l'atto nel range. 5o = CHIAREZZA: non e' un revisore, e' un riscrittore. 6o = ITALIANO GIURIDICO: non riscrive, passa frase per frase. L'ordine 4o -> 5o -> 6o non e' invertibile: si semplifica un testo gia' asciutto, e si raddrizza la lingua di un testo gia' semplificato.",
   "_perche_il_cliente_e_un_revisore_di_primo_livello": "Perche' e' la prima causa di sconfitta in questa materia, davanti a qualunque argomento giuridico. Gli atti si perdono raramente per una massima sbagliata e quasi sempre perche' l'assistito ha mandato quarantatre messaggi in una notte, ha registrato una conversazione in casa altrui, si e' presentato sotto casa senza preavviso o ha sospeso il bonifico per ritorsione. La lente 'cliente' non giudica l'atto: prevede cosa fara' il cliente DOPO averlo letto, e pretende che il briefing lo disinneschi PRIMA. Un atto tecnicamente perfetto che spinge il cliente a una condotta autolesiva e' un atto fallito.",
-
-  "_perche_il_collaudo": "Il 5o livello riscrive OGNI frase e il 6o ne ritocca molte: e' l'unico tratto della catena in cui tutto il testo cambia, ed e' anche quello in cui una citazione puo' cambiare numero, un'etichetta di prova puo' salire da ALLEGABILE a PROVATO e una data puo' migrare da un documento all'altro. Il COLLAUDO non e' un settimo revisore e non giudica la strategia (chiusa a monte): confronta la v5 con la FINALE e verifica due cose sole, la CONSERVAZIONE dei contenuti e l'INTEGRITA' di ogni citazione e di ogni etichetta di prova. Gira in due strati: (a) lo script deterministico verifica_citazioni.py, che confronta ogni riferimento normativo e giurisprudenziale dell'atto con il registro delle fonti verificate e non puo' illudersi di aver controllato; (b) il collaudatore semantico, che cerca cio' che nessun conteggio vede — una massima riancorata a un altro passaggio, un fatto DOCUMENTABILE diventato PROVATO, un allegato citato che non esiste, un verbo irrigidito da 'risulterebbe' a 'e' provato'. Zero bloccanti, o non si deposita.",
-
+  "_perche_il_collaudo": "Il 5o livello riscrive OGNI frase e il 6o ne ritocca molte: e' l'unico tratto della catena in cui tutto il testo cambia, ed e' anche quello in cui una citazione puo' cambiare numero, un'etichetta di prova puo' salire da ALLEGABILE a PROVATO e una data puo' migrare da un documento all'altro. Il COLLAUDO non e' un settimo revisore e non giudica la strategia (chiusa a monte): verifica la CONSERVAZIONE dei contenuti e l'INTEGRITA' di ogni citazione e di ogni etichetta. Gira in tre strati. (a) verifica_citazioni.py, che confronta la v5 con la v6 e la v6 con la v7 — DUE volte, una per passaggio, perche' due riscritture misurate in blocco si compensano a vicenda. (a-bis) verifica_atto.py, che collauda la versione FINALE da sola: il piede, le domande in prima pagina, la glossa di ogni etichetta, l'indice degli allegati, gli allegati citati e non mappati, il contenuto che il rito pretende nell'atto introduttivo (piano genitoriale, redditi ed estratti conto del triennio), le citazioni non CONFERMATE, la lunghezza. Esiste perche' la rubrica e la checklist le compilava lo stesso modello che aveva scritto l'atto, subito dopo averlo scritto: un controllo del genere non e' debole, e' assente. (b) il collaudatore semantico, che cerca cio' che nessun conteggio vede — una massima riancorata a un altro passaggio, un fatto DOCUMENTABILE diventato PROVATO, un allegato citato che non esiste, un verbo irrigidito da 'risulterebbe' a 'e' provato', una domanda con la portata cambiata. Zero bloccanti, o non si deposita.",
   "_confine_del_deliverable": "Questo agente produce MATERIALE DIFENSIVO: strategia, atti, memorie, note, briefing. NON deposita, NON firma, NON sostituisce l'avvocato iscritto all'albo che rivede e deposita. Ogni deliverable lo dichiara nel piede. E non produce mai: prove fabbricate, testimonianze costruite, consigli su condotte illecite (registrazioni abusive, accessi a dispositivi altrui, trattenimento del minore, sospensione del mantenimento per ritorsione, occultamento di redditi, denunce strumentali).",
-
   "autore": "strategia",
-
   "primo_livello": [
     "avversario",
     "giudice",
@@ -20,45 +14,78 @@
     "penalista",
     "patrimoniale",
     "prove",
+    "decadenze",
+    "negoziatore",
     "cliente",
     "deontologia"
   ],
-
   "secondo_livello": [
     "fonti",
     "cassazione"
   ],
-
   "terzo_livello": [
     "coerenza"
   ],
-
   "quarto_livello": [
     "editor"
   ],
-
   "quinto_livello": [
     "chiarezza"
   ],
-
   "sesto_livello": [
     "italiano-giuridico"
   ],
-
   "collaudo": [
     "collaudo"
   ],
-
   "_esempi": {
     "atto_urgente_solo_panel_essenziale": {
-      "primo_livello": ["avversario", "giudice", "prove", "cliente"],
-      "secondo_livello": ["fonti"]
+      "primo_livello": [
+        "avversario",
+        "giudice",
+        "prove",
+        "decadenze",
+        "cliente"
+      ],
+      "secondo_livello": [
+        "fonti"
+      ]
     },
     "memoria_penale": {
-      "primo_livello": ["pubblico-ministero", "penalista", "prove", "cliente", "giudice"]
+      "primo_livello": [
+        "pubblico-ministero",
+        "penalista",
+        "prove",
+        "cliente",
+        "giudice"
+      ]
+    },
+    "reclamo_ex_473_bis_24_dieci_giorni": {
+      "_nota": "Termine perentorio di dieci giorni: il panel completo non ci sta. Si tengono le lenti che possono ancora cambiare l'esito.",
+      "primo_livello": [
+        "giudice",
+        "avversario",
+        "decadenze",
+        "prove"
+      ],
+      "secondo_livello": [
+        "fonti"
+      ],
+      "quinto_livello": [],
+      "sesto_livello": []
+    },
+    "proposta_di_accordo": {
+      "primo_livello": [
+        "negoziatore",
+        "patrimoniale",
+        "prove",
+        "cliente",
+        "curatore-minore"
+      ]
     },
     "consegna_senza_cancello_SCONSIGLIATO": {
       "collaudo": []
     }
-  }
+  },
+  "_perche_decadenze_e_negoziatore_sono_di_primo_livello": "Perche' sono i due modi di perdere una causa che nessuna delle altre lenti guarda, e nessuno dei due riguarda il merito. DECADENZE: nel rito unificato quasi tutto va proposto nell'atto introduttivo o nella finestra giusta, e cio' che non c'e' non si recupera con nessun argomento. Un revisore di merito, davanti a una domanda riservata, non vede niente di sbagliato: 'ci si riserva' ha l'aspetto della prudenza. Serve una lente che legga l'atto come lo legge il calendario. NEGOZIATORE: la maggior parte di questi procedimenti finisce con un accordo, e un accordo raggiunto in tre mesi vale piu' di un provvedimento migliore ottenuto in diciotto, perche' l'assetto povero che regge due anni diventa 'consolidato' e rovescia l'onere. In un accordo si ottengono anche cose che un giudice non concede — gli automatismi a date certe sulla progressione dei tempi, che sono la partita di questo caso. La lente non chiede di indebolire le domande: chiede che siano formulate in modo che l'altra parte possa accettarle senza dichiararsi perdente, e che l'atto non chiuda porte senza guadagnarci niente."
 }

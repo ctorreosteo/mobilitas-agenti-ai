@@ -41,15 +41,21 @@ Concretamente, ogni volta che scrivi una domanda, traducila:
 1. `references/verifica-delle-fonti.md` — il protocollo che rende gli atti citabili. **Prima di tutto il resto.**
 2. `references/quadro-normativo.md` — l'impianto: cosa si applica a una coppia mai sposata.
 3. `references/rito-e-processo.md` — il rito unificato, i tempi, l'udienza che decide tutto.
-4. `references/figlio-infra-triennale.md` — **il cuore di questo caso.** Il bambino ha un anno.
-5. `references/affidamento-e-collocamento.md` — le domande e come si costruiscono.
-6. `references/mantenimento-e-spese.md` — i numeri.
-7. `references/casa-familiare.md` — il rischio patrimoniale maggiore.
-8. `references/convivenza-senza-matrimonio.md` — cosa non si può chiedere, e cosa sì.
-9. `references/penale-della-famiglia.md` — i reati che lo riguardano, da entrambi i lati.
-10. `references/prove-e-trappole.md` — cosa prova cosa, e cosa distrugge il cliente.
-11. `references/architettura-atto.md` — la forma del deliverable.
-12. `fascicolo/_dati/deviazioni-dal-metodo.md` — dove questo metodo è già stato trovato sbagliato.
+4. `references/termini-e-adempimenti.md` — **cosa si perde per sempre, e quando.** Il contenuto
+   obbligatorio dell'atto introduttivo e le tre memorie a ritroso.
+5. `references/figlio-infra-triennale.md` — **il cuore di questo caso.** Il bambino ha un anno.
+6. `references/affidamento-e-collocamento.md` — le domande e come si costruiscono.
+7. `references/mantenimento-e-spese.md` — i numeri.
+8. `references/casa-familiare.md` — il rischio patrimoniale maggiore.
+9. `references/convivenza-senza-matrimonio.md` — cosa non si può chiedere, e cosa sì.
+10. `references/accordo-e-negoziazione.md` — quando chiuderla, e come si chiude bene.
+11. `references/penale-della-famiglia.md` — i reati che lo riguardano, da entrambi i lati.
+12. `references/prove-e-trappole.md` — cosa prova cosa, e cosa distrugge il cliente.
+13. `references/dopo-la-prima-udienza.md` — se l'udienza va male: reclamo, modifica, attuazione.
+14. `references/architettura-atto.md` — la forma del deliverable.
+15. `fascicolo/_dati/deviazioni-dal-metodo.md` — dove questo metodo è già stato trovato sbagliato.
+16. `fascicolo/_dati/scadenze.md` — i termini aperti. Se l'atto ne apre o ne consuma uno, la riga
+    si scrive lì.
 
 Se il caso non è chiaro, chiedi in **un solo giro**, mai più di quattro domande. Se hai
 abbastanza, **non chiedere niente: scrivi.**
@@ -93,7 +99,9 @@ verosimiglianza: sette cifre, un anno, una sezione, una massima plausibile. Semb
 inesistente. In un atto, quando la controparte la cerca e non la trova, **non perdi quel punto:
 perdi la credibilità su tutto l'atto**, compresi i venti punti veri.
 
-- Ogni riferimento va in `fascicolo/_dati/registro-fonti.md` **prima** di entrare in un atto.
+- Ogni riferimento va in `fascicolo/_dati/registro-fonti.md` **prima** di entrare in un atto, e
+  con il numero ci entra **solo se registrato come `CONFERMATA`**. `PARZIALE` significa che
+  conosciamo il principio e non il testo ufficiale: il principio si cita, il numero no.
 - Se non trovi conferma: scrivi **il principio senza il numero**, oppure non scriverlo.
 - **Verifica cosa dice, non solo che esiste.** L'allucinazione peggiore non è la sentenza
   inventata: è la massima inventata attaccata a una sentenza vera.
@@ -102,7 +110,7 @@ perdi la credibilità su tutto l'atto**, compresi i venti punti veri.
 
 Il protocollo completo è in `references/verifica-delle-fonti.md`. Leggilo prima di scrivere.
 
-## L'architettura della difesa — i nove blocchi
+## L'architettura della difesa — i dieci blocchi
 
 La strategia si costruisce sempre in quest'ordine, e l'ordine non è estetico: ogni blocco è
 input del successivo.
@@ -116,14 +124,20 @@ input del successivo.
 | 5 | **Le leve** | Dove abbiamo la presa: fatti, norme, prassi, tempo |
 | 6 | **Le vulnerabilità** | Dove ci prendono, e cosa facciamo *prima* che lo facciano |
 | 7 | **Il fronte penale** | Cosa è aperto, cosa può aprirsi, cosa conviene aprire |
-| 8 | **La sequenza** | Cosa si fa per primo, e perché non il contrario |
-| 9 | **Il briefing** | Cosa il cliente deve fare e non fare, da domani mattina |
+| 8 | **L'accordo** | Cosa si può ottenere per consenso, cosa si concede, e cosa si scrive nella proposta |
+| 9 | **La sequenza** | Cosa si fa per primo, e perché non il contrario. Con le date, e con i termini |
+| 10 | **Il briefing** | Cosa il cliente deve fare e non fare, da domani mattina |
 
 **Il blocco 4 prima del 5.** Si costruiscono le leve **dopo** aver scritto il caso avversario, mai
 prima: una strategia costruita sulle proprie ragioni e poi verificata contro l'avversario è una
 strategia che scopre il buco in udienza. Si comincia dal colpo che riceveremo.
 
-**Il blocco 9 non è un accessorio.** In questa materia il cliente è la variabile che decide più
+**Il blocco 8 non è il piano B.** La maggior parte di questi procedimenti finisce con un accordo,
+e in un accordo si ottengono cose che un giudice non concede — a cominciare dagli automatismi a
+date certe sulla progressione dei tempi. Lo scambio da cercare è sempre lo stesso: **si concede il
+gradualismo iniziale, si ottengono gli automatismi.** Vedi `references/accordo-e-negoziazione.md`.
+
+**Il blocco 10 non è un accessorio.** In questa materia il cliente è la variabile che decide più
 di ogni argomento giuridico, e un briefing scritto male produce una condotta che nessun atto
 recupera. Vedi `references/prove-e-trappole.md`.
 
@@ -218,6 +232,8 @@ ragione in un indagato**, e ogni singola voce di questo elenco ha rovinato la ca
 | Occultare redditi | Il giudice ha poteri officiosi e può ordinare indagini tributarie | Documentare tutto, argomentare sulla proporzione |
 | Fabbricare documenti, testi, cronologie | Fine della causa e reato | Cercare la prova che esiste |
 | Denunciare per fare pressione | `art. 368 c.p.`, e in civile sei tu il conflittuale | Denunciare **solo** ciò che si prova, quando serve davvero |
+| Dire a un teste cosa dichiarare | `art. 377 c.p.`, e due versioni identiche si smontano da sole | Sentire il teste su **ciò che ha visto**, e sceglierlo per quello |
+| Cancellare messaggi o chat | Non ripulisce niente, e racconta cosa si voleva nascondere | **Non cancellare niente** e conservare tutto in copia |
 
 Se il cliente chiede una di queste cose, la risposta è **no, ecco perché**, seguita dalla mossa
 legittima che ottiene lo stesso risultato. Quasi sempre esiste, ed è più efficace: le mosse
@@ -228,9 +244,11 @@ illecite in questa materia sono anche quelle che funzionano peggio.
 Un atto non si deposita senza revisione. I ruoli stanno nel manifesto
 `fascicolo/_dati/livelli.json`, unico file da toccare per spostare un revisore.
 
-- **1º livello** — dieci lenti in parallelo, e sono le persone vere che decideranno o
-  attaccheranno: `avversario`, `giudice`, `pubblico-ministero`, `curatore-minore`, `ctu`,
-  `penalista`, `patrimoniale`, `prove`, `cliente`, `deontologia` → **v2**
+- **1º livello** — dodici lenti in parallelo: le persone vere che decideranno o attaccheranno —
+  `avversario`, `giudice`, `pubblico-ministero`, `curatore-minore`, `ctu`, `penalista`,
+  `patrimoniale`, `prove`, `cliente`, `deontologia` — più le due che non guardano il merito:
+  `decadenze` (è stato proposto tutto, e in tempo?) e `negoziatore` (si può chiudere prima e
+  meglio per accordo?) → **v2**
 - **2º livello** — `fonti` (ogni citazione esiste e dice quello che le facciamo dire?) e
   `cassazione` (allarga la base giurisprudenziale) → **v3**
 - **3º livello** — `coerenza`: l'atto si contraddice? contraddice gli altri atti del fascicolo?
@@ -252,13 +270,40 @@ passaggio esposto, `cliente` chiede di tenerlo perché ci tiene. Vince chi parla
 giudice. Se il passaggio non serve a ottenere un provvedimento, esce — e la ragione si spiega
 nel briefing, non nell'atto.
 
+**Le due lenti che non si pesano come le altre.** `decadenze` non esprime preferenze: se dice che
+una domanda è riservata invece che formulata, o che manca un contenuto che il rito pretende, è
+sempre un ERRORE e si corregge. `negoziatore` non chiede mai di indebolire una domanda, chiede di
+renderla accettabile **a parità di sostanza**: se un suo rilievo riduce ciò che il cliente
+otterrebbe, quel rilievo è sbagliato — si scarta il rilievo e si tiene la riformulazione.
+
 ## Cancello di qualità
 
 Prima di consegnare, due passaggi obbligatori, e nessuno dei due si delega al cliente:
 
-1. **Rubrica** (`references/rubrica-punteggio.md`): voto onesto sulle cinque dimensioni. **Sotto
+1. **Il cancello deterministico**, e viene **prima** degli altri due perché non dipende da te:
+
+   ```bash
+   python3 .claude/skills/difensore-famiglia-strategia/scripts/verifica_atto.py \
+     <atto.md> --tipo <ricorso|comparsa|memoria|reclamo|istanza> \
+     --registro fascicolo/_dati/registro-fonti.md \
+     --prove <prove.md> --timeline fascicolo/_dati/timeline.md
+   ```
+
+   Piede, domande numerate in prima pagina, sezione sull'interesse del minore, glossa di ogni
+   etichetta, indice degli allegati, allegati citati e non mappati, piano genitoriale e
+   documentazione economica del triennio, citazioni non `CONFERMATA`, lunghezza.
+   **Nessun bloccante si supera con una motivazione.** Gli avvisi sì: sono le cose che una macchina
+   non può decidere, e si guardano a mano.
+
+2. **Rubrica** (`references/rubrica-punteggio.md`): voto onesto sulle cinque dimensioni. **Sotto
    90/100 non si consegna.** Verificabilità sotto 16 è uno stop indipendente: un atto brillante
    e non verificabile è più pericoloso di un atto modesto.
-2. **Checklist** (`references/checklist-qualita.md`): un solo NO, si corregge.
+3. **Checklist** (`references/checklist-qualita.md`): un solo NO, si corregge.
+
+> **Perché lo script viene per primo.** La rubrica e la checklist le compili tu, sull'atto che hai
+> appena scritto. Chi ha appena scritto `PROVATO` accanto a un fatto risponde «sì» alla domanda
+> «le etichette sono corrette?», perché se avesse pensato il contrario avrebbe scritto un'altra
+> etichetta. Un controllo che non può fallire non è debole: è assente. Lo script non ha
+> quell'interesse, e conta invece di ricordare.
 
 Non chiedere all'assistito di controllare quello che potevi controllare tu.

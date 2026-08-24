@@ -1,35 +1,69 @@
 #!/usr/bin/env python3
 """
-Hook PreToolUse (Write|Edit|MultiEdit).
+Hook PreToolUse (Write|Edit|MultiEdit|NotebookEdit).
 
-Impedisce che un numero di sentenza NON presente nel registro delle fonti
-verificate finisca in un file di atto.
+Impedisce che una citazione giurisprudenziale NON verificata finisca in un file
+destinato al deposito.
 
 E' la regola piu' importante dell'agente, applicata materialmente invece che
-raccomandata: il numero di una sentenza e' il punto in cui un modello linguistico
-inventa con la massima verosimiglianza, e una citazione inesistente in un atto
-non fa perdere quel punto — fa perdere la credibilita' su tutto l'atto.
+raccomandata: il numero di una sentenza e' il punto in cui un modello
+linguistico inventa con la massima verosimiglianza, e una citazione inesistente
+in un atto non fa perdere quel punto — fa perdere la credibilita' su tutto
+l'atto, comprese le venti affermazioni vere.
+
+Due cose che questo hook fa e che vale la pena sapere:
+
+1. Riconosce la citazione nella forma in cui gli atti italiani la scrivono
+   davvero — "Cass. civ., sez. I, 12 marzo 2020, n. 9764" — e non solo nella
+   forma comoda "Cass. n. 9764/2019". La forma comoda e' quella che un
+   controllo ingenuo intercetta; l'altra e' quella che passa.
+
+2. Pretende il livello CONFERMATA, non la semplice presenza nel registro. Una
+   fonte PARZIALE e' una fonte di cui conosciamo il principio e non il testo
+   ufficiale: il principio si cita, il numero no.
 
 Se l'hook blocca, la strada NON e' aggirarlo: e' verificare la fonte sul web,
 registrarla in append nel registro, e riscrivere.
 """
 
 import json
-import re
 import sys
 from pathlib import Path
 
-REGISTRO = Path(__file__).resolve().parents[2] / 'fascicolo' / '_dati' / 'registro-fonti.md'
+RADICE = Path(__file__).resolve().parents[2]
+REGISTRO = RADICE / 'fascicolo' / '_dati' / 'registro-fonti.md'
+SCRIPTS = RADICE / '.claude' / 'skills' / 'difensore-famiglia-strategia' / 'scripts'
 
 # Solo i file che sono ATTI o materiale destinato al deposito.
-# La strategia, i briefing e gli appunti restano liberi: e' li' che si ragiona.
+# La strategia, i briefing e gli appunti restano liberi: e' li' che si ragiona,
+# ed e' giusto poter scrivere "da verificare: Cass. 9764/2019".
 CARTELLE_SORVEGLIATE = ('/atti/', '/penale/', '/consegna/')
-NOMI_SORVEGLIATI = ('ricorso', 'memoria', 'comparsa', 'istanza', 'atto', 'nota-pm', 'querela')
+NOMI_SORVEGLIATI = ('ricorso', 'memoria', 'comparsa', 'istanza', 'atto',
+                    'nota-pm', 'querela', 'reclamo', 'accordo')
 
-RE_SENTENZA = re.compile(
-    r'(?:Cass(?:azione)?\.?(?:\s+(?:civ|pen|SS\.?UU|Sez\.?\s*Un)\.?)?|sent(?:enza)?\.?|ord(?:inanza)?\.?)'
-    r'[\s,]*n?\.?\s*(\d{1,6})\s*/\s*(\d{4})',
-    re.IGNORECASE)
+
+def blocca(msg: str):
+    print(json.dumps({
+        'hookSpecificOutput': {
+            'hookEventName': 'PreToolUse',
+            'permissionDecision': 'deny',
+            'permissionDecisionReason': msg,
+        }
+    }))
+    sys.exit(0)
+
+
+sys.path.insert(0, str(SCRIPTS))
+try:
+    import riferimenti as R
+except Exception as e:  # pragma: no cover
+    # Fallire aperto qui significherebbe che, il giorno in cui il modulo si
+    # rompe, ogni citazione inventata passa in silenzio. Si fallisce chiusi.
+    blocca(
+        f"PROTEZIONE NON DISPONIBILE: non riesco a caricare {SCRIPTS}/riferimenti.py ({e}).\n\n"
+        f"Finche' il controllo sulle citazioni non funziona, nessun atto puo' essere scritto. "
+        f"Ripristina il modulo e rilancia ./scripts/test-hooks.py."
+    )
 
 
 def sorvegliato(path: str) -> bool:
@@ -38,15 +72,6 @@ def sorvegliato(path: str) -> bool:
         return True
     nome = p.rsplit('/', 1)[-1]
     return any(n in nome for n in NOMI_SORVEGLIATI)
-
-
-def verificate():
-    """Numeri di sentenza presenti nel registro, esclusa la sezione NON trovate."""
-    if not REGISTRO.exists():
-        return set(), False
-    testo = REGISTRO.read_text(encoding='utf-8')
-    testo = re.split(r'^##\s+Fonti cercate e NON trovate', testo, flags=re.MULTILINE)[0]
-    return {f"{m.group(1)}/{m.group(2)}" for m in RE_SENTENZA.finditer(testo)}, True
 
 
 def contenuto(tool: str, ti: dict) -> str:
@@ -59,17 +84,6 @@ def contenuto(tool: str, ti: dict) -> str:
                  for e in ti.get('edits', [])]
         return '\n'.join(parti) + (ti.get('new_source', '') or '')
     return ''
-
-
-def blocca(msg: str):
-    print(json.dumps({
-        'hookSpecificOutput': {
-            'hookEventName': 'PreToolUse',
-            'permissionDecision': 'deny',
-            'permissionDecisionReason': msg,
-        }
-    }))
-    sys.exit(0)
 
 
 def main():
@@ -89,24 +103,36 @@ def main():
     if not testo:
         sys.exit(0)
 
-    citate = {f"{m.group(1)}/{m.group(2)}" for m in RE_SENTENZA.finditer(testo)}
+    citate = R.citazioni(testo)
     if not citate:
         sys.exit(0)
 
-    ok, esiste = verificate()
-    if not esiste:
+    livelli = R.registro_livelli(REGISTRO)
+    if livelli is None:
         blocca(
             f"Registro delle fonti non trovato ({REGISTRO}). "
             f"Nessuna citazione numerata puo' entrare in un atto finche' non esiste il registro."
         )
 
-    mancanti = sorted(citate - ok)
-    if mancanti:
-        elenco = ', '.join(f"n. {m}" for m in mancanti)
+    problemi = []
+    for c in sorted(citate):
+        liv = livelli.get(c)
+        if c.endswith('/senza-anno'):
+            problemi.append((c, "citata senza anno: e' inverificabile per costruzione"))
+        elif liv is None:
+            problemi.append((c, 'non compare nel registro delle fonti'))
+        elif liv == 'PARZIALE':
+            problemi.append((c, 'registrata come PARZIALE: il principio si cita, il numero no'))
+        elif liv != 'CONFERMATA':
+            problemi.append((c, f'registrata come {liv}'))
+
+    if problemi:
+        elenco = '\n'.join(f"  - n. {c} — {perche}" for c, perche in problemi)
         blocca(
-            f"CITAZIONE NON VERIFICATA: {elenco}\n\n"
-            f"Questi riferimenti non compaiono nel registro delle fonti verificate "
-            f"(fascicolo/_dati/registro-fonti.md) e non possono entrare in un atto.\n\n"
+            f"CITAZIONE NON CITABILE IN UN ATTO:\n\n{elenco}\n\n"
+            f"Nel registro (fascicolo/_dati/registro-fonti.md) puo' entrare in un atto CON IL "
+            f"NUMERO solo cio' che e' registrato come CONFERMATA, cioe' di cui e' stato letto il "
+            f"testo o la massima ufficiale.\n\n"
             f"Il numero di una sentenza e' il punto in cui si inventa con la massima "
             f"verosimiglianza, e una citazione inesistente non fa perdere quel punto: fa perdere "
             f"la credibilita' su tutto l'atto, comprese le venti affermazioni vere.\n\n"

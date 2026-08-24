@@ -109,3 +109,32 @@ Restano qui perché nessuno le riproponga a memoria.
 | Riferimento cercato | Esito | Data |
 |---|---|---|
 | `Cass. SS.UU. n. 32359/2022` su PAS | **NON CONFERMATO**: il numero non ha trovato riscontro. Il *principio* è confermato in via PARZIALE (vedi sopra), il numero **non si cita** | 2026-08-23 |
+
+---
+
+## Norme processuali del rito unificato — verificate il 24/08/2026
+
+Aggiunte in append. Verificate sul testo pubblicato in **Gazzetta Ufficiale** (codice di
+procedura civile, testo vigente) e riscontrate su repertori indipendenti concordi.
+
+> **Perché questa sezione esiste.** Il riferimento `rito-e-processo.md` diceva «verifica i
+> termini e gli oneri di allegazione prima di redigere» senza scriverli da nessuna parte. Una
+> verifica rimandata a ogni atto è una verifica che prima o poi salta, e in questo rito ciò che
+> salta si perde per decadenza. Il trattamento completo è in `termini-e-adempimenti.md` e in
+> `dopo-la-prima-udienza.md`.
+
+| Riferimento | Cosa dice | Livello | Verificata |
+|---|---|---|---|
+| `art. 473-bis.12 c.p.c.` | **Forma della domanda.** Esposizione chiara e sintetica dei fatti e degli elementi di diritto; indicazione di altri procedimenti con domande identiche o connesse. Con domande di contributo economico o figli minori si allegano: **dichiarazioni dei redditi degli ultimi tre anni**, documentazione su diritti reali immobiliari, beni mobili registrati e quote sociali, **estratti conto dei rapporti bancari e finanziari degli ultimi tre anni**. Nei procedimenti relativi ai minori si allega il **piano genitoriale** (scuola, percorso educativo, attività extrascolastiche, frequentazioni abituali, vacanze normalmente godute) | CONFERMATA | 2026-08-24 |
+| `art. 473-bis.14 c.p.c.` | **Decreto di fissazione.** Entro 3 giorni dal deposito il presidente nomina il relatore e fissa l'udienza. Fra deposito e udienza **non più di 90 giorni** (120 se notifica all'estero); fra notifica e udienza **non meno di 60 giorni liberi** (90 all'estero); costituzione del convenuto **almeno 30 giorni prima dell'udienza**. Il decreto avverte delle decadenze, dell'obbligo di difesa tecnica, del patrocinio a spese dello Stato e della mediazione familiare | CONFERMATA | 2026-08-24 |
+| `art. 473-bis.16 c.p.c.` | **Costituzione del convenuto.** Comparsa con le indicazioni degli `artt. 167` e `473-bis.12`, **anche a pena di decadenza**: eccezioni processuali e di merito non rilevabili d'ufficio, domande riconvenzionali, altri procedimenti pendenti. Stessi allegati economici e piano genitoriale | CONFERMATA | 2026-08-24 |
+| `art. 473-bis.17 c.p.c.` | **Memorie integrative**, a ritroso dall'udienza. **20 gg** — l'attore prende posizione in modo chiaro e specifico sui fatti del convenuto, modifica o precisa domande e conclusioni a pena di decadenza, propone domande ed eccezioni conseguenti alle difese avversarie, indica mezzi di prova e produce documenti. **10 gg** — il convenuto precisa e modifica domande, eccezioni e conclusioni a pena di decadenza, propone le eccezioni non rilevabili d'ufficio, indica mezzi di prova anche contrari. **5 gg** — l'attore, solo prova contraria | CONFERMATA | 2026-08-24 |
+| `art. 473-bis.22 c.p.c.` | **Provvedimenti temporanei e urgenti.** Il giudice li pronuncia con **ordinanza** quando la conciliazione non riesce o **una parte non compare senza giustificato motivo**, sentite le parti e i difensori e assunte sommarie informazioni. L'ordinanza è **titolo esecutivo** e titolo per l'iscrizione di ipoteca giudiziale, **conserva efficacia anche dopo l'estinzione del processo** finché non sia sostituita, e la decorrenza dei contributi economici può **retroagire alla data della domanda** | CONFERMATA | 2026-08-24 |
+| `art. 473-bis.24 c.p.c.` | **Reclamo dei provvedimenti temporanei e urgenti.** Alla **corte d'appello**, entro il **termine perentorio di dieci giorni** dalla pronuncia del provvedimento in udienza, ovvero dalla comunicazione, o dalla notificazione se anteriore. Le **circostanze sopravvenute si deducono davanti al giudice di merito**. Il collegio decide **entro sessanta giorni** dal deposito, con ordinanza che conferma, modifica o revoca, e provvede sulle spese | CONFERMATA | 2026-08-24 |
+| `art. 473-bis.29 c.p.c.` | **Modificabilità dei provvedimenti.** Sopravvenuti giustificati motivi, le parti possono chiedere **in ogni tempo** la revisione dei provvedimenti a tutela dei minori e in materia di contributi economici | CONFERMATA | 2026-08-24 |
+| `art. 473-bis.51 c.p.c.` | **Procedimento su domanda congiunta.** Ricorso sottoscritto **anche dalle parti**, con la determinazione delle condizioni inerenti alla prole e ai rapporti economici; può regolare in tutto o in parte anche i rapporti patrimoniali. Con figli minori il collegio verifica che le condizioni rispondano al loro interesse e, in caso contrario, fissa udienza e **propone le modifiche** necessarie | CONFERMATA | 2026-08-24 |
+| `art. 6 D.L. 132/2014` (conv. `L. 162/2014`) | **Negoziazione assistita**, applicabile espressamente alle soluzioni consensuali su **affidamento e mantenimento dei figli nati fuori dal matrimonio, e alla loro modifica**. L'accordo raggiunto è trasmesso alla **Procura della Repubblica**: in presenza di figli minori occorre l'**autorizzazione** del pubblico ministero, negli altri casi il nulla osta | CONFERMATA | 2026-08-24 |
+
+> **Le prassi delle singole Procure sulla documentazione da allegare alla negoziazione assistita
+> sono locali e non stanno in questo registro.** Si verificano presso l'ufficio competente prima
+> di avviare la procedura.

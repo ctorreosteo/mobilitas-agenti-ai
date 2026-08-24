@@ -1,12 +1,12 @@
 export const meta = {
   name: 'genera-difesa-famiglia',
-  description: 'Per ogni atto: redazione v1, panel avversariale di 1o livello in parallelo (avvocato della madre, giudice, PM, curatore del minore, CTU, penalista, patrimoniale, prove, cliente, deontologia), 2o livello sulle fonti (prima verifica, poi ampliamento), 3o coerenza, 4o asciugatura, 5o riscrittura in chiaro, 6o revisione di lingua, poi COLLAUDO deterministico delle citazioni con riparazione mirata. Nessun atto arriva alla consegna senza cancello. Resiliente: retry sugli agenti critici e promozione della versione precedente se una sintesi fallisce',
+  description: 'Per ogni atto: redazione v1, panel avversariale di 1o livello in parallelo (avvocato della madre, giudice, PM, curatore del minore, CTU, penalista, patrimoniale, prove, decadenze, negoziatore, cliente, deontologia), 2o livello sulle fonti (prima verifica, poi ampliamento), 3o coerenza, 4o asciugatura, 5o riscrittura in chiaro, 6o revisione di lingua, poi COLLAUDO deterministico — conservazione lungo la catena PIU cancello sulla versione finale — con riparazione mirata. Nessun atto arriva alla consegna senza cancello. Resiliente: retry sugli agenti critici e promozione della versione precedente se una sintesi fallisce',
   whenToUse: 'Produce gli atti difensivi del fascicolo, uno o piu alla volta, con la catena completa di revisione',
   phases: [
     { title: 'Scoperta', detail: 'legge il manifesto dei livelli e le skill realmente presenti' },
     { title: 'Ricerca', detail: 'ricercatore-giurisprudenza verifica e registra le fonti che serviranno' },
     { title: 'Draft', detail: 'skill strategia redige la v1 dell atto' },
-    { title: 'Revisione', detail: 'le dieci lenti di 1o livello, in parallelo' },
+    { title: 'Revisione', detail: 'le dodici lenti di 1o livello, in parallelo' },
     { title: 'Sintesi v2', detail: 'l autore pesa i feedback e riscrive' },
     { title: 'Fonti', detail: '2o livello: prima verifica le citazioni, poi allarga la base' },
     { title: 'Sintesi v3', detail: 'applica i rilievi sulle fonti' },
@@ -16,7 +16,7 @@ export const meta = {
     { title: 'Sintesi v5', detail: 'applica i tagli. E la versione con il contenuto approvato' },
     { title: 'Riscrittura', detail: '5o livello: riscrive tutto in italiano leggibile -> v6' },
     { title: 'Lingua', detail: '6o livello: toglie il burocratese e raddrizza i nessi -> v7' },
-    { title: 'Collaudo', detail: 'script deterministico due volte + collaudatore semantico; riparazione mirata' },
+    { title: 'Collaudo', detail: 'conservazione due volte + cancello sulla finale + collaudatore semantico; riparazione mirata' },
     { title: 'Consegna', detail: 'atto depositabile, mappa delle prove, briefing al cliente' },
   ],
 }
@@ -31,8 +31,10 @@ const CASO = DATI + '/caso.json'
 const REGISTRO = DATI + '/registro-fonti.md'
 const TIMELINE = DATI + '/timeline.md'
 const DEVIAZIONI = DATI + '/deviazioni-dal-metodo.md'
+const SCADENZE = DATI + '/scadenze.md'
 const MANIFESTO = DATI + '/livelli.json'
 const SCRIPT = AUTORE + '/scripts/verifica_citazioni.py'
+const SCRIPT_ATTO = AUTORE + '/scripts/verifica_atto.py'
 
 const RETRIES = 3
 const MAX_RIPARAZIONI = 2
@@ -122,8 +124,8 @@ const COLLAUDO_SCHEMA = {
         type: 'object', additionalProperties: false,
         required: ['tipo', 'sezione', 'riparazione'],
         properties: {
-          tipo: { type: 'string', description: 'INFORMAZIONE_PERSA / CITAZIONE_COMPARSA / CITAZIONE_PERSA / CITAZIONE_NON_REGISTRATA / ETICHETTA_ALZATA / ETICHETTA_RIANCORATA / ALLEGATO_RIANCORATO / DOMANDA_CON_PORTATA_CAMBIATA / QUALIFICAZIONE_CADUTA / VERBO_IRRIGIDITO / DATA_PERSA / HA_RISCRITTO_INVECE_DI_CORREGGERE' },
-          passaggio: { type: 'string', description: 'In quale riscrittura e nata: CHIAREZZA (v5->v6) / LINGUA (v6->v7) / INCERTO' },
+          tipo: { type: 'string', description: 'INFORMAZIONE_PERSA / CITAZIONE_COMPARSA / CITAZIONE_PERSA / CITAZIONE_NON_REGISTRATA / CITAZIONE_NON_CONFERMATA / ETICHETTA_ALZATA / ETICHETTA_RIANCORATA / ETICHETTA_SENZA_GLOSSA / ALLEGATO_RIANCORATO / ALLEGATO_NON_MAPPATO / DOMANDA_CON_PORTATA_CAMBIATA / QUALIFICAZIONE_CADUTA / VERBO_IRRIGIDITO / DATA_PERSA / HA_RISCRITTO_INVECE_DI_CORREGGERE / PIEDE_MANCANTE / PAS_INVOCATA / ATTACCO_ALLA_PERSONA / PIANO_GENITORIALE_ASSENTE / DOCUMENTAZIONE_ECONOMICA_ASSENTE / DOMANDE_NON_IN_PRIMA_PAGINA' },
+          passaggio: { type: 'string', description: 'In quale riscrittura e nata: CHIAREZZA (v5->v6) / LINGUA (v6->v7) / ORIGINE (c era gia prima della v5) / INCERTO' },
           sezione: { type: 'string' },
           v5: { type: 'string' },
           finale: { type: 'string' },
@@ -171,13 +173,14 @@ Restituisci SOLO: quante fonti hai confermato, quante parziali, quante non trova
 const draftPrompt = (slug, tipo) => `Sei IL DIFENSORE. Redigi la v1 dell atto "${tipo}" per la pratica "${slug}".
 
 ## Metodo — leggi tutto prima di scrivere una riga
-${AUTORE}/SKILL.md, e nell ordine i reference: verifica-delle-fonti.md, quadro-normativo.md, rito-e-processo.md, figlio-infra-triennale.md, affidamento-e-collocamento.md, mantenimento-e-spese.md, casa-familiare.md, convivenza-senza-matrimonio.md, penale-della-famiglia.md, prove-e-trappole.md, architettura-atto.md.
+${AUTORE}/SKILL.md, e nell ordine i reference: verifica-delle-fonti.md, quadro-normativo.md, rito-e-processo.md, termini-e-adempimenti.md, figlio-infra-triennale.md, affidamento-e-collocamento.md, mantenimento-e-spese.md, casa-familiare.md, convivenza-senza-matrimonio.md, accordo-e-negoziazione.md, penale-della-famiglia.md, prove-e-trappole.md, dopo-la-prima-udienza.md, architettura-atto.md.
 
 ## I fatti — non inventarne altri
 - ${CASO} : i fatti del caso. I campi null sono DA COMPILARE: non riempirli, elencali.
 - ${TIMELINE} : le date. Una data che non e qui non entra in un atto.
 - ${REGISTRO} : le UNICHE fonti citabili. Nessun numero di sentenza fuori da qui.
 - ${DEVIAZIONI} : dove questo metodo e gia stato trovato sbagliato. Leggilo per non reintrodurre un errore gia corretto.
+- ${SCADENZE} : i termini aperti. Se questo atto ne apre o ne consuma uno, la riga va scritta li.
 
 ## Le regole che non si negoziano
 - Le DOMANDE in prima pagina, numerate, formulate in modo da poter essere COPIATE nel dispositivo. Se il giudice deve riformularle, lo fara al ribasso.
@@ -188,6 +191,8 @@ ${AUTORE}/SKILL.md, e nell ordine i reference: verifica-delle-fonti.md, quadro-n
 - Niente PAS. Si scrivono condotte ostative documentate.
 - Il piede obbligatorio sulla revisione del difensore iscritto all albo.
 - Lunghezza 8-15 pagine, allegati esclusi.
+- SE E UN ATTO INTRODUTTIVO (ricorso o comparsa di risposta), il rito pretende dentro l atto, non come allegati facoltativi: il PIANO GENITORIALE, le DICHIARAZIONI DEI REDDITI DEGLI ULTIMI TRE ANNI, la documentazione patrimoniale, gli ESTRATTI CONTO DEGLI ULTIMI TRE ANNI, e l indicazione di altri procedimenti pendenti (artt. 473-bis.12 e 473-bis.16 c.p.c., verificati). Il piano genitoriale non si compila in tre righe perche il bambino ha un anno: e il documento in cui si MOSTRA di sapere com e fatta la giornata di suo figlio, ed e la risposta migliore alla tesi dell assenza di accudimento paterno.
+- Niente domande RISERVATE. "Ci si riserva di" ha l aspetto della prudenza ed e il modo principale in cui in questo rito si perde una domanda per sempre.
 
 ## Il nodo di questo caso
 Il bambino ha un anno e la convivenza e cessata a quattro mesi dal parto. NON chiedere il collocamento paritetico: chiedi il CALENDARIO PROGRESSIVO CON AUTOMATISMI a date certe. E la domanda che un giudice concede, e toglie al tempo il potere di lavorare contro di noi.
@@ -288,7 +293,7 @@ Prima di consegnare rileggi SOLO i verbi delle affermazioni di fatto: una correz
 
 Restituisci l oggetto strutturato richiesto.`
 
-const collaudoPrompt = (slug, g) => `Sei IL CANCELLO — il collaudo di conservazione e integrita delle citazioni della pratica "${slug}".
+const collaudoPrompt = (slug, g, tipo) => `Sei IL CANCELLO — il collaudo di conservazione e integrita delle citazioni della pratica "${slug}".
 
 ## Metodo
 Leggi e segui INTEGRALMENTE ${g.skill}/SKILL.md.
@@ -300,7 +305,14 @@ python3 ${SCRIPT} ${F(slug).v5} ${F(slug).v6} --registro ${REGISTRO} --delta-min
 
 python3 ${SCRIPT} ${F(slug).v6} ${F(slug).v7} --registro ${REGISTRO} --delta-min -3 --delta-max 5 --min-identita 60 --passaggio LINGUA
 
-Quello che gli script trovano e GIA ACCERTATO: non riverificarlo, riportalo, e per ogni violazione dichiara in quale dei due passaggi e nata.
+## Poi il cancello sulla versione FINALE, da sola
+I due comandi qui sopra confrontano versioni: vedono cosa si e perso, non cosa non c e mai stato. Un atto puo attraversare tutta la catena conservando fedelmente un difetto che aveva dalla v1.
+
+python3 ${SCRIPT_ATTO} ${F(slug).v7} --tipo ${tipo} --registro ${REGISTRO} --prove ${F(slug).prove} --timeline ${TIMELINE}
+
+Riporta i suoi BLOCCANTI come violazioni con passaggio "ORIGINE" (non sono nate in una riscrittura: c erano prima). I suoi AVVISI non sono violazioni: elencali a parte, sono le cose che una macchina non puo decidere.
+
+Quello che gli script trovano e GIA ACCERTATO: non riverificarlo, riportalo, e per ogni violazione dichiara in quale passaggio e nata.
 
 ## Poi la lettura semantica, sull intera catena: ${F(slug).v5} contro ${F(slug).v7}
 Cerca cio che nessun conteggio vede: etichette riancorate a un altro fatto, allegati che ora sostengono un fatto diverso, informazione persa per ASSORBIMENTO (due frasi che ne diventano una che sembra completa), qualificazioni cadute, verbi irrigiditi, e — la piu grave, specifica degli atti — DOMANDE CON LA PORTATA CAMBIATA: una domanda riformulata per chiarezza puo diventare piu ampia o piu stretta senza che nessuno se ne accorga.
@@ -326,6 +338,8 @@ ${viol.map((v, i) => `${i + 1}. [${v.tipo}] (nata in: ${v.passaggio || 'INCERTO'
 - Se la violazione e CITAZIONE_COMPARSA o CITAZIONE_NON_REGISTRATA: TOGLI il numero e lascia il principio. Non cercare di verificarla adesso.
 - Se la violazione e ETICHETTA_ALZATA: riporta l etichetta a quella della v5. Sempre verso il basso, mai verso l alto.
 - Se e DOMANDA_CON_PORTATA_CAMBIATA: riporta la domanda alla portata esatta della v5.
+- Se il passaggio e ORIGINE, il difetto non viene da una riscrittura: c era gia. Non cercarlo nella v5 — va aggiunto o corretto adesso. Vale per il piede mancante, la glossa di un etichetta, l indice degli allegati, il piano genitoriale e la documentazione economica di un atto introduttivo.
+- Se e PAS_INVOCATA o ATTACCO_ALLA_PERSONA: riscrivi il passaggio come CONDOTTA CON LA DATA e l allegato. Non attenuare l aggettivo: toglilo.
 
 ## Output
 Riscrivi ${F(slug).v7} con le riparazioni applicate.
@@ -447,12 +461,16 @@ const results = await pipeline(
     if (L1.length) {
       const fbs = await parallel(L1.map((rv) => () =>
         agent(reviewPrompt(slug, rv, f.v1, ''), { label: `rev1:${rv.key}:${slug}`, phase: 'Revisione', schema: FEEDBACK_SCHEMA, agentType: 'general-purpose' })))
-      log(`Revisione 1o livello ${slug}: ${fbs.filter(Boolean).length}/${L1.length}`)
+      log(`Revisione 1o livello ${slug}: ${fbs.filter(Boolean).length}/${L1.length} lenti`)
     }
     const r = await robustAgent(synthPrompt(slug, f.v1, f.v2, '',
       `## Il conflitto tipico di questo livello
 "avversario" e "penalista" chiedono di togliere un passaggio esposto, "cliente" lo vuole tenere. Vince chi parla la lingua del giudice: se il passaggio non serve a ottenere un provvedimento, ESCE — e la ragione si spiega nel briefing, non nell atto.
-Aggiorna anche ${f.briefing} con cio che le lenti "cliente" e "penalista" hanno chiesto di prevenire.`),
+Aggiorna anche ${f.briefing} con cio che le lenti "cliente" e "penalista" hanno chiesto di prevenire.
+
+## Le due lenti che non discutono il merito
+"decadenze" non esprime preferenze: se dice che una domanda e riservata invece che formulata, o che manca un contenuto che il rito pretende, e sempre un ERRORE e si corregge. Non e un parere.
+"negoziatore" non chiede di indebolire le domande, chiede di renderle accettabili a parita di sostanza. Se un suo rilievo riduce cio che il cliente otterrebbe, e un rilievo sbagliato: scarta quello, tieni la riformulazione. E se ha prodotto una proposta conciliativa, salvala in ${OUT}/${slug}/proposta.md: non entra nell atto, ma e materiale che vale quanto l atto.`),
       { label: `sintesi-v2:${slug}`, phase: 'Sintesi v2', agentType: 'general-purpose' })
     if (!r) await promuovi(f.v1, f.v2, `sintesi v2 non riuscita per ${slug}`)
     else log(`v2 pronta: ${slug}`)
@@ -559,7 +577,7 @@ Il taglio piu dannoso possibile e togliere il dettaglio del calendario perche "s
     }
     const g = GATE[0]
     for (let giro = 1; giro <= MAX_RIPARAZIONI + 1; giro++) {
-      const c = await robustAgent(collaudoPrompt(slug, g), { label: giro === 1 ? `collaudo:${slug}` : `collaudo:${slug}#giro${giro}`, phase: 'Collaudo', schema: COLLAUDO_SCHEMA, agentType: 'general-purpose' }, 2)
+      const c = await robustAgent(collaudoPrompt(slug, g, TIPO), { label: giro === 1 ? `collaudo:${slug}` : `collaudo:${slug}#giro${giro}`, phase: 'Collaudo', schema: COLLAUDO_SCHEMA, agentType: 'general-purpose' }, 2)
       if (!c) {
         log(`ATTENZIONE ${slug}: il collaudo non ha risposto. La finale resta, ma NON e stata verificata`)
         return { ...base, esito: 'NON COLLAUDATA' }

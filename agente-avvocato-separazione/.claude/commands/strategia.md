@@ -11,7 +11,7 @@ Segui la skill `difensore-famiglia-strategia`, e in particolare i riferimenti
 
 **Precondizione**: `/fascicolo` eseguito. Senza sapere cosa si prova, non si sceglie cosa chiedere.
 
-## I nove blocchi, nell'ordine
+## I dieci blocchi, nell'ordine
 
 1. **Il fascicolo** — cosa possiamo provare oggi.
 2. **La cronologia** — cosa è successo, comprese le date scomode.
@@ -23,8 +23,13 @@ Segui la skill `difensore-famiglia-strategia`, e in particolare i riferimenti
 6. **Le vulnerabilità** — dove ci prendono, e cosa facciamo **prima**.
 7. **Il fronte penale** — cosa è aperto, cosa può aprirsi, cosa conviene aprire (quasi sempre:
    niente, adesso).
-8. **La sequenza** — cosa si fa per primo, e perché non il contrario. Con le date.
-9. **Il briefing** — cosa il cliente fa e non fa da domani mattina.
+8. **L'accordo** — cosa si può ottenere per consenso invece che per provvedimento, cosa siamo
+   disposti a concedere, e la proposta scritta. **Non è il piano B**: in un accordo si ottengono
+   cose che un giudice non concede, a cominciare dagli automatismi a date certe. Lo scambio è
+   sempre lo stesso — si concede il gradualismo iniziale, si ottengono gli automatismi.
+9. **La sequenza** — cosa si fa per primo, e perché non il contrario. Con le date, e con i termini
+   che ciascuna mossa apre: ogni termine concreto va in `fascicolo/_dati/scadenze.md`.
+10. **Il briefing** — cosa il cliente fa e non fa da domani mattina.
 
 **Il blocco 4 prima del 5.** Le leve si costruiscono dopo aver visto il colpo, mai prima.
 
@@ -40,6 +45,10 @@ Sono i quattro nodi del caso. Una strategia che non li tratta è incompleta:
   che si paga e si agisce, mai si compensa.
 - **Cosa il cliente deve costruire in sei mesi**: pediatra, nido, percorso di genitorialità,
   ambiente, rete, canale tracciato. È il lavoro che nessun avvocato può fare dopo.
+- **Il piano genitoriale**: il rito lo pretende allegato all'atto introduttivo, e per un bambino di
+  un anno la tentazione è compilarlo in tre righe. È l'errore. È l'unico documento in cui il padre
+  **mostra** di sapere com'è fatta la giornata di suo figlio, ed è la risposta migliore alla tesi
+  dell'assenza di accudimento paterno — perché non la discute, la rende inattuale.
 
 ## Chiusura
 

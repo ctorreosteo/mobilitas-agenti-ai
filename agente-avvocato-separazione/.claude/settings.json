@@ -21,7 +21,10 @@
       "Bash(diff:*)",
       "Bash(git status:*)",
       "Bash(git diff:*)",
-      "Bash(git log:*)"
+      "Bash(git log:*)",
+      "Bash(python3 .claude/skills/difensore-famiglia-strategia/scripts/verifica_atto.py:*)",
+      "Bash(python3 .claude/skills/difensore-famiglia-strategia/scripts/verifica_caso.py:*)",
+      "Bash(python3 scripts/test-hooks.py:*)"
     ],
     "deny": [
       "Bash(git push:*)",
@@ -40,6 +43,10 @@
           {
             "type": "command",
             "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/blocca-condotte-illecite.py\""
+          },
+          {
+            "type": "command",
+            "command": "python3 \"$CLAUDE_PROJECT_DIR/.claude/hooks/blocca-difetti-di-atto.py\""
           }
         ]
       }

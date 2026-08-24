@@ -15,6 +15,8 @@ se ne trovi un difetto, lo segnali e vai avanti.
 3. `fascicolo/_dati/registro-fonti.md` — le uniche fonti citabili.
 4. La strategia della pratica.
 5. `.claude/skills/difensore-famiglia-strategia/references/architettura-atto.md` — la struttura.
+6. `.claude/skills/difensore-famiglia-strategia/references/termini-e-adempimenti.md` — cosa il
+   rito pretende dentro questo tipo di atto, e cosa si perde se non c'è.
 
 ## Le regole che non si negoziano
 
@@ -30,9 +32,28 @@ se ne trovi un difetto, lo segnali e vai avanti.
 - **Si attaccano le condotte con le date, mai la persona.**
 - **Ogni domanda ha la sua traduzione in interesse del minore.** Se non riesci a scriverla, la
   domanda non va nell'atto.
+- **Nessuna domanda riservata.** «Ci si riserva di formulare domanda di…» ha l'aspetto della
+  prudenza ed è il modo principale in cui, in questo rito, una domanda si perde per sempre. Se una
+  domanda va proposta adesso, si propone adesso.
+- **Se è un atto introduttivo** (ricorso o comparsa di risposta), dentro l'atto ci vanno il **piano
+  genitoriale**, le **dichiarazioni dei redditi degli ultimi tre anni**, la documentazione
+  patrimoniale, gli **estratti conto degli ultimi tre anni** e l'indicazione di altri procedimenti
+  pendenti. Non sono allegati utili: sono contenuto dell'atto.
+- **Contestazione specifica, mai generica.** I fatti avversari non contestati in modo chiaro e
+  specifico entrano nel giudizio come pacifici.
 - **Il piede obbligatorio** con la clausola sulla revisione del difensore.
 
 ## Cosa restituisci
 
-L'atto, più tre righe: quali fatti sono rimasti `ALLEGABILE` e perché, quali fonti ti sono
-mancate, e quali domande hai tolto perché non si traducevano nell'interesse del minore.
+L'atto, più quattro righe: quali fatti sono rimasti `ALLEGABILE` e perché, quali fonti ti sono
+mancate, quali domande hai tolto perché non si traducevano nell'interesse del minore, e **quali
+termini questo atto apre o consuma** — che vanno scritti in `fascicolo/_dati/scadenze.md`.
+
+Prima di consegnare, fai girare il cancello: non dipende da te, ed è il suo pregio.
+
+```bash
+python3 .claude/skills/difensore-famiglia-strategia/scripts/verifica_atto.py \
+  <atto.md> --tipo <ricorso|comparsa|memoria|reclamo|istanza> \
+  --registro fascicolo/_dati/registro-fonti.md \
+  --prove <prove.md> --timeline fascicolo/_dati/timeline.md
+```
