@@ -1,0 +1,47 @@
+{
+  "passaggio": "chiarezza",
+  "esito": "NON CONSEGNABILE",
+  "statistiche": {
+    "parole_prima": 18241,
+    "parole_dopo": 18307,
+    "delta_pct": 0.4,
+    "identita_pct": 79.7,
+    "per_te_prima": 8,
+    "per_te_dopo": 8,
+    "slot_prima": 15,
+    "slot_dopo": 15,
+    "uscite_prima": 23,
+    "uscite_dopo": 23,
+    "etichette_prima": 14,
+    "etichette_dopo": 14,
+    "pmid_prima": 63,
+    "pmid_dopo": 63
+  },
+  "violazioni": [
+    {
+      "severita": "BLOCCANTE",
+      "codice": "TABELLE_FUORI_SPECIFICA",
+      "messaggio": "6 righe di tabella superano 4 colonne o 8 parole per cella.",
+      "dettaglio": [
+        "4 col / 9 parole: | Trauma con almeno uno dei cinque criteri di Ottawa | Pronto soccorso",
+        "4 col / 12 parole: | Minore con dolore a ginocchio o coscia, zoppia, rotazione interna d'",
+        "4 col / 9 parole: | Ginocchio gonfio senza febbre, rigidità mattutina oltre 30 minuti | ",
+        "4 col / 11 parole: | Dolore inguinale o profondo d'anca dopo aumento del volume di corsa ",
+        "4 col / 11 parole: | Dolore mediale improvviso e notturno con versamento, over-60 od osso",
+        "4 col / 9 parole: | Episodi in cui la rotula esce, o apprensione rotulea | Ortopedico | "
+      ]
+    },
+    {
+      "severita": "AVVISO",
+      "codice": "PAROLE_FUORI_RANGE",
+      "messaggio": "Il documento ha 18307 parole (appendici escluse): fuori dal range 8000–13000. Non e' un difetto di conservazione: se il superamento c'era gia' in ingresso, il rilievo appartiene al livello di asciugatura, non a chi ha riscritto.",
+      "dettaglio": []
+    },
+    {
+      "severita": "AVVISO",
+      "codice": "GLOSSARIO_TROPPO_LUNGO",
+      "messaggio": "Il glossario ha 41 termini (max 40): la Bibbia è scritta troppo tecnica.",
+      "dettaglio": []
+    }
+  ]
+}
