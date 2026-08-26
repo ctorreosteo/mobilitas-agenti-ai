@@ -1,0 +1,70 @@
+{
+  "passaggio": "chiarezza",
+  "esito": "NON CONSEGNABILE",
+  "statistiche": {
+    "parole_prima": 20341,
+    "parole_dopo": 20658,
+    "delta_pct": 1.6,
+    "identita_pct": 69.0,
+    "per_te_prima": 23,
+    "per_te_dopo": 23,
+    "slot_prima": 15,
+    "slot_dopo": 15,
+    "uscite_prima": 19,
+    "uscite_dopo": 19,
+    "etichette_prima": 12,
+    "etichette_dopo": 12,
+    "pmid_prima": 56,
+    "pmid_dopo": 56
+  },
+  "violazioni": [
+    {
+      "severita": "AVVISO",
+      "codice": "ETICHETTE_RIANCORATE",
+      "messaggio": "1 etichette seguono un testo diverso dalla v5. Può essere solo riformulazione — va guardato dal collaudatore semantico.",
+      "dettaglio": [
+        "IPOTESI: …*(meccanismo coerente, nessuno studio)* — che questo sia un "
+      ]
+    },
+    {
+      "severita": "AVVISO",
+      "codice": "BOX_NON_PREVISTI",
+      "messaggio": "1 tipi di box fuori dai quattro ammessi.",
+      "dettaglio": [
+        "«Nota» (×1)"
+      ]
+    },
+    {
+      "severita": "BLOCCANTE",
+      "codice": "TABELLE_FUORI_SPECIFICA",
+      "messaggio": "7 righe di tabella superano 4 colonne o 8 parole per cella.",
+      "dettaglio": [
+        "3 col / 13 parole: | Bambino che zoppica con febbre, che non carica, o sotto i 3 anni | P",
+        "3 col / 11 parole: | Adolescente con zoppia senza febbre, dolore ad anca, coscia o ginocc",
+        "3 col / 9 parole: | Accorciamento o extrarotazione nuovi in adulto fragile o protesizzat",
+        "3 col / 9 parole: | Storia di neoplasia, con dolore lombare o d'anca nuovo | Medico cura",
+        "3 col / 11 parole: | Dolore lombo-gluteo cronico iniziato prima dei 45 anni, con caratter",
+        "3 col / 9 parole: | Wallwork, 2024 ([38253366](https://pubmed.ncbi.nlm.nih.gov/38253366/",
+        "3 col / 10 parole: | Campbell, 2023 ([36691685](https://pubmed.ncbi.nlm.nih.gov/36691685/"
+      ]
+    },
+    {
+      "severita": "AVVISO",
+      "codice": "PAROLE_FUORI_RANGE",
+      "messaggio": "Il documento ha 20658 parole (appendici escluse): fuori dal range 8000–13000. Non e' un difetto di conservazione: se il superamento c'era gia' in ingresso, il rilievo appartiene al livello di asciugatura, non a chi ha riscritto.",
+      "dettaglio": []
+    },
+    {
+      "severita": "AVVISO",
+      "codice": "GLOSSARIO_TROPPO_LUNGO",
+      "messaggio": "Il glossario ha 54 termini (max 40): la Bibbia è scritta troppo tecnica.",
+      "dettaglio": []
+    },
+    {
+      "severita": "BLOCCANTE",
+      "codice": "SCRIPT_TROPPO_LUNGO",
+      "messaggio": "Lo script per il paziente ha 101 parole (max 100).",
+      "dettaglio": []
+    }
+  ]
+}
