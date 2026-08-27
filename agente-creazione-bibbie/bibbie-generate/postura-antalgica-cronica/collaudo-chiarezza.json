@@ -1,0 +1,40 @@
+{
+  "passaggio": "chiarezza",
+  "esito": "NON CONSEGNABILE",
+  "statistiche": {
+    "parole_prima": 20862,
+    "parole_dopo": 21097,
+    "delta_pct": 1.1,
+    "identita_pct": 68.8,
+    "per_te_prima": 23,
+    "per_te_dopo": 23,
+    "slot_prima": 15,
+    "slot_dopo": 15,
+    "uscite_prima": 26,
+    "uscite_dopo": 26,
+    "etichette_prima": 18,
+    "etichette_dopo": 18,
+    "pmid_prima": 74,
+    "pmid_dopo": 74
+  },
+  "violazioni": [
+    {
+      "severita": "AVVISO",
+      "codice": "PAROLE_FUORI_RANGE",
+      "messaggio": "Il documento ha 21097 parole (appendici escluse): fuori dal range 8000–13000. Non e' un difetto di conservazione: se il superamento c'era gia' in ingresso, il rilievo appartiene al livello di asciugatura, non a chi ha riscritto.",
+      "dettaglio": []
+    },
+    {
+      "severita": "AVVISO",
+      "codice": "GLOSSARIO_TROPPO_LUNGO",
+      "messaggio": "Il glossario ha 42 termini (max 40): la Bibbia è scritta troppo tecnica.",
+      "dettaglio": []
+    },
+    {
+      "severita": "BLOCCANTE",
+      "codice": "SCRIPT_TROPPO_LUNGO",
+      "messaggio": "Lo script per il paziente ha 105 parole (max 100).",
+      "dettaglio": []
+    }
+  ]
+}
