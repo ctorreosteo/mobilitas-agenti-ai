@@ -1,0 +1,44 @@
+{
+  "passaggio": "chiarezza",
+  "esito": "NON CONSEGNABILE",
+  "statistiche": {
+    "parole_prima": 20603,
+    "parole_dopo": 20772,
+    "delta_pct": 0.8,
+    "identita_pct": 80.3,
+    "per_te_prima": 24,
+    "per_te_dopo": 24,
+    "slot_prima": 15,
+    "slot_dopo": 15,
+    "uscite_prima": 25,
+    "uscite_dopo": 25,
+    "etichette_prima": 0,
+    "etichette_dopo": 0,
+    "pmid_prima": 60,
+    "pmid_dopo": 60
+  },
+  "violazioni": [
+    {
+      "severita": "BLOCCANTE",
+      "codice": "TABELLE_FUORI_SPECIFICA",
+      "messaggio": "3 righe di tabella superano 4 colonne o 8 parole per cella.",
+      "dettaglio": [
+        "3 col / 12 parole: | Barba 2015 (25500424) | Diaframma e parete durante la distensione, 4",
+        "3 col / 12 parole: | Barba 2024 (38467383) | Biofeedback sul movimento della parete contr",
+        "3 col / 10 parole: | Attali 2013 (23981319) | Osteopatia viscerale contro placebo, 31 paz"
+      ]
+    },
+    {
+      "severita": "AVVISO",
+      "codice": "PAROLE_FUORI_RANGE",
+      "messaggio": "Il documento ha 20772 parole (appendici escluse): fuori dal range 8000–13000. Non e' un difetto di conservazione: se il superamento c'era gia' in ingresso, il rilievo appartiene al livello di asciugatura, non a chi ha riscritto.",
+      "dettaglio": []
+    },
+    {
+      "severita": "BLOCCANTE",
+      "codice": "SCRIPT_TROPPO_LUNGO",
+      "messaggio": "Lo script per il paziente ha 112 parole (max 100).",
+      "dettaglio": []
+    }
+  ]
+}
