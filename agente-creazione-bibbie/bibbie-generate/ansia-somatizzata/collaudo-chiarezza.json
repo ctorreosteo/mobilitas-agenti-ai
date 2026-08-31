@@ -1,0 +1,49 @@
+{
+  "passaggio": "chiarezza",
+  "esito": "NON CONSEGNABILE",
+  "statistiche": {
+    "parole_prima": 21537,
+    "parole_dopo": 21674,
+    "delta_pct": 0.6,
+    "identita_pct": 77.1,
+    "per_te_prima": 10,
+    "per_te_dopo": 10,
+    "slot_prima": 15,
+    "slot_dopo": 15,
+    "uscite_prima": 36,
+    "uscite_dopo": 36,
+    "etichette_prima": 0,
+    "etichette_dopo": 0,
+    "pmid_prima": 58,
+    "pmid_dopo": 58
+  },
+  "violazioni": [
+    {
+      "severita": "BLOCCANTE",
+      "codice": "TABELLE_FUORI_SPECIFICA",
+      "messaggio": "10 righe di tabella superano 4 colonne o 8 parole per cella.",
+      "dettaglio": [
+        "4 col / 11 parole: | Dolore toracico in corso a riposo, o sotto sforzo con sudorazione | ",
+        "4 col / 16 parole: | Deficit neurologico focale, cefalea improvvisa, o sintomi neurologic",
+        "4 col / 20 parole: | Intento o piano suicidario, mezzi disponibili, atto recente, o perso",
+        "4 col / 12 parole: | Pensieri di farsi del male senza piano né intento | Medico curante, ",
+        "4 col / 22 parole: | Palpitazioni a inizio e fine improvvisi, regolari, che il paziente s",
+        "4 col / 13 parole: | Russamento con pause riferite dal partner, risvegli con soffocamento",
+        "4 col / 16 parole: | Nodo in gola con disfagia progressiva, odinofagia, disfonia oltre 3 ",
+        "4 col / 10 parole: | Dispnea inspiratoria episodica con stridore o voce alterata, spirome"
+      ]
+    },
+    {
+      "severita": "AVVISO",
+      "codice": "PAROLE_FUORI_RANGE",
+      "messaggio": "Il documento ha 21674 parole (appendici escluse): fuori dal range 8000–13000. Non e' un difetto di conservazione: se il superamento c'era gia' in ingresso, il rilievo appartiene al livello di asciugatura, non a chi ha riscritto.",
+      "dettaglio": []
+    },
+    {
+      "severita": "AVVISO",
+      "codice": "GLOSSARIO_TROPPO_LUNGO",
+      "messaggio": "Il glossario ha 46 termini (max 40): la Bibbia è scritta troppo tecnica.",
+      "dettaglio": []
+    }
+  ]
+}
