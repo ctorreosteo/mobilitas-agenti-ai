@@ -1,0 +1,66 @@
+{
+  "passaggio": "chiarezza",
+  "esito": "NON CONSEGNABILE",
+  "statistiche": {
+    "parole_prima": 21326,
+    "parole_dopo": 21426,
+    "delta_pct": 0.5,
+    "identita_pct": 68.2,
+    "per_te_prima": 22,
+    "per_te_dopo": 22,
+    "slot_prima": 15,
+    "slot_dopo": 15,
+    "uscite_prima": 12,
+    "uscite_dopo": 12,
+    "etichette_prima": 15,
+    "etichette_dopo": 15,
+    "pmid_prima": 57,
+    "pmid_dopo": 57
+  },
+  "violazioni": [
+    {
+      "severita": "AVVISO",
+      "codice": "ETICHETTE_RIANCORATE",
+      "messaggio": "2 etichette seguono un testo diverso dalla v5. Può essere solo riformulazione — va guardato dal collaudatore semantico.",
+      "dettaglio": [
+        "PROBABILE: …*(razionale forte, prove parziali)*. Il grado A c'è ma poggi",
+        "PROBABILE: …*(razionale forte, prove parziali)*. In 35 pazienti con dolo"
+      ]
+    },
+    {
+      "severita": "AVVISO",
+      "codice": "BOX_NON_PREVISTI",
+      "messaggio": "2 tipi di box fuori dai quattro ammessi.",
+      "dettaglio": [
+        "«Condizioni spesso associate» (×1)",
+        "«Il peso di questo capitolo, dichiarato» (×1)"
+      ]
+    },
+    {
+      "severita": "BLOCCANTE",
+      "codice": "TABELLE_FUORI_SPECIFICA",
+      "messaggio": "7 righe di tabella superano 4 colonne o 8 parole per cella.",
+      "dettaglio": [
+        "3 col / 17 parole: | Piede caldo, gonfio, arrossato in un diabetico o in chi ha la pianta",
+        "3 col / 11 parole: | Pianta insensibile con cute alterata, callo sotto il tallone o lesio",
+        "3 col / 9 parole: | Dolore dopo aumento netto di corsa, compressione laterale positiva |",
+        "3 col / 16 parole: | Dolore senza trauma sopra i 60 anni, o in osteoporotico o diabetico,",
+        "3 col / 10 parole: | Parestesie, ipoestesia nella pianta, o sintomo che risale lungo l'ar",
+        "3 col / 15 parole: | Psoriasi, malattia infiammatoria intestinale, uveite, dattilite, alt",
+        "3 col / 9 parole: | Educazione e counseling su esercizio per la massa magra | E | In par"
+      ]
+    },
+    {
+      "severita": "AVVISO",
+      "codice": "PAROLE_FUORI_RANGE",
+      "messaggio": "Il documento ha 21426 parole (appendici escluse): fuori dal range 8000–13000. Non e' un difetto di conservazione: se il superamento c'era gia' in ingresso, il rilievo appartiene al livello di asciugatura, non a chi ha riscritto.",
+      "dettaglio": []
+    },
+    {
+      "severita": "AVVISO",
+      "codice": "GLOSSARIO_TROPPO_LUNGO",
+      "messaggio": "Il glossario ha 45 termini (max 40): la Bibbia è scritta troppo tecnica.",
+      "dettaglio": []
+    }
+  ]
+}
