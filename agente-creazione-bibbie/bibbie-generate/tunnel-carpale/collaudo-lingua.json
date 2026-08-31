@@ -1,0 +1,52 @@
+{
+  "passaggio": "lingua",
+  "esito": "NON CONSEGNABILE",
+  "statistiche": {
+    "parole_prima": 17485,
+    "parole_dopo": 17664,
+    "delta_pct": 1.0,
+    "identita_pct": 97.1,
+    "per_te_prima": 8,
+    "per_te_dopo": 8,
+    "slot_prima": 15,
+    "slot_dopo": 15,
+    "uscite_prima": 23,
+    "uscite_dopo": 25,
+    "etichette_prima": 1,
+    "etichette_dopo": 1,
+    "pmid_prima": 75,
+    "pmid_dopo": 75
+  },
+  "violazioni": [
+    {
+      "severita": "BLOCCANTE",
+      "codice": "NUMERI_INVENTATI",
+      "messaggio": "1 valori numerici compaiono solo nella v6.",
+      "dettaglio": [
+        "7giorni (×2)"
+      ]
+    },
+    {
+      "severita": "AVVISO",
+      "codice": "BOX_NON_PREVISTI",
+      "messaggio": "3 tipi di box fuori dai quattro ammessi.",
+      "dettaglio": [
+        "«E la manovra misurata non era questa» (×1)",
+        "«Il rachide cervicale» (×1)",
+        "«Il polso stesso» (×1)"
+      ]
+    },
+    {
+      "severita": "AVVISO",
+      "codice": "PAROLE_FUORI_RANGE",
+      "messaggio": "Il documento ha 17664 parole (appendici escluse): fuori dal range 8000–13000. Non e' un difetto di conservazione: se il superamento c'era gia' in ingresso, il rilievo appartiene al livello di asciugatura, non a chi ha riscritto.",
+      "dettaglio": []
+    },
+    {
+      "severita": "AVVISO",
+      "codice": "GLOSSARIO_TROPPO_LUNGO",
+      "messaggio": "Il glossario ha 42 termini (max 40): la Bibbia è scritta troppo tecnica.",
+      "dettaglio": []
+    }
+  ]
+}

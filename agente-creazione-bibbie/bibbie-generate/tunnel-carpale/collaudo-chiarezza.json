@@ -1,0 +1,55 @@
+{
+  "passaggio": "chiarezza",
+  "esito": "NON CONSEGNABILE",
+  "statistiche": {
+    "parole_prima": 17305,
+    "parole_dopo": 17485,
+    "delta_pct": 1.0,
+    "identita_pct": 72.8,
+    "per_te_prima": 8,
+    "per_te_dopo": 8,
+    "slot_prima": 15,
+    "slot_dopo": 15,
+    "uscite_prima": 23,
+    "uscite_dopo": 23,
+    "etichette_prima": 1,
+    "etichette_dopo": 1,
+    "pmid_prima": 75,
+    "pmid_dopo": 75
+  },
+  "violazioni": [
+    {
+      "severita": "AVVISO",
+      "codice": "BOX_NON_PREVISTI",
+      "messaggio": "3 tipi di box fuori dai quattro ammessi.",
+      "dettaglio": [
+        "«E la manovra misurata non era questa» (×1)",
+        "«Il rachide cervicale» (×1)",
+        "«Il polso stesso» (×1)"
+      ]
+    },
+    {
+      "severita": "BLOCCANTE",
+      "codice": "TABELLE_FUORI_SPECIFICA",
+      "messaggio": "4 righe di tabella superano 4 colonne o 8 parole per cella.",
+      "dettaglio": [
+        "4 col / 9 parole: | Trauma recente del polso, dolore che cresce a ore | Pronto soccorso ",
+        "4 col / 11 parole: | Ipotrofia tenar o forza in caduta **con** deficit sensitivo del medi",
+        "4 col / 11 parole: | Debolezza o atrofia **senza** deficit sensitivo, o fuori dal territo",
+        "4 col / 9 parole: | Goffaggine di **entrambe** le mani, andatura insicura, disturbi sfin"
+      ]
+    },
+    {
+      "severita": "AVVISO",
+      "codice": "PAROLE_FUORI_RANGE",
+      "messaggio": "Il documento ha 17485 parole (appendici escluse): fuori dal range 8000–13000. Non e' un difetto di conservazione: se il superamento c'era gia' in ingresso, il rilievo appartiene al livello di asciugatura, non a chi ha riscritto.",
+      "dettaglio": []
+    },
+    {
+      "severita": "AVVISO",
+      "codice": "GLOSSARIO_TROPPO_LUNGO",
+      "messaggio": "Il glossario ha 42 termini (max 40): la Bibbia è scritta troppo tecnica.",
+      "dettaglio": []
+    }
+  ]
+}
