@@ -1,0 +1,41 @@
+{
+  "permissions": {
+    "additionalDirectories": [
+      "/Users/carlitos/mobilitas-frontend",
+      "/Users/carlitos/mobilitas-backend"
+    ],
+    "allow": [
+      "Bash(git status:*)",
+      "Bash(git diff:*)",
+      "Bash(git log:*)",
+      "Bash(git show:*)",
+      "Bash(npm run typecheck)",
+      "Bash(npm run lint)",
+      "Bash(npm run build)",
+      "Bash(./mvnw -q -DskipTests compile)",
+      "Bash(curl -s -H * https://api.clickup.com/api/v2/list/901216135913/task*)",
+      "Bash(curl -s -H * https://api.clickup.com/api/v2/task/*)",
+      "Bash(git restore -- *)",
+      "Bash(git status --porcelain)",
+      "Bash(mkdir -p /tmp/dev-hq-*)"
+    ],
+    "deny": [
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(git checkout:*)",
+      "Bash(git switch:*)",
+      "Bash(git branch:*)",
+      "Bash(git reset:*)",
+      "Bash(git rebase:*)",
+      "Bash(git merge:*)",
+      "Bash(git stash:*)",
+      "Bash(curl -X POST*api.clickup.com*)",
+      "Bash(curl -X PUT*api.clickup.com*)",
+      "Bash(curl -X DELETE*api.clickup.com*)",
+      "Bash(git clean:*)",
+      "Bash(git restore --staged:*)",
+      "Bash(git restore --source:*)",
+      "Bash(git apply:*)"
+    ]
+  }
+}
