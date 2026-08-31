@@ -1,0 +1,83 @@
+# Feedback — Revisore Medico Specialista (1º livello)
+
+**Documento revisionato:** `bibbie-generate/problemi-posturali/v1-bibbia.md` (v1, 29 agosto 2026), con la Mappa `v1-mappa.md` come riscontro. Nessun altro documento è oggetto di questa revisione.
+
+LENTE: Medico Specialista — Fisiatra (Medicina Fisica e Riabilitativa), pratica in patologia vertebrale, con riferimento all'ortopedia vertebrale per la deformità. La condizione non è in tabella: in Italia il «problema posturale» arriva di norma al fisiatra, e passa all'ortopedico vertebrale quando diventa deformità.
+
+CONDIZIONE: problemi posturali (Bibbia-ombrello)
+
+---
+
+## RICERCA SVOLTA
+
+Ho verificato in questa sessione, su PubMed via E-utilities, **tutti i 36 PMID** dell'Appendice B: **esistono tutti**, e autore, anno, rivista e titolo corrispondono in 35 casi su 36 (l'eccezione è il titolo della fonte 40, vedi PREFERENZE). Nessun PMID inventato.
+
+Ho letto per intero l'abstract di sedici lavori portanti. **Corrispondono al risultato attribuito**, e in alcuni casi con una fedeltà che non trovo spesso: Christensen 2008 (nessuna prova forte di associazione, OR 1,8–3,7 per la funzione, OR 1,40 per la morte, «unlikely to be causal»); Lewis 2005 (120 soggetti, crossover con controllo placebo, tutte le componenti posturali cambiate, escursione aumentata, **intensità del dolore invariata**, punto della corsa in cui il dolore compare significativamente più alto); Karachalios 1999 (sensibilità 84,37%, specificità 93,44%, 44 su 121 deformità sotto i 10° progredite di ≥5°); Katzman 2017 (Cobb radiografico p = 0,09, cifometro −4,8°, n = 101); Chu 2023 (960.140 sedute, due eventi gravi, entrambi fratture costali in donne >60 con osteoporosi, 0,21/100.000); Koo 2013 (MDC 0,54 kg/cm² — ed è davvero quello dell'algometria **manuale**, non della computerizzata); Richards 2021; Hodges e Gandevia 2000; Laborde 2022; Kent 2023; Ferreira 2016; Chen 2024; Swain 2020; Geneen 2017; Gross 2015; Javdaneh 2026.
+
+Ho controllato le linee guida di riferimento: SOSORT 2016 (pubblicate 2018) sono tuttora la versione corrente — la citazione non è superata. Ho verificato i criteri diagnostici di Scheuermann e la gestione della sindrome della cauda equina.
+
+**Tre riscontri contrari.** Gross 2015 (Cochrane CD004249) **non misura l'escursione articolare**: i suoi esiti sono dolore, funzione, disabilità, soddisfazione, qualità di vita ed effetto globale percepito. Geneen 2017 conclude testualmente «The quality of the evidence examining physical activity and exercise for chronic pain is **low**», con effetti «mostly of small-to-moderate effect, and **not consistent** across the reviews». Javdaneh 2026 conclude «findings are **suggestive rather than definitive**» per eterogeneità sostanziale e rischio di bias variabile — ed è un *online ahead of print* di giugno 2026.
+
+---
+
+## ETICHETTE DA CORREGGERE
+
+**1.** Capitolo: «Perché le mani possono cambiare qualcosa», primo meccanismo | Affermazione: *«l'aumento di escursione, che è l'effetto meglio documentato della terapia manuale sul rachide (Gross, Cochrane 2015)»* | Etichetta attuale: **PROBABILE** | Etichetta corretta: **IPOTESI**, oppure PROBABILE con un'altra fonte | Perché: la revisione Cochrane citata non ha l'escursione fra i propri esiti. Sostiene la manipolazione **toracica** contro controllo inattivo su dolore e funzione (SMD −1,26 e −1,40, qualità moderata, con funnel plot che suggerisce bias di pubblicazione) e dichiara che per la manipolazione cervicale «results are few and diverse». È la sola gamba su cui poggia il PROBABILE del meccanismo più solido del documento, e non regge il peso che le è stato messo sopra.
+
+**2.** Capitolo: «La lettura osteopatica», Metabolico-Energetico | Affermazione: *«che l'attività fisica riduca la gravità del dolore e migliori la funzione fisica nel dolore cronico dell'adulto»* | Etichetta attuale: **DIMOSTRATO** | Etichetta corretta: **PROBABILE** | Perché: la panoramica Cochrane conclude che la qualità delle prove è bassa e che gli effetti non sono coerenti fra le revisioni. Il box stesso lo scrive («qualità da bassa a molto bassa»), e poi appiccica sopra la parola «solidi». Le due metà si contraddicono nella stessa riga. Nota di coerenza interna: Ferreira 2016 — undici RCT, qualità bassa — riceve PROBABILE; Geneen, con la stessa qualità dichiarata, riceve DIMOSTRATO.
+
+**3.** Capitolo: «Cosa può fare il paziente da solo», Strumento 1 (e i suoi rimandi in «Come si usa questa Bibbia» e «Cosa dice la scienza») | Affermazione: *«che l'esercizio specifico riduca il dolore cervicale cronico»* | Etichetta attuale: **DIMOSTRATO** | Etichetta corretta: **PROBABILE** | Perché: gli autori scrivono che i risultati sono «suggestivi, non definitivi». Va aggiunto anche il comparatore, che oggi manca: lo SMD −0,97 è **contro altri interventi**, non contro nessun trattamento. Il punto pesa perché è quel DIMOSTRATO ad aprire il capitolo («il capitolo esiste perché la condizione di attivazione è soddisfatta»): se scende a PROBABILE, il capitolo resta in piedi lo stesso grazie a Kent 2023, e va detto lì.
+
+**4.** Capitolo: «Le strutture in gioco» → «La chicca» (e i rimandi nel quinto meccanismo e nel modello Respiratorio-Circolatorio) | Affermazione: *«il diaframma resta contratto al 78% del picco inspiratorio»* | Etichetta attuale: **DIMOSTRATO** | Etichetta corretta: **PROBABILE**, o almeno DIMOSTRATO con la numerosità dichiarata | Perché: Hodges e Gandevia hanno registrato l'EMG intramuscolare del diaframma **in quattro soggetti**, con deviazione standard ±17%. Il documento dichiara «sette volontari sani» per Lee e «ventitré adulti sani» per Preece, e per l'unico studio che cita cinque volte non dice quanti erano. Quattro soggetti e i 492 pazienti di Kent non possono portare la stessa parola.
+
+---
+
+## ERRORI
+
+**1. La sindrome della cauda equina è sotto-triagiata, e il tempo sbagliato viene eseguito.** | Capitolo: «Dove finisce il nostro campo», riga estesa «Deficit neurologico progressivo» | Prova: i **disturbi sfinterici** compaiono una sola volta in tutto il documento, dentro un elenco che li mette accanto alla mielopatia lentamente progressiva («andatura incerta che peggiora nei mesi»), con destinatario Neurochirurgia e tempo «Invio, non attendere». Disfunzione vescicale o rettale, anestesia a sella e sintomi bilaterali agli arti inferiori configurano una **emergenza chirurgica**: la letteratura di riferimento richiede invio in Pronto Soccorso in giornata, perché il recupero neurologico dipende dalle ore. L'anestesia a sella non è nominata da nessuna parte. Il vostro stesso vocabolario dei tempi lo dice: «un'urgenza sbagliata è più pericolosa di una bandiera mancante, perché viene eseguita». | Correzione: **scorporare** una riga propria dalla tabella — *«Disturbi sfinterici di nuova insorgenza, anestesia a sella o sintomi bilaterali agli arti inferiori | 112 / Pronto Soccorso | 112 | ROSSO»* — e togliere «disturbi sfinterici» dall'elenco della mielopatia, che resta correttamente su «Invio, non attendere».
+
+**2. Il dorso curvo rigido dell'adolescente non è nel documento, e questa è la Bibbia in cui doveva esserci.** | Capitolo: «Che cos'è davvero» → «Cosa non è», e «Non è una condizione sola: i pattern» → «La deviazione in età evolutiva» | Prova: la cifosi di Scheuermann — cuneizzazione anteriore >5° su tre vertebre adiacenti — è descritta in letteratura come **abitualmente scambiata per cattiva postura**, colpisce fra i 12 e i 17 anni e si distingue dalla cifosi posturale con un solo segno clinico: la cifosi posturale si corregge in estensione, quella di Scheuermann resta rigida. Il vostro impianto sull'età evolutiva è costruito interamente sulla scoliosi (gibbo, test di Adams, Karachalios, SOSORT): un quindicenne con dorso rotondo rigido e nessuna scoliosi non attiva nessuna riga della tabella, non compare in «Cosa non è», e incontra invece un documento che gli insegna che la forma non è il bersaglio e che il problema è l'escursione. Qui non manca un'istruzione: manca una conoscenza, e il lettore non saprà nemmeno di doverla cercare. | Correzione: aggiungere Scheuermann a «Cosa non è» con il criterio radiografico, e aggiungere alla riga «Curva nuova in adolescente in crescita» il secondo innesco — *«o cifosi dorsale che non si corregge in estensione»* — con lo stesso destinatario e gli stessi tempi. Basta una riga di prosa nel pattern «Deviazione in età evolutiva» per dire che in età evolutiva si guardano due cose, la rotazione al piegamento **e** la rigidità in estensione.
+
+**3. La storia naturale è dichiarata a parole e mai con un numero, e il numero cadrebbe esattamente dentro la finestra in cui vi giudicate.** | Capitolo: «Che cos'è davvero» → «Quanto è diffusa, e come evolve da sola» | Prova: la sezione dice *«fluttua, migliora e ritorna, e una parte del miglioramento che vedrai appartiene a quella fluttuazione»* — ed è l'unica affermazione portante del documento senza una fonte, in venti pagine dove tutto il resto porta un PMID. Il dato esiste: nella meta-analisi di 33 coorti d'inizio e 11.166 partecipanti, nei pazienti con **dolore persistente** il punteggio medio di dolore scende da 51/100 al basale a **33 a sei settimane** e a 26 a ventisei settimane, senza che nulla sia attribuibile a un trattamento (Menezes Costa, *CMAJ* 2012, PMID 22586331). Sei settimane è il tetto del vostro GIALLO ed è la finestra in cui rimisurate i marker; il vostro criterio di successo (+30% sui minuti di tolleranza) è stato scelto «sopra l'oscillazione attesa» senza che l'oscillazione attesa sia mai quantificata. Così com'è, il documento non può distinguere il proprio effetto dal decorso. | Correzione: mettere il numero e la fonte nella sezione, e richiamarlo una volta sola in «Come ragiono davanti a questo paziente», dove si dichiara la soglia del marker: la soglia va giustificata **contro** il decorso spontaneo, non solo contro l'errore dello strumento.
+
+---
+
+## RISCHI
+
+**1. Il numero sulla sicurezza è un pavimento, non una stima — e la conoscenza che ne discende manca.** | Capitolo: «Perché le mani possono cambiare qualcosa», box Attenzione | Perché è attaccabile: lo 0,21 per 100.000 viene da un'analisi **retrospettiva di un registro reclami** in trenta cliniche chiropratiche di Hong Kong, firmata dai clinici di quelle cliniche. La sorveglianza passiva sottostima per costruzione: quel numero è il minimo compatibile con i dati, non l'incidenza. Più importante: i due soli eventi gravi sono avvenuti in **donne over 60 con osteoporosi**, cioè esattamente la popolazione che voi isolate come GIALLO PRIORITARIO — e il documento non scrive mai la conoscenza che ne segue, la rimanda tutta alla Procedura. La Mappa, invece, la scrive («niente alta velocità e niente leve lunghe»): la conoscenza sta nel foglio di sintesi e non nel documento che la deve insegnare. | Mitigazione: qualificare il numero in mezza riga («sorveglianza passiva, stima di minimo») e portare dentro la Bibbia la frase che già sta nella Mappa — che l'accoppiata documentata di danno è torace osteoporotico più spinta ad alta velocità. È conoscenza del pericolo, non una dose: sta nel vostro perimetro.
+
+**2. «L'intervento migliore migliora dolore e funzione senza spostare la misura posturale» è smentito da due fonti vostre.** | Capitolo: «Come ragiono davanti a questo paziente», box Attenzione sui marker (e ripreso nel consenso) | Perché è attaccabile: Javdaneh 2026 riporta un miglioramento **moderato dell'angolo cranio-vertebrale** (SMD 0,51) e Chen 2024 scrive che «the patient's head forward posture appeared to be corrected after scapular treatment». Katzman regge sul Cobb radiografico, non sulla misura di forma in generale — e nello stesso studio la misura di superficie **si è mossa** di 4,8 gradi. Chi legge con gli abstract accanto trova la contraddizione in dieci minuti, e voi state usando quell'argomento per fondare il consenso. | Mitigazione: la conclusione (nessuna misura di forma è un marker) è giusta e va tenuta; è il motivo che va riscritto. I motivi che sopravvivono sono gli altri due che già avete — la differenza fra sani e malati su queste misure è dell'ordine dell'errore dello strumento, e la forma non traccia il sintomo. Il primo motivo, così come è formulato, va tolto o ristretto al Cobb radiografico.
+
+**3. La rete infettiva è stretta.** | Capitolo: «Dove finisce il nostro campo», tabella | Perché è attaccabile: l'unico innesco infettivo è «deviazione acuta con febbre». La spondilodiscite e l'ascesso epidurale si presentano di norma come **dolore rachideo nuovo, ingravescente e non posizionale con febbre**, senza alcuna deviazione visibile: la vostra riga chiede un segno che quei quadri spesso non hanno. Mancano anche del tutto i fattori di rischio dell'ospite (immunodepressione, diabete, uso di sostanze per via endovenosa, batteriemia o procedura invasiva recente, cortisone cronico) e il calo ponderale non spiegato, che è il compagno abituale della bandiera oncologica che invece avete. Il ripiego «dolore notturno costante, non posizionale» esiste, ma manda al curante in urgenza, non in Pronto Soccorso. | Mitigazione: allargare la riga a *«dolore rachideo nuovo e ingravescente con febbre o con fattore di rischio infettivo»* con uscita Pronto Soccorso, e aggiungere il calo ponderale non spiegato alla riga oncologica. Restano undici righe più una: la tabella non si allunga in modo sensibile.
+
+---
+
+## PREFERENZE
+
+**1.** Appendice B, fonte 40: il titolo di Koo 2013 è riportato come *«Reliability and minimal detectable change of pressure pain threshold measurement»*; il titolo reale è *«Test-retest reliability, repeatability, and sensitivity of an automated deformation-controlled indentation on pressure pain threshold measurement»*. Il valore 0,54 kg/cm² e l'attribuzione all'algometria manuale sono invece corretti — ho controllato: è la colonna manuale, non quella computerizzata. Correggere il titolo, in un documento che si fa verificare fonte per fonte.
+
+**2.** Riga «Rigidità mattutina lunga sotto i 45 anni»: il profilo di dolore infiammatorio da solo è il criterio meno discriminante che ASAS riconosca. Se aggiungete tre parole — uveite, psoriasi o malattia infiammatoria intestinale, e buona risposta ai FANS — la riga passa da sospetto a invio motivato, e il reumatologo che la riceve capisce perché gliel'avete mandato.
+
+---
+
+## REGGEREBBE SULLA MIA SCRIVANIA?
+
+Mi farebbe alzare un sopracciglio una cosa sola, ed è quella che conta: **i disturbi sfinterici trattati come un invio ambulatoriale.** Se mi torna indietro un paziente che ha perso il controllo vescicale e ha aspettato l'appuntamento in neurochirurgia, non ci sono venti pagine oneste che tengano. Al secondo posto metto l'adolescente con il dorso rigido, che è il caso in cui questo documento, per come è costruito, spinge attivamente nella direzione sbagliata: insegna a non guardare la forma proprio nell'unico scenario in cui la forma è la diagnosi.
+
+Quello che invece mi farebbe pensare che in quello studio sanno di cosa parlano è quasi tutto il resto, e lo dico senza cortesia di circostanza. Un documento che apre il capitolo sulla scienza dichiarando che «i dati migliori che esistono sono quelli che restringono le nostre promesse», che cita Lewis 2005 e Richards 2021 **contro** il proprio interesse commerciale, che scrive «se il tuo unico reperto è una forma, non hai un mandato — hai una fotografia», e che vieta esplicitamente al proprio operatore di dire «è solo posturale», non è materiale promozionale. È un documento clinico. Non me ne arrivano molti così.
+
+---
+
+## TIENE
+
+Il confine di atto in «Dove finisce il nostro campo» — la distinzione fra reperto e diagnosi, il divieto di dichiarare funzionale una deviazione, il «reperto positivo giustifica il lavoro, non sostituisce l'inquadramento» detto al paziente **in una frase sola** — è la parte migliore del documento e non va toccata da nessuno.
+
+Il Passo 0 farmacologico è corretto e va protetto così com'è: guardare l'elenco, riconoscere le tre famiglie, segnalare per iscritto al prescrittore, non commentare e non consigliare sospensioni. È esattamente come vorrei che si comportasse chi vede i miei pazienti.
+
+L'esclusione delle misure di forma dai marker e l'ancoraggio dell'esito a gradi, minuti e kg/cm² sono la scelta che rende questo documento difendibile: la conclusione va tenuta anche se il motivo va riscritto (RISCHIO 2).
+
+---
+
+## VERDETTO: Da correggere
+
+L'impianto è solido e le fonti sono reali e lette bene; ma due bandiere rosse mal calibrate e una storia naturale senza numero sono correzioni che si fanno in mezza giornata e che, non fatte, sono le uniche tre cose per cui smetterei di mandarvi pazienti.
