@@ -17,16 +17,16 @@ L'orchestratore parte da solo. In alternativa, `/dev-hq-orchestratore`.
 
 I due repo del gestionale sono già dichiarati come directory aggiuntive in `.claude/settings.json`: l'agente lavora da qui e scrive lì.
 
-## Le cinque fasi
+## Le sei fasi
 
 | Fase | Cosa succede | Si ferma? |
 |------|--------------|-----------|
-| 1 | Legge i task con scadenza **oggi**; se non ce ne sono, prende gli **scaduti** dal più vecchio | No |
+| 1 | Legge i task con scadenza **oggi**; se non ce ne sono, prende gli **scaduti** dal più vecchio. Sposta il task a **`in progress`** | No |
 | 2 | Scrive il **piano d'azione**, lo fa revisionare, corregge finché è approvato | No — nessuna approvazione umana |
 | 3 | Sviluppa su frontend e backend | No |
 | 4 | **Ciclo revisione → correzione**, finché i nove revisori approvano al 100% | No |
 | 5 | **Allinea la documentazione** sul codice ormai definitivo | No |
-| 6 | Scrive il report in `report/` e lo stampa. **Nessun commit** | Fine |
+| 6 | Scrive il report in `report/` e lo stampa, e sposta il task a **`review`**. **Nessun commit** | Fine |
 
 Un task alla volta, sequenziale. **Non si ferma mai a chiederti niente:** se non trova task in scadenza chiude la sessione con un riepilogo, e se un ciclo si impunta applica il protocollo di uscita qui sotto.
 
@@ -36,7 +36,7 @@ Un task alla volta, sequenziale. **Non si ferma mai a chiederti niente:** se non
         ┌──────────────────────────────┐
         ▼                              │
   4A · i 9 revisori in parallelo       │
-      (SOLA LETTURA, non toccano nulla)│
+      (SOLA LETTURA per costruzione)   │
         │                              │
         ├── zero ERRORE ──▶ Fase 5     │
         │                              │
@@ -70,7 +70,9 @@ Tutto finisce nel report, in evidenza: uscita usata, rilievo rimasto, regola app
 
 ## Gli undici revisori
 
-Nessuno di loro modifica un file: producono referti. Ogni rilievo è **ERRORE** (blocca l'avanzamento) o **DUBBIO** (si valuta e si motiva).
+Nessuno di loro modifica un file — e non per promessa: ognuno è definito in `.claude/agents/` con `tools: Read, Grep, Glob`, quindi `Write`, `Edit` e `Bash` **non esistono** per lui. Producono referti, e ogni rilievo è **ERRORE** (blocca l'avanzamento) o **DUBBIO** (si valuta e si motiva).
+
+Siccome non hanno Bash, il diff non se lo costruiscono: glielo prepara l'orchestratore in un **dossier** per giro (`/tmp/dev-hq-dossier/<task-id>-giro<n>.md`) che contiene task, piano, stato dei due repo, diff, contenuto dei file nuovi e l'esito delle verifiche meccaniche. Tutti leggono quel file, quindi tutti giudicano lo stesso stato del codice — che è ciò che dà valore all'approvazione al 100%.
 
 Sono disposti su tre momenti: **uno prima** dello sviluppo, **nove durante**, **uno dopo**.
 
@@ -84,7 +86,7 @@ Sono disposti su tre momenti: **uno prima** dello sviluppo, **nove durante**, **
 
 ### Nel ciclo — Fase 4
 
-Girano in parallelo, un subagent ciascuno, sullo stesso diff. Sono indipendenti: nessuno vede i rilievi degli altri.
+Girano in parallelo, un subagent ciascuno, sullo stesso dossier. Sono indipendenti: nessuno vede i rilievi degli altri.
 
 | Revisore | Guarda | Gira su |
 |----------|--------|---------|
@@ -117,35 +119,39 @@ report/                            i report, uno per task + riepilogo giornalier
 .claude/
   settings.json                    permessi; git commit/push negati
   skills/
-    dev-hq-orchestratore/          il workflow
+    dev-hq-orchestratore/          il workflow — l'unico che scrive
       references/
-        clickup.md                 API, token, campi
+        clickup.md                 API, token, campi, i due cambi di stato
         mappa-gestionale.md        i due repo
         piano-azione.md            come si scrive il piano
         ricetta-enum.md            aggiungere un valore a un enum senza dimenticare pezzi
-        diff-completo.md           il diff da dare ai revisori (git diff non basta)
+        diff-completo.md           il dossier da dare ai revisori (git diff non basta)
         verifiche.md               i gate, il confronto con la baseline, il database
         stallo.md                  come esce da solo se il ciclo si impunta
-    revisore-piano/                gira in Fase 2, prima dello sviluppo
-    revisore-estetico/
-      references/design-system.md  i tre temi, le 29 primitives
-    revisore-ux/
-    revisore-logica-frontend/
-    revisore-logica-backend/
-    revisore-performance-frontend/
-    revisore-performance-backend/
-    revisore-sicurezza/
-      references/impianto-privacy.md  GDPR, audit clinico, RBAC
-    revisore-regressioni/
-    revisore-impatto-sistemico/
-    revisore-documentazione/
+  agents/                          gli undici revisori — tools: Read, Grep, Glob
+    revisore-piano.md              gira in Fase 2, prima dello sviluppo
+    revisore-estetico.md
+    revisore-ux.md
+    revisore-logica-frontend.md
+    revisore-logica-backend.md
+    revisore-performance-frontend.md
+    revisore-performance-backend.md
+    revisore-sicurezza.md
+    revisore-regressioni.md
+    revisore-impatto-sistemico.md
+    revisore-documentazione.md     gira in Fase 5, dopo il ciclo
+    references/
+      design-system.md             i tre temi, le 29 primitives
+      impianto-privacy.md          GDPR, audit clinico, RBAC
 docs/
   workflow-sviluppo.md             il workflow per esteso
 ```
 
+**La divisione fra le due cartelle è il disegno in miniatura:** in `skills/` c'è chi scrive, in `agents/` chi guarda. Un solo file in tutto l'agente ha `Write` fra gli strumenti, ed è l'orchestratore.
+
 ## Dove finisce il lavoro
 
-L'agente **non committa e non scrive su ClickUp**, quindi la sola traccia di cosa ha fatto è quella che produce lui:
+L'agente **non committa**, e su ClickUp muove solo lo stato. La board ti dice quindi *dove* è arrivato — `in progress` mentre lavora, `review` quando ha finito — ma non *cosa* ha fatto: quello sta solo nei file che produce lui.
 
 | File | Contiene |
 |---|---|
@@ -181,5 +187,5 @@ Ha anche scoperto che **il database è interrogabile** (`docker exec postgres ps
 ## Vincoli
 
 - **Mai commit, push, branch.** Negati anche a livello di permessi.
-- **Su ClickUp si legge soltanto.** Nessuna scrittura, nessun cambio di stato.
+- **Su ClickUp muove lo stato, e nient'altro.** `in progress` quando prende in carico, `review` quando consegna. **Mai `complete`:** chiudere un task resta una tua decisione, dopo il collaudo. Niente commenti, nessuna modifica a titolo, descrizione o scadenza — `POST` e `DELETE` sono negati anche a livello di permessi.
 - **Il token ClickUp non si stampa e non si copia** in file o report. Vive in `mobilitas-backend/src/main/resources/application-local.properties`.

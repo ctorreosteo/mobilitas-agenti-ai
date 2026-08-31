@@ -8,7 +8,7 @@
 | Space | Operations — `90120487906` |
 | **Lista HQ** | **`901216135913`** |
 | API | `https://api.clickup.com/api/v2` |
-| Stati della lista | `to do`, `in progress`, `complete` |
+| Stati della lista | `to do`, `in progress`, `review`, `complete` — sono questi quattro, verificati sull'API |
 
 ## Token
 
@@ -125,9 +125,46 @@ for c in json.load(sys.stdin).get('comments',[]):
 
 Anche i commenti sono rari. Quando ci sono, di solito contengono la correzione o il ripensamento **più recente**: pesano più del titolo.
 
+## Cambiare stato — l'unica scrittura consentita
+
+L'agente muove il task **due volte**, e non fa nient'altro su ClickUp.
+
+| Quando | Stato | Perché |
+|--------|-------|--------|
+| Quando lo prende in carico, in Fase 1 | `in progress` | Chi guarda la board vede che ci sta lavorando qualcuno, adesso |
+| Quando lo consegna, in Fase 6 | `review` | Il lavoro è fatto e aspetta il collaudo di Carlos |
+
+**I quattro stati che la lista HQ ammette sono `to do`, `in progress`, `review`, `complete`.** Non ce ne sono altri: un `PUT` con uno stato inventato torna errore. In particolare **`complete` non lo scrive mai l'agente** — chiudere un task è una decisione di Carlos, dopo il collaudo.
+
+```bash
+TOKEN=$(leggi_token_clickup)
+curl -s -X PUT -H "Authorization: $TOKEN" -H "Content-Type: application/json" \
+  "https://api.clickup.com/api/v2/task/<TASK_ID>" \
+  -d '{"status":"in progress"}'
+```
+
+**Verifica che sia andata**, perché un `PUT` fallito non urla: la risposta contiene il task aggiornato, e `status.status` dev'essere quello che hai chiesto. Se contiene `err`, lo stato non è cambiato.
+
+```bash
+# ...| python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('err') or d['status']['status'])"
+```
+
+### Se la scrittura fallisce, non ti fermi
+
+Un `PUT` che va male — rete, token scaduto, stato rifiutato — **non è un motivo per abbandonare il task.** Lo stato su ClickUp è un segnale di cortesia verso chi guarda la board, non il deliverable.
+
+Quindi: riprova **una** volta, e se fallisce ancora **scrivilo nel report** («il task è rimasto in `to do` su ClickUp, spostalo a mano») e vai avanti col lavoro. Vale la regola generale: niente blocca la giornata.
+
+### Lo stato quando il task non è stato consegnato
+
+Se sei uscito da uno stallo con l'**uscita C — abbandono protetto**, non hai consegnato niente: `review` sarebbe una bugia, e `in progress` lo è altrettanto perché nessuno ci sta più lavorando.
+
+**Riportalo a `to do`** e spiega nel report perché è tornato indietro. Le uscite A e B invece hanno consegnato qualcosa, anche se con riserva: vanno a `review` come un task normale.
+
 ## Cosa non fare
 
-- **Non scrivere su ClickUp.** Niente `POST`, `PUT`, `DELETE`. Non chiudere task, non cambiare stato, non aggiungere commenti. Leggi e basta.
+- **Non scrivere altro su ClickUp.** Lo stato, e solo lo stato. Niente commenti, niente `POST`, niente `DELETE`, nessuna modifica a titolo, descrizione, scadenza o assegnatari. `POST` e `DELETE` sono negati anche a livello di permessi.
+- **Non scrivere mai `complete`.** Nemmeno quando sei sicuro che il task sia finito: il collaudo non l'hai fatto tu.
 - **Non fidarti di `priority` e `tags`** per ordinare il lavoro: sono vuoti.
 - **Non inventare una scadenza** che il task non ha, per farlo rientrare nella selezione di oggi.
 

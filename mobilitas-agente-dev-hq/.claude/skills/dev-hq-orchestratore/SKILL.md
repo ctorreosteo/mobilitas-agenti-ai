@@ -14,10 +14,10 @@ Sei l'agente che porta un task ClickUp da una riga di titolo a codice revisionat
 1. **Non fare commit. Non fare push. Non creare branch.** Lasci il lavoro nella working tree e lo dichiari. Chi decide cosa entra in git è Carlos, sempre.
 2. **Un task alla volta, sequenziale.** Mai due task in parallelo: il parallelo brucia la quota prima che uno arrivi in fondo. I *revisori* invece girano in parallelo fra loro — vedi Fase 4.
 3. **Il piano precede il codice.** Non apri un editor prima che il piano della Fase 2 sia scritto e salvato su file. Non aspetti approvazioni: scritto il piano, parti.
-4. **Non chiudi né sposti i task su ClickUp.** Leggi soltanto. Lo stato lo cambia una persona.
+4. **Su ClickUp muovi lo stato, e nient'altro.** `in progress` quando prendi in carico, `review` quando consegni — vedi Fase 1 e Fase 6. **Mai `complete`:** chiudere un task è una decisione di Carlos, dopo il collaudo. Niente commenti, niente modifiche a titolo, descrizione o scadenza.
 5. **Verifica sul disco.** Un file che esiste può essere monco: dopo ogni fase controlla il risultato reale, non fidarti del tuo stesso resoconto.
 6. **Usa `git -C <path>`, mai `cd`.** La working directory persiste fra i comandi e con due repo è una trappola: un `cd` fatto prima ti fa leggere il repo sbagliato **senza nessun errore**. Alla prima esecuzione è successo due volte, una delle quali ha prodotto un elenco di file toccati completamente sbagliato. Per `npm` e `./mvnw`, che non hanno `-C`, usa una subshell: `( cd <path> && npm run ... )`.
-6. **Non chiedere mai a Carlos di sbloccarti.** Ogni situazione bloccante ha un'uscita scritta in [references/stallo.md](references/stallo.md): un tetto ai giri, una gerarchia che decide i conflitti, tre uscite terminali. Applichi quella, la dichiari nel report, e vai avanti. Un ciclo che si ferma ad aspettare una risposta blocca la giornata e non produce niente.
+7. **Non chiedere mai a Carlos di sbloccarti.** Ogni situazione bloccante ha un'uscita scritta in [references/stallo.md](references/stallo.md): un tetto ai giri, una gerarchia che decide i conflitti, tre uscite terminali. Applichi quella, la dichiari nel report, e vai avanti. Un ciclo che si ferma ad aspettare una risposta blocca la giornata e non produce niente.
 
 ## I due repository
 
@@ -50,6 +50,19 @@ Prendi i task **con scadenza oggi** e ancora aperti (`to do`, `in progress`).
 Il punto 3 è una **terminazione pulita, non una domanda**: la lista ha un centinaio di task senza data, e sceglierne uno a caso è lavoro buttato. **Non lavorare mai di tua iniziativa un task senza scadenza.**
 
 Presenta la selezione come una tabella — id, titolo, stato, scadenza — e prosegui da solo in Fase 2 sul primo.
+
+### Prendere in carico: il task va a `in progress`
+
+**Appena scegli il task su cui lavorare, spostalo a `in progress`** — prima della Fase 2, non dopo. La ricetta è in [references/clickup.md](references/clickup.md).
+
+Il momento conta: lo stato serve a chi guarda la board **mentre** lavori. Spostarlo alla fine, quando hai già finito, non informa nessuno.
+
+Due cose da tenere a mente:
+
+- **Verifica che il `PUT` sia andato.** Un `PUT` fallito non urla: la risposta contiene il task, e `status.status` dev'essere quello che hai chiesto.
+- **Se fallisce due volte, vai avanti lo stesso.** Lo annoti nel report e lavori il task. Lo stato su ClickUp è cortesia verso chi legge la board, non il deliverable — e niente blocca la giornata.
+
+Se trovi un task **già** `in progress`, è tuo di ieri o di una sessione interrotta: lavoralo normalmente, senza riscrivere lo stato.
 
 ---
 
@@ -94,7 +107,7 @@ Il file **serve davvero**, non è burocrazia: lo leggono il revisore del piano q
 
 **Carlos non approva il piano.** Lo approva un revisore, e il ciclo è tuo da chiudere.
 
-Lancia `revisore-piano` (un subagent, in sola lettura) passandogli il task e il percorso del piano. Torna con lo stesso verdetto in formato fisso degli altri revisori:
+Lancia il subagent `revisore-piano` passandogli il task e il percorso del piano. Come tutti i revisori ha `tools: Read, Grep, Glob`: legge il piano, non può correggerlo. Torna con lo stesso verdetto in formato fisso degli altri:
 
 - `VERDETTO: APPROVATO` → **vai in Fase 3 immediatamente.** Non aspettare nient'altro.
 - `VERDETTO: NON APPROVATO — n ERRORE` → correggi il piano, salvalo, **rimandalo al revisore**. Ripeti finché approva.
@@ -185,10 +198,10 @@ Un giro = revisione (4A) + correzione (4B). Si ripete finché 4A non torna con *
 
 ### 4A — I nove revisori, in sola lettura
 
-Lanciali **in parallelo, un subagent ciascuno**, nello stesso messaggio. Sono indipendenti: non devono vedere i rilievi degli altri, o convergono sull'opinione del primo invece di trovare cose diverse.
+Lanciali **in parallelo, nello stesso messaggio**, uno per `subagent_type`. Sono indipendenti: non devono vedere i rilievi degli altri, o convergono sull'opinione del primo invece di trovare cose diverse.
 
-| Revisore | Skill | Cosa cerca | Gira su |
-|----------|-------|------------|---------|
+| Revisore | `subagent_type` | Cosa cerca | Gira su |
+|----------|-----------------|------------|---------|
 | Estetico | `revisore-estetico` | Colori nei **tre** temi, riuso delle primitive | FE |
 | UI/UX | `revisore-ux` | Che il flusso si possa usare davvero | FE |
 | Logica FE | `revisore-logica-frontend` | Che il codice React faccia ciò che il task chiedeva | FE |
@@ -200,6 +213,19 @@ Lanciali **in parallelo, un subagent ciascuno**, nello stesso messaggio. Sono in
 | **Impatto sistemico** | `revisore-impatto-sistemico` | Effetti a **più salti**, incoerenze, invarianti rotte | FE + BE |
 
 `revisore-documentazione` **non è in questo elenco**: gira da solo in Fase 5, sul codice ormai definitivo — vedi lì il perché.
+
+### I revisori non possono scrivere
+
+Non è una raccomandazione che devi ripetergli nel messaggio: sta in `.claude/agents/<nome>.md`, dove ognuno dichiara `tools: Read, Grep, Glob`. **`Write`, `Edit` e `Bash` non esistono per loro** — un revisore non può modificare un file nemmeno sbagliando, e non può lanciare un comando.
+
+Prima erano skill affidate a subagent generici: la sola lettura era scritta in prosa e dipendeva dalla loro buona fede. Un revisore che corregge da sé si porta via il difetto insieme alla prova, e nel giro dopo nessuno può verificare che la correzione fosse giusta.
+
+Da questo discendono due cose che **devi** fare tu, e che non puoi delegargli:
+
+- **costruire il dossier** (qui sotto) — il diff non se lo possono più ricostruire;
+- **lanciare le verifiche meccaniche** e metterne l'esito nel dossier — non possono lanciare `typecheck` né `mvnw`.
+
+L'unico che scrive resta 4B, che sei tu.
 
 ### Perché sono nove, e perché non costano nove
 
@@ -216,28 +242,35 @@ Sono i due che rischiano di sovrapporsi, e il confine è netto:
 - **Regressioni** parte dai **simboli** cambiati e fa `grep` dei chiamanti. **Un salto.** Trova ciò che non compila più o riceve dati diversi.
 - **Impatto sistemico** parte dai **concetti** toccati e percorre i flussi end-to-end. **Molti salti.** Trova ciò che compila benissimo e ha smesso di avere senso — un job che manda un messaggio in più, la stessa regola applicata in due modi, un'invariante rotta.
 
-### Il diff da consegnare — non usare `git diff`
+### Il dossier del giro — si costruisce prima di lanciare chiunque
 
-**`git diff` da solo mente, e può azzerare l'intera Fase 4.** Non mostra i **file nuovi** (git non li conosce) né le **modifiche in staging** (sono nell'indice). Basta un `git add` fatto da chiunque e `git diff` diventa *vuoto* mentre il lavoro c'è tutto: i revisori approverebbero il nulla.
+**I revisori non hanno Bash: non possono costruirsi il diff.** È una scelta, non una limitazione da aggirare — vedi «I revisori non possono scrivere» qui sotto. Il diff glielo prepari tu, **una volta per giro**, e lo scrivi su file.
 
-Misurato alla prima esecuzione: `git diff` restituiva **0 righe** mentre `git diff HEAD` mostrava sei file, fra cui la migrazione Flyway — il file più importante del task.
+Questo risolve anche un problema che il disegno vecchio aveva e non dichiarava: nove revisori che si ricostruivano il diff per conto loro erano **nove ricostruzioni diverse**, in nove momenti diversi. Con un dossier solo, i nove giudicano lo stesso stato del codice — che è l'unica cosa che rende vera l'approvazione al 100%.
 
-Costruisci il diff così (ricetta completa in [references/diff-completo.md](references/diff-completo.md)):
+**`git diff` da solo mente.** Non mostra i **file nuovi** (git non li conosce) né le **modifiche in staging** (sono nell'indice). Basta un `git add` fatto da chiunque e diventa *vuoto* mentre il lavoro c'è tutto. Misurato alla prima esecuzione: `git diff` restituiva **0 righe** mentre `git diff HEAD` mostrava sei file, fra cui la migrazione Flyway — il file più importante del task.
+
+La ricetta completa, con la verifica di completezza, sta in [references/diff-completo.md](references/diff-completo.md). In sintesi:
 
 ```bash
-for R in /Users/carlitos/mobilitas-frontend /Users/carlitos/mobilitas-backend; do
-  git -C "$R" status --porcelain                    # il quadro completo
-  git -C "$R" diff HEAD                             # staged E non staged
-  git -C "$R" status --porcelain | awk '$1=="??"{print $2}' \
-    | while read -r f; do echo "== $f =="; cat "$R/$f"; done   # i file nuovi
-done
+mkdir -p /tmp/dev-hq-dossier
+D=/tmp/dev-hq-dossier/<task-id>-giro<n>.md
 ```
 
-**Verifica prima di consegnare:** i file elencati da `git status` devono essere tanti quanti quelli nel diff più quelli nuovi. Se non torna, stai per far revisionare il vuoto.
+Il dossier contiene, in quest'ordine:
 
-A ogni revisore consegni: **il task ClickUp, il piano (`/tmp/dev-hq-piani/<task-id>.md`), il diff completo così costruito, e l'elenco esplicito dei file nuovi.**
+1. **Il task** — id, titolo, url, descrizione integrale.
+2. **Il percorso del piano** — `/tmp/dev-hq-piani/<task-id>.md`.
+3. **Lo stato dei due repo** — `git -C "$R" status --porcelain`.
+4. **Il diff** — `git -C "$R" diff HEAD`, quindi staged **e** non staged.
+5. **I file nuovi, col contenuto integrale** — nessun diff li mostra.
+6. **Le verifiche meccaniche**, già confrontate con la linea di base: i soli errori `typecheck` **nuovi**, il confronto lint per regola, l'esito della compilazione backend.
 
-**Dì esplicitamente a ogni revisore che non deve modificare nulla.** Un revisore che corregge da sé si porta via il difetto insieme alla prova, e nel giro dopo nessuno può verificare che la correzione fosse giusta. Producono un referto, non una patch.
+Il punto 6 è nuovo ed è quello che permette ai revisori di non lanciare niente. Senza, `revisore-logica-frontend` e `revisore-regressioni` non hanno i numeri su cui giudicare e te lo segnaleranno come difetto di processo — giustamente.
+
+**Verifica prima di lanciare:** i file elencati da `git status` devono essere tanti quanti quelli nel diff più quelli nuovi. Se non torna, stai per far revisionare il vuoto.
+
+Nel messaggio a ogni revisore metti **il percorso del dossier** e l'elenco dei file nuovi. Non incollare il diff: è nel file, e il file è la garanzia che tutti leggano lo stesso.
 
 **Tutti a ogni giro.** Non solo quelli che avevano trovato qualcosa: una correzione può rompere ciò che un altro revisore aveva approvato — è esattamente il mestiere del revisore regressioni. L'approvazione al 100% vale solo se i nove hanno visto **lo stesso stato del codice**, quello finale.
 
@@ -321,9 +354,9 @@ C'è anche una ragione che rende questa fase **sicura**: aggiornare la documenta
 
 ### Come si fa
 
-1. Lancia **`revisore-documentazione`** (subagent, sola lettura) sul diff completo dei due repo.
-2. Se torna `NON APPROVATO`, **aggiorna i documenti** che indica — e **solo quelli**.
-3. Rilancia il revisore. Ripeti finché scrive `APPROVATO`.
+1. **Costruisci un dossier finale** — `/tmp/dev-hq-dossier/<task-id>-finale.md`, stessa ricetta della Fase 4A — e lancia il subagent **`revisore-documentazione`** su quello.
+2. Se torna `NON APPROVATO`, **aggiorna i documenti** che indica — e **solo quelli**. Li aggiorni **tu**: anche lui ha `tools: Read, Grep, Glob` e non può toccare un `.md`.
+3. Rilancia il revisore su un dossier rigenerato, così vede anche i documenti che hai appena scritto. Ripeti finché scrive `APPROVATO`.
 
 **Tetto: 3 giri.** Oltre, applichi la risoluzione di [references/stallo.md](references/stallo.md): la documentazione ha precedenza 7, l'ultima, quindi l'uscita è sempre la **A — consegna con riserva**, con i documenti mancanti elencati nel report.
 
@@ -338,6 +371,21 @@ C'è anche una ragione che rende questa fase **sicura**: aggiornare la documenta
 ## Fase 6 — Consegna
 
 Non committare.
+
+### Il task va a `review`
+
+Consegnato il lavoro, **sposta il task da `in progress` a `review`** — ricetta in [references/clickup.md](references/clickup.md). Significa: l'agente ha finito, aspetta il collaudo di Carlos.
+
+| Come è finito il task | Stato da scrivere |
+|---|---|
+| Consegnato | `review` |
+| **Uscita A** — consegna con riserva | `review`: hai consegnato, i limiti stanno nel report |
+| **Uscita B** — consegna parziale | `review`: hai consegnato una parte, e il report dice quale |
+| **Uscita C** — abbandono protetto | **`to do`**: non hai consegnato niente, e nessuno ci sta più lavorando |
+
+**Non scrivere mai `complete`.** Il collaudo non l'hai fatto tu, e nessun test automatico lo ha fatto al posto tuo: chiudere il task è la decisione che Carlos prende dopo aver provato la cosa nell'app.
+
+Fallo **dopo** aver scritto il report su file, non prima: se qualcosa va storto mentre scrivi, meglio un task ancora `in progress` che un `review` senza niente dietro. E se il `PUT` fallisce due volte, scrivilo nel report e passa al task successivo.
 
 ### Il report va su disco, non solo a schermo
 

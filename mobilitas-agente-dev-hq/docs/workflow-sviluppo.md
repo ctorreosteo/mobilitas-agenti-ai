@@ -112,6 +112,24 @@ Un revisore che sistema da sé quello che trova sembra efficiente, e invece romp
 
 Per questo i revisori producono un **referto** e si fermano lì, e a correggere è un passaggio di sviluppo separato — l'unico che scrive.
 
+### E non possono, non solo non devono
+
+Per un po' questa regola è stata **solo prosa**: i revisori erano skill, e una skill descrive il comportamento di un subagent che nasce comunque con tutti gli strumenti, `Write` e `Edit` compresi. Il divieto più importante del sistema dipendeva dal fatto che nove subagent, ognuno col suo contesto, lo rispettassero tutti, ogni volta.
+
+Ora ogni revisore è un file in `.claude/agents/` che dichiara `tools: Read, Grep, Glob`. `Write`, `Edit` e `Bash` non gli vengono passati: non è che non li usa, è che **non esistono per lui**. La regola è diventata una proprietà del sistema invece che un impegno.
+
+Non è cambiato niente nel disegno: i revisori erano già subagent separati, uno per contesto, ed è sempre stato il cuore della Fase 4. È cambiato solo dove è scritto cosa possono fare.
+
+Ha però una conseguenza reale sull'orchestratore, ed è il prezzo giusto da pagare: **senza Bash, un revisore non può costruirsi il diff né lanciare `typecheck`**. Deve farlo l'orchestratore, una volta per giro, scrivendo tutto in un dossier — vedi qui sotto.
+
+### Il dossier, e il requisito che non era garantito da niente
+
+L'approvazione al 100% vale a una condizione dichiarata fin dall'inizio: che i nove revisori abbiano visto **lo stesso stato del codice**. Ma finché ognuno si ricostruiva il diff per conto proprio, quella condizione non era garantita da nessun meccanismo — erano nove ricostruzioni indipendenti, fatte in nove momenti diversi, ognuna con la propria probabilità di sbagliare.
+
+Il dossier — un file per giro, `/tmp/dev-hq-dossier/<task-id>-giro<n>.md`, con task, piano, stato, diff, file nuovi e verifiche meccaniche — chiude il buco per costruzione: c'è una fonte sola, e tutti leggono quella.
+
+Il vincolo sugli strumenti e il dossier si tengono a vicenda. Il primo senza il secondo lascerebbe i revisori senza diff; il secondo senza il primo sarebbe solo un risparmio di token.
+
 ## Perché il ciclo gira fino al 100%
 
 Un giro solo di revisione non basta: **le correzioni sono codice nuovo**, e il codice nuovo può rompere ciò che era già stato approvato. Correggere un colore per il revisore estetico può togliere un contrasto che il revisore UX aveva accettato.
@@ -179,7 +197,7 @@ Senza questa asimmetria il ciclo non chiuderebbe mai — c'è sempre qualcosa ch
 
 Il workflow è stato corretto dopo la prima esecuzione reale (869cng430). Vale la pena registrare **perché** quei difetti erano invisibili a priori: sono tutti casi in cui uno strumento dava una risposta **plausibile ma incompleta**, senza segnalare nulla.
 
-**`git diff` mente per omissione.** Non mostra i file nuovi né le modifiche in staging. Sul task reale restituiva zero righe mentre il lavoro c'era tutto — bastava che qualcuno avesse fatto `git add`. Se la Fase 4 fosse partita in quel momento, nove revisori avrebbero ricevuto un diff vuoto e approvato all'unanimità un lavoro che non avevano visto. **Il 100% sarebbe stato una firma in bianco.** Ora il diff si costruisce con `git diff HEAD` più il contenuto dei file non tracciati, e prima di consegnarlo si verifica che il conto dei file torni.
+**`git diff` mente per omissione.** Non mostra i file nuovi né le modifiche in staging. Sul task reale restituiva zero righe mentre il lavoro c'era tutto — bastava che qualcuno avesse fatto `git add`. Se la Fase 4 fosse partita in quel momento, nove revisori avrebbero ricevuto un diff vuoto e approvato all'unanimità un lavoro che non avevano visto. **Il 100% sarebbe stato una firma in bianco.** Ora il diff si costruisce con `git diff HEAD` più il contenuto dei file non tracciati, si verifica che il conto dei file torni, e il risultato finisce nel dossier del giro — una fonte sola per tutti e nove.
 
 **`cd` è pericoloso con due repository.** La working directory persiste fra i comandi: un `cd` fatto prima fa leggere il repo sbagliato senza alcun errore. È successo due volte in una sola esecuzione, e una volta ha prodotto un elenco di file toccati completamente sbagliato. Ora la regola è `git -C`, e subshell per i comandi che non lo supportano.
 
@@ -193,7 +211,7 @@ Il filo comune: **verificare invece di assumere**, soprattutto quando la frase c
 
 ## Dove finisce il report, e perché su file
 
-L'agente non committa e non scrive su ClickUp. Sono due scelte deliberate — ma insieme creano un problema: **senza una traccia scritta da lui, di una giornata di lavoro non resta niente.**
+L'agente non committa, e su ClickUp scrive solo lo stato. La board dice quindi *dove* è arrivato, mai *cosa* ha fatto — e questo crea un problema: **senza una traccia scritta da lui, di una giornata di lavoro non resta niente.**
 
 Il terminale non basta. L'agente lavora in autonomia su più task di seguito, e l'output scorre: quando arrivi a leggere, il report del primo task è già lontano. E se la sessione si chiude, è perso.
 
@@ -209,7 +227,26 @@ Non è una precauzione contro l'agente: è che **cosa entra in git è una decisi
 
 Il divieto è scritto in due posti che si rinforzano: nella skill dell'orchestratore, e come `deny` in `.claude/settings.json` — dove sono negati anche `push`, `branch`, `checkout`, `reset`, `rebase`, `merge` e `stash`. La skill dice cosa fare; i permessi impediscono di sbagliare.
 
-Stesso principio su ClickUp: **sola lettura.** Niente `POST`, `PUT`, `DELETE`. L'agente non chiude task, non cambia stato, non commenta. Lo stato di un task riflette quello che una persona ha deciso, e un agente che sposta le colonne fa perdere la fiducia nella board.
+## Su ClickUp: lo stato sì, il resto no
+
+Su ClickUp il principio è diverso, e la linea è tirata in un punto preciso: **l'agente muove il task lungo la colonna, ma non decide mai che è finito.**
+
+Due scritture, e nessun'altra:
+
+| Momento | Stato | A chi serve |
+|---|---|---|
+| Presa in carico, in Fase 1 | `in progress` | A chi guarda la board **mentre** l'agente lavora |
+| Consegna, in Fase 6 | `review` | A Carlos: c'è qualcosa da collaudare |
+
+Il primo è quello che si dimentica facilmente e conta di più: uno stato scritto alla fine non informa nessuno, perché quando lo leggi il lavoro è già finito. Serve **durante**.
+
+**`complete` non lo scrive mai l'agente.** È il confine, ed è lo stesso della regola sul commit: l'agente porta il lavoro fino al punto in cui una persona lo guarda, e si ferma lì. Non ci sono test automatici in questo progetto — l'unica prova che una cosa funziona è che Carlos l'abbia provata nell'app. Un agente che chiude i task dichiara superato un collaudo che non è avvenuto.
+
+Restano negati `POST` e `DELETE` a livello di permessi: niente commenti, niente cancellazioni, nessuna modifica a titolo, descrizione o scadenza.
+
+C'è poi un'asimmetria voluta: **una scrittura di stato fallita non ferma niente.** L'agente riprova una volta, poi lo annota nel report e continua a lavorare. Lo stato sulla board è cortesia verso chi legge, non il deliverable — e nella scala di questo agente niente vale il prezzo di bloccare la giornata.
+
+E un caso che sembra un dettaglio e non lo è: se il ciclo finisce con l'**uscita C**, l'abbandono protetto, il task torna a `to do`. Non è stato consegnato niente, e lasciarlo `in progress` racconterebbe alla board che qualcuno ci sta ancora lavorando.
 
 ---
 

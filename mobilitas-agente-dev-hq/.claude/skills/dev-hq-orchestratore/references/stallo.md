@@ -84,6 +84,8 @@ Prima di annullare qualsiasi cosa, **salva sempre il lavoro** (§5).
 
 **Cosa fai:** salvi il lavoro come patch, riporti i file al loro stato iniziale, e dichiari il task **non consegnato**.
 
+È l'unico caso in cui su ClickUp il task torna a **`to do`** invece di andare a `review`: non hai consegnato niente, e lasciarlo `in progress` farebbe credere a chi guarda la board che qualcuno ci stia ancora lavorando. Nel report scrivi perché è tornato indietro.
+
 È l'unica uscita in cui non consegni niente — e va bene: **consegnare codice che espone dati clinici o che rompe il gestionale è peggio che non consegnare.** Non è un fallimento, è la decisione corretta presa da te invece che da Carlos.
 
 ---

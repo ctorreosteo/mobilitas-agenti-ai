@@ -17,7 +17,8 @@
       "Bash(curl -s -H * https://api.clickup.com/api/v2/task/*)",
       "Bash(git restore -- *)",
       "Bash(git status --porcelain)",
-      "Bash(mkdir -p /tmp/dev-hq-*)"
+      "Bash(mkdir -p /tmp/dev-hq-*)",
+      "Bash(curl -s -X PUT -H * https://api.clickup.com/api/v2/task/*)"
     ],
     "deny": [
       "Bash(git commit:*)",
@@ -30,7 +31,6 @@
       "Bash(git merge:*)",
       "Bash(git stash:*)",
       "Bash(curl -X POST*api.clickup.com*)",
-      "Bash(curl -X PUT*api.clickup.com*)",
       "Bash(curl -X DELETE*api.clickup.com*)",
       "Bash(git clean:*)",
       "Bash(git restore --staged:*)",

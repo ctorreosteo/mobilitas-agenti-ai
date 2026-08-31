@@ -87,14 +87,35 @@ Per i comandi che **non** accettano `-C` (`npm`, `./mvnw`), usa una subshell, co
 
 ---
 
-## Cosa consegnare a ogni revisore
+## Il dossier — dove finisce tutto questo
 
-Nel messaggio al subagent metti:
+**I revisori non possono eseguire questa ricetta:** hanno `tools: Read, Grep, Glob`, niente Bash. La esegui tu, una volta per giro, e ne scrivi il risultato su file.
 
-1. **Il task ClickUp** — id, titolo, descrizione integrale.
-2. **Il percorso del piano** — `/tmp/dev-hq-piani/<task-id>.md`.
-3. **Il diff completo** costruito come sopra, oppure — se è grande — i **percorsi dei due repo** con l'istruzione di ricostruirselo con questa stessa ricetta. Non passare mai un `git diff` grezzo.
-4. **L'elenco esplicito dei file nuovi**, perché sono quelli che si perdono.
-5. Il promemoria che è **in sola lettura**.
+```
+/tmp/dev-hq-dossier/<task-id>-giro<n>.md
+```
 
-Se il diff supera qualche decina di migliaia di caratteri, non troncarlo: dai i percorsi e la ricetta. Un revisore che legge il codice da sé è meglio di un revisore che legge metà diff credendo sia tutto.
+Non è solo comodità. Nove revisori che si ricostruivano il diff per conto loro erano **nove ricostruzioni diverse in nove momenti diversi**: il requisito «i nove hanno visto lo stesso stato del codice», da cui dipende il valore dell'approvazione al 100%, non era garantito da niente. Con un file solo, lo è.
+
+### Le sei sezioni, in quest'ordine
+
+| # | Sezione | Contenuto |
+|---|---------|-----------|
+| 1 | **Task** | id, titolo, url, descrizione integrale, commenti se ce ne sono |
+| 2 | **Piano** | il percorso `/tmp/dev-hq-piani/<task-id>.md`, e il piano incollato per intero |
+| 3 | **Stato** | `git -C "$R" status --porcelain`, per repo |
+| 4 | **Diff** | `git -C "$R" diff HEAD`, per repo |
+| 5 | **File nuovi** | percorso e **contenuto integrale** di ogni `??` |
+| 6 | **Verifiche meccaniche** | typecheck: solo gli errori **nuovi** rispetto alla baseline · lint: il confronto per regola · backend: l'esito di `./mvnw -q -DskipTests compile` |
+
+La sezione 6 è quella che i revisori non possono produrre da soli, ed è quella che rende inutile dargli Bash. Se la ometti, `revisore-logica-frontend` e `revisore-regressioni` non hanno i numeri su cui giudicare, e il referto che ti torna dirà — correttamente — che il dossier è incompleto. Il metodo per produrla sta in [verifiche.md](verifiche.md).
+
+### Nel messaggio al subagent
+
+Bastano tre cose, perché il resto è nel dossier:
+
+1. **Il percorso del dossier.**
+2. **L'elenco esplicito dei file nuovi** — sono quelli che si perdono, ripeterli costa una riga.
+3. **Quale repo lo riguarda**, così chiude subito se non è materia sua.
+
+**Non incollare il diff nel messaggio.** Se è nel file, tutti leggono lo stesso; se è nel messaggio, hai due copie che possono divergere. E un dossier grande non è un problema: il revisore lo apre a pezzi con gli strumenti che ha.
