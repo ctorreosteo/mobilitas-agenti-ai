@@ -38,6 +38,30 @@ Anche sull'ambiguità grossa — un pomeriggio contro due settimane — l'agente
 
 ---
 
+## Perché il piano esce a cercare, quando c'è software di terzi
+
+Il piano si costruisce leggendo il codice — è il principio della Fase 2, e vale per quasi tutto. C'è però una classe di informazione che **il codice non contiene e non può contenere**: come funziona *oggi* l'API di qualcun altro.
+
+Il gestionale parla con ventuno vendor esterni: Google, Anthropic, Whisper, ElevenLabs, FattureInCloud, SumUp, PayPal, Qonto, Mailchimp, SMSHosting, ClickUp, Cloudflare, DocuSign. La matrice sta in `INTEGRATIONS.md`, e dice benissimo *dove* stanno i nostri secret e *quale* service li usa. Non può dire che Qonto ha deprecato un endpoint il mese scorso.
+
+Il rischio è specifico di un agente, e vale la pena nominarlo: **quello che un modello sa delle API altrui è un ricordo con una data di scadenza.** Non arriva con un'etichetta che avvisa; arriva con la stessa sicurezza di un fatto verificato. È il modo più elegante di scrivere codice deprecato — plausibile, coerente, e sbagliato da sei mesi.
+
+E quei ventuno **non sono il perimetro della regola**: sono solo i casi facili. Un task può chiedere di integrare un software che non abbiamo mai usato — un servizio di firma, un canale di messaggistica, un gestionale di terzi — e lì la documentazione online non è un aggiornamento di quello che l'agente sa: **è l'unica fonte che esiste.** Non c'è un nostro service da leggere, non c'è una versione appuntata nel `pom.xml`, non c'è una convenzione interna a cui somigliare. Il vendor nuovo è il caso in cui questa ricerca conta di più, ed è per questo che non è scritta come un elenco di fornitori ammessi.
+
+Il vendor nuovo porta anche una domanda che quello esistente non pone: **ce n'era già uno in casa che faceva quel lavoro?** Un task che dice «manda una notifica» non dice «aggiungi Twilio». Introdurre un fornitore è una decisione di prodotto presa dentro un task di sviluppo, e vale la regola delle ambiguità strutturali: si prende la strada più corta e reversibile, e si dichiara il bivio.
+
+E ne porta una seconda, che in questo prodotto pesa più di tutte: **a chi stiamo dando dei dati.** Un fornitore nuovo che riceve dati personali o clinici è un responsabile del trattamento nuovo, in un backend che ha registro dei trattamenti, DPA, DPIA e TIA per l'extra-UE. Non è una cosa che si risolve scrivendo codice, e l'agente non deve provarci: deve **vederla e dichiararla**, in evidenza nel piano e nel report. Se sfugge lì, il presidio successivo è `revisore-sicurezza`, che tratta un destinatario fuori dalla matrice come un rilievo a sé.
+
+Da qui tre regole, in ordine di importanza:
+
+**Prima la nostra versione, poi la loro documentazione.** Il `pom.xml` appunta `google-api-services-calendar` a una revisione precisa. Progettare sulla doc dell'ultima major mentre il repo è fermo indietro produce un piano che non compila — un modo di sbagliare *peggiore* del non aver cercato, perché arriva con le fonti in fondo e sembra più solido.
+
+**Fonti ufficiali, con la data.** Un post di blog del 2023 che spiega come si fa una cosa è esattamente la fonte che convince. E la data serve a chi legge il piano fra un mese.
+
+**«Cercato, niente di rilevante» è un esito.** Distingue il controllo fatto dal controllo saltato, e costa una riga.
+
+C'è infine un fallimento nuovo che questa funzionalità introduce, e che va guardato in faccia: **una citazione può essere inventata.** Un url plausibile che non esiste, o che esiste e dice un'altra cosa, è indistinguibile a occhio da una buona. Per questo `revisore-piano` è l'unico degli undici revisori ad avere `WebFetch`: apre una fonte citata e controlla che dica davvero quello che il piano sostiene. È l'unico revisore la cui materia vive fuori dai due repo, ed è l'unico che può accorgersene prima che diventi codice.
+
 ## Perché revisori separati e non uno solo
 
 Un revisore unico con molti mandati non li esegue tutti: converge sul primo difetto interessante e scrive quello. È il fallimento classico della revisione generica — «ho guardato il codice, mi sembra a posto».
@@ -92,7 +116,15 @@ Nove revisori a ogni giro. Su un ciclo da tre giri sono ventisette revisioni, pi
 
 Tre cose lo tengono sostenibile:
 
-**Il gating per repo.** Sei revisori su nove girano su un repo solo, e chiudono in una riga se il diff non lo tocca. Un task di solo backend ne spegne quattro. La divisione FE/BE **non ha aumentato il costo: lo ha reso proporzionale al diff.**
+**Il gating per repo.** Sei revisori su nove girano su un repo solo. Se quel repo ha il diff vuoto, l'orchestratore **non li lancia**: la decisione è sua, meccanica, presa da `git status --porcelain` prima di scrivere il messaggio. Un task di solo backend ne spegne quattro.
+
+Per un po' questo gating è stato **solo un'aspettativa**: la skill diceva che quei revisori «chiudono in una riga» e «costano quasi nulla», quindi li lanciava tutti. Non era vero. Misurato sul task `869et3uxh` — una migrazione Flyway, diff frontend vuoto — i quattro revisori FE sono stati lanciati in tutti e due i giri e ognuno ha aperto un dossier da 38KB per scrivere «non mi riguarda»: **otto esecuzioni su diciotto**, il 44% del giro, su niente. Un revisore lanciato costa uno spawn e la lettura integrale del dossier, sempre, anche quando il verdetto è ovvio.
+
+Il gating **per materia** resta invece in mano al revisore, ed è giusto così: decidere se un cambio di CSS impegna le performance richiede di aver letto il diff, che è il suo mestiere. Il gating **per repo** si decide con un `git status`, e per questo è vincolante.
+
+Un revisore non lanciato **non blocca il 100%** e finisce nel report col motivo: chi legge deve distinguere chi ha guardato e approvato da chi non aveva niente da guardare. E il gating **si ricalcola a ogni giro**, perché una correzione può aver toccato per la prima volta l'altro repo.
+
+La divisione FE/BE **non ha aumentato il costo: lo ha reso proporzionale al diff.**
 
 **Il gating per materia.** Un cambio di CSS non impegna performance; un task senza dati personali non impegna sicurezza.
 
@@ -126,7 +158,9 @@ Ha però una conseguenza reale sull'orchestratore, ed è il prezzo giusto da pag
 
 L'approvazione al 100% vale a una condizione dichiarata fin dall'inizio: che i nove revisori abbiano visto **lo stesso stato del codice**. Ma finché ognuno si ricostruiva il diff per conto proprio, quella condizione non era garantita da nessun meccanismo — erano nove ricostruzioni indipendenti, fatte in nove momenti diversi, ognuna con la propria probabilità di sbagliare.
 
-Il dossier — un file per giro, `/tmp/dev-hq-dossier/<task-id>-giro<n>.md`, con task, piano, stato, diff, file nuovi e verifiche meccaniche — chiude il buco per costruzione: c'è una fonte sola, e tutti leggono quella.
+Il dossier — un file per giro, `/tmp/dev-hq-dossier/<task-id>-giro<n>.md`, con task, percorso del piano, stato, diff, elenco dei file nuovi e verifiche meccaniche — chiude il buco per costruzione: c'è una fonte sola, e tutti leggono quella.
+
+**Il dossier cita, non ricopia.** Il diff è l'unica cosa che contiene per intero; piano e file nuovi hanno un percorso su disco e i revisori hanno `Read`. Nella prima versione ricopiava entrambi, e su un task con **un file di diff** il dossier del giro 2 pesava **38KB**. Ricopiare costa due volte — la scrittura una volta, la lettura per ogni revisore lanciato — e soprattutto crea una **seconda copia del piano**, che al giro dopo diverge da quella vera mentre il piano è il metro con cui `revisore-logica` giudica. La regola è: se una cosa ha un percorso, il dossier scrive il percorso.
 
 Il vincolo sugli strumenti e il dossier si tengono a vicenda. Il primo senza il secondo lascerebbe i revisori senza diff; il secondo senza il primo sarebbe solo un risparmio di token.
 
@@ -197,7 +231,7 @@ Senza questa asimmetria il ciclo non chiuderebbe mai — c'è sempre qualcosa ch
 
 Il workflow è stato corretto dopo la prima esecuzione reale (869cng430). Vale la pena registrare **perché** quei difetti erano invisibili a priori: sono tutti casi in cui uno strumento dava una risposta **plausibile ma incompleta**, senza segnalare nulla.
 
-**`git diff` mente per omissione.** Non mostra i file nuovi né le modifiche in staging. Sul task reale restituiva zero righe mentre il lavoro c'era tutto — bastava che qualcuno avesse fatto `git add`. Se la Fase 4 fosse partita in quel momento, nove revisori avrebbero ricevuto un diff vuoto e approvato all'unanimità un lavoro che non avevano visto. **Il 100% sarebbe stato una firma in bianco.** Ora il diff si costruisce con `git diff HEAD` più il contenuto dei file non tracciati, si verifica che il conto dei file torni, e il risultato finisce nel dossier del giro — una fonte sola per tutti e nove.
+**`git diff` mente per omissione.** Non mostra i file nuovi né le modifiche in staging. Sul task reale restituiva zero righe mentre il lavoro c'era tutto — bastava che qualcuno avesse fatto `git add`. Se la Fase 4 fosse partita in quel momento, nove revisori avrebbero ricevuto un diff vuoto e approvato all'unanimità un lavoro che non avevano visto. **Il 100% sarebbe stato una firma in bianco.** Ora il diff si costruisce con `git diff HEAD` più l'elenco dei file non tracciati, si verifica che il conto dei file torni, e il risultato finisce nel dossier del giro — una fonte sola per tutti.
 
 **`cd` è pericoloso con due repository.** La working directory persiste fra i comandi: un `cd` fatto prima fa leggere il repo sbagliato senza alcun errore. È successo due volte in una sola esecuzione, e una volta ha prodotto un elenco di file toccati completamente sbagliato. Ora la regola è `git -C`, e subshell per i comandi che non lo supportano.
 

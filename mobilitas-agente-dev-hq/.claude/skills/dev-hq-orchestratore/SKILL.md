@@ -88,9 +88,18 @@ In sintesi:
 
 1. **Leggi tutto quello che il task offre** — titolo, descrizione, commenti, subtask, checklist, allegati, task collegati. Di solito è poco: prendine atto e vai avanti.
 2. **Ricostruisci l'intento dal codice.** Il titolo nomina un dominio (`Pagamenti`) e un sintomo (`note che non si cancellano`). Vai a trovare quel codice in entrambi i repo e leggi come funziona adesso. Il codice è la fonte più ricca che hai — molto più ricca del task.
-3. **Riproduci, se è un bug.** Non progettare la cura di un male che non hai visto. Se non riesci a riprodurlo, dillo e spiega cosa hai provato: è un risultato, non un fallimento.
-4. **Scrivi il piano**: cosa cambia, in quali file, su quale repo, in che ordine, e come si verifica.
-5. **Elenca le assunzioni separatamente.** Ogni punto dove hai colmato un buco del task con un'ipotesi va scritto come ipotesi, non nascosto dentro una frase affermativa.
+3. **Se c'è di mezzo un software che non è nostro, cerca online la documentazione di oggi.** Vale sia per i ventuno vendor che già usiamo (matrice in `mobilitas-backend/docs/guides/INTEGRATIONS.md`) sia — **soprattutto** — per un servizio **nuovo** che il task ti chiede di introdurre: lì non hai codice nostro a farti da rete, e la doc del vendor è tutto quello che c'è.
+
+   **Quello che sai delle API altrui è un ricordo, non un fatto:** la tua conoscenza ha una data, le API cambiano dopo quella data, e nessun file di questi due repo può dirti che un endpoint è stato deprecato il mese scorso.
+
+   Su un vendor **che già abbiamo**: guarda prima quale versione usiamo (`pom.xml`, `package.json`), poi cerca la doc ufficiale **per quella versione**.
+
+   Su un vendor **nuovo**, prima ancora: **ce n'è già uno in casa che fa quel lavoro?** Un task che dice «manda una notifica» non dice «aggiungi Twilio» — abbiamo SMSHosting, Mailchimp, Gmail. Introdurre un fornitore è una decisione di prodotto, non di implementazione. E se gli arrivano dati personali o clinici, o se è extra-UE, **va scritto in evidenza nel piano e nel report**: è un responsabile del trattamento nuovo, e non si risolve scrivendo codice.
+
+   Cita sempre le fonti con la data. Il metodo completo è il passo 2-bis di [references/piano-azione.md](references/piano-azione.md).
+4. **Riproduci, se è un bug.** Non progettare la cura di un male che non hai visto. Se non riesci a riprodurlo, dillo e spiega cosa hai provato: è un risultato, non un fallimento.
+5. **Scrivi il piano**: cosa cambia, in quali file, su quale repo, in che ordine, e come si verifica.
+6. **Elenca le assunzioni separatamente.** Ogni punto dove hai colmato un buco del task con un'ipotesi va scritto come ipotesi, non nascosto dentro una frase affermativa.
 
 ### Salva il piano su file
 
@@ -187,18 +196,20 @@ Contano solo gli errori **nuovi**. Sul backend invece qualsiasi output è tuo: l
 
 ## Fase 4 — Il ciclo revisione → correzione
 
-Quando il codice sta in piedi e compila, entri in un **ciclo che si ripete finché tutti e nove i revisori approvano al 100%.**
+Quando il codice sta in piedi e compila, entri in un **ciclo che si ripete finché tutti i revisori lanciati approvano al 100%.**
 
 Il ciclo ha due ruoli separati, e la separazione è il punto:
 
 - **I revisori guardano e basta.** Non toccano un file.
 - **Un livello di sviluppo distinto corregge.** È l'unico che scrive.
 
-Un giro = revisione (4A) + correzione (4B). Si ripete finché 4A non torna con **zero ERRORE da tutti e nove**.
+Un giro = revisione (4A) + correzione (4B). Si ripete finché 4A non torna con **zero ERRORE da tutti i revisori lanciati**.
 
 ### 4A — I nove revisori, in sola lettura
 
 Lanciali **in parallelo, nello stesso messaggio**, uno per `subagent_type`. Sono indipendenti: non devono vedere i rilievi degli altri, o convergono sull'opinione del primo invece di trovare cose diverse.
+
+**Ma lanci solo quelli il cui repo è stato toccato** — la regola è qui sotto, in «Il gating per repo si applica prima di lanciare», e va applicata **prima** di scrivere il messaggio.
 
 | Revisore | `subagent_type` | Cosa cerca | Gira su |
 |----------|-----------------|------------|---------|
@@ -227,13 +238,24 @@ Da questo discendono due cose che **devi** fare tu, e che non puoi delegargli:
 
 L'unico che scrive resta 4B, che sei tu.
 
-### Perché sono nove, e perché non costano nove
+### Il gating per repo si applica prima di lanciare
 
-Nove revisori a ogni giro sembrano molti. Due cose li tengono sostenibili, e vanno rispettate:
+Nove revisori a ogni giro sembrano molti. Quello che li tiene sostenibili è **non lanciare chi non ha niente da guardare** — e la decisione è tua, meccanica, presa prima di scrivere il messaggio.
 
-**Il gating per repo.** Sei revisori su nove girano su un repo solo. Un task di solo backend fa chiudere in una riga estetico, UX, logica FE e performance FE — quattro contesti che costano quasi nulla. Un task di solo frontend ne fa chiudere due. **La divisione FE/BE non ha aumentato il costo: lo ha reso proporzionale al diff.**
+**La regola.** Guarda `git -C "$R" status --porcelain` sui due repo, la stessa fotografia che finisce nella sezione 3 del dossier:
 
-**Il gating per materia.** Ogni skill dice al suo revisore di chiudere in una riga quando il diff non lo riguarda: un cambio di CSS non impegna performance, un task senza dati personali non impegna sicurezza. Il verdetto lo danno lo stesso — `APPROVATO` — senza bruciare un contesto intero.
+| Se | Allora **non lanci** |
+|---|---|
+| il frontend è **vuoto** | `revisore-estetico`, `revisore-ux`, `revisore-logica-frontend`, `revisore-performance-frontend` |
+| il backend è **vuoto** | `revisore-logica-backend`, `revisore-performance-backend` |
+
+`revisore-sicurezza`, `revisore-regressioni` e `revisore-impatto-sistemico` **girano sempre**: guardano entrambi i repo, e il loro mestiere è proprio trovare cosa succede *fuori* dal repo toccato.
+
+**Non lanciato ≠ non approvato.** Un revisore che non gira non blocca il 100%: conta come chiuso, e nel report scrivi **quali non hai lanciato e perché** («diff frontend vuoto»). Chi legge deve poter distinguere un revisore che ha guardato e approvato da uno che non aveva niente da guardare.
+
+**Perché è una regola dura e non un'esortazione.** Prima qui c'era scritto che quei revisori «chiudono in una riga» e «costano quasi nulla». È falso, ed è stato misurato sul task `869et3uxh` — una migrazione Flyway, diff frontend vuoto: i quattro revisori FE sono stati lanciati lo stesso in tutti e due i giri, e ognuno ha aperto un dossier da 38KB per scrivere «non mi riguarda». **Otto esecuzioni su diciotto, il 44% del giro, su un diff vuoto.** Un revisore lanciato costa uno spawn e la lettura integrale del dossier, sempre, anche quando il verdetto è ovvio.
+
+**Il gating per materia resta un'esortazione, e va bene così.** Ogni skill dice al suo revisore di chiudere in una riga quando il diff non lo riguarda — un cambio di CSS non impegna performance, un task senza dati personali non impegna sicurezza. Quello non puoi deciderlo tu dall'esterno: richiede di aver letto il diff, che è esattamente il mestiere del revisore. Il gating **per repo** invece lo decidi con un `git status`, e per questo è vincolante.
 
 ### Regressioni e impatto sistemico non sono lo stesso revisore
 
@@ -260,19 +282,37 @@ D=/tmp/dev-hq-dossier/<task-id>-giro<n>.md
 Il dossier contiene, in quest'ordine:
 
 1. **Il task** — id, titolo, url, descrizione integrale.
-2. **Il percorso del piano** — `/tmp/dev-hq-piani/<task-id>.md`.
+2. **Il percorso del piano** — `/tmp/dev-hq-piani/<task-id>.md`. **Il percorso, non il piano.**
 3. **Lo stato dei due repo** — `git -C "$R" status --porcelain`.
 4. **Il diff** — `git -C "$R" diff HEAD`, quindi staged **e** non staged.
-5. **I file nuovi, col contenuto integrale** — nessun diff li mostra.
+5. **L'elenco dei file nuovi, con percorso assoluto e numero di righe** — nessun diff li mostra, e il revisore li apre da sé.
 6. **Le verifiche meccaniche**, già confrontate con la linea di base: i soli errori `typecheck` **nuovi**, il confronto lint per regola, l'esito della compilazione backend.
 
-Il punto 6 è nuovo ed è quello che permette ai revisori di non lanciare niente. Senza, `revisore-logica-frontend` e `revisore-regressioni` non hanno i numeri su cui giudicare e te lo segnaleranno come difetto di processo — giustamente.
+Il punto 6 è quello che permette ai revisori di non lanciare niente. Senza, `revisore-logica-frontend` e `revisore-regressioni` non hanno i numeri su cui giudicare e te lo segnaleranno come difetto di processo — giustamente.
 
-**Verifica prima di lanciare:** i file elencati da `git status` devono essere tanti quanti quelli nel diff più quelli nuovi. Se non torna, stai per far revisionare il vuoto.
+### Il dossier cita, non ricopia
 
-Nel messaggio a ogni revisore metti **il percorso del dossier** e l'elenco dei file nuovi. Non incollare il diff: è nel file, e il file è la garanzia che tutti leggano lo stesso.
+**Il diff è l'unica cosa che il dossier contiene per intero.** Tutto il resto — il piano, i file nuovi — vive già su disco a un percorso stabile, e i revisori hanno `Read`: glielo dai da aprire, non glielo incolli dentro.
 
-**Tutti a ogni giro.** Non solo quelli che avevano trovato qualcosa: una correzione può rompere ciò che un altro revisore aveva approvato — è esattamente il mestiere del revisore regressioni. L'approvazione al 100% vale solo se i nove hanno visto **lo stesso stato del codice**, quello finale.
+Questo vale in particolare per i due errori misurati sul dossier del task `869et3uxh`, che era arrivato a **38KB per un diff di un file solo**:
+
+- **il piano ricopiato dentro il dossier**, tutte le sue sezioni, mentre il punto 2 ne dichiarava già il percorso due righe sopra;
+- **i file nuovi incollati per intero**, quando bastava il percorso.
+
+Ricopiare non aggiunge niente e toglie due cose: paghi la scrittura del dossier una volta e la sua lettura per ogni revisore lanciato, e crei una **seconda copia del piano** che al giro dopo diverge da quella vera — mentre il piano è il metro con cui `revisore-logica` giudica il lavoro.
+
+La regola, quindi: **se una cosa ha un percorso, il dossier scrive il percorso.**
+
+**Due verifiche prima di lanciare:**
+
+- i file elencati da `git status` devono essere tanti quanti quelli nel diff più quelli nuovi — se non torna, stai per far revisionare il vuoto;
+- il dossier non deve contenere il testo del piano né il contenuto dei file nuovi. Su un diff di pochi file dovrebbe stare in **qualche KB**, non decine.
+
+Nel messaggio a ogni revisore metti **il percorso del dossier**, e nient'altro. Non incollare il diff: è nel file, e il file è la garanzia che tutti leggano lo stesso.
+
+**Tutti i lanciati a ogni giro.** Non solo quelli che avevano trovato qualcosa: una correzione può rompere ciò che un altro revisore aveva approvato — è esattamente il mestiere del revisore regressioni. L'approvazione al 100% vale solo se hanno visto tutti **lo stesso stato del codice**, quello finale.
+
+E **il gating si ricalcola a ogni giro**, non si eredita: se la correzione di 4B ha toccato per la prima volta il frontend, i quattro revisori FE che al giro 1 non erano stati lanciati adesso entrano in gioco. Il `git status` che apre il dossier del giro è la fonte, sempre quella del giro corrente.
 
 ### 4B — Lo sviluppo correttivo
 
@@ -286,7 +326,7 @@ Regole del correttivo:
 4. **Se la correzione contraddice il piano, aggiorna il file del piano**, altrimenti al giro dopo il revisore logica giudica sul metro sbagliato.
 5. Rilancia le verifiche meccaniche (confronto con la linea di base) prima di tornare in 4A.
 
-Poi si torna in **4A**, con tutti e nove i revisori.
+Poi si torna in **4A**, con tutti i revisori che il gating del giro nuovo seleziona.
 
 ### Quando il ciclo finisce
 
@@ -297,7 +337,9 @@ VERDETTO: APPROVATO
 VERDETTO: NON APPROVATO — <n> ERRORE
 ```
 
-Il ciclo finisce quando **tutti e nove scrivono `APPROVATO` sullo stesso stato del codice**. È il tuo test del 100%: nove APPROVATO, nient'altro. Otto su nove non è un'approvazione, e un DUBBIO non la impedisce.
+Il ciclo finisce quando **tutti i revisori lanciati scrivono `APPROVATO` sullo stesso stato del codice**. È il tuo test del 100%: nessun ERRORE da nessuno dei lanciati, nient'altro. Uno che manca all'appello non è un'approvazione, e un DUBBIO non la impedisce.
+
+I non lanciati non entrano nel conto — ma entrano nel report, con il motivo.
 
 Solo allora vai in Fase 5.
 
@@ -413,7 +455,7 @@ Poi stampa lo stesso contenuto a schermo, e dichiara in fondo il percorso del fi
 2. **Cosa ho fatto**: in prosa, non un elenco di file.
 3. **File toccati**, per repo.
 4. **Come verificarlo a mano** — passi concreti nell'app, perché nessun test lo copre.
-5. **Il ciclo di revisione**: quanti giri, quanti ERRORE per giro (es. «3 giri: 6 → 2 → 0»), e la conferma che tutti e nove i revisori hanno chiuso con zero ERRORE. Quali DUBBIO sono rimasti aperti e perché.
+5. **Il ciclo di revisione**: quanti giri, quanti ERRORE per giro (es. «3 giri: 6 → 2 → 0»), e la conferma che tutti i revisori lanciati hanno chiuso con zero ERRORE. **Quali revisori non hai lanciato e perché** (es. «estetico, UX, logica FE, performance FE: diff frontend vuoto»). Quali DUBBIO sono rimasti aperti e perché.
 6. **Documentazione**: quali documenti hai aggiornato in Fase 5, o la conferma che non serviva. Se `revisore-documentazione` ha lasciato rilievi aperti, elencali.
 7. **Se sei uscito da uno stallo**, e va scritto **in evidenza, non in fondo**: quale uscita (A, B o C), quale rilievo è rimasto e di chi era, la regola di gerarchia applicata con le due precedenze, il **rischio residuo in una frase**, e dove sta la patch se hai annullato qualcosa. Vedi [references/stallo.md](references/stallo.md) §7.
 8. **Assunzioni del piano** che sono rimaste tali, e cosa succede se una è sbagliata. Se hai scelto fra due letture di ordine di grandezza diverso, **dillo qui**: quale hai preso, quale hai scartato, cosa comporterebbe l'altra.

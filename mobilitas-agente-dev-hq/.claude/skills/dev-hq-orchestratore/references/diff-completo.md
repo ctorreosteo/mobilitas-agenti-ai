@@ -40,17 +40,16 @@ for R in "$FE" "$BE"; do
   echo "--- MODIFICHE (vs ultimo commit) ---"
   git -C "$R" diff HEAD
 
-  # 3. i file NUOVI, che nessun diff mostra: contenuto per intero
-  echo "--- FILE NUOVI ---"
+  # 3. i file NUOVI, che nessun diff mostra: percorso assoluto e dimensione
+  echo "--- FILE NUOVI (aprirli con Read) ---"
   git -C "$R" status --porcelain | awk '$1=="??"{print $2}' | while read -r f; do
-    echo "===== $f ====="
-    cat "$R/$f"
+    printf '%s  (%s righe)\n' "$R/$f" "$(wc -l < "$R/$f" | tr -d ' ')"
   done
 done
 ```
 
 - **`git diff HEAD`** invece di `git diff`: prende staged **e** non staged.
-- **I file nuovi si mostrano col contenuto**, perché non esistono in nessun diff.
+- **I file nuovi si elencano per percorso**, perché non esistono in nessun diff — ma il revisore ha `Read` e se li apre da sé. Il percorso dev'essere **assoluto**: il revisore non sa da quale directory stai lavorando.
 - **`git -C <path>`** invece di `cd`: vedi sotto, non è un dettaglio.
 
 ## Verifica prima di consegnare ai revisori
@@ -102,13 +101,28 @@ Non è solo comodità. Nove revisori che si ricostruivano il diff per conto loro
 | # | Sezione | Contenuto |
 |---|---------|-----------|
 | 1 | **Task** | id, titolo, url, descrizione integrale, commenti se ce ne sono |
-| 2 | **Piano** | il percorso `/tmp/dev-hq-piani/<task-id>.md`, e il piano incollato per intero |
+| 2 | **Piano** | il percorso `/tmp/dev-hq-piani/<task-id>.md` — **solo il percorso** |
 | 3 | **Stato** | `git -C "$R" status --porcelain`, per repo |
 | 4 | **Diff** | `git -C "$R" diff HEAD`, per repo |
-| 5 | **File nuovi** | percorso e **contenuto integrale** di ogni `??` |
+| 5 | **File nuovi** | **percorso assoluto** e numero di righe di ogni `??` — non il contenuto |
 | 6 | **Verifiche meccaniche** | typecheck: solo gli errori **nuovi** rispetto alla baseline · lint: il confronto per regola · backend: l'esito di `./mvnw -q -DskipTests compile` |
 
 La sezione 6 è quella che i revisori non possono produrre da soli, ed è quella che rende inutile dargli Bash. Se la ometti, `revisore-logica-frontend` e `revisore-regressioni` non hanno i numeri su cui giudicare, e il referto che ti torna dirà — correttamente — che il dossier è incompleto. Il metodo per produrla sta in [verifiche.md](verifiche.md).
+
+### Il dossier cita, non ricopia
+
+**Il diff è l'unica cosa che il dossier contiene per intero.** Il piano e i file nuovi hanno un percorso su disco, e i revisori hanno `Read`: si aprono da sé.
+
+La regola in una riga: **se una cosa ha un percorso, il dossier scrive il percorso.**
+
+Misurato sul task `869et3uxh` — una migrazione Flyway, **un file di diff** — il dossier del giro 2 era arrivato a **38KB**, perché ricopiava dentro di sé il piano intero (di cui la sezione 2 dichiarava già il percorso, due righe sopra) e il contenuto integrale del file nuovo.
+
+Ricopiare non aggiunge niente e toglie due cose:
+
+- **Costa due volte.** Paghi la scrittura del dossier una volta e la sua lettura per **ogni** revisore lanciato. Trentotto KB moltiplicati per i revisori del giro, e poi di nuovo al giro dopo.
+- **Crea una seconda copia del piano.** Al giro 2 il piano vero può essere cambiato — 4B lo aggiorna quando la correzione lo contraddice — e la copia dentro il dossier vecchio no. Il piano è il metro con cui `revisore-logica` giudica il lavoro: due metri diversi è peggio che nessuno.
+
+**Verifica:** su un diff di pochi file il dossier dovrebbe stare in **qualche KB**. Se è decine, stai ricopiando qualcosa che ha già un percorso.
 
 ### Nel messaggio al subagent
 
@@ -118,4 +132,4 @@ Bastano tre cose, perché il resto è nel dossier:
 2. **L'elenco esplicito dei file nuovi** — sono quelli che si perdono, ripeterli costa una riga.
 3. **Quale repo lo riguarda**, così chiude subito se non è materia sua.
 
-**Non incollare il diff nel messaggio.** Se è nel file, tutti leggono lo stesso; se è nel messaggio, hai due copie che possono divergere. E un dossier grande non è un problema: il revisore lo apre a pezzi con gli strumenti che ha.
+**Non incollare il diff nel messaggio.** Se è nel file, tutti leggono lo stesso; se è nel messaggio, hai due copie che possono divergere.

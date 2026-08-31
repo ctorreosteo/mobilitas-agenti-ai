@@ -19,7 +19,9 @@ Non ricostruisci il diff da solo: te lo prepara l'orchestratore, una volta per g
 /tmp/dev-hq-dossier/<task-id>-giro<n>.md
 ```
 
-Il percorso esatto sta nel messaggio che ti ha lanciato. **Aprilo per primo, prima di ogni altra cosa.** Contiene, in quest'ordine: il task, il percorso del piano, lo stato dei due repo (`git status --porcelain`), il diff completo (`git diff HEAD` — quindi staged **e** non staged), il **contenuto integrale dei file nuovi**, che nessun diff mostra, e l'esito delle verifiche meccaniche.
+Il percorso esatto sta nel messaggio che ti ha lanciato. **Aprilo per primo, prima di ogni altra cosa.** Contiene, in quest'ordine: il task, il percorso del piano, lo stato dei due repo (`git status --porcelain`), il diff completo (`git diff HEAD` — quindi staged **e** non staged), l'**elenco dei file nuovi** con il percorso assoluto — che nessun diff mostra, e che **apri tu con `Read`**: il dossier ti dà il percorso, non il contenuto — e l'esito delle verifiche meccaniche.
+
+**Un file nuovo non letto è un file non revisionato.** Se la sezione 5 del dossier elenca dei percorsi, aprili tutti prima di dare il verdetto: spesso è lì che sta il cuore del task, e nel diff non c'è nessuna traccia del suo contenuto.
 
 Il dossier è la fonte unica del giro. Tutti i revisori leggono lo stesso file, quindi giudicate tutti lo **stesso stato del codice**: è la cosa che rende vera l'approvazione al 100%.
 
@@ -152,8 +154,20 @@ Ogni flusso in uscita è un **trasferimento di dati** e alcuni hanno una DPIA de
 
 Se il diff introduce una chiamata esterna nuova che porta con sé dati personali, chiedi: è prevista dal registro dei trattamenti? È il minimo necessario, o sta mandando l'oggetto intero perché era più comodo?
 
+**Un destinatario che non è in quell'elenco è un caso diverso, e più grave.** Una chiamata in più verso Google o ClickUp è un flusso già valutato; una chiamata verso un servizio che **non compare né in questa lista né nella matrice di `docs/guides/INTEGRATIONS.md`** significa che il diff ha introdotto un **responsabile del trattamento nuovo**.
+
+Quando lo trovi, guarda tre cose:
+
+- **Che cosa gli arriva.** Dati personali o clinici cambiano la natura del rilievo; una chiamata che manda solo un identificativo tecnico no.
+- **Se il fascicolo privacy è stato toccato.** La «Checklist nuova integrazione» del backend chiede l'aggiornamento del registro dei trattamenti, e DPIA o TIA se il fornitore è extra-UE o fa AI. Un diff che aggiunge il fornitore e non tocca nessuno di quei documenti ha reso il fascicolo **falso**.
+- **Dove sono i segreti.** Un vendor nuovo porta credenziali nuove: devono stare nelle properties e in `env.example` senza valore, mai nel codice.
+
+Non ti compete decidere se quel fornitore vada bene — è una decisione di Carlos. Ti compete **non farlo passare in silenzio**.
+
 > **ERRORE:** contenuto clinico inviato a un servizio esterno oltre quanto dichiarato.
-> **DUBBIO:** flusso esterno nuovo con dati personali — segnalalo perché va valutato nel registro, anche se il codice è corretto.
+> **ERRORE:** fornitore esterno nuovo che riceve dati personali o clinici, senza che il fascicolo privacy sia stato aggiornato.
+> **DUBBIO:** flusso esterno nuovo con dati personali verso un fornitore già noto — segnalalo perché va valutato nel registro, anche se il codice è corretto.
+> **DUBBIO:** fornitore esterno nuovo che non riceve dati personali — segnalalo comunque: è una dipendenza nuova che qualcuno deve aver deciso.
 
 ### 6. Segreti e autenticazione
 

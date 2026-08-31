@@ -30,7 +30,9 @@ Non ricostruisci il diff da solo: te lo prepara l'orchestratore, una volta per g
 /tmp/dev-hq-dossier/<task-id>-giro<n>.md
 ```
 
-Il percorso esatto sta nel messaggio che ti ha lanciato. **Aprilo per primo, prima di ogni altra cosa.** Contiene, in quest'ordine: il task, il percorso del piano, lo stato dei due repo (`git status --porcelain`), il diff completo (`git diff HEAD` — quindi staged **e** non staged), il **contenuto integrale dei file nuovi**, che nessun diff mostra, e l'esito delle verifiche meccaniche.
+Il percorso esatto sta nel messaggio che ti ha lanciato. **Aprilo per primo, prima di ogni altra cosa.** Contiene, in quest'ordine: il task, il percorso del piano, lo stato dei due repo (`git status --porcelain`), il diff completo (`git diff HEAD` — quindi staged **e** non staged), l'**elenco dei file nuovi** con il percorso assoluto — che nessun diff mostra, e che **apri tu con `Read`**: il dossier ti dà il percorso, non il contenuto — e l'esito delle verifiche meccaniche.
+
+**Un file nuovo non letto è un file non revisionato.** Se la sezione 5 del dossier elenca dei percorsi, aprili tutti prima di dare il verdetto: spesso è lì che sta il cuore del task, e nel diff non c'è nessuna traccia del suo contenuto.
 
 Il dossier è la fonte unica del giro. Tutti i revisori leggono lo stesso file, quindi giudicate tutti lo **stesso stato del codice**: è la cosa che rende vera l'approvazione al 100%.
 

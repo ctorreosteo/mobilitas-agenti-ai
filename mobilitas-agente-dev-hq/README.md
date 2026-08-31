@@ -22,9 +22,9 @@ I due repo del gestionale sono già dichiarati come directory aggiuntive in `.cl
 | Fase | Cosa succede | Si ferma? |
 |------|--------------|-----------|
 | 1 | Legge i task con scadenza **oggi**; se non ce ne sono, prende gli **scaduti** dal più vecchio. Sposta il task a **`in progress`** | No |
-| 2 | Scrive il **piano d'azione**, lo fa revisionare, corregge finché è approvato | No — nessuna approvazione umana |
+| 2 | Scrive il **piano d'azione** — cercando online la doc aggiornata di ogni software di terzi coinvolto, che già lo usiamo o sia da introdurre — lo fa revisionare, corregge finché è approvato | No — nessuna approvazione umana |
 | 3 | Sviluppa su frontend e backend | No |
-| 4 | **Ciclo revisione → correzione**, finché i nove revisori approvano al 100% | No |
+| 4 | **Ciclo revisione → correzione**, finché i revisori lanciati approvano al 100% | No |
 | 5 | **Allinea la documentazione** sul codice ormai definitivo | No |
 | 6 | Scrive il report in `report/` e lo stampa, e sposta il task a **`review`**. **Nessun commit** | Fine |
 
@@ -47,7 +47,7 @@ Un task alla volta, sequenziale. **Non si ferma mai a chiederti niente:** se non
       (l'unico che scrive)
 ```
 
-I revisori **non correggono**: producono un referto. A correggere è un passaggio di sviluppo separato. Si gira finché **tutti e nove** tornano con zero ERRORE sullo stesso stato del codice.
+I revisori **non correggono**: producono un referto. A correggere è un passaggio di sviluppo separato. Si gira finché **tutti quelli lanciati** tornano con zero ERRORE sullo stesso stato del codice.
 
 ### Se il ciclo non converge, esce da solo
 
@@ -72,7 +72,11 @@ Tutto finisce nel report, in evidenza: uscita usata, rilievo rimasto, regola app
 
 Nessuno di loro modifica un file — e non per promessa: ognuno è definito in `.claude/agents/` con `tools: Read, Grep, Glob`, quindi `Write`, `Edit` e `Bash` **non esistono** per lui. Producono referti, e ogni rilievo è **ERRORE** (blocca l'avanzamento) o **DUBBIO** (si valuta e si motiva).
 
-Siccome non hanno Bash, il diff non se lo costruiscono: glielo prepara l'orchestratore in un **dossier** per giro (`/tmp/dev-hq-dossier/<task-id>-giro<n>.md`) che contiene task, piano, stato dei due repo, diff, contenuto dei file nuovi e l'esito delle verifiche meccaniche. Tutti leggono quel file, quindi tutti giudicano lo stesso stato del codice — che è ciò che dà valore all'approvazione al 100%.
+L'unica eccezione è `revisore-piano`, che ha in più `WebFetch`: è l'unico la cui materia — la documentazione dei vendor esterni — vive fuori dai due repo. Anche quello è leggere.
+
+Siccome non hanno Bash, il diff non se lo costruiscono: glielo prepara l'orchestratore in un **dossier** per giro (`/tmp/dev-hq-dossier/<task-id>-giro<n>.md`) che contiene task, percorso del piano, stato dei due repo, diff, elenco dei file nuovi e l'esito delle verifiche meccaniche. Tutti leggono quel file, quindi tutti giudicano lo stesso stato del codice — che è ciò che dà valore all'approvazione al 100%.
+
+Il dossier **cita e non ricopia**: piano e file nuovi hanno un percorso su disco, e i revisori hanno `Read`. Il diff è l'unica cosa che contiene per intero.
 
 Sono disposti su tre momenti: **uno prima** dello sviluppo, **nove durante**, **uno dopo**.
 
@@ -80,7 +84,7 @@ Sono disposti su tre momenti: **uno prima** dello sviluppo, **nove durante**, **
 
 | Revisore | Guarda |
 |----------|--------|
-| `revisore-piano` | Che il piano abbia capito il task, prima che diventi codice |
+| `revisore-piano` | Che il piano abbia capito il task, prima che diventi codice. È l'unico con `WebFetch`: apre le fonti che il piano cita e controlla che dicano davvero quello |
 
 È il più economico del sistema: legge mezza pagina e intercetta il fraintendimento finché costa una frase.
 
@@ -100,7 +104,7 @@ Girano in parallelo, un subagent ciascuno, sullo stesso dossier. Sono indipenden
 | `revisore-regressioni` | Chi chiamava ciò che è cambiato — **un salto** | FE + BE |
 | `revisore-impatto-sistemico` | Effetti a **più salti**, incoerenze, invarianti | FE + BE |
 
-**Nove non costano nove.** Sei girano su un repo solo: un task di solo backend ne fa chiudere quattro in una riga. E ogni revisore chiude subito quando la materia non lo riguarda — un cambio di CSS non impegna performance.
+**Nove non costano nove — perché non se ne lanciano nove.** Sei girano su un repo solo, e se quel repo ha il diff vuoto l'orchestratore **non li lancia affatto**: un task di solo backend ne spegne quattro prima di partire, e il report dice quali e perché. Restano sempre accesi sicurezza, regressioni e impatto sistemico, che guardano entrambi i repo. Il gating **per materia** invece resta in mano al revisore, che chiude in una riga quando il diff non lo riguarda — quello richiede di aver letto il diff.
 
 ### Dopo il ciclo — Fase 5
 

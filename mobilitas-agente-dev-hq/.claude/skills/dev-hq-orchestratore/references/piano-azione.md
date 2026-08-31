@@ -48,6 +48,103 @@ Se trovi un fratello morto: o lo riusi, o dichiari in «Cosa NON faccio» che re
 
 Se non trovi il dominio, il problema è di vocabolario: il task usa la parola del business, il codice quella del dominio tecnico. Cerca per stringhe UI italiane — le label sono in italiano e sono il ponte più veloce fra le due lingue.
 
+### 2-bis. Se c'è di mezzo un servizio di terzi, cerca la documentazione di oggi
+
+**Quello che sai delle API altrui è un ricordo, non un fatto.** La tua conoscenza si ferma a una certa data; le API dei vendor no. Un endpoint deprecato, un campo rinominato, un modello di autenticazione cambiato, un parametro diventato obbligatorio: sono tutte cose che accadono dopo la tua data di addestramento e che nessun file di questo repo può dirti.
+
+È l'unica classe di informazione che **non si trova né nel codice né nei doc interni**, e per questo è l'unico caso in cui esci a cercare.
+
+**Quando si applica.** Ogni volta che il task porta dentro **un software che non è nostro**. Sono due casi, e il secondo è quello che conta di più:
+
+| Caso | Esempio | Dove sei |
+|---|---|---|
+| **Vendor che già usiamo** | «Qonto — i bonifici non si riconciliano» | Hai il nostro codice come rete: c'è un service, una config, una versione appuntata |
+| **Vendor nuovo** | «Integrare un servizio di firma digitale», «mandare le notifiche su Telegram» | **Non hai niente.** Nessun codice nostro, nessuna versione, nessuna convenzione: solo la documentazione del vendor |
+
+Il primo elenco — i ventuno vendor già in casa — sta nella matrice di `mobilitas-backend/docs/guides/INTEGRATIONS.md`. **Non è l'elenco di quando devi cercare: è solo l'elenco di quelli su cui parti avvantaggiato.**
+
+Vale anche per una libreria di terzi che stai per aggiungere, o che stai per usare in un modo nuovo.
+
+**Quando non si applica.** Un task che tocca solo codice nostro. Non cercare su internet come si scrive un `useEffect` o come funziona il soft delete di questo backend: quello sta nel codice, ed è più affidabile.
+
+#### I tre passi, in quest'ordine
+
+**1. Guarda cosa usiamo davvero, prima di cercare.** È il passo che salta la maggior parte degli errori. Trova la versione appuntata:
+
+- backend: `mobilitas-backend/pom.xml` — le versioni sono esplicite, es. `google-api-services-calendar` a `v3-rev20250404-2.0.0`, `jjwt` a `0.11.5`;
+- frontend: `mobilitas-frontend/package.json`;
+- e la riga del vendor in `docs/guides/INTEGRATIONS.md`, che dice quali secret e quali config usiamo.
+
+Cercare la documentazione dell'ultima versione e progettare su quella, mentre il `pom.xml` è fermo a due major indietro, produce un piano che **non compila**. Peggio di non aver cercato.
+
+**2. Cerca la documentazione ufficiale corrente**, e cerca in particolare:
+
+| Cosa | Perché conta |
+|---|---|
+| L'endpoint o il metodo che ti serve, **oggi** | Il nome può essere cambiato |
+| **Deprecazioni e date di dismissione** | È l'informazione più preziosa: costruire su qualcosa che chiude fra tre mesi è lavoro da rifare |
+| **Breaking change** fra la nostra versione e quella corrente | Dice se il piano deve includere un aggiornamento, o aggirarlo |
+| Autenticazione, scope, permessi | Cambia più spesso di quanto sembri, e fallisce solo in produzione |
+| Limiti di frequenza e quote | Un job che gira su tutti i pazienti li incontra, il tuo test manuale no |
+
+Preferisci **sempre** la fonte ufficiale del vendor a un blog o a una risposta di forum. Un post del 2023 che spiega come si fa una cosa è esattamente il tipo di fonte che ti fa scrivere codice deprecato con sicurezza.
+
+**3. Diffida di quello che leggi, quanto di quello che ricordi.** Se la documentazione online e il codice del repo si contraddicono, non hai una risposta: hai una **domanda**. Scrivila nel piano come tale. Può voler dire che siamo indietro, oppure che stai leggendo la doc di un'altra versione.
+
+#### Se il vendor è nuovo, la ricerca è un'altra cosa
+
+Qui non stai aggiornando un ricordo: stai **decidendo di far entrare un pezzo di software altrui** in un gestionale che tratta dati sanitari. La ricerca è la parte principale del piano, non un contorno.
+
+**Prima domanda, e viene prima di tutte: ce l'abbiamo già?** Il gestionale parla già con ventuno servizi. Un task che dice «manda una notifica» non dice «aggiungi Twilio»: abbiamo già SMSHosting, Mailchimp, Gmail. Prima di introdurre un vendor, **cerca nella matrice se qualcosa di già in casa fa quel lavoro.**
+
+Se un vendor esistente basta, usalo e scrivi nel piano che hai scartato l'alternativa nuova. Introdurre un fornitore è una **decisione di prodotto** — vale la regola delle ambiguità strutturali qui sotto: prendi la strada più corta e reversibile, e dichiara il bivio.
+
+Se serve davvero qualcosa di nuovo, cerca **anche** questo, oltre ai punti della tabella sopra:
+
+| Cosa | Perché può far fallire il task |
+|---|---|
+| **Esiste un'API pubblica?** Quale modello di auth? | Alcuni servizi non ne hanno, o la danno solo su piani alti |
+| **Quale SDK, quale versione, è mantenuto?** | Una libreria ferma da tre anni è un debito che nasce già vecchio |
+| **Costo e limiti del piano** | Un'integrazione che richiede un piano enterprise è un task diverso, e non lo decidi tu |
+| **Dove vengono trattati i dati** — UE o extra-UE | Vedi qui sotto: è il punto che può fermare tutto |
+| **Sandbox o ambiente di prova** | Senza, ogni verifica manuale tocca dati veri |
+
+**Il punto che nessun altro task ha: i dati personali.** Questo backend ha un fascicolo privacy vero — registro dei trattamenti, DPIA, DPA, TIA per l'extra-UE — e la sua stessa documentazione dice cosa serve, nella «Checklist nuova integrazione» di `INTEGRATIONS.md`: service dedicato, properties e `env.example`, chiavi `config` e `CONFIG_KEYS`, sandbox per gli effetti irreversibili, aggiornamento di `INTEGRATIONS.md`, **e l'aggiornamento del fascicolo privacy se ci passano dati personali o sanitari.**
+
+Quindi, nel piano, per un vendor nuovo:
+
+- **di' esplicitamente quali dati gli arrivano** — nessuno, personali, o clinici;
+- se sono personali o clinici, **dillo in evidenza e mettilo fra le cose che richiedono una decisione di Carlos**: un fornitore nuovo che tratta dati sanitari è un responsabile del trattamento nuovo, e questo non si risolve scrivendo codice;
+- se il vendor è **extra-UE**, scrivilo. È la differenza fra una riga di config e una valutazione formale.
+
+Non ti fermi comunque — pianifichi la strada più piccola e lo dichiari — ma questa è la cosa che deve saltare all'occhio nel report, non stare in fondo.
+
+**Nota pratica:** il dominio di un vendor nuovo **non sarà fra quelli consentiti** in `.claude/settings.json`. Vale il ripiego descritto più sotto: usi quello che vedi dalla ricerca senza aprire la pagina, lo dichiari, e segnali il dominio nel report perché venga aggiunto.
+
+#### Cosa finisce nel piano
+
+Una sezione dedicata, con le **fonti citate e datate**. Senza date, fra un mese nessuno sa se quella riga era aggiornata.
+
+```markdown
+## Documentazione di terzi consultata
+- **Qonto — API bonifici**, https://... (consultata il 2026-08-31)
+  - Versione che usiamo: <dal pom/package.json, o "chiamate HTTP diritte">
+  - Rilevante: il campo `X` è obbligatorio da giugno 2026; il nostro client non lo manda.
+  - Deprecazioni: nessuna che riguardi questo endpoint.
+```
+
+Se hai cercato e **non hai trovato** niente di rilevante, scrivilo lo stesso in una riga: «cercata la doc Qonto, nessun cambiamento rilevante per questo endpoint». Vale quanto un ritrovamento — dice al revisore che il controllo è stato fatto, e distingue «non c'era niente» da «non ho guardato».
+
+#### Se la rete non risponde, o il dominio non è consentito
+
+I domini dei vendor del gestionale sono già autorizzati in `.claude/settings.json`, e la ricerca pure. Ma un vendor nuovo, o una redirezione su un host che non è in elenco, **chiederebbe un permesso** — e una domanda di permesso ferma la giornata esattamente come una domanda a Carlos.
+
+Quindi, in quest'ordine: prova la ricerca; se un dominio non passa, **prendi quello che la ricerca stessa ti mostra** senza aprire la pagina, e nel piano scrivi che la fonte non è stata aperta per intero.
+
+**Se non ottieni niente affatto**, non ti fermi e non tiri a indovinare: lo dichiari nel piano fra le assunzioni, con scritto che l'integrazione è progettata **sulla base di conoscenza potenzialmente non aggiornata**, e quali punti sarebbero da verificare. È un rischio che Carlos deve poter leggere nel report, non un motivo per bloccare la giornata.
+
+E quando il dominio mancante è di un vendor che useremo ancora, **segnalalo nel report**: aggiungerlo ai permessi è una riga, e la volta dopo non si ripresenta.
+
 ### 3. Riproduci, se è un bug
 
 Non progettare la cura di un male che non hai visto: la metà dei "bug" è un malinteso su come dovrebbe funzionare.
@@ -80,6 +177,11 @@ Il backend di solito precede: il frontend consuma un contratto che deve già esi
 Passi concreti nell'app. Non "testare che funzioni", ma:
 apri X → filtra per Y → premi Z → deve succedere W.
 Serve a Carlos per il collaudo manuale — non esistono test automatici.
+
+## Documentazione di terzi consultata
+Solo se il task tocca un vendor esterno. Fonte ufficiale, url, data di consultazione,
+versione che usiamo noi, deprecazioni trovate. Se non c'era niente di rilevante,
+scrivilo: «cercata, nessun cambiamento». Vedi il passo 2-bis.
 
 ## Assunzioni
 - Ho assunto che «note» siano quelle sul pagamento, non sul paziente,
