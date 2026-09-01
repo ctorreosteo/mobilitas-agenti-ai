@@ -1,0 +1,73 @@
+{
+  "passaggio": "chiarezza",
+  "esito": "NON CONSEGNABILE",
+  "statistiche": {
+    "parole_prima": 20705,
+    "parole_dopo": 20808,
+    "delta_pct": 0.5,
+    "identita_pct": 80.5,
+    "per_te_prima": 2,
+    "per_te_dopo": 2,
+    "slot_prima": 15,
+    "slot_dopo": 15,
+    "uscite_prima": 6,
+    "uscite_dopo": 6,
+    "etichette_prima": 8,
+    "etichette_dopo": 8,
+    "pmid_prima": 64,
+    "pmid_dopo": 64
+  },
+  "violazioni": [
+    {
+      "severita": "BLOCCANTE",
+      "codice": "NUMERI_INVENTATI",
+      "messaggio": "4 valori numerici compaiono solo nella v6.",
+      "dettaglio": [
+        "10% (×1)",
+        "1,0% (×1)",
+        "0,3% (×1)",
+        "5% (×1)"
+      ]
+    },
+    {
+      "severita": "AVVISO",
+      "codice": "BOX_NON_PREVISTI",
+      "messaggio": "4 tipi di box fuori dai quattro ammessi.",
+      "dettaglio": [
+        "«Nota di lavorazione (v6)» (×1)",
+        "«Nota di lavorazione (v5)» (×1)",
+        "«Nota di lavorazione (v4)» (×1)",
+        "«Nota di lavorazione (v3)» (×1)"
+      ]
+    },
+    {
+      "severita": "BLOCCANTE",
+      "codice": "TABELLE_FUORI_SPECIFICA",
+      "messaggio": "4 righe di tabella superano 4 colonne o 8 parole per cella.",
+      "dettaglio": [
+        "4 col / 9 parole: | Secondaria (odontogena, micetoma, sistemica) | Dente curato dallo st",
+        "3 col / 18 parole: | Ospite fragile con dolore facciale che peggiora in fretta, guancia o",
+        "3 col / 10 parole: | Rinorrea acquosa chiara da un lato, dopo chirurgia o trauma | Pronto",
+        "3 col / 11 parole: | Rowane, 2025 (39932258) | OMT di drenaggio linfatico cranico, 43 paz"
+      ]
+    },
+    {
+      "severita": "AVVISO",
+      "codice": "PAROLE_FUORI_RANGE",
+      "messaggio": "Il documento ha 20808 parole (appendici escluse): fuori dal range 8000–13000. Non e' un difetto di conservazione: se il superamento c'era gia' in ingresso, il rilievo appartiene al livello di asciugatura, non a chi ha riscritto.",
+      "dettaglio": []
+    },
+    {
+      "severita": "AVVISO",
+      "codice": "GLOSSARIO_TROPPO_LUNGO",
+      "messaggio": "Il glossario ha 63 termini (max 40): la Bibbia è scritta troppo tecnica.",
+      "dettaglio": []
+    },
+    {
+      "severita": "BLOCCANTE",
+      "codice": "SCRIPT_TROPPO_LUNGO",
+      "messaggio": "Lo script per il paziente ha 116 parole (max 100).",
+      "dettaglio": []
+    }
+  ]
+}

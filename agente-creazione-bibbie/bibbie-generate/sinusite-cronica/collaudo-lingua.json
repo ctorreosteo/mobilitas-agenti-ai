@@ -1,0 +1,62 @@
+{
+  "passaggio": "lingua",
+  "esito": "NON CONSEGNABILE",
+  "statistiche": {
+    "parole_prima": 20808,
+    "parole_dopo": 20901,
+    "delta_pct": 0.4,
+    "identita_pct": 93.2,
+    "per_te_prima": 2,
+    "per_te_dopo": 2,
+    "slot_prima": 15,
+    "slot_dopo": 15,
+    "uscite_prima": 6,
+    "uscite_dopo": 6,
+    "etichette_prima": 8,
+    "etichette_dopo": 8,
+    "pmid_prima": 64,
+    "pmid_dopo": 64
+  },
+  "violazioni": [
+    {
+      "severita": "AVVISO",
+      "codice": "CITAZIONI_PERSE",
+      "messaggio": "3 coppie autore-anno non ricompaiono nella v6.",
+      "dettaglio": [
+        "André 2009",
+        "Bhattacharyya 2006",
+        "Jacq 2017"
+      ]
+    },
+    {
+      "severita": "BLOCCANTE",
+      "codice": "NUMERI_PERSI",
+      "messaggio": "5 valori numerici della v5 non si ritrovano nella v6.",
+      "dettaglio": [
+        "10% (×1)",
+        "1,0% (×1)",
+        "0,3% (×1)",
+        "5% (×1)",
+        "36% (×1)"
+      ]
+    },
+    {
+      "severita": "AVVISO",
+      "codice": "PAROLE_FUORI_RANGE",
+      "messaggio": "Il documento ha 20901 parole (appendici escluse): fuori dal range 8000–13000. Non e' un difetto di conservazione: se il superamento c'era gia' in ingresso, il rilievo appartiene al livello di asciugatura, non a chi ha riscritto.",
+      "dettaglio": []
+    },
+    {
+      "severita": "BLOCCANTE",
+      "codice": "TEMPI_INVIO_PERSI",
+      "messaggio": "1 indicazioni di tempo per le bandiere rosse sono sparite (25 → 24). Un'urgenza assorbita nella prosa non si esegue.",
+      "dettaglio": []
+    },
+    {
+      "severita": "AVVISO",
+      "codice": "GLOSSARIO_TROPPO_LUNGO",
+      "messaggio": "Il glossario ha 63 termini (max 40): la Bibbia è scritta troppo tecnica.",
+      "dettaglio": []
+    }
+  ]
+}
