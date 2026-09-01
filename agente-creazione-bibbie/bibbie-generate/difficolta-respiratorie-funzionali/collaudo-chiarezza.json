@@ -1,0 +1,60 @@
+{
+  "passaggio": "chiarezza",
+  "esito": "NON CONSEGNABILE",
+  "statistiche": {
+    "parole_prima": 21552,
+    "parole_dopo": 21624,
+    "delta_pct": 0.3,
+    "identita_pct": 77.7,
+    "per_te_prima": 4,
+    "per_te_dopo": 4,
+    "slot_prima": 15,
+    "slot_dopo": 15,
+    "uscite_prima": 27,
+    "uscite_dopo": 27,
+    "etichette_prima": 20,
+    "etichette_dopo": 20,
+    "pmid_prima": 51,
+    "pmid_dopo": 51
+  },
+  "violazioni": [
+    {
+      "severita": "AVVISO",
+      "codice": "ETICHETTE_RIANCORATE",
+      "messaggio": "15 etichette seguono un testo diverso dalla v5. Può essere solo riformulazione — va guardato dal collaudatore semantico.",
+      "dettaglio": [
+        "DIMOSTRATO: …*(studi sull'uomo, solidi)* — il modello del confronto fra c",
+        "IPOTESI: …*(meccanismo coerente, nessuno studio)* su questi pazienti —",
+        "IPOTESI: …*(meccanismo coerente, nessuno studio)* — che i muscoli acce",
+        "IPOTESI: …*(meccanismo coerente, nessuno studio)* — che restituire esc",
+        "IPOTESI: …*(meccanismo coerente, nessuno studio)* — la grandezza che q",
+        "IPOTESI: …*(meccanismo coerente, nessuno studio)* — nessuno ha misurat",
+        "PROBABILE: …*(razionale forte, prove parziali)* sul **meccanismo** — l'e",
+        "PROBABILE: …*(razionale forte, prove parziali)* sul **meccanismo** — la "
+      ]
+    },
+    {
+      "severita": "BLOCCANTE",
+      "codice": "TABELLE_FUORI_SPECIFICA",
+      "messaggio": "4 righe di tabella superano 4 colonne o 8 parole per cella.",
+      "dettaglio": [
+        "4 col / 10 parole: | Dispnea nuova o peggiorata con un fattore di rischio tromboembolico ",
+        "4 col / 9 parole: | Dispnea da sforzo che progredisce su mesi, senza fluttuare | Medico ",
+        "4 col / 9 parole: | Russamento con pause riferite, risvegli con soffocamento, sonnolenza",
+        "4 col / 10 parole: | Sintomi che peggiorano in piedi e fermo, con cardiopalmo all'alzarsi"
+      ]
+    },
+    {
+      "severita": "AVVISO",
+      "codice": "PAROLE_FUORI_RANGE",
+      "messaggio": "Il documento ha 21624 parole (appendici escluse): fuori dal range 8000–13000. Non e' un difetto di conservazione: se il superamento c'era gia' in ingresso, il rilievo appartiene al livello di asciugatura, non a chi ha riscritto.",
+      "dettaglio": []
+    },
+    {
+      "severita": "AVVISO",
+      "codice": "GLOSSARIO_TROPPO_LUNGO",
+      "messaggio": "Il glossario ha 43 termini (max 40): la Bibbia è scritta troppo tecnica.",
+      "dettaglio": []
+    }
+  ]
+}
