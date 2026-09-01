@@ -1,0 +1,61 @@
+{
+  "passaggio": "chiarezza",
+  "esito": "NON CONSEGNABILE",
+  "statistiche": {
+    "parole_prima": 21703,
+    "parole_dopo": 21791,
+    "delta_pct": 0.4,
+    "identita_pct": 77.7,
+    "per_te_prima": 11,
+    "per_te_dopo": 11,
+    "slot_prima": 15,
+    "slot_dopo": 15,
+    "uscite_prima": 3,
+    "uscite_dopo": 3,
+    "etichette_prima": 12,
+    "etichette_dopo": 12,
+    "pmid_prima": 81,
+    "pmid_dopo": 81
+  },
+  "violazioni": [
+    {
+      "severita": "AVVISO",
+      "codice": "BOX_NON_PREVISTI",
+      "messaggio": "5 tipi di box fuori dai quattro ammessi.",
+      "dettaglio": [
+        "«DIMOSTRATO» (×10)",
+        "«IPOTESI» (×12)",
+        "«PROBABILE» (×13)",
+        "«Condizioni spesso associate» (×1)",
+        "«RAGIONAMENTO» (×1)"
+      ]
+    },
+    {
+      "severita": "BLOCCANTE",
+      "codice": "TABELLE_FUORI_SPECIFICA",
+      "messaggio": "14 righe di tabella superano 4 colonne o 8 parole per cella.",
+      "dettaglio": [
+        "3 col / 22 parole: | Rigidità o ipertonia **nuova** con febbre ≥38 °C, sudorazione, tremo",
+        "3 col / 12 parole: | Quadro dei cingoli con cefalea nuova, dolore alla masticazione o dis",
+        "3 col / 12 parole: | Debolezza prossimale con **disfagia** o con dispnea da sforzo di nuo",
+        "3 col / 10 parole: | Debolezza prossimale vera e progressiva (scale, braccia sopra la tes",
+        "3 col / 12 parole: | Età ≥50 con dolore bilaterale ai cingoli e rigidità mattutina >45 mi",
+        "3 col / 10 parole: | Rigidità con febbre persistente, senza i segni della prima riga | Me",
+        "3 col / 22 parole: | Rigidità con intolleranza al freddo, aumento di peso, stipsi, voce r",
+        "3 col / 14 parole: | Esordio prima dei 45 anni, rigidità mattutina >30 minuti, dolore not"
+      ]
+    },
+    {
+      "severita": "AVVISO",
+      "codice": "PAROLE_FUORI_RANGE",
+      "messaggio": "Il documento ha 21791 parole (appendici escluse): fuori dal range 8000–13000. Non e' un difetto di conservazione: se il superamento c'era gia' in ingresso, il rilievo appartiene al livello di asciugatura, non a chi ha riscritto.",
+      "dettaglio": []
+    },
+    {
+      "severita": "AVVISO",
+      "codice": "GLOSSARIO_TROPPO_LUNGO",
+      "messaggio": "Il glossario ha 41 termini (max 40): la Bibbia è scritta troppo tecnica.",
+      "dettaglio": []
+    }
+  ]
+}
