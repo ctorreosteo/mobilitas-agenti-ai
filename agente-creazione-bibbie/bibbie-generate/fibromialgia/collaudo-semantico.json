@@ -1,0 +1,23 @@
+{
+  "passaggio": "semantico",
+  "condizione": "fibromialgia",
+  "coppia": "v5-intermedia.md contro v7-finale.md (+ mappa-v5.md contro mappa-finale.md)",
+  "esito": "CONSEGNABILE",
+  "metodo": "Rilanciato fuori dal workflow, dove il guardiano dei 180 secondi non c'e'. Spezzato in tre perimetri chiusi invece che in un solo collaudatore su 341 KB: capitoli 0-5, capitoli 6-10, capitoli 11-14 con appendici e Mappa. Ogni perimetro lavora un capitolo per volta, leggendo per intervallo di righe invece che il file intero.",
+  "bloccanti_dal_codice": 1,
+  "bloccanti_semantici": 0,
+  "violazioni": [
+    {
+      "tipo": "verbo irrigidito",
+      "severita": "AVVISO",
+      "capitolo": "Perche' le mani possono cambiare qualcosa — box «Quanto e' solido» del primo meccanismo, il guadagno centrale",
+      "passaggio_di_nascita": "chiarezza (v6)",
+      "testo_v5": "Il meccanismo — che la terapia manuale alzi la soglia di pressione anche in siti lontani da quello trattato, il che implica una via centrale — e' PROBABILE",
+      "testo_v7": "Il meccanismo e' questo: la terapia manuale alza la soglia di pressione anche in siti lontani da quello trattato",
+      "riparazione": "«e' che la terapia manuale alzi» al posto di «e' questo: la terapia manuale alza»",
+      "stato": "RIPARATA"
+    }
+  ],
+  "nota_sul_bloccante_dello_script": "TABELLE_FUORI_SPECIFICA (17 righe) e' un falso positivo di conservazione: le righe segnalate stanno identiche nella v5 e nella v7. Il superamento c'era gia' in ingresso e appartiene al livello di asciugatura, non a chi ha riscritto. BOX_NON_PREVISTI e PAROLE_FUORI_RANGE sono avvisi ereditati dalla v5.",
+  "note": "Riscrittura conservativa su tutti e tre i perimetri. Nessun claim assorbito, nessuna qualificazione caduta, nessuna etichetta riancorata, nessun numero riattribuito. La tabella delle bandiere rosse e' identica su tutte e tredici le righe, destinatari e tempi compresi; l'Appendice B e' identica byte per byte. Le uniche aggiunte sono sette metafore di servizio, verificate con la prova della copertura. La v6-v7 ha lavorato per spezzatura di periodi, non per compressione."
+}
