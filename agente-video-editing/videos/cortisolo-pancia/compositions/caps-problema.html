@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="it">
+<head><meta charset="UTF-8" /><title>Sottotitoli — il problema</title></head>
+<body>
+  <template>
+    <style>
+      /* la radice si stila sempre via #root: lo scoper CSS scarta una classe sulla radice */
+      #root { position:absolute; inset:0; width:3840px; height:2160px;
+        --mint:var(--accent, #72FB93); --paper:#EDF3F0; }
+      .rail { position:absolute; left:5%; right:5%; bottom:224px; height:0; }
+      .cap { position:absolute; left:0; right:0; bottom:0; display:flex;
+        justify-content:center; opacity:0; visibility:hidden; }
+      .cap-in { display:flex; align-items:baseline; gap:42px; max-width:100%;
+        padding:30px 60px 40px; border-radius:30px; background:rgba(0,19,42,.66);
+        box-shadow:0 22px 70px rgba(0,10,25,.46); }
+      .w { display:inline-block; font-family:Montserrat, sans-serif; font-weight:900;
+        font-size:132px; line-height:1; letter-spacing:-.03em; color:var(--paper);
+        transform-origin:50% 72%; text-shadow:0 6px 24px rgba(0,12,28,.55); }
+      .w.hot { color:var(--mint); font-size:148px; }
+    </style>
+
+    <div id="root" data-composition-id="caps-problema" data-width="3840" data-height="2160">
+      <div class="rail">
+        <div class="cap" id="cap000" data-in="0.240" data-out="1.439"><div class="cap-in"><span class="w" id="cap000w0" data-s="0.240" data-e="0.800">Puoi</span><span class="w" id="cap000w1" data-s="0.800" data-e="1.280">smuovere</span><span class="w" id="cap000w2" data-s="1.280" data-e="1.440">la</span></div></div>
+        <div class="cap" id="cap001" data-in="1.440" data-out="2.958"><div class="cap-in"><span class="w hot" id="cap001w0" data-s="1.440" data-e="1.760">pancia</span><span class="w" id="cap001w1" data-s="1.919" data-e="2.480">lavorando</span><span class="w" id="cap001w2" data-s="2.640" data-e="2.960">meno</span></div></div>
+        <div class="cap" id="cap002" data-in="2.959" data-out="3.679"><div class="cap-in"><span class="w" id="cap002w0" data-s="2.959" data-e="3.200">sulla</span><span class="w hot" id="cap002w1" data-s="3.200" data-e="3.680">dieta,</span></div></div>
+        <div class="cap" id="cap003" data-in="3.680" data-out="4.239"><div class="cap-in"><span class="w" id="cap003w0" data-s="3.680" data-e="3.840">e</span><span class="w" id="cap003w1" data-s="3.840" data-e="4.080">più</span><span class="w" id="cap003w2" data-s="4.079" data-e="4.240">su</span></div></div>
+        <div class="cap" id="cap004" data-in="4.240" data-out="4.639"><div class="cap-in"><span class="w" id="cap004w0" data-s="4.240" data-e="4.320">una</span><span class="w" id="cap004w1" data-s="4.320" data-e="4.480">cosa</span><span class="w" id="cap004w2" data-s="4.480" data-e="4.640">a</span></div></div>
+        <div class="cap" id="cap005" data-in="4.640" data-out="5.679"><div class="cap-in"><span class="w" id="cap005w0" data-s="4.640" data-e="4.880">cui</span><span class="w" id="cap005w1" data-s="4.879" data-e="5.520">probabilmente</span><span class="w" id="cap005w2" data-s="5.520" data-e="5.680">non</span></div></div>
+        <div class="cap" id="cap006" data-in="5.680" data-out="6.718"><div class="cap-in"><span class="w" id="cap006w0" data-s="5.680" data-e="5.920">hai</span><span class="w" id="cap006w1" data-s="5.920" data-e="6.160">mai</span><span class="w" id="cap006w2" data-s="6.160" data-e="6.719">pensato:</span></div></div>
+        <div class="cap" id="cap007" data-in="6.719" data-out="7.679"><div class="cap-in"><span class="w" id="cap007w0" data-s="6.719" data-e="7.360">l'orario</span><span class="w" id="cap007w1" data-s="7.360" data-e="7.520">in</span><span class="w" id="cap007w2" data-s="7.520" data-e="7.680">cui</span></div></div>
+        <div class="cap" id="cap008" data-in="7.680" data-out="8.558"><div class="cap-in"><span class="w" id="cap008w0" data-s="7.680" data-e="7.760">vai</span><span class="w" id="cap008w1" data-s="7.840" data-e="7.920">a</span><span class="w hot" id="cap008w2" data-s="7.920" data-e="8.560">dormire.</span></div></div>
+        <div class="cap" id="cap009" data-in="8.559" data-out="9.839"><div class="cap-in"><span class="w" id="cap009w0" data-s="8.559" data-e="8.639">Il</span><span class="w hot" id="cap009w1" data-s="8.799" data-e="9.440">cortisolo</span><span class="w" id="cap009w2" data-s="9.520" data-e="9.840">alto,</span></div></div>
+        <div class="cap" id="cap010" data-in="9.840" data-out="10.159"><div class="cap-in"><span class="w" id="cap010w0" data-s="9.840" data-e="10.160">infatti,</span></div></div>
+        <div class="cap" id="cap011" data-in="10.160" data-out="11.279"><div class="cap-in"><span class="w" id="cap011w0" data-s="10.160" data-e="10.719">favorisce</span><span class="w" id="cap011w1" data-s="10.719" data-e="11.280">l'accumulo</span></div></div>
+        <div class="cap" id="cap012" data-in="11.280" data-out="12.558"><div class="cap-in"><span class="w" id="cap012w0" data-s="11.280" data-e="11.360">di</span><span class="w hot" id="cap012w1" data-s="11.360" data-e="11.680">grasso</span><span class="w hot" id="cap012w2" data-s="11.920" data-e="12.560">viscerale</span></div></div>
+        <div class="cap" id="cap013" data-in="12.559" data-out="13.038"><div class="cap-in"><span class="w" id="cap013w0" data-s="12.559" data-e="12.719">anche</span><span class="w" id="cap013w1" data-s="12.719" data-e="12.959">quando</span><span class="w" id="cap013w2" data-s="12.959" data-e="13.039">il</span></div></div>
+        <div class="cap" id="cap014" data-in="13.039" data-out="14.159"><div class="cap-in"><span class="w" id="cap014w0" data-s="13.039" data-e="13.440">piatto</span><span class="w" id="cap014w1" data-s="13.440" data-e="13.679">sarà</span><span class="w" id="cap014w2" data-s="13.840" data-e="14.160">quello</span></div></div>
+        <div class="cap" id="cap015" data-in="14.160" data-out="14.878"><div class="cap-in"><span class="w" id="cap015w0" data-s="14.160" data-e="14.479">giusto</span><span class="w" id="cap015w1" data-s="14.640" data-e="14.800">e</span><span class="w" id="cap015w2" data-s="14.800" data-e="14.879">va</span></div></div>
+        <div class="cap" id="cap016" data-in="14.879" data-out="15.519"><div class="cap-in"><span class="w" id="cap016w0" data-s="14.879" data-e="15.039">a</span><span class="w" id="cap016w1" data-s="15.039" data-e="15.520">bloccare</span></div></div>
+        <div class="cap" id="cap017" data-in="15.520" data-out="16.319"><div class="cap-in"><span class="w" id="cap017w0" data-s="15.520" data-e="16.239">indirettamente</span><span class="w" id="cap017w1" data-s="16.239" data-e="16.319">il</span></div></div>
+        <div class="cap" id="cap018" data-in="16.320" data-out="17.450"><div class="cap-in"><span class="w hot" id="cap018w0" data-s="16.320" data-e="16.719">grasso</span><span class="w" id="cap018w1" data-s="16.719" data-e="16.959">sulla</span><span class="w hot" id="cap018w2" data-s="16.960" data-e="17.360">pancia</span></div></div>
+        <div class="cap" id="cap019" data-in="17.600" data-out="18.159"><div class="cap-in"><span class="w" id="cap019w0" data-s="17.600" data-e="17.840">anche</span><span class="w" id="cap019w1" data-s="17.840" data-e="18.000">se</span><span class="w" id="cap019w2" data-s="18.000" data-e="18.160">ti</span></div></div>
+        <div class="cap" id="cap020" data-in="18.160" data-out="18.878"><div class="cap-in"><span class="w" id="cap020w0" data-s="18.160" data-e="18.399">sembra</span><span class="w" id="cap020w1" data-s="18.399" data-e="18.559">di</span><span class="w" id="cap020w2" data-s="18.559" data-e="18.879">fare</span></div></div>
+        <div class="cap" id="cap021" data-in="18.879" data-out="19.918"><div class="cap-in"><span class="w" id="cap021w0" data-s="18.879" data-e="19.200">tutto</span><span class="w" id="cap021w1" data-s="19.200" data-e="19.840">bene.</span></div></div>
+        <div class="cap" id="cap022" data-in="19.919" data-out="20.558"><div class="cap-in"><span class="w" id="cap022w0" data-s="19.919" data-e="20.559">Infatti,</span></div></div>
+        <div class="cap" id="cap023" data-in="20.559" data-out="21.359"><div class="cap-in"><span class="w" id="cap023w0" data-s="20.559" data-e="20.719">la</span><span class="w" id="cap023w1" data-s="20.719" data-e="21.120">maggior</span><span class="w" id="cap023w2" data-s="21.120" data-e="21.360">parte</span></div></div>
+        <div class="cap" id="cap024" data-in="21.360" data-out="22.319"><div class="cap-in"><span class="w" id="cap024w0" data-s="21.360" data-e="21.599">delle</span><span class="w" id="cap024w1" data-s="21.600" data-e="21.920">persone</span><span class="w" id="cap024w2" data-s="21.919" data-e="22.320">lavora</span></div></div>
+        <div class="cap" id="cap025" data-in="22.320" data-out="23.199"><div class="cap-in"><span class="w" id="cap025w0" data-s="22.320" data-e="22.559">solo</span><span class="w" id="cap025w1" data-s="22.559" data-e="22.719">sul</span><span class="w" id="cap025w2" data-s="22.719" data-e="23.200">piatto,</span></div></div>
+      </div>
+    </div>
+
+    <script>
+      (function () {
+        var scope = document.querySelector('[data-composition-id="caps-problema"]');
+        var MINT = "#72FB93", PAPER = "#EDF3F0", HOT_ON = "#C7FFDA";
+        var tl = gsap.timeline({ paused: true });
+        var groups = scope.querySelectorAll(".cap");
+        for (var i = 0; i < groups.length; i++) {
+          var g = groups[i];
+          var gin = parseFloat(g.getAttribute("data-in"));
+          var gout = parseFloat(g.getAttribute("data-out"));
+          tl.fromTo("#" + g.id,
+            { autoAlpha: 0, y: 26 },
+            { autoAlpha: 1, y: 0, duration: 0.16, ease: "power2.out" }, gin);
+          tl.set("#" + g.id, { autoAlpha: 0 }, gout);
+          var ws = g.querySelectorAll(".w");
+          for (var j = 0; j < ws.length; j++) {
+            var w = ws[j], hot = w.classList.contains("hot");
+            tl.to("#" + w.id, { color: hot ? HOT_ON : MINT, scale: hot ? 1.10 : 1.06,
+              duration: 0.09, ease: "power1.out" }, parseFloat(w.getAttribute("data-s")));
+            tl.to("#" + w.id, { color: hot ? MINT : PAPER, scale: 1,
+              duration: 0.13, ease: "power1.inOut" }, parseFloat(w.getAttribute("data-e")));
+          }
+        }
+        window.__timelines = window.__timelines || {};
+        window.__timelines["caps-problema"] = tl;
+      })();
+    </script>
+  </template>
+</body>
+</html>

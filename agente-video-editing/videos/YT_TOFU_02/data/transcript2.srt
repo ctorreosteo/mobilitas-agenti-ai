@@ -1,0 +1,724 @@
+1
+00:00:00,000 --> 00:00:18,300
+ 1, 2, 3, 4, 3, 2, 1, tofo 2, le 3 del pomeriggio, sempre lo stesso punto, sono le 3 meno 10,
+
+2
+00:00:18,940 --> 00:00:23,200
+ sei all'escrivania da quando sei arrivato in ufficio o da quando hai aperto il laptop
+
+3
+00:00:23,200 --> 00:00:28,620
+ a casa se lavori da remoto, la mattina è andata bene, anzi benissimo, hai chiuso due
+
+4
+00:00:28,620 --> 00:00:34,300
+ cose importanti prima di iniziare pranzo, eri lucido, le idee arrivavano in ordine, scrivevi
+
+5
+00:00:34,300 --> 00:00:40,240
+ senza dover rileggere ogni frase tre volte, adesso è diverso, stai fissando la stessa email da quattro
+
+6
+00:00:40,240 --> 00:00:46,600
+ minuti, l'hai letta ma non l'hai capita davvero, torni in cima e ricominci, le parole ci sono, le
+
+7
+00:00:46,600 --> 00:00:52,040
+ riconosci tutte ma il significato non si compone, è come se qualcuno avesse abbassato il volume
+
+8
+00:00:52,040 --> 00:00:59,740
+ dentro la tua testa. Ti alzi, allunghi le braccia, fai due passi verso la macchinetta. Quarto caffè
+
+9
+00:00:59,740 --> 00:01:06,020
+ della giornata, o forse il quinto, hai smesso di contare. Lo bevi mentre scrolli il telefono per
+
+10
+00:01:06,020 --> 00:01:13,860
+ due minuti, perché in qualche modo quella pausa ti serve. Torni alla scrimania, convinto che adesso
+
+11
+00:01:13,860 --> 00:01:20,880
+ riparte. Per venti minuti riparte davvero, poi rallenta di nuovo. Guardi l'orologio, sono le
+
+12
+00:01:20,880 --> 00:01:29,560
+ quattro meno un quarto, mancano ancora due ore e mezza alla fine della giornata e tu dentro sai
+
+13
+00:01:29,560 --> 00:01:37,880
+ già che da qui in poi è gestione del danno, non produzione, gestione del danno. Ti sei convinto
+
+14
+00:01:37,880 --> 00:01:43,920
+ che sia normale perché succede a tutti o peggio, ti sei convinto che sia colpa tua, che dovresti
+
+15
+00:01:43,920 --> 00:01:49,980
+ essere più disciplinato, dormire di più, mangiare meglio. Non è colpa tua e quello che ti sta
+
+16
+00:01:49,980 --> 00:02:05,420
+ succedendo non c'entra niente con la tua testa. Non sei pigro e non è il pranzo. So già cosa ti
+
+17
+00:02:05,420 --> 00:02:16,460
+ hanno detto per tanti anni. Ho sbagliato. Mi torna leggermente indietro. Da non sei
+
+18
+00:02:16,460 --> 00:02:26,340
+ pigro e non hai il pranzo. Sì, va benissimo. Grazie. Non sei pigro e non hai il pranzo.
+
+19
+00:02:26,940 --> 00:02:31,340
+ So già cosa ti hanno raccontato per anni, che hai il pranzo perché hai mangiato troppo
+
+20
+00:02:31,340 --> 00:02:36,560
+ o hai mangiato la cosa sbagliata, che è la glicemia che si abbassa, che è la digestione che ruba
+
+21
+00:02:36,560 --> 00:02:41,500
+ energia al cervello, che è la mancanza di sonno della notte prima, che è lo stress accumulato,
+
+22
+00:02:41,660 --> 00:02:50,360
+ che è l'età che dovresti fare più attività fisica oppure ne fai troppa. Ti hanno detto tutte queste
+
+23
+00:02:50,360 --> 00:02:55,800
+ cose e probabilmente le hai provate quasi tutte. Hai saltato il pranzo per una settimana, hai provato
+
+24
+00:02:55,800 --> 00:03:01,060
+ un pranzo leggero a base di insalata, hai provato il digiuno intermittente, hai provato a mangiare
+
+25
+00:03:01,060 --> 00:03:06,720
+ proteine invece di carboidrati. Forse hai notato un piccolo miglioramento per qualche giorno,
+
+26
+00:03:07,120 --> 00:03:13,380
+ poi sei tornato esattamente allo stesso punto, alla stessa ora, con la stessa nebbia in testa.
+
+27
+00:03:16,960 --> 00:03:22,500
+ Non sei pigro, non sei indisciplinato, non hai bisogno di un metodo di produttività migliore
+
+28
+00:03:22,500 --> 00:03:28,540
+ o un'altra app per concentrarti. Hai fatto tutto quello che ti hanno detto di fare e non funziona
+
+29
+00:03:28,540 --> 00:03:33,280
+ per un motivo molto semplice. Ti hanno indicato il problema sbagliato fin dall'inizio.
+
+30
+00:03:37,560 --> 00:03:44,440
+ Il calo delle tre del pomeriggio non è metabolico, non è mentale, non è questione di volontà. Quello
+
+31
+00:03:44,440 --> 00:03:48,500
+ che sto per dirti adesso ribalta completamente il modo in cui guarderai la tua giornata
+
+32
+00:03:48,500 --> 00:03:54,100
+ lavorativa e probabilmente il motivo per cui rendi sempre meno con il passare delle ore.
+
+33
+00:03:58,540 --> 00:04:10,540
+ il calo delle tre è meccanico non metabolico il tuo cervello consuma circa il 20 per cento di
+
+34
+00:04:10,540 --> 00:04:16,380
+ tutto l'ossigeno che entra nel tuo corpo è un dato preciso pesa il 2 per cento del tuo peso
+
+35
+00:04:16,380 --> 00:04:22,580
+ corporeo ma si prende un quinto delle tue risorse respiratorie è l'organo più affamato di ossigeno
+
+36
+00:04:22,580 --> 00:04:29,480
+ che hai ti granlunga. Questo significa una cosa molto semplice e molto sottovalutata. La tua
+
+37
+00:04:29,480 --> 00:04:35,780
+ lucidità non dipende da cosa pensi ma dipende da quanto respiri. Se respiri bene il cervello
+
+38
+00:04:35,780 --> 00:04:43,700
+ funziona, se respiri male il cervello si spegne. Non è un'inquinione, è fisiologia di base. Adesso
+
+39
+00:04:43,700 --> 00:04:49,400
+ voglio che tu pensi alla tua postura in questo momento. Probabilmente sei seduto, hai le spalle
+
+40
+00:04:49,400 --> 00:04:55,940
+ leggermente proiettate in avanti. Probabilmente la testa è inclinata verso uno schermo qualche
+
+41
+00:04:55,940 --> 00:05:05,840
+ centimetro davanti rispetto a dove dovrebbe essere. Probabilmente la zona lombare non sta
+
+42
+00:05:05,840 --> 00:05:11,840
+ toccando lo schienale e il tuo bacino è ruotato indietro. Probabilmente anche se pensi di star
+
+43
+00:05:11,840 --> 00:05:17,420
+ seduto bene sei in una versione di seduta che il tuo corpo ha imparato negli anni e che adesso
+
+44
+00:05:17,420 --> 00:05:25,520
+ considera la sua posizione neutra. Ecco cosa succede, a quella postura, ora dopo ora, le
+
+45
+00:05:25,520 --> 00:05:33,460
+ spalle in avanti si chiudono, la parte a... ho sbagliato! Ho sbagliato, ho sbagliato,
+
+46
+00:05:33,460 --> 00:05:48,840
+ sbagliato, torna su un pochettino. Ok, ecco cosa succede. Ecco cosa succede a quella postura
+
+47
+00:05:48,840 --> 00:05:54,840
+ ora dopo ora. Le spalle in avanti chiudono la parte alta del torace, la testa proiettata
+
+48
+00:05:54,840 --> 00:05:59,700
+ in avanti comprime il tratto cervicale e tira le prime coste verso l'alto, bloccandole.
+
+49
+00:06:00,260 --> 00:06:05,540
+ La curva lombare si appiattisce, il bacino si sbilancia indietro e tutto il peso del busto
+
+50
+00:06:05,540 --> 00:06:11,440
+ si scarica sul diaframma che invece di lavorare in espansione lavora schiacciato contro gli organi
+
+51
+00:06:11,440 --> 00:06:20,120
+ addominali. Il diaframma è il muscolo principale della respirazione. Quando è libero si abbassa
+
+52
+00:06:20,120 --> 00:06:26,000
+ di 3 o 4 centimetri ad ogni respiro, crea il vuoto della gabbia toracica e l'aria entra in
+
+53
+00:06:26,000 --> 00:06:31,260
+ profondità fino alle parti basse dei polmoni, che sono le più ricche di vasi sanguigni e quindi
+
+54
+00:06:31,260 --> 00:06:39,960
+ le più efficienti nello scambio di ossigeno. Quando il diaframma è compresso da 4 o 5 ore
+
+55
+00:06:39,960 --> 00:06:46,440
+ di postura seduta, smette di abbassarsi davvero. Si muove di un centimetro, forse meno. La
+
+56
+00:06:46,440 --> 00:06:53,940
+ respirazione diventa alta, toracica, corta. Continui a respirare, devi, sei vivo, ma riempi
+
+57
+00:06:53,940 --> 00:06:59,560
+ solo la parte alta dei polmoni, quella meno efficiente, stai ventilando, non stai ossigenando.
+
+58
+00:07:01,380 --> 00:07:07,780
+ Studi sulla meccanica respiratoria nella postura seduta, l'ho detto male, aspetta, aspetta, studi
+
+59
+00:07:07,780 --> 00:07:13,300
+ sulla meccanica respiratoria nella postura seduta prolungata mostrano cali della capacità funzionale
+
+60
+00:07:13,300 --> 00:07:20,720
+ anche del 30 o 40% rispetto alla mattina, 30-40% di ossigeno in meno che arriva al sangue e quindi
+
+61
+00:07:20,720 --> 00:07:27,780
+ al cervello che si prende il 20% di tutto. Alle tre del pomeriggio non sei stanco, stai letteralmente
+
+62
+00:07:27,780 --> 00:07:33,540
+ respirando peggio di quando ti sei svegliato e nessuno te l'ha mai detto perché nessuno cerca
+
+63
+00:07:33,540 --> 00:07:38,280
+ davvero il problema dove succede davvero, nella tua gabbia toracica, non nel tuo pranzo.
+
+64
+00:07:40,540 --> 00:07:44,420
+ E qui c'è la cosa che rende tutto questo ancora più suddolo di quanto sembri.
+
+65
+00:07:50,720 --> 00:07:54,740
+ Il caffè non risolve, maschera.
+
+66
+00:07:55,060 --> 00:07:59,520
+ Adesso pensa onestamente al motivo per cui prendi il caffè a delle...
+
+67
+00:07:59,520 --> 00:08:04,160
+ No, ho sbagliato.
+
+68
+00:08:20,720 --> 00:08:39,600
+ Il caffè non risolve, maschera.
+
+69
+00:08:39,760 --> 00:08:43,360
+ Adesso pensa onestamente al motivo per cui prendi il caffè delle tre.
+
+70
+00:08:44,160 --> 00:08:48,600
+ Non lo prendi perché ti piace il sapore, non a quell'ora, non al quarto della giornata.
+
+71
+00:08:49,660 --> 00:08:55,460
+ lo prendi perché funziona, almeno per un po'. E in effetti funziona, è verissimo, ti dà una
+
+72
+00:08:55,460 --> 00:09:01,820
+ spinta. Per 40 minuti, forse un'ora, ti senti di nuovo lucido, riparti, scrivi, rispondi,
+
+73
+00:09:01,820 --> 00:09:06,780
+ ti concentri. Poi però succede una cosa che probabilmente hai notato e a cui non hai mai
+
+74
+00:09:06,780 --> 00:09:12,820
+ dato peso. Quando l'effetto del caffè finisce, non torni al livello di prima del caffè, cadi più
+
+75
+00:09:12,820 --> 00:09:18,420
+ in basso, sei più stanco di prima, più nebbioso di prima, più irritabile di prima. C'è un motivo
+
+76
+00:09:18,420 --> 00:09:24,440
+ preciso e non è solo farmacologico. Il caffè è un eccitante del sistema nervoso simpatico,
+
+77
+00:09:24,660 --> 00:09:30,800
+ quello che ti tiene in modalità attivazione, attenzione e allerta. Quando attivi il simpatico
+
+78
+00:09:30,800 --> 00:09:36,000
+ succede una cosa specifica al tuo modo di respirare. La respirazione diventa ancora più alta,
+
+79
+00:09:36,420 --> 00:09:42,840
+ ancora più toracica, ancora più corta. Il diaframma si contrae di più, la gabbia toracica si chiude di
+
+80
+00:09:42,840 --> 00:09:49,100
+ più. Risultato? Ti senti sveglio per 40 minuti perché il sistema nervoso è stimolato chimicamente,
+
+81
+00:09:49,540 --> 00:09:55,360
+ ma intanto la tua meccanica respiratoria sta peggiorando ulteriormente. Quando l'effetto
+
+82
+00:09:55,360 --> 00:10:02,420
+ chimico passa, la meccanica peggiorata resta e tu cadi più in basso di dove eri partito. Il
+
+83
+00:10:02,420 --> 00:10:08,820
+ caffè delle tre non sta risolvendo il calo, lo sta scavando. In studio questa cosa la vediamo
+
+84
+00:10:08,820 --> 00:10:14,640
+ in modo molto chiaro. Arriva qualcuno e dice non riesco a concentrarmi nel pomeriggio, mi serve
+
+85
+00:10:14,640 --> 00:10:21,620
+ sempre più caffè e funziona sempre meno. Lo facciamo sdraiare, misuriamo l'escursione del
+
+86
+00:10:21,620 --> 00:10:28,320
+ diaframma osservando come si muove la gabbia toracica. In molte persone che fanno un lavoro
+
+87
+00:10:28,320 --> 00:10:36,800
+ sedentario da anni l'escursione è ridotta di metà, letteralmente metà e la persona non se ne accorge
+
+88
+00:10:36,800 --> 00:10:39,580
+ perché respira da così tanto tempo in quel modo.
+
+89
+00:10:40,140 --> 00:10:40,880
+ No, ho sbagliato.
+
+90
+00:10:42,380 --> 00:10:43,600
+ Dai, invece ho sbagliato.
+
+91
+00:10:54,760 --> 00:10:55,280
+ Ok.
+
+92
+00:10:56,820 --> 00:10:58,600
+ Parto da... e la persona non se ne accorge.
+
+93
+00:11:02,180 --> 00:11:04,200
+ E la persona non se ne accorge
+
+94
+00:11:04,200 --> 00:11:06,960
+ perché respira così da tanto tempo
+
+95
+00:11:06,960 --> 00:11:10,380
+ no, così da così tanto tempo, scusami
+
+96
+00:11:10,380 --> 00:11:19,580
+ ok, scusami
+
+97
+00:11:19,580 --> 00:11:27,860
+ e la persona non se ne accorge
+
+98
+00:11:27,860 --> 00:11:30,720
+ perché respira così da così tanto tempo
+
+99
+00:11:30,720 --> 00:11:33,760
+ che quel modo di respirare è diventato il suo normale
+
+100
+00:11:33,760 --> 00:11:37,200
+ si lavora 30 minuti sul rilascio del diaframma
+
+101
+00:11:37,200 --> 00:11:39,160
+ sulla mobilità delle prime coste
+
+102
+00:11:39,160 --> 00:11:42,000
+ sulla decompressione del tratto cervico dorsale
+
+103
+00:11:42,000 --> 00:11:43,980
+ quando la persona si rialza
+
+104
+00:11:43,980 --> 00:11:46,520
+ la prima cosa che dice quasi sempre è la stessa
+
+105
+00:11:46,520 --> 00:11:48,260
+ respiro diversamente
+
+106
+00:11:48,260 --> 00:11:49,980
+ non dice respiro di più
+
+107
+00:11:49,980 --> 00:11:52,100
+ dice respiro diversamente
+
+108
+00:11:52,100 --> 00:11:55,140
+ sente l'aria che arriva in punti dove non arrivava prima
+
+109
+00:11:55,140 --> 00:11:57,320
+ quella stessa persona
+
+110
+00:11:57,320 --> 00:11:58,640
+ due giorni dopo
+
+111
+00:11:58,640 --> 00:12:00,920
+ riporta che il calo dell'interesse è ridotto
+
+112
+00:12:00,920 --> 00:12:02,780
+ non perché abbia cambiato dieta
+
+113
+00:12:02,780 --> 00:12:08,320
+ non perché abbia dormito di più, perché il suo corpo è tornato a portare l'ossigeno dove serve.
+
+114
+00:12:11,080 --> 00:12:14,460
+ E adesso la domanda che ti stai facendo è, quindi cosa si può fare?
+
+115
+00:12:23,740 --> 00:12:26,300
+ Il titolo è postura accumulata non disciplina.
+
+116
+00:12:27,120 --> 00:12:29,280
+ Postura accumulata non disciplina.
+
+117
+00:12:29,940 --> 00:12:34,080
+ Probabilmente ti aspetti che adesso ti dica di fare 5 respiri profondi ogni ora
+
+118
+00:12:34,080 --> 00:12:37,240
+ o che ti danno una posizione di yoga per aprire il torace
+
+119
+00:12:37,240 --> 00:12:42,200
+ o che ti consigli un timer che ti ricordi di alzarti ogni 50 minuti.
+
+120
+00:12:42,780 --> 00:12:45,020
+ Non te li darò e voglio spiegarti il perché.
+
+121
+00:12:45,700 --> 00:12:47,720
+ Non perché siano sbagliati in assoluto.
+
+122
+00:12:48,120 --> 00:12:51,780
+ 5 respiri profondi sono meglio di 0 respiri profondi, è ovvio.
+
+123
+00:12:52,480 --> 00:12:57,620
+ Ma se il problema è che il tuo diaframma è meccanicamente compresso da anni di postura seduta,
+
+124
+00:12:58,080 --> 00:13:03,420
+ cinque respiri profondi non lo decomprimono. È come prendere un elastico che è stato tirato
+
+125
+00:13:03,420 --> 00:13:09,400
+ per dieci anni e cercare di rilasciarlo per dieci secondi. Torna esattamente come prima nel momento
+
+126
+00:13:09,400 --> 00:13:15,960
+ in cui smetti. Il punto vero è cambiare il modo in cui leggi quello che ti succede all'età del
+
+127
+00:13:15,960 --> 00:13:23,240
+ pomeriggio. Devi smettere di pensarlo come un problema di energia, di motivazione, di disciplina
+
+128
+00:13:23,240 --> 00:13:36,460
+ o di dieta. Devi iniziare a pensarlo come quello che è davvero, un problema di postura
+
+129
+00:13:36,460 --> 00:13:44,720
+ accumulata che si manifesta come problema cognitivo. Affrontare il calo pomeridiano
+
+130
+00:13:44,720 --> 00:14:09,600
+ in modo significativo, significa cercare stimolanti, caffè, zuccheri, pause forzate per la concentrazione,
+
+131
+00:14:09,600 --> 00:14:14,560
+ tutte cose che ti danno un picco e poi ti lasciano peggio di prima. Affrontarlo in modo
+
+132
+00:14:14,560 --> 00:14:19,580
+ sistemico significa lavorare sul corpo che ha smesso di portare ossigeno al cervello,
+
+133
+00:14:20,040 --> 00:14:24,540
+ sulla gabbia toracica che si è chiusa, sul diaframma che non si muove più. Sono due
+
+134
+00:14:24,540 --> 00:14:30,260
+ livelli completamente diversi e portano a due risultati completamente diversi. Il primo,
+
+135
+00:14:30,480 --> 00:14:36,340
+ nel migliore dei casi, ti compra 20 minuti di lucidità apparente. Il secondo ti restituisce
+
+136
+00:14:36,340 --> 00:14:42,200
+ la capacità di lavorare otto ore con la stessa testa che è le nove del mattino. Quello che
+
+137
+00:14:42,200 --> 00:14:47,060
+ facciamo noi in studio è esattamente questo, lavoriamo sul secondo livello, non lavoriamo
+
+138
+00:14:47,060 --> 00:14:52,160
+ sulla concentrazione perché non è un problema di concentrazione, lavoriamo sulla meccanica
+
+139
+00:14:52,160 --> 00:15:08,520
+ respiratoria che è collassata. Si parte dal diaframma perché è il punto in cui si scarica
+
+140
+00:15:08,520 --> 00:15:14,520
+ tutta la postura seduta della tua giornata. Si lavora sulla mobilità delle prime coste
+
+141
+00:15:14,520 --> 00:15:20,040
+ e si lavora sulla mobilità delle prime coste e dello sterno perché è lì che la gabbia
+
+142
+00:15:20,040 --> 00:15:25,660
+ toracica si chiude e impedisce l'espansione completa. Si rilascia il tratto cervico dorsale,
+
+143
+00:15:25,820 --> 00:15:30,440
+ dove le tensioni del lavoro al computer si accumulano e contribuiscono a tirare le coste
+
+144
+00:15:30,440 --> 00:15:38,900
+ verso l'alto, bloccandole in posizione di ispirazione costante. Non è un trattamento
+
+145
+00:15:38,900 --> 00:15:44,800
+ per la stanchezza, è un trattamento per restituire al tuo corpo la capacità di respirare bene anche
+
+146
+00:15:44,800 --> 00:15:51,520
+ quando sei seduto. Una capacità che, ascoltami bene, non hai perso per sempre, l'avevi a vent'anni,
+
+147
+00:15:51,740 --> 00:15:57,120
+ ce l'hai ancora la mattina presto. L'hai persa nel corso della tua giornata, ora dopo ora,
+
+148
+00:15:57,260 --> 00:16:05,380
+ e si recupera con un lavoro mirato sul corpo, non con un caffè in più. Le persone che facciamo
+
+149
+00:16:05,380 --> 00:16:12,380
+ passare attraverso questo percorso quasi sempre raccontano la stessa cosa. Non dicono lavoro di
+
+150
+00:16:12,380 --> 00:16:22,380
+ più, dicono lavoro uguale ma sono meno distrutto la sera. Si accorgono che il calo delle tre si
+
+151
+00:16:22,380 --> 00:16:27,100
+ appiattisce, che il quarto caffè non gli serve più, che alle sei e mezza quando chiudono il
+
+152
+00:16:27,100 --> 00:16:34,960
+ computer hanno ancora qualcosa di sé per la serata invece di essere già zombie. Il momento peggiore
+
+153
+00:16:34,960 --> 00:16:39,620
+ per occuparsene è quando il calo pomeridiano è diventato così abituale che hai smesso di
+
+154
+00:16:39,620 --> 00:16:44,940
+ considerarlo un problema, perché a quel punto stai dando metà della tua giornata lavorativa
+
+155
+00:16:44,940 --> 00:16:51,820
+ a una versione di te stesso che funziona al 50% e stai prendendo decisioni professionali,
+
+156
+00:16:52,100 --> 00:17:00,980
+ personali, importanti da quella versione lì. E nemmeno te ne accorgi, perché ormai è il tuo nuovo normale.
+
+157
+00:17:09,620 --> 00:17:16,960
+ il tuo cervello non si stanca soffoca tienila stretta questa frase perché è la cosa più
+
+158
+00:17:16,960 --> 00:17:22,600
+ importante di tutto il video il tuo cervello alle tre del pomeriggio non si sta stancando
+
+159
+00:17:22,600 --> 00:17:29,720
+ sta soffocando lentamente perché il tuo corpo ha smesso di portargli abbastanza ossigeno non è un
+
+160
+00:17:29,720 --> 00:17:35,300
+ problema di testa è un problema di gabbia toracica tienila vicino la prossima volta che ti alzi per
+
+161
+00:17:35,300 --> 00:17:42,160
+ il quarto caffè. Nel prossimo video ti spiego una cosa ancora più sorprendente che è strettamente
+
+162
+00:17:42,160 --> 00:17:48,440
+ collegata a questa, perché molte persone che soffrono di ansia in realtà non hanno un problema
+
+163
+00:17:48,440 --> 00:17:56,460
+ di ansia, hanno un problema di respirazione. Oh no, aspetta, c'era una frase troppo lunga,
+
+164
+00:17:56,460 --> 00:17:58,580
+ puoi tornare indietro a Brescia
+
+165
+00:17:58,580 --> 00:18:09,660
+ aspetta, torna su, torna su
+
+166
+00:18:09,660 --> 00:18:11,200
+ perché è troppo lungo il periodo
+
+167
+00:18:11,200 --> 00:18:12,300
+ no, ancora di più
+
+168
+00:18:12,300 --> 00:18:14,860
+ è lungo il periodo, non c'è un punto
+
+169
+00:18:14,860 --> 00:18:16,320
+ ok, nel prossimo video
+
+170
+00:18:16,320 --> 00:18:18,840
+ quindi niente
+
+171
+00:18:18,840 --> 00:18:25,640
+ nel prossimo video ti spiego una cosa ancora più sorprendente
+
+172
+00:18:25,640 --> 00:18:32,100
+ che è strettamente collegata a questa, perché molte persone che soffrono di ansia in realtà
+
+173
+00:18:32,100 --> 00:18:38,040
+ non hanno un problema di ansia, hanno un problema di respirazione meccanicamente alterata che il
+
+174
+00:18:38,040 --> 00:18:44,960
+ sistema nervoso interpreta come un pericolo. È un meccanismo che pochissimi conoscono e che cambia
+
+175
+00:18:44,960 --> 00:18:52,020
+ completamente il modo in cui guardi gli stati di agitazione tuoi o di chi ti sta vicino. Iscriviti
+
+176
+00:18:52,020 --> 00:18:56,900
+ al canale se vuoi continuare a capire come funziona davvero il tuo corpo. Non per farci
+
+177
+00:18:56,900 --> 00:19:02,340
+ un favore, per un motivo molto più egoista e molto più sensato. Quello che pubblichiamo qui
+
+178
+00:19:02,340 --> 00:19:09,300
+ non lo trovi da nessuna parte. Non sono consigli generici di produttività copiati da internet. È
+
+179
+00:19:09,300 --> 00:19:15,700
+ esattamente il modo in cui leggiamo il corpo ogni giorno in studio, con centinaia di persone reali
+
+180
+00:19:15,700 --> 00:19:20,520
+ che hanno smesso di credere alla narrativa della pigrizia e hanno iniziato a guardare quello che
+
+181
+00:19:20,520 --> 00:19:34,360
+ succede davvero. Mi sa che abbiamo finito, c'è il conteggio parole.
+

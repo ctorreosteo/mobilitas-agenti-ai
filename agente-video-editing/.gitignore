@@ -1,0 +1,21 @@
+# macOS and runtime caches
+.DS_Store
+**/.DS_Store
+__pycache__/
+*.py[cod]
+node_modules/
+
+# Raw footage and generated media are stored outside Git
+inbox/
+*.mov
+*.MOV
+*.mp4
+*.MP4
+*.wav
+*.WAV
+
+# Generated previews, renders and quality-control frames
+videos/**/renders/
+videos/**/snapshots/
+videos/**/.thumbnails/
+videos/**/.waveform-cache/

@@ -1,0 +1,283 @@
+{
+  "fps": 29.97002997002997,
+  "source_duration": 1184.368333,
+  "cuts": [
+    {
+      "in": 0.0,
+      "out": 12.905,
+      "reason": "ciak: 'buongiorno a tutti', '1 2 3 4 3 2 1, tofu 2'"
+    },
+    {
+      "in": 112.79,
+      "out": 144.0,
+      "reason": "prima ripresa di 'Non sei pigro e non e il pranzo' + 'ho sbagliato, torna leggermente indietro'"
+    },
+    {
+      "in": 234.365,
+      "out": 243.83,
+      "reason": "falso attacco 'Il calo delle tre e meccanico, non meccanico'"
+    },
+    {
+      "in": 319.625,
+      "out": 346.685,
+      "reason": "falsa partenza 'Ecco cosa succede' + 'ho sbagliato, torna su un pochettino'"
+    },
+    {
+      "in": 419.8,
+      "out": 427.5,
+      "reason": "falsa partenza 'Studi sulla meccanica respiratoria' + 'l'ho detto male, aspetta'"
+    },
+    {
+      "in": 474.955,
+      "out": 519.88,
+      "reason": "'Adesso pensa...' interrotto, 'no ho sbagliato', regia ('stoppa allora li', 'vai ragazzi') e riprese doppie"
+    },
+    {
+      "in": 635.185,
+      "out": 684.83,
+      "reason": "papera lunga: 'no ho sbagliato / dai invece / parto da / scusami'"
+    },
+    {
+      "in": 734.78,
+      "out": 747.24,
+      "reason": "vuoto di 9s + regia a voce 'il titolo e postura accumulata non disciplina'"
+    },
+    {
+      "in": 804.25,
+      "out": 810.535,
+      "reason": "prima ripresa incompleta 'un problema di postura'"
+    },
+    {
+      "in": 819.405,
+      "out": 840.545,
+      "reason": "falsa partenza 'in modo significativo' (voleva dire sintomatico) + 'aspetta'"
+    },
+    {
+      "in": 911.055,
+      "out": 915.595,
+      "reason": "ripetizione 'si lavora sulla mobilita delle prime coste'"
+    },
+    {
+      "in": 1056.235,
+      "out": 1102.42,
+      "reason": "'nel prossimo video' interrotto + regia 'torna su, e troppo lungo il periodo'"
+    },
+    {
+      "in": 1161.57,
+      "out": 1184.368,
+      "reason": "'mi sa che abbiamo finito, c'e il conteggio parole' + 'naif' + coda muta"
+    }
+  ],
+  "pauses_trimmed": [
+    {
+      "in": 69.44,
+      "out": 71.43
+    },
+    {
+      "in": 95.005,
+      "out": 97.18
+    },
+    {
+      "in": 165.765,
+      "out": 169.265
+    },
+    {
+      "in": 193.46,
+      "out": 197.24
+    },
+    {
+      "in": 213.43,
+      "out": 217.545
+    },
+    {
+      "in": 298.63,
+      "out": 303.705
+    },
+    {
+      "in": 372.255,
+      "out": 374.725
+    },
+    {
+      "in": 393.66,
+      "out": 396.775
+    },
+    {
+      "in": 458.555,
+      "out": 460.46
+    },
+    {
+      "in": 464.725,
+      "out": 470.505
+    },
+    {
+      "in": 471.905,
+      "out": 472.705
+    },
+    {
+      "in": 631.935,
+      "out": 633.555
+    },
+    {
+      "in": 728.495,
+      "out": 731.185
+    },
+    {
+      "in": 898.68,
+      "out": 902.155
+    },
+    {
+      "in": 903.555,
+      "out": 905.025
+    },
+    {
+      "in": 935.065,
+      "out": 938.03
+    },
+    {
+      "in": 961.495,
+      "out": 964.27
+    },
+    {
+      "in": 991.78,
+      "out": 993.865
+    },
+    {
+      "in": 1015.965,
+      "out": 1017.85
+    },
+    {
+      "in": 1022.58,
+      "out": 1031.7
+    }
+  ],
+  "segments": [
+    {
+      "in": 12.905,
+      "out": 69.44
+    },
+    {
+      "in": 71.43,
+      "out": 95.005
+    },
+    {
+      "in": 97.18,
+      "out": 112.79
+    },
+    {
+      "in": 144.0,
+      "out": 165.765
+    },
+    {
+      "in": 169.265,
+      "out": 193.46
+    },
+    {
+      "in": 197.24,
+      "out": 213.43
+    },
+    {
+      "in": 217.545,
+      "out": 234.365
+    },
+    {
+      "in": 243.83,
+      "out": 298.63
+    },
+    {
+      "in": 303.705,
+      "out": 319.625
+    },
+    {
+      "in": 346.685,
+      "out": 372.255
+    },
+    {
+      "in": 374.725,
+      "out": 393.66
+    },
+    {
+      "in": 396.775,
+      "out": 419.8
+    },
+    {
+      "in": 427.5,
+      "out": 458.555
+    },
+    {
+      "in": 460.46,
+      "out": 464.725
+    },
+    {
+      "in": 470.505,
+      "out": 471.905
+    },
+    {
+      "in": 472.705,
+      "out": 474.955
+    },
+    {
+      "in": 519.88,
+      "out": 631.935
+    },
+    {
+      "in": 633.555,
+      "out": 635.185
+    },
+    {
+      "in": 684.83,
+      "out": 728.495
+    },
+    {
+      "in": 731.185,
+      "out": 734.78
+    },
+    {
+      "in": 747.24,
+      "out": 804.25
+    },
+    {
+      "in": 810.535,
+      "out": 819.405
+    },
+    {
+      "in": 840.545,
+      "out": 898.68
+    },
+    {
+      "in": 902.155,
+      "out": 903.555
+    },
+    {
+      "in": 905.025,
+      "out": 911.055
+    },
+    {
+      "in": 915.595,
+      "out": 935.065
+    },
+    {
+      "in": 938.03,
+      "out": 961.495
+    },
+    {
+      "in": 964.27,
+      "out": 991.78
+    },
+    {
+      "in": 993.865,
+      "out": 1015.965
+    },
+    {
+      "in": 1017.85,
+      "out": 1022.58
+    },
+    {
+      "in": 1031.7,
+      "out": 1056.235
+    },
+    {
+      "in": 1102.42,
+      "out": 1161.57
+    }
+  ]
+}

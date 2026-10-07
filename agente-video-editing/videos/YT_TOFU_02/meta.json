@@ -1,0 +1,15 @@
+{
+  "id": "YT_TOFU_02",
+  "name": "Il calo delle tre non e stanchezza, e respirazione",
+  "channel": "youtube.com/@Studio_Mobilitas",
+  "language": "it",
+  "stage": "TOFU",
+  "source": "YT_TOFU_02.MOV",
+  "delivery": {
+    "container": "mp4",
+    "video": "h264 1920x1080 30000/1001 yuv420p bt709",
+    "audio": "aac 192k 48000 stereo",
+    "loudness": "-14 LUFS / -1.5 dBTP",
+    "subtitles": "renders/YT_TOFU_02.srt (a corredo, non impressi)"
+  }
+}
