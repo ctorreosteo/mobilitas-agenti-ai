@@ -1,0 +1,60 @@
+{
+  "g2-d-fondo-portico-2": {
+    "immagine": {
+      "request_id": "8419fe1c-5968-4751-8755-072089cc4eb9",
+      "status": "completed",
+      "endpoint": "higgsfield-ai/soul/cinema",
+      "errore": null,
+      "url": "https://d3u0tzju9qaucj.cloudfront.net/316b51a3-757f-4683-ab02-768c0f664749/df847cb8-c2bd-4b03-9c06-5044a05c7da3.png",
+      "file": "outputs/prove-immagini-g2/immagini/g2-d-fondo-portico-2.jpg"
+    }
+  },
+  "g2-d-fondo-portico-3": {
+    "immagine": {
+      "request_id": "ffdec32c-fb56-4e6a-9364-71af32fea75e",
+      "status": "completed",
+      "endpoint": "higgsfield-ai/soul/cinema",
+      "errore": null
+    }
+  },
+  "g2-d-fondo-portico-1": {
+    "immagine": {
+      "request_id": "d686381f-0744-468f-b601-66cfd2909a83",
+      "status": "completed",
+      "endpoint": "higgsfield-ai/soul/cinema",
+      "errore": null,
+      "url": "https://d3u0tzju9qaucj.cloudfront.net/316b51a3-757f-4683-ab02-768c0f664749/2730a7a6-2743-411c-8138-f954cc6c409a.png",
+      "file": "outputs/prove-immagini-g2/immagini/g2-d-fondo-portico-1.jpg"
+    }
+  },
+  "g2-e-vetrata-vicina-1": {
+    "immagine": {
+      "request_id": "b3998a1a-2989-47f0-b5cc-64319cfbc145",
+      "status": "completed",
+      "endpoint": "higgsfield-ai/soul/cinema",
+      "errore": null,
+      "url": "https://d3u0tzju9qaucj.cloudfront.net/316b51a3-757f-4683-ab02-768c0f664749/553b2a40-e838-401a-8190-eb362a945ccd.png",
+      "file": "outputs/prove-immagini-g2/immagini/g2-e-vetrata-vicina-1.jpg"
+    }
+  },
+  "g2-e-vetrata-vicina-2": {
+    "immagine": {
+      "request_id": "868f85ff-67ea-4385-9517-6fce29f6e018",
+      "status": "completed",
+      "endpoint": "higgsfield-ai/soul/cinema",
+      "errore": null,
+      "url": "https://d3u0tzju9qaucj.cloudfront.net/316b51a3-757f-4683-ab02-768c0f664749/78f6a0b6-ab7c-4265-a47f-1ca495846606.png",
+      "file": "outputs/prove-immagini-g2/immagini/g2-e-vetrata-vicina-2.jpg"
+    }
+  },
+  "g2-e-vetrata-vicina-3": {
+    "immagine": {
+      "request_id": "ad83a81c-4a31-4cb3-9657-b61768ff4e82",
+      "status": "completed",
+      "endpoint": "higgsfield-ai/soul/cinema",
+      "errore": null,
+      "url": "https://d3u0tzju9qaucj.cloudfront.net/316b51a3-757f-4683-ab02-768c0f664749/698a0d92-fb58-48af-9faf-d1dbbf980ef4.png",
+      "file": "outputs/prove-immagini-g2/immagini/g2-e-vetrata-vicina-3.jpg"
+    }
+  }
+}

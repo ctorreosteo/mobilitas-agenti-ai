@@ -1,0 +1,252 @@
+{
+  "_come_si_legge": [
+    "Questo file e' il CATALOGO dei modelli Higgsfield usabili via API, con il motivo della scelta.",
+    "Lo script scripts/higgsfield.py non conosce nessun modello: legge solo da qui. Aggiungere un modello",
+    "e' una voce in 'modelli', non una riga di codice.",
+    "'mappa' traduce i nomi interni del piano nei nomi dei campi che quel modello si aspetta nel body:",
+    "cosi' un modello nuovo con parametri diversi entra senza toccare il client.",
+    "'crediti_indicativi' NON e' un preventivo: e' un ordine di grandezza. Il numero vero per il tuo",
+    "account lo da' l'endpoint /estimate, che il workflow chiama sempre prima di spendere.",
+    "'disponibile_su_api: false' significa che il modello esiste sul sito higgsfield.ai ma NON ha un",
+    "endpoint API documentato. Il client si rifiuta di inviarci richieste e lo dice."
+  ],
+  "aggiornato_il": "2026-09-29",
+  "scadenza_giorni": 30,
+  "verificato_da": "scripts/verifica_modelli.py contro docs.higgsfield.ai",
+  "api": {
+    "base_url": "https://api.higgsfield.ai",
+    "docs": "https://docs.higgsfield.ai/docs/llms.txt",
+    "console": "https://console.higgsfield.ai",
+    "autenticazione": "header Authorization: Key ${HF_API_KEY_ID}:${HF_API_KEY_SECRET}",
+    "concorrenza_massima": 3,
+    "nota_concorrenza": "Il limite vero e' per account e sta in console. Superarlo restituisce 400 'Maximum number of concurrent requests'. Il client tiene un pool: alzare qui solo dopo aver visto il limite reale in console.",
+    "ritenzione_output": "almeno 7 giorni sul CDN Higgsfield: i file vanno scaricati, ed e' quello che fa il client."
+  },
+  "predefiniti": {
+    "immagine": "soul-2",
+    "video": "kling-3-std-i2v"
+  },
+  "modelli": {
+    "soul-2": {
+      "tipo": "immagine",
+      "nome": "SOUL V2",
+      "fornitore": "Higgsfield",
+      "endpoint": "higgsfield-ai/soul/v2/standard",
+      "doc": "https://docs.higgsfield.ai/docs/models/soul-2/generate.md",
+      "disponibile_su_api": true,
+      "crediti_indicativi": 1.5,
+      "aspect_ratio_supportati": [
+        "9:16",
+        "16:9",
+        "4:3",
+        "3:4",
+        "1:1",
+        "2:3",
+        "3:2"
+      ],
+      "mappa": {
+        "prompt": "prompt",
+        "aspect_ratio": "aspect_ratio",
+        "riferimento_personaggio": "custom_reference_id"
+      },
+      "parametri": {
+        "resolution": "1080p",
+        "batch_size": 1,
+        "enhance_prompt": false
+      },
+      "punti_di_forza": "Ritratto, editoriale, moda. E' il modello di casa Higgsfield ed e' l'unico che accetta un personaggio addestrato con Soul ID (custom_reference_id): e' quello che tiene la STESSA FACCIA su piu' b-roll dello stesso video.",
+      "limiti": "Meno letterale di un modello ragionante sui prompt lunghi e strutturati: le infografiche anatomiche con gerarchia precisa gli riescono peggio che a un modello di tipo Nano Banana.",
+      "quando_usarlo": "B-roll lifestyle con persone, soprattutto quando serve continuita' di volto fra piu' scene.",
+      "famiglia": "soul-2"
+    },
+    "soul-cinema": {
+      "tipo": "immagine",
+      "nome": "SOUL Cinema",
+      "fornitore": "Higgsfield",
+      "endpoint": "higgsfield-ai/soul/cinema",
+      "doc": "https://docs.higgsfield.ai/docs/models/soul-cinema/generate.md",
+      "disponibile_su_api": true,
+      "crediti_indicativi": 1.5,
+      "aspect_ratio_supportati": [
+        "9:16",
+        "16:9",
+        "4:3",
+        "3:4",
+        "1:1",
+        "2:3",
+        "3:2"
+      ],
+      "mappa": {
+        "prompt": "prompt",
+        "aspect_ratio": "aspect_ratio",
+        "riferimento_personaggio": "custom_reference_id"
+      },
+      "parametri": {
+        "resolution": "1080p",
+        "batch_size": 1,
+        "enhance_prompt": false
+      },
+      "punti_di_forza": "Resa da fermo immagine di cinema: luce motivata, contrasto, atmosfera. Su una scena di pain point da' materiale piu' 'girato' e meno da stock.",
+      "limiti": "Tende a drammatizzare. Su un pain point va tenuto a freno dal prompt, o il problema sembra una tragedia invece che una giornata storta.",
+      "quando_usarlo": "Hook e scene di forte carico emotivo dove la luce deve fare mezzo lavoro.",
+      "famiglia": "soul-cinema"
+    },
+    "grok-image-2": {
+      "tipo": "immagine",
+      "nome": "Grok Image 2.0",
+      "fornitore": "xAI",
+      "endpoint": "xai/grok-imagine-image-2.0",
+      "doc": "https://docs.higgsfield.ai/docs/models/grok-image-2/generate-and-edit.md",
+      "disponibile_su_api": true,
+      "crediti_indicativi": null,
+      "aspect_ratio_supportati": [
+        "auto",
+        "9:16",
+        "16:9",
+        "1:1",
+        "4:3",
+        "3:4"
+      ],
+      "mappa": {
+        "prompt": "prompt",
+        "aspect_ratio": "aspect_ratio",
+        "immagini_riferimento": "image_urls"
+      },
+      "parametri": {
+        "quality": "high",
+        "resolution": "2k"
+      },
+      "punti_di_forza": "Accetta fino a dieci immagini di riferimento (image_urls). E' l'unica strada per far entrare in scena un oggetto reale, un prodotto vero o uno scorcio riconoscibile di citta' partendo da una foto e non da una descrizione.",
+      "limiti": "Nessun aggancio a Soul ID: non tiene il volto fra una scena e l'altra.",
+      "quando_usarlo": "B-roll con prodotto reale, dispositivo reale o riferimento fotografico di citta'.",
+      "famiglia": "grok-image-2"
+    },
+    "nano-banana-pro": {
+      "tipo": "immagine",
+      "nome": "Nano Banana Pro (Gemini 3 Pro Image)",
+      "fornitore": "Google, distribuito da Higgsfield",
+      "endpoint": null,
+      "doc": "https://higgsfield.ai/image/nano-banana-pro",
+      "disponibile_su_api": false,
+      "crediti_indicativi": 2,
+      "aspect_ratio_supportati": [],
+      "mappa": {},
+      "parametri": {},
+      "punti_di_forza": "E' il modello che ragiona sul prompt prima di disegnare: legge logica semantica, causalita' fisica e relazioni spaziali. Sulle infografiche anatomiche con gerarchia precisa e' esattamente cio' che serve.",
+      "limiti": "AL 2026-09-29 NON HA UN ENDPOINT API SU HIGGSFIELD. Compare nel generatore del sito e nei piani a consumo del sito, non nel catalogo di docs.higgsfield.ai. Le generazioni illimitate dei piani valgono solo su higgsfield.ai e non si estendono all'API. Il client rifiuta di inviargli richieste finche' questo campo resta false.",
+      "quando_usarlo": "Appena compare un endpoint: e' il candidato naturale per le infografiche del meccanismo. verifica_modelli.py ricontrolla e ribalta il flag."
+    },
+    "kling-3-std-i2v": {
+      "tipo": "video",
+      "nome": "Kling 3.0 — Standard, image-to-video",
+      "fornitore": "Kuaishou, distribuito da Higgsfield",
+      "endpoint": "kling-video/v3.0/std/image-to-video",
+      "doc": "https://docs.higgsfield.ai/docs/models/kling-3/standard-image-to-video.md",
+      "disponibile_su_api": true,
+      "crediti_indicativi": 14,
+      "nota_crediti": "circa 14 crediti per 8 secondi a 720p. Ordine di grandezza da fonti pubbliche 2026: usare /estimate per il numero vero.",
+      "durata_min": 3,
+      "durata_max": 15,
+      "mappa": {
+        "prompt": "prompt",
+        "immagine": "image_url",
+        "durata": "duration",
+        "ultimo_frame": "last_image_url"
+      },
+      "parametri": {
+        "sound": "off",
+        "cfg_scale": 0.5
+      },
+      "punti_di_forza": "Movimento umano credibile: respiro, micro-espressioni, peso del corpo. E' il motivo per cui e' il predefinito.",
+      "limiti": "Prompt oltre i 2.500 caratteri vengono troncati. Il suono nativo va tenuto su 'off': il parlato e' della voce fuori campo, e l'audio generato sporca il montaggio.",
+      "quando_usarlo": "Predefinito per ogni b-roll, sia pain sia infografica.",
+      "perche_non_veo": "Scelta di Carlos, 2026-09-29: Google VEO non produce il realismo che serve a questi video. Su volti e gesti quotidiani restituisce materiale che si legge come generato, e su un pain point la credibilita' e' tutto il lavoro. Non riaprire la scelta senza un confronto diretto sullo stesso prompt.",
+      "famiglia": "kling-3"
+    },
+    "kling-3-pro-i2v": {
+      "tipo": "video",
+      "nome": "Kling 3.0 — Pro, image-to-video",
+      "fornitore": "Kuaishou, distribuito da Higgsfield",
+      "endpoint": "kling-video/v3.0/pro/image-to-video",
+      "doc": "https://docs.higgsfield.ai/docs/models/kling-3/pro-image-to-video.md",
+      "disponibile_su_api": true,
+      "crediti_indicativi": null,
+      "durata_min": 3,
+      "durata_max": 15,
+      "mappa": {
+        "prompt": "prompt",
+        "immagine": "image_url",
+        "durata": "duration",
+        "ultimo_frame": "last_image_url"
+      },
+      "parametri": {
+        "sound": "off",
+        "cfg_scale": 0.5
+      },
+      "punti_di_forza": "Stessa famiglia, resa piu' pulita sui movimenti complessi.",
+      "limiti": "Costa di piu' dello Standard senza una differenza che si veda su un b-roll da cinque secondi con movimento trattenuto.",
+      "quando_usarlo": "Solo sull'inquadratura di apertura, se lo Standard restituisce artefatti sul soggetto in primo piano.",
+      "famiglia": "kling-3"
+    },
+    "kling-3-turbo-i2v": {
+      "tipo": "video",
+      "nome": "Kling 3.0 — Turbo, image-to-video",
+      "fornitore": "Kuaishou, distribuito da Higgsfield",
+      "endpoint": "kling-video/v3.0-turbo/image-to-video",
+      "doc": "https://docs.higgsfield.ai/docs/models/kling-3/turbo-image-to-video.md",
+      "disponibile_su_api": true,
+      "crediti_indicativi": null,
+      "durata_min": 3,
+      "durata_max": 15,
+      "mappa": {
+        "prompt": "prompt",
+        "immagine": "image_url",
+        "durata": "duration"
+      },
+      "parametri": {
+        "sound": "off",
+        "cfg_scale": 0.5
+      },
+      "punti_di_forza": "Piu' veloce e piu' economico.",
+      "limiti": "Meno stabile sui micro-movimenti del volto, che e' la cosa che rende credibile un b-roll di pain.",
+      "quando_usarlo": "Giri di prova: si valida la sequenza col Turbo, si rigenera in Standard solo quello che regge.",
+      "famiglia": "kling-3"
+    },
+    "kling-2-5-turbo-i2v": {
+      "tipo": "video",
+      "nome": "Kling 2.5 Turbo Pro — image-to-video",
+      "fornitore": "Kuaishou, distribuito da Higgsfield",
+      "endpoint": "kling-video/v2.5-turbo/pro/image-to-video",
+      "doc": "https://docs.higgsfield.ai/docs/openapi.json",
+      "disponibile_su_api": true,
+      "crediti_indicativi": null,
+      "durata_min": 5,
+      "durata_max": 10,
+      "mappa": {
+        "prompt": "prompt",
+        "immagine": "image_url",
+        "durata": "duration"
+      },
+      "parametri": {
+        "cfg_scale": 0.5,
+        "negative_prompt": ""
+      },
+      "punti_di_forza": "Generazione precedente, gia' nello spec pubblico: utile come rete di sicurezza se la 3.0 viene disabilitata (503).",
+      "limiti": "Durata solo 5 o 10 secondi. Resa inferiore alla 3.0 sul movimento umano.",
+      "quando_usarlo": "Ripiego automatico quando la 3.0 risponde 503 o 423.",
+      "famiglia": "kling-2-5-turbo"
+    }
+  },
+  "ripieghi": {
+    "immagine": [
+      "soul-2",
+      "soul-cinema",
+      "grok-image-2"
+    ],
+    "video": [
+      "kling-3-std-i2v",
+      "kling-3-turbo-i2v",
+      "kling-2-5-turbo-i2v"
+    ]
+  }
+}

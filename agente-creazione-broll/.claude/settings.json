@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 /Users/carlitos/mobilitas-agenti-ai/agente-creazione-broll/scripts/verifica_modelli.py:*)",
+      "Bash(python3 /Users/carlitos/mobilitas-agenti-ai/agente-creazione-broll/scripts/higgsfield.py stima:*)",
+      "Bash(python3 /Users/carlitos/mobilitas-agenti-ai/agente-creazione-broll/scripts/higgsfield.py credenziali)",
+      "Bash(ls:*)",
+      "Bash(cat:*)",
+      "Bash(head:*)",
+      "Bash(tail:*)",
+      "Bash(wc:*)",
+      "Bash(jq:*)",
+      "Bash(find:*)",
+      "Bash(grep:*)",
+      "Bash(rg:*)",
+      "WebSearch",
+      "WebFetch(domain:docs.higgsfield.ai)",
+      "WebFetch(domain:higgsfield.ai)"
+    ],
+    "deny": [
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Read(./**/.env*)",
+      "Write(./**/.env*)"
+    ],
+    "ask": [
+      "Bash(python3 /Users/carlitos/mobilitas-agenti-ai/agente-creazione-broll/scripts/higgsfield.py genera:*)"
+    ]
+  }
+}

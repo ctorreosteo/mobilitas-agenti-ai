@@ -1,0 +1,21 @@
+{
+  "01-pain-portici-invito": {
+    "immagine": {
+      "request_id": "ce543f58-dc8f-41ef-a4e1-ad739224cc2f",
+      "status": "completed",
+      "endpoint": "higgsfield-ai/soul/cinema",
+      "errore": null,
+      "url": "https://d3u0tzju9qaucj.cloudfront.net/316b51a3-757f-4683-ab02-768c0f664749/14510faa-88f3-4f24-b130-a8477baa6918.png",
+      "file": "outputs/colon-irritabile-torino-v2/immagini/01-pain-portici-invito.jpg",
+      "scelta_da": "g3-g-di-spalle-1"
+    },
+    "video": {
+      "request_id": "5d09c623-cf73-422f-8994-e832d53282e8",
+      "status": "completed",
+      "endpoint": "kling-video/v3.0/std/image-to-video",
+      "errore": null,
+      "url": "https://d3u0tzju9qaucj.cloudfront.net/316b51a3-757f-4683-ab02-768c0f664749/c187a5e4-ed0d-4ed7-a4e4-98a0e618d52b.mp4",
+      "file": "outputs/colon-irritabile-torino-v2/video/01-pain-portici-invito.mp4"
+    }
+  }
+}

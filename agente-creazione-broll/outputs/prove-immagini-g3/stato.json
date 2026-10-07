@@ -1,0 +1,62 @@
+{
+  "g3-f-petto-in-su-3": {
+    "immagine": {
+      "request_id": "8da29c42-7289-4f7c-9f5d-c4184f961667",
+      "status": "completed",
+      "endpoint": "higgsfield-ai/soul/cinema",
+      "errore": null,
+      "url": "https://d3u0tzju9qaucj.cloudfront.net/316b51a3-757f-4683-ab02-768c0f664749/167aafbc-3fde-4eb0-a23a-190d7f8b7f7d.png",
+      "file": "outputs/prove-immagini-g3/immagini/g3-f-petto-in-su-3.jpg"
+    }
+  },
+  "g3-f-petto-in-su-2": {
+    "immagine": {
+      "request_id": "4b8da695-b804-4730-8538-0f50a3e08d88",
+      "status": "completed",
+      "endpoint": "higgsfield-ai/soul/cinema",
+      "errore": null,
+      "url": "https://d3u0tzju9qaucj.cloudfront.net/316b51a3-757f-4683-ab02-768c0f664749/0d7d16df-47d6-4f0b-abcf-ac5e9210d837.png",
+      "file": "outputs/prove-immagini-g3/immagini/g3-f-petto-in-su-2.jpg"
+    }
+  },
+  "g3-f-petto-in-su-1": {
+    "immagine": {
+      "request_id": "4e320ad6-055c-43b0-b283-13dab2a05ec9",
+      "status": "completed",
+      "endpoint": "higgsfield-ai/soul/cinema",
+      "errore": null,
+      "url": "https://d3u0tzju9qaucj.cloudfront.net/316b51a3-757f-4683-ab02-768c0f664749/dcffde1b-807c-4cb0-86d0-613616c8f121.png",
+      "file": "outputs/prove-immagini-g3/immagini/g3-f-petto-in-su-1.jpg"
+    }
+  },
+  "g3-g-di-spalle-1": {
+    "immagine": {
+      "request_id": "ce543f58-dc8f-41ef-a4e1-ad739224cc2f",
+      "status": "completed",
+      "endpoint": "higgsfield-ai/soul/cinema",
+      "errore": null,
+      "url": "https://d3u0tzju9qaucj.cloudfront.net/316b51a3-757f-4683-ab02-768c0f664749/14510faa-88f3-4f24-b130-a8477baa6918.png",
+      "file": "outputs/prove-immagini-g3/immagini/g3-g-di-spalle-1.jpg"
+    }
+  },
+  "g3-g-di-spalle-2": {
+    "immagine": {
+      "request_id": "3d2c6fc1-3a24-4b85-8528-18a38abd3b35",
+      "status": "completed",
+      "endpoint": "higgsfield-ai/soul/cinema",
+      "errore": null,
+      "url": "https://d3u0tzju9qaucj.cloudfront.net/316b51a3-757f-4683-ab02-768c0f664749/36f47f69-39a9-46ee-b153-458eee002039.png",
+      "file": "outputs/prove-immagini-g3/immagini/g3-g-di-spalle-2.jpg"
+    }
+  },
+  "g3-g-di-spalle-3": {
+    "immagine": {
+      "request_id": "0d2c59b5-8a41-4607-a195-bdd522c9928c",
+      "status": "completed",
+      "endpoint": "higgsfield-ai/soul/cinema",
+      "errore": null,
+      "url": "https://d3u0tzju9qaucj.cloudfront.net/316b51a3-757f-4683-ab02-768c0f664749/0fa194d7-9ba2-4b9a-ae3b-3ab786e240be.png",
+      "file": "outputs/prove-immagini-g3/immagini/g3-g-di-spalle-3.jpg"
+    }
+  }
+}

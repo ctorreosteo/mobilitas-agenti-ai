@@ -1,0 +1,41 @@
+{
+  "slug": "prove-immagini-g2",
+  "aspect_ratio": "9:16",
+  "modelli": {
+    "immagine": "SOUL Cinema",
+    "video": "Kling 3.0 — Standard, image-to-video"
+  },
+  "generato_il": "2026-09-29 16:40",
+  "broll": [
+    {
+      "id": "g2-d-fondo-portico-1",
+      "esito": "immagine",
+      "immagine": "outputs/prove-immagini-g2/immagini/g2-d-fondo-portico-1.jpg"
+    },
+    {
+      "id": "g2-d-fondo-portico-2",
+      "esito": "immagine",
+      "immagine": "outputs/prove-immagini-g2/immagini/g2-d-fondo-portico-2.jpg"
+    },
+    {
+      "id": "g2-d-fondo-portico-3",
+      "esito": "fallito",
+      "errore": "<urlopen error [Errno 60] Operation timed out>"
+    },
+    {
+      "id": "g2-e-vetrata-vicina-1",
+      "esito": "immagine",
+      "immagine": "outputs/prove-immagini-g2/immagini/g2-e-vetrata-vicina-1.jpg"
+    },
+    {
+      "id": "g2-e-vetrata-vicina-2",
+      "esito": "immagine",
+      "immagine": "outputs/prove-immagini-g2/immagini/g2-e-vetrata-vicina-2.jpg"
+    },
+    {
+      "id": "g2-e-vetrata-vicina-3",
+      "esito": "immagine",
+      "immagine": "outputs/prove-immagini-g2/immagini/g2-e-vetrata-vicina-3.jpg"
+    }
+  ]
+}

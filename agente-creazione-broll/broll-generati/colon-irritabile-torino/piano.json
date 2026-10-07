@@ -1,0 +1,60 @@
+{
+  "slug": "colon-irritabile-torino",
+  "generato_da": "genera-broll.workflow.js",
+  "condizione": "colon-irritabile",
+  "genere": "donna",
+  "aspect_ratio": "9:16",
+  "citta": "torino",
+  "idea_centrale": "Vende una spiegazione fisica al posto della colpa: non e la dieta che hai sbagliato e non e la tua testa che e ansiosa, e un corpo bloccato — diaframma, pancia, sistema nervoso — e un corpo bloccato si tratta con le mani.",
+  "prima_frase": "Il colon irritabile non si risolve togliendo un cibo alla volta.",
+  "progressione": "PROBLEMA → RIPETIZIONE FALLITA → INCOGNITA QUOTIDIANA → NON CREDUTA → SPIEGAZIONE → DESIDERIO",
+  "personaggio": {
+    "descrizione_fissa": "Donna italiana di 34 anni, corporatura media, capelli castano scuro lunghi fino alle spalle raccolti in una coda bassa gia disfatta, viso struccato con occhiaie leggere, felpa grigio melange a collo alto e pantaloni morbidi da casa, unghie corte senza smalto, nessun gioiello tranne un anello sottile alla mano destra.",
+    "serve_soul_id": false
+  },
+  "senza_broll": [
+    {
+      "passaggio": "\"Il colon irritabile non si risolve togliendo un cibo alla volta.\"",
+      "perche": "Resta sul volto: e la regola d'apertura."
+    },
+    {
+      "passaggio": "\"Ti è mai capitato di mangiare una cosa e stare bene, e la settimana dopo la stessa cosa ti distrugge la pancia? Non è colpa tua. C'è un motivo fisico preciso...\"",
+      "perche": "E una domanda diretta piu l'assoluzione: funziona guardando in camera. Un'immagine qui risponderebbe visivamente alla domanda e chiuderebbe il loop che deve restare aperto fino al meccanismo."
+    },
+    {
+      "passaggio": "\"Perché quando non c'è una regola, ogni giornata è un'incognita: non sai dove sarà il bagno, se puoi uscire, o se rischi una figuraccia davanti a tutti.\"",
+      "perche": "Lo meriterebbe — e il beat con la vergogna sociale, quello che converte — ma la quota di un solo b-roll era gia spesa sul punto di fuga precedente. Scoperto per quota, non per scelta."
+    },
+    {
+      "passaggio": "\"E gli esami? Li hai fatti tutti, sono a posto. E l'unica risposta che hai avuto è: 'è lo stress, sei una persona ansiosa'.\"",
+      "perche": "Il colpo qui e nel tono di voce che cita il medico, non nell'immagine: un referto inquadrato lo indebolirebbe spiegando cio che l'ironia dice meglio."
+    },
+    {
+      "passaggio": "Tutto il blocco [OSTEOPATA – meccanismo unico]: diaframma bloccato, pancia contratta, sistema nervoso in allarme e i tre passaggi del trattamento.",
+      "perche": "Quota infografiche fissata a 0. Resta interamente sul volto e sulle mani dell'osteopata, che qui devono fare da sole il lavoro di rendere visibile l'anatomia."
+    },
+    {
+      "passaggio": "[OSTEOPATA – desiderio latente]: \"Centinaia di pazienti arrivano da noi dopo essersi sentiti dire che dovevano solo 'conviverci'...\"",
+      "perche": "E il passaggio in cui l'osteopata prende posizione contro una frase che la paziente si e sentita dire davvero: vale la faccia di chi la contraddice, non una scena aspirazionale."
+    },
+    {
+      "passaggio": "[OSTEOPATA – CTA]: prezzo, form e invito in studio.",
+      "perche": "La fiducia si trasferisce da un volto, non da un'immagine. Nessun b-roll sulla chiusura."
+    }
+  ],
+  "modelli": {
+    "immagine": "soul-cinema",
+    "video": "kling-3-std-i2v"
+  },
+  "broll": [
+    {
+      "id": "01-pain-dieta-esclusione",
+      "tipo": "pain",
+      "variante": "unica",
+      "copre": "\"Hai tolto il glutine, il lattosio, mezzo mondo… e non è cambiato niente.\"",
+      "prompt_t2i": "Vertical 9:16 composition, subject filling the frame height, medium close shot on a 50mm lens at f/2.2, camera static at seated eye level, face in the upper third of the frame, tabletop and open notebook occupying the lower third, sharp as objects but with no legible writing, the tall window entering only as a lateral fragment.\n\nSubject: a 34-year-old Italian woman, medium build, dark chestnut shoulder-length hair gathered in a low ponytail that has already come loose, with strands falling along her cheeks and temples; bare unmade-up face with light under-eye shadows; wearing a heather grey high-neck sweatshirt in brushed marl cotton with slightly stretched cuffs pushed up her forearms, soft charcoal loose lounge trousers; short unpolished natural nails; no jewellery except a thin plain band on her right hand. Realistic skin with visible pores, faint asymmetries, a few dry patches, no retouching.\n\nPose and action: she sits at a kitchen table mid-meal, mid-back slightly slumped, left forearm resting on the tabletop, her fork already laid down across the rim of the plate, her right hand loose and open on the table beside it. Her mouth is closed and relaxed, eyelids a little heavy, gaze lowered and unfocused toward the plate. Tired resignation, quiet and small, no grimace, no pain face, no hands on the belly, no theatrical sadness.\n\nObjects: a wide plain white plate still almost full of plain boiled white rice, no sauce, no oil, no colour, barely disturbed at one edge; beside it an open lined notebook whose ruled lines are filled with dense uniform ink marks that have no letterforms, many rows crossed out by single horizontal pen strokes; it reads as a diary kept for months from the rhythm of the rows and the crossings-out, never from words; a cheap blue ballpoint lying across the page; a glass of tap water, a used espresso cup with a dried ring, unopened post at the table edge.\n\nEnvironment: a kitchen table inside a period Turin apartment, ceiling three and a half metres high with plaster cornices, worn Hungarian-point herringbone parquet, a cast-iron radiator under a tall narrow window with double casements, pale painted wooden frames and a small brass olive handle; a contemporary kitchen with flat matte fronts and a stone worktop inserted into the old room; a dish towel over a chair back, one chair not pushed in, a lived-in room rather than a styled set.\n\nBackground through the tall window, very far out of focus: the ochre plastered facade of an inner courtyard with dark green folding wooden shutters. No skyline, no monument, no recognisable landmark, nothing sharp outside, no American street furniture.\n\nLight: cold, low early Turin morning daylight raking in at a shallow angle from camera left, single source, no lamps on, no added warm practical; desaturated palette of grey, ochre and pale wood; soft present shadows, gentle contrast, flat and ordinary rather than moody.\n\nMood: an ordinary weekday morning gone flat. Understated, quiet, documentary, restrained. Not tragic, no chiaroscuro, no theatrical darkness, no melancholic film-still drama, no horror grading.\n\nultra-photorealistic, premium, cinematic, believable, anatomically realistic, advertising quality. No stock photography look, no exaggerated expression, no visible logos or brand names, no branded or imitated packaging, no readable text, no letters, no numbers, no words anywhere in frame, no text overlays, no distorted hands, no plastic skin, no American interior, no staged perfection.",
+      "prompt_i2v": "Static locked-off frame with a very slow push-in of roughly five percent across the whole shot, no tilt, no shake, no cut. She exhales quietly and her shoulders drop a centimetre. Her right hand lifts from the tabletop and settles flat and open just below her sternum, over the sweatshirt, one small unhurried gesture, never pressed, never clutched, never gripping. She blinks slowly twice; her gaze drifts from the plate down to the open notebook and unfocuses again. Nothing on the table moves except a loose strand of hair stirred faintly by her breath and a barely perceptible drift of dust in the window light. Beyond the glass the blurred courtyard stays still, daylight shifting only slightly. Restrained, natural, documentary pace. No sound, no dialogue, no head turn toward camera, no theatrical sigh, no morphing or warping hands.",
+      "durata": 6
+    }
+  ]
+}

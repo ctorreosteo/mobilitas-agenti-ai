@@ -1,0 +1,152 @@
+{
+  "_come_si_legge": [
+    "Ogni video Mobilitas e ambientato a Torino salvo indicazione contraria: il campo 'predefinita'",
+    "vale quando al lancio non si passa nessuna citta. Non esiste il caso 'nessuna citta'.",
+    "",
+    "La citta entra su DUE livelli, e si decidono separatamente:",
+    "",
+    "  1. INTERNI — SEMPRE, in ogni b-roll, anche dove dalla finestra non si vede niente.",
+    "     'interni' descrive come sono fatte DAVVERO le case, gli uffici, le auto e i locali li.",
+    "     E' la parte che l'immagine sbaglia piu spesso, perche' i modelli ricadono su interni",
+    "     americani, e un ambiente non descritto viene riempito da quel default. Descrivere",
+    "     l'ambiente non e' facoltativo: vietare il disordine non basta a costruire un set.",
+    "",
+    "  2. ESTERNI — dove uno sfondo si vede davvero: una finestra, una vetrata, un parabrezza,",
+    "     una strada, un terrazzo, un bar. E' questo che il campo 'citta_visibile' del piano",
+    "     dichiara. Una finestra che da' su un muro anonimo e' un'occasione buttata: se c'e' un",
+    "     esterno inquadrato, anche sfocato, la citta' ci deve essere.",
+    "",
+    "Sugli esterni ci sono due registri, e il secondo si usa dieci volte piu' del primo:",
+    "  - 'landmark': riconoscibili al primo sguardo. Massimo UNO per video, e solo su",
+    "    un'inquadratura di ambientazione. Due landmark nello stesso video fanno promozione",
+    "    turistica e spostano il registro da 'questa e' la mia vita' a 'questa e' una pubblicita''.",
+    "  - 'tessuto': cio' che rende una citta' quella citta' senza nominarla — materiali, colore",
+    "    della pietra, tipo di finestra, luce, alberi, arredo urbano. E' il livello che funziona:",
+    "    lo spettatore di quella citta' si riconosce, quello di un'altra non vede niente di strano.",
+    "",
+    "Aggiungere una citta' = aggiungere una voce con gli stessi campi. Il workflow non ha un elenco",
+    "cablato. Se la citta' chiesta non e' qui, l'agente la ricostruisce e propone la voce nuova: la",
+    "conferma e' di Carlos."
+  ],
+  "predefinita": "torino",
+  "citta": {
+    "torino": {
+      "nome": "Torino",
+      "landmark": [
+        "Mole Antonelliana vista dall'alto oltre i tetti, guglia contro cielo terso",
+        "Monte dei Cappuccini sulla collina, al di la' del Po",
+        "Piazza San Carlo con i portici simmetrici e la pavimentazione chiara",
+        "Via Roma con i portici continui e le vetrine, prospettiva lunga verso piazza San Carlo",
+        "Gran Madre di Dio con la scalinata e il ponte Vittorio Emanuele I",
+        "Basilica di Superga sul crinale, lontana, in foschia",
+        "Piazza Vittorio Veneto che si apre verso il fiume",
+        "Parco del Valentino lungo il Po, con i platani",
+        "Murazzi del Po, archi in pietra sul fiume"
+      ],
+      "tessuto": [
+        "portici alti con volte a botte e lampioni in ghisa",
+        "facciate barocche e umbertine in ocra, giallo Torino, grigio pietra",
+        "persiane in legno verde scuro a libro",
+        "finestre alte e strette con doppia anta e maniglia a olivetta",
+        "cortili interni con ballatoi e ciottolato",
+        "viali alberati rettilinei con ippocastani e tigli",
+        "tram storico verde che passa lento in secondo piano, fuori fuoco",
+        "colline sullo sfondo a est, sempre presenti da qualsiasi punto alto",
+        "caffe' storico con boiserie scura, marmo e specchi",
+        "nebbia bassa nelle mattine d'autunno e d'inverno"
+      ],
+      "interni": [
+        "appartamento in stabile d'epoca: soffitti alti tre metri e mezzo, cornici in gesso, parquet a spina ungherese consumato",
+        "infissi in legno chiaro verniciato, radiatori in ghisa sotto la finestra",
+        "cucina contemporanea inserita in una stanza antica: ante lisce opache, piano in pietra, contrasto voluto",
+        "ufficio ricavato in un piano nobile: scrivania in rovere, schermo singolo, libreria a parete, pianta alta nell'angolo",
+        "bagno con piastrelle piccole a parete fino a meta' altezza",
+        "auto: berlina o wagon europea recente e tenuta bene, sedili in tessuto scuro, plancia grigia opaca, volante in pelle liscia — mai interni americani, mai finiture finto legno, mai ciondoli allo specchietto",
+        "trattoria o caffe' di quartiere: boiserie scura, marmo, specchi, tavoli ravvicinati, tovaglie di carta su tovagliato, luce calda e bassa",
+        "supermercato di quartiere: neon freddi, scaffali alti e stretti, pavimento in gres chiaro lucido"
+      ],
+      "luce": {
+        "mattina": "luce fredda e bassa che entra di taglio dalle finestre alte; d'inverno grigio uniforme di foschia",
+        "pomeriggio": "luce ambrata che rimbalza sulle facciate ocra ed entra riflessa, mai diretta",
+        "sera": "lampioni caldi sotto i portici, vetrine, cielo blu profondo residuo",
+        "notte": "luce artificiale calda e puntiforme, strade lucide dopo la pioggia"
+      },
+      "auto_e_strada": "berline e wagon europee scure, parcheggio in linea sotto i platani, segnaletica italiana, cassonetti grigi",
+      "clima_tipico": "inverni freddi e umidi con foschia, estati calde e secche, cielo terso dopo il vento",
+      "da_evitare": [
+        "la Mole in ogni inquadratura: una volta sola, e solo se serve ambientare",
+        "pavimentazione e arredo urbano americani: marciapiedi larghi, idranti, semafori sospesi",
+        "insegne inventate che imitano marchi reali"
+      ]
+    },
+    "milano": {
+      "nome": "Milano",
+      "landmark": [
+        "Duomo visto di scorcio da una via laterale, non frontale",
+        "Bosco Verticale e le torri di Porta Nuova sullo sfondo",
+        "Galleria Vittorio Emanuele II, pavimento a mosaico e volta in ferro e vetro",
+        "Navigli al tramonto, ringhiere e case basse sull'acqua",
+        "Parco Sempione con il Castello sullo sfondo"
+      ],
+      "tessuto": [
+        "facciate razionaliste anni Trenta in travertino e klinker",
+        "palazzi anni Cinquanta con balconi continui e frangisole",
+        "cortili con giardino interno e glicine",
+        "tram arancione 1928 in secondo piano",
+        "vetrine essenziali, insegne piccole, marciapiedi in masselli di porfido",
+        "nebbia d'inverno e afa umida d'estate"
+      ],
+      "interni": [
+        "appartamento anni Sessanta ristrutturato: parquet chiaro, porte a filo muro, illuminazione lineare",
+        "loft in ex spazio industriale: infissi metallici neri, mattone a vista, altezza doppia",
+        "ufficio open space contemporaneo: vetrate a tutta altezza, controsoffitto acustico, piante"
+      ],
+      "luce": {
+        "mattina": "luce lattiginosa filtrata da foschia urbana",
+        "pomeriggio": "luce netta che taglia fra i palazzi alti, ombre lunghe",
+        "sera": "luce fredda dei LED urbani mescolata al caldo delle vetrine",
+        "notte": "riflessi sull'asfalto, luce continua, citta' mai del tutto buia"
+      },
+      "auto_e_strada": "molte utilitarie e monopattini, piste ciclabili, pavimentazione in porfido, binari del tram nella carreggiata",
+      "clima_tipico": "nebbia e umido d'inverno, afa d'estate, cielo spesso velato",
+      "da_evitare": [
+        "il Duomo frontale da cartolina",
+        "skyline notturno come apertura: legge subito come stock"
+      ]
+    },
+    "roma": {
+      "nome": "Roma",
+      "landmark": [
+        "cupola di San Pietro lontana, oltre i tetti, in controluce",
+        "Colosseo di scorcio da una via in discesa",
+        "Ponte Sisto e il Tevere con i platani sul lungotevere",
+        "Gianicolo con la citta' bassa sotto la foschia"
+      ],
+      "tessuto": [
+        "intonaci ocra, rosso pompeiano, terra di Siena, scrostati al punto giusto",
+        "sampietrini e marciapiedi stretti",
+        "pini marittimi che chiudono l'orizzonte",
+        "persiane in legno scuro e terrazzi con vasi di limoni",
+        "portoni alti in legno con battente in ottone",
+        "motorini parcheggiati in fila"
+      ],
+      "interni": [
+        "appartamento in palazzo umbertino: cotto o parquet, soffitti alti, finestroni con persiane",
+        "cucina abitabile con tavolo al centro e finestra sul cortile",
+        "studio professionale in appartamento convertito: stucchi originali, arredo contemporaneo sobrio"
+      ],
+      "luce": {
+        "mattina": "luce dorata e gia' calda, ombre morbide",
+        "pomeriggio": "luce piena e contrastata, riflessi caldi dagli intonaci",
+        "sera": "ora d'oro lunga, cielo arancione, facciate accese",
+        "notte": "lampioni caldi e radi, molte zone in penombra"
+      },
+      "auto_e_strada": "auto compatte parcheggiate strette, motorini, sampietrini, cassonetti, edicole",
+      "clima_tipico": "inverni miti e piovosi, estati lunghe e calde, cielo aperto per gran parte dell'anno",
+      "da_evitare": [
+        "Colosseo frontale",
+        "turisti nell'inquadratura: spostano il registro da quotidiano a vacanza"
+      ]
+    }
+  }
+}

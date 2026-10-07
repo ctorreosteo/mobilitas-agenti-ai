@@ -1,0 +1,41 @@
+{
+  "slug": "prove-immagini",
+  "aspect_ratio": "9:16",
+  "modelli": {
+    "immagine": "SOUL Cinema",
+    "video": "Kling 3.0 — Standard, image-to-video"
+  },
+  "generato_il": "2026-09-29 15:44",
+  "broll": [
+    {
+      "id": "prova-a-pillbox-borsa-1",
+      "esito": "immagine",
+      "immagine": "outputs/prove-immagini/immagini/prova-a-pillbox-borsa-1.jpg"
+    },
+    {
+      "id": "prova-a-pillbox-borsa-2",
+      "esito": "fallito",
+      "errore": "https://api.higgsfield.ai/requests/aa707b0f-80cf-4fd2-8227-5c6939cfbc95/status — fallito dopo 5 tentativi. Ultimo errore: URLError: <urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    },
+    {
+      "id": "prova-b-pillbox-dentro-1",
+      "esito": "immagine",
+      "immagine": "outputs/prove-immagini/immagini/prova-b-pillbox-dentro-1.jpg"
+    },
+    {
+      "id": "prova-b-pillbox-dentro-2",
+      "esito": "immagine",
+      "immagine": "outputs/prove-immagini/immagini/prova-b-pillbox-dentro-2.jpg"
+    },
+    {
+      "id": "prova-c-telefono-1",
+      "esito": "immagine",
+      "immagine": "outputs/prove-immagini/immagini/prova-c-telefono-1.jpg"
+    },
+    {
+      "id": "prova-c-telefono-2",
+      "esito": "immagine",
+      "immagine": "outputs/prove-immagini/immagini/prova-c-telefono-2.jpg"
+    }
+  ]
+}

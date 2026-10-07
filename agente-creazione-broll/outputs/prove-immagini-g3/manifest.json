@@ -1,0 +1,41 @@
+{
+  "slug": "prove-immagini-g3",
+  "aspect_ratio": "9:16",
+  "modelli": {
+    "immagine": "SOUL Cinema",
+    "video": "Kling 3.0 — Standard, image-to-video"
+  },
+  "generato_il": "2026-09-29 17:06",
+  "broll": [
+    {
+      "id": "g3-f-petto-in-su-1",
+      "esito": "immagine",
+      "immagine": "outputs/prove-immagini-g3/immagini/g3-f-petto-in-su-1.jpg"
+    },
+    {
+      "id": "g3-f-petto-in-su-2",
+      "esito": "immagine",
+      "immagine": "outputs/prove-immagini-g3/immagini/g3-f-petto-in-su-2.jpg"
+    },
+    {
+      "id": "g3-f-petto-in-su-3",
+      "esito": "immagine",
+      "immagine": "outputs/prove-immagini-g3/immagini/g3-f-petto-in-su-3.jpg"
+    },
+    {
+      "id": "g3-g-di-spalle-1",
+      "esito": "immagine",
+      "immagine": "outputs/prove-immagini-g3/immagini/g3-g-di-spalle-1.jpg"
+    },
+    {
+      "id": "g3-g-di-spalle-2",
+      "esito": "immagine",
+      "immagine": "outputs/prove-immagini-g3/immagini/g3-g-di-spalle-2.jpg"
+    },
+    {
+      "id": "g3-g-di-spalle-3",
+      "esito": "immagine",
+      "immagine": "outputs/prove-immagini-g3/immagini/g3-g-di-spalle-3.jpg"
+    }
+  ]
+}

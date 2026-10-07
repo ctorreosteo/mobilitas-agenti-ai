@@ -1,0 +1,59 @@
+{
+  "prova-a-pillbox-borsa-1": {
+    "immagine": {
+      "request_id": "68a92e48-f432-4e97-bf09-aa600562b21c",
+      "status": "completed",
+      "endpoint": "higgsfield-ai/soul/cinema",
+      "errore": null,
+      "url": "https://d3u0tzju9qaucj.cloudfront.net/316b51a3-757f-4683-ab02-768c0f664749/2d8292e1-36c0-4ac6-a08a-ad861c5f5ab4.png",
+      "file": "outputs/prove-immagini/immagini/prova-a-pillbox-borsa-1.jpg"
+    }
+  },
+  "prova-b-pillbox-dentro-1": {
+    "immagine": {
+      "request_id": "2dc33a1e-36bc-4a04-8ba9-4d7e46c662b5",
+      "status": "completed",
+      "endpoint": "higgsfield-ai/soul/cinema",
+      "errore": null,
+      "url": "https://d3u0tzju9qaucj.cloudfront.net/316b51a3-757f-4683-ab02-768c0f664749/1d470bdc-5301-4714-b7eb-5a5832234501.png",
+      "file": "outputs/prove-immagini/immagini/prova-b-pillbox-dentro-1.jpg"
+    }
+  },
+  "prova-a-pillbox-borsa-2": {
+    "immagine": {
+      "request_id": "aa707b0f-80cf-4fd2-8227-5c6939cfbc95",
+      "status": "queued",
+      "endpoint": "higgsfield-ai/soul/cinema"
+    }
+  },
+  "prova-b-pillbox-dentro-2": {
+    "immagine": {
+      "request_id": "086b074d-9466-4355-9057-64f70c769613",
+      "status": "completed",
+      "endpoint": "higgsfield-ai/soul/cinema",
+      "errore": null,
+      "url": "https://d3u0tzju9qaucj.cloudfront.net/316b51a3-757f-4683-ab02-768c0f664749/9069100a-2654-43ae-94fe-2c3627eb4fe1.png",
+      "file": "outputs/prove-immagini/immagini/prova-b-pillbox-dentro-2.jpg"
+    }
+  },
+  "prova-c-telefono-1": {
+    "immagine": {
+      "request_id": "12ebc9fd-b2cf-49ed-ac2d-a01a61e8bfd6",
+      "status": "completed",
+      "endpoint": "higgsfield-ai/soul/cinema",
+      "errore": null,
+      "url": "https://d3u0tzju9qaucj.cloudfront.net/316b51a3-757f-4683-ab02-768c0f664749/b597c540-cd9c-4663-9a36-696f4df26d9a.png",
+      "file": "outputs/prove-immagini/immagini/prova-c-telefono-1.jpg"
+    }
+  },
+  "prova-c-telefono-2": {
+    "immagine": {
+      "request_id": "3f878f0f-9514-4035-9dfb-d63c150a8f78",
+      "status": "completed",
+      "endpoint": "higgsfield-ai/soul/cinema",
+      "errore": null,
+      "url": "https://d3u0tzju9qaucj.cloudfront.net/316b51a3-757f-4683-ab02-768c0f664749/66e29432-dd20-4afd-a7d2-3cc0b87d53dd.png",
+      "file": "outputs/prove-immagini/immagini/prova-c-telefono-2.jpg"
+    }
+  }
+}

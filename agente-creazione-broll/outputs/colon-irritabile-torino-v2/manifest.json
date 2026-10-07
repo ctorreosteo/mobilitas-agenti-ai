@@ -1,0 +1,16 @@
+{
+  "slug": "colon-irritabile-torino-v2",
+  "aspect_ratio": "9:16",
+  "modelli": {
+    "immagine": "SOUL Cinema",
+    "video": "Kling 3.0 — Standard, image-to-video"
+  },
+  "generato_il": "2026-09-29 19:52",
+  "broll": [
+    {
+      "id": "01-pain-portici-invito",
+      "esito": "fallito",
+      "errore": "<urlopen error [Errno 8] nodename nor servname provided, or not known>"
+    }
+  ]
+}

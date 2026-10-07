@@ -1,0 +1,18 @@
+{
+  "crediti": 5.26,
+  "usd": 0.33,
+  "voci": [
+    {
+      "id": "01-pain-portici-invito",
+      "fase": "immagine",
+      "crediti": 0.088,
+      "usd": 0.006
+    },
+    {
+      "id": "01-pain-portici-invito",
+      "fase": "video",
+      "crediti": 5.175,
+      "usd": 0.324
+    }
+  ]
+}

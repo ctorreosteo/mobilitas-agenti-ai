@@ -1,0 +1,20 @@
+{
+  "01-pain-dieta-esclusione": {
+    "immagine": {
+      "request_id": "e6d6b978-cffd-4ecf-aeb8-13e10ea385e1",
+      "status": "completed",
+      "endpoint": "higgsfield-ai/soul/cinema",
+      "errore": null,
+      "url": "https://d3u0tzju9qaucj.cloudfront.net/316b51a3-757f-4683-ab02-768c0f664749/8b1b4dfe-a5d6-45d1-8f0e-de67295b1bce.png",
+      "file": "outputs/colon-irritabile-torino/immagini/01-pain-dieta-esclusione.jpg"
+    },
+    "video": {
+      "request_id": "ab296819-8e47-4cf6-89b8-a8806cf6ad02",
+      "status": "completed",
+      "endpoint": "kling-video/v3.0/std/image-to-video",
+      "errore": null,
+      "url": "https://d3u0tzju9qaucj.cloudfront.net/316b51a3-757f-4683-ab02-768c0f664749/1a3a5cf6-3d1a-456a-9da3-0b6c0ac2a8a3.mp4",
+      "file": "outputs/colon-irritabile-torino/video/01-pain-dieta-esclusione.mp4"
+    }
+  }
+}

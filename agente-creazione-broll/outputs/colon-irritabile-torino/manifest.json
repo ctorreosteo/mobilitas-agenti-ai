@@ -1,0 +1,17 @@
+{
+  "slug": "colon-irritabile-torino",
+  "aspect_ratio": "9:16",
+  "modelli": {
+    "immagine": "SOUL Cinema",
+    "video": "Kling 3.0 — Standard, image-to-video"
+  },
+  "generato_il": "2026-09-29 14:15",
+  "broll": [
+    {
+      "id": "01-pain-dieta-esclusione",
+      "esito": "completo",
+      "immagine": "outputs/colon-irritabile-torino/immagini/01-pain-dieta-esclusione.jpg",
+      "video": "outputs/colon-irritabile-torino/video/01-pain-dieta-esclusione.mp4"
+    }
+  ]
+}
