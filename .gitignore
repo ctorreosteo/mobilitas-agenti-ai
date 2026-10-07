@@ -4,3 +4,10 @@
 # Python
 __pycache__/
 *.py[cod]
+
+# Segreti: chiavi API e credenziali. NON devono mai finire su GitHub.
+.env
+.env.*
+!.env.esempio
+*.key
+credenziali*.json
