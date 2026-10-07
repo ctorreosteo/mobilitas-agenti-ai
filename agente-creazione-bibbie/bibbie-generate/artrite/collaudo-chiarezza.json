@@ -1,0 +1,64 @@
+{
+  "passaggio": "chiarezza",
+  "esito": "NON CONSEGNABILE",
+  "statistiche": {
+    "parole_prima": 21413,
+    "parole_dopo": 21611,
+    "delta_pct": 0.9,
+    "identita_pct": 77.0,
+    "per_te_prima": 23,
+    "per_te_dopo": 23,
+    "slot_prima": 15,
+    "slot_dopo": 15,
+    "uscite_prima": 7,
+    "uscite_dopo": 7,
+    "etichette_prima": 15,
+    "etichette_dopo": 15,
+    "pmid_prima": 62,
+    "pmid_dopo": 62
+  },
+  "violazioni": [
+    {
+      "severita": "AVVISO",
+      "codice": "BOX_NON_PREVISTI",
+      "messaggio": "13 tipi di box fuori dai quattro ammessi.",
+      "dettaglio": [
+        "«Nocicettivo» (×1)",
+        "«Nociplastico» (×1)",
+        "«Neuropatico» (×1)",
+        "«Come si separano» (×1)",
+        "«E la clausola che chiude il box» (×1)",
+        "«Condizioni spesso associate» (×1)",
+        "«Forza» (×1)",
+        "«Riflessi» (×1)"
+      ]
+    },
+    {
+      "severita": "BLOCCANTE",
+      "codice": "TABELLE_FUORI_SPECIFICA",
+      "messaggio": "17 righe di tabella superano 4 colonne o 8 parole per cella.",
+      "dettaglio": [
+        "3 col / 10 parole: | Prova in stanza | Migliora se il gesto si fa in un altro modo | Pres",
+        "3 col / 14 parole: | Una o più articolazioni calde e gonfie da pochi giorni, con o senza ",
+        "3 col / 9 parole: | Affanno da sforzo nuovo o ingravescente, tosse secca persistente | C",
+        "3 col / 14 parole: | Dolore dorsale o lombare nuovo e focale, o calo di statura, in corti",
+        "3 col / 12 parole: | Dolore atraumatico di calcagno, caviglia o gamba in metotrexato di l",
+        "3 col / 11 parole: | Lamb, 2015 (25308290) · c1 | Esercizio mano, 490 adulti, 12 mesi | I",
+        "3 col / 10 parole: | Hurkmans, 2009 (19821388) · c1 | Otto studi su esercizio dinamico | ",
+        "3 col / 16 parole: | de Jong, 2003 (13130460) · c1 | 309 pazienti, esercizio intenso, 2 a"
+      ]
+    },
+    {
+      "severita": "AVVISO",
+      "codice": "PAROLE_FUORI_RANGE",
+      "messaggio": "Il documento ha 21611 parole (appendici escluse): fuori dal range 8000–13000. Non e' un difetto di conservazione: se il superamento c'era gia' in ingresso, il rilievo appartiene al livello di asciugatura, non a chi ha riscritto.",
+      "dettaglio": []
+    },
+    {
+      "severita": "AVVISO",
+      "codice": "GLOSSARIO_TROPPO_LUNGO",
+      "messaggio": "Il glossario ha 58 termini (max 40): la Bibbia è scritta troppo tecnica.",
+      "dettaglio": []
+    }
+  ]
+}

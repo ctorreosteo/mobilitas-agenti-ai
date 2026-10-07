@@ -1,0 +1,63 @@
+{
+  "passaggio": "chiarezza",
+  "esito": "NON CONSEGNABILE",
+  "statistiche": {
+    "parole_prima": 22114,
+    "parole_dopo": 22259,
+    "delta_pct": 0.7,
+    "identita_pct": 80.4,
+    "per_te_prima": 0,
+    "per_te_dopo": 0,
+    "slot_prima": 15,
+    "slot_dopo": 15,
+    "uscite_prima": 20,
+    "uscite_dopo": 20,
+    "etichette_prima": 11,
+    "etichette_dopo": 11,
+    "pmid_prima": 59,
+    "pmid_dopo": 59
+  },
+  "violazioni": [
+    {
+      "severita": "AVVISO",
+      "codice": "ETICHETTE_RIANCORATE",
+      "messaggio": "1 etichette seguono un testo diverso dalla v5. Può essere solo riformulazione — va guardato dal collaudatore semantico.",
+      "dettaglio": [
+        "PROBABILE: …*(razionale forte, prove parziali)* — in un trial randomizza"
+      ]
+    },
+    {
+      "severita": "BLOCCANTE",
+      "codice": "TABELLE_FUORI_SPECIFICA",
+      "messaggio": "19 righe di tabella superano 4 colonne o 8 parole per cella.",
+      "dettaglio": [
+        "3 col / 11 parole: | Gonfiore con affanno, dolore al petto, tosse con sangue o svenimento",
+        "3 col / 14 parole: | Una gamba sola gonfia in ore, o bilaterale peggiorato in fretta da u",
+        "3 col / 11 parole: | Diabetico: un piede caldo e gonfio, anche senza febbre né dolore | C",
+        "3 col / 25 parole: | [Mosti 2021](https://pubmed.ncbi.nlm.nih.gov/33407051/) · c1 | Volum",
+        "3 col / 28 parole: | [Sharifi 2021](https://pubmed.ncbi.nlm.nih.gov/33127467/) · c1 | VCS",
+        "3 col / 25 parole: | [Padberg 2004](https://pubmed.ncbi.nlm.nih.gov/14718821/) · c1 | Fra",
+        "3 col / 16 parole: | [Aydin 2022](https://pubmed.ncbi.nlm.nih.gov/35710091/) · c1 | Confr",
+        "3 col / 16 parole: | [Crisóstomo 2015](https://pubmed.ncbi.nlm.nih.gov/25308883/) · c1 | "
+      ]
+    },
+    {
+      "severita": "AVVISO",
+      "codice": "PAROLE_FUORI_RANGE",
+      "messaggio": "Il documento ha 22259 parole (appendici escluse): fuori dal range 8000–13000. Non e' un difetto di conservazione: se il superamento c'era gia' in ingresso, il rilievo appartiene al livello di asciugatura, non a chi ha riscritto.",
+      "dettaglio": []
+    },
+    {
+      "severita": "AVVISO",
+      "codice": "GLOSSARIO_TROPPO_LUNGO",
+      "messaggio": "Il glossario ha 50 termini (max 40): la Bibbia è scritta troppo tecnica.",
+      "dettaglio": []
+    },
+    {
+      "severita": "BLOCCANTE",
+      "codice": "SCRIPT_TROPPO_LUNGO",
+      "messaggio": "Lo script per il paziente ha 107 parole (max 100).",
+      "dettaglio": []
+    }
+  ]
+}

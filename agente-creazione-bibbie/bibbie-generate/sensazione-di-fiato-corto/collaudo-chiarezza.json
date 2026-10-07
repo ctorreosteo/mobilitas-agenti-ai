@@ -1,0 +1,74 @@
+{
+  "passaggio": "chiarezza",
+  "esito": "NON CONSEGNABILE",
+  "statistiche": {
+    "parole_prima": 19190,
+    "parole_dopo": 19301,
+    "delta_pct": 0.6,
+    "identita_pct": 72.6,
+    "per_te_prima": 1,
+    "per_te_dopo": 1,
+    "slot_prima": 15,
+    "slot_dopo": 15,
+    "uscite_prima": 40,
+    "uscite_dopo": 40,
+    "etichette_prima": 58,
+    "etichette_dopo": 58,
+    "pmid_prima": 51,
+    "pmid_dopo": 51
+  },
+  "violazioni": [
+    {
+      "severita": "AVVISO",
+      "codice": "ETICHETTE_RIANCORATE",
+      "messaggio": "16 etichette seguono un testo diverso dalla v5. Può essere solo riformulazione — va guardato dal collaudatore semantico.",
+      "dettaglio": [
+        "DIMOSTRATO: …*(studi sull'uomo, solidi)* sul meccanismo — trentasei volon",
+        "DIMOSTRATO: …*(studi sull'uomo, solidi)* — meta-analisi degli studi che h",
+        "DIMOSTRATO: …*(studi sull'uomo, solidi)* — poggia sul paradigma comando a",
+        "DIMOSTRATO: …dove c'è IPOTESI — e in questo documento due meccanismi su c",
+        "DIMOSTRATO: …e un pezzo IPOTESI, che è il posto esatto in cui la tentazio",
+        "DIMOSTRATO: …e un pezzo IPOTESI: la parte forte è la fisiologia generale,",
+        "IPOTESI: …*(meccanismo coerente, nessuno studio)* — il sospiro ha anch",
+        "IPOTESI: …, che è il posto esatto in cui la tentazione si presenta. No"
+      ]
+    },
+    {
+      "severita": "AVVISO",
+      "codice": "BOX_NON_PREVISTI",
+      "messaggio": "1 tipi di box fuori dai quattro ammessi.",
+      "dettaglio": [
+        "«Condizioni spesso associate» (×1)"
+      ]
+    },
+    {
+      "severita": "BLOCCANTE",
+      "codice": "TABELLE_FUORI_SPECIFICA",
+      "messaggio": "4 righe di tabella superano 4 colonne o 8 parole per cella.",
+      "dettaglio": [
+        "4 col / 9 parole: | Peggiora da supino, piegandosi in avanti o in acqua | Curante, per p",
+        "4 col / 11 parole: | Calo di peso non spiegato in fumatore sopra i 40 anni | Curante | In",
+        "4 col / 11 parole: | Cardiopalmo, tremore, calo di peso, intolleranza al caldo, senza dos",
+        "4 col / 11 parole: | Nessun emocromo con ferritina e nessun TSH negli ultimi due anni | C"
+      ]
+    },
+    {
+      "severita": "AVVISO",
+      "codice": "PAROLE_FUORI_RANGE",
+      "messaggio": "Il documento ha 19301 parole (appendici escluse): fuori dal range 8000–13000. Non e' un difetto di conservazione: se il superamento c'era gia' in ingresso, il rilievo appartiene al livello di asciugatura, non a chi ha riscritto.",
+      "dettaglio": []
+    },
+    {
+      "severita": "AVVISO",
+      "codice": "GLOSSARIO_TROPPO_LUNGO",
+      "messaggio": "Il glossario ha 49 termini (max 40): la Bibbia è scritta troppo tecnica.",
+      "dettaglio": []
+    },
+    {
+      "severita": "BLOCCANTE",
+      "codice": "SCRIPT_TROPPO_LUNGO",
+      "messaggio": "Lo script per il paziente ha 150 parole (max 100).",
+      "dettaglio": []
+    }
+  ]
+}

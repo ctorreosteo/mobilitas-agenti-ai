@@ -1,0 +1,63 @@
+{
+  "passaggio": "chiarezza",
+  "esito": "NON CONSEGNABILE",
+  "statistiche": {
+    "parole_prima": 18871,
+    "parole_dopo": 18953,
+    "delta_pct": 0.4,
+    "identita_pct": 80.4,
+    "per_te_prima": 15,
+    "per_te_dopo": 15,
+    "slot_prima": 15,
+    "slot_dopo": 15,
+    "uscite_prima": 8,
+    "uscite_dopo": 8,
+    "etichette_prima": 13,
+    "etichette_dopo": 13,
+    "pmid_prima": 45,
+    "pmid_dopo": 45
+  },
+  "violazioni": [
+    {
+      "severita": "AVVISO",
+      "codice": "BOX_NON_PREVISTI",
+      "messaggio": "1 tipi di box fuori dai quattro ammessi.",
+      "dettaglio": [
+        "«Condizioni associate» (×1)"
+      ]
+    },
+    {
+      "severita": "BLOCCANTE",
+      "codice": "TABELLE_FUORI_SPECIFICA",
+      "messaggio": "9 righe di tabella superano 4 colonne o 8 parole per cella.",
+      "dettaglio": [
+        "4 col / 9 parole: | **2.** Escursione toraco-addominale bassa | Metro al processo xifoid",
+        "4 col / 14 parole: | **4.** Giorni su sette con cambio di vestito | Conteggio riferito | ",
+        "3 col / 10 parole: | Distensione con gambe o caviglie gonfie, o peso in aumento | Curante",
+        "3 col / 9 parole: | Gonfiore che peggiora in chi prende un GLP-1 | Curante; 112 se alvo ",
+        "3 col / 9 parole: | Familiarità di primo grado per tumore digestivo o ovarico | Curante ",
+        "3 col / 10 parole: | Bendezú, 2015 (26095329) | Volume e distribuzione del gas, 88 pazien",
+        "3 col / 10 parole: | Barba, 2023 (36153798) | Distensione visibile oggettivata in 139 paz",
+        "3 col / 10 parole: | Agrawal, 2008 (18455167) | Soglie rettali in 68 pazienti con colon i"
+      ]
+    },
+    {
+      "severita": "AVVISO",
+      "codice": "PAROLE_FUORI_RANGE",
+      "messaggio": "Il documento ha 18953 parole (appendici escluse): fuori dal range 8000–13000. Non e' un difetto di conservazione: se il superamento c'era gia' in ingresso, il rilievo appartiene al livello di asciugatura, non a chi ha riscritto.",
+      "dettaglio": []
+    },
+    {
+      "severita": "AVVISO",
+      "codice": "GLOSSARIO_TROPPO_LUNGO",
+      "messaggio": "Il glossario ha 42 termini (max 40): la Bibbia è scritta troppo tecnica.",
+      "dettaglio": []
+    },
+    {
+      "severita": "BLOCCANTE",
+      "codice": "SCRIPT_TROPPO_LUNGO",
+      "messaggio": "Lo script per il paziente ha 114 parole (max 100).",
+      "dettaglio": []
+    }
+  ]
+}

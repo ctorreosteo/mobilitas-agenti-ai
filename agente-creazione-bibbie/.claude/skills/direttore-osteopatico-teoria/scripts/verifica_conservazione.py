@@ -94,11 +94,32 @@ def conta_parole(t):
 
 
 def etichette(t):
-    """Ogni etichetta di solidita', con le 12 parole che la seguono (l'ancora al claim)."""
+    """Ogni etichetta di solidita', con le 12 parole che la seguono (l'ancora al claim).
+
+    BUG (10/09/2026): il regex pretendeva la forma esatta `> **Quanto e' solido:** DIMOSTRATO`.
+    Bastava che l'autore scrivesse l'etichetta in grassetto (`**DIMOSTRATO**`), o aprisse la
+    scatola con un titolo suo (`> **Sul meccanismo: PROBABILE**`), o spezzasse l'etichetta in
+    due dentro la stessa riga, perche' il conteggio non la vedesse. Su 50 Bibbie consegnate ne
+    vedeva 543 su 1241 — e su 18 documenti ZERO: il controllo piu' importante dello script
+    passava a vuoto, e il rapporto stampava «etichette 0 -> 0» come se fosse un esito.
+    Ora si contano TUTTE le occorrenze, in ordine di documento, senza pretendere una forma;
+    l'unico taglio e' quello delle appendici. Riconteggiato all'indietro su tutte le Bibbie
+    gia' consegnate: nessuna etichetta era cambiata fra v5 e v7 in nessun documento.
+    """
+    # Le appendici (Glossario compreso) DEFINISCONO le etichette, non le appongono a
+    # un'affermazione: contarle fa salire e scendere il totale per motivi di lessico.
+    # Stesso taglio che usa conta_parole().
+    t = re.split(r"^#{1,3}\s*Appendice\s+A\b", t, flags=re.M | re.I)[0]
+    # La legenda in testa NON si esclude, per quanto non sia un'etichetta apposta a un claim:
+    # la sua forma cambia fra una versione e l'altra (in linea con «·» nella v5, elenco puntato
+    # nella v7), quindi qualunque filtro la toglie da una parte sola e inventa un delta. Sono
+    # quattro occorrenze costanti: contarle da entrambi i lati e' l'unica cosa simmetrica.
+    # Il contesto si guarda SENZA consumarlo (lookahead): con un gruppo normale il regex
+    # divorava i 120 caratteri dopo ogni etichetta, e con essi le etichette vicine — quante
+    # ne perdeva dipendeva dalla spaziatura, che fra v5 e v7 cambia. Bastava quello a produrre
+    # delta di conteggio su 14 Bibbie su 50, tutti falsi.
     out = []
-    for m in re.finditer(
-        r">\s*\*\*Quanto\s+è\s+solido[:.]?\*\*\s*[:\-—]?\s*(" + "|".join(ETICHETTE) + r")\b(.{0,120})",
-        t, flags=re.I):
+    for m in re.finditer(r"\b(" + "|".join(ETICHETTE) + r")\b(?=(.{0,120}))", t):
         out.append((m.group(1).upper(), " ".join(m.group(2).split())[:120]))
     return out
 

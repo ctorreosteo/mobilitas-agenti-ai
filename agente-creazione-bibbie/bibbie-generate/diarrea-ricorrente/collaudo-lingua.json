@@ -1,0 +1,53 @@
+{
+  "passaggio": "lingua",
+  "esito": "CONSEGNABILE",
+  "statistiche": {
+    "parole_prima": 22130,
+    "parole_dopo": 22168,
+    "delta_pct": 0.2,
+    "identita_pct": 97.4,
+    "per_te_prima": 20,
+    "per_te_dopo": 20,
+    "slot_prima": 15,
+    "slot_dopo": 15,
+    "uscite_prima": 14,
+    "uscite_dopo": 14,
+    "etichette_prima": 64,
+    "etichette_dopo": 64,
+    "pmid_prima": 59,
+    "pmid_dopo": 59
+  },
+  "violazioni": [
+    {
+      "severita": "AVVISO",
+      "codice": "ETICHETTE_RIANCORATE",
+      "messaggio": "1 etichette seguono un testo diverso dalla v5. Può essere solo riformulazione — va guardato dal collaudatore semantico.",
+      "dettaglio": [
+        "PROBABILE: …** *(razionale forte, prove parziali)*. Somministrando l'orm"
+      ]
+    },
+    {
+      "severita": "AVVISO",
+      "codice": "BOX_NON_PREVISTI",
+      "messaggio": "4 tipi di box fuori dai quattro ammessi.",
+      "dettaglio": [
+        "«Sul tratto pontino-sacrale: PROBABILE» (×1)",
+        "«Sulla differenza di pattern: PROBABILE» (×1)",
+        "«Condizioni spesso associate» (×1)",
+        "«Sul meccanismo: PROBABILE» (×1)"
+      ]
+    },
+    {
+      "severita": "AVVISO",
+      "codice": "PAROLE_FUORI_RANGE",
+      "messaggio": "Il documento ha 22168 parole (appendici escluse): fuori dal range 8000–13000. Non e' un difetto di conservazione: se il superamento c'era gia' in ingresso, il rilievo appartiene al livello di asciugatura, non a chi ha riscritto.",
+      "dettaglio": []
+    },
+    {
+      "severita": "AVVISO",
+      "codice": "GLOSSARIO_TROPPO_LUNGO",
+      "messaggio": "Il glossario ha 47 termini (max 40): la Bibbia è scritta troppo tecnica.",
+      "dettaglio": []
+    }
+  ]
+}
