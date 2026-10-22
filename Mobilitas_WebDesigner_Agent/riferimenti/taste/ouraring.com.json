@@ -1,0 +1,64 @@
+{
+  "source": "https://ouraring.com/",
+  "capture_caveats": ["Servita la versione italiana (geolocalizzazione).", "Banner cookie in basso presente in tutte le schermate: Taste non clicca."],
+  "tokens": {
+    "spacing": { "scale": [8, 12, 16, 20, 24, 32, 40, 48, 64, 80], "base_unit": 8 },
+    "typography": {
+      "families": ["Editorial New", "AkkuratLL"],
+      "scale": [
+        { "role": "hero", "size": "80px", "weight": "300", "family": "Editorial New", "tracking": "-4px" },
+        { "role": "h2", "size": "68px", "weight": "400", "family": "Editorial New", "tracking": "-2.04px" },
+        { "role": "h3", "size": "40px", "weight": "300", "family": "AkkuratLL" },
+        { "role": "lead", "size": "20px", "weight": "400", "family": "AkkuratLL", "max_width": "480px" },
+        { "role": "body / ui", "size": "16px", "weight": "400", "family": "AkkuratLL" },
+        { "role": "etichetta", "size": "12–13px", "weight": "600", "family": "AkkuratLL" }
+      ]
+    },
+    "colors": [
+      { "role": "fondo crema", "value": "#F7F1E8", "area": "77%" },
+      { "role": "superficie scura (sezioni finali, footer)", "value": "#1C1B1A", "area": "15%" },
+      { "role": "card testimonianze", "value": "#EFE6DB", "area": "5%" },
+      { "role": "testo", "value": "#4A4741" },
+      { "role": "testo secondario", "value": "#A8A5A0" },
+      { "role": "accento solo CTA", "value": "#2A72DE", "area": "0.2%" }
+    ],
+    "radius": ["9999px (CTA)", "90px (etichette)", "24px", "12px", "8px"],
+    "shadows": ["rgba(0,0,0,0.2) 0 0 18px (un solo elemento)"],
+    "image_ratios": [
+      { "usage": "hero a tutta larghezza", "ratio": "1.7:1" },
+      { "usage": "carosello tematico", "ratio": "1.82:1" },
+      { "usage": "feature", "ratio": "1.33:1 / 1.15:1" }
+    ],
+    "grid": { "max_width": "1248px", "columns": 28, "gutter": "8px (margini laterali 64px)" }
+  },
+  "taste": [
+    {
+      "name": "Un solo blu, solo per agire",
+      "trigger": "Quando hanno dovuto far emergere l'acquisto in una pagina lunga e calda",
+      "decision": "Hanno riservato il blu #2A72DE alle sole CTA invece di usarlo anche per titoli, icone o sfondi",
+      "reason": "Se un colore compare solo dove si agisce, l'occhio impara in un secondo dove cliccare",
+      "evidence": ["#2A72DE allo 0.2% della superficie", "crema 77%", "CTA pill 16px"]
+    },
+    {
+      "name": "Titolo serif sottile, testo grottesco",
+      "trigger": "Quando hanno dovuto vendere tecnologia senza sembrare un gadget",
+      "decision": "Hanno usato un serif a peso 300 con tracking -4px per titoli e citazioni, e AkkuratLL per tutto il resto, invece di un unico sans tecnico",
+      "reason": "Il serif sposta il tono dalla scheda tecnica al benessere personale",
+      "evidence": ["h1 80px/300 tracking -4px", "h2 68px", "citazioni delle testimonianze nello stesso serif", "AkkuratLL su 545 elementi"]
+    },
+    {
+      "name": "Prove con la fonte accanto",
+      "trigger": "Quando hanno dovuto sostenere affermazioni sulla salute",
+      "decision": "Hanno accompagnato statistiche e funzioni con note a piè di pagina e avvertenze, invece di numeri senza fonte",
+      "reason": "Nel benessere la credibilità cresce quando il limite è dichiarato",
+      "evidence": ["nota al dato 86% con campione e durata", "avvertenza sul carattere non medico delle funzioni", "testimonianze con nome e foto"]
+    },
+    {
+      "name": "Niente ombre, profondità con il colore (restrizione)",
+      "trigger": "Quando hanno dovuto separare card e sezioni",
+      "decision": "Hanno rinunciato alle ombre, usando una seconda tinta crema e un blocco scuro con angolo arrotondato in basso",
+      "reason": "Superfici tonali mantengono la pagina leggera e coerente con la fotografia calda",
+      "evidence": ["una sola ombra rilevata", "card #EFE6DB su crema #F7F1E8", "blocco #1C1B1A con raggio 24px"]
+    }
+  ]
+}

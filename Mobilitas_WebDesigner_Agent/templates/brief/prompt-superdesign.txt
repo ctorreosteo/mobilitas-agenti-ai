@@ -1,0 +1,35 @@
+Landing page per uno studio di osteopatia di fascia alta a Torino, su [TEMA]. Un solo file HTML con Tailwind CDN e un breve <style>. Progetta DUE composizioni autonome: MOBILE (390 px, priorità: il traffico arriva da smartphone) e DESKTOP (1440 px). Il mobile non è il desktop impilato.
+
+IMPORTANTE: genera la pagina COMPLETA, tutte le [N] sezioni in ordine. Codice compatto: niente SVG decorativi, niente librerie; JS minimo solo per [interazione] e la barra mobile; FAQ con <details>.
+
+LIVELLO: landing PREMIUM, ESTETICA, MODERNA, di livello editoriale altissimo, [CHIARA / SCURA: indicare il fondo dominante]. Deve convertire (prenotazione della prima visita) ed essere credibile per uno studio sanitario. Composizioni originali, contrasto di scala, sezioni diverse tra loro, un elemento firma: [descriverlo]. Vietati: look SaaS, card con ombre, gradienti decorativi, glassmorphism, neon, icone a griglia, illustrazioni mediche, stock photo, effetti cinematografici, metafore visive forzate, sezioni tutte uguali, la normale landing premium con foto grandi e sezioni standard.
+
+PALETTE (nessun altro colore):
+- [COLORE + HEX]: [ruolo, percentuale indicativa della pagina]
+- PANNA #F4F4F4: [ruolo]
+- VERDE #72FA93: SOLO il pulsante principale (testo blu #002552) e piccoli accenti funzionali sul blu. Mai sul panna.
+
+TIPOGRAFIA (solo Montserrat da Google Fonts, pesi [200–600]):
+- DISPLAY: [peso, tracking, interlinea; mobile X px, desktop Y px]. Solo per frasi brevi e numeri veri ([elenco numeri verificati]).
+- TITOLI DI SEZIONE: [peso; mobile/desktop]; righe brevi, text-wrap: balance.
+- CORPO: 400, 17 px mobile / 18 px desktop, interlinea 1.6, massimo 60 caratteri per riga.
+- ETICHETTE: 500, 14 px, in minuscolo (vietato il maiuscolo spaziato). Nessun testo sotto 14 px.
+
+FOTOGRAFIE: SOLO foto reali dello studio, da inserire come segnaposto con questo formato esatto in <img src>: https://placehold.co/<L>x<A>/[FONDO]/[TESTO]?text=<nome> . Nessun'altra immagine. [Come entrano: a filo, senza cornici, angoli…]. Nessun testo sopra i volti.
+- [nome-file] ([proporzione], [LxA]): [cosa mostra, descritto a parole]
+- recensione-01 … recensione-0N (screenshot reali di recensioni Google, [LxA]).
+
+GRIGLIA E RITMO: desktop 12 colonne, margini 96 px, gutter 32 px; composizioni asimmetriche. Mobile margini 24 px. Ogni sezione con una composizione diversa.
+
+PULSANTE PRINCIPALE: pillola VERDE #72FA93, testo blu #002552 peso 600, altezza 56 px, a tutta larghezza su mobile. Testo: «[CTA]». Link secondario: «[consulto]».
+
+TESTI: usa ESATTAMENTE questi. Non inventare testi, dati, recensioni, promesse, prezzi barrati, scarsità o scadenze.
+
+1. APERTURA ([fondo]). Header: logo testuale MOBILITAS, a destra «Chiama». H1: «[…]» Sottotitolo: «[…]» Riga offerta: «[…]». Pulsante. Link consulto. Prova: «[…]».
+MOBILE 390×844: [composizione della prima schermata; il pulsante deve stare nella prima schermata]. DESKTOP: [composizione].
+
+2. [SEZIONE] ([fondo]). [Testi esatti e composizione.]
+
+[…]
+
+[N]. BARRA MOBILE: fissa in basso, [colori], a sinistra «[offerta]», a destra pillola verde «Prenota». Compare dopo il pulsante dell'apertura.

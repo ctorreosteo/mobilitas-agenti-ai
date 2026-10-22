@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Landing di prova</title>
+<!-- Pagina statica per i test degli script Playwright: la protezione di prova viene iniettata dal browser di test (non sta nella pagina);
+     popup con validazione, domande frequenti, barra mobile. Nessuna risorsa esterna. -->
+<style>
+  body { margin: 0; font: 17px/1.6 system-ui, sans-serif; color: #002552; background: #f4f4f4; }
+  .pm { padding: 24px; }
+  h1 { font-size: 40px; line-height: 1.1; margin: 0 0 16px; }
+  button, summary { min-height: 48px; font: inherit; }
+  :focus-visible { outline: 3px solid #002552; outline-offset: 3px; }
+  .cta { background: #72fa93; color: #002552; border: 0; border-radius: 999px; padding: 0 24px; font-weight: 600; }
+  .spazio { height: 1600px; }
+  dialog { border: 0; border-radius: 16px; padding: 24px; }
+  input { min-height: 48px; font: inherit; }
+  [role="alert"] { color: #b8232b; font-weight: 600; }
+  [data-barra-mobile] { position: fixed; inset: auto 0 0; padding: 12px 24px; background: #002552; color: #f4f4f4; display: flex; justify-content: space-between; align-items: center; transform: translateY(110%); visibility: hidden; }
+  [data-barra-mobile].on { transform: none; visibility: visible; }
+  [data-barra-mobile] .cta { min-height: 48px; }
+  @media (min-width: 1024px) { [data-barra-mobile] { display: none; } }
+</style>
+</head>
+<body>
+<main class="pm">
+  <h1>Landing di prova per i test</h1>
+  <p>Testo di prova a 17 px.</p>
+  <button type="button" class="cta" id="apri">Prenota la prima visita</button>
+  <div class="spazio"></div>
+  <details><summary>Quanto dura la prima visita?</summary><p>Risposta di prova.</p></details>
+  <div class="spazio"></div>
+</main>
+<div data-barra-mobile><span>Prima visita</span><button type="button" class="cta" id="apri2">Prenota</button></div>
+<dialog id="d" aria-labelledby="t">
+  <h2 id="t" tabindex="-1">Richiedi la prima visita</h2>
+  <form id="f" novalidate>
+    <label for="nome">Nome</label>
+    <input id="nome" name="nome" required>
+    <p id="err" role="alert" hidden></p>
+    <button type="submit">Invia (simulato)</button>
+  </form>
+</dialog>
+<script>
+  const d = document.getElementById('d');
+  const open = () => { document.getElementById('err').hidden = true; d.showModal(); document.getElementById('t').focus(); };
+  document.getElementById('apri').onclick = open;
+  document.getElementById('apri2').onclick = open;
+  document.getElementById('f').addEventListener('submit', e => {
+    e.preventDefault();
+    const err = document.getElementById('err');
+    if (!document.getElementById('nome').value.trim()) { err.textContent = 'Inserisci il tuo nome.'; err.hidden = false; document.getElementById('nome').setAttribute('aria-invalid', 'true'); }
+  });
+  const bar = document.querySelector('[data-barra-mobile]');
+  const hero = document.getElementById('apri');
+  new IntersectionObserver(([e]) => bar.classList.toggle('on', !e.isIntersecting && e.boundingClientRect.top < 0)).observe(hero);
+</script>
+</body>
+</html>

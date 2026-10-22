@@ -1,0 +1,63 @@
+{
+  "source": "https://www.hevahealth.com/",
+  "capture_caveats": ["A 1440x900 e a 390x844 (dopo ~4 s) un popup di raccolta email a tutto schermo copre la pagina: Taste non clicca, quindi le schermate desktop mostrano il popup. Misure dal DOM (extract.js legge tutta la pagina) e dalla schermata mobile presa prima del popup."],
+  "tokens": {
+    "spacing": { "scale": [4, 8, 12, 16, 24, 32, 40, 64, 90], "base_unit": 4 },
+    "typography": {
+      "families": ["PP Editorial New", "Inter"],
+      "scale": [
+        { "role": "hero", "size": "104px", "weight": "300", "family": "PP Editorial New", "tracking": "-2.08px" },
+        { "role": "display", "size": "72px", "weight": "300", "family": "PP Editorial New" },
+        { "role": "h3", "size": "30px", "weight": "400", "family": "PP Editorial New", "tracking": "-0.96px" },
+        { "role": "body", "size": "18px", "weight": "400", "family": "Inter", "line_height": "29.25px", "max_width": "576px" },
+        { "role": "ui", "size": "14px", "weight": "500", "family": "Inter" },
+        { "role": "label", "size": "11px", "weight": "500", "family": "Inter" }
+      ]
+    },
+    "colors": [
+      { "role": "background", "value": "#FDFDF1", "area": "44.5%" },
+      { "role": "background-alt", "value": "#E9EBDD", "area": "22.2%" },
+      { "role": "ink / dark surface", "value": "#39442B", "area": "8.3%" },
+      { "role": "text-secondary", "value": "#526343" },
+      { "role": "highlight (raro)", "value": "#FAFE86" }
+    ],
+    "radius": ["9999px (pulsanti, badge)", "30px", "16px", "12px"],
+    "shadows": ["0 … rgba(57,68,43,0.07) (ombra tinta oliva, quasi impercettibile)"],
+    "image_ratios": [
+      { "usage": "hero/sezioni (video a tutto schermo)", "ratio": "16:10 (1440x900)" },
+      { "usage": "feature", "ratio": "1.9:1 / 16:9" },
+      { "usage": "ritratti del team clinico", "ratio": "1:1" }
+    ],
+    "grid": { "max_width": "1168px (2 colonne da 584px)", "columns": 2, "gutter": "32px" }
+  },
+  "taste": [
+    {
+      "name": "Titolo sottile e grande, interfaccia piccola",
+      "trigger": "Quando devono comunicare autorevolezza medica senza il tono di un portale sanitario",
+      "decision": "Hanno scelto un serif editoriale a peso 300 a 104px per i titoli e Inter a 11–16px per tutto il resto, invece di un sans pesante unico",
+      "reason": "Un titolo leggero ma enorme si legge come una promessa calma; il contrasto di scala fa il lavoro che altrove fa il grassetto",
+      "evidence": ["h1 104px/300 tracking -2.08px", "Inter 707 elementi contro 40 in PP Editorial New", "dimensioni più frequenti 14px e 12px"]
+    },
+    {
+      "name": "Due colori, nessun accento acceso",
+      "trigger": "Quando hanno dovuto dare risalto a CTA e sezioni",
+      "decision": "Hanno usato solo panna e oliva scuro, alternando fondi (#FDFDF1 / #E9EBDD / #39442B), invece di un colore d'accento saturo",
+      "reason": "In un contesto clinico un accento squillante suona da promozione; l'inversione di fondo segnala l'importanza senza alzare la voce",
+      "evidence": ["panna 44.5% + panna scuro 22.2% della superficie", "oliva 8.3% come fondo e come testo principale", "giallo #FAFE86 solo 3 occorrenze"]
+    },
+    {
+      "name": "Il video al posto della foto",
+      "trigger": "Quando hanno dovuto mostrare il servizio (prelievo a domicilio, vita attiva)",
+      "decision": "Hanno usato video in loop, muti, a tutta finestra (5 a 1440x900) invece di fotografie statiche",
+      "reason": "Il movimento lento rende credibile un servizio che il visitatore non vede di persona",
+      "evidence": ["7 video autoplay muted loop", "poster 1920x1012 / 1920x1080", "nessuna libreria di animazione: solo transizioni CSS"]
+    },
+    {
+      "name": "Nessuna card con ombra (restrizione)",
+      "trigger": "Quando hanno raggruppato percorsi, team e passi",
+      "decision": "Hanno rinunciato alle card con ombra visibile, affidando i gruppi a fondi alternati e a pill 9999px",
+      "reason": "Superfici piatte e colore di fondo mantengono la pagina tranquilla anche con molti blocchi",
+      "evidence": ["extract.js: 0 card rilevate", "ombra unica rgba(57,68,43,0.07)", "raggio 9999px su 83 elementi"]
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "_istruzioni": "Copia in config/mobilitas.json (locale, non versionato) e compila. Percorsi relativi = dalla cartella dell'agente; ~ = cartella utente. Campo vuoto = non collegato. Questo file si modifica solo in fase di configurazione, mai durante il lavoro sulle landing.",
+
+  "sito": {
+    "cartella": "",
+    "cartella_pagine": "src/pages",
+    "file_routing": "src/App.jsx",
+    "cartella_public": "public",
+    "foglio_stile_globale": "src/index.css",
+    "componenti_condivisi": {
+      "header": "src/components/Header.jsx",
+      "footer": "src/components/Footer.jsx",
+      "prenotazione": "src/components/BookingPopup.jsx"
+    },
+    "file_da_non_modificare": [
+      "src/components/BookingPopup.jsx",
+      "vite.config.js",
+      "package.json",
+      "package-lock.json",
+      "index.html",
+      ".env",
+      ".env.*",
+      "deploy.sh",
+      "firebase.json",
+      ".firebaserc"
+    ]
+  },
+
+  "lavoro": {
+    "cartella": "~/Mobilitas_WebDesigner_Lavori",
+    "note": "Brief, bozze, screenshot e resoconti di ogni incarico (una sottocartella ciascuno) e, in .stato/, cache, log e credenziali Superdesign. Mai dentro la cartella dell'agente né dentro il sito."
+  },
+
+  "documentazione": {
+    "cartella": "",
+    "note": "Documentazione aziendale (servizi, offerte, regole di comunicazione sanitaria). Solo lettura."
+  },
+
+  "brand": {
+    "cartella": "",
+    "linee_guida": "",
+    "note": "Risorse del brand. Finché è vuoto valgono i valori in regole/direzione-estetica.md, da confermare."
+  },
+
+  "porte": {
+    "sviluppo": 5310,
+    "guardia": 8910,
+    "visore": 5390,
+    "guardia_riferimenti": 8990
+  },
+
+  "integrazioni": {
+    "superdesign": {
+      "abilitato": false,
+      "note": "Il login lo fa una persona (tools/superdesign/sd.sh login); credenziali in <lavoro>/.stato/superdesign. Ogni generazione richiede l'autorizzazione con il tetto di crediti."
+    }
+  },
+
+  "domini_protetti": [
+    "studiomobilitas.it",
+    "mobilitas-sito-web.web.app",
+    "mobilitas-sito-web.firebaseapp.com",
+    "backend-esempio.invalid",
+    "hooks.zapier.com"
+  ]
+}

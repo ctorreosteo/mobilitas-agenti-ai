@@ -1,0 +1,13 @@
+# Configurazione locale (percorsi di questa macchina)
+config/mobilitas.json
+
+# Dipendenze installate da tools/setup/installa.sh
+tools/playwright/node_modules/
+tools/superdesign/node_modules/
+
+.DS_Store
+
+# Eccezione mirata alla regola ".env.*" del .gitignore principale: file FITTIZIO del sito di prova,
+# richiesto dal manifesto e dal test 5d (file .env.* del sito sorvegliati come protetti). Non contiene segreti.
+# Tutti gli altri file .env restano esclusi.
+!test/fixture/sito-prova/.env.local

@@ -1,0 +1,6 @@
+{
+  "name": "sito-prova",
+  "private": true,
+  "description": "Sito finto per i test dell'agente: struttura minima di un progetto React/Vite, senza dipendenze installate.",
+  "scripts": { "dev": "vite", "deploy": "./deploy.sh" }
+}

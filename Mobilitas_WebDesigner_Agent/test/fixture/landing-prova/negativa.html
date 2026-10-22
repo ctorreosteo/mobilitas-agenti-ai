@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Prova negativa</title>
+<!-- Prova negativa: la pagina tenta di raggiungere il «canarino» locale (mai consentito) in tutti i modi.
+     Il test passa solo se il canarino non riceve NULLA. __CANARINO__ viene sostituito dal test con la porta. -->
+</head>
+<body>
+<h1>Prova negativa</h1>
+<button type="button">Prenota</button>
+<img src="http://127.0.0.1:__CANARINO__/immagine.png" alt="">
+<script>
+  fetch('http://127.0.0.1:__CANARINO__/fetch-get').catch(() => {});
+  fetch('http://127.0.0.1:__CANARINO__/fetch-post', { method: 'POST', body: 'x' }).catch(() => {});
+  try { navigator.sendBeacon('http://127.0.0.1:__CANARINO__/beacon', 'x'); } catch {}
+  try { const ws = new WebSocket('ws://127.0.0.1:__CANARINO__/ws'); ws.onerror = () => {}; } catch {}
+  const f = document.createElement('form'); f.method = 'POST'; f.action = 'http://127.0.0.1:__CANARINO__/form'; document.body.append(f); f.requestSubmit ? f.requestSubmit() : f.submit();
+</script>
+</body>
+</html>

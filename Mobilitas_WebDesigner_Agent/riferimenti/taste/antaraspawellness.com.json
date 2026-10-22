@@ -1,0 +1,62 @@
+{
+  "source": "https://antaraspawellness.com/",
+  "capture_caveats": ["Pagina con smooth scroll (Lenis) e animazioni GSAP legate allo scorrimento: in alcuni punti fino a 27 elementi di testo non ancora visibili al momento della schermata.", "Nessun pulsante <button> rilevato: le azioni sono link e blocchi cliccabili."],
+  "tokens": {
+    "spacing": { "scale": [12, 14.4, 21.6, 28.8, 80, 540], "base_unit": 7.2 },
+    "typography": {
+      "families": ["Fraunces", "Manrope"],
+      "scale": [
+        { "role": "parola gigante di sezione", "size": "165px", "weight": "100", "family": "Fraunces" },
+        { "role": "hero / wordmark", "size": "90px", "weight": "100", "family": "Fraunces", "note": "lettere distanziate 'A n t a r A'" },
+        { "role": "h2", "size": "75px", "weight": "100", "family": "Fraunces" },
+        { "role": "h4", "size": "52.5px", "weight": "100", "family": "Fraunces" },
+        { "role": "body", "size": "13.5px", "weight": "400", "family": "Manrope", "line_height": "18px" }
+      ]
+    },
+    "colors": [
+      { "role": "fondo terra (video con velatura)", "value": "#78694E", "area": "53.8%" },
+      { "role": "fondo oliva", "value": "#626548", "area": "22.5%" },
+      { "role": "fondo verde-nero", "value": "#162015", "area": "16.7%" },
+      { "role": "testo sabbia", "value": "#C5BEB1" },
+      { "role": "accento verde (arco)", "value": "#425E40" },
+      { "role": "accento terracotta (card)", "value": "#9A5E39" }
+    ],
+    "radius": ["565px 565px 0 0 (arco)", "90px", "61.5px", "45px", "50%"],
+    "shadows": ["rgba(0,0,0,0.02) 0 0 5px 5px (impercettibile)"],
+    "image_ratios": [
+      { "usage": "hero video a tutta larghezza", "ratio": "1.1:1 (1440x1313)" },
+      { "usage": "fotografie d'ambiente a tutta finestra", "ratio": "~16:10" }
+    ],
+    "grid": { "max_width": "none (1440px a tutta larghezza)", "columns": 4, "gutter": "35px" }
+  },
+  "taste": [
+    {
+      "name": "Peso 100 a scala monumentale",
+      "trigger": "Quando hanno dovuto esprimere quiete senza immagini di relax stereotipate",
+      "decision": "Hanno scelto Fraunces a peso 100 fino a 165px invece di titoli di media misura in grassetto",
+      "reason": "Una lettera enorme e sottilissima rallenta la lettura e comunica calma prima delle parole",
+      "evidence": ["132 elementi a peso 100", "dimensioni 165px (34) e 75px (76)", "wordmark a lettere distanziate"]
+    },
+    {
+      "name": "Il ritmo è lo scorrimento",
+      "trigger": "Quando hanno dovuto presentare un'offerta poco differenziata (trattamenti spa)",
+      "decision": "Hanno costruito la pagina come una sequenza di capitoli rivelati scorrendo (GSAP + Lenis), invece di un elenco di servizi",
+      "reason": "Il racconto trasforma una lista generica in un'esperienza; il visitatore entra nello spazio prima di valutare i prezzi",
+      "evidence": ["gsap e lenis presenti", "fino a 27 testi non ancora visibili durante lo scorrimento", "salto di 540px tra due sezioni", "trattamenti in un solo paragrafo"]
+    },
+    {
+      "name": "Forme che rompono la griglia",
+      "trigger": "Quando hanno dovuto evitare l'aspetto da template di spa",
+      "decision": "Hanno inserito un arco verde (raggio 565px) che emerge dal fondo e una card terracotta inclinata, invece di blocchi rettangolari allineati",
+      "reason": "Poche forme fuori asse rendono riconoscibile la pagina senza aggiungere contenuto",
+      "evidence": ["radius 565px 565px 0 0", "card 'Reach Us' ruotata", "accenti #425E40 e #9A5E39 sotto il 2% della superficie"]
+    },
+    {
+      "name": "Nessun pulsante classico (restrizione)",
+      "trigger": "Quando hanno dovuto chiedere il contatto",
+      "decision": "Hanno rinunciato a pulsanti pieni, usando parole giganti in corsivo dentro contorni a pillola ('WHATSAPP', 'CALL US')",
+      "reason": "L'azione diventa parte della tipografia invece di un elemento d'interfaccia estraneo",
+      "evidence": ["0 elementi <button> rilevati", "blocchi contatto a pillola a tutta metà larghezza", "testo 75px in corsivo"]
+    }
+  ]
+}

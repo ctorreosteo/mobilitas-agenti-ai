@@ -1,0 +1,8 @@
+{
+  "name": "superdesign-cli",
+  "private": true,
+  "description": "Superdesign CLI installato in locale per l'agente WebDesigner Mobilitas (versione bloccata dal package-lock: 0.14.0).",
+  "dependencies": {
+    "@superdesign/cli": "^0.14.0"
+  }
+}
