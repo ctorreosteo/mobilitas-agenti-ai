@@ -1,0 +1,29 @@
+{
+ "slug": "YT_TOFU_02-v2",
+ "sorgente": "sorgente.MOV",
+ "originale": "/Users/carlitos/mobilitas-agenti-ai/agente-video-editing/videos/YT_TOFU_02/YT_TOFU_02.MOV",
+ "creato": "2026-10-20T15:32:52",
+ "larghezza": 3840,
+ "altezza": 2160,
+ "rotazione": -180,
+ "fps": 59.94,
+ "fps_raw": "60000/1001",
+ "codec": "hevc",
+ "profilo": "Main 10",
+ "pix_fmt": "yuv420p10le",
+ "colore": "hlg",
+ "trc": "arib-std-b67",
+ "primarie": "bt2020",
+ "durata": 1184.37,
+ "audio": true,
+ "audio_canali": 2,
+ "peso_gb": 9.04,
+ "fondo_sala_db": -69.1,
+ "soglia_parlato_db": -47.1,
+ "lufs_sorgente": {
+  "I": -26.5,
+  "LRA": 8.1,
+  "TP": 0.8
+ },
+ "volti_multipli": 2
+}

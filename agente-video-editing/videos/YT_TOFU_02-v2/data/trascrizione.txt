@@ -1,0 +1,300 @@
+# un blocco di parlato per riga: [inizio-fine] (pausa prima) testo
+[    0.00-    1.44] ( 0.0) Buona notizia.
+[    7.92-    9.33] ( 2.1) - Molto bene. - Quanto?
+[    9.56-   11.50] ( 0.2) 3, 2, 1
+[   12.03-   13.46] ( 0.5) Toffo 2.
+[   14.21-   16.89] ( 0.8) Le tre del pomeriggio, sempre allo stesso punto.
+[   17.18-   18.42] ( 0.3) sono le tre meno dieci
+[   18.74-   21.49] ( 0.3) Sei alla scrivania da quando sei arrivato in ufficio.
+[   22.00-   24.60] ( 0.5) o da quando hai aperto il laptop a casa se lavori da remoto.
+[   25.24-   27.78] ( 0.6) La mattina è andata bene, anzi benissimo.
+[   28.04-   33.43] ( 0.3) hai chiuso due cose importanti prima di iniziare pranzo, eri lucido, le idee arrivavano in ordine,
+[   33.82-   36.39] ( 0.4) Scrivevi senza dover rileggere ogni frase tre volte.
+[   36.80-   38.07] ( 0.4) Adesso è diverso.
+[   38.37-   40.84] ( 0.3) stai fissando la stessa email da quattro minuti.
+[   41.17-   43.19] ( 0.3) L'hai letta, ma non l'hai capita davvero.
+[   43.58-   44.97] ( 0.4) torni in cima e ricominci.
+[   45.38-   49.25] ( 0.4) Le parole ci sono, le riconosci tutte, ma il significato non si compone.
+[   49.92-   53.11] ( 0.7) È come se qualcuno avesse abbassato il volume dentro la tua testa.
+[   53.76-   54.35] ( 0.6) pialzi.
+[   54.55-   57.65] ( 0.2) allunghi le braccia, fai due passi verso la macchinetta.
+[   59.15-   60.69] ( 1.5) Quarto caffè della giornata.
+[   60.90-   63.24] ( 0.2) o forse il quinto, hai smesso di contare.
+[   63.89-   66.71] ( 0.6) Lo bevi mentre scrolli il telefono per due minuti.
+[   67.01-   69.27] ( 0.3) perché in qualche modo quella pausa ti serve.
+[   71.49-   74.80] ( 2.2) Torni alla scrimania, convinto che adesso riparte.
+[   75.08-   76.77] ( 0.3) Per 20 minuti riparte davvero.
+[   76.97-   78.09] ( 0.2) poi rallenta di nuovo.
+[   79.40-   83.54] ( 1.3) Guardi l'orologio, sono le 4 meno un quarto, mancano ancora due ore e...
+[   84.97-   89.20] ( 1.4) Mancano ancora due ore e mezza alla fine della giornata e tu, dentro,
+[   89.42-   92.05] ( 0.2) sai già che da qui in poi è gestione del danno.
+[   92.65-   94.86] ( 0.6) non produzione, gestione del danno.
+[   97.24-   99.86] ( 2.4) Ti sei convinto che sia normale perché succede a tutti?
+[  100.58-  107.06] ( 0.7) O peggio, ti sei convinto che sia colpa tua, che dovresti essere più disciplinato, dormire di più, mangiare meglio.
+[  107.89-  112.62] ( 0.8) non è colpa tua e quello che ti sta succedendo non c'entra niente con la tua testa.
+[  121.98-  124.46] ( 0.5) Non sei pigro e non è il pranzo.
+[  124.78-  126.09] ( 0.3) so già cosa ti hanno detto
+[  126.31-  127.96] ( 0.2) per tanti anni, non ho sbagliato.
+[  131.46-  133.42] ( 2.1) Mi torna leggermente indietro.
+[  135.71-  138.89] ( 2.3) da non sei pigro non hai pranzo si va benissimo grazie
+[  140.32-  140.87] ( 1.4) Grazie.
+[  144.07-  146.42] ( 3.2) Non sei pigro e non hai il pranzo.
+[  146.90-  153.34] ( 0.5) So già cosa ti hanno raccontato per anni, che è il pranzo, perché hai mangiato troppo o hai mangiato la cosa sbagliata.
+[  153.64-  157.71] ( 0.3) che è la glicemia che si abbassa, che è la digestione che ruba energia al cervello.
+[  157.94-  165.16] ( 0.2) che è la mancanza di sonno della notte prima, che è lo stress accumulato, che è l'età che dovresti fare più attività fisica oppure ne fai troppo.
+[  165.37-  165.57] ( 0.2) qua
+[  169.33-  172.68] ( 3.8) Ti hanno detto tutte queste cose e probabilmente le hai provate quasi tutte.
+[  173.30-  179.93] ( 0.6) Hai saltato il pranzo per una settimana, hai provato un pranzo leggero a base di insalata, hai provato il digiuno intermittente,
+[  180.23-  183.09] ( 0.3) hai provato a mangiare proteine invece di carboidrati.
+[  184.01-  186.95] ( 0.9) Forse hai notato un piccolo miglioramento per qualche giorno.
+[  187.16-  193.31] ( 0.2) Poi sei tornato esattamente allo stesso punto, alla stessa ora, con la stessa nebbia in testa.
+[  197.30-  204.12] ( 4.0) Non sei pigro, non sei indisciplinato, non hai bisogno di un metodo di produttività migliore o un'altra app per concentrarti.
+[  205.37-  210.20] ( 1.2) hai fatto tutto quello che ti hanno detto di fare e non funziona per un motivo molto semplice.
+[  210.75-  213.29] ( 0.6) che hanno indicato il problema sbagliato fin dall'inizio.
+[  217.61-  221.86] ( 4.3) Il calo delle tre del pomeriggio non è metabolico, non è mentale.
+[  222.16-  223.62] ( 0.3) non è questione di volontà
+[  224.25-  234.21] ( 0.6) Quello che sto per dirti adesso ribalta completamente il modo in cui guarderai la tua giornata lavorativa e probabilmente il motivo per cui rendi sempre meno con il passare delle ore.
+[  243.89-  247.01] ( 6.3) Il calo dell'E3 è meccanico non metabolico
+[  247.32-  252.68] ( 0.3) Il tuo cervello consuma circa il 20% di tutto l'ossigeno che entra nel tuo corpo.
+[  253.25-  254.37] ( 0.6) È un dato preciso.
+[  254.77-  257.15] ( 0.4) pesa il 2% del tuo peso corporeo.
+[  257.37-  260.30] ( 0.2) ma si prende un quinto delle tue risorse respiratorie.
+[  260.63-  264.10] ( 0.3) è l'organo più affamato di ossigeno che hai di gran lunga.
+[  264.86-  268.49] ( 0.8) Questo significa una cosa molto semplice e molto sottovalutata.
+[  269.09-  271.75] ( 0.6) La tua lucidità non dipende da cosa pensi
+[  272.02-  273.62] ( 0.3) ma dipende da quanto respiri
+[  274.27-  276.56] ( 0.6) Se respiri bene, il cervello funziona.
+[  276.77-  279.04] ( 0.2) Se respiri male, il cervello si spegne.
+[  279.48-  280.44] ( 0.4) Non è un'opinione.
+[  280.69-  281.92] ( 0.2) è fisiologia di base.
+[  283.24-  286.69] ( 1.3) Adesso voglio che tu pensi alla tua postura in questo momento.
+[  287.18-  291.34] ( 0.5) Probabilmente sei seduto, hai le spalle leggermente proiettate in avanti.
+[  292.12-  295.29] ( 0.8) Probabilmente la testa è inclinata verso uno schermo.
+[  295.73-  298.46] ( 0.4) qualche centimetro davanti rispetto a dove dovrebbe essere.
+[  303.76-  309.06] ( 5.3) Probabilmente la zona lombare non sta toccando lo schienale e il tuo bacino è ruotato indietro.
+[  309.82-  316.69] ( 0.8) Probabilmente, anche se pensi di star seduto bene, sei in una versione di seduta che il tuo corpo ha imparato negli anni
+[  316.93-  319.48] ( 0.2) e che adesso considera la sua posizione neutra.
+[  321.79-  325.03] ( 2.3) Ecco cosa succede a quella postura ora dopo ora.
+[  325.36-  327.46] ( 0.3) le spalle in avanti si chiudono, la parte
+[  328.08-  329.66] ( 0.6) Ho sbagliato!
+[  332.28-  334.64] ( 1.8) sbagliato, sbagliato, sbagliato
+[  334.92-  337.15] ( 0.3) torna su un pochettino
+[  337.97-  338.56] ( 0.8) o
+[  338.77-  339.92] ( 0.2) Ok, ecco cosa succede.
+[  346.88-  350.16] ( 7.0) Ecco cosa succede a quella postura ora dopo ora.
+[  350.42-  353.61] ( 0.3) le spalle in avanti chiudono la parte alta del torace
+[  353.92-  359.72] ( 0.3) La testa proiettata in avanti comprime il tratto cervicale e tira le prime coste verso l'alto, bloccandole.
+[  360.31-  366.93] ( 0.6) La curva lombare si appiattisce, il bacino si sbilancia indietro e tutto il peso del busto si scarica sul diaframma.
+[  367.28-  369.34] ( 0.3) che invece di lavorare in espansione
+[  369.66-  372.13] ( 0.3) lavora schiacciato contro gli organi addominali.
+[  374.79-  378.21] ( 2.7) Il diaframma è il muscolo principale della respirazione.
+[  378.68-  382.86] ( 0.5) Quando è libero si abbassa di 3 o 4 centimetri ad ogni respiro.
+[  383.15-  388.55] ( 0.3) crea il vuoto della gabbia toracica e l'aria entra in profondità fino alle parti basse dei polmoni,
+[  388.85-  390.73] ( 0.3) che sono le più ricche di vasi sanguigni.
+[  390.94-  393.49] ( 0.2) e quindi è più efficiente nello scambio di ossigeno.
+[  396.85-  401.03] ( 3.4) Quando il diaframma è compresso da quattro o cinque ore di postura seduta
+[  401.36-  403.00] ( 0.3) smette di abbassarsi davvero.
+[  403.52-  405.83] ( 0.5) si muove di un centimetro, forse meno.
+[  406.30-  407.97] ( 0.5) la respirazione diventa alta
+[  408.19-  408.86] ( 0.2) toracica
+[  409.13-  409.70] ( 0.3) corta.
+[  410.47-  413.06] ( 0.8) Continua a respirare, bevi, sei vivo.
+[  413.28-  415.53] ( 0.2) ma riempi solo la parte alta dei polmoni.
+[  415.73-  416.92] ( 0.2) quella meno efficiente.
+[  417.36-  419.67] ( 0.4) stai ventilando, non stai ossigenando.
+[  421.17-  424.63] ( 1.5) studi sulla meccanica respiratoria nella postura seduta
+[  425.03-  426.16] ( 0.4) Non l'ho detto male.
+[  426.63-  433.32] ( 0.5) Aspetta aspetta, studi sulla meccanica respiratoria nella postura seduta prolungata mostrano cali della capacità funzionale.
+[  433.60-  436.86] ( 0.3) anche del 30 o 40% rispetto alla mattina.
+[  437.52-  441.47] ( 0.7) 30-40% di ossigeno in meno che arriva al sangue e quindi al cervello.
+[  441.80-  443.80] ( 0.3) che si prende il 20% di tutto.
+[  444.21-  450.05] ( 0.4) alle 3 del pomeriggio non sei stanco stai letteralmente respirando peggio di quando ti sei svegliato
+[  450.66-  452.04] ( 0.6) e nessuno te l'ha mai detto
+[  452.24-  458.43] ( 0.2) perché nessuno cerca davvero il problema dove succede davvero, nella tua gabbia toracica, non nel tuo pranzo.
+[  460.52-  464.51] ( 2.1) E qui c'è la cosa che rende tutto questo ancora più subdolo di quanto sembri.
+[  472.77-  479.12] ( 2.0) il caffè non risolve maschera adesso pensa onestamente al motivo per cui prendi il caffè
+[  479.47-  480.50] ( 0.4) Aaaaaah!
+[  482.60-  484.23] ( 0.6) No, ho sbagliato.
+[  485.65-  486.20] ( 0.7) Grazie.
+[  486.57-  487.31] ( 0.4) che ho posto
+[  496.74-  497.96] ( 3.4) e non credere a niente
+[  501.28-  502.18] ( 3.3) Coppia all'ora lì.
+[  504.24-  505.28] ( 2.1) meravigliosa meravigliosa
+[  508.13-  509.04] ( 2.4) No, davvero?
+[  512.29-  512.54] ( 3.2) no no
+[  513.50-  514.37] ( 1.0) Te lo faccio adesso.
+[  514.97-  515.51] ( 0.6) dalle nazioni
+[  515.84-  516.04] ( 0.3) niente
+[  516.57-  517.19] ( 0.5) Grazie.
+[  517.50-  519.73] ( 0.3) il caffè non risolve maschera
+[  519.95-  523.43] ( 0.2) Adesso pensa onestamente al motivo per cui prendi il caffè delle tre.
+[  524.10-  529.22] ( 0.7) Non lo prendi perché ti piace il sapore, non a quell'ora, non al quarto della giornata.
+[  529.60-  532.02] ( 0.4) Lo prendi perché funziona, almeno per un po'.
+[  532.85-  536.17] ( 0.8) E in effetti funziona, è verissimo, ti dà una spinta.
+[  536.40-  540.93] ( 0.2) Per 40 minuti, forse un'ora, ti senti di nuovo lucido, riparti, scrivi.
+[  541.19-  542.80] ( 0.3) Rispondi, ti concentri.
+[  543.44-  547.44] ( 0.6) Poi però succede una cosa che probabilmente hai notato e a cui non hai mai dato peso:
+[  548.02-  549.82] ( 0.6) Quando l'effetto del caffè finisce,
+[  550.04-  552.09] ( 0.2) non torni al livello di prima del caffè.
+[  552.37-  557.18] ( 0.3) Cadi più in basso, sei più stanco di prima, più nebbioso di prima, più irritabile di prima.
+[  557.91-  560.74] ( 0.7) C'è un motivo preciso e non è solo farmacologico.
+[  561.38-  566.90] ( 0.2) Il caffè è un eccitante del sistema nervoso simpatico, quello che ti tiene in modalità attivazione.
+[  567.12-  568.62] ( 0.2) attenzione e allerta.
+[  569.23-  573.62] ( 0.6) Quando attivi il simpatico, succede una cosa specifica al tuo modo di respirare,
+[  573.98-  576.03] ( 0.4) la respirazione diventa ancora più alta
+[  576.29-  578.76] ( 0.3) ancora più toracica, ancora più corta
+[  579.23-  580.72] ( 0.5) il diaframma si contrae di più.
+[  581.08-  583.12] ( 0.4) La gabbia toracica si chiude di più.
+[  583.57-  589.17] ( 0.5) ti senti sveglio per 40 minuti perché il sistema nervoso è stimolato chimicamente.
+[  589.58-  593.77] ( 0.4) ma intanto la tua meccanica respiratoria sta peggiorando ulteriormente.
+[  594.68-  601.42] ( 0.9) Quando l'effetto chimico passa, la meccanica peggiorata resta e tu cadi più in basso di dove eri partito.
+[  602.26-  605.81] ( 0.8) Il caffè delle tre non sta risolvendo il calo, lo sta scavando.
+[  607.05-  610.08] ( 1.2) In studio questa cosa la vediamo in modo molto chiaro.
+[  610.52-  611.76] ( 0.4) arriva qualcuno e dice:
+[  611.98-  615.53] ( 0.2) non riesco a concentrarmi nel pomeriggio, mi serve sempre più caffè
+[  615.73-  617.53] ( 0.2) e funziona sempre meno
+[  618.29-  619.56] ( 0.8) lo facciamo sdraiare
+[  619.91-  625.14] ( 0.4) Misuriamo l'escursione del diaframma osservando come si muove la gabbia toracica.
+[  626.55-  629.71] ( 1.4) in molte persone che fanno un lavoro sedentario da anni.
+[  629.96-  631.75] ( 0.2) l'escursione è ridotta di metà.
+[  633.62-  634.96] ( 1.9) letteralmente metà.
+[  635.35-  639.77] ( 0.4) e la persona non se ne accorge perché respira da così tanto tempo in quel modo
+[  640.12-  640.92] ( 0.4) Non ho sbagliato.
+[  642.36-  644.72] ( 1.4) Dai, avrei sciogliato.
+[  645.73-  647.09] ( 1.0) ahhhh
+[  654.93-  655.57] ( 7.8) Ok.
+[  656.89-  658.69] ( 1.3) parto da "e la persona non se ne accorge"
+[  659.74-  660.22] ( 1.0) Grazie a tutti.
+[  661.56-  662.01] ( 1.3) Grazie a tutti.
+[  662.63-  667.14] ( 0.6) e la persona non se ne accorge perché respira così da tanto tempo
+[  667.91-  670.59] ( 0.8) no, da così tanto tempo, scusami
+[  676.97-  677.43] ( 6.4) ok
+[  678.49-  679.57] ( 0.3) scusami
+[  679.94-  680.70] ( 0.4) Ma qui dove è?
+[  684.96-  685.51] ( 4.3) Grazie a tutti.
+[  685.86-  693.84] ( 0.4) e la persona non se ne accorge perché respira così da così tanto tempo che quel modo di respirare è diventato il suo normale.
+[  694.54-  702.05] ( 0.7) Si lavora 30 minuti sul rilascio del diaframma, sulla mobilità delle prime coste, sulla decompressione del tratto cervico dorsale.
+[  702.55-  706.56] ( 0.5) Quando la persona si rialza, la prima cosa che dice quasi sempre è la stessa:
+[  707.07-  712.16] ( 0.5) "Respiro diversamente" non dice "Respiro di più", dice "Respiro diversamente".
+[  712.57-  715.19] ( 0.4) Sente l'aria che arriva in punti dove non arrivava prima.
+[  716.06-  717.53] ( 0.9) quella stessa persona
+[  717.74-  720.64] ( 0.2) Due giorni dopo riporta che il calo dell'interesse è ridotto
+[  721.28-  724.41] ( 0.6) non perché abbia cambiato dieta, non perché abbia dormito di più,
+[  724.79-  728.38] ( 0.4) perché il suo corpo è tornato a portare l'ossigeno dove serve.
+[  731.24-  733.13] ( 2.9) E adesso la domanda che ti stai facendo è
+[  733.34-  734.64] ( 0.2) Quindi cosa si può fare?
+[  743.35-  746.34] ( 8.7) Il titolo è Postura accumulata non disciplina.
+[  747.29-  749.34] ( 0.9) Postura accumulata, non disciplina.
+[  749.57-  754.15] ( 0.2) Probabilmente ti aspetti che adesso ti dica di fare 5 respiri profondi ogni ora.
+[  754.47-  757.34] ( 0.3) o che ti danno una posizione di yoga per aprire il torace.
+[  757.70-  762.17] ( 0.4) o che ti consigli un timer che ti ricordi di alzarti ogni 50 minuti.
+[  762.72-  765.14] ( 0.6) Non te li darò e voglio spiegarti il perché.
+[  765.67-  767.84] ( 0.5) Non perché siano sbagliati in assoluto,
+[  768.06-  771.92] ( 0.2) Cinque respiri profondi sono meglio di zero respiri profondi, è ovvio.
+[  772.50-  777.70] ( 0.6) Ma se il problema è che il tuo diaframma è meccanicamente compresso da anni di postura seduta,
+[  778.01-  780.22] ( 0.3) cinque respiri profondi non lo decomprimono.
+[  781.03-  786.88] ( 0.8) È come prendere un elastico che è stato tirato per 10 anni e cercare di rilasciarlo per 10 secondi.
+[  787.42-  789.90] ( 0.5) Torna esattamente come prima nel momento in cui smette.
+[  790.13-  790.27] ( 0.2) di
+[  791.13-  792.26] ( 0.9) Il punto vero è:
+[  792.49-  796.59] ( 0.2) cambiare il modo in cui leggi quello che ti succede alle tre del pomeriggio.
+[  797.86-  800.99] ( 1.3) Devi smettere di pensarlo come un problema di energia.
+[  801.32-  804.08] ( 0.3) di motivazione, di disciplina o di dieta.
+[  804.52-  808.86] ( 0.4) devi iniziare a pensarlo come quello che è davvero un problema di postura.
+[  810.59-  811.78] ( 1.7) devi iniziare a pensare
+[  812.14-  819.28] ( 0.4) devi iniziare a pensarlo come quello che è davvero un problema di postura accumulata che si manifesta come problema cognitivo
+[  819.60-  821.89] ( 0.3) Affrontare il calo pomeriggio.
+[  822.28-  822.79] ( 0.4) Grazie a tutti.
+[  822.99-  826.85] ( 0.2) affrontare il calo pomeridiano in modo significativo
+[  827.13-  827.82] ( 0.3) Cercare stima.
+[  828.47-  828.64] ( 0.6) No.
+[  828.86-  829.37] ( 0.2) Aspetta.
+[  829.88-  830.86] ( 0.5) Grazie a tutti.
+[  831.23-  833.21] ( 0.4) Grazie.
+[  835.52-  836.22] ( 2.3) Il germeno, va bene.
+[  837.46-  839.18] ( 1.2) - No, non devi farlo. - No?
+[  840.61-  849.63] ( 0.7) Affrontare il calopo meridiano in modo sintomatico significa cercare stimolanti, caffè, zuccheri, pause forzate per la concentrazione.
+[  849.86-  853.09] ( 0.2) tutte cose che ti danno un picco e poi ti lasciano peggio di prima.
+[  853.63-  859.63] ( 0.5) Affrontarlo in modo sistemico significa lavorare sul corpo che ha smesso di portare ossigeno al cervello
+[  859.97-  863.49] ( 0.3) sulla gabbia toracica che si è chiusa, sul diaframma che non si muove più.
+[  863.77-  866.22] ( 0.3) sono due livelli completamente diversi
+[  866.52-  869.27] ( 0.3) e portano a due risultati completamente diversi.
+[  869.76-  874.36] ( 0.5) Il primo, nel migliore dei casi, ti compra 20 minuti di lucidità apparente.
+[  874.81-  880.72] ( 0.4) Il secondo, ti restituisce la capacità di lavorare 8 ore con la stessa testa che hai alle 9 del mattino.
+[  881.89-  886.17] ( 1.2) Quello che facciamo noi in studio è esattamente questo, lavoriamo sul secondo livello.
+[  886.48-  890.60] ( 0.3) Non lavoriamo sulla concentrazione perché non è un problema di concentrazione.
+[  890.84-  894.04] ( 0.2) lavoriamo sulla meccanica respiratoria che è collassata.
+[  896.35-  897.27] ( 1.0) Si par...
+[  898.30-  898.52] ( 1.0) no
+[  905.09-  906.55] ( 1.9) si parte dal diaframma
+[  906.87-  910.87] ( 0.3) perché è il punto in cui si scarica tutta la postura seduta della tua giornata.
+[  911.69-  914.58] ( 0.8) Si lavora sulla mobilità delle prime coste
+[  915.71-  918.67] ( 1.1) Si lavora sulla mobilità delle prime coste e dello sterno.
+[  918.95-  923.25] ( 0.3) perché è lì che la gabbia toracica si chiude e impedisce l'espansione completa.
+[  923.71-  930.54] ( 0.5) si rilascia il tratto cervico dorsale dove le tensioni del lavoro al computer si accumulano e contribuiscono a tirare le coste
+[  930.79-  934.97] ( 0.2) verso l'alto, bloccandole in posizioni di ispirazione costante.
+[  938.09-  940.16] ( 3.1) Non è un trattamento per la stanchezza,
+[  940.42-  945.90] ( 0.3) È un trattamento per restituire al tuo corpo la capacità di respirare bene anche quando sei seduto.
+[  946.33-  947.46] ( 0.4) una capacità che
+[  947.70-  948.60] ( 0.2) ascoltami bene.
+[  948.87-  953.31] ( 0.3) Non hai perso per sempre, l'avevi a vent'anni, ce l'hai ancora la mattina presto.
+[  954.33-  959.92] ( 1.0) L'hai persa nel corso della tua giornata, ora dopo ora, e si recupera con un lavoro mirato sul corpo.
+[  960.20-  961.35] ( 0.3) non con un caffè in più.
+[  964.33-  967.48] ( 3.0) Le persone che facciamo passare attraverso questo percorso
+[  967.74-  970.13] ( 0.3) quasi sempre raccontano la stessa cosa.
+[  970.69-  971.54] ( 0.6) non dicono
+[  971.75-  974.72] ( 0.2) lavoro di più dicono lavoro uguale
+[  974.92-  976.78] ( 0.2) ma sono meno distrutto la sera.
+[  977.52-  979.38] ( 0.7) si accorgono che il calo delle tre
+[  979.58-  980.06] ( 0.2) si è appiattito
+[  980.89-  983.23] ( 0.8) si accorgono che il calo delle tre si appiattisce
+[  983.43-  985.14] ( 0.2) che il quarto caffè non gli serve più.
+[  985.42-  991.63] ( 0.3) che alle sei e mezza quando chiudono il computer hanno ancora qualcosa di sé per la serata invece di essere già zombie.
+[  993.93-  997.78] ( 2.3) Il momento peggiore per occuparsene è quando il calopo meridiano è diventato
+[  998.04- 1000.91] ( 0.3) così abituale che hai smesso di considerarlo un problema.
+[ 1001.61- 1005.06] ( 0.7) perché a quel punto stai dando metà della tua giornata lavorativa
+[ 1005.34- 1008.64] ( 0.3) a una versione di te stesso che funziona al 50%.
+[ 1009.11- 1010.71] ( 0.5) e stai prendendo decisioni.
+[ 1010.97- 1011.77] ( 0.3) professionali.
+[ 1012.05- 1012.82] ( 0.3) personali
+[ 1013.20- 1015.84] ( 0.4) da quella versione lì.
+[ 1017.92- 1019.26] ( 2.1) e nemmeno te ne accorgi
+[ 1019.52- 1021.08] ( 0.3) perché ormai è il tuo nuovo normale.
+[ 1031.76- 1034.40] ( 9.4) il tuo cervello non si stanca, soffoca
+[ 1034.67- 1038.38] ( 0.3) Tienila stretta questa frase, perché è la cosa più importante di tutto il video.
+[ 1038.86- 1040.99] ( 0.5) il tuo cervello alle tre del pomeriggio
+[ 1041.30- 1042.64] ( 0.3) non si sta stancando.
+[ 1043.13- 1047.95] ( 0.5) Sta suppocando lentamente perché il tuo corpo ha smesso di portargli abbastanza ossigeno.
+[ 1049.31- 1052.44] ( 1.4) Non è un problema di testa, è un problema di gabbia toracica.
+[ 1053.17- 1056.07] ( 0.7) Tieni la vicina la prossima volta che ti alzi per il quarto caffè.
+[ 1057.76- 1061.01] ( 1.7) Nel prossimo video ti spiego una cosa ancora più sorprendente:
+[ 1061.38- 1063.24] ( 0.4) che è strettamente collegata a questa.
+[ 1064.07- 1066.45] ( 0.8) perché molte persone che soffrono di ansia
+[ 1066.74- 1069.23] ( 0.3) in realtà non hanno un problema di ansia.
+[ 1069.74- 1071.67] ( 0.5) hanno un problema di respirazione
+[ 1073.86- 1077.93] ( 2.2) Oh no, aspetta, è una frase troppo lunga, puoi tornare indietro, Brescia.
+[ 1079.16- 1079.30] ( 0.2) Grazie a tutti.
+[ 1079.98- 1082.31] ( 0.2) *sospiro*
+[ 1087.85- 1088.01] ( 3.2) ma
+[ 1088.23- 1092.33] ( 0.2) torna su torna su perché è troppo lungo il periodo no ancora di più
+[ 1093.22- 1096.30] ( 0.9) È lungo il periodo, non c'è un punto. Ok, nel prossimo video.
+[ 1098.33- 1099.43] ( 2.0) Quindi niente...
+[ 1101.18- 1101.76] ( 1.8) Grazie a tutti.
+[ 1102.48- 1107.81] ( 0.7) Nel prossimo video ti spiego una cosa ancora più sorprendente, che è strettamente collegata a questa:
+[ 1108.38- 1111.34] ( 0.6) perché molte persone che soffrono di ansia
+[ 1111.68- 1113.68] ( 0.3) in realtà non hanno un problema di ansia
+[ 1114.03- 1117.52] ( 0.3) hanno un problema di respirazione meccanicamente alterata
+[ 1117.78- 1120.51] ( 0.3) che il sistema nervoso interpreta come un pericolo.
+[ 1121.81- 1124.11] ( 1.3) È un meccanismo che pochissimi conoscono.
+[ 1124.40- 1129.24] ( 0.3) e che cambia completamente il modo in cui guardi gli stati di agitazione tuoi
+[ 1129.55- 1130.82] ( 0.3) o di chi ti sta vicino.
+[ 1131.55- 1135.58] ( 0.7) Iscriviti al canale se vuoi continuare a capire come funziona davvero il tuo corpo.
+[ 1136.15- 1137.50] ( 0.6) non per farci un favore.
+[ 1137.85- 1140.41] ( 0.3) per un motivo molto più egoista e molto più sensato.
+[ 1141.01- 1143.89] ( 0.6) Quello che pubblichiamo qui non lo trovi da nessuna parte.
+[ 1144.63- 1148.52] ( 0.7) non sono consigli generici di produttività copiati da internet.
+[ 1149.16- 1153.40] ( 0.6) è esattamente il modo in cui leggiamo il corpo ogni giorno in studio.
+[ 1153.71- 1161.43] ( 0.3) con centinaia di persone reali che hanno smesso di credere alla narrativa della pigrizia e hanno iniziato a guardare quello che succede davvero.
+[ 1172.59- 1174.89] (11.2) Mi sarebbe ben finito, c'è il conteggio parole.
+[ 1176.32- 1177.22] ( 1.4) Ehm...
+[ 1181.13- 1182.11] ( 3.9) Nice!

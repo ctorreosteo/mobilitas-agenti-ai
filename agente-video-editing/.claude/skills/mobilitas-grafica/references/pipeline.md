@@ -1,67 +1,51 @@
-# Pipeline grafica, comando per comando
+# Dalla regia al master, comando per comando
 
-Dal montato pulito al video con sottotitoli e infografiche impressi.
+Da dentro `agente-video-editing/`, con `regia.json` già scritto e `./mve audio <slug>` fatto:
 
 ```bash
-cd videos/<slug>
-
-# 1. audio del montato, normalizzato per il riconoscimento
-#    (assemblato dall'EDL con acrossfade, come il video)
-ffmpeg -i assets/audio-16k-mono.wav -/filter_complex data/afilter.txt \
-       -map '[aout]' -ar 16000 -ac 1 -c:a pcm_s16le -y assets/audio-cut-asr.wav
-
-# 2. trascrizione parola per parola, gia in tempo montato
-whisper-cli -m ~/.cache/hyperframes/whisper/models/ggml-large-v3.bin \
-  -f assets/audio-cut-asr.wav -l it -t 8 -mc 0 -dtw large.v3 -ml 1 -sow -np \
-  -oj -ojf -of data/words-cut
-
-# 3. piano: gruppi di sottotitolo, card, stacchi
-.venv/bin/python scripts/build_overlay.py
-
-# 4. lato delle card, misurato sui frame veri
-.venv/bin/python scripts/place_cards.py
-
-# 5. anteprima: GUARDALA prima del render lungo
-.venv/bin/python scripts/preview_overlay.py renders/<slug>_cut_clean.mp4 \
-  1.6 36.5 174.0 296.0 461.5 817.0
-
-# 6. render finale (livello grafico in pipe)
-PRESET=slow CRF=18 .venv/bin/python scripts/build_master.py \
-  renders/<slug>_FINAL_1080p.mp4 --overlay
-
-# 7. a corredo
-.venv/bin/python scripts/build_subs.py       # SRT
-.venv/bin/python scripts/build_chapters.py   # capitoli YouTube
+./mve grafica   <slug>     # piano: sottotitoli, card, titoli, enfasi (secondi)
+./mve inquadra  <slug>     # tagli di camera + lato delle card sul volto (secondi)
+./mve monta     <slug>     # montato pulito dal 4K, a pezzi (6-10 min; poi cache)
+./mve sagome    <slug>     # sagome per i titoli dietro (15 s)
+./mve anteprima <slug>     # GUARDA controlli/anteprima.jpg prima di andare avanti
+./mve suono     <slug>     # sound design + mix (20 s)
+./mve finale    <slug> --limite 40   # prova: solo i primi 40 s
+./mve finale    <slug>     # master (10-15 min)
+./mve qc        <slug>     # deve dire CONSEGNABILE
+./mve shorts    <slug>     # 1-2 min per short
+./mve miniature <slug>
+./mve consegna  <slug>
 ```
+
+`./mve anteprima <slug> 12.5 170.3` compone solo quei tempi (secondi del montato).
+
+## Cosa rifare quando cambia qualcosa
+
+| cambia | rifai |
+|---|---|
+| un taglio in regia | `edl`, `audio`, poi tutto il resto (i pezzi video uguali restano in cache) |
+| una card, un'enfasi, un capitolo | `grafica`, `inquadra`, `monta` (solo i pezzi cambiati), `sagome`, `anteprima`, `suono`, `finale` |
+| solo il testo di una card o una correzione | `grafica`, `inquadra`, `anteprima`, `finale` |
+| un'inquadratura sola | `monta --solo N`, `finale` |
+| uno short | `shorts --solo N` |
+
+`./mve stato <slug>` lo calcola guardando le date dei file.
 
 ## Il collo di bottiglia
 
-Il renderer disegna un RGBA 1920x1080 per frame e lo scrive su stdout: sono
-circa 8,3 MB a frame, 200 GB in tutto su 24.500 frame. Non tocca il disco, va
-in pipe, e regge perche:
+Il renderer disegna un RGBA 1920x1080 per frame (8,3 MB) e lo scrive su stdout. Regge perché:
 
-- gli sprite (card, stacchi, lockup, closing) si disegnano **una volta sola**;
-- le bande di sottotitolo si disegnano una volta **per parola attiva** e restano
-  in cache: fra un frame e l'altro cambia solo quale variante si incolla;
-- la dissolvenza si fa con una LUT sul canale alfa dello sprite, non ridisegnando.
+- gli sprite (card, stacchi, lockup, closing) si disegnano una volta;
+- le bande di sottotitolo si disegnano una volta per parola attiva e restano in cache;
+- la dissolvenza si fa con una LUT sul canale alfa, non ridisegnando;
+- i titoli dietro sono l'unico punto costoso (maschera numpy a tutto schermo): pochi secondi in tutto.
 
-Senza la cache delle bande il render non finisce in tempi utili.
+Il generatore muore con `BrokenPipeError` quando ffmpeg chiude la pipe (con `--limite`): è normale.
 
-## Prova rapida
+## Errori già visti
 
-`LIMIT_T=42` fa uscire solo i primi 42 secondi: serve a verificare il grafo dei
-filtri e l'allineamento senza aspettare il render intero. Il generatore muore
-con `BrokenPipeError` quando ffmpeg chiude la pipe — e normale, non un errore.
-
-## Errori gia visti
-
-- **La card finisce sul viso.** Il lato si misura, non si assume; e va misurato
-  nella finestra della card, perche nei primi secondi il soggetto si sporge.
-- **Il lockup e piu largo della fascia libera.** Il testo va mandato a capo
-  dentro `CARD_BOX[2]`, non lasciato scorrere.
-- **Ancoraggio che non si trova.** Normalizza gli accenti prima di confrontare
-  (`caffè` -> `caffe`), e usa una sequenza abbastanza specifica: `"il calo delle
-  tre"` compare quattro volte, `"meccanico non"` una sola.
-- **`overlay=shortest=1` taglia la coda.** La durata del piano deve essere quella
-  del montato (somma dei segmenti meno le dissolvenze), non quella dell'ultima
-  parola trascritta.
+- **Card sul viso.** Nella v1 il lato si stimava dall'occupazione dei pixel; ora si misura sul volto nel taglio d'uscita. Il riquadro della testa si allarga in proporzione al volto **mediano**, non all'unione dei campioni (che è larga perché lei si muove): con l'unione sei card su otto risultavano "sulla testa" senza esserlo.
+- **Eyebrow tagliato nel lockup.** Il lockup non può superare la fascia libera: se l'eyebrow non entra si stringe la spaziatura, poi il corpo.
+- **Ancoraggio che non si trova.** Il confronto ignora accenti e punteggiatura e tratta cifre e lettere come uguali ("otto" = "8"). Se manca ancora, whisper l'ha scritta diversa: cercala in `parole-montato.json`.
+- **Sottotitolo che resta sotto il titolo.** Un gruppo iniziato prima del titolo restava a schermo: ora il renderer spegne i sottotitoli per tutta la finestra del titolo.
+- **Titoli dietro illeggibili.** All'altezza del volto la testa mangia il centro delle parole: la posizione si cerca sulla sagoma, sulla parola peggiore.
