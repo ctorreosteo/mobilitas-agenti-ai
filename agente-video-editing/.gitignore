@@ -4,6 +4,9 @@
 __pycache__/
 *.py[cod]
 node_modules/
+.venv/
+**/.venv/
+.cache/
 
 # Raw footage and generated media are stored outside Git
 inbox/
@@ -19,3 +22,10 @@ videos/**/renders/
 videos/**/snapshots/
 videos/**/.thumbnails/
 videos/**/.waveform-cache/
+videos/**/controlli/*.jpg
+videos/**/controlli/*.png
+videos/**/controlli/*/
+videos/**/data/sagome/
+videos/**/shorts/
+videos/**/miniature/
+videos/**/sorgente.*

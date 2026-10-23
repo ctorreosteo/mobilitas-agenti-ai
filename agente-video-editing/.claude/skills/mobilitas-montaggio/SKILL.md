@@ -1,111 +1,92 @@
 ---
 name: mobilitas-montaggio
-description: Pipeline di montaggio dei video @Studio_Mobilitas — dal .MOV di camera al master 1080p. Copre conversione HLG->BT.709 senza zscale, rilevamento delle papere e delle riprese doppie, EDL, punti di taglio, audio a -14 LUFS e verifica. Usala per qualsiasi montaggio del canale, prima di toccare ffmpeg.
+description: Il motore di montaggio dei video @Studio_Mobilitas (./mve), dal .MOV di camera al montato pulito — colore HLG->BT.709 senza zscale, trascrizione a blocchi, i nove segnali del cacciatore di papere, EDL sulla griglia dei frame, punti di taglio sul fondo di sala, ascolto delle giunte, inquadrature dinamiche dal 4K con il volto di Apple Vision, audio a -14 LUFS. Usala per qualsiasi montaggio del canale, prima di toccare ffmpeg o il motore.
 ---
 
 # mobilitas-montaggio
 
-Il girato del canale arriva come ripresa unica: la presentatrice si ferma, si
-corregge a voce alta ("ho sbagliato", "torna su un pochettino") e rifa la
-battuta. Montare vuol dire soprattutto **trovare e togliere quei punti**, e la
-parte difficile e trovarli, non tagliarli.
+Il girato del canale arriva come ripresa unica: la presentatrice si ferma, si corregge a voce ("ho sbagliato", "torna su un pochettino") e rifà la battuta. Montare vuol dire soprattutto **trovare e togliere quei punti**, e la parte difficile è trovarli, non tagliarli.
 
-## Ordine di lavoro
+Tutto passa da `./mve <fase> <slug>`. Il codice sta in `motore/motore/`; un modulo per fase, con il perché scritto in testa al file.
 
-1. `ffprobe` sulla sorgente. Attese: 3840x2160 HEVC Main10 a 59.94, HLG BT.2020
-   con RPU Dolby Vision, `rotation: -180`, audio AAC registrato **molto basso**
-   (intorno a -29 LUFS con picchi gia in clipping).
-2. Estrai l'audio: `audio-16k-mono.wav` per l'analisi, `audio-48k.wav` per il
-   master, `audio-16k-asr.wav` normalizzato per il riconoscimento.
-3. Genera il LUT colore e l'intermedio 1080p (vedi sotto).
-4. Trascrivi, sonda le pause, costruisci l'EDL, verifica.
-5. Renderizza il master, poi verifica **sul file consegnato**.
+## Sorgente e colore (`init`, `prep`)
 
-## Colore: HLG BT.2020 -> SDR BT.709
+Attese dalla camera: 3840x2160 HEVC Main10 a 59.94, HLG BT.2020 con RPU Dolby Vision, `rotation: -180`, audio molto basso (−26/−29 LUFS con picchi oltre 0 dBFS). `init` collega il file (non lo sposta) e scrive `meta.json`; `prep` estrae tre audio (analisi, riconoscimento normalizzato a −20, master 48k/24 bit) e mappa i blocchi di parlato.
 
-`ffmpeg` di Homebrew **non ha `zscale` ne `libplacebo`**, e il filtro
-`colorspace` non conosce la curva `arib-std-b67`: con i filtri disponibili l'HLG
-non si linearizza. La conversione si precalcola come LUT 3D
-(`scripts/make_hlg_lut.py`): inverse-OETF HLG, OOTF con gamma di sistema 1.2,
-normalizzazione sul bianco di riferimento HLG 0.75, tone map Hable, matrice
-BT.2020 -> BT.709 con desaturazione dei fuori-gamut, OETF BT.1886.
-
-```
--vf "fps=30000/1001,scale=1920:1080:flags=lanczos,format=gbrp16le,
-     lut3d=file=assets/hlg2020-to-bt709.cube:interp=tetrahedral,format=yuv420p"
-```
-
-**I flag `-color_primaries`/`-color_trc` da soli non bastano**: i frame filtrati
-si portano dietro i metadati d'ingresso e il file esce ancora taggato
-`arib-std-b67`/`bt2020`. Serve `setparams=color_primaries=bt709:color_trc=bt709:colorspace=bt709`
-in coda alla catena. Controllalo sempre con `ffprobe` dopo il render.
+`ffmpeg` di Homebrew **non ha `zscale` né `libplacebo`** e `colorspace` non conosce l'HLG: la conversione è un LUT 3D precalcolato una volta sola (`motore/colore.py`, in `.cache/`). In coda alla catena serve `setparams=…bt709`: i flag `-color_*` da soli lasciano il file taggato `arib-std-b67`. Il QC lo controlla.
 
 Il 59.94 si decima 2:1 esatto con `fps=30000/1001`: nessun judder.
 
-## Trovare le papere
+## Trascrivere (`trascrivi`)
 
-**Whisper appiana le riprese doppie.** Su file intero, al posto della papera
-scrive una frase corretta che non e mai stata pronunciata: in YT_TOFU_02 lo ha
-fatto almeno tre volte, e una di quelle papere non compare in **nessuna**
-trascrizione lunga. Non fidarti mai di una trascrizione d'insieme per il
-montaggio.
+Tre trascrizioni, per tre usi:
 
-Il metodo che funziona e `scripts/gap_probe.sh`: per ogni pausa sopra 1,5 s
-trascrivi **separatamente** i 9 secondi prima e i 9 dopo. Due clip distinte:
-whisper non vede mai le due riprese insieme, quindi non puo fonderle. Il
-risultato si legge a colpo d'occhio — se il "DOPO" ricomincia con le stesse
-parole del "PRIMA", e una ripresa doppia.
+| file | come | serve a |
+|---|---|---|
+| `parole-sorgente.json` | intera, DTW | confronto (segnale "appianata") |
+| `parole-finestre.json` | finestre 26 s ogni 20 s | ripetizioni, regia |
+| `blocchi-testo.json` → `trascrizione.txt` | **ogni blocco di parlato da solo** | leggere, decidere, ancorare i tagli |
 
-Segnali collaterali utili: blocchi di parlato sotto 0,75 s isolati da oltre
-1,2 s di silenzio (la firma degli a-parte tipo "ok", "scusami"), n-grammi
-ripetuti entro 90 s, parole troncate con `...`.
+**Whisper appiana le riprese doppie** quando vede le due prese insieme: su file intero, e anche su finestre da 9-14 s, scrive una frase corretta mai pronunciata. Trascritto blocco per blocco (fra due pause misurate) non può farlo. I blocchi hanno inizio e fine misurati sull'inviluppo, quindi sono anche i punti a cui ancorare i tagli.
 
-Altro inciampo: al primo passaggio whisper puo degenerare in loop e lasciare
-meta video non trascritto. Si evita normalizzando l'audio prima
-(`loudnorm=I=-20`) e passando `-mc 0` per togliere il riporto di contesto.
+Flag che contano: `-mc 0` (senza, degenera in loop), `-dtw large.v3`, `-ml 1 -sow`. Su clip brevissime whisper scrive "Grazie." sui rumori: il motore li filtra.
 
-## Punti di taglio
+## Volti (`volti`)
 
-**Non tagliare sul confine del blocco di parlato.** Il confine cade dove
-l'energia scende sotto soglia, ma la coda della sillaba continua a scendere per
-altri 100-200 ms restando udibile: tagliare li tronca la parola. E successo, ed
-e la prima cosa che l'utente ha sentito.
+`motore/swift/visione.swift` (Apple Vision, compilato al primo uso) traccia il volto ogni 0,5 s: riquadro, qualità dello scatto, orientamento, apertura degli occhi. 20 minuti in 45 s. Serve a centrare le inquadrature, a mettere le card dalla parte libera e a scegliere le miniature.
 
-`scripts/cutpoints.py` cerca invece il primo istante in cui l'energia e tornata
-al **fondo di sala** (percentile 12 dell'inviluppo, +10 dB), su una finestra di
-5 ms con media mobile a 30 ms perche le occlusive lasciano micro-buchi dentro la
-parola.
+È anche il **controllo terzi**: un secondo volto che resta in scena per almeno 1,5 s è STOP. I campioni isolati (in YT_TOFU_02: le mani giunte, due volte) vengono elencati come avviso: guardali comunque.
 
-Dopo aver costruito l'EDL, `build_edl.py` stampa l'energia residua a ogni
-giunta: **deve stare sotto -55 dB**. Se una giunta sfora, il punto va spostato.
+## Trovare le papere (`papere`)
 
-Le giunte sono dissolvenze di 5 frame, non stacchi: la macchina e fissa e il
-soggetto si muove durante le pause, quindi lo stacco secco si legge come uno
-scatto. Nessun segmento sotto 1,4 s, o sarebbe quasi tutta dissolvenza.
+Nove segnali indipendenti (dettaglio in `references/papere.md`):
+
+1. sonda delle pause (PRIMA/DOPO trascritti da soli)
+2. parole di regia
+3. a-parte (blocco breve isolato)
+4. ripetizioni (4-grammi entro 90 s)
+5. appianamento (parole che solo le finestre hanno)
+6. copione (se c'è `copione.md`)
+7. **blocco contro blocco**: un blocco che ricomincia come uno dei due precedenti
+8. parola troncata e attacco monco ("Si par…" / "si parte")
+9. interiezione o coda spuria isolata ("no", "qua", un "di")
+
+Banco di prova: YT_TOFU_02, 13 papere trovate a mano nella v1 più 5 che la v1 aveva consegnato senza vederle. Il cacciatore v2 le trova **tutte e 18** in automatico; restano 3 falsi allarmi forti, tutti ripetizioni retoriche, che l'agente scarta leggendo.
+
+## Punti di taglio (`edl`)
+
+**Non si taglia sul confine del blocco**: la coda della sillaba scende per 100-200 ms restando udibile ("toracica" troncata nella v1). L'ancoraggio di regia si aggancia al confine di blocco più vicino, poi si cerca il primo istante a fondo di sala (+10 dB, inviluppo 5 ms con media a 30 ms) e infine il campione più silenzioso entro ±60 ms. Dentro una pausa ci può essere un colpo sul tavolo (−37 dB a 3:24 di YT_TOFU_02): la rifinitura lo evita.
+
+Ogni segmento si **quantizza sulla griglia dei frame**: inizio su un frame sorgente, durata in frame interi d'uscita. Audio e video durano uguale al campione e 46 giunte non accumulano deriva. Il QC controlla che i frame del file consegnato siano esattamente quelli dell'EDL.
+
+Energia residua a ogni giunta: oltre `fondo + 14 dB` è "da ascoltare", oltre `fondo + 24 dB` è "dentro una parola" e la fase si ferma.
+
+Ritmo: le pause sopra `pausa_max` si accorciano a `resta` (profili in `mobilitas-regia`).
+
+## Ascoltare le giunte (`audio`)
+
+`audio` monta solo la voce (catena sotto), la trascrive in tempo montato e ascolta ogni giunta **due volte**: 12 s attorno, e 4 s prima + 4 s dopo trascritti separatamente e confrontati (`riattacco`, ripetizioni, troncamenti). La finestra lunga da sola non basta: appiana. Esce `controlli/giunte.md`. Si fa **prima** del render video: un errore costa 2 minuti invece di 15.
+
+Le parole del montato (per i sottotitoli) si trascrivono a pezzi da 10 s costruiti dai blocchi della sorgente: il DTW su file intero perde la prima parola di molte frasi ("tuo cervello consuma"), e i blocchi ricalcolati sull'audio montato si spezzano sugli attacchi deboli perché lì il fondo di sala è 30 dB più alto.
 
 ## Audio
 
-Catena: passa-alto 75 Hz, `afftdn` a -10 dB, de-esser, compressione 2,5:1 a
--20 dB, `loudnorm=I=-14:TP=-1.5:LRA=9`, limiter di sicurezza. La sorgente sta a
--29 LUFS: alzarla di 15 dB alza anche il fondo, per questo la riduzione di
-rumore viene **prima** della normalizzazione.
+Catena voce (`audio.CATENA_VOCE`): passa-alto 75 Hz, `afftdn`, EQ (−1,5 dB a 220 Hz, +1,5 dB a 3,2 kHz), de-esser, compressione 2,5:1, `loudnorm=I=-14:TP=-1.5:LRA=9`, limiter. La riduzione di rumore viene **prima** della normalizzazione: alzare di 15 dB alza anche il fondo. Ogni segmento ha una dissolvenza di 10 ms ai bordi: su fondo di sala non si sente, e toglie i click.
 
-## Verifica (obbligatoria, sul file consegnato)
+Il mix finale (voce + sound design + musica opzionale) si riporta a −14 con un guadagno lineare, non con un secondo `loudnorm`, e un limiter a −2,2 dBFS di campione (il true peak sfora il campione di circa mezzo dB).
 
-- `scripts/check_cut_audio.sh` ritrascrive 14 s attorno a ogni giunta: ognuna
-  deve richiudersi in una frase intera e grammaticale.
-- `scripts/qc_junctions.py` monta i frame a ±0,5 s di ogni giunta in un contact
-  sheet: inquadratura, colore ed esposizione devono restare costanti.
-- `ffprobe` + `ebur128` sul master: durata, fps, tag colore, LUFS, true peak.
+## Inquadrature (`inquadra`, `monta`)
 
-## Politiche di produzione
+Dal 4K si ricavano tre tagli senza perdita: largo (1,0), medio (1,28), stretto (1,62), più varianti (1,12 / 1,42 / 1,80) per quando due pezzi forzati allo stesso taglio si toccano su una giunta. Ogni ritaglio è centrato sul volto mediano del pezzo. La grammatica è in testa a `inquadra.py`: cambio di taglio a ogni giunta, largo per card e apertura, largo per i titoli dietro, stretto sulle enfasi, altrimenti alternanza largo/medio circa ogni 9 s su una pausa fra due frasi.
 
-Decise una volta, non si richiedono a ogni video:
+**Lo stacco con cambio di taglio sostituisce la dissolvenza della v1.** Sulla macchina fissa la dissolvenza di 5 frame si leggeva come un salto morbido; lo stacco fra due tagli diversi non si vede.
 
-- **piena autonomia sui tagli**;
-- asset delle card generati in casa, niente stock a pagamento;
-- revisione solo sul video finale;
-- `inbox/video_prova2.mov` e un test tecnico, non un formato da pubblicare.
+`monta` renderizza ogni pezzo da solo dal 4K (videotoolbox in decodifica, crop, lanczos, LUT, x264 CRF 14), due alla volta, con cache sul contenuto, e li concatena senza ricodifica. 13 minuti in 6 minuti. `--solo 3,7` rifà solo quei pezzi. Esce anche `controlli/inquadrature.jpg`, un fotogramma per pezzo.
 
-L'unico stop assoluto e la presenza di **volti di terzi** nel girato. Su tutto
-il resto: decidi, procedi, e documenta nel BRIEF del video.
+## Verifica (sul file consegnato)
+
+`qc` controlla il master, non i dati: codec, tag colore, frame contro EDL, durata audio, loudness, true peak, frame neri, immagine ferma, card sul volto, sagome, copertura dei sottotitoli, e **riascolta tutte le giunte sul file finale** con sonde da 4 s. Esce `controlli/QC.md` con CONSEGNABILE o NON CONSEGNABILE.
+
+## Ambiente
+
+Cosa c'è e cosa manca su questa macchina: `references/ambiente.md`.

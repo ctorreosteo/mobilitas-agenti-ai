@@ -1,88 +1,69 @@
 ---
 name: mobilitas-grafica
-description: Come si costruiscono i sottotitoli karaoke e le infografiche impresse nei video @Studio_Mobilitas — pianificazione sul montato, renderer Pillow che scrive RGBA nella pipe di ffmpeg, ancoraggio delle card alle frasi. Usala quando un video deve uscire con sottotitoli o card a schermo.
+description: Come si producono grafica, suono e formati derivati dei video @Studio_Mobilitas — sottotitoli karaoke, card che sanno dov'è il volto, titoli che passano dietro la presentatrice (sagoma Apple Vision), sound design sintetizzato, Shorts 9:16 dal 4K, miniature scelte sulla qualità del volto. Renderer Pillow che scrive RGBA nella pipe di ffmpeg. Usala quando un video deve uscire con grafica, suoni, Shorts o miniature, o quando qualcosa di questo va corretto.
 ---
 
 # mobilitas-grafica
 
-I video del canale escono con **sottotitoli impressi** (karaoke, parola attiva
-in menta) e un pacchetto di infografiche: card dato, stacchi di capitolo,
-lockup d'apertura, chip identita, closing, barra di avanzamento.
-Lo stile lo detta `mobilitas-style`; qui c'e come si produce.
+Lo stile lo detta `mobilitas-style`; qui c'è come si produce. Le decisioni (quali card, quali titoli, quali Shorts) sono in `regia.json` (skill `mobilitas-regia`).
 
-## Perche non un compositore headless
+## Perché Pillow in pipe
 
-Questo `ffmpeg` non ha **ne `libass` ne `drawtext`**: il testo va comunque
-rasterizzato fuori. Un compositore a browser su 24.000 frame sarebbe lento e
-dipenderebbe dalla rete (GSAP da CDN al momento del render). Il livello grafico
-si genera quindi con Pillow e va **dritto nella pipe di ffmpeg** come RGBA
-grezzo, senza file intermedi e senza dipendenze esterne.
+Questo `ffmpeg` non ha **né `libass` né `drawtext`**: il testo va rasterizzato fuori. Un compositore a browser su 24.000 frame sarebbe lento e dipenderebbe dalla rete. Il livello grafico si genera con Pillow e va **dritto nella pipe di ffmpeg** come RGBA grezzo (`motore/grafica/render.py`). Regge perché gli sprite si disegnano una volta sola e ogni banda di sottotitolo una volta per parola attiva.
 
-```
-ffmpeg -i base.mp4 -f rawvideo -pix_fmt rgba -s 1920x1080 -r 30000/1001 -i - \
-       -filter_complex "[0:v][1:v]overlay=shortest=1[v]" ...
-```
+## Le fasi
 
-Serve un venv nel progetto: `python3 -m venv .venv && .venv/bin/pip install pillow numpy fonttools brotli`
-(il Python di sistema e protetto da PEP 668).
+| fase | cosa | esce |
+|---|---|---|
+| `grafica` | ancora ogni elemento a una frase del montato | `data/grafica.json` |
+| `inquadra` | sceglie il lato di card, apertura e chip **sul volto**, nel taglio in cui cadono | lati in `grafica.json` |
+| `sagome` | sagoma della persona (Vision) nei frame dei titoli dietro | `data/sagome/` |
+| `anteprima` | grafica sopra i frame veri del montato | `controlli/anteprima.jpg` |
+| `suono` | sound design e mix | `assets/mix-finale.wav` |
+| `finale` | montato + grafica in pipe + mix | `renders/<slug>_FINALE.mp4` |
+| `shorts`, `miniature` | formati derivati | `shorts/`, `miniature/` |
 
-## Le tre fasi
-
-1. **Trascrivi il montato, non la sorgente.** `whisper-cli -mc 0 -dtw large.v3 -ml 1 -sow`
-   sull'audio gia tagliato: i tempi escono direttamente in tempo montato e non
-   serve rimappare niente attraverso l'EDL. Rimappare a posteriori funziona ma
-   sbaglia sulle giunte, perche l'allineamento si smargina nelle pause.
-2. **Pianifica** con `scripts/build_overlay.py` -> `data/overlay.json`:
-   gruppi di sottotitolo, card, stacchi, apertura, chiusura.
-3. **Renderizza** con `scripts/render_overlay.py`, che espone una classe `Scene`
-   con `frame(t)`: la stessa usata sia dallo stream sia dall'anteprima.
+`grafica` riscrive `grafica.json` da capo: dopo `grafica` va sempre rifatto `inquadra` (`./mve stato` lo dice).
 
 ## Sottotitoli
 
-Gruppi da 2-3 parole, chiusi da: punteggiatura di fine frase, pausa oltre
-0,45 s, o 2,4 s di durata. Vengono circa 55 gruppi al minuto.
+Gruppi da 2-3 parole, chiusi da punteggiatura di fine frase, pausa oltre 0,45 s o 2,4 s di durata. La parola attiva è in menta con una barretta sotto. Si spengono durante i titoli e la chiusura (dicono le stesse parole).
 
-La parola attiva e in menta con una barretta menta sotto. **Ogni banda viene
-disegnata una volta per parola attiva e tenuta in cache**: da un frame all'altro
-cambia solo quale variante si incolla, quindi il costo per frame e una `paste`.
-Senza cache il render non sta in piedi.
+Le parole vengono da `parole-montato.json`, trascritto a pezzi da 10 s: la versione su file intero perdeva la prima parola di molte frasi (in YT_TOFU_02 143 parole su 2161). Il QC controlla che i sottotitoli coprano almeno il 99% delle parole.
 
-Correzioni di trascrizione: si correggono **solo i sottotitoli**, l'audio non si
-tocca. La lista sta in `FIXES` dentro `build_overlay.py` (refusi ricorrenti:
-"all'escrivania" -> "alla scrivania", "gambia" -> "gabbia", "calopo meridiano" ->
-"calo pomeridiano", "cosse" -> "coste").
+Le correzioni di trascrizione (`correzioni` in regia) toccano solo il testo, mai l'audio. Oltre all'impresso si consegna l'SRT (`consegna`).
 
-Oltre all'impresso si consegna sempre anche un **SRT a corredo**, che YouTube usa
-come traccia sottotitoli.
+## Card
 
-## Card dato
+Ancorate alla frase, 0,25 s prima, per 4,2 s. Una card che cadrebbe durante un titolo aspetta che esca. Il lato lo sceglie `inquadra`: proietta il riquadro della testa (volto di Vision + capelli) nel taglio in cui la card sta a schermo e prende il lato con più margine. Il margine minimo sta in `grafica.json` (`margine_volto`, in px) e il QC fallisce se una card tocca la testa.
 
-Si **ancorano alla frase**, non a un tempo scritto a mano: `build_overlay.py`
-cerca la sequenza di parole nella trascrizione e piazza la card 0,25 s prima.
-Cosi restano sincronizzate se il montaggio cambia. Se un ancoraggio non si
-trova lo script lo stampa: va corretto, non ignorato.
+## Titoli dietro
 
-Normalizza gli accenti prima di confrontare (`caffè` vs `caffe`), altrimenti gli
-ancoraggi falliscono in silenzio.
+Il capitolo si scrive a tutta larghezza e si ritaglia con la sagoma della persona: passa dietro di lei. Per costruzione non le copre mai il volto.
 
-Contenuto: eyebrow mono, numero grande in menta, unita in paper, glossa in
-muted. Il numero viene dalle sue parole ("il 20% dell'ossigeno", "3 o 4
-centimetri", "ridotta di meta").
+- Entra sulla parola d'ancoraggio, le righe salgono una dopo l'altra (0,45 s, 0,12 s di sfasamento), dura 2,6-4 s.
+- Lo sfondo dietro si scurisce (navy, alfa 120) per il contrasto della menta sul teal.
+- L'eyebrow sta **sopra** la persona, allineato alla prima riga: dietro la testa sparirebbe.
+- **La posizione si misura.** Le righe vanno all'altezza e allo spostamento orizzontale in cui la persona nasconde meno lettere della **parola peggiore** (non della media: "NON M▒▒BOLICO" non si legge anche con il 20% medio coperto). Il renderer stampa la percentuale per ogni titolo. Sopra il 30% conviene accorciare il titolo o cambiarlo.
+- Il taglio durante il titolo è **largo**: al medio la persona è più larga e nasconde un terzo in più.
+- Le sagome si calcolano sul montato pulito: se cambia l'inquadratura, vanno rifatte (`sagome`).
 
-**Il lato si misura, non si assume**: `scripts/place_cards.py` campiona i frame
-nella finestra della card e sceglie fra fascia sinistra e destra quella piu
-libera. Nei primi secondi il soggetto si sporge e sporca la fascia alta: quella
-finestra va sempre verificata a parte.
+## Stacchi pieni
 
-## Stacchi di capitolo
+Con `"dietro": false` il capitolo è una scheda piena navy di 1,75 s che entra 1,3 s prima della frase e cade sulla pausa. Resta per i video in cui la sagoma non si può usare (più persone, sfondo complicato).
 
-Scheda piena navy, 1,75 s, che entra 1,3 s **prima** della frase che annuncia:
-cade sulla pausa, poi si alza mentre lei dice la battuta. Uno ogni 2-3 minuti,
-mai di piu. Il titolo sono le sue parole ("MECCANICO, NON METABOLICO",
-"NON RISOLVE, MASCHERA").
+## Sound design (`suono`)
+
+Sintetizzato con numpy, niente stock: whoosh all'ingresso delle card (nel panorama dal lato della card), tick sul numero, salita + colpo basso sui titoli dietro, fruscio corto sui punch-in d'enfasi, colpo morbido su apertura e chiusura. Tutto 10-16 dB sotto la voce. Musica solo se c'è un file in `assets/musica/`: in loop a −30 LUFS, con sidechain sotto la voce.
+
+## Shorts
+
+Dalle `shorts` di regia. Ritaglio verticale dal 4K (1215x2160 a tutta altezza → 1080x1920 senza perdita), due tagli alternati (pieno e stretto 1,22) a ogni giunta e circa ogni 6 s, volto centrato. Hook in alto sotto i 260 px della barra di Shorts, barra di avanzamento sotto l'hook, sottotitoli da 84 px con base a y 1300 (sopra i ~420 px dell'interfaccia in basso), 1,6 s finali con "IL VIDEO COMPLETO È SUL CANALE". Audio dalla voce già montata, a −14 LUFS. Foglio di controllo: `controlli/short<N>.jpg`.
+
+## Miniature
+
+Tre varianti 1280x720 dai fotogrammi con la qualità del volto più alta per Vision, occhi aperti e viso frontale, a 20 s l'uno dall'altro. Soggetto a destra (taglio 1,45 dal 4K), pannello navy che sfuma a sinistra, due righe in Montserrat 900 (l'ultima in menta). `controlli/miniatura-piccola.png` è la miniatura a 168 px, come appare nella griglia di YouTube: va guardata.
 
 ## Verifica
 
-`scripts/preview_overlay.py` compone il livello sopra i frame veri e monta un
-contact sheet. Guardalo **prima** di lanciare il render lungo: gli errori di
-posizione (una card sul viso, un sottotitolo che esce dal safe) si vedono solo li.
+Guarda **sempre** `controlli/anteprima.jpg` prima del render finale: gli errori di posizione si vedono solo lì. Comandi passo per passo e tempi: `references/pipeline.md`.

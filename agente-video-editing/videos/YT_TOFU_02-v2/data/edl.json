@@ -1,0 +1,1012 @@
+{
+ "regia": "d37158fa694b",
+ "fps": 29.97002997002997,
+ "src_fps": 59.94005994005994,
+ "durata_sorgente": 1184.37,
+ "durata": 807.373233,
+ "frame": 24197,
+ "ritmo": {
+  "pausa_max": 0.85,
+  "resta": 0.45,
+  "nome": "medio"
+ },
+ "fondo_db": -69.2,
+ "limite_giunta_db": -55.2,
+ "limite_duro_db": -45.2,
+ "tagli": [
+  {
+   "in": 0.0,
+   "out": 14.17,
+   "motivo": "ciak: 'buona notizia', '3 2 1, tofu 2'",
+   "da": 0.0,
+   "a": 14.21
+  },
+  {
+   "in": 82.13,
+   "out": 84.945,
+   "motivo": "ripresa doppia 'mancano ancora due ore e...' (sfuggita alla v1)",
+   "da": 82.1,
+   "a": 84.97
+  },
+  {
+   "in": 112.84,
+   "out": 144.025,
+   "motivo": "prima ripresa di 'Non sei pigro e non e il pranzo' + 'ho sbagliato, torna leggermente indietro'",
+   "da": 112.62,
+   "a": 144.07
+  },
+  {
+   "in": 165.355,
+   "out": 169.3,
+   "motivo": "'qua' isolato dopo la frase (sfuggito alla v1)",
+   "da": 165.16,
+   "a": 169.33
+  },
+  {
+   "in": 234.335,
+   "out": 243.805,
+   "motivo": "falso attacco sottovoce prima di 'Il calo delle tre e meccanico'",
+   "da": 234.21,
+   "a": 243.89
+  },
+  {
+   "in": 319.685,
+   "out": 346.735,
+   "motivo": "falsa partenza 'Ecco cosa succede' + 'ho sbagliato, torna su un pochettino'",
+   "da": 319.48,
+   "a": 346.88
+  },
+  {
+   "in": 419.83,
+   "out": 427.55,
+   "motivo": "falsa partenza 'Studi sulla meccanica respiratoria' + 'l'ho detto male, aspetta aspetta'",
+   "da": 419.67,
+   "a": 427.53
+  },
+  {
+   "in": 474.975,
+   "out": 519.895,
+   "motivo": "'Adesso pensa...' interrotto, 'no ho sbagliato', regia e seconda lettura di 'il caffe non risolve, maschera'",
+   "da": 474.75,
+   "a": 519.95
+  },
+  {
+   "in": 635.24,
+   "out": 685.835,
+   "motivo": "papera lunga: 'no ho sbagliato / parto da / scusami' e due riprese incomplete",
+   "da": 634.96,
+   "a": 685.86
+  },
+  {
+   "in": 734.83,
+   "out": 747.28,
+   "motivo": "regia a voce 'il titolo e postura accumulata non disciplina'",
+   "da": 734.64,
+   "a": 747.29
+  },
+  {
+   "in": 790.075,
+   "out": 791.1,
+   "motivo": "'di' sospeso dopo la frase (sfuggito alla v1)",
+   "da": 789.9,
+   "a": 791.13
+  },
+  {
+   "in": 804.245,
+   "out": 812.115,
+   "motivo": "prima ripresa 'un problema di postura' + attacco monco 'devi iniziare a pensare' (il secondo sfuggito alla v1)",
+   "da": 804.08,
+   "a": 812.14
+  },
+  {
+   "in": 819.455,
+   "out": 840.485,
+   "motivo": "falsa partenza 'in modo significativo' (voleva dire sintomatico) + 'aspetta'",
+   "da": 819.28,
+   "a": 840.61
+  },
+  {
+   "in": 894.205,
+   "out": 905.0,
+   "motivo": "falso attacco 'Si par... no' (sfuggito alla v1)",
+   "da": 894.04,
+   "a": 905.09
+  },
+  {
+   "in": 911.105,
+   "out": 915.605,
+   "motivo": "prima ripresa incompleta 'si lavora sulla mobilita delle prime coste'",
+   "da": 910.87,
+   "a": 915.71
+  },
+  {
+   "in": 976.99,
+   "out": 980.82,
+   "motivo": "ripresa doppia 'si accorgono che il calo delle tre si e appiattito' (sfuggita alla v1)",
+   "da": 976.78,
+   "a": 980.89
+  },
+  {
+   "in": 1056.28,
+   "out": 1102.425,
+   "motivo": "'nel prossimo video' interrotto + regia 'torna su, e troppo lungo il periodo'",
+   "da": 1056.07,
+   "a": 1102.48
+  },
+  {
+   "in": 1166.19,
+   "out": 1184.37,
+   "motivo": "'mi sa che abbiamo finito, c'e il conteggio parole' + coda (si tengono 4,8 s di coda muta per la chiusura)",
+   "da": 1166.2,
+   "a": null
+  }
+ ],
+ "pause_accorciate": [
+  [
+   57.96,
+   59.02
+  ],
+  [
+   69.595,
+   71.35
+  ],
+  [
+   78.41,
+   79.275
+  ],
+  [
+   95.18,
+   97.115
+  ],
+  [
+   183.39,
+   183.88
+  ],
+  [
+   193.635,
+   197.175
+  ],
+  [
+   204.3,
+   205.245
+  ],
+  [
+   213.595,
+   217.46
+  ],
+  [
+   282.235,
+   282.995
+  ],
+  [
+   298.785,
+   303.475
+  ],
+  [
+   372.42,
+   374.555
+  ],
+  [
+   393.815,
+   396.725
+  ],
+  [
+   458.725,
+   460.24
+  ],
+  [
+   464.83,
+   470.45
+  ],
+  [
+   594.03,
+   594.555
+  ],
+  [
+   606.135,
+   606.83
+  ],
+  [
+   625.465,
+   626.265
+  ],
+  [
+   632.045,
+   633.37
+  ],
+  [
+   715.51,
+   715.93
+  ],
+  [
+   728.705,
+   731.115
+  ],
+  [
+   796.915,
+   797.575
+  ],
+  [
+   880.985,
+   881.745
+  ],
+  [
+   935.285,
+   937.965
+  ],
+  [
+   953.635,
+   954.205
+  ],
+  [
+   961.665,
+   964.07
+  ],
+  [
+   991.955,
+   993.705
+  ],
+  [
+   1016.165,
+   1017.65
+  ],
+  [
+   1022.705,
+   1031.59
+  ],
+  [
+   1048.275,
+   1049.165
+  ],
+  [
+   1120.805,
+   1121.67
+  ]
+ ],
+ "segmenti": [
+  {
+   "in": 14.16415,
+   "out": 57.974583,
+   "n": 1313,
+   "edit_in": 0.0
+  },
+  {
+   "in": 59.025633,
+   "out": 69.602867,
+   "n": 317,
+   "edit_in": 43.810433
+  },
+  {
+   "in": 71.354617,
+   "out": 78.394983,
+   "n": 211,
+   "edit_in": 54.387667
+  },
+  {
+   "in": 79.2792,
+   "out": 82.115367,
+   "n": 85,
+   "edit_in": 61.428033
+  },
+  {
+   "in": 84.951533,
+   "out": 95.1951,
+   "n": 307,
+   "edit_in": 64.2642
+  },
+  {
+   "in": 97.113683,
+   "out": 112.829383,
+   "n": 471,
+   "edit_in": 74.507767
+  },
+  {
+   "in": 144.027217,
+   "out": 165.348517,
+   "n": 639,
+   "edit_in": 90.223467
+  },
+  {
+   "in": 169.302467,
+   "out": 183.3832,
+   "n": 422,
+   "edit_in": 111.544767
+  },
+  {
+   "in": 183.8837,
+   "out": 193.626767,
+   "n": 292,
+   "edit_in": 125.6255
+  },
+  {
+   "in": 197.180317,
+   "out": 204.287417,
+   "n": 213,
+   "edit_in": 135.368567
+  },
+  {
+   "in": 205.238367,
+   "out": 213.580033,
+   "n": 250,
+   "edit_in": 142.475667
+  },
+  {
+   "in": 217.46725,
+   "out": 234.350783,
+   "n": 506,
+   "edit_in": 150.817333
+  },
+  {
+   "in": 243.810233,
+   "out": 282.248633,
+   "n": 1152,
+   "edit_in": 167.700867
+  },
+  {
+   "in": 282.999383,
+   "out": 298.781817,
+   "n": 473,
+   "edit_in": 206.139267
+  },
+  {
+   "in": 303.469833,
+   "out": 319.686033,
+   "n": 486,
+   "edit_in": 221.9217
+  },
+  {
+   "in": 346.729717,
+   "out": 372.42205,
+   "n": 770,
+   "edit_in": 238.1379
+  },
+  {
+   "in": 374.557517,
+   "out": 393.810083,
+   "n": 577,
+   "edit_in": 263.830233
+  },
+  {
+   "in": 396.729667,
+   "out": 419.8194,
+   "n": 692,
+   "edit_in": 283.0828
+  },
+  {
+   "in": 427.543783,
+   "out": 458.741617,
+   "n": 935,
+   "edit_in": 306.172533
+  },
+  {
+   "in": 460.243117,
+   "out": 464.81435,
+   "n": 137,
+   "edit_in": 337.370367
+  },
+  {
+   "in": 470.453317,
+   "out": 474.991183,
+   "n": 136,
+   "edit_in": 341.9416
+  },
+  {
+   "in": 519.902717,
+   "out": 594.04345,
+   "n": 2222,
+   "edit_in": 346.479467
+  },
+  {
+   "in": 594.560633,
+   "out": 606.138867,
+   "n": 347,
+   "edit_in": 420.6202
+  },
+  {
+   "in": 606.822883,
+   "out": 625.47485,
+   "n": 559,
+   "edit_in": 432.198433
+  },
+  {
+   "in": 626.258967,
+   "out": 632.0314,
+   "n": 173,
+   "edit_in": 450.8504
+  },
+  {
+   "in": 633.366067,
+   "out": 635.2346,
+   "n": 56,
+   "edit_in": 456.622833
+  },
+  {
+   "in": 685.83515,
+   "out": 715.498117,
+   "n": 889,
+   "edit_in": 458.491367
+  },
+  {
+   "in": 715.931883,
+   "out": 728.711317,
+   "n": 383,
+   "edit_in": 488.154333
+  },
+  {
+   "in": 731.113717,
+   "out": 734.817417,
+   "n": 111,
+   "edit_in": 500.933767
+  },
+  {
+   "in": 747.279867,
+   "out": 790.0893,
+   "n": 1283,
+   "edit_in": 504.637467
+  },
+  {
+   "in": 791.106983,
+   "out": 796.912783,
+   "n": 174,
+   "edit_in": 547.4469
+  },
+  {
+   "in": 797.580117,
+   "out": 804.25345,
+   "n": 200,
+   "edit_in": 553.2527
+  },
+  {
+   "in": 812.1113,
+   "out": 819.451967,
+   "n": 220,
+   "edit_in": 559.926033
+  },
+  {
+   "in": 840.48965,
+   "out": 880.996783,
+   "n": 1214,
+   "edit_in": 567.2667
+  },
+  {
+   "in": 881.747533,
+   "out": 894.1933,
+   "n": 373,
+   "edit_in": 607.773833
+  },
+  {
+   "in": 905.0041,
+   "out": 911.1102,
+   "n": 183,
+   "edit_in": 620.2196
+  },
+  {
+   "in": 915.598017,
+   "out": 935.28435,
+   "n": 590,
+   "edit_in": 626.3257
+  },
+  {
+   "in": 937.970367,
+   "out": 953.619333,
+   "n": 469,
+   "edit_in": 646.012033
+  },
+  {
+   "in": 954.20325,
+   "out": 961.677383,
+   "n": 224,
+   "edit_in": 661.661
+  },
+  {
+   "in": 964.0631,
+   "out": 976.976,
+   "n": 387,
+   "edit_in": 669.135133
+  },
+  {
+   "in": 980.813167,
+   "out": 991.957633,
+   "n": 334,
+   "edit_in": 682.048033
+  },
+  {
+   "in": 993.709383,
+   "out": 1016.16515,
+   "n": 673,
+   "edit_in": 693.1925
+  },
+  {
+   "in": 1017.649967,
+   "out": 1022.688333,
+   "n": 151,
+   "edit_in": 715.648267
+  },
+  {
+   "in": 1031.597233,
+   "out": 1048.280567,
+   "n": 500,
+   "edit_in": 720.686633
+  },
+  {
+   "in": 1049.164783,
+   "out": 1056.271883,
+   "n": 213,
+   "edit_in": 737.369967
+  },
+  {
+   "in": 1102.417983,
+   "out": 1120.803017,
+   "n": 551,
+   "edit_in": 744.477067
+  },
+  {
+   "in": 1121.67055,
+   "out": 1166.181683,
+   "n": 1334,
+   "edit_in": 762.8621
+  }
+ ],
+ "giunte": [
+  {
+   "i": 1,
+   "t": 43.81,
+   "src_out": 57.974583,
+   "src_in": 59.025633,
+   "db_out": -68.9,
+   "db_in": -68.3,
+   "tipo": "pausa",
+   "motivo": ""
+  },
+  {
+   "i": 2,
+   "t": 54.388,
+   "src_out": 69.602867,
+   "src_in": 71.354617,
+   "db_out": -68.6,
+   "db_in": -75.4,
+   "tipo": "pausa",
+   "motivo": ""
+  },
+  {
+   "i": 3,
+   "t": 61.428,
+   "src_out": 78.394983,
+   "src_in": 79.2792,
+   "db_out": -67.7,
+   "db_in": -74.3,
+   "tipo": "pausa",
+   "motivo": ""
+  },
+  {
+   "i": 4,
+   "t": 64.264,
+   "src_out": 82.115367,
+   "src_in": 84.951533,
+   "db_out": -56.8,
+   "db_in": -63.9,
+   "tipo": "taglio",
+   "motivo": "ripresa doppia 'mancano ancora due ore e...' (sfuggita alla v1)"
+  },
+  {
+   "i": 5,
+   "t": 74.508,
+   "src_out": 95.1951,
+   "src_in": 97.113683,
+   "db_out": -74.4,
+   "db_in": -62.0,
+   "tipo": "pausa",
+   "motivo": ""
+  },
+  {
+   "i": 6,
+   "t": 90.223,
+   "src_out": 112.829383,
+   "src_in": 144.027217,
+   "db_out": -67.3,
+   "db_in": -65.9,
+   "tipo": "taglio",
+   "motivo": "prima ripresa di 'Non sei pigro e non e il pranzo' + 'ho sbagliato, torna leggermente indietro'"
+  },
+  {
+   "i": 7,
+   "t": 111.545,
+   "src_out": 165.348517,
+   "src_in": 169.302467,
+   "db_out": -62.0,
+   "db_in": -67.7,
+   "tipo": "taglio",
+   "motivo": "'qua' isolato dopo la frase (sfuggito alla v1)"
+  },
+  {
+   "i": 8,
+   "t": 125.626,
+   "src_out": 183.3832,
+   "src_in": 183.8837,
+   "db_out": -68.0,
+   "db_in": -74.7,
+   "tipo": "pausa",
+   "motivo": ""
+  },
+  {
+   "i": 9,
+   "t": 135.369,
+   "src_out": 193.626767,
+   "src_in": 197.180317,
+   "db_out": -71.5,
+   "db_in": -73.3,
+   "tipo": "pausa",
+   "motivo": ""
+  },
+  {
+   "i": 10,
+   "t": 142.476,
+   "src_out": 204.287417,
+   "src_in": 205.238367,
+   "db_out": -60.5,
+   "db_in": -66.2,
+   "tipo": "pausa",
+   "motivo": ""
+  },
+  {
+   "i": 11,
+   "t": 150.817,
+   "src_out": 213.580033,
+   "src_in": 217.46725,
+   "db_out": -62.3,
+   "db_in": -69.8,
+   "tipo": "pausa",
+   "motivo": ""
+  },
+  {
+   "i": 12,
+   "t": 167.701,
+   "src_out": 234.350783,
+   "src_in": 243.810233,
+   "db_out": -61.7,
+   "db_in": -72.3,
+   "tipo": "taglio",
+   "motivo": "falso attacco sottovoce prima di 'Il calo delle tre e meccanico'"
+  },
+  {
+   "i": 13,
+   "t": 206.139,
+   "src_out": 282.248633,
+   "src_in": 282.999383,
+   "db_out": -68.0,
+   "db_in": -76.0,
+   "tipo": "pausa",
+   "motivo": ""
+  },
+  {
+   "i": 14,
+   "t": 221.922,
+   "src_out": 298.781817,
+   "src_in": 303.469833,
+   "db_out": -68.5,
+   "db_in": -60.8,
+   "tipo": "pausa",
+   "motivo": ""
+  },
+  {
+   "i": 15,
+   "t": 238.138,
+   "src_out": 319.686033,
+   "src_in": 346.729717,
+   "db_out": -64.5,
+   "db_in": -58.9,
+   "tipo": "taglio",
+   "motivo": "falsa partenza 'Ecco cosa succede' + 'ho sbagliato, torna su un pochettino'"
+  },
+  {
+   "i": 16,
+   "t": 263.83,
+   "src_out": 372.42205,
+   "src_in": 374.557517,
+   "db_out": -68.8,
+   "db_in": -66.0,
+   "tipo": "pausa",
+   "motivo": ""
+  },
+  {
+   "i": 17,
+   "t": 283.083,
+   "src_out": 393.810083,
+   "src_in": 396.729667,
+   "db_out": -70.2,
+   "db_in": -71.2,
+   "tipo": "pausa",
+   "motivo": ""
+  },
+  {
+   "i": 18,
+   "t": 306.173,
+   "src_out": 419.8194,
+   "src_in": 427.543783,
+   "db_out": -62.7,
+   "db_in": -52.7,
+   "tipo": "taglio",
+   "motivo": "falsa partenza 'Studi sulla meccanica respiratoria' + 'l'ho detto male, aspetta aspetta'"
+  },
+  {
+   "i": 19,
+   "t": 337.37,
+   "src_out": 458.741617,
+   "src_in": 460.243117,
+   "db_out": -69.1,
+   "db_in": -80.9,
+   "tipo": "pausa",
+   "motivo": ""
+  },
+  {
+   "i": 20,
+   "t": 341.942,
+   "src_out": 464.81435,
+   "src_in": 470.453317,
+   "db_out": -68.2,
+   "db_in": -60.4,
+   "tipo": "pausa",
+   "motivo": ""
+  },
+  {
+   "i": 21,
+   "t": 346.479,
+   "src_out": 474.991183,
+   "src_in": 519.902717,
+   "db_out": -66.5,
+   "db_in": -63.2,
+   "tipo": "taglio",
+   "motivo": "'Adesso pensa...' interrotto, 'no ho sbagliato', regia e seconda lettura di 'il caffe non risolve, maschera'"
+  },
+  {
+   "i": 22,
+   "t": 420.62,
+   "src_out": 594.04345,
+   "src_in": 594.560633,
+   "db_out": -65.9,
+   "db_in": -79.8,
+   "tipo": "pausa",
+   "motivo": ""
+  },
+  {
+   "i": 23,
+   "t": 432.198,
+   "src_out": 606.138867,
+   "src_in": 606.822883,
+   "db_out": -72.8,
+   "db_in": -77.5,
+   "tipo": "pausa",
+   "motivo": ""
+  },
+  {
+   "i": 24,
+   "t": 450.85,
+   "src_out": 625.47485,
+   "src_in": 626.258967,
+   "db_out": -69.1,
+   "db_in": -80.5,
+   "tipo": "pausa",
+   "motivo": ""
+  },
+  {
+   "i": 25,
+   "t": 456.623,
+   "src_out": 632.0314,
+   "src_in": 633.366067,
+   "db_out": -65.2,
+   "db_in": -72.2,
+   "tipo": "pausa",
+   "motivo": ""
+  },
+  {
+   "i": 26,
+   "t": 458.491,
+   "src_out": 635.2346,
+   "src_in": 685.83515,
+   "db_out": -65.9,
+   "db_in": -65.8,
+   "tipo": "taglio",
+   "motivo": "papera lunga: 'no ho sbagliato / parto da / scusami' e due riprese incomplete"
+  },
+  {
+   "i": 27,
+   "t": 488.154,
+   "src_out": 715.498117,
+   "src_in": 715.931883,
+   "db_out": -68.5,
+   "db_in": -80.5,
+   "tipo": "pausa",
+   "motivo": ""
+  },
+  {
+   "i": 28,
+   "t": 500.934,
+   "src_out": 728.711317,
+   "src_in": 731.113717,
+   "db_out": -72.3,
+   "db_in": -65.2,
+   "tipo": "pausa",
+   "motivo": ""
+  },
+  {
+   "i": 29,
+   "t": 504.637,
+   "src_out": 734.817417,
+   "src_in": 747.279867,
+   "db_out": -66.8,
+   "db_in": -61.9,
+   "tipo": "taglio",
+   "motivo": "regia a voce 'il titolo e postura accumulata non disciplina'"
+  },
+  {
+   "i": 30,
+   "t": 547.447,
+   "src_out": 790.0893,
+   "src_in": 791.106983,
+   "db_out": -65.4,
+   "db_in": -69.0,
+   "tipo": "taglio",
+   "motivo": "'di' sospeso dopo la frase (sfuggito alla v1)"
+  },
+  {
+   "i": 31,
+   "t": 553.253,
+   "src_out": 796.912783,
+   "src_in": 797.580117,
+   "db_out": -69.9,
+   "db_in": -77.1,
+   "tipo": "pausa",
+   "motivo": ""
+  },
+  {
+   "i": 32,
+   "t": 559.926,
+   "src_out": 804.25345,
+   "src_in": 812.1113,
+   "db_out": -63.8,
+   "db_in": -66.7,
+   "tipo": "taglio",
+   "motivo": "prima ripresa 'un problema di postura' + attacco monco 'devi iniziare a pensare' (il secondo sfuggito alla v1)"
+  },
+  {
+   "i": 33,
+   "t": 567.267,
+   "src_out": 819.451967,
+   "src_in": 840.48965,
+   "db_out": -62.7,
+   "db_in": -67.8,
+   "tipo": "taglio",
+   "motivo": "falsa partenza 'in modo significativo' (voleva dire sintomatico) + 'aspetta'"
+  },
+  {
+   "i": 34,
+   "t": 607.774,
+   "src_out": 880.996783,
+   "src_in": 881.747533,
+   "db_out": -72.2,
+   "db_in": -76.2,
+   "tipo": "pausa",
+   "motivo": ""
+  },
+  {
+   "i": 35,
+   "t": 620.22,
+   "src_out": 894.1933,
+   "src_in": 905.0041,
+   "db_out": -59.9,
+   "db_in": -70.8,
+   "tipo": "taglio",
+   "motivo": "falso attacco 'Si par... no' (sfuggito alla v1)"
+  },
+  {
+   "i": 36,
+   "t": 626.326,
+   "src_out": 911.1102,
+   "src_in": 915.598017,
+   "db_out": -64.9,
+   "db_in": -66.0,
+   "tipo": "taglio",
+   "motivo": "prima ripresa incompleta 'si lavora sulla mobilita delle prime coste'"
+  },
+  {
+   "i": 37,
+   "t": 646.012,
+   "src_out": 935.28435,
+   "src_in": 937.970367,
+   "db_out": -67.8,
+   "db_in": -67.5,
+   "tipo": "pausa",
+   "motivo": ""
+  },
+  {
+   "i": 38,
+   "t": 661.661,
+   "src_out": 953.619333,
+   "src_in": 954.20325,
+   "db_out": -65.9,
+   "db_in": -74.2,
+   "tipo": "pausa",
+   "motivo": ""
+  },
+  {
+   "i": 39,
+   "t": 669.135,
+   "src_out": 961.677383,
+   "src_in": 964.0631,
+   "db_out": -69.6,
+   "db_in": -65.4,
+   "tipo": "pausa",
+   "motivo": ""
+  },
+  {
+   "i": 40,
+   "t": 682.048,
+   "src_out": 976.976,
+   "src_in": 980.813167,
+   "db_out": -62.8,
+   "db_in": -78.9,
+   "tipo": "taglio",
+   "motivo": "ripresa doppia 'si accorgono che il calo delle tre si e appiattito' (sfuggita alla v1)"
+  },
+  {
+   "i": 41,
+   "t": 693.192,
+   "src_out": 991.957633,
+   "src_in": 993.709383,
+   "db_out": -69.4,
+   "db_in": -76.3,
+   "tipo": "pausa",
+   "motivo": ""
+  },
+  {
+   "i": 42,
+   "t": 715.648,
+   "src_out": 1016.16515,
+   "src_in": 1017.649967,
+   "db_out": -69.7,
+   "db_in": -80.0,
+   "tipo": "pausa",
+   "motivo": ""
+  },
+  {
+   "i": 43,
+   "t": 720.687,
+   "src_out": 1022.688333,
+   "src_in": 1031.597233,
+   "db_out": -65.1,
+   "db_in": -79.2,
+   "tipo": "pausa",
+   "motivo": ""
+  },
+  {
+   "i": 44,
+   "t": 737.37,
+   "src_out": 1048.280567,
+   "src_in": 1049.164783,
+   "db_out": -71.5,
+   "db_in": -80.4,
+   "tipo": "pausa",
+   "motivo": ""
+  },
+  {
+   "i": 45,
+   "t": 744.477,
+   "src_out": 1056.271883,
+   "src_in": 1102.417983,
+   "db_out": -63.9,
+   "db_in": -71.9,
+   "tipo": "taglio",
+   "motivo": "'nel prossimo video' interrotto + regia 'torna su, e troppo lungo il periodo'"
+  },
+  {
+   "i": 46,
+   "t": 762.862,
+   "src_out": 1120.803017,
+   "src_in": 1121.67055,
+   "db_out": -66.8,
+   "db_in": -75.7,
+   "tipo": "pausa",
+   "motivo": ""
+  }
+ ]
+}

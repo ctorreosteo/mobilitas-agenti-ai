@@ -1,0 +1,2268 @@
+{
+ "regioni": [
+  {
+   "a": 0.0,
+   "b": 14.0,
+   "segnali": [
+    {
+     "tipo": "ciak",
+     "peso": 2.5,
+     "det": "conteggio «4, 3, 2, 1, »"
+    },
+    {
+     "tipo": "pausa lunga",
+     "peso": 0.5,
+     "det": "4.2s di silenzio"
+    },
+    {
+     "tipo": "testa",
+     "peso": 1.0,
+     "det": "apertura del girato (ciak, saluti)"
+    },
+    {
+     "tipo": "a-parte",
+     "peso": 1.5,
+     "det": "blocco isolato di 0.22s: «4,»"
+    }
+   ],
+   "punteggio": 5.5,
+   "tipi": [
+    "a-parte",
+    "ciak",
+    "pausa lunga",
+    "testa"
+   ]
+  },
+  {
+   "a": 78.9,
+   "b": 89.2,
+   "segnali": [
+    {
+     "tipo": "troncata",
+     "peso": 2.5,
+     "det": "[79.40] «Guardi l'orologio, sono le 4 meno un quarto, mancano ancora due ore e...» finisce troncata"
+    },
+    {
+     "tipo": "blocco ripetuto",
+     "peso": 2.7,
+     "det": "[79.40] «Guardi l'orologio, sono le 4 meno un quarto, mancano ancora due ore e...» → [84.97] «Mancano ancora due ore e mezza alla fine della giornata e tu, dentro,» (ricomincia con «mancano ancora due ore e»)"
+    },
+    {
+     "tipo": "ripresa doppia",
+     "peso": 3.0,
+     "det": "ricomincia con «mancano ancora due ore e»"
+    }
+   ],
+   "punteggio": 8.2,
+   "tipi": [
+    "blocco ripetuto",
+    "ripresa doppia",
+    "troncata"
+   ]
+  },
+  {
+   "a": 97.0,
+   "b": 107.06,
+   "segnali": [
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«sei convinto che sia» detto due volte"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«ti sei convinto che» detto due volte"
+    },
+    {
+     "tipo": "blocco ripetuto",
+     "peso": 2.7,
+     "det": "[97.24] «Ti sei convinto che sia normale perché succede a tutti?» → [100.58] «O peggio, ti sei convinto che sia colpa tua, che dovresti essere più disciplinato, dormire» (ricomincia con «ti sei convinto che sia»)"
+    }
+   ],
+   "punteggio": 4.7,
+   "tipi": [
+    "blocco ripetuto",
+    "ripetizione"
+   ]
+  },
+  {
+   "a": 109.62,
+   "b": 149.3,
+   "segnali": [
+    {
+     "tipo": "pausa lunga",
+     "peso": 0.5,
+     "det": "7.7s di silenzio"
+    },
+    {
+     "tipo": "regia",
+     "peso": 2.0,
+     "det": "«Ho sbagliato» nel DOPO"
+    },
+    {
+     "tipo": "appianata",
+     "peso": 2.0,
+     "det": "solo nella trascrizione a finestre: «Non sei pigro e non è il pranzo.»"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«non sei pigro e» detto due volte"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«sei pigro e non» detto due volte"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«il pranzo so gia» detto due volte"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«pranzo so gia cosa» detto due volte"
+    },
+    {
+     "tipo": "regia",
+     "peso": 1.5,
+     "det": "«Ho sbagliato»"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«so gia cosa ti» detto due volte"
+    },
+    {
+     "tipo": "regia",
+     "peso": 1.5,
+     "det": "«Ho sbagliato»"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«gia cosa ti hanno» detto due volte"
+    },
+    {
+     "tipo": "regia",
+     "peso": 2.0,
+     "det": "«ho sbagliato» nel PRIMA"
+    },
+    {
+     "tipo": "ripresa doppia",
+     "peso": 3.0,
+     "det": "ricomincia con «non sei pigro»"
+    },
+    {
+     "tipo": "regia",
+     "peso": 2.0,
+     "det": "«Ho sbagliato» nel PRIMA"
+    },
+    {
+     "tipo": "ripresa doppia",
+     "peso": 3.0,
+     "det": "ricomincia con «non sei pigro»"
+    },
+    {
+     "tipo": "a-parte",
+     "peso": 1.5,
+     "det": "blocco isolato di 0.17s: «(non trascritto)»"
+    },
+    {
+     "tipo": "regia",
+     "peso": 2.0,
+     "det": "«ho sbagliato» nel PRIMA"
+    },
+    {
+     "tipo": "blocco ripetuto",
+     "peso": 2.4,
+     "det": "[135.71] «da non sei pigro non hai pranzo si va benissimo grazie» → [144.07] «Non sei pigro e non hai il pranzo.» (ricomincia con «non sei pigro e non hai il pranzo»)"
+    },
+    {
+     "tipo": "ripresa doppia",
+     "peso": 3.0,
+     "det": "ricomincia con «non sei pigro»"
+    },
+    {
+     "tipo": "ripresa doppia",
+     "peso": 3.0,
+     "det": "ricomincia con «non sei pigro»"
+    },
+    {
+     "tipo": "a-parte",
+     "peso": 1.5,
+     "det": "blocco isolato di 0.55s: «Grazie.»"
+    },
+    {
+     "tipo": "appianata",
+     "peso": 2.0,
+     "det": "solo nella trascrizione a finestre: «pigro e non hai il»"
+    }
+   ],
+   "punteggio": 38.9,
+   "tipi": [
+    "a-parte",
+    "appianata",
+    "blocco ripetuto",
+    "pausa lunga",
+    "regia",
+    "ripetizione",
+    "ripresa doppia"
+   ]
+  },
+  {
+   "a": 164.87,
+   "b": 166.07,
+   "segnali": [
+    {
+     "tipo": "interiezione",
+     "peso": 2.0,
+     "det": "[165.37-165.57] «qua» isolato (0.2s prima, 3.8s dopo)"
+    }
+   ],
+   "punteggio": 2.0,
+   "tipi": [
+    "interiezione"
+   ]
+  },
+  {
+   "a": 210.29,
+   "b": 220.61,
+   "segnali": [
+    {
+     "tipo": "pausa lunga",
+     "peso": 0.5,
+     "det": "4.3s di silenzio"
+    }
+   ],
+   "punteggio": 0.5,
+   "tipi": [
+    "pausa lunga"
+   ]
+  },
+  {
+   "a": 234.58,
+   "b": 246.89,
+   "segnali": [
+    {
+     "tipo": "pausa lunga",
+     "peso": 0.5,
+     "det": "6.3s di silenzio"
+    },
+    {
+     "tipo": "a-parte",
+     "peso": 1.5,
+     "det": "blocco isolato di 0.28s: «delle»"
+    }
+   ],
+   "punteggio": 2.0,
+   "tipi": [
+    "a-parte",
+    "pausa lunga"
+   ]
+  },
+  {
+   "a": 295.46,
+   "b": 306.76,
+   "segnali": [
+    {
+     "tipo": "pausa lunga",
+     "peso": 0.5,
+     "det": "5.3s di silenzio"
+    }
+   ],
+   "punteggio": 0.5,
+   "tipi": [
+    "pausa lunga"
+   ]
+  },
+  {
+   "a": 316.48,
+   "b": 351.9,
+   "segnali": [
+    {
+     "tipo": "regia",
+     "peso": 2.0,
+     "det": "«Ho sbagliato» nel DOPO"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«quella postura ora dopo» detto due volte"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«postura ora dopo ora» detto due volte"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«ora dopo ora le» detto due volte"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«dopo ora le spalle» detto due volte"
+    },
+    {
+     "tipo": "regia",
+     "peso": 1.5,
+     "det": "«ho sbagliato»"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«ora le spalle in» detto due volte"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«le spalle in avanti» detto due volte"
+    },
+    {
+     "tipo": "regia",
+     "peso": 1.5,
+     "det": "«ho sbagliato»"
+    },
+    {
+     "tipo": "regia",
+     "peso": 1.5,
+     "det": "«ho sbagliato»"
+    },
+    {
+     "tipo": "regia",
+     "peso": 1.5,
+     "det": "«ho sbagliato»"
+    },
+    {
+     "tipo": "regia",
+     "peso": 2.0,
+     "det": "«ho sbagliato» nel PRIMA"
+    },
+    {
+     "tipo": "regia",
+     "peso": 1.5,
+     "det": "«ho sbagliato»"
+    },
+    {
+     "tipo": "regia",
+     "peso": 1.5,
+     "det": "«torna su»"
+    },
+    {
+     "tipo": "regia",
+     "peso": 1.5,
+     "det": "«torna su»"
+    },
+    {
+     "tipo": "pausa lunga",
+     "peso": 0.5,
+     "det": "7.0s di silenzio"
+    }
+   ],
+   "punteggio": 21.0,
+   "tipi": [
+    "pausa lunga",
+    "regia",
+    "ripetizione"
+   ]
+  },
+  {
+   "a": 416.67,
+   "b": 433.32,
+   "segnali": [
+    {
+     "tipo": "regia",
+     "peso": 2.0,
+     "det": "«Aspetta» nel DOPO"
+    },
+    {
+     "tipo": "regia",
+     "peso": 2.0,
+     "det": "«L'ho detto male» nel DOPO"
+    },
+    {
+     "tipo": "regia",
+     "peso": 2.0,
+     "det": "«aspetta» nel DOPO"
+    },
+    {
+     "tipo": "blocco ripetuto",
+     "peso": 2.7,
+     "det": "[421.17] «studi sulla meccanica respiratoria nella postura seduta» → [426.63] «Aspetta aspetta, studi sulla meccanica respiratoria nella postura seduta prolungata mostra» (ricomincia con «studi sulla meccanica respiratoria nella postura seduta»)"
+    }
+   ],
+   "punteggio": 8.7,
+   "tipi": [
+    "blocco ripetuto",
+    "regia"
+   ]
+  },
+  {
+   "a": 461.51,
+   "b": 524.1,
+   "segnali": [
+    {
+     "tipo": "pausa lunga",
+     "peso": 0.5,
+     "det": "6.1s di silenzio"
+    },
+    {
+     "tipo": "a-parte",
+     "peso": 1.5,
+     "det": "blocco isolato di 0.21s: «(non trascritto)»"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«caffe non risolve maschera» detto due volte"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«il caffe non risolve» detto due volte"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«non risolve maschera adesso» detto due volte"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«risolve maschera adesso pensa» detto due volte"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«maschera adesso pensa onestamente» detto due volte"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«adesso pensa onestamente al» detto due volte"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«pensa onestamente al motivo» detto due volte"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«onestamente al motivo per» detto due volte"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«al motivo per cui» detto due volte"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«motivo per cui prendi» detto due volte"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«per cui prendi il» detto due volte"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«cui prendi il caffe» detto due volte"
+    },
+    {
+     "tipo": "regia",
+     "peso": 2.0,
+     "det": "«ho sbagliato» nel DOPO"
+    },
+    {
+     "tipo": "regia",
+     "peso": 1.5,
+     "det": "«ho sbagliato»"
+    },
+    {
+     "tipo": "regia",
+     "peso": 1.5,
+     "det": "«ho sbagliato»"
+    },
+    {
+     "tipo": "pausa lunga",
+     "peso": 0.5,
+     "det": "5.8s di silenzio"
+    },
+    {
+     "tipo": "regia",
+     "peso": 2.0,
+     "det": "«ho sbagliato» nel PRIMA"
+    },
+    {
+     "tipo": "regia",
+     "peso": 2.0,
+     "det": "«stoppa» nel DOPO"
+    },
+    {
+     "tipo": "regia",
+     "peso": 2.0,
+     "det": "«Stoppa» nel DOPO"
+    },
+    {
+     "tipo": "a-parte",
+     "peso": 1.5,
+     "det": "blocco isolato di 0.22s: «(non trascritto)»"
+    },
+    {
+     "tipo": "regia",
+     "peso": 2.0,
+     "det": "«stoppa» nel PRIMA"
+    },
+    {
+     "tipo": "regia",
+     "peso": 2.0,
+     "det": "«Stoppa» nel PRIMA"
+    },
+    {
+     "tipo": "regia",
+     "peso": 2.0,
+     "det": "«vai ragazzi» nel DOPO"
+    },
+    {
+     "tipo": "regia",
+     "peso": 2.0,
+     "det": "«Stoppa» nel PRIMA"
+    },
+    {
+     "tipo": "interiezione",
+     "peso": 2.0,
+     "det": "[512.29-512.54] «no no» isolato (3.2s prima, 1.0s dopo)"
+    }
+   ],
+   "punteggio": 37.0,
+   "tipi": [
+    "a-parte",
+    "interiezione",
+    "pausa lunga",
+    "regia",
+    "ripetizione"
+   ]
+  },
+  {
+   "a": 552.16,
+   "b": 601.14,
+   "segnali": [
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«cadi piu in basso» detto due volte"
+    }
+   ],
+   "punteggio": 1.0,
+   "tipi": [
+    "ripetizione"
+   ]
+  },
+  {
+   "a": 628.66,
+   "b": 691.56,
+   "segnali": [
+    {
+     "tipo": "appianata",
+     "peso": 2.0,
+     "det": "solo nella trascrizione a finestre: «è ridotta di metà»"
+    },
+    {
+     "tipo": "regia",
+     "peso": 2.0,
+     "det": "«ho sbagliato» nel DOPO"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«la persona non se» detto due volte"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«persona non se ne» detto due volte"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«non se ne accorge» detto due volte"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«se ne accorge perche» detto due volte"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«ne accorge perche respira» detto due volte"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«da cosi tanto tempo» detto due volte"
+    },
+    {
+     "tipo": "regia",
+     "peso": 2.0,
+     "det": "«ho sbagliato» nel PRIMA"
+    },
+    {
+     "tipo": "pausa lunga",
+     "peso": 0.5,
+     "det": "7.8s di silenzio"
+    },
+    {
+     "tipo": "regia",
+     "peso": 2.0,
+     "det": "«ho sbagliato» nel PRIMA"
+    },
+    {
+     "tipo": "a-parte",
+     "peso": 1.5,
+     "det": "blocco isolato di 0.64s: «Ok.»"
+    },
+    {
+     "tipo": "interiezione",
+     "peso": 2.0,
+     "det": "[654.93-655.57] «Ok.» isolato (7.8s prima, 1.3s dopo)"
+    },
+    {
+     "tipo": "regia",
+     "peso": 2.0,
+     "det": "«scusami» nel DOPO"
+    },
+    {
+     "tipo": "ripresa doppia",
+     "peso": 2.25,
+     "det": "ricomincia con «e la persona non se ne accorge perche»"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«la persona non se» detto due volte"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«persona non se ne» detto due volte"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«non se ne accorge» detto due volte"
+    },
+    {
+     "tipo": "blocco ripetuto",
+     "peso": 3.0,
+     "det": "[659.74] «Grazie a tutti.» → [661.56] «Grazie a tutti.» (ricomincia con «grazie a tutti»)"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«la persona non se» detto due volte"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«non se ne accorge» detto due volte"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«se ne accorge perche» detto due volte"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«ne accorge perche respira» detto due volte"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«accorge perche respira cosi» detto due volte"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«perche respira cosi da» detto due volte"
+    },
+    {
+     "tipo": "regia",
+     "peso": 1.5,
+     "det": "«scusami»"
+    },
+    {
+     "tipo": "pausa lunga",
+     "peso": 0.5,
+     "det": "6.4s di silenzio"
+    },
+    {
+     "tipo": "regia",
+     "peso": 2.0,
+     "det": "«scusami» nel DOPO"
+    },
+    {
+     "tipo": "regia",
+     "peso": 2.0,
+     "det": "«scusami» nel PRIMA"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«cosi da cosi tanto» detto due volte"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«da cosi tanto tempo» detto due volte"
+    },
+    {
+     "tipo": "regia",
+     "peso": 1.5,
+     "det": "«scusami»"
+    },
+    {
+     "tipo": "interiezione",
+     "peso": 2.0,
+     "det": "[676.97-677.43] «ok» isolato (6.4s prima, 1.1s dopo)"
+    },
+    {
+     "tipo": "pausa lunga",
+     "peso": 0.5,
+     "det": "4.3s di silenzio"
+    },
+    {
+     "tipo": "regia",
+     "peso": 2.0,
+     "det": "«scusami» nel PRIMA"
+    },
+    {
+     "tipo": "interiezione",
+     "peso": 2.0,
+     "det": "[678.49-679.57] «scusami» isolato (1.1s prima, 0.4s dopo)"
+    }
+   ],
+   "punteggio": 50.25,
+   "tipi": [
+    "a-parte",
+    "appianata",
+    "blocco ripetuto",
+    "interiezione",
+    "pausa lunga",
+    "regia",
+    "ripetizione",
+    "ripresa doppia"
+   ]
+  },
+  {
+   "a": 731.64,
+   "b": 754.06,
+   "segnali": [
+    {
+     "tipo": "pausa lunga",
+     "peso": 0.5,
+     "det": "8.7s di silenzio"
+    },
+    {
+     "tipo": "regia",
+     "peso": 2.0,
+     "det": "«aspetti» nel DOPO"
+    },
+    {
+     "tipo": "appianata",
+     "peso": 2.0,
+     "det": "solo nella trascrizione a finestre: «è, quindi titolo è postura accumulata»"
+    },
+    {
+     "tipo": "blocco ripetuto",
+     "peso": 2.7,
+     "det": "[743.35] «Il titolo è Postura accumulata non disciplina.» → [747.29] «Postura accumulata, non disciplina.» (ricomincia con «postura accumulata non disciplina»)"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«postura accumulata non disciplina» detto due volte"
+    },
+    {
+     "tipo": "regia",
+     "peso": 1.5,
+     "det": "«aspetti»"
+    }
+   ],
+   "punteggio": 9.7,
+   "tipi": [
+    "appianata",
+    "blocco ripetuto",
+    "pausa lunga",
+    "regia",
+    "ripetizione"
+   ]
+  },
+  {
+   "a": 768.06,
+   "b": 780.22,
+   "segnali": [
+    {
+     "tipo": "blocco ripetuto",
+     "peso": 3.0,
+     "det": "[768.06] «Cinque respiri profondi sono meglio di zero respiri profondi, è ovvio.» → [778.01] «cinque respiri profondi non lo decomprimono.» (ricomincia con «cinque respiri profondi»)"
+    }
+   ],
+   "punteggio": 3.0,
+   "tipi": [
+    "blocco ripetuto"
+   ]
+  },
+  {
+   "a": 789.63,
+   "b": 790.77,
+   "segnali": [
+    {
+     "tipo": "interiezione",
+     "peso": 2.0,
+     "det": "[790.13-790.27] «di» isolato (0.2s prima, 0.9s dopo)"
+    }
+   ],
+   "punteggio": 2.0,
+   "tipi": [
+    "interiezione"
+   ]
+  },
+  {
+   "a": 804.52,
+   "b": 819.28,
+   "segnali": [
+    {
+     "tipo": "blocco ripetuto",
+     "peso": 3.0,
+     "det": "[804.52] «devi iniziare a pensarlo come quello che è davvero un problema di postura.» → [810.59] «devi iniziare a pensare» (ricomincia con «devi iniziare a»)"
+    },
+    {
+     "tipo": "ripresa doppia",
+     "peso": 3.0,
+     "det": "ricomincia con «devi iniziare a pensarlo come quello che e davvero un problema di postura»"
+    },
+    {
+     "tipo": "attacco monco",
+     "peso": 2.5,
+     "det": "[810.59] «devi iniziare a pensare» e l'inizio di [812.14] «devi iniziare a pensarlo come quello che è davvero un problema di post»"
+    },
+    {
+     "tipo": "blocco ripetuto",
+     "peso": 3.0,
+     "det": "[810.59] «devi iniziare a pensare» → [812.14] «devi iniziare a pensarlo come quello che è davvero un problema di postura accumulata che s» (ricomincia con «devi iniziare a»)"
+    }
+   ],
+   "punteggio": 11.5,
+   "tipi": [
+    "attacco monco",
+    "blocco ripetuto",
+    "ripresa doppia"
+   ]
+  },
+  {
+   "a": 819.6,
+   "b": 826.85,
+   "segnali": [
+    {
+     "tipo": "blocco ripetuto",
+     "peso": 3.0,
+     "det": "[819.60] «Affrontare il calo pomeriggio.» → [822.99] «affrontare il calo pomeridiano in modo significativo» (ricomincia con «affrontare il calo»)"
+    }
+   ],
+   "punteggio": 3.0,
+   "tipi": [
+    "blocco ripetuto"
+   ]
+  },
+  {
+   "a": 827.97,
+   "b": 829.14,
+   "segnali": [
+    {
+     "tipo": "interiezione",
+     "peso": 2.0,
+     "det": "[828.47-828.64] «No.» isolato (0.6s prima, 0.2s dopo)"
+    }
+   ],
+   "punteggio": 2.0,
+   "tipi": [
+    "interiezione"
+   ]
+  },
+  {
+   "a": 830.21,
+   "b": 840.46,
+   "segnali": [
+    {
+     "tipo": "regia",
+     "peso": 2.0,
+     "det": "«aspetta» nel PRIMA"
+    },
+    {
+     "tipo": "regia",
+     "peso": 2.0,
+     "det": "«aspetta» nel PRIMA"
+    },
+    {
+     "tipo": "a-parte",
+     "peso": 1.5,
+     "det": "blocco isolato di 0.70s: «stimolanti,»"
+    }
+   ],
+   "punteggio": 5.5,
+   "tipi": [
+    "a-parte",
+    "regia"
+   ]
+  },
+  {
+   "a": 895.85,
+   "b": 897.77,
+   "segnali": [
+    {
+     "tipo": "troncata",
+     "peso": 2.5,
+     "det": "[896.35] «Si par...» finisce troncata"
+    }
+   ],
+   "punteggio": 2.5,
+   "tipi": [
+    "troncata"
+   ]
+  },
+  {
+   "a": 897.8,
+   "b": 899.02,
+   "segnali": [
+    {
+     "tipo": "interiezione",
+     "peso": 2.0,
+     "det": "[898.30-898.52] «no» isolato (1.0s prima, 6.6s dopo)"
+    }
+   ],
+   "punteggio": 2.0,
+   "tipi": [
+    "interiezione"
+   ]
+  },
+  {
+   "a": 909.33,
+   "b": 918.67,
+   "segnali": [
+    {
+     "tipo": "appianata",
+     "peso": 2.0,
+     "det": "solo nella trascrizione a finestre: «lavora sulla mobilità delle prime coste»"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«lavora sulla mobilita delle» detto due volte"
+    },
+    {
+     "tipo": "blocco ripetuto",
+     "peso": 3.0,
+     "det": "[911.69] «Si lavora sulla mobilità delle prime coste» → [915.71] «Si lavora sulla mobilità delle prime coste e dello sterno.» (ricomincia con «si lavora sulla mobilita delle prime coste»)"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«sulla mobilita delle prime» detto due volte"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«mobilita delle prime coste» detto due volte"
+    }
+   ],
+   "punteggio": 8.0,
+   "tipi": [
+    "appianata",
+    "blocco ripetuto",
+    "ripetizione"
+   ]
+  },
+  {
+   "a": 977.52,
+   "b": 985.42,
+   "segnali": [
+    {
+     "tipo": "blocco ripetuto",
+     "peso": 3.0,
+     "det": "[977.52] «si accorgono che il calo delle tre» → [980.89] «si accorgono che il calo delle tre si appiattisce» (ricomincia con «si accorgono che il calo delle tre»)"
+    },
+    {
+     "tipo": "appianata",
+     "peso": 2.0,
+     "det": "solo nella trascrizione a finestre: «che il quarto caffè»"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«che il quarto caffe» detto due volte"
+    }
+   ],
+   "punteggio": 6.0,
+   "tipi": [
+    "appianata",
+    "blocco ripetuto",
+    "ripetizione"
+   ]
+  },
+  {
+   "a": 1019.41,
+   "b": 1040.99,
+   "segnali": [
+    {
+     "tipo": "pausa lunga",
+     "peso": 0.5,
+     "det": "9.4s di silenzio"
+    },
+    {
+     "tipo": "blocco ripetuto",
+     "peso": 3.0,
+     "det": "[1031.76] «il tuo cervello non si stanca, soffoca» → [1038.86] «il tuo cervello alle tre del pomeriggio» (ricomincia con «il tuo cervello»)"
+    }
+   ],
+   "punteggio": 3.5,
+   "tipi": [
+    "blocco ripetuto",
+    "pausa lunga"
+   ]
+  },
+  {
+   "a": 1058.34,
+   "b": 1117.52,
+   "segnali": [
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«ti spiego una cosa» detto due volte"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«spiego una cosa ancora» detto due volte"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«una cosa ancora piu» detto due volte"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«cosa ancora piu sorprendente» detto due volte"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«ancora piu sorprendente che» detto due volte"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«molte persone che soffrono» detto due volte"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«persone che soffrono di» detto due volte"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«che soffrono di ansia» detto due volte"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«soffrono di ansia in» detto due volte"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«di ansia in realta» detto due volte"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«ansia in realta non» detto due volte"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«in realta non hanno» detto due volte"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«realta non hanno un» detto due volte"
+    },
+    {
+     "tipo": "blocco ripetuto",
+     "peso": 2.7,
+     "det": "[1066.74] «in realtà non hanno un problema di ansia.» → [1069.74] «hanno un problema di respirazione» (ricomincia con «hanno un problema di»)"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«non hanno un problema» detto due volte"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«hanno un problema di» detto due volte"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«un problema di ansia» detto due volte"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«problema di ansia hanno» detto due volte"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«di ansia hanno un» detto due volte"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«ansia hanno un problema» detto due volte"
+    },
+    {
+     "tipo": "regia",
+     "peso": 2.0,
+     "det": "«aspetta» nel DOPO"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«hanno un problema di» detto due volte"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«un problema di respirazione» detto due volte"
+    },
+    {
+     "tipo": "regia",
+     "peso": 1.5,
+     "det": "«aspetta»"
+    },
+    {
+     "tipo": "regia",
+     "peso": 2.0,
+     "det": "«aspetta» nel DOPO"
+    },
+    {
+     "tipo": "regia",
+     "peso": 2.0,
+     "det": "«aspetta» nel PRIMA"
+    },
+    {
+     "tipo": "regia",
+     "peso": 2.0,
+     "det": "«torna su» nel DOPO"
+    },
+    {
+     "tipo": "regia",
+     "peso": 2.0,
+     "det": "«torna su» nel DOPO"
+    },
+    {
+     "tipo": "regia",
+     "peso": 2.0,
+     "det": "«aspetta» nel DOPO"
+    },
+    {
+     "tipo": "regia",
+     "peso": 2.0,
+     "det": "«torna su» nel DOPO"
+    },
+    {
+     "tipo": "regia",
+     "peso": 2.0,
+     "det": "«torna su» nel DOPO"
+    },
+    {
+     "tipo": "a-parte",
+     "peso": 1.5,
+     "det": "blocco isolato di 0.20s: «(non trascritto)»"
+    },
+    {
+     "tipo": "regia",
+     "peso": 1.5,
+     "det": "«torna su»"
+    },
+    {
+     "tipo": "regia",
+     "peso": 1.5,
+     "det": "«torna su»"
+    },
+    {
+     "tipo": "regia",
+     "peso": 1.5,
+     "det": "«torna su»"
+    },
+    {
+     "tipo": "regia",
+     "peso": 1.5,
+     "det": "«torna su»"
+    },
+    {
+     "tipo": "interiezione",
+     "peso": 2.0,
+     "det": "[1087.85-1088.01] «ma» isolato (5.5s prima, 0.2s dopo)"
+    },
+    {
+     "tipo": "regia",
+     "peso": 2.0,
+     "det": "«Aspetta» nel PRIMA"
+    },
+    {
+     "tipo": "regia",
+     "peso": 2.0,
+     "det": "«torna su» nel PRIMA"
+    },
+    {
+     "tipo": "regia",
+     "peso": 2.0,
+     "det": "«torna su» nel PRIMA"
+    },
+    {
+     "tipo": "ripresa doppia",
+     "peso": 3.0,
+     "det": "ricomincia con «nel prossimo video»"
+    },
+    {
+     "tipo": "ripresa doppia",
+     "peso": 3.0,
+     "det": "ricomincia con «nel prossimo video»"
+    },
+    {
+     "tipo": "interiezione",
+     "peso": 2.0,
+     "det": "[1098.33-1099.43] «Quindi niente...» isolato (2.0s prima, 1.8s dopo)"
+    },
+    {
+     "tipo": "troncata",
+     "peso": 2.5,
+     "det": "[1098.33] «Quindi niente...» finisce troncata"
+    },
+    {
+     "tipo": "blocco ripetuto",
+     "peso": 2.7,
+     "det": "[1111.68] «in realtà non hanno un problema di ansia» → [1114.03] «hanno un problema di respirazione meccanicamente alterata» (ricomincia con «hanno un problema di»)"
+    },
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«hanno un problema di» detto due volte"
+    }
+   ],
+   "punteggio": 70.9,
+   "tipi": [
+    "a-parte",
+    "blocco ripetuto",
+    "interiezione",
+    "regia",
+    "ripetizione",
+    "ripresa doppia",
+    "troncata"
+   ]
+  },
+  {
+   "a": 1126.01,
+   "b": 1151.8,
+   "segnali": [
+    {
+     "tipo": "ripetizione",
+     "peso": 1.0,
+     "det": "«il modo in cui» detto due volte"
+    }
+   ],
+   "punteggio": 1.0,
+   "tipi": [
+    "ripetizione"
+   ]
+  },
+  {
+   "a": 1158.43,
+   "b": 1184.37,
+   "segnali": [
+    {
+     "tipo": "pausa lunga",
+     "peso": 0.5,
+     "det": "11.2s di silenzio"
+    },
+    {
+     "tipo": "regia",
+     "peso": 2.0,
+     "det": "«Mi sa che» nel DOPO"
+    },
+    {
+     "tipo": "regia",
+     "peso": 2.0,
+     "det": "«abbiamo finito» nel DOPO"
+    },
+    {
+     "tipo": "appianata",
+     "peso": 2.0,
+     "det": "solo nella trascrizione a finestre: «davvero. Mi sa che abbiamo finito,»"
+    },
+    {
+     "tipo": "coda",
+     "peso": 1.0,
+     "det": "chiusura del girato"
+    },
+    {
+     "tipo": "regia",
+     "peso": 1.5,
+     "det": "«Mi sa che»"
+    },
+    {
+     "tipo": "regia",
+     "peso": 1.5,
+     "det": "«Mi sa che»"
+    },
+    {
+     "tipo": "regia",
+     "peso": 1.5,
+     "det": "«Mi sa che»"
+    },
+    {
+     "tipo": "regia",
+     "peso": 1.5,
+     "det": "«abbiamo finito»"
+    },
+    {
+     "tipo": "regia",
+     "peso": 1.5,
+     "det": "«abbiamo finito»"
+    },
+    {
+     "tipo": "regia",
+     "peso": 2.0,
+     "det": "«Mi sa che» nel PRIMA"
+    },
+    {
+     "tipo": "regia",
+     "peso": 2.0,
+     "det": "«abbiamo finito» nel PRIMA"
+    },
+    {
+     "tipo": "regia",
+     "peso": 2.0,
+     "det": "«Mi sa che» nel PRIMA"
+    },
+    {
+     "tipo": "regia",
+     "peso": 2.0,
+     "det": "«abbiamo finito» nel PRIMA"
+    },
+    {
+     "tipo": "interiezione",
+     "peso": 2.0,
+     "det": "[1176.32-1177.22] «Ehm...» isolato (1.4s prima, 3.9s dopo)"
+    },
+    {
+     "tipo": "troncata",
+     "peso": 2.5,
+     "det": "[1176.32] «Ehm...» finisce troncata"
+    }
+   ],
+   "punteggio": 27.5,
+   "tipi": [
+    "appianata",
+    "coda",
+    "interiezione",
+    "pausa lunga",
+    "regia",
+    "troncata"
+   ]
+  }
+ ],
+ "sonde": [
+  {
+   "a": 1.44,
+   "b": 5.6,
+   "prima": "Buona notizia.",
+   "dopo": "3 2 1 tofu 2 il 3 del",
+   "segnali": [
+    [
+     "pausa lunga",
+     0.5,
+     "4.2s di silenzio"
+    ]
+   ]
+  },
+  {
+   "a": 5.82,
+   "b": 7.92,
+   "prima": "Grazie.",
+   "dopo": "4, 3, 2, 1, tofu 2, le 3 del pomeriggio, sempre allo stesso punto.",
+   "segnali": []
+  },
+  {
+   "a": 57.65,
+   "b": 59.15,
+   "prima": "compone. È come se qualcuno avesse abbassato il volume dentro la tua testa. Ti alzi, allunghi le braccia, fai due passi verso la macchinetta.",
+   "dopo": "Quarto caffè della giornata, o forse il quinto, hai smesso di contare. Lo bevi mentre scrolli il telefono per due minuti, perché in qualche modo...",
+   "segnali": []
+  },
+  {
+   "a": 69.27,
+   "b": 71.49,
+   "prima": "o forse il quinto, hai smesso di contare. Lo bevi mentre scrolli il telefono per due minuti, perché in qualche modo quella pausa ti serve.",
+   "dopo": "Torni alla scrivania, convinto che adesso riparte, per 20 minuti riparte davvero, poi rallenta di nuovo. Guardi l'orologio.",
+   "segnali": []
+  },
+  {
+   "a": 78.09,
+   "b": 79.4,
+   "prima": "Torni alla scrivania, convinto che adesso riparte, per 20 minuti riparte davvero, poi rallenta di nuovo.",
+   "dopo": "Guardi l'orologio, sono le 4 meno un quarto, mancano ancora due ore e mezza alla fine della giornata. E tu?",
+   "segnali": []
+  },
+  {
+   "a": 83.54,
+   "b": 84.97,
+   "prima": "Per 20 minuti riparte davvero Poi rallenta di nuovo Guardi l'orologio Sono le 4 meno un quarto Mancano ancora due ore e...",
+   "dopo": "Mancano ancora due ore e mezza alla fine della giornata e tu, dentro, sai già che da qui in poi è gestione del danno, non produzione, gestione del danno.",
+   "segnali": [
+    [
+     "ripresa doppia",
+     3.0,
+     "ricomincia con «mancano ancora due ore e»"
+    ]
+   ]
+  },
+  {
+   "a": 94.86,
+   "b": 97.24,
+   "prima": "mezza alla fine della giornata e tu dentro sai già che da qui in poi è gestione del danno, non produzione, gestione del danno.",
+   "dopo": "ti sei convinto che sia normale perché succede a tutti o peggio ti sei convinto che sia colpa tua che dovresti essere più disciplinato dormire di più ma",
+   "segnali": []
+  },
+  {
+   "a": 112.62,
+   "b": 120.35,
+   "prima": "Dovresti essere più disciplinato, dormire di più, mangiare meglio. Non è colpa tua e quello che ti sta succedendo non c'entra niente con la tua testa.",
+   "dopo": "Non sei pigro e non hai il pranzo. So già cosa ti hanno detto per tanti anni. Ho sbagliato.",
+   "segnali": [
+    [
+     "regia",
+     2.0,
+     "«Ho sbagliato» nel DOPO"
+    ],
+    [
+     "pausa lunga",
+     0.5,
+     "7.7s di silenzio"
+    ]
+   ]
+  },
+  {
+   "a": 127.96,
+   "b": 129.22,
+   "prima": "Non sei pigro e non è il pranzo So già cosa ti hanno detto per tanti anni Non ho sbagliato",
+   "dopo": "torna leggermente indietro da non sei pigro non hai pranzo",
+   "segnali": [
+    [
+     "ripresa doppia",
+     3.0,
+     "ricomincia con «non sei pigro»"
+    ],
+    [
+     "regia",
+     2.0,
+     "«ho sbagliato» nel PRIMA"
+    ]
+   ]
+  },
+  {
+   "a": 129.39,
+   "b": 131.46,
+   "prima": "Non sei pigro e non è il pranzo. So già cosa ti hanno detto per tanti anni. Ho sbagliato.",
+   "dopo": "torna leggermente indietro da non sei pigro non hai pranzo grazie",
+   "segnali": [
+    [
+     "ripresa doppia",
+     3.0,
+     "ricomincia con «non sei pigro»"
+    ],
+    [
+     "regia",
+     2.0,
+     "«Ho sbagliato» nel PRIMA"
+    ]
+   ]
+  },
+  {
+   "a": 133.42,
+   "b": 135.71,
+   "prima": "so già cosa ti hanno detto per tanti anni ho sbagliato mi torna leggermente indietro",
+   "dopo": "da non sei pigro non hai pranzo grazie non sei pigro",
+   "segnali": [
+    [
+     "regia",
+     2.0,
+     "«ho sbagliato» nel PRIMA"
+    ]
+   ]
+  },
+  {
+   "a": 138.89,
+   "b": 140.32,
+   "prima": "torna leggermente indietro da non sei pigro non hai pranzo si va benissimo",
+   "dopo": "grazie non sei pigro e non è il pranzo so già cosa ti hanno raccontato per anni che",
+   "segnali": [
+    [
+     "ripresa doppia",
+     3.0,
+     "ricomincia con «non sei pigro»"
+    ]
+   ]
+  },
+  {
+   "a": 140.87,
+   "b": 144.07,
+   "prima": "torna leggermente indietro da non sei pigro non hai pranzo grazie",
+   "dopo": "Non sei pigro e non hai il pranzo. So già cosa ti hanno raccontato per anni, che hai il pranzo perché hai mangiato troppo o hai mangiato la cosa sbagliata.",
+   "segnali": [
+    [
+     "ripresa doppia",
+     3.0,
+     "ricomincia con «non sei pigro»"
+    ]
+   ]
+  },
+  {
+   "a": 165.57,
+   "b": 169.33,
+   "prima": "energia al cervello, che è la mancanza di sonno della notte prima, che è lo stress accumulato, che è l'età, che dovresti fare più attività fisica oppure ne fai troppa.",
+   "dopo": "hanno detto tutte queste cose e probabilmente le hai provate quasi tutte. Hai saltato il pranzo per una settimana, hai provato un pranzo leggero a base di insalata, hai provato un",
+   "segnali": []
+  },
+  {
+   "a": 193.31,
+   "b": 197.3,
+   "prima": "notato un piccolo miglioramento per qualche giorno, poi sei tornato esattamente allo stesso punto, alla stessa ora, con la stessa nebbia in testa.",
+   "dopo": "Non sei pigro, non sei indisciplinato, non hai bisogno di un metodo di produttività migliore o un'altra app per concentrarti. Hai fatto tutto quello che",
+   "segnali": []
+  },
+  {
+   "a": 204.12,
+   "b": 205.37,
+   "prima": "Non sei pigro, non sei indisciplinato, non hai bisogno di un metodo di produttività migliore o un'altra app per concentrarti.",
+   "dopo": "Hai fatto tutto quello che ti hanno detto di fare e non funziona per un motivo molto semplice. Ti hanno indicato il problema sbagliato fin dall'inizio.",
+   "segnali": []
+  },
+  {
+   "a": 213.29,
+   "b": 217.61,
+   "prima": "Hai fatto tutto quello che ti hanno detto di fare e non funziona per un motivo molto semplice: ti hanno indicato il problema sbagliato fin dall'inizio.",
+   "dopo": "Il calo delle tre del pomeriggio non è metabolico, non è mentale, non è questione di volontà. Quello che sto per dirti adesso ribalta completamente.",
+   "segnali": [
+    [
+     "pausa lunga",
+     0.5,
+     "4.3s di silenzio"
+    ]
+   ]
+  },
+  {
+   "a": 234.21,
+   "b": 237.3,
+   "prima": "adesso ribalta completamente il modo in cui guarderai la tua giornata lavorativa e probabilmente il motivo per cui rendi sempre meno con il passare delle ore.",
+   "dopo": "Il calo delle tre è il meccanico, nome tradizionale.",
+   "segnali": []
+  },
+  {
+   "a": 237.58,
+   "b": 243.89,
+   "prima": "lavorativa e probabilmente il motivo per cui rendi sempre meno con il passare delle ore.",
+   "dopo": "Il calo dell'E3 è meccanico, non metabolico. Il tuo cervello consuma circa il 20% di tutto l'ossigeno che entra nel tuo corpo.",
+   "segnali": [
+    [
+     "pausa lunga",
+     0.5,
+     "6.3s di silenzio"
+    ]
+   ]
+  },
+  {
+   "a": 281.92,
+   "b": 283.24,
+   "prima": "respiri. Se respiri bene il cervello funziona, se respiri male il cervello si spegne. Non è un'opinione, è fisiologia di base.",
+   "dopo": "Adesso voglio che tu pensi alla tua postura in questo momento. Probabilmente sei seduto, hai le spalle leggermente proiettate in avanti.",
+   "segnali": []
+  },
+  {
+   "a": 298.46,
+   "b": 303.76,
+   "prima": "leggermente proiettata in avanti probabilmente la testa è inclinata verso uno schermo qualche centimetro davanti rispetto a dove dovrebbe essere",
+   "dopo": "Probabilmente la zona lombare non sta toccando lo schienale e il tuo bacino è ruotato indietro. Probabilmente, anche se pensi di star seduto bene,",
+   "segnali": [
+    [
+     "pausa lunga",
+     0.5,
+     "5.3s di silenzio"
+    ]
+   ]
+  },
+  {
+   "a": 319.48,
+   "b": 321.79,
+   "prima": "anche se pensi di star seduto bene, sei in una versione di seduta che il tuo corpo ha imparato negli anni e che adesso considera la sua posizione neutra.",
+   "dopo": "Ecco cosa succede, a quella postura, ora dopo ora, le spalle in avanti si chiudono, la parte a... Ho sbagliato!",
+   "segnali": [
+    [
+     "regia",
+     2.0,
+     "«Ho sbagliato» nel DOPO"
+    ]
+   ]
+  },
+  {
+   "a": 330.47,
+   "b": 332.28,
+   "prima": "Ecco cosa succede a quella postura ora dopo ora, le spalle in avanti si chiudono, la parte... ho sbagliato!",
+   "dopo": "Svanigliate, svanigliate, svanigliate, tornate un pochettino. Ok, è così.",
+   "segnali": [
+    [
+     "regia",
+     2.0,
+     "«ho sbagliato» nel PRIMA"
+    ]
+   ]
+  },
+  {
+   "a": 339.92,
+   "b": 346.88,
+   "prima": "Svanigliate, svanigliate, svanigliate, tornate un pochettino. Ok, è così.",
+   "dopo": "Ecco cosa succede a quella postura ora dopo ora: le spalle in avanti chiudono la parte alta del torace, la testa proiettata in avanti",
+   "segnali": [
+    [
+     "pausa lunga",
+     0.5,
+     "7.0s di silenzio"
+    ]
+   ]
+  },
+  {
+   "a": 372.13,
+   "b": 374.79,
+   "prima": "c'è indietro e tutto il peso del busto si scarica sul diaframma, che invece di lavorare in espansione, lavora schiacciato contro gli organi addominali.",
+   "dopo": "Il diaframma è il muscolo principale della respirazione. Quando è libero, si abbassa di 3 o 4 centimetri ad ogni respiro, crea il vuoto di un'acqua",
+   "segnali": []
+  },
+  {
+   "a": 393.49,
+   "b": 396.85,
+   "prima": "e l'aria entra in profondità fino alle parti basse dei polmoni che sono le più ricche di vasi sanguigni e quindi le più efficienti nello scambio di ossigeno.",
+   "dopo": "Quando il diaframma è compresso da 4 o 5 ore di postura seduta, smette di abbassarsi davvero. Si muove di un centimetro, forse meno.",
+   "segnali": []
+  },
+  {
+   "a": 419.67,
+   "b": 421.17,
+   "prima": "Continui a respirare, devi, sei vivo, ma riempi solo la parte alta dei polmoni, quella meno efficiente. Stai ventilando, non stai ossigenando.",
+   "dopo": "Studi sulla meccanica respiratoria nella postura seduta... L'ho detto male. Aspetta, aspetta. Studi sulla meccanica respiratoria nella postura seduta...",
+   "segnali": [
+    [
+     "regia",
+     2.0,
+     "«L'ho detto male» nel DOPO"
+    ],
+    [
+     "regia",
+     2.0,
+     "«Aspetta» nel DOPO"
+    ],
+    [
+     "regia",
+     2.0,
+     "«aspetta» nel DOPO"
+    ]
+   ]
+  },
+  {
+   "a": 458.43,
+   "b": 460.52,
+   "prima": "e nessuno te l'ha mai detto perché nessuno cerca davvero il problema dove succede davvero nella tua gabbia toracica non nel tuo pranzo",
+   "dopo": "E qui c'è la cosa che rende tutto questo ancora più subdolo di quanto sembri.",
+   "segnali": []
+  },
+  {
+   "a": 464.51,
+   "b": 470.6,
+   "prima": "nella tua gabbia toracica, non nel tuo pranzo. E qui c'è la cosa che rende tutto questo ancora più subdolo di quanto sembri:",
+   "dopo": "Il caffè non risolve, maschera. Adesso pensa onestamente al motivo per cui prendi il caffè a dalle...",
+   "segnali": [
+    [
+     "pausa lunga",
+     0.5,
+     "6.1s di silenzio"
+    ]
+   ]
+  },
+  {
+   "a": 470.81,
+   "b": 472.77,
+   "prima": "e tutto questo ancora più sudolo di quanto sembri.",
+   "dopo": "Il caffè non risolve, maschera. Adesso pensa onestamente al motivo per cui prendi il caffè a dalle...",
+   "segnali": []
+  },
+  {
+   "a": 480.5,
+   "b": 481.84,
+   "prima": "Il caffè non risolve. Maschera. Adesso pensa onestamente al motivo per cui prendi il caffè a delle... Aaaaaah!",
+   "dopo": "No, ho sbagliato.",
+   "segnali": [
+    [
+     "regia",
+     2.0,
+     "«ho sbagliato» nel DOPO"
+    ]
+   ]
+  },
+  {
+   "a": 487.31,
+   "b": 493.1,
+   "prima": "No, ho sbagliato.",
+   "dopo": "stoppa allora lì",
+   "segnali": [
+    [
+     "regia",
+     2.0,
+     "«ho sbagliato» nel PRIMA"
+    ],
+    [
+     "regia",
+     2.0,
+     "«stoppa» nel DOPO"
+    ],
+    [
+     "pausa lunga",
+     0.5,
+     "5.8s di silenzio"
+    ]
+   ]
+  },
+  {
+   "a": 493.32,
+   "b": 496.74,
+   "prima": "Grazie.",
+   "dopo": "Stoppa l'ora lì.",
+   "segnali": [
+    [
+     "regia",
+     2.0,
+     "«Stoppa» nel DOPO"
+    ]
+   ]
+  },
+  {
+   "a": 497.96,
+   "b": 501.28,
+   "prima": "Grazie.",
+   "dopo": "Allora lì? No, davvero?",
+   "segnali": []
+  },
+  {
+   "a": 502.18,
+   "b": 504.24,
+   "prima": "stoppa allora lì",
+   "dopo": "no davvero? non ho più pazienza vabbè",
+   "segnali": [
+    [
+     "regia",
+     2.0,
+     "«stoppa» nel PRIMA"
+    ]
+   ]
+  },
+  {
+   "a": 505.77,
+   "b": 508.13,
+   "prima": "Stoppa l'ora lì. Meravigliosamente, meravigliosamente.",
+   "dopo": "No, davvero? Non ho più pazienza. Vabbè, te lo faccio adesso. Sì, vai ragazzi.",
+   "segnali": [
+    [
+     "regia",
+     2.0,
+     "«Stoppa» nel PRIMA"
+    ],
+    [
+     "regia",
+     2.0,
+     "«vai ragazzi» nel DOPO"
+    ]
+   ]
+  },
+  {
+   "a": 509.04,
+   "b": 512.29,
+   "prima": "Stoppa allora lì. No, davvero?",
+   "dopo": "te lo faccio adesso il caffè non risolve maschera adesso pensa onestamente",
+   "segnali": [
+    [
+     "regia",
+     2.0,
+     "«Stoppa» nel PRIMA"
+    ]
+   ]
+  },
+  {
+   "a": 605.81,
+   "b": 607.05,
+   "prima": "La meccanica peggiorata resta e tu cadi più in basso di dove eri partito. Il caffè delle tre non sta risolvendo il calo, lo sta scavando.",
+   "dopo": "studio questa cosa la vediamo in modo molto chiaro. Arriva qualcuno e dice: \"Non riesco a concentrarmi nel pomeriggio, mi serve sempre più caffè e",
+   "segnali": []
+  },
+  {
+   "a": 625.14,
+   "b": 626.55,
+   "prima": "funziona sempre meno. Lo facciamo sdraiare, misuriamo l'escursione del diaframma osservando come si muove la gabbia toracica.",
+   "dopo": "molte persone che fanno un lavoro sedentario da anni l'escursione è ridotta di metà letteralmente metà e la",
+   "segnali": []
+  },
+  {
+   "a": 631.75,
+   "b": 633.62,
+   "prima": "bando come si muove la gabbia toracica. In molte persone che fanno un lavoro sedentario da anni, l'escursione è ridotta di metà",
+   "dopo": "letteralmente metà e la persona non se ne accorge perché respira da così tanto tempo in quel modo non ho sbagliato dai",
+   "segnali": [
+    [
+     "regia",
+     2.0,
+     "«ho sbagliato» nel DOPO"
+    ]
+   ]
+  },
+  {
+   "a": 640.92,
+   "b": 642.36,
+   "prima": "letteralmente metà e la persona non se ne accorge perché respira da così tanto tempo in quel modo no, ho sbagliato",
+   "dopo": "Dai, avrei sbagliato.",
+   "segnali": [
+    [
+     "regia",
+     2.0,
+     "«ho sbagliato» nel PRIMA"
+    ]
+   ]
+  },
+  {
+   "a": 647.09,
+   "b": 654.93,
+   "prima": "tempo in quel modo non ho sbagliato dai avrei sbagliato",
+   "dopo": "Ok, parto da e la persona non se ne accorge. E la persona non se ne accorge.",
+   "segnali": [
+    [
+     "regia",
+     2.0,
+     "«ho sbagliato» nel PRIMA"
+    ],
+    [
+     "pausa lunga",
+     0.5,
+     "7.8s di silenzio"
+    ]
+   ]
+  },
+  {
+   "a": 655.57,
+   "b": 656.89,
+   "prima": "ok",
+   "dopo": "parto da e la persona non se ne accorge e la persona non se ne accorge perché respira così da",
+   "segnali": []
+  },
+  {
+   "a": 660.22,
+   "b": 661.56,
+   "prima": "Ok, parto da \"e la persona non si ne accorge\".",
+   "dopo": "e la persona non se ne accorge perché respira così da tanto tempo, no, così da così tanto tempo, scusami.",
+   "segnali": [
+    [
+     "ripresa doppia",
+     2.25,
+     "ricomincia con «e la persona non se ne accorge perche»"
+    ],
+    [
+     "regia",
+     2.0,
+     "«scusami» nel DOPO"
+    ]
+   ]
+  },
+  {
+   "a": 670.59,
+   "b": 676.97,
+   "prima": "e la persona non se ne accorge perché respira così da tanto tempo no, così da così tanto tempo scusami",
+   "dopo": "Ok, scusami.",
+   "segnali": [
+    [
+     "regia",
+     2.0,
+     "«scusami» nel PRIMA"
+    ],
+    [
+     "regia",
+     2.0,
+     "«scusami» nel DOPO"
+    ],
+    [
+     "pausa lunga",
+     0.5,
+     "6.4s di silenzio"
+    ]
+   ]
+  },
+  {
+   "a": 680.7,
+   "b": 684.96,
+   "prima": "ok scusami ma figurati",
+   "dopo": "e la persona non se ne accorge perché respira così, da così tanto tempo, che quel modo di respirare è diventato il suo normale.",
+   "segnali": [
+    [
+     "regia",
+     2.0,
+     "«scusami» nel PRIMA"
+    ],
+    [
+     "pausa lunga",
+     0.5,
+     "4.3s di silenzio"
+    ]
+   ]
+  },
+  {
+   "a": 728.38,
+   "b": 731.24,
+   "prima": "il calo dell'interesse è ridotto, non perché abbia cambiato dieta, non perché abbia dormito di più, perché il suo corpo è tornato a portare ossigeno dove serve.",
+   "dopo": "E adesso la domanda che ti stai facendo è, quindi cosa si può fare?",
+   "segnali": []
+  },
+  {
+   "a": 734.64,
+   "b": 743.35,
+   "prima": "è tornato a portare ossigeno dove serve e adesso la domanda che ti stai facendo è quindi cosa si può fare?",
+   "dopo": "Ah, il titolo è Postura accumulata non disciplina. Postura accumulata non disciplina. Probabilmente ti aspetti che adesso ti dica di fare…",
+   "segnali": [
+    [
+     "regia",
+     2.0,
+     "«aspetti» nel DOPO"
+    ],
+    [
+     "pausa lunga",
+     0.5,
+     "8.7s di silenzio"
+    ]
+   ]
+  },
+  {
+   "a": 796.59,
+   "b": 797.86,
+   "prima": "esattamente come prima nel momento in cui smetti. Il punto vero è cambiare il modo in cui leggi quello che ti succede all'età del pomeriggio.",
+   "dopo": "Devi smettere di pensarlo come un problema di energia, di motivazione, di disciplina o di dieta. Devi iniziare a pensarlo come quello che",
+   "segnali": []
+  },
+  {
+   "a": 808.86,
+   "b": 810.59,
+   "prima": "problema di energia, di motivazione, di disciplina o di dieta, devi iniziare a pensarlo come quello che è davvero un problema di postura.",
+   "dopo": "Devi iniziare a pensarlo come quello che è davvero, un problema di postura accumulata che si manifesta come problema cognitivo.",
+   "segnali": [
+    [
+     "ripresa doppia",
+     3.0,
+     "ricomincia con «devi iniziare a pensarlo come quello che e davvero un problema di postura»"
+    ]
+   ]
+  },
+  {
+   "a": 833.21,
+   "b": 835.52,
+   "prima": "in modo significativo significa cercare aspetta",
+   "dopo": "germini. Affrontare il calopo meridiano in modo sintomatico significa cercare",
+   "segnali": [
+    [
+     "regia",
+     2.0,
+     "«aspetta» nel PRIMA"
+    ]
+   ]
+  },
+  {
+   "a": 836.22,
+   "b": 837.46,
+   "prima": "No, aspetta. Leggermi? Vabbè.",
+   "dopo": "Non lo deve stare a volare. No? Affrontare il calopo meridiano in modo sintomatico significa cercare stimolanti, caffè, zuccheri,",
+   "segnali": [
+    [
+     "regia",
+     2.0,
+     "«aspetta» nel PRIMA"
+    ]
+   ]
+  },
+  {
+   "a": 898.52,
+   "b": 902.26,
+   "prima": "lavoriamo sulla meccanica respiratoria che è collassata. Si parla...",
+   "dopo": "si parte dal diaframma perché è il punto in cui si scarica tutta la postura seduta della tua giornata",
+   "segnali": []
+  },
+  {
+   "a": 903.15,
+   "b": 905.09,
+   "prima": "Sì, par...",
+   "dopo": "Si parte dal diaframma, perché è il punto in cui si scarica tutta la postura seduta della tua giornata. Si lavora sulla mobilità delle prime cose.",
+   "segnali": []
+  },
+  {
+   "a": 934.97,
+   "b": 938.09,
+   "prima": "le tensioni del lavoro al computer si accumulano e contribuiscono a tirare le coste verso l'alto, bloccandole in posizioni di ispirazione costante.",
+   "dopo": "Non è un trattamento per la stanchezza, è un trattamento per restituire al tuo corpo la capacità di respirare bene anche quando sei seduto, una capacità",
+   "segnali": []
+  },
+  {
+   "a": 961.35,
+   "b": 964.33,
+   "prima": "la mattina presto. L'hai persa nel corso della tua giornata, ora dopo ora, e si recupera con un lavoro mirato sul corpo, non con un caffè in più.",
+   "dopo": "Le persone che facciamo passare attraverso questo percorso quasi sempre raccontano la stessa cosa. Non dicono lavoro di più, dicono.",
+   "segnali": []
+  },
+  {
+   "a": 991.63,
+   "b": 993.93,
+   "prima": "che il quarto caffè non gli serve più, che alle sei e mezza quando chiudono il computer hanno ancora qualcosa di sé per la serata invece di essere già zombie.",
+   "dopo": "Il momento peggiore per occuparsene è quando il calopo meridiano è diventato così abituale che hai smesso di considerarlo un problema, perché a quel punto stai danno.",
+   "segnali": []
+  },
+  {
+   "a": 1015.84,
+   "b": 1017.92,
+   "prima": "funziona al 50% e stai prendendo decisioni professionali, personali, importanti da quella versione lì.",
+   "dopo": "E nemmeno te ne accorgi, perché ormai è il tuo nuovo normale.",
+   "segnali": []
+  },
+  {
+   "a": 1022.41,
+   "b": 1031.76,
+   "prima": "da quella versione lì. E nemmeno te ne accorgi perché ormai è il tuo nuovo normale.",
+   "dopo": "il tuo cervello non si stanca, soffoca. Tieni rastretta questa frase perché è la cosa più importante di tutto il video. Il tuo cervello alle tre del pomeriggio",
+   "segnali": [
+    [
+     "pausa lunga",
+     0.5,
+     "9.4s di silenzio"
+    ]
+   ]
+  },
+  {
+   "a": 1047.95,
+   "b": 1049.31,
+   "prima": "tuo cervello alle tre del pomeriggio non si sta stancando, sta soffocando lentamente perché il tuo corpo ha smesso di portargli abbastanza ossigeno.",
+   "dopo": "non è un problema di testa, è un problema di gabbia toracica. Tieni la vicina la prossima volta che ti alzi per il quarto caffè. Nel prossimo",
+   "segnali": []
+  },
+  {
+   "a": 1056.07,
+   "b": 1057.76,
+   "prima": "Non è un problema di testa, è un problema di gabbia toracica. Tieni la vicina la prossima volta che ti alzi per il quarto caffè.",
+   "dopo": "Nel prossimo video ti spiego una cosa ancora più sorprendente che è strettamente collegata a questa, perché molte persone che soffrono di ansia e",
+   "segnali": []
+  },
+  {
+   "a": 1071.67,
+   "b": 1073.86,
+   "prima": "questa perché molte persone che soffrono di ansia in realtà non hanno un problema di ansia, hanno un problema di respirazione.",
+   "dopo": "Oh no, aspetta, è una frase troppo lunga, puoi tornare indietro, Brescia.",
+   "segnali": [
+    [
+     "regia",
+     2.0,
+     "«aspetta» nel DOPO"
+    ]
+   ]
+  },
+  {
+   "a": 1082.31,
+   "b": 1084.41,
+   "prima": "Oh no, aspetta, c'era una frase troppo lunga, puoi tornare indietro, Grisha.",
+   "dopo": "aspetta torna su torna su era perché troppo lungo il periodo noto ancora di più è lui",
+   "segnali": [
+    [
+     "regia",
+     2.0,
+     "«aspetta» nel PRIMA"
+    ],
+    [
+     "regia",
+     2.0,
+     "«aspetta» nel DOPO"
+    ],
+    [
+     "regia",
+     2.0,
+     "«torna su» nel DOPO"
+    ],
+    [
+     "regia",
+     2.0,
+     "«torna su» nel DOPO"
+    ]
+   ]
+  },
+  {
+   "a": 1084.61,
+   "b": 1087.85,
+   "prima": "La fase è troppo lunga, puoi tornare indietro Brescia.",
+   "dopo": "aspetta, torna su, torna su, perché è troppo lungo il periodo, no ancora di più, è lungo il periodo, non c'è un punto, ok, nel prossimo video.",
+   "segnali": [
+    [
+     "regia",
+     2.0,
+     "«aspetta» nel DOPO"
+    ],
+    [
+     "regia",
+     2.0,
+     "«torna su» nel DOPO"
+    ],
+    [
+     "regia",
+     2.0,
+     "«torna su» nel DOPO"
+    ]
+   ]
+  },
+  {
+   "a": 1096.3,
+   "b": 1098.33,
+   "prima": "Aspetta, torna su, torna su. Perché è troppo lungo il periodo. No, ancora di più. È lungo il periodo, non c'è un punto. Ok, nel prossimo video.",
+   "dopo": "Nel prossimo video ti spiego una cosa ancora più sorprendente che è strettamente collegata",
+   "segnali": [
+    [
+     "ripresa doppia",
+     3.0,
+     "ricomincia con «nel prossimo video»"
+    ],
+    [
+     "regia",
+     2.0,
+     "«Aspetta» nel PRIMA"
+    ],
+    [
+     "regia",
+     2.0,
+     "«torna su» nel PRIMA"
+    ],
+    [
+     "regia",
+     2.0,
+     "«torna su» nel PRIMA"
+    ]
+   ]
+  },
+  {
+   "a": 1099.43,
+   "b": 1101.18,
+   "prima": "il periodo noto ancora di più è lungo il periodo c'è un punto ok nel prossimo video quindi niente",
+   "dopo": "nel prossimo video ti spiego una cosa ancora più sorprendente che è strettamente collegata a questa perché molte persone che stanno",
+   "segnali": [
+    [
+     "ripresa doppia",
+     3.0,
+     "ricomincia con «nel prossimo video»"
+    ]
+   ]
+  },
+  {
+   "a": 1120.51,
+   "b": 1121.81,
+   "prima": "In realtà non hanno un problema di ansia, hanno un problema di respirazione meccanicamente alterata che il sistema nervoso interpreta come un pericolo.",
+   "dopo": "È un meccanismo che pochissimi conoscono e che cambia completamente il modo in cui guardi gli stati di agitazione tuoi o di chi ti sta vicino.",
+   "segnali": []
+  },
+  {
+   "a": 1161.43,
+   "b": 1172.59,
+   "prima": "i giorni in studio, con centinaia di persone reali che hanno smesso di credere alla narrativa della pigrizia e hanno iniziato a guardare quello che succede davvero.",
+   "dopo": "Mi sa che abbiamo finito, c'è il conteggio parole.",
+   "segnali": [
+    [
+     "regia",
+     2.0,
+     "«Mi sa che» nel DOPO"
+    ],
+    [
+     "regia",
+     2.0,
+     "«abbiamo finito» nel DOPO"
+    ],
+    [
+     "pausa lunga",
+     0.5,
+     "11.2s di silenzio"
+    ]
+   ]
+  },
+  {
+   "a": 1174.89,
+   "b": 1176.32,
+   "prima": "Mi sa che abbiamo finito, c'è il conteggio parole.",
+   "dopo": "ma è",
+   "segnali": [
+    [
+     "regia",
+     2.0,
+     "«Mi sa che» nel PRIMA"
+    ],
+    [
+     "regia",
+     2.0,
+     "«abbiamo finito» nel PRIMA"
+    ]
+   ]
+  },
+  {
+   "a": 1177.22,
+   "b": 1181.13,
+   "prima": "Mi sa che abbiamo finito, c'è il conteggio parole.",
+   "dopo": "Nice!",
+   "segnali": [
+    [
+     "regia",
+     2.0,
+     "«Mi sa che» nel PRIMA"
+    ],
+    [
+     "regia",
+     2.0,
+     "«abbiamo finito» nel PRIMA"
+    ]
+   ]
+  }
+ ],
+ "copione_multiple": []
+}

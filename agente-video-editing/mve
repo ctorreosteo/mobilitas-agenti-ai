@@ -1,0 +1,5 @@
+#!/bin/zsh
+# mve — il motore di montaggio. Uso: ./mve <fase> <slug>   (./mve -h per l'elenco)
+DIR=${0:A:h}
+[ -x "$DIR/.venv/bin/python" ] || { echo "manca il venv: python3 -m venv .venv && .venv/bin/pip install -r motore/requirements.txt"; exit 1; }
+PYTHONPATH="$DIR/motore" exec "$DIR/.venv/bin/python" -m motore "$@"

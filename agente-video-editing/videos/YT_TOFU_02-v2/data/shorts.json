@@ -1,0 +1,88 @@
+[
+ {
+  "t0": 387.867,
+  "t1": 432.17,
+  "durata": 45.911,
+  "frame": 1376,
+  "pezzi": [
+   {
+    "f0": 11624,
+    "n": 236,
+    "src_in": 561.277384,
+    "framing": "v_pieno",
+    "crop": [
+     1146,
+     0,
+     1608,
+     2160
+    ]
+   },
+   {
+    "f0": 11860,
+    "n": 299,
+    "src_in": 569.151917,
+    "framing": "v_stretto",
+    "crop": [
+     1424,
+     0,
+     1318,
+     1770
+    ]
+   },
+   {
+    "f0": 12159,
+    "n": 311,
+    "src_in": 579.128551,
+    "framing": "v_pieno",
+    "crop": [
+     1136,
+     0,
+     1608,
+     2160
+    ]
+   },
+   {
+    "f0": 12470,
+    "n": 136,
+    "src_in": 589.505584,
+    "framing": "v_stretto",
+    "crop": [
+     1204,
+     38,
+     1318,
+     1770
+    ]
+   },
+   {
+    "f0": 12606,
+    "n": 228,
+    "src_in": 594.560633,
+    "framing": "v_pieno",
+    "crop": [
+     1214,
+     0,
+     1608,
+     2160
+    ]
+   },
+   {
+    "f0": 12834,
+    "n": 118,
+    "src_in": 602.168233,
+    "framing": "v_stretto",
+    "crop": [
+     1358,
+     0,
+     1318,
+     1770
+    ]
+   }
+  ],
+  "hook": [
+   "IL CAFFÈ NON RISOLVE.",
+   "LO STA SCAVANDO."
+  ],
+  "titolo": "Il caffè delle 3 non risolve il calo: lo sta scavando",
+  "file": "YT_TOFU_02-v2_short3.mp4"
+ }
+]

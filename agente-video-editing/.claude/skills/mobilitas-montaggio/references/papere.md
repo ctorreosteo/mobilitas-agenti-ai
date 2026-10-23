@@ -2,73 +2,39 @@
 
 ## Il problema
 
-Whisper, su un file lungo, **non trascrive quello che sente: trascrive quello
-che ha senso**. Davanti a una ripresa doppia ("...un problema di postura. Devi
-iniziare a pensarlo come quello che e davvero, un problema di postura
-accumulata...") scrive la frase una volta sola, corretta. La papera sparisce dal
-testo e il montaggio la lascia dentro.
+Whisper **non trascrive quello che sente: trascrive quello che ha senso**. Davanti a una ripresa doppia scrive la frase una volta sola, corretta. La papera sparisce dal testo e il montaggio la lascia dentro.
 
-Su YT_TOFU_02 e successo almeno tre volte. Una di quelle papere — "in modo
-significativo... no, aspetta" a 13:39 — non compare in **nessuna** trascrizione
-d'insieme, ne quella intera ne quelle a finestre da 26 s.
+Lo fa su file intero, e lo fa anche su finestre da 9-14 secondi. In YT_TOFU_02 la v1 ha consegnato quattro difetti, tutti invisibili alle sue sonde:
 
-Il secondo modo di sbagliare e piu banale: al primo passaggio puo degenerare in
-loop e ripetere la stessa frase per centinaia di battute, lasciando il 60% del
-file non trascritto. Si evita normalizzando l'audio (`loudnorm=I=-20`) e
-passando `-mc 0`.
+| a (v1) | cosa | perché era sfuggita |
+|---|---|---|
+| 1:05 | "mancano ancora due ore e… / Mancano ancora due ore e mezza" | pausa di 1,4 s: sotto la soglia del ritmo, e la sonda da 9 s l'appianava |
+| 9:27 | "devi iniziare a pensare… / devi iniziare a pensarlo come…" | il taglio della ripresa precedente ripartiva un blocco troppo presto |
+| 10:29 | "Si pa… no… si parte dal diaframma" | nessun segnale guardava le parole troncate né i "no" isolati |
+| 11:36 | "si accorgono che il calo delle tre si è appiattito / si accorgono che il calo delle tre si appiattisce" | pausa di 0,8 s, sotto la soglia della sonda delle pause |
 
-## Il metodo che funziona
+La sonda da 14 s sul file v1 dava "Devi iniziare a pensarlo come quello che è davvero…": pulita. Quella da 2,6 s dava "a pensare… devi iniziare a pensare". **Per verificare un punto si usano clip da 2-4 s.**
 
-Sondare **le pause**, non il testo. Una ripresa doppia lascia sempre lo stesso
-segno strutturale: parlato, silenzio lungo, ripartenza.
+## I nove segnali (`motore/papere.py`)
 
-```bash
-# tutte le pause sopra 1,5 s, dall'inviluppo RMS
-.venv/bin/python -c "
-import json
-b=json.load(open('data/speech-blocks.json'))
-for (s1,e1),(s2,_) in zip(b,b[1:]):
-    if s2-e1>1.5: print(f'{e1:.2f} {s2:.2f}')
-" > /tmp/gaps.txt
+| # | segnale | peso | cosa prende |
+|---|---|---|---|
+| 1 | ripresa doppia (sonda pause > 1,2 s) | 3 | il DOPO ricomincia con le parole del PRIMA |
+| 2 | regia | 1,5-2 | "ho sbagliato", "aspetta", "torna su", "stoppa", "ciak", conteggi |
+| 3 | a-parte | 1,5 | blocco < 0,75 s con > 1,2 s di silenzio attorno |
+| 4 | ripetizione | 1 | stesso 4-gramma (2+ parole piene) entro 90 s |
+| 5 | appianata | 2 | ≥4 parole che le finestre hanno e la trascrizione intera no |
+| 6 | copione | 3 | frase del copione detta più volte; parlato fuori copione |
+| 7 | blocco ripetuto | 3 | un blocco ricomincia come uno dei due precedenti, o ne riprende la coda |
+| 8 | troncata / attacco monco | 2,5 | blocco che finisce con "…"; blocco breve che è l'inizio di uno dei due successivi |
+| 9 | interiezione / coda spuria | 1,5-2 | "no", "ok", "qua", "di" isolati da pause |
 
-./scripts/gap_probe.sh < /tmp/gaps.txt > /tmp/gapreport.txt
-```
+I segnali si fondono in regioni; ★★ da 2 punti, ★★★ da 4. Nessun segnale basta da solo, e nessuna combinazione sostituisce la lettura di `trascrizione.txt`.
 
-`gap_probe.sh` trascrive **separatamente** i 9 secondi prima e i 9 dopo ogni
-pausa. Due clip distinte: whisper non vede mai le due riprese insieme, quindi
-non puo fonderle. Il referto si legge a colpo d'occhio:
+## Cosa NON è una papera
 
-```
-########## PAUSA 631.75s -> 633.62s ##########
-PRIMA:  ...l'escursione e ridotta di meta.
-DOPO :  letteralmente meta e la persona non se ne accorge... No, ho sbagliato.
-```
+Il segnale 7 e il 4 suonano anche sulle **ripetizioni retoriche**: "ti sei convinto che sia normale… ti sei convinto che sia colpa tua", "cinque respiri profondi… cinque respiri profondi non lo decomprimono". Si tengono: vanno in `scartati` con il motivo, e se il QC le segnala su una giunta, il numero della giunta va in `giunte_ok`.
 
-Se il "DOPO" ricomincia con le parole del "PRIMA", e una ripresa doppia. Se
-contiene "ho sbagliato", "aspetta", "scusami", "torna su", "stoppa", e regia.
+## Quando aggiungere un segnale
 
-## Segnali di supporto
-
-Utili per non perdere niente, ma nessuno basta da solo:
-
-- **blocchi brevi e isolati**: parlato sotto 0,75 s con oltre 1,2 s di silenzio
-  da entrambi i lati. E la firma degli a-parte ("ok", "scusami", "no").
-- **n-grammi ripetuti** entro 90 s nella trascrizione a finestre corte.
-- **token troncati** (`...`) e interiezioni nel testo.
-
-## Attenzione ai buchi nel rilevatore
-
-Una pausa puo non comparire nella lista perche un respiro di 50 ms la spezza in
-due. Per la ricerca delle papere ignora i blocchi sotto 0,12 s; per i punti di
-taglio invece tienili, o rischi di tagliare dentro un respiro.
-
-## Verifica finale
-
-Non fidarti dell'EDL: ricontrolla il **file consegnato**.
-
-```bash
-./scripts/check_cut_audio.sh < data/junctions.txt
-```
-
-Ritrascrive 14 s attorno a ogni giunta. Ognuna deve richiudersi in una frase
-intera e grammaticale. Se una suona monca o ripetuta, il taglio e sbagliato.
+Ogni difetto che arriva a Carlos è un segnale che mancava. Prima di correggere il video, chiediti quale controllo l'avrebbe trovato, aggiungilo a `papere.py` e verifica che sul banco di prova (`videos/YT_TOFU_02-v2`) trovi ancora tutte le 18 papere senza nuovi falsi allarmi forti.

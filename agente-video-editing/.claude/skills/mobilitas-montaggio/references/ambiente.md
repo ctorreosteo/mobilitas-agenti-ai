@@ -29,19 +29,27 @@ Flag che contano:
 
 ## Python
 
-Il Python di sistema e protetto da PEP 668: `pip install` fallisce. Ogni
-progetto video ha il suo venv:
+Il Python di sistema e protetto da PEP 668: `pip install` fallisce. C'e un solo
+venv, nella cartella dell'agente, condiviso da tutti i video (`./mve` lo usa da solo):
 
 ```bash
 python3 -m venv .venv
-.venv/bin/pip install pillow numpy fonttools brotli
+.venv/bin/pip install -r motore/requirements.txt
 ```
+
+## Swift e Apple Vision
+
+`swiftc` (Xcode Command Line Tools) compila `motore/swift/visione.swift` in
+`.cache/visione` al primo uso, e lo ricompila se il sorgente cambia. Vision legge
+direttamente l'HEVC HLG della camera e applica la rotazione. Volti: ~50 frame/s;
+sagome della persona (qualita `accurate`): ~25 frame/s.
 
 `numpy` serve all'analisi dell'inviluppo, `pillow` al renderer grafico,
 `fonttools` a controllare la copertura dei font.
 
 ## Spazio disco
 
-Un video da 20 minuti occupa circa 13 GB fra sorgente (9 GB), intermedio
-gradato (2,7 GB) e consegne. L'intermedio si puo cancellare a lavoro chiuso:
-si rigenera da `make_hlg_lut.py` + il comando in `mobilitas-montaggio`.
+Un video da 20 minuti occupa circa 15 GB fra sorgente (9 GB, collegata e non
+copiata), pezzi del montato (`renders/pezzi/`, 2,7 GB), montato pulito (2,7 GB)
+e consegne. A lavoro chiuso `renders/pezzi/` si puo cancellare: si rigenera con
+`./mve monta`. Non serve piu l'intermedio 1080p della v1: si lavora dal 4K.
