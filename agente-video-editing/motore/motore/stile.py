@@ -22,12 +22,16 @@ MUTED = (143, 168, 190)
 # ---- tipografia -------------------------------------------------------------
 FONT_SANS = str(RISORSE / 'fonts/Montserrat-VF.ttf')
 FONT_MONO = str(RISORSE / 'fonts/IBMPlexMono-Bold.ttf')
+# icone: Material Symbols Rounded (Apache 2.0), sottoinsieme; i nomi in risorse/icone.txt
+FONT_ICONE = str(RISORSE / 'fonts/MaterialSymbolsRounded-sub.ttf')
+ICONE = str(RISORSE / 'icone.txt')
 
 SIZE = {
     'caption': 62,
     'card_value': 128,
     'card_unit': 40,
-    'card_sub': 34,
+    'card_sub': 30,
+    'card_scala': 20,       # etichette della scala sotto il numero
     'eyebrow': 26,
     'chapter': 92,
     'chapter_sub': 40,
@@ -37,6 +41,12 @@ SIZE = {
     'chip_role': 24,
 }
 TRACK = {'eyebrow': 0.22, 'caption': -0.015, 'chapter': -0.03, 'behind': -0.045}
+
+# ---- vetro ------------------------------------------------------------------
+# i pannelli sono vetro smerigliato: il video dietro sfocato, velato di navy
+VETRO_VELO = 0.66           # quanto navy sul video sfocato
+VETRO_RAGGIO = 26
+VETRO_OMBRA = 120           # alfa dell'ombra sotto il pannello
 
 # ---- zone -------------------------------------------------------------------
 CARD_W, CARD_TOP = 560, 150
@@ -54,6 +64,13 @@ CHAPTER_IN = 0.30
 CHAPTER_OUT = 0.30
 BEHIND_IN = 0.45            # il titolo dietro sale dal basso, lettera per lettera
 BEHIND_OUT = 0.35
+BEHIND_CHAR = 0.028         # sfasamento fra una lettera e la successiva
+BEHIND_DROP = 0.42          # quanto ci mette una lettera ad atterrare
+LAMA = 0.62                 # la lama di luce che attraversa la stanza
+CAP_POP = 0.16              # una parola del sottotitolo entra quando viene detta
+CAP_FORTE = 1.28            # corpo dei sottotitoli nelle frasi di enfasi
+COUNT_T0, COUNT_DUR = 0.22, 0.95   # il numero della card conta fino al valore
+TYPE_CHAR = 0.03            # scrittura a macchina delle etichette mono
 
 # ---- inquadrature -----------------------------------------------------------
 # Fattore di ingrandimento sul fotogramma 4K intero. 2.0 e il limite: oltre si
@@ -76,6 +93,12 @@ SIZE_SHORT = {'caption': 84, 'hook': 72, 'eyebrow': 30}
 def ease_out_expo(t):
     t = min(max(t, 0.0), 1.0)
     return 1.0 if t >= 1 else 1 - pow(2, -10 * t)
+
+
+def ease_out_back(t, k=1.7):
+    """arriva, supera di poco e torna: il rimbalzo delle lettere"""
+    t = min(max(t, 0.0), 1.0) - 1
+    return 1 + (k + 1) * t ** 3 + k * t ** 2
 
 
 def ease_out_cubic(t):

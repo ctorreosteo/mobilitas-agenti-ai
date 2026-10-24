@@ -192,9 +192,6 @@
       "frase": "non è colpa tua e quello"
     },
     {
-      "frase": "la tua lucidità non dipende"
-    },
-    {
       "frase": "stai ventilando non stai ossigenando"
     },
     {
@@ -208,39 +205,301 @@
     },
     {
       "frase": "respiro diversamente non dice"
-    },
-    {
-      "frase": "non è un problema di testa"
     }
   ],
   "card": [
+    {
+      "tipo": "orologio",
+      "frase": "sono le tre meno dieci",
+      "eyebrow": "ADESSO",
+      "ora": "14:50",
+      "prima": "14:00",
+      "testo": "LE TRE MENO DIECI",
+      "lato": "destra",
+      "durata": 5.5
+    },
+    {
+      "tipo": "icone",
+      "frase": "quarto caffè della giornata",
+      "eyebrow": "DELLA GIORNATA",
+      "icona": "local_cafe",
+      "n": 4,
+      "fantasma": 1,
+      "testo": "QUARTO CAFFÈ, O FORSE IL QUINTO",
+      "durata": 5.0
+    },
+    {
+      "tipo": "orologio",
+      "frase": "guardi l'orologio",
+      "eyebrow": "GUARDI L'OROLOGIO",
+      "ora": "15:45",
+      "prima": "14:50",
+      "fino": "18:15",
+      "testo": "LE 4 MENO UN QUARTO",
+      "settore_testo": "MANCANO ANCORA 2 ORE E MEZZA",
+      "voci": [
+        {
+          "frase": "mancano ancora due ore"
+        }
+      ],
+      "coda": 4.0
+    },
+    {
+      "tipo": "lista",
+      "frase": "che è il pranzo perché",
+      "eyebrow": "TI HANNO RACCONTATO",
+      "voci": [
+        {
+          "testo": "il pranzo",
+          "frase": "che è il pranzo perché"
+        },
+        {
+          "testo": "la glicemia",
+          "frase": "che è la glicemia"
+        },
+        {
+          "testo": "la digestione",
+          "frase": "che è la digestione"
+        },
+        {
+          "testo": "la mancanza di sonno",
+          "frase": "la mancanza di sonno"
+        },
+        {
+          "testo": "lo stress accumulato",
+          "frase": "lo stress accumulato"
+        },
+        {
+          "testo": "l'età",
+          "frase": "che è l'età"
+        },
+        {
+          "testo": "l'attività fisica",
+          "frase": "più attività fisica"
+        }
+      ],
+      "annulla": "ti hanno detto tutte queste",
+      "coda": 1.6
+    },
+    {
+      "tipo": "lista",
+      "frase": "hai saltato il pranzo",
+      "eyebrow": "HAI PROVATO",
+      "voci": [
+        {
+          "testo": "saltare il pranzo",
+          "frase": "hai saltato il pranzo"
+        },
+        {
+          "testo": "un pranzo leggero",
+          "frase": "un pranzo leggero"
+        },
+        {
+          "testo": "il digiuno intermittente",
+          "frase": "il digiuno intermittente"
+        },
+        {
+          "testo": "proteine invece di carboidrati",
+          "frase": "mangiare proteine invece"
+        }
+      ],
+      "annulla": "sei tornato esattamente allo stesso",
+      "coda": 2.4
+    },
+    {
+      "tipo": "lista",
+      "frase": "non è metabolico non è mentale",
+      "eyebrow": "IL CALO NON È",
+      "voci": [
+        {
+          "testo": "metabolico",
+          "segno": "no",
+          "frase": "non è metabolico non è mentale"
+        },
+        {
+          "testo": "mentale",
+          "segno": "no",
+          "frase": "non è mentale"
+        },
+        {
+          "testo": "questione di volontà",
+          "segno": "no",
+          "frase": "non è questione di volontà"
+        }
+      ],
+      "coda": 2.6
+    },
     {
       "frase": "il tuo cervello consuma",
       "eyebrow": "OSSIGENO",
       "valore": "20",
       "unita": "%",
-      "glossa": "circa: di tutto l'ossigeno che entra nel corpo, se lo prende il cervello"
+      "glossa": "circa: di tutto l'ossigeno che entra nel corpo, se lo prende il cervello",
+      "grafico": "punti"
     },
     {
       "frase": "pesa il 2",
       "eyebrow": "PESO",
       "valore": "2",
       "unita": "%",
-      "glossa": "quanto pesa il cervello sul totale del corpo"
+      "glossa": "quanto pesa il cervello sul totale del corpo",
+      "grafico": "punti",
+      "riferimento": {
+        "valore": "20",
+        "etichetta": "OSSIGENO"
+      }
     },
     {
-      "frase": "si abbassa di 3",
+      "tipo": "citazione",
+      "frase": "la tua lucidità non dipende",
+      "testo": "La tua lucidità non dipende da cosa pensi, ma dipende da quanto respiri.",
+      "coda": 1.4
+    },
+    {
+      "tipo": "lista",
+      "frase": "se respiri bene il cervello",
+      "eyebrow": "FISIOLOGIA DI BASE",
+      "voci": [
+        {
+          "testo": "respiri bene: il cervello funziona",
+          "segno": "si",
+          "frase": "se respiri bene il cervello"
+        },
+        {
+          "testo": "respiri male: il cervello si spegne",
+          "segno": "no",
+          "frase": "se respiri male"
+        }
+      ],
+      "coda": 3.2
+    },
+    {
+      "tipo": "postura",
+      "frase": "probabilmente sei seduto",
+      "eyebrow": "LA TUA POSTURA",
+      "zone": [
+        {
+          "zona": "spalle",
+          "testo": "spalle proiettate in avanti",
+          "frase": "spalle leggermente proiettate"
+        },
+        {
+          "zona": "testa",
+          "testo": "testa inclinata verso lo schermo",
+          "frase": "la testa è inclinata"
+        },
+        {
+          "zona": "lombare",
+          "testo": "la lombare non tocca lo schienale",
+          "frase": "la zona lombare non"
+        },
+        {
+          "zona": "bacino",
+          "testo": "bacino ruotato indietro",
+          "frase": "bacino è ruotato"
+        }
+      ],
+      "coda": 3.0
+    },
+    {
+      "tipo": "catena",
+      "frase": "ecco cosa succede a quella postura",
+      "eyebrow": "ORA DOPO ORA",
+      "voci": [
+        {
+          "testo": "spalle in avanti: torace alto chiuso",
+          "icona": "accessibility_new",
+          "frase": "le spalle in avanti chiudono"
+        },
+        {
+          "testo": "testa avanti: tratto cervicale compresso",
+          "icona": "monitor",
+          "frase": "comprime il tratto cervicale"
+        },
+        {
+          "testo": "prime coste tirate in alto, bloccate",
+          "icona": "skeleton",
+          "frase": "tira le prime coste"
+        },
+        {
+          "testo": "curva lombare piatta, bacino indietro",
+          "icona": "event_seat",
+          "frase": "la curva lombare si appiattisce"
+        },
+        {
+          "testo": "diaframma schiacciato contro gli organi addominali",
+          "icona": "pulmonology",
+          "frase": "lavora schiacciato contro"
+        }
+      ],
+      "coda": 2.2
+    },
+    {
+      "tipo": "anatomia",
+      "frase": "il diaframma è il muscolo principale",
       "eyebrow": "DIAFRAMMA",
-      "valore": "3-4",
-      "unita": "cm",
-      "glossa": "di escursione a ogni respiro, quando è libero"
+      "respiro": {
+        "escursione": 1.0,
+        "etichetta": "3-4 CM"
+      },
+      "voci": [
+        {
+          "frase": "si abbassa di 3"
+        }
+      ],
+      "zone": [
+        {
+          "zona": "diaframma",
+          "testo": "il muscolo principale della respirazione",
+          "frase": "il muscolo principale"
+        },
+        {
+          "zona": "polmoni_bassi",
+          "testo": "le parti basse dei polmoni",
+          "frase": "parti basse dei polmoni"
+        }
+      ],
+      "coda": 2.4
     },
     {
-      "frase": "si muove di un",
-      "eyebrow": "DOPO 4-5 ORE",
-      "valore": "1",
-      "unita": "cm",
-      "glossa": "forse meno: il diaframma compresso smette di abbassarsi davvero"
+      "tipo": "anatomia",
+      "frase": "quando il diaframma è compresso",
+      "eyebrow": "DOPO 4-5 ORE SEDUTO",
+      "respiro": {
+        "escursione": 0.28,
+        "etichetta": "1 CM"
+      },
+      "fantasma": {
+        "escursione": 1.0,
+        "etichetta": "3-4 CM"
+      },
+      "voci": [
+        {
+          "frase": "si muove di un"
+        }
+      ],
+      "coda": 3.0
+    },
+    {
+      "tipo": "lista",
+      "frase": "la respirazione diventa alta",
+      "eyebrow": "LA RESPIRAZIONE DIVENTA",
+      "corpo": 40,
+      "voci": [
+        {
+          "testo": "alta",
+          "frase": "diventa alta"
+        },
+        {
+          "testo": "toracica",
+          "frase": "toracica corta"
+        },
+        {
+          "testo": "corta",
+          "frase": "corta continui"
+        }
+      ],
+      "coda": 2.2
     },
     {
       "frase": "30 o 40",
@@ -250,18 +509,167 @@
       "glossa": "di capacità funzionale in meno, nella postura seduta prolungata"
     },
     {
-      "frase": "per 40 minuti",
+      "tipo": "curva",
+      "frase": "e in effetti funziona",
       "eyebrow": "IL CAFFÈ",
-      "valore": "40",
-      "unita": "min",
-      "glossa": "di spinta, forse un'ora: poi cadi più in basso di prima"
+      "valori": [
+        0.42,
+        0.44,
+        0.86,
+        0.84,
+        0.55,
+        0.26,
+        0.22
+      ],
+      "base": 0.42,
+      "base_testo": "PRIMA DEL CAFFÈ",
+      "asse_x": "TEMPO",
+      "asse_y": "LUCIDITÀ",
+      "etichette": [
+        {
+          "x": 0.38,
+          "testo": "40 MINUTI, FORSE UN'ORA",
+          "frase": "per 40 minuti"
+        },
+        {
+          "x": 0.93,
+          "testo": "PIÙ IN BASSO DI PRIMA",
+          "frase": "cadi più in basso"
+        }
+      ],
+      "coda": 2.4
+    },
+    {
+      "tipo": "catena",
+      "frase": "il caffè è un eccitante",
+      "eyebrow": "UN MOTIVO PRECISO",
+      "voci": [
+        {
+          "testo": "il caffè eccita il sistema nervoso simpatico",
+          "icona": "local_cafe",
+          "frase": "il caffè è un eccitante"
+        },
+        {
+          "testo": "attivazione, attenzione, allerta",
+          "icona": "bolt",
+          "frase": "modalità attivazione"
+        },
+        {
+          "testo": "respirazione più alta, più toracica, più corta",
+          "icona": "air",
+          "frase": "la respirazione diventa ancora"
+        },
+        {
+          "testo": "la gabbia toracica si chiude di più",
+          "icona": "pulmonology",
+          "frase": "la gabbia toracica si chiude"
+        }
+      ],
+      "coda": 2.4
     },
     {
       "frase": "ridotta di metà",
       "eyebrow": "IN STUDIO",
       "valore": "50",
       "unita": "%",
-      "glossa": "di escursione in meno, in molte persone con un lavoro sedentario da anni"
+      "glossa": "di escursione in meno, in molte persone con un lavoro sedentario da anni",
+      "grafico": "anello",
+      "icona": "pulmonology"
+    },
+    {
+      "tipo": "lista",
+      "frase": "si lavora 30 minuti",
+      "eyebrow": "IN STUDIO, 30 MINUTI",
+      "voci": [
+        {
+          "testo": "rilascio del diaframma",
+          "frase": "rilascio del diaframma"
+        },
+        {
+          "testo": "mobilità delle prime coste",
+          "frase": "mobilità delle prime coste"
+        },
+        {
+          "testo": "decompressione del tratto cervico-dorsale",
+          "frase": "decompressione del tratto"
+        }
+      ],
+      "coda": 2.4
+    },
+    {
+      "tipo": "barre",
+      "frase": "è come prendere un elastico",
+      "eyebrow": "UN ELASTICO",
+      "voci": [
+        {
+          "etichetta": "TIRATO PER",
+          "testo": "10 ANNI",
+          "misura": 315360000,
+          "frase": "tirato per 10 anni"
+        },
+        {
+          "etichetta": "RILASCIATO PER",
+          "testo": "10 SECONDI",
+          "misura": 10,
+          "frase": "per 10 secondi"
+        }
+      ],
+      "coda": 3.0
+    },
+    {
+      "tipo": "lista",
+      "frase": "in modo sintomatico significa",
+      "eyebrow": "SINTOMATICO",
+      "lato": "sinistra",
+      "larghezza": 470,
+      "voci": [
+        {
+          "testo": "stimolanti",
+          "frase": "cercare stimolanti"
+        },
+        {
+          "testo": "caffè",
+          "frase": "stimolanti caffè"
+        },
+        {
+          "testo": "zuccheri",
+          "frase": "zuccheri pause"
+        },
+        {
+          "testo": "pause forzate",
+          "frase": "pause forzate"
+        },
+        {
+          "testo": "app per la concentrazione",
+          "frase": "app per la concentrazione"
+        }
+      ],
+      "durata": 24.0
+    },
+    {
+      "tipo": "lista",
+      "frase": "affrontarlo in modo sistemico",
+      "eyebrow": "SISTEMICO",
+      "lato": "destra",
+      "larghezza": 470,
+      "voci": [
+        {
+          "testo": "il corpo",
+          "segno": "si",
+          "frase": "lavorare sul corpo"
+        },
+        {
+          "testo": "la gabbia toracica",
+          "segno": "si",
+          "frase": "sulla gabbia toracica che"
+        },
+        {
+          "testo": "il diaframma",
+          "segno": "si",
+          "frase": "sul diaframma che non"
+        }
+      ],
+      "coda": 4.0
     },
     {
       "frase": "ti compra 20 minuti",
@@ -269,6 +677,64 @@
       "valore": "20",
       "unita": "min",
       "glossa": "di lucidità apparente, nel migliore dei casi"
+    },
+    {
+      "tipo": "anatomia",
+      "frase": "si parte dal diaframma",
+      "eyebrow": "IN STUDIO",
+      "respiro": {
+        "escursione": 0.7
+      },
+      "zone": [
+        {
+          "zona": "diaframma",
+          "testo": "il diaframma",
+          "frase": "si parte dal diaframma"
+        },
+        {
+          "zona": "coste",
+          "testo": "le prime coste",
+          "frase": "delle prime coste e"
+        },
+        {
+          "zona": "sterno",
+          "testo": "lo sterno",
+          "frase": "e dello sterno"
+        },
+        {
+          "zona": "cervicale",
+          "testo": "il tratto cervico-dorsale",
+          "frase": "si rilascia il tratto"
+        }
+      ],
+      "coda": 2.6
+    },
+    {
+      "tipo": "numero",
+      "frase": "funziona al 50",
+      "eyebrow": "FUNZIONA AL",
+      "valore": "50",
+      "unita": "%",
+      "glossa": "una versione di te stesso, per metà della tua giornata lavorativa",
+      "grafico": "batteria"
+    },
+    {
+      "tipo": "lista",
+      "frase": "non è un problema di testa",
+      "eyebrow": "IL PROBLEMA",
+      "voci": [
+        {
+          "testo": "di testa",
+          "segno": "no",
+          "frase": "non è un problema di testa"
+        },
+        {
+          "testo": "di gabbia toracica",
+          "segno": "si",
+          "frase": "problema di gabbia toracica"
+        }
+      ],
+      "coda": 2.4
     }
   ],
   "capitoli": [

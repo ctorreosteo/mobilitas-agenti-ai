@@ -1,15 +1,23 @@
 ---
 name: mobilitas-grafica
-description: Come si producono grafica, suono e formati derivati dei video @Studio_Mobilitas — sottotitoli karaoke, card che sanno dov'è il volto, titoli che passano dietro la presentatrice (sagoma Apple Vision), sound design sintetizzato, Shorts 9:16 dal 4K, miniature scelte sulla qualità del volto. Renderer Pillow che scrive RGBA nella pipe di ffmpeg. Usala quando un video deve uscire con grafica, suoni, Shorts o miniature, o quando qualcosa di questo va corretto.
+description: Come si producono grafica, suono e formati derivati dei video @Studio_Mobilitas — compositore che vede il video (vetro smerigliato, colore che si spegne, spinte di camera), dieci tipi di infografica sincronizzati alla voce, sottotitoli cinetici, card che sanno dov'è il volto, titoli che passano dietro la presentatrice (sagoma Apple Vision), sound design sintetizzato, Shorts 9:16 dal 4K, miniature scelte sulla qualità del volto. Renderer Pillow che compone il fotogramma e lo passa in pipe a ffmpeg. Usala quando un video deve uscire con grafica, suoni, Shorts o miniature, o quando qualcosa di questo va corretto.
 ---
 
 # mobilitas-grafica
 
 Lo stile lo detta `mobilitas-style`; qui c'è come si produce. Le decisioni (quali card, quali titoli, quali Shorts) sono in `regia.json` (skill `mobilitas-regia`).
 
-## Perché Pillow in pipe
+## Perché Pillow in pipe, e perché compone tutto il fotogramma
 
-Questo `ffmpeg` non ha **né `libass` né `drawtext`**: il testo va rasterizzato fuori. Un compositore a browser su 24.000 frame sarebbe lento e dipenderebbe dalla rete. Il livello grafico si genera con Pillow e va **dritto nella pipe di ffmpeg** come RGBA grezzo (`motore/grafica/render.py`). Regge perché gli sprite si disegnano una volta sola e ogni banda di sottotitolo una volta per parola attiva.
+Questo `ffmpeg` non ha **né `libass` né `drawtext`**: il testo va rasterizzato fuori. Un compositore a browser su 24.000 frame sarebbe lento e dipenderebbe dalla rete.
+
+Da v4 il renderer **compone il fotogramma intero**: legge il montato pulito da ffmpeg (RGB, matrice BT.709 dichiarata in ingresso e in uscita: senza, la pelle cambia tono), ci disegna sopra e scrive RGB grezzo all'encoder (`motore/grafica/render.py`, `monta.finale`). Vedere il video serve a tre cose che un livello trasparente non può fare:
+
+- **vetro smerigliato**: sotto ogni pannello il video sfocato e velato di navy, con ombra e filo di luce;
+- **colore che si spegne** dietro di lei durante i titoli: la stanza va in blu notte, lei resta a colori (la sagoma);
+- **spinta di camera**: +5,5% sui titoli (sale in 1,2 s, torna nell'uscita), +3,5% lineare sulle enfasi.
+
+Moduli: `grafica/base.py` (primitive: testo, icone, tela sovracampionata, vetro), `grafica/info.py` (i dieci tipi di infografica), `grafica/render.py` (scena, sottotitoli, titoli dietro, apertura e chiusura, compositore).
 
 ## Le fasi
 
@@ -25,28 +33,43 @@ Questo `ffmpeg` non ha **né `libass` né `drawtext`**: il testo va rasterizzato
 
 `grafica` riscrive `grafica.json` da capo: dopo `grafica` va sempre rifatto `inquadra` (`./mve stato` lo dice).
 
-## Sottotitoli
+## Sottotitoli cinetici
 
-Gruppi da 2-3 parole, chiusi da punteggiatura di fine frase, pausa oltre 0,45 s o 2,4 s di durata. La parola attiva è in menta con una barretta sotto. Si spengono durante i titoli e la chiusura (dicono le stesse parole).
+Gruppi da 2-3 parole, chiusi da punteggiatura di fine frase, pausa oltre 0,45 s o 2,4 s di durata. Niente pillola di fondo: testo paper con contorno navy e ombra morbida. Ogni parola **entra quando viene detta** (rimbalzo piccolo, 0,16 s); la parola attiva è navy su una **pillola menta che scivola** dalla parola precedente in 0,09 s. Nelle frasi di `enfasi` il corpo cresce di 1,28x e la scena si vela di navy ai bordi. Si spengono durante i titoli e la chiusura (dicono le stesse parole).
 
 Le parole vengono da `parole-montato.json`, trascritto a pezzi da 10 s: la versione su file intero perdeva la prima parola di molte frasi (in YT_TOFU_02 143 parole su 2161). Il QC controlla che i sottotitoli coprano almeno il 99% delle parole.
 
 Le correzioni di trascrizione (`correzioni` in regia) toccano solo il testo, mai l'audio. Oltre all'impresso si consegna l'SRT (`consegna`).
 
-## Card
+## Infografiche (card)
 
-Ancorate alla frase, 0,25 s prima, per 4,2 s. Una card che cadrebbe durante un titolo aspetta che esca. Il lato lo sceglie `inquadra`: proietta il riquadro della testa (volto di Vision + capelli) nel taglio in cui la card sta a schermo e prende il lato con più margine. Il margine minimo sta in `grafica.json` (`margine_volto`, in px) e il QC fallisce se una card tocca la testa.
+Dieci tipi, scelti in regia con `tipo` (campi in `mobilitas-regia/references/schema.md`): `numero` (contatore con `barra`, `anello`, `punti`, `batteria`), `barre`, `orologio`, `icone`, `lista`, `catena`, `citazione`, `anatomia`, `postura`, `curva`. Ogni infografica disegna solo il contenuto; il pannello di vetro lo mette la scena.
+
+- **Le voci seguono la voce.** Ogni voce con `frase` diventa `t` (secondi dall'ingresso) nella fase `grafica`, ed entra quando lei la dice. La card dura fino all'ultima voce + `coda`.
+- **Testata comune**: eyebrow battuto a macchina, filo menta che si disegna. Poi ogni tipo ha il suo ingresso: il numero conta (0,95 s) e il grafico si riempie insieme, le voci di lista scivolano e i segni rimbalzano, i nodi della catena si collegano con una goccia di luce, l'orologio gira fino all'ora e lo spicchio del tempo che manca si apre, l'anatomia respira (periodo 3,4 s) e la misura compare quando la dice, la figura seduta si affloscia lasciando il fantasma della postura eretta, la curva si disegna in modo da arrivare a ogni etichetta mentre lei la pronuncia.
+- **Le misure si leggono, non si inventano**: scale, quadranti e assi portano solo numeri ed etichette strutturali.
+- Finito l'ingresso il contenuto si congela in uno sprite; quelli che si muovono sempre (anatomia, orologio, catena, curva, punto che pulsa) no.
+- **Lato e volto**: `inquadra` chiede a `info.misura` larghezza e altezza vere, proietta la testa nel taglio e sceglie il lato con più margine; due card a schermo insieme vanno su lati opposti; `lato` in regia vince. Il QC fallisce se una card tocca la testa.
+- **Prova dei tipi**: `controlli/movimento.jpg` mostra il primo di ogni tipo a tre istanti del suo tempo a schermo.
+- Il numero ha la scala per unità (`%` 0-100, `cm` 0-1,25x, `min` 0-60); `prima` fa scendere il numero lasciando il fantasma; `riferimento` sui `punti` disegna a contorno l'altra quantità ("2% del peso" contro "20% dell'ossigeno").
 
 ## Titoli dietro
 
-Il capitolo si scrive a tutta larghezza e si ritaglia con la sagoma della persona: passa dietro di lei. Per costruzione non le copre mai il volto.
+Il capitolo si scrive grande e si ritaglia con la sagoma della persona: passa dietro di lei. Per costruzione non le copre mai il volto.
 
-- Entra sulla parola d'ancoraggio, le righe salgono una dopo l'altra (0,45 s, 0,12 s di sfasamento), dura 2,6-4 s.
-- Lo sfondo dietro si scurisce (navy, alfa 120) per il contrasto della menta sul teal.
-- L'eyebrow sta **sopra** la persona, allineato alla prima riga: dietro la testa sparirebbe.
-- **La posizione si misura.** Le righe vanno all'altezza e allo spostamento orizzontale in cui la persona nasconde meno lettere della **parola peggiore** (non della media: "NON M▒▒BOLICO" non si legge anche con il 20% medio coperto). Il renderer stampa la percentuale per ogni titolo. Sopra il 30% conviene accorciare il titolo o cambiarlo.
+- **Il layout si misura sulla sagoma**, sulla **parola peggiore** (non sulla media: "NON M▒▒BOLICO" non si legge anche con il 20% medio coperto). Candidati: due righe al centro (fino a 250 px, ogni riga può scorrere di ±260 px), colonna a sinistra, colonna a destra (le parole impilate, allineate al bordo, a due corpi). La colonna vince solo se legge davvero meglio (penalità sul corpo più piccolo). In YT_TOFU_02 il centro lasciava coperte il 22-33% delle parole peggiori, le colonne 0-8%. Il renderer stampa layout, corpo e copertura per ogni titolo: sopra il 30% conviene accorciare il titolo.
+- In colonna la seconda riga torna **gigante, a solo contorno**, dall'altra parte della stanza (l'"eco"): resta la scala monumentale, e la parola è già a schermo.
+- Ingresso: le lettere salgono una a una con rimbalzo (0,028 s di sfasamento, 0,42 s per lettera), la seconda riga 0,12 s dopo; una **lama di luce menta** inclinata attraversa la stanza in 0,62 s, dietro di lei; un filo menta si disegna sotto l'ultima riga. Uscita: tutto sale e svanisce in 0,35 s.
+- Lo sfondo dietro si scurisce (navy, alfa 125) per il contrasto della menta sul teal.
+- L'eyebrow porta il numero del capitolo (`02 · IL CAFFÈ`), sta **sopra** la persona, si batte a macchina.
 - Il taglio durante il titolo è **largo**: al medio la persona è più larga e nasconde un terzo in più.
 - Le sagome si calcolano sul montato pulito: se cambia l'inquadratura, vanno rifatte (`sagome`).
+
+## Apertura, chip, chiusura, avanzamento
+
+- Apertura e chip: pannello a tendina, eyebrow a macchina, righe che salgono ciascuna da una feritoia.
+- Chiusura: trama di fili menta che scorre, titolo che cade lettera per lettera, bordo della CTA che si disegna in senso orario e poi pulsa.
+- Avanzamento: barra a segmenti, uno per capitolo; il segmento corrente è più acceso.
 
 ## Stacchi pieni
 
@@ -54,7 +77,7 @@ Con `"dietro": false` il capitolo è una scheda piena navy di 1,75 s che entra 1
 
 ## Sound design (`suono`)
 
-Sintetizzato con numpy, niente stock: whoosh all'ingresso delle card (nel panorama dal lato della card), tick sul numero, salita + colpo basso sui titoli dietro, fruscio corto sui punch-in d'enfasi, colpo morbido su apertura e chiusura. Tutto 10-16 dB sotto la voce. Musica solo se c'è un file in `assets/musica/`: in loop a −30 LUFS, con sidechain sotto la voce.
+Sintetizzato con numpy, niente stock: whoosh all'ingresso delle card (nel panorama dal lato della card), tick del contatore che rallentano con il numero e un tick acuto quando si ferma, salita + colpo basso + sibilo della lama sui titoli dietro, fruscio corto sui punch-in d'enfasi, colpo morbido su apertura e chiusura. Tutto 10-16 dB sotto la voce. Musica solo se c'è un file in `assets/musica/`: in loop a −30 LUFS, con sidechain sotto la voce.
 
 ## Shorts
 
@@ -66,4 +89,4 @@ Tre varianti 1280x720 dai fotogrammi con la qualità del volto più alta per Vis
 
 ## Verifica
 
-Guarda **sempre** `controlli/anteprima.jpg` prima del render finale: gli errori di posizione si vedono solo lì. Comandi passo per passo e tempi: `references/pipeline.md`.
+Guarda **sempre** `controlli/anteprima.jpg` (elementi a ingresso finito) e `controlli/movimento.jpg` (primo titolo, prima card, apertura, chiusura e un sottotitolo a più istanti dell'ingresso) prima del render finale: gli errori di posizione e di animazione si vedono solo lì. Comandi passo per passo e tempi: `references/pipeline.md`.

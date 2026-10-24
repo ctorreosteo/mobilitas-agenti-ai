@@ -34,7 +34,6 @@ PRIO = {'largo': 3, 'medio': 2, 'stretto': 1}
 PEZZO_MAX = 13.0
 PEZZO_TIPICO = 9.0
 PEZZO_MIN = 1.0
-CARD_H = 340
 
 
 def candidati(W):
@@ -212,12 +211,19 @@ def _faccia_out(tr, p, a, b, SW_, SH_):
 
 def _lati(G, pezzi, tr, SW_, SH_):
     """per ogni elemento in alto: il lato libero, misurato sul volto nel suo taglio"""
-    items = [('card', c, S.CARD_W) for c in G['cards']]
+    # le misure vengono dal renderer: la card con la scala e piu alta di un tempo
+    from .grafica.render import Lockup
+    from .grafica.info import misura
+    items = [('card', c) + misura(c) for c in G['cards']]
     if G.get('opening'):
-        items.append(('apertura', G['opening'], S.CARD_W))
+        lk = Lockup(G['opening'])
+        items.append(('apertura', G['opening'], lk.width, lk.height))
     if G.get('chip'):
-        items.append(('chip', G['chip'], 380))
-    for kind, c, w in items:
+        lk = Lockup(G['chip'], chip=True)
+        items.append(('chip', G['chip'], lk.width, lk.height))
+    for c in G['cards']:
+        c.pop('side', None)
+    for kind, c, w, card_h in items:
         heads = []
         for p in pezzi:
             a, b = max(c['s'], p['edit_in']), min(c['e'], p['edit_in'] + p['n'] / FPS)
@@ -225,7 +231,7 @@ def _lati(G, pezzi, tr, SW_, SH_):
                 h = _faccia_out(tr, p, a, b, SW_, SH_)
                 if h:
                     heads.append(h)
-        top, bot = S.CARD_TOP, S.CARD_TOP + CARD_H
+        top, bot = S.CARD_TOP, S.CARD_TOP + card_h
         boxes = {'left': (S.SAFE, S.SAFE + w), 'right': (S.W - S.SAFE - w, S.W - S.SAFE)}
         dist = {}
         for side, (x0, x1) in boxes.items():
@@ -236,6 +242,14 @@ def _lati(G, pezzi, tr, SW_, SH_):
                 d = min(d, hx0 - x1 if side == 'left' else x0 - hx1)
             dist[side] = d
         side = 'left' if dist['left'] >= dist['right'] - 40 else 'right'
+        # due card a schermo insieme vanno su lati opposti; `lato` in regia decide da solo
+        accanto = [o for o in G['cards'] if o is not c and o.get('side') and o['s'] < c['e'] and c['s'] < o['e']]
+        if accanto and kind == 'card':
+            occupato = {o['side'] for o in accanto}
+            if side in occupato and len(occupato) == 1:
+                side = 'right' if side == 'left' else 'left'
+        if c.get('lato'):
+            side = {'sinistra': 'left', 'destra': 'right'}.get(c['lato'], c['lato'])
         c['side'] = side
         c['margine_volto'] = round(dist[side], 1) if dist[side] < 1e8 else None
         if dist[side] < 0:

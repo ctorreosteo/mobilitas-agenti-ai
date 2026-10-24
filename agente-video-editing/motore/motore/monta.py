@@ -6,7 +6,8 @@ ricodificare. Pezzi separati vuol dire tre cose: si renderizzano in parallelo,
 un pezzo uguale non si rifa (cache sul contenuto), e una correzione di
 inquadratura costa secondi invece di un render intero.
 
-`finale`: montato pulito + livello grafico in pipe (RGBA grezzo) + voce e
+`finale`: il renderer compone ogni fotogramma sul montato pulito (grafica,
+vetro, spinte di camera) e lo passa in RGB grezzo; qui si codifica con voce e
 sound design mixati -> master.
 """
 import concurrent.futures as cf
@@ -138,28 +139,29 @@ def foglio_inquadrature(P, video, I):
 
 
 def finale(slug, limite=None):
-    from .grafica import render as R
+    """il renderer legge il montato pulito, compone ogni fotogramma (grafica,
+    vetro, spinte di camera) e lo scrive in RGB; qui si codifica con il mix"""
     P = Progetto(slug)
-    E = P.leggi('edl.json')
     pulito = P.render(f"{slug}_pulito.mp4")
     mix = P.asset('mix-finale.wav')
+    if not pulito.exists():
+        sys.exit(f"manca renders/{pulito.name}: lancia prima `monta`")
     if not mix.exists():
         sys.exit("manca assets/mix-finale.wav: lancia prima `suono`")
     out = P.render(f"{slug}_FINALE.mp4" if not limite else f"{slug}_prova.mp4")
     cmd = ['ffmpeg', '-hide_banner', '-nostdin', '-y', '-loglevel', 'error', '-stats',
-           '-i', str(pulito), '-i', str(mix),
-           '-f', 'rawvideo', '-pixel_format', 'rgba', '-video_size', '1920x1080',
-           '-framerate', '30000/1001', '-i', '-',
-           '-filter_complex', f"[0:v][2:v]overlay=format=auto:shortest=0:eof_action=pass,{colore.filtro_finale()}[v]",
-           '-map', '[v]', '-map', '1:a', *X264, '-preset', os.environ.get('PRESET', 'medium'),
+           '-f', 'rawvideo', '-pixel_format', 'rgb24', '-video_size', '1920x1080',
+           '-framerate', '30000/1001', '-i', '-', '-i', str(mix),
+           '-vf', f"scale=out_color_matrix=bt709:out_range=tv:flags=accurate_rnd+full_chroma_int,"
+                  f"{colore.filtro_finale()}",
+           '-map', '0:v', '-map', '1:a', *X264, '-preset', os.environ.get('PRESET', 'medium'),
            '-crf', os.environ.get('CRF', '17'), '-x264-params', 'keyint=60:min-keyint=30:bframes=3:ref=4',
            '-c:a', 'aac', '-b:a', '192k', '-ar', '48000', '-ac', '2', '-movflags', '+faststart']
     if limite:
         cmd += ['-t', str(limite)]
     cmd.append(str(out))
-    env = dict(os.environ)
     gen = subprocess.Popen([sys.executable, '-m', 'motore.grafica.render', slug] +
-                           ([str(limite)] if limite else []), stdout=subprocess.PIPE, env=env)
+                           ([str(limite)] if limite else []), stdout=subprocess.PIPE, env=dict(os.environ))
     rc = subprocess.call(cmd, stdin=gen.stdout)
     gen.stdout.close()
     gen.wait()

@@ -135,6 +135,49 @@ def gruppi(W, nascosti):
     return res
 
 
+VOCI = ('voci', 'zone', 'etichette')
+
+
+def card(W, c):
+    """una card di regia -> elemento del piano. Le voci con `frase` prendono `t`,
+    i secondi dall'ingresso della card in cui lei la dice"""
+    tipo = c.get('tipo', 'numero')
+    i = ancora(W, c['frase'], cosa=f'card {tipo}')
+    s = round(W[i]['s'] - 0.25, 3)
+    out = {k: v for k, v in c.items() if k not in ('valore', 'unita', 'glossa')}
+    out.update({'tipo': tipo, 's': s, 'eyebrow': c.get('eyebrow', '')})
+    if tipo == 'numero':
+        out.update({'value': c['valore'], 'unit': c['unita'], 'sub': c['glossa']})
+    fine = 0.0
+    for k in VOCI:
+        voci = []
+        for v in c.get(k, []):
+            v = dict(v)
+            if v.get('frase'):
+                j = ancora(W, v['frase'], dopo=W[i]['s'] - 1.5, cosa=f"{tipo} «{v.get('testo', v['frase'])}»")
+                v['t'] = round(W[j]['s'] - s, 3)
+                fine = max(fine, v['t'])
+            voci.append(v)
+        if voci:
+            out[k] = voci
+    if c.get('annulla'):
+        j = ancora(W, c['annulla'], dopo=W[i]['s'], cosa=f'{tipo} annulla')
+        out['annulla_t'] = round(W[j]['s'] - s, 3)
+        fine = max(fine, out['annulla_t'] + 0.8)
+    if tipo == 'citazione':
+        # le parole della frase, una per una: il karaoke dentro le virgolette
+        n = len(c['testo'].split())
+        j = ancora(W, ' '.join(c['testo'].split()[:4]), dopo=W[i]['s'] - 1.5, cosa='citazione')
+        if [norm(w['t']) for w in W[j:j + n]] != [norm(x) for x in c['testo'].split()]:
+            sys.exit(f"citazione: «{c['testo']}» non e la frase come la dice "
+                     f"(trascritta: «{' '.join(w['t'] for w in W[j:j + n])}»)")
+        out['parole_t'] = [round(w['s'] - s, 3) for w in W[j:j + n]]
+        fine = max(fine, out['parole_t'][-1])
+    dur = c.get('durata') or max(4.2, fine + c.get('coda', 2.6))
+    out['e'] = round(s + dur, 3)
+    return out
+
+
 def piano(slug):
     P = Progetto(slug)
     R = P.regia()
@@ -144,10 +187,7 @@ def piano(slug):
 
     cards = []
     for c in R.get('card', []):
-        i = ancora(W, c['frase'], cosa='card')
-        s = round(W[i]['s'] - 0.25, 3)
-        cards.append({'s': s, 'e': round(s + c.get('durata', 4.2), 3), 'eyebrow': c['eyebrow'],
-                      'value': c['valore'], 'unit': c['unita'], 'sub': c['glossa'], 'frase': c['frase']})
+        cards.append(card(W, c))
 
     capitoli, dopo = [], 0.0
     for c in R.get('capitoli', []):
@@ -173,6 +213,12 @@ def piano(slug):
                 shift = t['e'] + 0.15 - c['s']
                 c['s'], c['e'] = round(c['s'] + shift, 3), round(c['e'] + shift, 3)
                 print(f"  card {c['eyebrow']} spostata di {shift:.2f}s: entrava sul titolo {t['l1']}")
+
+    cards.sort(key=lambda c: c['s'])
+    for a_, b_ in zip(cards, cards[1:]):
+        if b_['s'] < a_['e'] and not (a_.get('lato') and b_.get('lato') and a_['lato'] != b_['lato']):
+            print(f"  ! card a {ts(b_['s'])} entra mentre c'e ancora quella a {ts(a_['s'])}: "
+                  f"`inquadra` le mette su lati opposti, se il volto lo permette")
 
     enfasi = []
     for c in R.get('enfasi', []):
@@ -206,6 +252,8 @@ def piano(slug):
         finale = {'s': W[i]['s'], 'titolo': cf['titolo']}
 
     nascosti = [(c['s'] + 0.1, c['e'] - 0.1) for c in capitoli]
+    # durante la citazione le parole sono gia a schermo, a karaoke
+    nascosti += [(c['s'] + 0.2, c['e']) for c in cards if c['tipo'] == 'citazione']
     if closing:
         nascosti.append((closing['s'] + 0.3, closing['e']))
     caps = gruppi(W, nascosti)
@@ -219,7 +267,8 @@ def piano(slug):
     P.scrivi('grafica.json', plan)
     print(f"durata {dur:.2f}s, {len(caps)} gruppi di sottotitolo")
     for c in cards:
-        print(f"   card    {ts(c['s']):>9}  {c['value']}{c['unit']:<4} {c['eyebrow']}")
+        cosa = f"{c['value']}{c['unit']}" if c['tipo'] == 'numero' else c['tipo']
+        print(f"   card    {ts(c['s']):>9}  {cosa:<10} {c['eyebrow']}  ({c['e']-c['s']:.1f}s)")
     for c in capitoli:
         print(f"   {'dietro' if c['dietro'] else 'stacco'}  {ts(c['s']):>9}  {c['l1']} {c['l2']}  ({c['e']-c['s']:.1f}s)")
     for c in enfasi:

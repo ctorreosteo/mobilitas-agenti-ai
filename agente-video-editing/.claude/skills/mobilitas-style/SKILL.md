@@ -44,8 +44,20 @@ cache di hyperframes**: sono sottoinsiemi per pagina, a cui mancano lettere
 (`J`, `K`) e accenti, e Pillow disegna i glifi mancanti come vuoti, senza
 errore. Vedi `references/font.md`.
 
-Corpi a 1080p in `SIZE`: sottotitolo 62, numero card 128, stacco 92, eyebrow
-mono 26. Il tracking dell'eyebrow e +0.22em, quello dei titoli -0.03em.
+Corpi a 1080p in `SIZE`: sottotitolo 62 (80 nelle frasi di enfasi), numero card 128,
+glossa 30, scala 20, stacco 92, eyebrow mono 26. Il tracking dell'eyebrow e +0.22em, quello dei titoli -0.03em.
+
+## Pannelli e icone
+
+- **Vetro smerigliato**: il video dietro sfocato e velato di navy (`VETRO_VELO` 0,66), raggio 26,
+  ombra navy morbida, filo di luce che sfuma dall'alto verso il basso, un trattino menta
+  nell'angolo in alto a sinistra. Non e un gradient sul testo: e il fondo del pannello.
+- **Icone**: Material Symbols Rounded, a contorno (peso 500), menta; piene solo quando contano
+  qualcosa (`icone`). Mai icone decorative accanto al testo: un'icona sta in un nodo, in un anello o in un conteggio.
+- **Figure** (anatomia, postura): linee paper a bassa opacita per la struttura, menta solo per
+  cio di cui lei sta parlando (il diaframma, i punti numerati). Stilizzate, mai realistiche.
+- **Dati**: menta pieno = il valore, menta velato = l'intervallo (30-40), contorno = il riferimento
+  o il fantasma, paper al 30% = il resto della scala.
 
 ## Zone sicure
 
@@ -75,7 +87,10 @@ il piano della scrivania a meta: e voluto, il set resta riconoscibile nel largo.
 
 Il capitolo e un titolo gigante (Montserrat 900, fino a 250 px, tracking
 -0.045em) che passa dietro la presentatrice: prima riga paper, seconda menta,
-eyebrow mono menta sopra, sfondo velato di navy. E la firma visiva del canale:
+eyebrow mono menta sopra con il numero del capitolo, sfondo velato di navy,
+filo menta sotto. Quando la testa al centro mangerebbe le parole, il titolo va
+in colonna su un lato e la seconda riga torna gigante a solo contorno
+dall'altra parte (l'eco). Una lama di luce menta attraversa la stanza dietro di lei. E la firma visiva del canale:
 la grafica sta *nello* spazio della stanza, non sopra la persona.
 
 ## Shorts
@@ -97,11 +112,23 @@ effetti comici, mai sopra la voce (10-16 dB sotto). Niente musica senza licenza.
 
 ## Movimento
 
-- gruppo sottotitolo: dissolvenza + salita 14 px, 0,16 s
-- parola attiva: colore verso menta + barretta menta sotto, 0,09 s
-- card: tendina da sinistra (`ease_out_expo`) + salita 26 px, 0,42 s; uscita 0,30 s
+Tutto entra, niente compare. Ma ogni movimento finisce presto (entro ~1,6 s) e poi
+sta fermo: il movimento accompagna la voce, non le fa concorrenza.
+
+- parola del sottotitolo: entra quando viene detta, scala 0,62 → 1 con rimbalzo (`ease_out_back`) + salita, 0,16 s
+- parola attiva: pillola menta che scivola dalla parola precedente, 0,09 s
+- card: tendina dal lato (`ease_out_expo`) + salita 26 px, 0,42 s; numero che conta 0,95 s; uscita 0,30 s
+- etichette mono: scritte a macchina, 0,03 s a carattere, con cursore menta
+- titolo dietro: lettere che salgono con rimbalzo, 0,028 s di sfasamento; lama di luce 0,62 s; uscita 0,35 s verso l'alto
+- enfasi: velo navy ai bordi, 0,35 s dentro e fuori; spinta di camera lineare fino a +3,5%
+- titolo dietro: la stanza si spegne in blu notte (lei resta a colori), spinta +5,5% in 1,2 s
+- voci delle infografiche: entrano sulla parola che le pronuncia, mai prima
 - stacco di capitolo: 0,30 s dentro / 0,30 s fuori, secco
-- barra di avanzamento: lineare su tutta la durata
+- barra di avanzamento: lineare, a segmenti per capitolo
+
+Il rimbalzo è uno solo (`ease_out_back` con k 1,7): mai elastici, mai oscillazioni ripetute.
+Il bagliore menta (lampo sul numero, pulsazione della CTA) è un alone *sotto* il testo,
+non un gradient sul testo.
 
 ## Divieti
 

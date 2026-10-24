@@ -33,12 +33,12 @@ Da dentro `agente-video-editing/`, con `regia.json` già scritto e `./mve audio 
 
 ## Il collo di bottiglia
 
-Il renderer disegna un RGBA 1920x1080 per frame (8,3 MB) e lo scrive su stdout. Regge perché:
+Il renderer legge un fotogramma RGB del montato pulito, lo compone e lo scrive su stdout (6,2 MB per frame in ognuno dei due sensi). Regge perché:
 
-- gli sprite (card, stacchi, lockup, closing) si disegnano una volta;
-- le bande di sottotitolo si disegnano una volta per parola attiva e restano in cache;
+- le parti ferme si disegnano una volta; card, apertura e chip si animano solo durante l'ingresso (~1,6 s) e poi si congelano in uno sprite;
+- ogni parola di sottotitolo si disegna una volta (normale e attiva): da un frame all'altro cambiano solo scala e posizione;
 - la dissolvenza si fa con una LUT sul canale alfa, non ridisegnando;
-- i titoli dietro sono l'unico punto costoso (maschera numpy a tutto schermo): pochi secondi in tutto.
+- i titoli dietro sono l'unico punto costoso (maschera numpy a tutto schermo, ~30 fps): pochi secondi in tutto. Il resto va a 170-1300 fps, il collo di bottiglia è x264.
 
 Il generatore muore con `BrokenPipeError` quando ffmpeg chiude la pipe (con `--limite`): è normale.
 
@@ -48,4 +48,6 @@ Il generatore muore con `BrokenPipeError` quando ffmpeg chiude la pipe (con `--l
 - **Eyebrow tagliato nel lockup.** Il lockup non può superare la fascia libera: se l'eyebrow non entra si stringe la spaziatura, poi il corpo.
 - **Ancoraggio che non si trova.** Il confronto ignora accenti e punteggiatura e tratta cifre e lettere come uguali ("otto" = "8"). Se manca ancora, whisper l'ha scritta diversa: cercala in `parole-montato.json`.
 - **Sottotitolo che resta sotto il titolo.** Un gruppo iniziato prima del titolo restava a schermo: ora il renderer spegne i sottotitoli per tutta la finestra del titolo.
-- **Titoli dietro illeggibili.** All'altezza del volto la testa mangia il centro delle parole: la posizione si cerca sulla sagoma, sulla parola peggiore.
+- **Titoli dietro illeggibili.** All'altezza del volto la testa mangia il centro delle parole: la posizione si cerca sulla sagoma, sulla parola peggiore. Con la testa al centro del largo nessuna posizione delle due righe bastava (22-33% coperto in YT_TOFU_02): da v3 si provano anche le colonne laterali.
+- **Card più alte della stima.** `inquadra` usava 340 px fissi; con la scala la card arriva a ~470. Ora chiede l'altezza a `card_layout`.
+- **Pelle che cambia tono nel finale.** Da v4 il video passa in RGB: se la conversione YUV->RGB e ritorno non dichiara `bt709`, swscale usa la 601. Le due `scale` (in `render._decoder`, `monta.finale`, `_foglio`) portano la matrice esplicita.

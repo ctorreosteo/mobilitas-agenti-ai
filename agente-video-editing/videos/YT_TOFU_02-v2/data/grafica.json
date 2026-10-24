@@ -1,5 +1,5 @@
 {
- "regia": "f1f9bc3d0748",
+ "regia": "d55eff58aea8",
  "fps": 29.97002997002997,
  "duration": 807.373233,
  "frames": 24197,
@@ -10,7 +10,7 @@
   "s": 0.35,
   "e": 5.6,
   "side": "left",
-  "margine_volto": 123.5
+  "margine_volto": 70.1
  },
  "chip": {
   "s": 22.836,
@@ -18,7 +18,7 @@
   "name": "MOBILITAS",
   "role": "STUDIO OSTEOPATICO",
   "side": "left",
-  "margine_volto": 237.4
+  "margine_volto": 220.9
  },
  "closing": {
   "eyebrow": "PROSSIMO VIDEO",
@@ -31,92 +31,721 @@
  },
  "cards": [
   {
-   "s": 171.801,
-   "e": 176.001,
+   "tipo": "orologio",
+   "frase": "sono le tre meno dieci",
+   "eyebrow": "ADESSO",
+   "ora": "14:50",
+   "prima": "14:00",
+   "testo": "LE TRE MENO DIECI",
+   "lato": "destra",
+   "durata": 5.5,
+   "s": 2.656,
+   "e": 8.156,
+   "margine_volto": 78.6,
+   "side": "right"
+  },
+  {
+   "tipo": "icone",
+   "frase": "quarto caffè della giornata",
+   "eyebrow": "DELLA GIORNATA",
+   "icona": "local_cafe",
+   "n": 4,
+   "fantasma": 1,
+   "testo": "QUARTO CAFFÈ, O FORSE IL QUINTO",
+   "durata": 5.0,
+   "s": 43.686,
+   "e": 48.686,
+   "margine_volto": 56.1,
+   "side": "left"
+  },
+  {
+   "tipo": "orologio",
+   "frase": "guardi l'orologio",
+   "eyebrow": "GUARDI L'OROLOGIO",
+   "ora": "15:45",
+   "prima": "14:50",
+   "fino": "18:15",
+   "testo": "LE 4 MENO UN QUARTO",
+   "settore_testo": "MANCANO ANCORA 2 ORE E MEZZA",
+   "voci": [
+    {
+     "frase": "mancano ancora due ore",
+     "t": 2.99
+    }
+   ],
+   "coda": 4.0,
+   "s": 61.323,
+   "e": 68.313,
+   "margine_volto": 73.9,
+   "side": "left"
+  },
+  {
+   "tipo": "lista",
+   "frase": "che è il pranzo perché",
+   "eyebrow": "TI HANNO RACCONTATO",
+   "voci": [
+    {
+     "testo": "il pranzo",
+     "frase": "che è il pranzo perché",
+     "t": 0.25
+    },
+    {
+     "testo": "la glicemia",
+     "frase": "che è la glicemia",
+     "t": 4.64
+    },
+    {
+     "testo": "la digestione",
+     "frase": "che è la digestione",
+     "t": 6.32
+    },
+    {
+     "testo": "la mancanza di sonno",
+     "frase": "la mancanza di sonno",
+     "t": 9.07
+    },
+    {
+     "testo": "lo stress accumulato",
+     "frase": "lo stress accumulato",
+     "t": 11.28
+    },
+    {
+     "testo": "l'età",
+     "frase": "che è l'età",
+     "t": 12.47
+    },
+    {
+     "testo": "l'attività fisica",
+     "frase": "più attività fisica",
+     "t": 14.09
+    }
+   ],
+   "annulla": "ti hanno detto tutte queste",
+   "coda": 1.6,
+   "s": 95.226,
+   "annulla_t": 16.376,
+   "e": 114.002,
+   "margine_volto": 18.1,
+   "side": "left"
+  },
+  {
+   "tipo": "lista",
+   "frase": "hai saltato il pranzo",
+   "eyebrow": "HAI PROVATO",
+   "voci": [
+    {
+     "testo": "saltare il pranzo",
+     "frase": "hai saltato il pranzo",
+     "t": 0.25
+    },
+    {
+     "testo": "un pranzo leggero",
+     "frase": "un pranzo leggero",
+     "t": 2.81
+    },
+    {
+     "testo": "il digiuno intermittente",
+     "frase": "il digiuno intermittente",
+     "t": 5.65
+    },
+    {
+     "testo": "proteine invece di carboidrati",
+     "frase": "mangiare proteine invece",
+     "t": 7.79
+    }
+   ],
+   "annulla": "sei tornato esattamente allo stesso",
+   "coda": 2.4,
+   "s": 115.322,
+   "annulla_t": 13.63,
+   "e": 132.152,
+   "margine_volto": 80.4,
+   "side": "right"
+  },
+  {
+   "tipo": "lista",
+   "frase": "non è metabolico non è mentale",
+   "eyebrow": "IL CALO NON È",
+   "voci": [
+    {
+     "testo": "metabolico",
+     "segno": "no",
+     "frase": "non è metabolico non è mentale",
+     "t": 0.25
+    },
+    {
+     "testo": "mentale",
+     "segno": "no",
+     "frase": "non è mentale",
+     "t": 1.4
+    },
+    {
+     "testo": "questione di volontà",
+     "segno": "no",
+     "frase": "non è questione di volontà",
+     "t": 2.62
+    }
+   ],
+   "coda": 2.6,
+   "s": 152.54,
+   "e": 157.76,
+   "margine_volto": 42.2,
+   "side": "left"
+  },
+  {
+   "frase": "il tuo cervello consuma",
    "eyebrow": "OSSIGENO",
+   "grafico": "punti",
+   "tipo": "numero",
+   "s": 171.801,
    "value": "20",
    "unit": "%",
    "sub": "circa: di tutto l'ossigeno che entra nel corpo, se lo prende il cervello",
-   "frase": "il tuo cervello consuma",
-   "side": "left",
-   "margine_volto": 67.4
+   "e": 176.001,
+   "margine_volto": 67.4,
+   "side": "left"
   },
   {
-   "s": 178.431,
-   "e": 182.631,
+   "frase": "pesa il 2",
    "eyebrow": "PESO",
+   "grafico": "punti",
+   "riferimento": {
+    "valore": "20",
+    "etichetta": "OSSIGENO"
+   },
+   "tipo": "numero",
+   "s": 178.431,
    "value": "2",
    "unit": "%",
    "sub": "quanto pesa il cervello sul totale del corpo",
-   "frase": "pesa il 2",
-   "side": "left",
-   "margine_volto": 116.8
+   "e": 182.631,
+   "margine_volto": 116.8,
+   "side": "left"
   },
   {
-   "s": 268.483,
-   "e": 272.683,
+   "tipo": "citazione",
+   "frase": "la tua lucidità non dipende",
+   "testo": "La tua lucidità non dipende da cosa pensi, ma dipende da quanto respiri.",
+   "coda": 1.4,
+   "s": 192.801,
+   "eyebrow": "",
+   "parole_t": [
+    0.25,
+    0.322,
+    0.431,
+    0.72,
+    1.01,
+    1.68,
+    1.91,
+    2.26,
+    2.92,
+    3.12,
+    3.52,
+    3.64,
+    3.97
+   ],
+   "e": 198.171,
+   "margine_volto": 68.5,
+   "side": "left"
+  },
+  {
+   "tipo": "lista",
+   "frase": "se respiri bene il cervello",
+   "eyebrow": "FISIOLOGIA DI BASE",
+   "voci": [
+    {
+     "testo": "respiri bene: il cervello funziona",
+     "segno": "si",
+     "frase": "se respiri bene il cervello",
+     "t": 0.25
+    },
+    {
+     "testo": "respiri male: il cervello si spegne",
+     "segno": "no",
+     "frase": "se respiri male",
+     "t": 2.77
+    }
+   ],
+   "coda": 3.2,
+   "s": 197.951,
+   "e": 203.921,
+   "margine_volto": 5.4,
+   "side": "right"
+  },
+  {
+   "tipo": "postura",
+   "frase": "probabilmente sei seduto",
+   "eyebrow": "LA TUA POSTURA",
+   "zone": [
+    {
+     "zona": "spalle",
+     "testo": "spalle proiettate in avanti",
+     "frase": "spalle leggermente proiettate",
+     "t": 1.87
+    },
+    {
+     "zona": "testa",
+     "testo": "testa inclinata verso lo schermo",
+     "frase": "la testa è inclinata",
+     "t": 6.06
+    },
+    {
+     "zona": "lombare",
+     "testo": "la lombare non tocca lo schienale",
+     "frase": "la zona lombare non",
+     "t": 12.932
+    },
+    {
+     "zona": "bacino",
+     "testo": "bacino ruotato indietro",
+     "frase": "bacino è ruotato",
+     "t": 15.832
+    }
+   ],
+   "coda": 3.0,
+   "s": 210.09,
+   "e": 228.922,
+   "margine_volto": 7.4,
+   "side": "left"
+  },
+  {
+   "tipo": "catena",
+   "frase": "ecco cosa succede a quella postura",
+   "eyebrow": "ORA DOPO ORA",
+   "voci": [
+    {
+     "testo": "spalle in avanti: torace alto chiuso",
+     "icona": "accessibility_new",
+     "frase": "le spalle in avanti chiudono",
+     "t": 3.47
+    },
+    {
+     "testo": "testa avanti: tratto cervicale compresso",
+     "icona": "monitor",
+     "frase": "comprime il tratto cervicale",
+     "t": 8.68
+    },
+    {
+     "testo": "prime coste tirate in alto, bloccate",
+     "icona": "skeleton",
+     "frase": "tira le prime coste",
+     "t": 10.74
+    },
+    {
+     "testo": "curva lombare piatta, bacino indietro",
+     "icona": "event_seat",
+     "frase": "la curva lombare si appiattisce",
+     "t": 13.68
+    },
+    {
+     "testo": "diaframma schiacciato contro gli organi addominali",
+     "icona": "pulmonology",
+     "frase": "lavora schiacciato contro",
+     "t": 23.05
+    }
+   ],
+   "coda": 2.2,
+   "s": 238.068,
+   "e": 263.318,
+   "margine_volto": 23.6,
+   "side": "left"
+  },
+  {
+   "tipo": "anatomia",
+   "frase": "il diaframma è il muscolo principale",
    "eyebrow": "DIAFRAMMA",
-   "value": "3-4",
-   "unit": "cm",
-   "sub": "di escursione a ogni respiro, quando è libero",
-   "frase": "si abbassa di 3",
-   "side": "left",
-   "margine_volto": 72.5
+   "respiro": {
+    "escursione": 1.0,
+    "etichetta": "3-4 CM"
+   },
+   "voci": [
+    {
+     "frase": "si abbassa di 3",
+     "t": 5.035
+    }
+   ],
+   "zone": [
+    {
+     "zona": "diaframma",
+     "testo": "il muscolo principale della respirazione",
+     "frase": "il muscolo principale",
+     "t": 1.12
+    },
+    {
+     "zona": "polmoni_bassi",
+     "testo": "le parti basse dei polmoni",
+     "frase": "parti basse dei polmoni",
+     "t": 12.695
+    }
+   ],
+   "coda": 2.4,
+   "s": 263.698,
+   "e": 278.793,
+   "margine_volto": 41.9,
+   "side": "left"
   },
   {
-   "s": 289.623,
-   "e": 293.823,
-   "eyebrow": "DOPO 4-5 ORE",
-   "value": "1",
-   "unit": "cm",
-   "sub": "forse meno: il diaframma compresso smette di abbassarsi davvero",
-   "frase": "si muove di un",
-   "side": "right",
-   "margine_volto": 58.3
+   "tipo": "anatomia",
+   "frase": "quando il diaframma è compresso",
+   "eyebrow": "DOPO 4-5 ORE SEDUTO",
+   "respiro": {
+    "escursione": 0.28,
+    "etichetta": "1 CM"
+   },
+   "fantasma": {
+    "escursione": 1.0,
+    "etichetta": "3-4 CM"
+   },
+   "voci": [
+    {
+     "frase": "si muove di un",
+     "t": 6.94
+    }
+   ],
+   "coda": 3.0,
+   "s": 282.933,
+   "e": 292.873,
+   "margine_volto": 64.0,
+   "side": "left"
   },
   {
-   "s": 312.443,
-   "e": 316.643,
+   "tipo": "lista",
+   "frase": "la respirazione diventa alta",
+   "eyebrow": "LA RESPIRAZIONE DIVENTA",
+   "corpo": 40,
+   "voci": [
+    {
+     "testo": "alta",
+     "frase": "diventa alta",
+     "t": 0.75
+    },
+    {
+     "testo": "toracica",
+     "frase": "toracica corta",
+     "t": 1.81
+    },
+    {
+     "testo": "corta",
+     "frase": "corta continui",
+     "t": 2.82
+    }
+   ],
+   "coda": 2.2,
+   "s": 292.443,
+   "e": 297.463,
+   "margine_volto": 6.7,
+   "side": "right"
+  },
+  {
+   "frase": "30 o 40",
    "eyebrow": "FINO AL",
+   "tipo": "numero",
+   "s": 312.443,
    "value": "30-40",
    "unit": "%",
    "sub": "di capacità funzionale in meno, nella postura seduta prolungata",
-   "frase": "30 o 40",
-   "side": "left",
-   "margine_volto": 9.7
+   "e": 316.643,
+   "margine_volto": 68.2,
+   "side": "left"
   },
   {
-   "s": 362.477,
-   "e": 366.677,
+   "tipo": "curva",
+   "frase": "e in effetti funziona",
    "eyebrow": "IL CAFFÈ",
-   "value": "40",
-   "unit": "min",
-   "sub": "di spinta, forse un'ora: poi cadi più in basso di prima",
-   "frase": "per 40 minuti",
-   "side": "left",
-   "margine_volto": 18.8
+   "valori": [
+    0.42,
+    0.44,
+    0.86,
+    0.84,
+    0.55,
+    0.26,
+    0.22
+   ],
+   "base": 0.42,
+   "base_testo": "PRIMA DEL CAFFÈ",
+   "asse_x": "TEMPO",
+   "asse_y": "LUCIDITÀ",
+   "etichette": [
+    {
+     "x": 0.38,
+     "testo": "40 MINUTI, FORSE UN'ORA",
+     "frase": "per 40 minuti",
+     "t": 3.55
+    },
+    {
+     "x": 0.93,
+     "testo": "PIÙ IN BASSO DI PRIMA",
+     "frase": "cadi più in basso",
+     "t": 19.78
+    }
+   ],
+   "coda": 2.4,
+   "s": 359.177,
+   "e": 381.357,
+   "margine_volto": 26.6,
+   "side": "left"
   },
   {
-   "s": 455.161,
-   "e": 459.361,
+   "tipo": "catena",
+   "frase": "il caffè è un eccitante",
+   "eyebrow": "UN MOTIVO PRECISO",
+   "voci": [
+    {
+     "testo": "il caffè eccita il sistema nervoso simpatico",
+     "icona": "local_cafe",
+     "frase": "il caffè è un eccitante",
+     "t": 0.25
+    },
+    {
+     "testo": "attivazione, attenzione, allerta",
+     "icona": "bolt",
+     "frase": "modalità attivazione",
+     "t": 4.49
+    },
+    {
+     "testo": "respirazione più alta, più toracica, più corta",
+     "icona": "air",
+     "frase": "la respirazione diventa ancora",
+     "t": 12.85
+    },
+    {
+     "testo": "la gabbia toracica si chiude di più",
+     "icona": "pulmonology",
+     "frase": "la gabbia toracica si chiude",
+     "t": 19.87
+    }
+   ],
+   "coda": 2.4,
+   "s": 387.737,
+   "e": 410.007,
+   "margine_volto": 43.0,
+   "side": "left"
+  },
+  {
+   "frase": "ridotta di metà",
    "eyebrow": "IN STUDIO",
+   "grafico": "anello",
+   "icona": "pulmonology",
+   "tipo": "numero",
+   "s": 455.161,
    "value": "50",
    "unit": "%",
    "sub": "di escursione in meno, in molte persone con un lavoro sedentario da anni",
-   "frase": "ridotta di metà",
-   "side": "left",
-   "margine_volto": 45.0
+   "e": 459.361,
+   "margine_volto": 45.0,
+   "side": "left"
   },
   {
-   "s": 598.187,
-   "e": 602.387,
+   "tipo": "lista",
+   "frase": "si lavora 30 minuti",
+   "eyebrow": "IN STUDIO, 30 MINUTI",
+   "voci": [
+    {
+     "testo": "rilascio del diaframma",
+     "frase": "rilascio del diaframma",
+     "t": 1.6
+    },
+    {
+     "testo": "mobilità delle prime coste",
+     "frase": "mobilità delle prime coste",
+     "t": 3.35
+    },
+    {
+     "testo": "decompressione del tratto cervico-dorsale",
+     "frase": "decompressione del tratto",
+     "t": 5.26
+    }
+   ],
+   "coda": 2.4,
+   "s": 466.986,
+   "e": 474.646,
+   "margine_volto": 89.9,
+   "side": "left"
+  },
+  {
+   "tipo": "barre",
+   "frase": "è come prendere un elastico",
+   "eyebrow": "UN ELASTICO",
+   "voci": [
+    {
+     "etichetta": "TIRATO PER",
+     "testo": "10 ANNI",
+     "misura": 315360000,
+     "frase": "tirato per 10 anni",
+     "t": 2.24
+    },
+    {
+     "etichetta": "RILASCIATO PER",
+     "testo": "10 SECONDI",
+     "misura": 10,
+     "frase": "per 10 secondi",
+     "t": 4.95
+    }
+   ],
+   "coda": 3.0,
+   "s": 538.138,
+   "e": 546.088,
+   "margine_volto": 35.1,
+   "side": "left"
+  },
+  {
+   "tipo": "lista",
+   "frase": "in modo sintomatico significa",
    "eyebrow": "SINTOMATICO",
+   "lato": "sinistra",
+   "larghezza": 470,
+   "voci": [
+    {
+     "testo": "stimolanti",
+     "frase": "cercare stimolanti",
+     "t": 2.23
+    },
+    {
+     "testo": "caffè",
+     "frase": "stimolanti caffè",
+     "t": 2.63
+    },
+    {
+     "testo": "zuccheri",
+     "frase": "zuccheri pause",
+     "t": 4.0
+    },
+    {
+     "testo": "pause forzate",
+     "frase": "pause forzate",
+     "t": 4.99
+    },
+    {
+     "testo": "app per la concentrazione",
+     "frase": "app per la concentrazione",
+     "t": 5.75
+    }
+   ],
+   "durata": 24.0,
+   "s": 568.697,
+   "e": 592.697,
+   "margine_volto": 123.8,
+   "side": "left"
+  },
+  {
+   "tipo": "lista",
+   "frase": "affrontarlo in modo sistemico",
+   "eyebrow": "SISTEMICO",
+   "lato": "destra",
+   "larghezza": 470,
+   "voci": [
+    {
+     "testo": "il corpo",
+     "segno": "si",
+     "frase": "lavorare sul corpo",
+     "t": 2.79
+    },
+    {
+     "testo": "la gabbia toracica",
+     "segno": "si",
+     "frase": "sulla gabbia toracica che",
+     "t": 6.95
+    },
+    {
+     "testo": "il diaframma",
+     "segno": "si",
+     "frase": "sul diaframma che non",
+     "t": 8.91
+    }
+   ],
+   "coda": 4.0,
+   "s": 579.927,
+   "e": 592.837,
+   "margine_volto": 70.2,
+   "side": "right"
+  },
+  {
+   "frase": "ti compra 20 minuti",
+   "eyebrow": "SINTOMATICO",
+   "tipo": "numero",
+   "s": 598.187,
    "value": "20",
    "unit": "min",
    "sub": "di lucidità apparente, nel migliore dei casi",
-   "frase": "ti compra 20 minuti",
-   "side": "left",
-   "margine_volto": 70.1
+   "e": 602.387,
+   "margine_volto": 120.4,
+   "side": "right"
+  },
+  {
+   "tipo": "anatomia",
+   "frase": "si parte dal diaframma",
+   "eyebrow": "IN STUDIO",
+   "respiro": {
+    "escursione": 0.7
+   },
+   "zone": [
+    {
+     "zona": "diaframma",
+     "testo": "il diaframma",
+     "frase": "si parte dal diaframma",
+     "t": 0.25
+    },
+    {
+     "zona": "coste",
+     "testo": "le prime coste",
+     "frase": "delle prime coste e",
+     "t": 7.512
+    },
+    {
+     "zona": "sterno",
+     "testo": "lo sterno",
+     "frase": "e dello sterno",
+     "t": 8.442
+    },
+    {
+     "zona": "cervicale",
+     "testo": "il tratto cervico-dorsale",
+     "frase": "si rilascia il tratto",
+     "t": 14.322
+    }
+   ],
+   "coda": 2.6,
+   "s": 620.156,
+   "e": 637.078,
+   "margine_volto": 13.7,
+   "side": "left"
+  },
+  {
+   "tipo": "numero",
+   "frase": "funziona al 50",
+   "eyebrow": "FUNZIONA AL",
+   "grafico": "batteria",
+   "s": 706.263,
+   "value": "50",
+   "unit": "%",
+   "sub": "una versione di te stesso, per metà della tua giornata lavorativa",
+   "e": 710.463,
+   "margine_volto": 76.2,
+   "side": "left"
+  },
+  {
+   "tipo": "lista",
+   "frase": "non è un problema di testa",
+   "eyebrow": "IL PROBLEMA",
+   "voci": [
+    {
+     "testo": "di testa",
+     "segno": "no",
+     "frase": "non è un problema di testa",
+     "t": 0.25
+    },
+    {
+     "testo": "di gabbia toracica",
+     "segno": "si",
+     "frase": "problema di gabbia toracica",
+     "t": 1.96
+    }
+   ],
+   "coda": 2.4,
+   "s": 737.295,
+   "e": 741.655,
+   "margine_volto": 53.5,
+   "side": "left"
   }
  ],
  "capitoli": [
@@ -169,12 +798,6 @@
    "frase": "non è colpa tua e quello"
   },
   {
-   "s": 193.001,
-   "e": 197.721,
-   "livello": "stretto",
-   "frase": "la tua lucidità non dipende"
-  },
-  {
    "s": 303.633,
    "e": 306.033,
    "livello": "stretto",
@@ -203,12 +826,6 @@
    "e": 484.896,
    "livello": "stretto",
    "frase": "respiro diversamente non dice"
-  },
-  {
-   "s": 737.495,
-   "e": 740.865,
-   "livello": "stretto",
-   "frase": "non è un problema di testa"
   }
  ],
  "finale": {
@@ -4109,101 +4726,6 @@
      "t": "sottovalutata.",
      "s": 191.251,
      "e": 192.271
-    }
-   ]
-  },
-  {
-   "s": 193.051,
-   "e": 193.511,
-   "words": [
-    {
-     "t": "La",
-     "s": 193.051,
-     "e": 193.123
-    },
-    {
-     "t": "tua",
-     "s": 193.123,
-     "e": 193.232
-    },
-    {
-     "t": "lucidità",
-     "s": 193.232,
-     "e": 193.521
-    }
-   ]
-  },
-  {
-   "s": 193.521,
-   "e": 194.701,
-   "words": [
-    {
-     "t": "non",
-     "s": 193.521,
-     "e": 193.811
-    },
-    {
-     "t": "dipende",
-     "s": 193.811,
-     "e": 194.481
-    },
-    {
-     "t": "da",
-     "s": 194.481,
-     "e": 194.711
-    }
-   ]
-  },
-  {
-   "s": 194.711,
-   "e": 195.911,
-   "words": [
-    {
-     "t": "cosa",
-     "s": 194.711,
-     "e": 195.061
-    },
-    {
-     "t": "pensi,",
-     "s": 195.061,
-     "e": 195.721
-    },
-    {
-     "t": "ma",
-     "s": 195.721,
-     "e": 195.921
-    }
-   ]
-  },
-  {
-   "s": 195.921,
-   "e": 196.761,
-   "words": [
-    {
-     "t": "dipende",
-     "s": 195.921,
-     "e": 196.321
-    },
-    {
-     "t": "da",
-     "s": 196.321,
-     "e": 196.441
-    },
-    {
-     "t": "quanto",
-     "s": 196.441,
-     "e": 196.771
-    }
-   ]
-  },
-  {
-   "s": 196.771,
-   "e": 197.691,
-   "words": [
-    {
-     "t": "respiri.",
-     "s": 196.771,
-     "e": 197.571
     }
    ]
   },

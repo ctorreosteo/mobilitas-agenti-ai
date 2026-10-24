@@ -29,6 +29,15 @@ CATENA = [
 ]
 
 
+def _data(p):
+    """data di un'uscita; per una cartella quella del file piu recente dentro:
+    la data della cartella non cambia quando si riscrive un file che c'era gia
+    (gli Shorts rifatti risultavano "DA RIFARE")"""
+    if p.is_dir():
+        return max((f.stat().st_mtime for f in p.iterdir()), default=p.stat().st_mtime)
+    return p.stat().st_mtime
+
+
 def stato(slug):
     P = Progetto(slug)
     prossima = None
@@ -43,11 +52,11 @@ def stato(slug):
         if manca:
             stato_ = 'DA FARE'
         else:
-            t_out = min(p.stat().st_mtime for p in paths)
+            t_out = min(_data(p) for p in paths)
             nuovi = []
             for i in ins:
                 q = P.p(i.format(s=slug))
-                if not q.exists() or q.stat().st_mtime <= t_out + 1:
+                if not q.exists() or _data(q) <= t_out + 1:
                     continue
                 # per regia.json conta solo la parte che la fase usa
                 base = outs[0].split('/')[-1]

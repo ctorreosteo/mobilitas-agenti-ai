@@ -1,5 +1,177 @@
 [
  {
+  "t0": 170.981,
+  "t1": 206.031,
+  "durata": 36.668,
+  "frame": 1099,
+  "pezzi": [
+   {
+    "f0": 5124,
+    "n": 182,
+    "src_in": 247.080166,
+    "framing": "v_pieno",
+    "crop": [
+     1110,
+     0,
+     1608,
+     2160
+    ]
+   },
+   {
+    "f0": 5306,
+    "n": 219,
+    "src_in": 253.152899,
+    "framing": "v_stretto",
+    "crop": [
+     1306,
+     18,
+     1318,
+     1770
+    ]
+   },
+   {
+    "f0": 5525,
+    "n": 257,
+    "src_in": 260.460199,
+    "framing": "v_pieno",
+    "crop": [
+     1126,
+     0,
+     1608,
+     2160
+    ]
+   },
+   {
+    "f0": 5782,
+    "n": 154,
+    "src_in": 269.035433,
+    "framing": "v_stretto",
+    "crop": [
+     1264,
+     0,
+     1318,
+     1770
+    ]
+   },
+   {
+    "f0": 5936,
+    "n": 239,
+    "src_in": 274.173899,
+    "framing": "v_pieno",
+    "crop": [
+     1108,
+     0,
+     1608,
+     2160
+    ]
+   }
+  ],
+  "hook": [
+   "IL TUO CERVELLO",
+   "SI PRENDE IL 20%"
+  ],
+  "titolo": "Il tuo cervello si prende il 20% dell'ossigeno",
+  "file": "YT_TOFU_02-v2_short1.mp4"
+ },
+ {
+  "t0": 263.828,
+  "t1": 306.233,
+  "durata": 44.009,
+  "frame": 1319,
+  "pezzi": [
+   {
+    "f0": 7907,
+    "n": 255,
+    "src_in": 374.557517,
+    "framing": "v_pieno",
+    "crop": [
+     1110,
+     0,
+     1608,
+     2160
+    ]
+   },
+   {
+    "f0": 8162,
+    "n": 171,
+    "src_in": 383.066017,
+    "framing": "v_stretto",
+    "crop": [
+     1276,
+     0,
+     1318,
+     1770
+    ]
+   },
+   {
+    "f0": 8333,
+    "n": 151,
+    "src_in": 388.771717,
+    "framing": "v_pieno",
+    "crop": [
+     1148,
+     0,
+     1608,
+     2160
+    ]
+   },
+   {
+    "f0": 8484,
+    "n": 200,
+    "src_in": 396.729667,
+    "framing": "v_stretto",
+    "crop": [
+     1360,
+     0,
+     1318,
+     1770
+    ]
+   },
+   {
+    "f0": 8684,
+    "n": 209,
+    "src_in": 403.403,
+    "framing": "v_pieno",
+    "crop": [
+     1268,
+     0,
+     1608,
+     2160
+    ]
+   },
+   {
+    "f0": 8893,
+    "n": 283,
+    "src_in": 410.376634,
+    "framing": "v_stretto",
+    "crop": [
+     1260,
+     0,
+     1318,
+     1770
+    ]
+   },
+   {
+    "f0": 9176,
+    "n": 2,
+    "src_in": 427.543783,
+    "framing": "v_pieno",
+    "crop": [
+     1046,
+     0,
+     1608,
+     2160
+    ]
+   }
+  ],
+  "hook": [
+   "STAI VENTILANDO,",
+   "NON OSSIGENANDO"
+  ],
+  "titolo": "Seduto per ore, il diaframma si muove di un centimetro",
+  "file": "YT_TOFU_02-v2_short2.mp4"
+ },
+ {
   "t0": 387.867,
   "t1": 432.17,
   "durata": 45.911,
@@ -84,5 +256,115 @@
   ],
   "titolo": "Il caffè delle 3 non risolve il calo: lo sta scavando",
   "file": "YT_TOFU_02-v2_short3.mp4"
+ },
+ {
+  "t0": 693.323,
+  "t1": 744.845,
+  "durata": 53.118,
+  "frame": 1592,
+  "pezzi": [
+   {
+    "f0": 20779,
+    "n": 230,
+    "src_in": 993.84285,
+    "framing": "v_pieno",
+    "crop": [
+     1038,
+     0,
+     1608,
+     2160
+    ]
+   },
+   {
+    "f0": 21009,
+    "n": 281,
+    "src_in": 1001.517183,
+    "framing": "v_stretto",
+    "crop": [
+     1238,
+     4,
+     1318,
+     1770
+    ]
+   },
+   {
+    "f0": 21290,
+    "n": 158,
+    "src_in": 1010.893217,
+    "framing": "v_pieno",
+    "crop": [
+     1094,
+     0,
+     1608,
+     2160
+    ]
+   },
+   {
+    "f0": 21448,
+    "n": 151,
+    "src_in": 1017.649967,
+    "framing": "v_stretto",
+    "crop": [
+     1284,
+     46,
+     1318,
+     1770
+    ]
+   },
+   {
+    "f0": 21599,
+    "n": 215,
+    "src_in": 1031.597233,
+    "framing": "v_pieno",
+    "crop": [
+     1110,
+     0,
+     1608,
+     2160
+    ]
+   },
+   {
+    "f0": 21814,
+    "n": 285,
+    "src_in": 1038.771066,
+    "framing": "v_stretto",
+    "crop": [
+     1264,
+     30,
+     1318,
+     1770
+    ]
+   },
+   {
+    "f0": 22099,
+    "n": 213,
+    "src_in": 1049.164783,
+    "framing": "v_pieno",
+    "crop": [
+     1042,
+     0,
+     1608,
+     2160
+    ]
+   },
+   {
+    "f0": 22312,
+    "n": 11,
+    "src_in": 1102.417983,
+    "framing": "v_stretto",
+    "crop": [
+     1312,
+     120,
+     1318,
+     1770
+    ]
+   }
+  ],
+  "hook": [
+   "NON SI STANCA.",
+   "SOFFOCA."
+  ],
+  "titolo": "Il tuo cervello non si stanca, soffoca",
+  "file": "YT_TOFU_02-v2_short4.mp4"
  }
 ]

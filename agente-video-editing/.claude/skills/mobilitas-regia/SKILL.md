@@ -77,6 +77,34 @@ Una card per ogni **numero che lei dice**: percentuali, centimetri, minuti, ore.
 - **Nessuna card sul risultato del trattamento.** Una frase come "ti restituisce la capacità di lavorare 8 ore" seguita da "è quello che facciamo in studio", scritta in grande sotto `IL RISULTATO`, diventa una promessa. Il numero va sul meccanismo, non sull'esito.
 - `eyebrow` è un'etichetta di una o due parole, in maiuscolo: cosa misura il numero (`OSSIGENO`, `DOPO 5 ORE`, `IN STUDIO`).
 - Il lato lo sceglie `inquadra` sul volto; tu scegli solo la frase.
+- **Ogni card è un'infografica**: il numero conta, la scala sotto si riempie (`%`, `cm`, `min`). Quando lei confronta due misure ("3-4 centimetri… dopo 4-5 ore si muove di un centimetro"), sulla seconda card metti `"prima": "3-4"`: il numero scende e la scala tiene il fantasma del valore di partenza. È il momento più forte della grafica: cercalo. `prima` deve essere un numero che lei ha detto.
+- **Il titolo corto rende di più.** Con la testa al centro il motore mette il titolo in colonna su un lato: lì il corpo dipende dalla parola più lunga ("METABOLICO" esce a ~100 px, "MASCHERA" a ~120). Due-tre parole per riga, parole brevi quando lei ne offre.
+
+## 3 bis. Molte infografiche: dove cercarle
+
+Le card non sono solo numeri. Rileggendo la trascrizione si cercano i momenti in cui il
+discorso **ha una forma** e la si disegna, con le sue parole (tipi e campi: `references/schema.md`):
+
+| quando lei… | tipo |
+|---|---|
+| dice un'ora ("sono le tre meno dieci") | `orologio`, con lo spicchio se dice quanto manca |
+| conta qualcosa ("quarto caffè, o forse il quinto") | `icone` |
+| elenca ("che è il pranzo, che è la glicemia…") | `lista`; se poi le smonta, `annulla` |
+| nega ("non è metabolico, non è mentale") o contrappone ("se respiri bene… se respiri male") | `lista` con ✓ / ✗ |
+| spiega una causa che ne porta un'altra | `catena` |
+| dice la frase chiave | `citazione` (una o due per video, non di piu) |
+| descrive il corpo: postura, diaframma, coste | `postura`, `anatomia` |
+| descrive un andamento nel tempo ("ti dà una spinta… poi cadi piu in basso") | `curva` |
+| mette a confronto due misure, anche per assurdo | `barre` |
+| due approcci opposti | due `lista` con `lato` sinistra e destra |
+
+Nel banco di prova sono 27, circa una ogni 30 s. Ogni voce si ancora alla frase in cui la dice:
+la grafica segue la voce, non la anticipa. Le card lunghe (liste, catene) tengono il taglio largo
+per tutto il tempo: non metterne due lunghe di fila senza respiro.
+
+**Mai un'infografica sui risultati del trattamento** ("respiro diversamente", "il calo si riduce",
+"lavorare otto ore"): sono esiti riferiti, disegnati diventano promesse. Si disegna il meccanismo,
+e cosa si fa in studio (le zone), mai cosa si ottiene.
 
 ## 4. Capitoli e titoli dietro
 

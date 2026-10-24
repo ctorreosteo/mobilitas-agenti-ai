@@ -1,0 +1,4 @@
+Material Symbols Rounded (Google), licenza Apache 2.0.
+https://github.com/google/material-design-icons
+Il file e un sottoinsieme (pyftsubset) con le sole icone elencate in ../icone.txt.
+Per aggiungere un'icona: rifare il sottoinsieme dal font completo includendo il suo codepoint.

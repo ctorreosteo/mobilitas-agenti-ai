@@ -4,8 +4,12 @@ Il v1 usciva muto fra una parola e l'altra. Qui ogni elemento grafico ha il suo
 suono, sintetizzato con numpy (niente stock, niente licenze):
 
 - **whoosh** quando entra una card, spostato nel panorama dal lato della card;
-- **tick** quando compare il numero della card;
-- **salita + colpo basso** quando entra un titolo dietro;
+- **tick** del contatore della card, che rallentano con il numero e chiudono
+  con un tick piu acuto quando si ferma;
+- **salita + colpo basso** quando entra un titolo dietro, e un sibilo chiaro
+  per la lama di luce che attraversa la stanza;
+- **pop** morbido per ogni voce che entra in un'infografica (lista, catena, zone),
+  e un fruscio che scende quando una lista viene barrata;
 - **fruscio corto** sui punch-in di enfasi;
 - colpo morbido su apertura e chiusura.
 
@@ -23,6 +27,7 @@ import numpy as np
 
 from .progetto import Progetto, FPS, ffmpeg
 from . import audio as A
+from . import stile as S
 
 SR = 48000
 RNG = np.random.default_rng(7)
@@ -63,6 +68,14 @@ def tick(f=1750):
     t = np.arange(n) / SR
     x = np.sin(2 * np.pi * (f - 500 * t / 0.07) * t) * np.exp(-t * 70)
     x[:48] += RNG.standard_normal(48) * np.linspace(1, 0, 48) * 0.5
+    return x / np.abs(x).max()
+
+
+def pop(f=1300):
+    """un pop corto e tondo: una voce che entra in un'infografica"""
+    n = int(0.09 * SR)
+    t = np.arange(n) / SR
+    x = np.sin(2 * np.pi * (f * 0.6 + f * 0.8 * np.exp(-t * 60)) * t) * np.exp(-t * 45)
     return x / np.abs(x).max()
 
 
@@ -112,11 +125,26 @@ def suono(slug):
     for c in G['cards']:
         side = -0.55 if c.get('side', 'left') == 'left' else 0.55
         metti(w, c['s'] - 0.12, -27, side)
-        metti(tick(), c['s'] + 0.30, -31, side)
+        if c.get('tipo', 'numero') == 'numero':
+            # il contatore: tick che rallentano con il numero (stessa curva del renderer),
+            # poi un tick piu acuto quando si ferma
+            for k in range(1, 8):
+                x = -np.log2(1 - k / 8) / 10
+                metti(tick(1500 + 60 * k), c['s'] + S.COUNT_T0 + S.COUNT_DUR * x, -38 + k * 0.6, side)
+            metti(tick(2300), c['s'] + S.COUNT_T0 + S.COUNT_DUR, -31, side)
+        # ogni voce che entra (lista, catena, zone, etichette): un pop morbido
+        for k in ('voci', 'zone', 'etichette'):
+            for i, v in enumerate(c.get(k, [])):
+                if v.get('t') is not None:
+                    metti(pop(1200 + 90 * (i % 5)), c['s'] + v['t'], -33, side)
+        if c.get('annulla_t') is not None:
+            metti(whoosh(0.35, 1500, 300, att=0.3), c['s'] + c['annulla_t'], -30, side)
     for c in G['capitoli']:
         if c['dietro']:
             metti(salita(), c['s'] - 0.50, -29)
             metti(colpo(), c['s'] + 0.02, -21)
+            # la lama di luce che attraversa la stanza
+            metti(whoosh(S.LAMA, 900, 7000, att=0.5), c['s'], -31)
         else:
             metti(whoosh(0.5, 300, 4200), c['s'] - 0.15, -26)
             metti(colpo(), c['s'] + 0.25, -23)
@@ -132,6 +160,7 @@ def suono(slug):
     if G.get('closing'):
         metti(whoosh(0.6, 250, 3000), G['closing']['s'] - 0.25, -26)
         metti(colpo(1.4, 70, 36), G['closing']['s'] + 0.05, -22)
+        metti(tick(2100), G['closing']['s'] + 1.6, -30)          # il bordo della CTA si chiude
 
     peak = np.abs(bus).max()
     if peak > 0.5:
