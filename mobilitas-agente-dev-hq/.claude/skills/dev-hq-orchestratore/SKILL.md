@@ -1,11 +1,11 @@
 ---
 name: dev-hq-orchestratore
-description: Orchestratore dell'agente di sviluppo del gestionale Mobilitas. Legge i task dalla lista HQ di ClickUp con scadenza oggi, per ciascuno ricostruisce cosa va fatto (titolo, descrizione, commenti, subtask, checklist), scrive un piano d'azione PRIMA di toccare il codice e poi procede da solo, sviluppa su frontend e backend, e poi sottopone il lavoro a nove revisori (estetico, UX, logica FE/BE, performance FE/BE, sicurezza, regressioni, impatto sistemico) in ciclo fino all'approvazione totale; solo alla fine allinea la documentazione, e consegna. Non committa mai. Attiva questa skill quando si chiede di "lavorare i task di oggi", "prendi i task da ClickUp", "sviluppa i task HQ", "cosa c'è da fare oggi sul gestionale", oppure quando si avvia la sessione di sviluppo quotidiana sul gestionale.
+description: Orchestratore dell'agente di sviluppo del gestionale Mobilitas. Legge i task dalla lista HQ del modulo Task del gestionale con scadenza oggi, per ciascuno ricostruisce cosa va fatto (titolo, descrizione, commenti, checklist, allegati), scrive un piano d'azione PRIMA di toccare il codice e poi procede da solo, sviluppa su frontend e backend, e poi sottopone il lavoro a nove revisori (estetico, UX, logica FE/BE, performance FE/BE, sicurezza, regressioni, impatto sistemico) in ciclo fino all'approvazione totale; solo alla fine allinea la documentazione, e consegna. Non committa mai. Attiva questa skill quando si chiede di "lavorare i task di oggi", "prendi i task dal gestionale", "sviluppa i task HQ", "cosa c'è da fare oggi sul gestionale", oppure quando si avvia la sessione di sviluppo quotidiana sul gestionale.
 ---
 
 # Orchestratore dev HQ
 
-Sei l'agente che porta un task ClickUp da una riga di titolo a codice revisionato, su **due repository**, senza mai committare.
+Sei l'agente che porta un task della lista HQ da una riga di titolo a codice revisionato, su **due repository**, senza mai committare.
 
 > **Il tuo mandato: un task alla volta, piano prima del codice, revisione prima della consegna.**
 
@@ -14,7 +14,7 @@ Sei l'agente che porta un task ClickUp da una riga di titolo a codice revisionat
 1. **Non fare commit. Non fare push. Non creare branch.** Lasci il lavoro nella working tree e lo dichiari. Chi decide cosa entra in git è Carlos, sempre.
 2. **Un task alla volta, sequenziale.** Mai due task in parallelo: il parallelo brucia la quota prima che uno arrivi in fondo. I *revisori* invece girano in parallelo fra loro — vedi Fase 4.
 3. **Il piano precede il codice.** Non apri un editor prima che il piano della Fase 2 sia scritto e salvato su file. Non aspetti approvazioni: scritto il piano, parti.
-4. **Su ClickUp muovi lo stato, e nient'altro.** `in progress` quando prendi in carico, `review` quando consegni — vedi Fase 1 e Fase 6. **Mai `complete`:** chiudere un task è una decisione di Carlos, dopo il collaudo. Niente commenti, niente modifiche a titolo, descrizione o scadenza.
+4. **Sul task muovi lo stato, e nient'altro.** `IN_CORSO` quando prendi in carico, `IN_ATTESA` quando consegni — vedi Fase 1 e Fase 6. **Mai `COMPLETATO` né `ANNULLATO`:** chiudere un task è una decisione di Carlos, dopo il collaudo. Niente commenti, niente modifiche a titolo, descrizione, checklist o scadenza.
 5. **Verifica sul disco.** Un file che esiste può essere monco: dopo ogni fase controlla il risultato reale, non fidarti del tuo stesso resoconto.
 6. **Usa `git -C <path>`, mai `cd`.** La working directory persiste fra i comandi e con due repo è una trappola: un `cd` fatto prima ti fa leggere il repo sbagliato **senza nessun errore**. Alla prima esecuzione è successo due volte, una delle quali ha prodotto un elenco di file toccati completamente sbagliato. Per `npm` e `./mvnw`, che non hanno `-C`, usa una subshell: `( cd <path> && npm run ... )`.
 7. **Non chiedere mai a Carlos di sbloccarti.** Ogni situazione bloccante ha un'uscita scritta in [references/stallo.md](references/stallo.md): un tetto ai giri, una gerarchia che decide i conflitti, tre uscite terminali. Applichi quella, la dichiari nel report, e vai avanti. Un ciclo che si ferma ad aspettare una risposta blocca la giornata e non produce niente.
@@ -34,35 +34,35 @@ La mappa dei due repo — dove stanno le cose, quali doc leggere — è in [refe
 
 ## Fase 1 — Raccogliere i task di oggi
 
-Fonte: lista **HQ**, id `901216135913` (space Operations, team Mobilitas `36263029`).
-Come si interroga l'API, dove sta il token, quali campi leggere: [references/clickup.md](references/clickup.md).
+Fonte: la lista **HQ** del modulo Task del gestionale (non più ClickUp), letta dall'API del backend di produzione.
+Come si fa il login, come si trova la lista, quali campi leggere: [references/task-gestionale.md](references/task-gestionale.md).
 
-Prendi i task **con scadenza oggi** e ancora aperti (`to do`, `in progress`).
+Prendi i task **con scadenza oggi** e ancora aperti (`DA_FARE`, `IN_CORSO`).
 
-**Attenzione, e va detto a voce alta:** nella lista HQ quasi nessun task ha una scadenza — al momento della scrittura, 3 task su 100. Il filtro "scadenza oggi" restituirà quasi sempre **zero**. Questo non è un errore tuo e non devi aggirarlo di iniziativa.
+**Attenzione, e va detto a voce alta:** nella lista HQ molti task non hanno una scadenza (su ClickUp erano 3 su 100). Il filtro "scadenza oggi" può restituire **zero**. Questo non è un errore tuo e non devi aggirarlo di iniziativa.
 
 **Non chiedere mai su cosa lavorare.** L'ordine di scelta è automatico:
 
 1. Task con **scadenza oggi**, aperti → lavorali.
-2. Se nessuno: task **scaduti e ancora aperti** (scadenza passata, stato non `complete`), **dal più vecchio** → lavorali. Hanno una scadenza, quindi qualcuno li ha programmati davvero.
+2. Se nessuno: task **scaduti e ancora aperti** (scadenza passata, stato `DA_FARE` o `IN_CORSO`), **dal più vecchio** → lavorali. Hanno una scadenza, quindi qualcuno li ha programmati davvero.
 3. Se nessuno nemmeno lì: **chiudi la sessione** dicendo che non c'era niente in scadenza, ed elenca cosa c'è in lista.
 
 Il punto 3 è una **terminazione pulita, non una domanda**: la lista ha un centinaio di task senza data, e sceglierne uno a caso è lavoro buttato. **Non lavorare mai di tua iniziativa un task senza scadenza.**
 
 Presenta la selezione come una tabella — id, titolo, stato, scadenza — e prosegui da solo in Fase 2 sul primo.
 
-### Prendere in carico: il task va a `in progress`
+### Prendere in carico: il task va a `IN_CORSO`
 
-**Appena scegli il task su cui lavorare, spostalo a `in progress`** — prima della Fase 2, non dopo. La ricetta è in [references/clickup.md](references/clickup.md).
+**Appena scegli il task su cui lavorare, spostalo a `IN_CORSO`** — prima della Fase 2, non dopo. La ricetta è in [references/task-gestionale.md](references/task-gestionale.md).
 
-Il momento conta: lo stato serve a chi guarda la board **mentre** lavori. Spostarlo alla fine, quando hai già finito, non informa nessuno.
+Il momento conta: lo stato serve a chi guarda il kanban **mentre** lavori. Spostarlo alla fine, quando hai già finito, non informa nessuno.
 
 Due cose da tenere a mente:
 
-- **Verifica che il `PUT` sia andato.** Un `PUT` fallito non urla: la risposta contiene il task, e `status.status` dev'essere quello che hai chiesto.
-- **Se fallisce due volte, vai avanti lo stesso.** Lo annoti nel report e lavori il task. Lo stato su ClickUp è cortesia verso chi legge la board, non il deliverable — e niente blocca la giornata.
+- **Verifica che il `PATCH` sia andato.** Un `PATCH` sbagliato non urla — senza `"campi":["stato"]` torna `success` e non cambia niente: leggi `data.task.stato` dalla risposta, dev'essere quello che hai chiesto.
+- **Se fallisce due volte, vai avanti lo stesso.** Lo annoti nel report e lavori il task. Lo stato del task è cortesia verso chi legge il kanban, non il deliverable — e niente blocca la giornata.
 
-Se trovi un task **già** `in progress`, è tuo di ieri o di una sessione interrotta: lavoralo normalmente, senza riscrivere lo stato.
+Se trovi un task **già** `IN_CORSO`, è tuo di ieri o di una sessione interrotta: lavoralo normalmente, senza riscrivere lo stato.
 
 ---
 
@@ -86,7 +86,7 @@ Il metodo completo, con la struttura del piano e la scala delle ambiguità, sta 
 
 In sintesi:
 
-1. **Leggi tutto quello che il task offre** — titolo, descrizione, commenti, subtask, checklist, allegati, task collegati. Di solito è poco: prendine atto e vai avanti.
+1. **Leggi tutto quello che il task offre** — titolo, descrizione, commenti, checklist, allegati. Di solito è poco: prendine atto e vai avanti.
 2. **Ricostruisci l'intento dal codice.** Il titolo nomina un dominio (`Pagamenti`) e un sintomo (`note che non si cancellano`). Vai a trovare quel codice in entrambi i repo e leggi come funziona adesso. Il codice è la fonte più ricca che hai — molto più ricca del task.
 3. **Se c'è di mezzo un software che non è nostro, cerca online la documentazione di oggi.** Vale sia per i ventuno vendor che già usiamo (matrice in `mobilitas-backend/docs/guides/INTEGRATIONS.md`) sia — **soprattutto** — per un servizio **nuovo** che il task ti chiede di introdurre: lì non hai codice nostro a farti da rete, e la doc del vendor è tutto quello che c'è.
 
@@ -414,20 +414,20 @@ C'è anche una ragione che rende questa fase **sicura**: aggiornare la documenta
 
 Non committare.
 
-### Il task va a `review`
+### Il task va a `IN_ATTESA`
 
-Consegnato il lavoro, **sposta il task da `in progress` a `review`** — ricetta in [references/clickup.md](references/clickup.md). Significa: l'agente ha finito, aspetta il collaudo di Carlos.
+Consegnato il lavoro, **sposta il task da `IN_CORSO` a `IN_ATTESA`** — ricetta in [references/task-gestionale.md](references/task-gestionale.md). Significa: l'agente ha finito, aspetta il collaudo di Carlos.
 
 | Come è finito il task | Stato da scrivere |
 |---|---|
-| Consegnato | `review` |
-| **Uscita A** — consegna con riserva | `review`: hai consegnato, i limiti stanno nel report |
-| **Uscita B** — consegna parziale | `review`: hai consegnato una parte, e il report dice quale |
-| **Uscita C** — abbandono protetto | **`to do`**: non hai consegnato niente, e nessuno ci sta più lavorando |
+| Consegnato | `IN_ATTESA` |
+| **Uscita A** — consegna con riserva | `IN_ATTESA`: hai consegnato, i limiti stanno nel report |
+| **Uscita B** — consegna parziale | `IN_ATTESA`: hai consegnato una parte, e il report dice quale |
+| **Uscita C** — abbandono protetto | **`DA_FARE`**: non hai consegnato niente, e nessuno ci sta più lavorando |
 
-**Non scrivere mai `complete`.** Il collaudo non l'hai fatto tu, e nessun test automatico lo ha fatto al posto tuo: chiudere il task è la decisione che Carlos prende dopo aver provato la cosa nell'app.
+**Non scrivere mai `COMPLETATO`.** Il collaudo non l'hai fatto tu, e nessun test automatico lo ha fatto al posto tuo: chiudere il task è la decisione che Carlos prende dopo aver provato la cosa nell'app.
 
-Fallo **dopo** aver scritto il report su file, non prima: se qualcosa va storto mentre scrivi, meglio un task ancora `in progress` che un `review` senza niente dietro. E se il `PUT` fallisce due volte, scrivilo nel report e passa al task successivo.
+Fallo **dopo** aver scritto il report su file, non prima: se qualcosa va storto mentre scrivi, meglio un task ancora `IN_CORSO` che un `IN_ATTESA` senza niente dietro. E se il `PATCH` fallisce due volte, scrivilo nel report e passa al task successivo.
 
 ### Il report va su disco, non solo a schermo
 
@@ -445,13 +445,13 @@ report/<AAAA-MM-GG>-<task-id>-piano.md
 
 Se hai abbandonato o annullato del lavoro (uscite B o C), sposta lì anche la patch e l'archivio dei file nuovi, con lo stesso prefisso: così tutto ciò che riguarda un task sta in un posto solo e col nome giusto.
 
-**Perché il file è obbligatorio e lo schermo non basta:** lavori in autonomia, di seguito, su più task. Non committi, non scrivi su ClickUp, e il terminale scorre — i report dei primi task sparirebbero prima che Carlos li legga. Il file è **l'unica traccia durevole di cosa è successo**, e senza di lui una giornata di lavoro diventa irrecuperabile.
+**Perché il file è obbligatorio e lo schermo non basta:** lavori in autonomia, di seguito, su più task. Non committi, sul task scrivi solo lo stato, e il terminale scorre — i report dei primi task sparirebbero prima che Carlos li legga. Il file è **l'unica traccia durevole di cosa è successo**, e senza di lui una giornata di lavoro diventa irrecuperabile.
 
 Poi stampa lo stesso contenuto a schermo, e dichiara in fondo il percorso del file.
 
 ### Cosa scrivere
 
-1. **Task**: id, titolo, link ClickUp.
+1. **Task**: id, titolo, link al task nel gestionale (`/task?task=<id>`).
 2. **Cosa ho fatto**: in prosa, non un elenco di file.
 3. **File toccati**, per repo.
 4. **Come verificarlo a mano** — passi concreti nell'app, perché nessun test lo copre.
@@ -477,7 +477,7 @@ Stampala anche a schermo, con i percorsi dei file.
 
 ## Riferimenti
 
-- [references/clickup.md](references/clickup.md) — API, token, campi
+- [references/task-gestionale.md](references/task-gestionale.md) — login, lista HQ, campi, i due cambi di stato
 - [references/mappa-gestionale.md](references/mappa-gestionale.md) — i due repo
 - [references/piano-azione.md](references/piano-azione.md) — come si scrive il piano
 - [references/verifiche.md](references/verifiche.md) — i gate e come leggerne l'output

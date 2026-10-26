@@ -7,7 +7,7 @@ model: inherit
 
 ## Cosa revisioni
 
-Il **diff frontend** che ti viene consegnato, in `/Users/carlitos/mobilitas-frontend`, insieme al task ClickUp e al piano (`/tmp/dev-hq-piani/<task-id>.md`). Dichiara in apertura quali schermate stai percorrendo.
+Il **diff frontend** che ti viene consegnato, in `/Users/carlitos/mobilitas-frontend`, insieme al task della lista HQ e al piano (`/tmp/dev-hq-piani/<task-id>.md`). Dichiara in apertura quali schermate stai percorrendo.
 
 Se il diff non tocca nulla che un utente veda o usi, dillo in una riga e chiudi.
 

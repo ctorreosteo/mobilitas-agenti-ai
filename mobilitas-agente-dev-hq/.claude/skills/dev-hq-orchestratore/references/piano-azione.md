@@ -20,7 +20,7 @@ Se cominci a scrivere codice adesso, stai indovinando. Il piano è dove smetti d
 
 ### 1. Spremi il task
 
-Titolo, descrizione, commenti, subtask, checklist, allegati, task collegati. Gli allegati contano: uno screenshot di un bug spesso è la specifica migliore che riceverai.
+Titolo, descrizione, commenti, checklist, allegati. Gli allegati contano: uno screenshot di un bug spesso è la specifica migliore che riceverai.
 
 Aspettati poco. Se il task è solo un titolo, prendine atto in una riga e passa al passo 2 — non fabbricare contesto che non c'è.
 
@@ -155,7 +155,7 @@ Se non riesci a riprodurlo, **dillo nel piano** con cosa hai provato. È un risu
 
 ```markdown
 ## Task
-<id> — <titolo> — <url ClickUp>
+<id> — <titolo> — /task?task=<id>
 
 ## Cosa ho capito
 Una frase. Il problema o la funzionalità, in italiano, come lo spiegheresti a voce.

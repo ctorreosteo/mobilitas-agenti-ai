@@ -13,8 +13,9 @@
       "Bash(git -C * commit -m:*)",
       "Bash(npm run typecheck)",
       "Bash(./mvnw -q -DskipTests compile)",
-      "Bash(curl -s -H * https://api.clickup.com/api/v2/*)",
-      "Bash(curl -s -X PUT -H * https://api.clickup.com/api/v2/task/*)"
+      "Bash(curl -s -H * https://mobilitas-backend-990845221858.europe-west8.run.app/api/task*)",
+      "Bash(curl -s -X PATCH -H * https://mobilitas-backend-990845221858.europe-west8.run.app/api/task/*)",
+      "Bash(curl -s -X POST -H 'Content-Type: application/json' -d @- https://mobilitas-backend-990845221858.europe-west8.run.app/api/auth/login)"
     ],
     "deny": [
       "Bash(git push:*)",
@@ -27,8 +28,9 @@
       "Bash(git -C * stash:*)",
       "Bash(git -C * clean:*)",
       "Bash(git -C * commit --amend:*)",
-      "Bash(curl -X POST*api.clickup.com*)",
-      "Bash(curl -X DELETE*api.clickup.com*)",
+      "Bash(curl *-X DELETE*run.app*)",
+      "Bash(curl *-X PUT*run.app*)",
+      "Bash(curl *-X POST*run.app/api/task*)",
       "Bash(*deploy.sh*)"
     ]
   }

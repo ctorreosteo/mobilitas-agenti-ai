@@ -245,7 +245,7 @@ Il filo comune: **verificare invece di assumere**, soprattutto quando la frase c
 
 ## Dove finisce il report, e perché su file
 
-L'agente non committa, e su ClickUp scrive solo lo stato. La board dice quindi *dove* è arrivato, mai *cosa* ha fatto — e questo crea un problema: **senza una traccia scritta da lui, di una giornata di lavoro non resta niente.**
+L'agente non committa, e sul task scrive solo lo stato. Il kanban dice quindi *dove* è arrivato, mai *cosa* ha fatto — e questo crea un problema: **senza una traccia scritta da lui, di una giornata di lavoro non resta niente.**
 
 Il terminale non basta. L'agente lavora in autonomia su più task di seguito, e l'output scorre: quando arrivi a leggere, il report del primo task è già lontano. E se la sessione si chiude, è perso.
 
@@ -261,33 +261,33 @@ Non è una precauzione contro l'agente: è che **cosa entra in git è una decisi
 
 Il divieto è scritto in due posti che si rinforzano: nella skill dell'orchestratore, e come `deny` in `.claude/settings.json` — dove sono negati anche `push`, `branch`, `checkout`, `reset`, `rebase`, `merge` e `stash`. La skill dice cosa fare; i permessi impediscono di sbagliare.
 
-## Su ClickUp: lo stato sì, il resto no
+## Sui task del gestionale: lo stato sì, il resto no
 
-Su ClickUp il principio è diverso, e la linea è tirata in un punto preciso: **l'agente muove il task lungo la colonna, ma non decide mai che è finito.**
+I task arrivano dalla lista HQ del modulo Task del gestionale (prima stavano su ClickUp). Qui il principio è diverso, e la linea è tirata in un punto preciso: **l'agente muove il task lungo la colonna, ma non decide mai che è finito.**
 
 Due scritture, e nessun'altra:
 
 | Momento | Stato | A chi serve |
 |---|---|---|
-| Presa in carico, in Fase 1 | `in progress` | A chi guarda la board **mentre** l'agente lavora |
-| Consegna, in Fase 6 | `review` | A Carlos: c'è qualcosa da collaudare |
+| Presa in carico, in Fase 1 | `IN_CORSO` | A chi guarda il kanban **mentre** l'agente lavora |
+| Consegna, in Fase 6 | `IN_ATTESA` | A Carlos: c'è qualcosa da collaudare |
 
 Il primo è quello che si dimentica facilmente e conta di più: uno stato scritto alla fine non informa nessuno, perché quando lo leggi il lavoro è già finito. Serve **durante**.
 
-**`complete` non lo scrive mai l'agente.** È il confine, ed è lo stesso della regola sul commit: l'agente porta il lavoro fino al punto in cui una persona lo guarda, e si ferma lì. Non ci sono test automatici in questo progetto — l'unica prova che una cosa funziona è che Carlos l'abbia provata nell'app. Un agente che chiude i task dichiara superato un collaudo che non è avvenuto.
+**`COMPLETATO` (e `ANNULLATO`) non li scrive mai l'agente.** È il confine, ed è lo stesso della regola sul commit: l'agente porta il lavoro fino al punto in cui una persona lo guarda, e si ferma lì. Non ci sono test automatici in questo progetto — l'unica prova che una cosa funziona è che Carlos l'abbia provata nell'app. Un agente che chiude i task dichiara superato un collaudo che non è avvenuto.
 
-Restano negati `POST` e `DELETE` a livello di permessi: niente commenti, niente cancellazioni, nessuna modifica a titolo, descrizione o scadenza.
+Restano negati `POST` (tranne il login), `PUT` e `DELETE` verso l'API a livello di permessi: niente commenti, niente cancellazioni, nessuna modifica a titolo, descrizione, checklist o scadenza.
 
-C'è poi un'asimmetria voluta: **una scrittura di stato fallita non ferma niente.** L'agente riprova una volta, poi lo annota nel report e continua a lavorare. Lo stato sulla board è cortesia verso chi legge, non il deliverable — e nella scala di questo agente niente vale il prezzo di bloccare la giornata.
+C'è poi un'asimmetria voluta: **una scrittura di stato fallita non ferma niente.** L'agente riprova una volta, poi lo annota nel report e continua a lavorare. Lo stato del task è cortesia verso chi legge, non il deliverable — e nella scala di questo agente niente vale il prezzo di bloccare la giornata.
 
-E un caso che sembra un dettaglio e non lo è: se il ciclo finisce con l'**uscita C**, l'abbandono protetto, il task torna a `to do`. Non è stato consegnato niente, e lasciarlo `in progress` racconterebbe alla board che qualcuno ci sta ancora lavorando.
+E un caso che sembra un dettaglio e non lo è: se il ciclo finisce con l'**uscita C**, l'abbandono protetto, il task torna a `DA_FARE`. Non è stato consegnato niente, e lasciarlo `IN_CORSO` racconterebbe al kanban che qualcuno ci sta ancora lavorando.
 
 ---
 
 ## Il limite noto: la scadenza
 
-Il workflow parte dai task **con scadenza oggi**, come richiesto. Va detto chiaramente che nella lista HQ, così com'è, **quasi nessun task ha una scadenza**: 3 su 100.
+Il workflow parte dai task **con scadenza oggi**, come richiesto. Va detto chiaramente che nella lista HQ, così com'è, **quasi nessun task ha una scadenza**: 3 su 100 quando stavano su ClickUp.
 
 Il filtro tornerà quasi sempre vuoto. L'agente non lo aggira di iniziativa — dichiara la selezione vuota, mostra gli scaduti ancora aperti, e chiede. Scegliere da solo fra un centinaio di task senza scadenza sarebbe lavoro buttato nella maggior parte dei casi.
 
-Perché l'agente lavori un task, quel task ha bisogno di una scadenza su ClickUp. È un cambio di abitudine sulla board, non una modifica al codice — ed è la sola cosa che serve perché la Fase 1 diventi utile.
+Perché l'agente lavori un task, quel task ha bisogno di una scadenza nel gestionale. È un cambio di abitudine sul kanban, non una modifica al codice — ed è la sola cosa che serve perché la Fase 1 diventi utile.

@@ -1,6 +1,6 @@
 # Agente dev HQ — sviluppo del gestionale Mobilitas
 
-Agente che porta un task ClickUp da una riga di titolo a codice revisionato, su frontend e backend del gestionale, **senza mai committare**.
+Agente che porta un task della lista HQ del gestionale da una riga di titolo a codice revisionato, su frontend e backend del gestionale, **senza mai committare**.
 
 ## Come si usa
 
@@ -125,7 +125,7 @@ report/                            i report, uno per task + riepilogo giornalier
   skills/
     dev-hq-orchestratore/          il workflow — l'unico che scrive
       references/
-        clickup.md                 API, token, campi, i due cambi di stato
+        task-gestionale.md         login, lista HQ, campi, i due cambi di stato
         mappa-gestionale.md        i due repo
         piano-azione.md            come si scrive il piano
         ricetta-enum.md            aggiungere un valore a un enum senza dimenticare pezzi
@@ -155,7 +155,7 @@ docs/
 
 ## Dove finisce il lavoro
 
-L'agente **non committa**, e su ClickUp muove solo lo stato. La board ti dice quindi *dove* è arrivato — `in progress` mentre lavora, `review` quando ha finito — ma non *cosa* ha fatto: quello sta solo nei file che produce lui.
+L'agente **non committa**, e sul task muove solo lo stato. Il kanban dei task ti dice quindi *dove* è arrivato — `In corso` mentre lavora, `In attesa` quando ha finito — ma non *cosa* ha fatto: quello sta solo nei file che produce lui.
 
 | File | Contiene |
 |---|---|
@@ -182,7 +182,7 @@ Ha anche scoperto che **il database è interrogabile** (`docker exec postgres ps
 
 ## Tre cose da sapere prima di usarlo
 
-**La scadenza di oggi è quasi sempre vuota.** Nella lista HQ solo 3 task su 100 hanno una scadenza. Il filtro "oggi" tornerà quasi sempre zero: allora l'agente ripiega sui task **scaduti e ancora aperti**, dal più vecchio. Se non ce ne sono nemmeno di quelli, chiude la sessione con un riepilogo — non lavora mai un task senza scadenza di sua iniziativa, perché sceglierne uno a caso fra cento è lavoro buttato. Se vuoi che lavori un task preciso, **mettigli una scadenza su ClickUp.**
+**La scadenza di oggi è spesso vuota.** Su ClickUp solo 3 task HQ su 100 avevano una scadenza, e l'import li ha portati così nel gestionale. Se il filtro "oggi" torna zero, allora l'agente ripiega sui task **scaduti e ancora aperti**, dal più vecchio. Se non ce ne sono nemmeno di quelli, chiude la sessione con un riepilogo — non lavora mai un task senza scadenza di sua iniziativa, perché sceglierne uno a caso fra cento è lavoro buttato. Se vuoi che lavori un task preciso, **mettigli una scadenza nel gestionale.**
 
 **I task sono titoli.** 6 descrizioni su 100, nessuna priorità, nessun tag. Per questo la Fase 2 esiste ed è la più importante: è dove il titolo diventa un intervento definito, leggendo il codice.
 
@@ -191,5 +191,5 @@ Ha anche scoperto che **il database è interrogabile** (`docker exec postgres ps
 ## Vincoli
 
 - **Mai commit, push, branch.** Negati anche a livello di permessi.
-- **Su ClickUp muove lo stato, e nient'altro.** `in progress` quando prende in carico, `review` quando consegna. **Mai `complete`:** chiudere un task resta una tua decisione, dopo il collaudo. Niente commenti, nessuna modifica a titolo, descrizione o scadenza — `POST` e `DELETE` sono negati anche a livello di permessi.
-- **Il token ClickUp non si stampa e non si copia** in file o report. Vive in `mobilitas-backend/src/main/resources/application-local.properties`.
+- **Sul task muove lo stato, e nient'altro.** `IN_CORSO` quando prende in carico, `IN_ATTESA` quando consegna. **Mai `COMPLETATO`:** chiudere un task resta una tua decisione, dopo il collaudo. Niente commenti, nessuna modifica a titolo, descrizione, checklist o scadenza — `POST` (tranne il login), `PUT` e `DELETE` verso l'API sono negati anche a livello di permessi.
+- **I task si leggono dall'API di produzione**, con un utente del gestionale. Le credenziali stanno in `~/.config/mobilitas-agente-dev/credenziali` (`HQ_USERNAME=`, `HQ_PASSWORD=`, `chmod 600`), fuori da ogni repo, e non si stampano né si copiano in file o report. L'utente deve vedere la lista HQ con livello almeno *Modifica*.
