@@ -55,6 +55,13 @@ Decise una volta, non si richiedono a ogni video:
 - revisione solo sul video finale;
 - `inbox/` è il punto d'arrivo del girato. Non si sposta e non si cancella niente del girato: `init` lo collega.
 
+## Claude Motion e le scene
+
+Claude Motion (claude.ai, `/motion`) non è raggiungibile dal motore: vive solo nell'interfaccia di
+claude.ai, sui piani Team ed Enterprise. Su scelta di Carlos il motore ne fa il lavoro **in casa e in
+automatico**: le scene a tutto schermo di `regia.json` (`scene`, skill `mobilitas-regia` e
+`mobilitas-grafica`). Non chiedere a Carlos di passare da claude.ai.
+
 ## Testo a schermo, titoli e descrizioni
 
 - **Niente testo inventato.** Ogni parola a schermo viene dalla trascrizione oppure è un'etichetta strutturale (`MECCANISMO`, `IN STUDIO`, `PROSSIMO VIDEO`). Le glosse sotto i numeri riformulano quello che lei dice, non aggiungono affermazioni.

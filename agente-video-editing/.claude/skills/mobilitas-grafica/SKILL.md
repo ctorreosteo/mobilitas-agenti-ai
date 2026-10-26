@@ -53,6 +53,26 @@ Dieci tipi, scelti in regia con `tipo` (campi in `mobilitas-regia/references/sch
 - **Prova dei tipi**: `controlli/movimento.jpg` mostra il primo di ogni tipo a tre istanti del suo tempo a schermo.
 - Il numero ha la scala per unità (`%` 0-100, `cm` 0-1,25x, `min` 0-60); `prima` fa scendere il numero lasciando il fantasma; `riferimento` sui `punti` disegna a contorno l'altra quantità ("2% del peso" contro "20% dell'ossigeno").
 
+## Scene a tutto schermo (`grafica/scene.py`)
+
+La "Motion in casa": stacchi animati generati dalla regia (`scene`), tre tipi (`parole`, `numero`,
+`confronto`). Composizione: il video sotto si rimpicciolisce a 160x90, si sfoca e si vela di navy all'80%
+(lei continua a muoversi dietro il vetro); sopra, un bagliore menta che deriva, una griglia di punti che
+scorre in parallasse, la vignetta; il contenuto deriva di +2,5% per tutta la scena.
+
+- **Ingresso** (0,5 s): zoomata dentro il video fino a +22% che dissolve nel vetro, con un lampo menta
+  del 10% a metà. A inizio video non c'è un video da cui entrare: la scena parte già piena.
+- **Uscita** (0,45 s): la scena dissolve e il video atterra da +10%.
+- `parole`: ogni parola arriva grande (1,35x) e si posa con un rimbalzo quando la dice; le righe già
+  dette scendono al 50%; parole chiave in menta con bagliore; `spegne` tremola e resta al 22%, `barra`
+  traccia una riga paper, `sottolinea` una riga menta. Il corpo parte da 168 px e scende finché la frase
+  sta in 4 righe da 1560 px. I sottotitoli si spengono (le parole sono già la scena).
+- `numero`: 300 px che contano in 1,4 s, unità che rimbalza, lampo e alone fermo, grafico da 420 px.
+- `confronto`: divisore che si disegna dall'alto, ogni lato entra sulla sua frase, segni e barre proporzionali.
+- Avanzamento e sottotitoli restano sopra la scena; card e apertura sotto una scena non si vedono
+  (`grafica` lo segnala).
+- Suono: risucchio e colpo basso all'ingresso, soffio che scende all'uscita, pop sulle parole, tick e colpo sul numero.
+
 ## Titoli dietro
 
 Il capitolo si scrive grande e si ritaglia con la sagoma della persona: passa dietro di lei. Per costruzione non le copre mai il volto.

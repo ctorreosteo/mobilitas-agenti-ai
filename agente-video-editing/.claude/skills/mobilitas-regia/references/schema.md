@@ -111,3 +111,25 @@ Due card a schermo insieme vanno da sole su lati opposti.
 
 Le icone sono Material Symbols: i nomi disponibili sono in `motore/motore/risorse/icone.txt`.
 Per aggiungerne una va rifatto il sottoinsieme del font (vedi `risorse/fonts/MaterialSymbols-LICENZA.txt`).
+
+## Scene a tutto schermo (`scene`)
+
+Stacchi animati di 3-8 s che coprono il quadro mentre lei continua a parlare (la "Motion in casa").
+Entrano 0,45 s prima della frase con una zoomata dentro il video; escono dopo l'ultima parola + `coda`
+(default 0,8 s); `durata` le fissa. Mai sopra un titolo (la fase si ferma), almeno 15 s fra due scene.
+
+```jsonc
+"scene": [
+  {"tipo": "parole", "frase": "se respiri bene il cervello",
+   "testo": "Se respiri bene, il cervello funziona. Se respiri male, il cervello si spegne.",  // parola per parola come la dice
+   "chiave": ["funziona."], "effetti": {"spegne.": "spegne"}, "eyebrow": "…"},   // effetti: spegne | barra | sottolinea
+  {"tipo": "numero", "frase": "…", "valore": "30-40", "unita": "%", "testo": "di ossigeno in meno",
+   "prima": "…", "grafico": "anello", "icona": "pulmonology", "voci": [{"frase": "…"}]},   // anello | punti; voci[0]: quando sale il testo
+  {"tipo": "confronto", "frase": "…", "voci": [
+     {"etichetta": "OSSIGENO", "testo": "20%", "sotto": "di tutto l'ossigeno", "misura": 20, "frase": "…"},
+     {"etichetta": "PESO", "testo": "2%", "sotto": "del tuo peso corporeo", "misura": 2, "frase": "…"}]}  // segno: si | no
+]
+```
+
+Le chiavi di `chiave` ed `effetti` si confrontano come gli ancoraggi (senza accenti né maiuscole), ma
+con la punteggiatura attaccata alla parola come nella trascrizione ("spegne." non "spegne").

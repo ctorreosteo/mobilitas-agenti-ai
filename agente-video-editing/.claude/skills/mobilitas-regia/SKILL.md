@@ -106,6 +106,22 @@ per tutto il tempo: non metterne due lunghe di fila senza respiro.
 "lavorare otto ore"): sono esiti riferiti, disegnati diventano promesse. Si disegna il meccanismo,
 e cosa si fa in studio (le zone), mai cosa si ottiene.
 
+## 3 ter. Scene a tutto schermo: i momenti epici
+
+La scena copre la presentatrice per qualche secondo e fa della sua frase la protagonista: è la
+"Motion in casa" (Claude Motion vive solo in claude.ai e non è raggiungibile dal motore; il motore fa
+lo stesso lavoro da solo, sincronizzato alla voce). Va usata poco, dove il video deve **colpire**:
+
+- l'apertura, se le prime parole sono un gancio ("Le tre del pomeriggio, sempre allo stesso punto");
+- la frase-tesi che rovescia qualcosa ("Stai ventilando, non stai ossigenando"), con `effetti`
+  sulla parola che fa il lavoro: `spegne` su "si spegne", `barra` sulla parola negata, `sottolinea` sulla nuova;
+- un confronto numerico che lascia a bocca aperta (2% del peso, 20% dell'ossigeno): `confronto`;
+- il numero che regge tutto il video: `numero`.
+
+Cinque-sei per 13 minuti, mai due a meno di 15 s, mai più di 8 s l'una (oltre, lei sparisce troppo a
+lungo). Una scena sostituisce la card o l'enfasi che c'era su quella frase: non sovrapporle. Le parole
+sono le sue, intere; niente scena sui risultati del trattamento.
+
 ## 4. Capitoli e titoli dietro
 
 - **3-5 capitoli**, uno ogni 2-4 minuti, sulle frasi in cui il discorso cambia passo. Il titolo sono **le sue parole** ("MECCANICO, / NON METABOLICO").

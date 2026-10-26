@@ -192,16 +192,10 @@
       "frase": "non è colpa tua e quello"
     },
     {
-      "frase": "stai ventilando non stai ossigenando"
-    },
-    {
       "frase": "non sei stanco stai letteralmente"
     },
     {
       "frase": "ti hanno indicato il problema"
-    },
-    {
-      "frase": "il caffè delle tre non sta risolvendo"
     },
     {
       "frase": "respiro diversamente non dice"
@@ -330,48 +324,10 @@
       "coda": 2.6
     },
     {
-      "frase": "il tuo cervello consuma",
-      "eyebrow": "OSSIGENO",
-      "valore": "20",
-      "unita": "%",
-      "glossa": "circa: di tutto l'ossigeno che entra nel corpo, se lo prende il cervello",
-      "grafico": "punti"
-    },
-    {
-      "frase": "pesa il 2",
-      "eyebrow": "PESO",
-      "valore": "2",
-      "unita": "%",
-      "glossa": "quanto pesa il cervello sul totale del corpo",
-      "grafico": "punti",
-      "riferimento": {
-        "valore": "20",
-        "etichetta": "OSSIGENO"
-      }
-    },
-    {
       "tipo": "citazione",
       "frase": "la tua lucidità non dipende",
       "testo": "La tua lucidità non dipende da cosa pensi, ma dipende da quanto respiri.",
-      "coda": 1.4
-    },
-    {
-      "tipo": "lista",
-      "frase": "se respiri bene il cervello",
-      "eyebrow": "FISIOLOGIA DI BASE",
-      "voci": [
-        {
-          "testo": "respiri bene: il cervello funziona",
-          "segno": "si",
-          "frase": "se respiri bene il cervello"
-        },
-        {
-          "testo": "respiri male: il cervello si spegne",
-          "segno": "no",
-          "frase": "se respiri male"
-        }
-      ],
-      "coda": 3.2
+      "coda": 0.3
     },
     {
       "tipo": "postura",
@@ -717,24 +673,6 @@
       "unita": "%",
       "glossa": "una versione di te stesso, per metà della tua giornata lavorativa",
       "grafico": "batteria"
-    },
-    {
-      "tipo": "lista",
-      "frase": "non è un problema di testa",
-      "eyebrow": "IL PROBLEMA",
-      "voci": [
-        {
-          "testo": "di testa",
-          "segno": "no",
-          "frase": "non è un problema di testa"
-        },
-        {
-          "testo": "di gabbia toracica",
-          "segno": "si",
-          "frase": "problema di gabbia toracica"
-        }
-      ],
-      "coda": 2.4
     }
   ],
   "capitoli": [
@@ -771,11 +709,6 @@
       "dietro": true
     }
   ],
-  "apertura": {
-    "eyebrow": "MOBILITAS · STUDIO OSTEOPATICO",
-    "l1": "LE 3 DEL POMERIGGIO,",
-    "l2": "SEMPRE ALLO STESSO PUNTO"
-  },
   "chip": {
     "frase": "adesso è diverso",
     "name": "MOBILITAS",
@@ -857,5 +790,92 @@
       "Mobilitas"
     ]
   },
-  "revisione_regista": "20/10/2026: card IL RISULTATO tolta (promessa di risultato), chiusura senza assoluto sull'ansia, glosse con i qualificatori di lei, hook degli Shorts veri rispetto allo short, enfasi spostata dove la card non la copre."
+  "revisione_regista": "20/10/2026: card IL RISULTATO tolta (promessa di risultato), chiusura senza assoluto sull'ansia, glosse con i qualificatori di lei, hook degli Shorts veri rispetto allo short, enfasi spostata dove la card non la copre.",
+  "scene": [
+    {
+      "tipo": "parole",
+      "frase": "le tre del pomeriggio",
+      "testo": "Le tre del pomeriggio, sempre allo stesso punto.",
+      "eyebrow": "MOBILITAS · STUDIO OSTEOPATICO",
+      "chiave": [
+        "tre",
+        "punto."
+      ],
+      "coda": 0.15,
+      "durata": 2.6
+    },
+    {
+      "tipo": "confronto",
+      "frase": "consuma circa il 20",
+      "voci": [
+        {
+          "etichetta": "OSSIGENO",
+          "testo": "20%",
+          "sotto": "di tutto l'ossigeno",
+          "misura": 20,
+          "frase": "consuma circa il 20"
+        },
+        {
+          "etichetta": "PESO",
+          "testo": "2%",
+          "sotto": "del tuo peso corporeo",
+          "misura": 2,
+          "frase": "pesa il 2"
+        }
+      ],
+      "coda": 0.9
+    },
+    {
+      "tipo": "parole",
+      "frase": "se respiri bene il cervello",
+      "testo": "Se respiri bene, il cervello funziona. Se respiri male, il cervello si spegne.",
+      "chiave": [
+        "funziona."
+      ],
+      "effetti": {
+        "spegne.": "spegne"
+      },
+      "coda": 1.5
+    },
+    {
+      "tipo": "parole",
+      "frase": "stai ventilando non stai",
+      "testo": "Stai ventilando, non stai ossigenando.",
+      "chiave": [
+        "ventilando,"
+      ],
+      "effetti": {
+        "ossigenando.": "barra"
+      },
+      "coda": 1.0
+    },
+    {
+      "tipo": "parole",
+      "frase": "il caffè delle tre non sta",
+      "testo": "Il caffè delle tre non sta risolvendo il calo, lo sta scavando.",
+      "effetti": {
+        "risolvendo": "barra",
+        "scavando.": "sottolinea"
+      }
+    },
+    {
+      "tipo": "confronto",
+      "frase": "non è un problema di testa",
+      "voci": [
+        {
+          "etichetta": "NON È UN PROBLEMA",
+          "testo": "DI TESTA",
+          "segno": "no",
+          "frase": "non è un problema di testa"
+        },
+        {
+          "etichetta": "È UN PROBLEMA",
+          "testo": "DI GABBIA TORACICA",
+          "segno": "si",
+          "frase": "problema di gabbia toracica"
+        }
+      ],
+      "coda": 1.6
+    }
+  ]
 }

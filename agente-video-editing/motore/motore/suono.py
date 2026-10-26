@@ -11,7 +11,9 @@ suono, sintetizzato con numpy (niente stock, niente licenze):
 - **pop** morbido per ogni voce che entra in un'infografica (lista, catena, zone),
   e un fruscio che scende quando una lista viene barrata;
 - **fruscio corto** sui punch-in di enfasi;
-- colpo morbido su apertura e chiusura.
+- colpo morbido su apertura e chiusura;
+- **scene a tutto schermo**: risucchio + colpo basso all'ingresso, soffio che scende
+  all'uscita, pop leggeri sulle parole, tick del contatore e colpo sul numero eroe.
 
 Tutto resta 10-16 dB sotto la voce: si sente come rifinitura, non come effetto.
 
@@ -148,6 +150,22 @@ def suono(slug):
         else:
             metti(whoosh(0.5, 300, 4200), c['s'] - 0.15, -26)
             metti(colpo(), c['s'] + 0.25, -23)
+    # scene a tutto schermo: si entra nel video (risucchio + colpo), si esce (soffio che scende)
+    for sc in G.get('scene', []):
+        metti(whoosh(0.55, 200, 6000, att=0.85), sc['s'] - 0.08, -25)
+        metti(colpo(1.1, 70, 34), sc['s'] + 0.42, -22)
+        metti(whoosh(0.5, 4500, 300, att=0.25), sc['e'] - 0.45, -28)
+        for k, t in enumerate(sc.get('parole_t', [])):
+            if k % 2 == 0:
+                metti(pop(900 + 40 * (k % 4)), sc['s'] + t, -37)
+        if sc['tipo'] == 'numero':
+            for k in range(1, 9):
+                x = -np.log2(1 - k / 9) / 10
+                metti(tick(1400 + 70 * k), sc['s'] + 0.45 + 1.4 * x, -36)
+            metti(colpo(0.8, 110, 50), sc['s'] + 1.85, -24)
+        for v in sc.get('voci', []):
+            if v.get('t') is not None:
+                metti(colpo(0.6, 120, 60), sc['s'] + v['t'], -27)
     corto = whoosh(0.24, 600, 5000, att=0.5)
     for p in I:
         if p['framing'].startswith('stretto'):

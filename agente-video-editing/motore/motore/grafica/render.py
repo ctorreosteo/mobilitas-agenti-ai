@@ -34,6 +34,7 @@ from ..progetto import Progetto, FPS, ffmpeg
 from .base import *          # noqa: F401,F403  (shorts e miniature le prendono da qui)
 from .base import _cl
 from .info import crea, misura
+from . import scene as SC
 
 # ---------------------------------------------------------------- sottotitoli
 class Sottotitoli:
@@ -646,11 +647,13 @@ class Scene:
         self.lock = (plan['opening'], Lockup(plan['opening'])) if plan.get('opening') else None
         self.chip = (plan['chip'], Lockup(plan['chip'], chip=True)) if plan.get('chip') else None
         self.close = (plan['closing'], Chiusura(plan['closing'])) if plan.get('closing') else None
+        self.scene = [SC.crea(c) for c in plan.get('scene', [])]
         self.enfasi = [(c['s'], c['e']) for c in plan.get('enfasi', [])]
         self.vign = vignetta() if self.enfasi else None
         self.subs = Sottotitoli(plan['captions'], forti=self.enfasi)
         self.nascosti = [(c['s'], c['e']) for c in plan['capitoli']]
         self.nascosti += [(c['s'] + 0.2, c['e']) for c in plan['cards'] if c.get('tipo') == 'citazione']
+        self.nascosti += [(c['s'] + (0 if c['s'] < 0.05 else 0.3), c['e'] - 0.2) for c in plan.get('scene', []) if c['tipo'] == 'parole']
         if plan.get('closing'):
             self.nascosti.append((plan['closing']['s'], plan['closing']['e']))
         for d in self.dietro:
@@ -699,6 +702,13 @@ class Scene:
             d.disegna(base, t, n, video)
         if video:
             base = spinta(base, self._zoom(t))
+        # la scena a tutto schermo: sopra il video, sotto avanzamento e sottotitoli
+        sc = next((x for x in self.scene if x.attiva(t)), None)
+        if sc:
+            base = sc.componi(base, t, video)
+            self._avanzamento(base, t)
+            self.subs.disegna(base, t, S.W / 2, S.CAPTION_BOT, self.nascosti)
+            return base
         self._avanzamento(base, t)
 
         for item in (self.lock, self.chip):
@@ -828,6 +838,7 @@ def anteprima(slug, tempi=None):
             vt = [v.get('t') for k in ('voci', 'zone', 'etichette') for v in c.get(k, []) if v.get('t') is not None]
             tempi.append(c['s'] + min(c['e'] - c['s'] - 0.4, max([2.2] + [x + 1.0 for x in vt])))
         tempi += [c['s'] + 1.6 for c in G['capitoli']]
+        tempi += [c['e'] - 0.7 for c in G.get('scene', [])]
         tempi += [c['s'] + 0.6 for c in G['enfasi'][:3]]
         if G.get('closing'):
             tempi.append(G['closing']['s'] + 2.8)
@@ -843,6 +854,9 @@ def anteprima(slug, tempi=None):
             visti.add(tipo)
             d = c['e'] - c['s']
             moto += [c['s'] + d * x for x in (0.08, 0.3, 0.6)]
+        for c in G.get('scene', [])[:2]:
+            d = c['e'] - c['s']
+            moto += [c['s'] + x for x in (0.2, 0.45, 0.9)] + [c['s'] + d * 0.6, c['e'] - 0.25]
         if G.get('opening'):
             moto += [G['opening']['s'] + x for x in (0.25, 0.6, 1.0)]
         if G.get('closing'):

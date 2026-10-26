@@ -178,6 +178,41 @@ def card(W, c):
     return out
 
 
+def scena(W, c):
+    """una scena a tutto schermo: entra 0,45 s prima della frase (la zoomata nel
+    video), esce dopo l'ultima parola o voce"""
+    tipo = c.get('tipo', 'parole')
+    i = ancora(W, c['frase'], cosa=f'scena {tipo}')
+    out = dict(c, tipo=tipo)
+    s = round(W[i]['s'] - 0.45, 3)
+    fine = W[i]['e']
+    if tipo == 'parole':
+        parole_ = c['testo'].split()
+        n = len(parole_)
+        j = ancora(W, ' '.join(parole_[:4]), dopo=W[i]['s'] - 1.5, cosa='scena parole')
+        if [norm(w['t']) for w in W[j:j + n]] != [norm(x) for x in parole_]:
+            sys.exit(f"scena: «{c['testo']}» non e la frase come la dice "
+                     f"(trascritta: «{' '.join(w['t'] for w in W[j:j + n])}»)")
+        s = round(max(0.0, W[j]['s'] - 0.45), 3)
+        out['parole_t'] = [round(w['s'] - s, 3) for w in W[j:j + n]]
+        fine = W[j + n - 1]['e']
+    voci = []
+    for v in c.get('voci', []):
+        v = dict(v)
+        if v.get('frase'):
+            k = ancora(W, v['frase'], dopo=W[i]['s'] - 1.5, cosa=f"scena {tipo} «{v.get('testo', v['frase'])}»")
+            v['t'] = round(W[k]['s'] - s, 3)
+            fine = max(fine, W[k]['e'])
+        voci.append(v)
+    if voci:
+        out['voci'] = voci
+    out['s'] = s
+    out['e'] = round(c['durata'] + s if c.get('durata') else max(fine + c.get('coda', 0.8), s + 3.5), 3)
+    if out['e'] - s > 9.0:
+        print(f"  ! scena a {ts(s)} lunga {out['e'] - s:.1f}s: oltre 8 s lei sparisce troppo a lungo")
+    return out
+
+
 def piano(slug):
     P = Progetto(slug)
     R = P.regia()
@@ -188,6 +223,12 @@ def piano(slug):
     cards = []
     for c in R.get('card', []):
         cards.append(card(W, c))
+
+    scene = sorted((scena(W, c) for c in R.get('scene', [])), key=lambda c: c['s'])
+    for a_, b_ in zip(scene, scene[1:]):
+        if b_['s'] - a_['e'] < 15:
+            print(f"  ! due scene a {b_['s'] - a_['e']:.0f}s l'una dall'altra ({ts(a_['s'])}, {ts(b_['s'])}): "
+                  f"almeno 15 s, o il video diventa una presentazione")
 
     capitoli, dopo = [], 0.0
     for c in R.get('capitoli', []):
@@ -252,8 +293,16 @@ def piano(slug):
         finale = {'s': W[i]['s'], 'titolo': cf['titolo']}
 
     nascosti = [(c['s'] + 0.1, c['e'] - 0.1) for c in capitoli]
-    # durante la citazione le parole sono gia a schermo, a karaoke
+    # durante la citazione e la scena di parole le parole sono gia a schermo
     nascosti += [(c['s'] + 0.2, c['e']) for c in cards if c['tipo'] == 'citazione']
+    nascosti += [(c['s'] + (0 if c['s'] < 0.05 else 0.3), c['e'] - 0.2) for c in scene if c['tipo'] == 'parole']
+    for sc in scene:
+        for c in cards:
+            if c['s'] < sc['e'] and sc['s'] < c['e']:
+                print(f"  ! la card {c['eyebrow'] or c['tipo']} a {ts(c['s'])} e sotto la scena a {ts(sc['s'])}: non si vedra")
+        for c in capitoli:
+            if c['s'] < sc['e'] and sc['s'] < c['e']:
+                sys.exit(f"scena a {ts(sc['s'])} sopra il titolo «{c['l1']}»: spostala")
     if closing:
         nascosti.append((closing['s'] + 0.3, closing['e']))
     caps = gruppi(W, nascosti)
@@ -261,7 +310,7 @@ def piano(slug):
     from ..progetto import impronta, REGIA_DI
     plan = {'regia': impronta(R, REGIA_DI['grafica.json']), 'fps': FPS, 'duration': round(dur, 6), 'frames': E['frame'],
             'opening': opening, 'chip': chip, 'closing': closing, 'cards': cards,
-            'capitoli': capitoli, 'enfasi': enfasi, 'finale': finale,
+            'capitoli': capitoli, 'enfasi': enfasi, 'finale': finale, 'scene': scene,
             'capitolo_iniziale': R.get('capitolo_iniziale', 'Introduzione'),
             'captions': caps}
     P.scrivi('grafica.json', plan)
@@ -271,6 +320,8 @@ def piano(slug):
         print(f"   card    {ts(c['s']):>9}  {cosa:<10} {c['eyebrow']}  ({c['e']-c['s']:.1f}s)")
     for c in capitoli:
         print(f"   {'dietro' if c['dietro'] else 'stacco'}  {ts(c['s']):>9}  {c['l1']} {c['l2']}  ({c['e']-c['s']:.1f}s)")
+    for c in scene:
+        print(f"   SCENA   {ts(c['s']):>9}  {c['tipo']:<10} «{c.get('testo') or c.get('valore') or c['frase']}» ({c['e']-c['s']:.1f}s)")
     for c in enfasi:
         print(f"   enfasi  {ts(c['s']):>9}  «{c['frase']}» ({c['e']-c['s']:.1f}s)")
     print("-> data/grafica.json (i lati delle card li decide `inquadra`, sul volto)")

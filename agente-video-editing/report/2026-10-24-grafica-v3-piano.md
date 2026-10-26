@@ -67,3 +67,24 @@ Shorts: stessi sottotitoli, si controllano i fogli `short*.jpg`.
 
 Niente card sui risultati del trattamento ("respiro diversamente", "il calo si riduce",
 "lavorare otto ore"): sono esiti riferiti, a schermo diventerebbero promesse.
+
+---
+
+# v5 (26/10/2026): «Motion in casa»
+
+Carlos ha chiesto di integrare Claude Motion. Verificato: Motion è una funzione di claude.ai
+(beta, Team/Enterprise, `/motion`), non raggiungibile da Claude Code né via API, e non attiva
+sul suo account. Scelta di Carlos: **rifare in casa le sue capacità, tutto automatico**.
+
+Il motore genera **scene a tutto schermo** (4-8 s) dalla regia, sincronizzate alla voce:
+
+| tipo | cosa |
+|---|---|
+| `parole` | tipografia cinetica: la frase esplode parola per parola; parole chiave in menta con effetti (`spegne`, `barra`, `sottolinea`) |
+| `numero` | numero eroe gigante che conta, con anello / cento punti / barra a scala di scena |
+| `confronto` | schermo diviso, due lati che entrano quando li dice, barre proporzionali |
+
+Ingresso: zoomata dentro il video che si sfoca e si vela di navy (lei continua a muoversi
+dietro il vetro). Uscita: il contrario. Fondo vivo: bagliore menta che deriva, griglia di punti
+in parallasse, vignetta. Regole: massimo una scena ogni 45 s, mai sopra un titolo, mai sui
+risultati del trattamento.

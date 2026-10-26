@@ -16,9 +16,9 @@
 | true peak | ≤ -1.0 dBTP | -1.7 dBTP | OK |
 | frame neri | nessuno (oltre l'apertura) | nessuno | OK |
 | immagine ferma | nessun tratto oltre 2,5 s (schede escluse) | nessuno | OK |
-| card sul volto | 0 sovrapposte | 0 sovrapposte, margine minimo 5 px | OK |
+| card sul volto | 0 sovrapposte | 0 sovrapposte, margine minimo 7 px | OK |
 | sagome titoli dietro | 372 frame | 372 | OK |
-| copertura sottotitoli | ≥ 99% delle parole | 2125/2137 | OK |
+| copertura sottotitoli | ≥ 99% delle parole | 2132/2137 | OK |
 | parole perse | ≤ 1% rispetto ai blocchi | 0 su 2135 | OK |
 | giunte ascoltate | 46 | 46 ascoltate, 0 con ripetizioni | OK |
 

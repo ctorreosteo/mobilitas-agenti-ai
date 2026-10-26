@@ -140,7 +140,8 @@ non un gradient sul testo.
 - niente gradient sul testo, niente ciano, niente viola
 - niente bianco puro
 - non coprire mai il volto con una card: le schede piene sono ammesse solo come
-  stacco di capitolo, brevi, e cadono su una pausa
+  stacco di capitolo, brevi, e cadono su una pausa; e come **scene a tutto schermo**
+  (3-8 s, al massimo una ogni 15 s, 5-6 per video), dove lei resta visibile dietro il vetro
 - niente gradient sul testo; lo sfondo delle miniature puo sfumare, il testo no
 
 ## Formato di consegna

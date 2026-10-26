@@ -94,7 +94,10 @@ def qc(slug, file=None):
     if G.get('closing'):
         nasc.append((G['closing']['s'] + 0.3, G['closing']['e']))
     vis = [w for w in words if not any(x <= w[0] < y for x, y in nasc)]
+    # una parola e a schermo se sta in un sottotitolo, oppure se la mostra gia la
+    # grafica (scena di parole, citazione): li i sottotitoli si spengono apposta
     capw = sum(len(c['words']) for c in G['captions'])
+    capw += sum(len(c.get('parole_t', [])) for c in G.get('scene', []) + G['cards'])
     check('copertura sottotitoli', '≥ 99% delle parole', f"{capw}/{len(vis)}",
           len(vis) > 0 and capw >= 0.99 * len(vis))
 
