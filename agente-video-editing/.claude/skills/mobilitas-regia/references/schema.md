@@ -131,5 +131,43 @@ Entrano 0,45 s prima della frase con una zoomata dentro il video; escono dopo l'
 ]
 ```
 
+Tutte le scene accettano `lei` (`dietro` default, `finestra`, `davanti`), `lato` (dove sta lei:
+`destra` default, `sinistra`), `ingresso: "frusta"` (solo `dietro`). Con `finestra` la scena puo durare
+fino a ~28 s, con `davanti` ~22 s: il volto resta a schermo.
+
+### Framework (Martell)
+
+```jsonc
+{"tipo": "passi", "id": "postura", "frase": "ecco cosa succede a quella postura", "eyebrow": "ORA DOPO ORA",
+ "lei": "finestra", "voci": [{"testo": "spalle in avanti: torace alto chiuso", "frase": "le spalle in avanti chiudono"}]},
+                                               // in colonna; a tutto quadro (lei dietro) fino a 4 passi vanno in fila
+{"tipo": "ciclo", "frase": "…", "lei": "davanti", "voci": [{"testo": "…", "icona": "bolt", "frase": "…"}],
+ "chiude": "lo sta scavando", "centro": "lo sta scavando"},  // l'anello si chiude su `chiude`, poi la luce gira
+{"tipo": "matrice", "frase": "…", "asse_x": "…", "asse_y": "…",
+ "voci": [{"testo": "…", "frase": "…"}, …, {"testo": "…", "frase": "…", "acceso": true}]},  // alto-sx, alto-dx, basso-sx, basso-dx
+{"tipo": "piramide", "frase": "…", "voci": [{"testo": "la base", "frase": "…"}, …]},          // dal basso
+{"tipo": "richiamo", "di": "postura", "acceso": 5, "frase": "il tuo diaframma è meccanicamente compresso",
+ "durata": 3.2, "lei": "finestra"}            // stesse voci della scena `id`, gia tutte a schermo, acceso il pezzo 5
+```
+
+`titolo` (facoltativo) va sotto l'eyebrow di ogni framework. Il richiamo non conta nei 15 s fra due scene.
+
+## Segni sopra il girato (`segni`)
+
+```jsonc
+"segni": [
+  {"tipo": "parola", "frase": "non sei pigro e non è il pranzo", "testo": "pigro", "eyebrow": "NON SEI"},
+        // `testo` dev'essere detto nella frase: sbatte quando lo dice; lato libero dal volto (inquadra)
+  {"tipo": "freccia", "frase": "nella tua gabbia toracica non", "testo": "gabbia toracica",
+   "dove": [0.40, 0.46, 0.60, 0.68], "etichetta_dove": [0.10, 0.36]},
+        // dove: riquadro (x0, y0, x1, y1) o punto (x, y) in coordinate 0-1 della SORGENTE (./mve griglia)
+  {"tipo": "cerchio", "frase": "…", "dove": [0.10, 0.80], "raggio": 120, "testo": "…"},
+  {"tipo": "riquadro", "frase": "…", "dove": [0.84, 0.48, 1.0, 0.76]}
+],
+"finitura": {"grana": 0.45}     // pellicola su tutto il video, 0-1
+```
+
+I segni non stanno sotto una scena o un titolo (la fase si ferma) e tengono il taglio largo.
+
 Le chiavi di `chiave` ed `effetti` si confrontano come gli ancoraggi (senza accenti né maiuscole), ma
 con la punteggiatura attaccata alla parola come nella trascrizione ("spegne." non "spegne").

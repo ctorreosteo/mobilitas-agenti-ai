@@ -91,6 +91,9 @@ def inquadra(slug):
             forz.append((c['s'] - 0.05, c['e'] + 0.05, 'largo'))
     for c in G['enfasi']:
         forz.append((c['s'], c['e'], c['livello']))
+    # i segni vogliono il largo: la parola ha bisogno del lato libero, il cerchio della cosa intera
+    for g in G.get('segni', []):
+        forz.append((g['s'] - 0.1, g['e'] + 0.1, 'largo'))
 
     def snap(t, verso):
         pool = [x for x in C + J if (x <= t + 0.05 if verso < 0 else x >= t - 0.05) and abs(x - t) <= 0.8]
@@ -214,7 +217,12 @@ def _lati(G, pezzi, tr, SW_, SH_):
     # le misure vengono dal renderer: la card con la scala e piu alta di un tempo
     from .grafica.render import Lockup
     from .grafica.info import misura
+    from .grafica import segni as SG
     items = [('card', c) + misura(c) for c in G['cards']]
+    for g in G.get('segni', []):
+        if g['tipo'] == 'parola':
+            w, h = SG.misura(g)
+            items.append(('parola', g, w, h + 90))
     if G.get('opening'):
         lk = Lockup(G['opening'])
         items.append(('apertura', G['opening'], lk.width, lk.height))

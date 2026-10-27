@@ -1,6 +1,6 @@
 ---
 name: mobilitas-grafica
-description: Come si producono grafica, suono e formati derivati dei video @Studio_Mobilitas — compositore che vede il video (vetro smerigliato, colore che si spegne, spinte di camera), dieci tipi di infografica sincronizzati alla voce, sottotitoli cinetici, card che sanno dov'è il volto, titoli che passano dietro la presentatrice (sagoma Apple Vision), sound design sintetizzato, Shorts 9:16 dal 4K, miniature scelte sulla qualità del volto. Renderer Pillow che compone il fotogramma e lo passa in pipe a ffmpeg. Usala quando un video deve uscire con grafica, suoni, Shorts o miniature, o quando qualcosa di questo va corretto.
+description: Come si producono grafica, suono e formati derivati dei video @Studio_Mobilitas — framework animati e richiami (Martell), lei ritagliata davanti alla grafica o in finestra (Gadzhi/Martell), parole che sbattono, segni a pennarello sul set, frusta e grana, compositore che vede il video (vetro smerigliato, colore che si spegne, spinte di camera), dieci tipi di infografica sincronizzati alla voce, sottotitoli cinetici, card che sanno dov'è il volto, titoli che passano dietro la presentatrice (sagoma Apple Vision), sound design sintetizzato, Shorts 9:16 dal 4K, miniature scelte sulla qualità del volto. Renderer Pillow che compone il fotogramma e lo passa in pipe a ffmpeg. Usala quando un video deve uscire con grafica, suoni, Shorts o miniature, o quando qualcosa di questo va corretto.
 ---
 
 # mobilitas-grafica
@@ -72,6 +72,40 @@ scorre in parallasse, la vignetta; il contenuto deriva di +2,5% per tutta la sce
 - Avanzamento e sottotitoli restano sopra la scena; card e apertura sotto una scena non si vedono
   (`grafica` lo segnala).
 - Suono: risucchio e colpo basso all'ingresso, soffio che scende all'uscita, pop sulle parole, tick e colpo sul numero.
+
+## v6: la grammatica di Martell e Gadzhi (`scene.py`, `segni.py`)
+
+Piano e perché: `report/2026-10-27-grafica-v6-martell-gadzhi.md`.
+
+- **Dove sta lei** (`Scena.lei`). `finestra`: il quadro intero si stringe in 0,62 s in una finestra 600x750
+  di lato (crop centrato 4:5, angoli che si arrotondano, filo menta), il contenuto prende la fascia libera.
+  `davanti`: la sagoma di Vision ritaglia lei dal montato, scivola al 76% (o 24%) della larghezza con
+  ombra navy e filo di luce menta (maschera dilatata e sfocata); la stanza dissolve nella scena dietro.
+  Senza sagome la scena torna `dietro` e lo dice. Durante una scena `davanti` la spinta di camera è
+  spenta: la sagoma è calcolata sul quadro senza spinta. I tipi vecchi (parole, numero, confronto) con
+  lei di lato si rimpiccioliscono nella fascia libera; i framework impaginano da soli (`nativo`).
+- **Framework**: `passi` (cerchi numerati, filo che si disegna, voce corrente piena di menta e alone che
+  pulsa, le precedenti al 75%), `ciclo` (anello fioco che si disegna, archi con la punta che arrivano al
+  nodo, chiusura, goccia di luce che gira a 150°/s e fa pulsare il nodo che tocca, `centro` che salta su),
+  `matrice` (croce menta, quadranti che si gonfiano, `acceso` pieno), `piramide` (strati tronchi che
+  salgono dal basso). Tutto sta sopra `BASSO` (sottotitoli a 1004). Nel `richiamo` le voci ci sono già al
+  40% e si accende solo il pezzo richiamato.
+- **Frusta**: dissolvenza + sfocatura orizzontale (riduzione fino a 1/35 in larghezza) + spostamento di
+  140 px che cambia verso a metà; costa poco ed è leggibile come strappo.
+- **Parola**: evidenziatore menta a bordi irregolari e inclinato di 1,6°, passata in 0,22 s; la parola navy
+  arriva da 1,55x in 0,14 s; a 0,20 s la camera prende il colpo (+4,5% di zoom e scossa di 11 px che si
+  spegne in 0,32 s, `Scene._colpo`). Larghezza massima 540 px: `inquadra` la mette sul lato libero e il QC
+  segnala `parole sul volto`.
+- **Pennarello**: tratto da 10 px con ombra navy, tremolio fisso per segno (non per frame), cerchio che
+  supera il punto di partenza, riquadro storto, freccia curva con le alette che compaiono a tratto finito.
+  `dove` è in coordinate della sorgente: `Scene._mappa` lo porta nel quadro attraverso il crop del pezzo
+  (`inquadratura.json`) e la spinta, così il segno resta sulla cosa anche se il taglio cambia.
+- **Grana**: sei tele di rumore di luminanza (sigma 9 x `grana`, a mezza risoluzione), applicate per
+  ultime su ogni fotogramma.
+- **Suoni**: pennarello (fruscio 2,6-4,2 kHz a colpi di 6,5 Hz), schiocco + colpo sulla parola, sibilo che
+  attraversa il panorama per la frusta, risucchio morbido per la finestra, fruscio quando l'anello si chiude.
+- `./mve griglia <slug> <m:ss>`: fotogramma della sorgente con la griglia 0-1 (`controlli/griglia.jpg`).
+- `movimento.jpg` mostra la prima scena di ogni combinazione tipo/lei/richiamo e i primi tre segni.
 
 ## Titoli dietro
 

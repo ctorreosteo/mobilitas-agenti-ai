@@ -45,8 +45,9 @@ def stato(slug):
         paths = [P.p(o.format(s=slug)) for o in outs]
         if fase == 'sagome':
             G = P.leggi('grafica.json', {}) if P.data('grafica.json').exists() else {}
-            if not any(c.get('dietro') for c in G.get('capitoli', [])):
-                print(f"  ·  {fase:<10} non serve (nessun titolo dietro)")
+            if not (any(c.get('dietro') for c in G.get('capitoli', []))
+                    or any(c.get('lei') == 'davanti' for c in G.get('scene', []))):
+                print(f"  ·  {fase:<10} non serve (nessun titolo dietro, nessuna scena con lei davanti)")
                 continue
         manca = [p for p in paths if not p.exists()]
         if manca:
@@ -106,3 +107,33 @@ def dove(slug, tempo):
     for b in B:
         if b[1] > src - 4 and b[0] < src + 4 and b[2]:
             print(f"  sorgente [{b[0]:.2f}-{b[1]:.2f}] {b[2]}")
+
+
+def griglia(slug, tempo):
+    """il fotogramma della sorgente a un istante del montato, con la griglia 0-1:
+    da qui si leggono le coordinate `dove` dei segni (cerchio, riquadro, freccia)"""
+    from PIL import Image, ImageDraw, ImageFont
+    from . import stile as S
+    from .progetto import ffmpeg
+    P = Progetto(slug)
+    t = sum(float(x) * 60 ** i for i, x in enumerate(reversed(str(tempo).split(':'))))
+    E = P.leggi('edl.json')
+    seg = max((s for s in E['segmenti'] if s['edit_in'] <= t), key=lambda s: s['edit_in'])
+    src = seg['in'] + (t - seg['edit_in'])
+    out = P.controllo('griglia.jpg')
+    png = P.controllo('griglia.png')
+    ffmpeg('-ss', f"{src:.3f}", '-i', P.sorgente, '-frames:v', '1', '-vf', 'scale=1920:1080', png)
+    im = Image.open(png).convert('RGB')
+    d = ImageDraw.Draw(im, 'RGBA')
+    f = ImageFont.truetype(S.FONT_MONO, 22)
+    for k in range(1, 20):
+        forte = k % 2 == 0
+        x, y = 1920 * k / 20, 1080 * k / 20
+        d.line([(x, 0), (x, 1080)], fill=S.MINT + (150 if forte else 60,), width=2 if forte else 1)
+        d.line([(0, y), (1920, y)], fill=S.MINT + (150 if forte else 60,), width=2 if forte else 1)
+        if forte:
+            d.text((x + 4, 4), f"{k / 20:.1f}", font=f, fill=S.MINT + (255,), stroke_width=3, stroke_fill=S.NAVY_DEEP)
+            d.text((4, y + 2), f"{k / 20:.1f}", font=f, fill=S.MINT + (255,), stroke_width=3, stroke_fill=S.NAVY_DEEP)
+    im.save(out, quality=90)
+    png.unlink()
+    print(f"sorgente {src:.2f}s -> controlli/griglia.jpg (x e y da 0 a 1, linee ogni 0,05)")

@@ -35,6 +35,7 @@ from .base import *          # noqa: F401,F403  (shorts e miniature le prendono 
 from .base import _cl
 from .info import crea, misura
 from . import scene as SC
+from . import segni as SG
 
 # ---------------------------------------------------------------- sottotitoli
 class Sottotitoli:
@@ -621,13 +622,38 @@ def vignetta():
     return im
 
 
-def spinta(base, z):
-    """push-in di camera: il quadro si ingrandisce di z attorno al centro"""
+def _spinta_box(z, dx=0.0, dy=0.0):
+    w, h = int(round(S.W / z)), int(round(S.H / z))
+    x0 = min(max(0, (S.W - w) // 2 + int(dx)), S.W - w)
+    y0 = min(max(0, int((S.H - h) * 0.42) + int(dy)), S.H - h)
+    return x0, y0, w, h
+
+
+def spinta(base, z, dx=0.0, dy=0.0):
+    """push-in di camera: il quadro si ingrandisce di z attorno al centro;
+    (dx, dy) e la scossa del colpo"""
     if z <= 1.0005:
         return base
-    w, h = int(round(S.W / z)), int(round(S.H / z))
-    x0, y0 = (S.W - w) // 2, int((S.H - h) * 0.42)
+    x0, y0, w, h = _spinta_box(z, dx, dy)
     return base.crop((x0, y0, x0 + w, y0 + h)).resize((S.W, S.H), Image.BILINEAR)
+
+
+class Grana:
+    """la pellicola (Gadzhi): grana fine di luminanza, sei tele che si alternano.
+    `forza` da 0 a 1; 0,5 e gia visibile su uno schermo grande, sul telefono quasi no"""
+
+    def __init__(self, forza):
+        rng = np.random.default_rng(11)
+        sig = 9.0 * forza
+        self.tele = []
+        for _ in range(6):
+            g = rng.normal(0, sig, (S.H // 2, S.W // 2)).astype(np.float32)
+            g = np.asarray(Image.fromarray(g, 'F').resize((S.W, S.H), Image.BILINEAR), np.float32)
+            self.tele.append(np.clip(g, -40, 40).astype(np.int16)[..., None])
+
+    def applica(self, im, n):
+        a = np.asarray(im.convert('RGB'), np.int16) + self.tele[n % 6]
+        return Image.fromarray(np.clip(a, 0, 255).astype(np.uint8), 'RGB').convert('RGBA')
 
 
 class Scene:
@@ -647,7 +673,16 @@ class Scene:
         self.lock = (plan['opening'], Lockup(plan['opening'])) if plan.get('opening') else None
         self.chip = (plan['chip'], Lockup(plan['chip'], chip=True)) if plan.get('chip') else None
         self.close = (plan['closing'], Chiusura(plan['closing'])) if plan.get('closing') else None
-        self.scene = [SC.crea(c) for c in plan.get('scene', [])]
+        self.sagome = SC.Sagome(sag if sag.is_dir() else None)
+        self.scene = [SC.crea(c, self.sagome) for c in plan.get('scene', [])]
+        self.segni = [SG.crea(c) for c in plan.get('segni', [])]
+        self.colpi = [g.colpo() for g in self.segni if isinstance(g, SG.Parola)]
+        fin = plan.get('finitura') or {}
+        self.grana = Grana(float(fin['grana'])) if fin.get('grana') else None
+        self.pezzi, self.src_wh = [], (S.W, S.H)
+        if any(not isinstance(g, SG.Parola) for g in self.segni) and P.data('inquadratura.json').exists():
+            I = P.leggi('inquadratura.json')
+            self.pezzi, self.src_wh = I['pezzi'], tuple(I['sorgente'])
         self.enfasi = [(c['s'], c['e']) for c in plan.get('enfasi', [])]
         self.vign = vignetta() if self.enfasi else None
         self.subs = Sottotitoli(plan['captions'], forti=self.enfasi)
@@ -689,6 +724,27 @@ class Scene:
                 return 1.0 + 0.035 * (t - a) / max(0.5, b - a)
         return 1.0
 
+    def _colpo(self, t):
+        """la camera prende il colpo della parola: un pugno di zoom e una scossa che si spegne"""
+        for tc in self.colpi:
+            u = t - tc
+            if 0 <= u < 0.32:
+                k = math.exp(-u * 11)
+                return 0.045 * k, 11 * k * math.sin(u * 95), 7 * k * math.cos(u * 77)
+        return 0.0, 0.0, 0.0
+
+    def _mappa(self, n, z, dx, dy):
+        """dalla sorgente (0-1) al quadro d'uscita del frame n: taglio del pezzo, poi spinta"""
+        p = next((p for p in self.pezzi if p['f0'] <= n < p['f0'] + p['n']), None)
+        x0, y0, cw, ch = p['crop'] if p else (0, 0) + self.src_wh
+        sx0, sy0, sw, sh = _spinta_box(z, dx, dy) if z > 1.0005 else (0, 0, S.W, S.H)
+
+        def f(u, v):
+            px = (u * self.src_wh[0] - x0) * S.W / cw
+            py = (v * self.src_wh[1] - y0) * S.H / ch
+            return (px - sx0) * S.W / sw, (py - sy0) * S.H / sh
+        return f
+
     def frame(self, n, sfondo=None):
         t = n / FPS
         video = sfondo is not None
@@ -700,16 +756,26 @@ class Scene:
                 break
         for d in self.dietro:
             d.disegna(base, t, n, video)
-        if video:
-            base = spinta(base, self._zoom(t))
         # la scena a tutto schermo: sopra il video, sotto avanzamento e sottotitoli
         sc = next((x for x in self.scene if x.attiva(t)), None)
+        z, dx, dy = self._zoom(t), 0.0, 0.0
+        if sc and sc.lei == 'davanti':
+            z = 1.0              # la sagoma e calcolata sul quadro senza spinta
+        pz, dx, dy = self._colpo(t)
+        z += pz
+        if video:
+            base = spinta(base, z, dx, dy)
         if sc:
-            base = sc.componi(base, t, video)
+            base = sc.componi(base, t, video, n)
             self._avanzamento(base, t)
             self.subs.disegna(base, t, S.W / 2, S.CAPTION_BOT, self.nascosti)
-            return base
+            return self.grana.applica(base, n) if (self.grana and video) else base
         self._avanzamento(base, t)
+        if self.segni:
+            mappa = self._mappa(n, z, dx, dy) if video else self._mappa(n, 1.0, 0, 0)
+            for g in self.segni:
+                if g.c['s'] <= t < g.c['e']:
+                    g.disegna(base, t) if isinstance(g, SG.Parola) else g.disegna(base, t, mappa)
 
         for item in (self.lock, self.chip):
             if not item:
@@ -744,7 +810,7 @@ class Scene:
                 base.alpha_composite(ch.frame(t - c['s'], int(255 * a)))
 
         self.subs.disegna(base, t, S.W / 2, S.CAPTION_BOT, self.nascosti)
-        return base
+        return self.grana.applica(base, n) if (self.grana and video) else base
 
     @staticmethod
     def _pannello(base, sp, c, rev, rise, a, video):
@@ -840,6 +906,7 @@ def anteprima(slug, tempi=None):
         tempi += [c['s'] + 1.6 for c in G['capitoli']]
         tempi += [c['e'] - 0.7 for c in G.get('scene', [])]
         tempi += [c['s'] + 0.6 for c in G['enfasi'][:3]]
+        tempi += [c['s'] + 0.9 for c in G.get('segni', [])]
         if G.get('closing'):
             tempi.append(G['closing']['s'] + 2.8)
         moto = []
@@ -854,7 +921,15 @@ def anteprima(slug, tempi=None):
             visti.add(tipo)
             d = c['e'] - c['s']
             moto += [c['s'] + d * x for x in (0.08, 0.3, 0.6)]
-        for c in G.get('scene', [])[:2]:
+        prime, viste = [], set()
+        for c in G.get('scene', []):
+            k = (c['tipo'], c.get('lei', 'dietro'), bool(c.get('richiamo')))
+            if k not in viste:
+                viste.add(k)
+                prime.append(c)
+        for c in G.get('segni', [])[:3]:
+            moto += [c['s'] + x for x in (0.1, 0.22, 0.45, 0.9)]
+        for c in prime[:6]:
             d = c['e'] - c['s']
             moto += [c['s'] + x for x in (0.2, 0.45, 0.9)] + [c['s'] + d * 0.6, c['e'] - 0.25]
         if G.get('opening'):

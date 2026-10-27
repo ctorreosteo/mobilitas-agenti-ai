@@ -26,7 +26,7 @@ Un cancello è un controllo che deve passare prima di andare avanti. Non si salt
 | 1 | `papere` | leggi **tutto** `data/trascrizione.txt` (un blocco di parlato per riga) e `controlli/papere.md`; scrivi i `tagli` in `regia.json` | ogni regione ★★/★★★ è tagliata o finisce in `scartati` con il motivo |
 | 2 | `edl` | lanci | nessuna giunta `DENTRO UNA PAROLA` (la fase esce con errore) |
 | 3 | `audio` | leggi `controlli/giunte.md` | ogni giunta si richiude in una frase intera; quelle segnalate si correggono (torni a 1) o vanno in `giunte_ok` con il motivo |
-| 4 | regia editoriale | scrivi in `regia.json` card, capitoli, enfasi, apertura, chip, chiusura, correzioni, Shorts, miniatura, YouTube; lanci il subagente **regista** | ogni parola a schermo viene dalla trascrizione o è un'etichetta strutturale |
+| 4 | regia editoriale | scrivi in `regia.json` card, scene e framework (con i loro richiami), segni, capitoli, enfasi, apertura, chip, chiusura, correzioni, Shorts, miniatura, YouTube (`griglia` per le coordinate dei segni); lanci il subagente **regista** | ogni parola a schermo viene dalla trascrizione o è un'etichetta strutturale |
 | 5 | `grafica`, `inquadra`, `monta`, `sagome`, `anteprima` | **guardi** `controlli/anteprima.jpg` e `controlli/inquadrature.jpg` (con Read: sono immagini); lanci **revisore-visivo** | nessuna card sul volto (`inquadra` lo misura), nessun testo fuori dalle zone sicure, titoli dietro davvero dietro |
 | 6 | `suono`, `finale`, `qc` | leggi `controlli/QC.md`, guardi `controlli/giunte.jpg` | **QC: CONSEGNABILE** |
 | 7 | `shorts`, `miniature` | guardi `controlli/short*.jpg`, `controlli/miniature.jpg`, `controlli/miniatura-piccola.png` | hook leggibile, nessun testo sotto l'interfaccia di Shorts, miniatura leggibile a 168 px |
@@ -61,6 +61,14 @@ Claude Motion (claude.ai, `/motion`) non è raggiungibile dal motore: vive solo 
 claude.ai, sui piani Team ed Enterprise. Su scelta di Carlos il motore ne fa il lavoro **in casa e in
 automatico**: le scene a tutto schermo di `regia.json` (`scene`, skill `mobilitas-regia` e
 `mobilitas-grafica`). Non chiedere a Carlos di passare da claude.ai.
+
+## Il livello: Dan Martell e Iman Gadzhi
+
+Dal 27/10/2026 il riferimento di montaggio sono loro due: il ragionamento ha una forma (framework a
+passi, ciclo, matrice, piramide) che si costruisce mentre lei parla e **torna** quando lei lo riprende
+(`richiamo`); lei esce dalla stanza e sta davanti alla grafica (`lei: davanti`) o parla da una finestra
+accanto allo schema (`finestra`); le parole chiave sbattono evidenziate, il pennarello indica le cose
+del set. Come e quando: skill `mobilitas-regia` (§ 3 quater), come si produce: `mobilitas-grafica`.
 
 ## Testo a schermo, titoli e descrizioni
 

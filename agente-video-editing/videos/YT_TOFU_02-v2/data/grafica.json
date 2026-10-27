@@ -1,5 +1,5 @@
 {
- "regia": "4a0739784215",
+ "regia": "64a5ebe089bb",
  "fps": 29.97002997002997,
  "duration": 807.373233,
  "frames": 24197,
@@ -118,7 +118,7 @@
    "annulla_t": 16.376,
    "e": 114.002,
    "side": "left",
-   "margine_volto": 22.1
+   "margine_volto": 18.1
   },
   {
    "tipo": "lista",
@@ -182,7 +182,7 @@
    "s": 152.54,
    "e": 157.76,
    "side": "left",
-   "margine_volto": 85.3
+   "margine_volto": 42.2
   },
   {
    "tipo": "citazione",
@@ -208,7 +208,7 @@
    ],
    "e": 197.071,
    "side": "left",
-   "margine_volto": 38.0
+   "margine_volto": 68.6
   },
   {
    "tipo": "postura",
@@ -245,48 +245,6 @@
    "e": 228.922,
    "side": "left",
    "margine_volto": 7.4
-  },
-  {
-   "tipo": "catena",
-   "frase": "ecco cosa succede a quella postura",
-   "eyebrow": "ORA DOPO ORA",
-   "voci": [
-    {
-     "testo": "spalle in avanti: torace alto chiuso",
-     "icona": "accessibility_new",
-     "frase": "le spalle in avanti chiudono",
-     "t": 3.47
-    },
-    {
-     "testo": "testa avanti: tratto cervicale compresso",
-     "icona": "monitor",
-     "frase": "comprime il tratto cervicale",
-     "t": 8.68
-    },
-    {
-     "testo": "prime coste tirate in alto, bloccate",
-     "icona": "skeleton",
-     "frase": "tira le prime coste",
-     "t": 10.74
-    },
-    {
-     "testo": "curva lombare piatta, bacino indietro",
-     "icona": "event_seat",
-     "frase": "la curva lombare si appiattisce",
-     "t": 13.68
-    },
-    {
-     "testo": "diaframma schiacciato contro gli organi addominali",
-     "icona": "pulmonology",
-     "frase": "lavora schiacciato contro",
-     "t": 23.05
-    }
-   ],
-   "coda": 2.2,
-   "s": 238.068,
-   "e": 263.318,
-   "side": "left",
-   "margine_volto": 23.6
   },
   {
    "tipo": "anatomia",
@@ -814,6 +772,44 @@
    "e": 204.421
   },
   {
+   "tipo": "passi",
+   "id": "postura",
+   "frase": "ecco cosa succede a quella postura",
+   "eyebrow": "ORA DOPO ORA",
+   "lei": "finestra",
+   "lato": "destra",
+   "voci": [
+    {
+     "testo": "spalle in avanti: torace alto chiuso",
+     "frase": "le spalle in avanti chiudono",
+     "t": 3.84
+    },
+    {
+     "testo": "testa avanti: tratto cervicale compresso",
+     "frase": "comprime il tratto cervicale",
+     "t": 9.05
+    },
+    {
+     "testo": "prime coste tirate in alto, bloccate",
+     "frase": "tira le prime coste",
+     "t": 11.11
+    },
+    {
+     "testo": "curva lombare piatta, bacino indietro",
+     "frase": "la curva lombare si appiattisce",
+     "t": 14.05
+    },
+    {
+     "testo": "diaframma schiacciato contro gli organi addominali",
+     "frase": "lavora schiacciato contro",
+     "t": 23.42
+    }
+   ],
+   "durata": 25.9,
+   "s": 237.698,
+   "e": 263.598
+  },
+  {
    "tipo": "parole",
    "frase": "stai ventilando non stai",
    "testo": "Stai ventilando, non stai ossigenando.",
@@ -824,6 +820,7 @@
     "ossigenando.": "barra"
    },
    "coda": 1.0,
+   "ingresso": "frusta",
    "parole_t": [
     0.45,
     0.54,
@@ -835,29 +832,66 @@
    "e": 306.883
   },
   {
-   "tipo": "parole",
-   "frase": "il caffè delle tre non sta",
-   "testo": "Il caffè delle tre non sta risolvendo il calo, lo sta scavando.",
-   "effetti": {
-    "risolvendo": "barra",
-    "scavando.": "sottolinea"
-   },
-   "parole_t": [
-    0.45,
-    0.5,
-    0.81,
-    1.14,
-    1.32,
-    1.51,
-    1.7,
-    2.32,
-    2.45,
-    2.88,
-    2.93,
-    3.14
+   "tipo": "ciclo",
+   "frase": "ti senti sveglio per 40",
+   "eyebrow": "IL CAFFÈ DELLE TRE",
+   "lei": "davanti",
+   "lato": "destra",
+   "voci": [
+    {
+     "testo": "sveglio per 40 minuti",
+     "icona": "bolt",
+     "frase": "ti senti sveglio per 40",
+     "t": 0.45
+    },
+    {
+     "testo": "la meccanica respiratoria peggiora",
+     "icona": "air",
+     "frase": "la tua meccanica respiratoria sta",
+     "t": 6.24
+    },
+    {
+     "testo": "cadi più in basso di dove eri partito",
+     "icona": "trending_down",
+     "frase": "tu cadi più in basso",
+     "t": 14.223
+    }
    ],
-   "s": 427.89,
-   "e": 432.62
+   "chiude": "lo sta scavando",
+   "centro": "lo sta scavando",
+   "coda": 1.2,
+   "chiude_t": 20.373,
+   "s": 410.397,
+   "e": 433.22
+  },
+  {
+   "tipo": "passi",
+   "eyebrow": "ORA DOPO ORA",
+   "voci": [
+    {
+     "testo": "spalle in avanti: torace alto chiuso"
+    },
+    {
+     "testo": "testa avanti: tratto cervicale compresso"
+    },
+    {
+     "testo": "prime coste tirate in alto, bloccate"
+    },
+    {
+     "testo": "curva lombare piatta, bacino indietro"
+    },
+    {
+     "testo": "diaframma schiacciato contro gli organi addominali"
+    }
+   ],
+   "richiamo": 5,
+   "di": "postura",
+   "frase": "il tuo diaframma è meccanicamente compresso",
+   "s": 530.698,
+   "e": 533.898,
+   "lei": "finestra",
+   "lato": "destra",
+   "ingresso": null
   },
   {
    "tipo": "confronto",
@@ -879,10 +913,54 @@
     }
    ],
    "coda": 1.6,
+   "lei": "davanti",
+   "lato": "destra",
    "s": 737.095,
    "e": 741.335
   }
  ],
+ "segni": [
+  {
+   "tipo": "parola",
+   "frase": "non sei pigro e non è il pranzo",
+   "testo": "pigro",
+   "eyebrow": "NON SEI",
+   "s": 90.504,
+   "e": 92.404,
+   "side": "left",
+   "margine_volto": 106.6
+  },
+  {
+   "tipo": "parola",
+   "frase": "è l'organo più affamato",
+   "testo": "affamato",
+   "eyebrow": "DI OSSIGENO",
+   "s": 185.101,
+   "e": 187.001,
+   "side": "left",
+   "margine_volto": 68.6
+  },
+  {
+   "tipo": "freccia",
+   "frase": "nella tua gabbia toracica non",
+   "testo": "gabbia toracica",
+   "dove": [
+    0.4,
+    0.46,
+    0.6,
+    0.68
+   ],
+   "etichetta_dove": [
+    0.1,
+    0.36
+   ],
+   "s": 334.619,
+   "e": 337.219
+  }
+ ],
+ "finitura": {
+  "grana": 0.45
+ },
  "capitolo_iniziale": "Le 3 del pomeriggio",
  "captions": [
   {
@@ -8746,6 +8824,90 @@
      "t": "partito.",
      "s": 426.74,
      "e": 427.42
+    }
+   ]
+  },
+  {
+   "s": 428.34,
+   "e": 429.02,
+   "words": [
+    {
+     "t": "Il",
+     "s": 428.34,
+     "e": 428.39
+    },
+    {
+     "t": "caffè",
+     "s": 428.39,
+     "e": 428.7
+    },
+    {
+     "t": "delle",
+     "s": 428.7,
+     "e": 429.03
+    }
+   ]
+  },
+  {
+   "s": 429.03,
+   "e": 429.58,
+   "words": [
+    {
+     "t": "tre",
+     "s": 429.03,
+     "e": 429.21
+    },
+    {
+     "t": "non",
+     "s": 429.21,
+     "e": 429.4
+    },
+    {
+     "t": "sta",
+     "s": 429.4,
+     "e": 429.59
+    }
+   ]
+  },
+  {
+   "s": 429.59,
+   "e": 430.76,
+   "words": [
+    {
+     "t": "risolvendo",
+     "s": 429.59,
+     "e": 430.21
+    },
+    {
+     "t": "il",
+     "s": 430.21,
+     "e": 430.34
+    },
+    {
+     "t": "calo,",
+     "s": 430.34,
+     "e": 430.77
+    }
+   ]
+  },
+  {
+   "s": 430.77,
+   "e": 431.94,
+   "words": [
+    {
+     "t": "lo",
+     "s": 430.77,
+     "e": 430.82
+    },
+    {
+     "t": "sta",
+     "s": 430.82,
+     "e": 431.03
+    },
+    {
+     "t": "scavando.",
+     "s": 431.03,
+     "e": 431.82
     }
    ]
   },

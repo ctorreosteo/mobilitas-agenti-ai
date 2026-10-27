@@ -113,7 +113,7 @@ def frame_q(t):
 REGIA_DI = {
     'edl.json': ('tagli', 'ritmo', 'pause_da_tenere'),
     'grafica.json': ('card', 'capitoli', 'enfasi', 'apertura', 'chip', 'chiusura', 'correzioni',
-                     'capitolo_iniziale', 'capitolo_finale'),
+                     'capitolo_iniziale', 'capitolo_finale', 'scene', 'segni', 'finitura'),
 }
 
 

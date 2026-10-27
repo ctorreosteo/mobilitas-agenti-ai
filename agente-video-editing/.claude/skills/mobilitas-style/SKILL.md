@@ -126,9 +126,22 @@ sta fermo: il movimento accompagna la voce, non le fa concorrenza.
 - stacco di capitolo: 0,30 s dentro / 0,30 s fuori, secco
 - barra di avanzamento: lineare, a segmenti per capitolo
 
+- framework: voci che entrano sulla parola, voce corrente piena di menta, le altre al 75% (40% nel richiamo)
+- finestra: il quadro si stringe in 0,62 s, esce in 0,55 s; lei davanti: scivola in 0,5 s, filo di luce menta
+- parola che sbatte: evidenziatore 0,22 s, parola da 1,55x in 0,14 s, colpo di camera (4,5%, scossa 0,32 s)
+- pennarello: si disegna in 0,55 s, trema come una mano (fisso), esce in 0,30 s
+- frusta: strappo laterale sfocato, solo su una-due scene per video
+
 Il rimbalzo è uno solo (`ease_out_back` con k 1,7): mai elastici, mai oscillazioni ripetute.
 Il bagliore menta (lampo sul numero, pulsazione della CTA) è un alone *sotto* il testo,
 non un gradient sul testo.
+
+## Pennarello e pellicola
+
+Il pennarello è il terzo segno della casa, dopo la voce (Montserrat) e lo strumento (Plex Mono): è la
+**mano** che indica. È solo un tratto menta con ombra navy, mai una scrittura: le etichette restano
+Montserrat 900. L'evidenziatore della parola che sbatte è menta pieno sotto testo navy: è l'unico caso in
+cui il testo è scuro su chiaro. La grana (`finitura.grana` 0,4-0,5) è di sola luminanza: non sporca il colore.
 
 ## Divieti
 
@@ -141,7 +154,8 @@ non un gradient sul testo.
 - niente bianco puro
 - non coprire mai il volto con una card: le schede piene sono ammesse solo come
   stacco di capitolo, brevi, e cadono su una pausa; e come **scene a tutto schermo**
-  (3-8 s, al massimo una ogni 15 s, 5-6 per video), dove lei resta visibile dietro il vetro
+  (3-8 s, al massimo una ogni 15 s, 5-6 per video), dove lei resta visibile dietro il vetro; con lei in
+  finestra o davanti il volto non sparisce mai, e la scena puo reggere un framework intero (fino a ~28 s)
 - niente gradient sul testo; lo sfondo delle miniature puo sfumare, il testo no
 
 ## Formato di consegna

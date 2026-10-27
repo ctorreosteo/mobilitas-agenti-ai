@@ -178,6 +178,30 @@ def card(W, c):
     return out
 
 
+FRAMEWORK = ('passi', 'ciclo', 'matrice', 'piramide')
+# il volto resta visibile: la scena puo durare di piu
+DURATA_MAX = {'dietro': 9.0, 'finestra': 30.0, 'davanti': 24.0}
+
+
+def richiamo(W, c, ids):
+    """il framework che torna: stesse voci della scena `di`, gia tutte a schermo,
+    acceso il pezzo `acceso` (da 1). Breve, e di default con lei in finestra."""
+    if c.get('di') not in ids:
+        sys.exit(f"richiamo: nessuna scena con id «{c.get('di')}» (scene con id: {', '.join(ids) or 'nessuna'})")
+    rif = ids[c['di']]
+    n = len(rif.get('voci', []))
+    if not 1 <= c.get('acceso', 0) <= n:
+        sys.exit(f"richiamo di «{c['di']}»: `acceso` va da 1 a {n}")
+    i = ancora(W, c['frase'], cosa=f"richiamo {c['di']}")
+    s = round(W[i]['s'] - 0.30, 3)
+    out = {k: v for k, v in rif.items() if k in ('tipo', 'eyebrow', 'titolo', 'centro', 'asse_x', 'asse_y')}
+    out['voci'] = [{k: v for k, v in x.items() if k in ('testo', 'icona', 'acceso')} for x in rif['voci']]
+    out.update({'richiamo': c['acceso'], 'di': c['di'], 'frase': c['frase'], 's': s,
+                'e': round(s + c.get('durata', 3.2), 3), 'lei': c.get('lei', 'finestra'),
+                'lato': c.get('lato', rif.get('lato', 'destra')), 'ingresso': c.get('ingresso')})
+    return out
+
+
 def scena(W, c):
     """una scena a tutto schermo: entra 0,45 s prima della frase (la zoomata nel
     video), esce dopo l'ultima parola o voce"""
@@ -185,6 +209,8 @@ def scena(W, c):
     i = ancora(W, c['frase'], cosa=f'scena {tipo}')
     out = dict(c, tipo=tipo)
     s = round(W[i]['s'] - 0.45, 3)
+    if c.get('lei') == 'finestra':
+        s = round(W[i]['s'] - 0.62, 3)       # il quadro si stringe nella finestra
     fine = W[i]['e']
     if tipo == 'parole':
         parole_ = c['testo'].split()
@@ -202,14 +228,43 @@ def scena(W, c):
         if v.get('frase'):
             k = ancora(W, v['frase'], dopo=W[i]['s'] - 1.5, cosa=f"scena {tipo} «{v.get('testo', v['frase'])}»")
             v['t'] = round(W[k]['s'] - s, 3)
-            fine = max(fine, W[k]['e'])
+            # nei framework la voce resta finche finisce di dirla
+            fine = max(fine, W[fine_frase(W, k, 3.5)]['e'] if tipo in FRAMEWORK else W[k]['e'])
         voci.append(v)
     if voci:
         out['voci'] = voci
+    if c.get('chiude'):
+        k = ancora(W, c['chiude'], dopo=W[i]['s'], cosa=f'scena {tipo} chiude')
+        out['chiude_t'] = round(W[k]['s'] - s, 3)
+        fine = max(fine, W[k]['e'] + 1.2)
+    if tipo in FRAMEWORK and not voci:
+        sys.exit(f"scena {tipo} a {ts(s)}: servono le `voci`, ognuna con la sua `frase`")
     out['s'] = s
     out['e'] = round(c['durata'] + s if c.get('durata') else max(fine + c.get('coda', 0.8), s + 3.5), 3)
-    if out['e'] - s > 9.0:
-        print(f"  ! scena a {ts(s)} lunga {out['e'] - s:.1f}s: oltre 8 s lei sparisce troppo a lungo")
+    lim = DURATA_MAX.get(c.get('lei', 'dietro'), 9.0)
+    if out['e'] - s > lim:
+        print(f"  ! scena a {ts(s)} lunga {out['e'] - s:.1f}s: con lei {c.get('lei', 'dietro')} "
+              f"oltre {lim - 1:.0f} s sparisce troppo a lungo")
+    return out
+
+
+def segno(W, c):
+    """un segno sopra il girato. `parola`: `testo` dev'essere detto nella `frase`,
+    e la parola sbatte quando lo dice; gli altri entrano sulla `frase`"""
+    tipo = c.get('tipo', 'parola')
+    i = ancora(W, c['frase'], cosa=f'segno {tipo}')
+    out = dict(c, tipo=tipo)
+    if tipo == 'parola':
+        j = trova(W, c['testo'], dopo=W[i]['s'] - 0.05)
+        if j is None or W[j]['s'] - W[i]['s'] > 6:
+            sys.exit(f"segno parola: «{c['testo']}» non e detto nella frase «{c['frase']}»")
+        out['s'] = round(W[j]['s'] - 0.12, 3)
+        out['e'] = round(out['s'] + c.get('durata', 1.9), 3)
+    else:
+        if not c.get('dove'):
+            sys.exit(f"segno {tipo} a «{c['frase']}»: manca `dove` (coordinate 0-1 della sorgente, ./mve griglia)")
+        out['s'] = round(W[i]['s'] - 0.05, 3)
+        out['e'] = round(out['s'] + c.get('durata', 2.6), 3)
     return out
 
 
@@ -224,9 +279,21 @@ def piano(slug):
     for c in R.get('card', []):
         cards.append(card(W, c))
 
-    scene = sorted((scena(W, c) for c in R.get('scene', [])), key=lambda c: c['s'])
+    scene, ids = [], {}
+    for c in R.get('scene', []):
+        if c.get('tipo') == 'richiamo':
+            continue
+        x = scena(W, c)
+        scene.append(x)
+        if c.get('id'):
+            ids[c['id']] = x
+    scene += [richiamo(W, c, ids) for c in R.get('scene', []) if c.get('tipo') == 'richiamo']
+    scene.sort(key=lambda c: c['s'])
     for a_, b_ in zip(scene, scene[1:]):
-        if b_['s'] - a_['e'] < 15:
+        if b_['s'] < a_['e']:
+            sys.exit(f"due scene si sovrappongono a {ts(b_['s'])}: spostane una")
+        # il richiamo e breve e torna apposta: non conta nella distanza fra scene
+        if b_['s'] - a_['e'] < 15 and not (a_.get('richiamo') or b_.get('richiamo')):
             print(f"  ! due scene a {b_['s'] - a_['e']:.0f}s l'una dall'altra ({ts(a_['s'])}, {ts(b_['s'])}): "
                   f"almeno 15 s, o il video diventa una presentazione")
 
@@ -307,10 +374,21 @@ def piano(slug):
         nascosti.append((closing['s'] + 0.3, closing['e']))
     caps = gruppi(W, nascosti)
 
+    segni = sorted((segno(W, c) for c in R.get('segni', [])), key=lambda c: c['s'])
+    for g in segni:
+        for x in scene + capitoli:
+            if g['s'] < x['e'] and x['s'] < g['e']:
+                sys.exit(f"segno {g['tipo']} a {ts(g['s'])} sotto una scena o un titolo: spostalo")
+        for c in cards:
+            if g['tipo'] == 'parola' and g['s'] < c['e'] and c['s'] < g['e']:
+                print(f"  ! parola «{g['testo']}» a {ts(g['s'])} insieme alla card {c['eyebrow'] or c['tipo']}: "
+                      f"`inquadra` le mette su lati opposti, ma due cose accanto a lei sono troppe")
+
     from ..progetto import impronta, REGIA_DI
     plan = {'regia': impronta(R, REGIA_DI['grafica.json']), 'fps': FPS, 'duration': round(dur, 6), 'frames': E['frame'],
             'opening': opening, 'chip': chip, 'closing': closing, 'cards': cards,
-            'capitoli': capitoli, 'enfasi': enfasi, 'finale': finale, 'scene': scene,
+            'capitoli': capitoli, 'enfasi': enfasi, 'finale': finale, 'scene': scene, 'segni': segni,
+            'finitura': R.get('finitura', {}),
             'capitolo_iniziale': R.get('capitolo_iniziale', 'Introduzione'),
             'captions': caps}
     P.scrivi('grafica.json', plan)
@@ -321,7 +399,11 @@ def piano(slug):
     for c in capitoli:
         print(f"   {'dietro' if c['dietro'] else 'stacco'}  {ts(c['s']):>9}  {c['l1']} {c['l2']}  ({c['e']-c['s']:.1f}s)")
     for c in scene:
-        print(f"   SCENA   {ts(c['s']):>9}  {c['tipo']:<10} «{c.get('testo') or c.get('valore') or c['frase']}» ({c['e']-c['s']:.1f}s)")
+        cosa = f"richiamo {c['di']} #{c['richiamo']}" if c.get('richiamo') else c['tipo']
+        print(f"   SCENA   {ts(c['s']):>9}  {cosa:<10} «{c.get('testo') or c.get('valore') or c['frase']}» "
+              f"lei {c.get('lei', 'dietro')} ({c['e']-c['s']:.1f}s)")
+    for c in segni:
+        print(f"   segno   {ts(c['s']):>9}  {c['tipo']:<10} «{c.get('testo', '')}»")
     for c in enfasi:
         print(f"   enfasi  {ts(c['s']):>9}  «{c['frase']}» ({c['e']-c['s']:.1f}s)")
     print("-> data/grafica.json (i lati delle card li decide `inquadra`, sul volto)")

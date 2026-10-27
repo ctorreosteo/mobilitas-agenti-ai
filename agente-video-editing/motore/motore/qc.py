@@ -87,7 +87,11 @@ def qc(slug, file=None):
 
     sag = len(list(P.p('data', 'sagome').glob('*.png'))) if P.p('data', 'sagome').is_dir() else 0
     att = sum(int(round((c['e'] - c['s']) * FPS)) for c in G['capitoli'] if c['dietro'])
-    check('sagome titoli dietro', f"{att} frame", sag, sag >= att * 0.98 if att else True)
+    att += sum(int(round((c['e'] - c['s']) * FPS)) for c in G.get('scene', []) if c.get('lei') == 'davanti')
+    check('sagome (titoli dietro, lei davanti)', f"{att} frame", sag, sag >= att * 0.98 if att else True)
+    pv = [g for g in G.get('segni', []) if g['tipo'] == 'parola' and g.get('conflitto')]
+    if any(g['tipo'] == 'parola' for g in G.get('segni', [])):
+        check('parole sul volto', '0 sovrapposte', f"{len(pv)} sovrapposte", not pv)
 
     words = P.leggi('parole-montato.json')
     nasc = [(c['s'] + 0.1, c['e'] - 0.1) for c in G['capitoli']]

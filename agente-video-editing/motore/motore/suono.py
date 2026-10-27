@@ -95,6 +95,23 @@ def salita(dur=0.55):
     return x
 
 
+def pennarello(dur=0.55):
+    """il pennarello sulla lavagna: fruscio acuto a colpi, come una mano che scrive"""
+    n = int(dur * SR)
+    x = _banda(RNG.normal(0, 1, n), 2600, 4200, q=0.6)
+    t = np.arange(n) / SR
+    am = 0.55 + 0.45 * np.abs(np.sin(2 * np.pi * 6.5 * t + RNG.uniform(0, 3))) ** 0.6
+    x = x * am * _env(n, 0.08, 1.2)
+    return x / (np.abs(x).max() + 1e-9) * 0.7
+
+
+def schiocco():
+    """il transiente secco della parola che sbatte"""
+    n = int(0.05 * SR)
+    x = RNG.normal(0, 1, n) * np.exp(-np.linspace(0, 9, n))
+    return _banda(x, 3000, 1500, q=1.2) * 0.9
+
+
 def _pan(x, p):
     """p da -1 (sinistra) a +1 (destra), legge a potenza costante"""
     a = (p + 1) * np.pi / 4
@@ -152,9 +169,23 @@ def suono(slug):
             metti(colpo(), c['s'] + 0.25, -23)
     # scene a tutto schermo: si entra nel video (risucchio + colpo), si esce (soffio che scende)
     for sc in G.get('scene', []):
-        metti(whoosh(0.55, 200, 6000, att=0.85), sc['s'] - 0.08, -25)
-        metti(colpo(1.1, 70, 34), sc['s'] + 0.42, -22)
-        metti(whoosh(0.5, 4500, 300, att=0.25), sc['e'] - 0.45, -28)
+        if sc.get('ingresso') == 'frusta':
+            # lo strappo: un sibilo rapido che passa da un lato all'altro
+            metti(whoosh(0.30, 300, 8000, att=0.45), sc['s'] - 0.05, -24, -0.4)
+            metti(colpo(0.7, 95, 40), sc['s'] + 0.30, -24)
+            metti(whoosh(0.30, 7000, 400, att=0.4), sc['e'] - 0.40, -27, 0.4)
+        elif sc.get('lei') == 'finestra':
+            metti(whoosh(0.6, 250, 3500, att=0.7), sc['s'] - 0.02, -27)
+            metti(colpo(0.7, 110, 55), sc['s'] + 0.58, -27)
+            metti(whoosh(0.5, 3500, 300, att=0.3), sc['e'] - 0.55, -29)
+        else:
+            metti(whoosh(0.55, 200, 6000, att=0.85), sc['s'] - 0.08, -25)
+            metti(colpo(1.1, 70, 34), sc['s'] + 0.42, -22)
+            metti(whoosh(0.5, 4500, 300, att=0.25), sc['e'] - 0.45, -28)
+        if not sc.get('richiamo') and (sc.get('chiude_t') is not None or (sc['tipo'] == 'ciclo' and sc.get('voci'))):
+            # l'anello che si chiude
+            tc = sc.get('chiude_t', max(v.get('t', 0) for v in sc['voci']) + 0.9)
+            metti(whoosh(0.6, 600, 2400, att=0.6), sc['s'] + tc, -30)
         for k, t in enumerate(sc.get('parole_t', [])):
             if k % 2 == 0:
                 metti(pop(900 + 40 * (k % 4)), sc['s'] + t, -37)
@@ -166,6 +197,16 @@ def suono(slug):
         for v in sc.get('voci', []):
             if v.get('t') is not None:
                 metti(colpo(0.6, 120, 60), sc['s'] + v['t'], -27)
+    # segni sopra il girato: il pennarello che scrive, la parola che sbatte
+    for g in G.get('segni', []):
+        if g['tipo'] == 'parola':
+            side = -0.45 if g.get('side', 'left') == 'left' else 0.45
+            metti(whoosh(0.16, 900, 6000, att=0.8), g['s'] - 0.08, -29, side)
+            metti(colpo(0.55, 130, 52), g['s'] + 0.19, -22, side * 0.5)
+            metti(schiocco(), g['s'] + 0.19, -27, side)
+            metti(pennarello(0.24), g['s'] + 0.04, -33, side)
+        else:
+            metti(pennarello(0.55), g['s'], -30)
     corto = whoosh(0.24, 600, 5000, att=0.5)
     for p in I:
         if p['framing'].startswith('stretto'):

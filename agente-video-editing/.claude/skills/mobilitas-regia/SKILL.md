@@ -122,6 +122,40 @@ Cinque-sei per 13 minuti, mai due a meno di 15 s, mai più di 8 s l'una (oltre, 
 lungo). Una scena sostituisce la card o l'enfasi che c'era su quella frase: non sovrapporle. Le parole
 sono le sue, intere; niente scena sui risultati del trattamento.
 
+## 3 quater. La grammatica di Martell e Gadzhi: framework, richiami, segni
+
+Dan Martell e Iman Gadzhi non mettono "più grafica": danno al ragionamento una **forma** e la fanno
+tornare. Le regole, in ordine d'importanza:
+
+1. **Cerca la forma del discorso**, non la frase bella. Quando lei elenca cause in sequenza è `passi`;
+   quando l'ultima causa riporta alla prima è `ciclo`; quando divide in due livelli con due criteri è
+   `matrice`; quando una cosa poggia sull'altra è `piramide`. Uno o due framework per video: sono la
+   colonna vertebrale, non decorazione.
+2. **Il framework torna** (`richiamo`). Quando più avanti lei riprende un pezzo ("il tuo diaframma è
+   compresso da anni di postura seduta"), la mappa ricompare per 3 s con acceso quel pezzo. È la firma
+   di Martell: lo spettatore sa sempre dove si trova. Un richiamo per framework, due al massimo.
+3. **Dove sta lei** (`lei`): `finestra` per i framework lunghi (15-30 s: il volto resta, lei continua a
+   parlare in un riquadro di lato); `davanti` per il momento cinematografico (lei ritagliata in primo
+   piano, la grafica dietro di lei: uno-due per video, servono le sagome); `dietro` per le scene brevi
+   che devono colpire (parole, numero, confronto).
+4. **La parola che sbatte** (`segni`, `parola`): la parola che fa il lavoro della frase, una sola,
+   detta in quella frase ("PIGRO" su "non sei pigro"). Massimo una al minuto, mai insieme a una card.
+   L'`eyebrow` porta il resto della frase ("NON SEI"), non un commento.
+5. **Il pennarello sul set** (`freccia`, `cerchio`, `riquadro`): indica una cosa che si vede (il
+   modello anatomico, la gabbia toracica di lei) quando la nomina. Le coordinate `dove` si leggono da
+   `./mve griglia <slug> <m:ss>`; i segni seguono da soli il taglio di camera.
+6. **La frusta** (`"ingresso": "frusta"`) su una o due scene `dietro` per video: lo strappo vale perché
+   è raro. La **grana** (`finitura.grana`, 0,4-0,5) dà la pellicola a tutto il video.
+
+Le voci dei framework sono **parole sue**, compresse come le glosse delle card (che tengono i
+qualificatori). La freccia che chiude un `ciclo` è un'affermazione: si usa solo se lei dice che la
+cosa si ripete o si scava ("lo sta scavando", "sempre più caffè"). Il `centro` del ciclo è una frase
+sua, detta quando l'anello si chiude (`chiude`).
+
+Nel banco di prova (YT_TOFU_02-v2): `passi` "ORA DOPO ORA" in finestra (la catena posturale), il suo
+`richiamo` sul diaframma a 8:50, il `ciclo` del caffè con lei davanti che si chiude su "lo sta
+scavando", "PIGRO" e "AFFAMATO" che sbattono, la freccia sulla gabbia toracica.
+
 ## 4. Capitoli e titoli dietro
 
 - **3-5 capitoli**, uno ogni 2-4 minuti, sulle frasi in cui il discorso cambia passo. Il titolo sono **le sue parole** ("MECCANICO, / NON METABOLICO").

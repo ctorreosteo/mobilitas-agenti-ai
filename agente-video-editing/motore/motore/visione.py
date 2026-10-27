@@ -131,13 +131,14 @@ def estrai_frame(video, t0, t1, cartella, scala=None):
 
 
 def sagome(slug):
-    """sagome della persona sul montato pulito, nelle finestre dei titoli dietro"""
-    from .grafica import piano as G
+    """sagome della persona sul montato pulito, nelle finestre dei titoli dietro
+    e delle scene con lei davanti alla grafica"""
     P = Progetto(slug)
     plan = P.leggi('grafica.json')
     finestre = [(c['s'], c['e']) for c in plan['capitoli'] if c.get('dietro')]
+    finestre += [(max(0.0, c['s'] - 0.1), c['e'] + 0.1) for c in plan.get('scene', []) if c.get('lei') == 'davanti']
     if not finestre:
-        print("nessun titolo dietro in regia: niente sagome da calcolare")
+        print("nessun titolo dietro e nessuna scena con lei davanti: niente sagome da calcolare")
         return
     video = P.render(f"{slug}_pulito.mp4")
     dst = P.p('data', 'sagome')

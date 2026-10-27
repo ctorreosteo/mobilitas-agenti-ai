@@ -31,6 +31,7 @@ FASI = {
     'consegna':   ('consegna',     'consegna',    "SRT, capitoli, pacchetto YouTube"),
     'stato':      ('stato',        'stato',       "cosa e fatto e qual e la prossima fase"),
     'dove':       ('stato',        'dove',        "un istante del video consegnato -> sorgente, giunta, pezzo"),
+    'griglia':    ('stato',        'griglia',     "fotogramma della sorgente con la griglia 0-1, per i `dove` dei segni"),
 }
 
 
@@ -45,7 +46,7 @@ def main(argv=None):
             sp.add_argument('slug', nargs='?')
         else:
             sp.add_argument('slug')
-        if k == 'dove':
+        if k in ('dove', 'griglia'):
             sp.add_argument('tempo', help="m:ss o secondi del video consegnato")
         if k == 'monta':
             sp.add_argument('--solo', help="pezzi da rifare, es. 3,7,12")
