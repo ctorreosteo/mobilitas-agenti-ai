@@ -13,7 +13,7 @@ oppure
 
 > Lavora il task 1234
 
-Senza id prende i task con scadenza oggi, poi gli scaduti dal più vecchio.
+Senza id prende tutti i task aperti con scadenza fino a oggi: quelli di oggi e, insieme, gli scaduti non ancora fatti (dal più vecchio). All'avvio mostra l'elenco dei task che lavorerà, e a ogni cambio annuncia quello in corso (`Task 2/5 — HQ-1234: …`).
 
 Commit: `<Titolo breve> (HQ-<task_id>)`, solo i file toccati dall'agente, mai push. A fine task lo sposta a `In attesa` nel gestionale.
 

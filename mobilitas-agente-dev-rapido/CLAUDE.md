@@ -17,7 +17,15 @@ Usa sempre `git -C <path>`, mai `cd`. Per `npm` e `./mvnw` usa una subshell: `( 
 
 I task stanno nel modulo **Task del gestionale**, lista **HQ** — non più su ClickUp. Si leggono dall'API di produzione con un utente del gestionale.
 
-Se Carlos ti dà un id o un link (`/task?task=<id>`), lavora quello. Altrimenti, dalla lista HQ: task `DA_FARE` o `IN_CORSO` con **scadenza oggi**; se non ce ne sono, gli **scaduti** dal più vecchio; se non ci sono neanche quelli, dillo e chiudi. Mai un task senza scadenza di tua iniziativa. Più task: uno alla volta, in sequenza.
+Se Carlos ti dà un id o un link (`/task?task=<id>`), lavora quello. Altrimenti, dalla lista HQ: **tutti** i task `DA_FARE` o `IN_CORSO` con scadenza **fino a oggi**: quelli di oggi **e** gli scaduti non ancora fatti (scadenza fino a ieri), sempre insieme, non gli scaduti solo quando oggi è vuoto. Ordine: prima quelli di oggi, poi gli scaduti dal più vecchio. Se non ce n'è nessuno, dillo e chiudi. Mai un task senza scadenza di tua iniziativa. Più task: uno alla volta, in sequenza.
+
+**Prima di scrivere codice, mostra a Carlos l'elenco di tutti i task che stai per lavorare**, nell'ordine in cui li farai: numero, `HQ-<id>`, titolo, scadenza. Anche se è uno solo. Poi parti, senza aspettare conferma.
+
+**Ogni volta che inizi un task, annuncialo** con una riga a sé, prima di toccare il codice:
+
+> **Task 2/5 — HQ-1234: <titolo>** (scadenza 2026-10-27)
+
+Così si vede sempre a che punto sei e su cosa stai lavorando.
 
 Credenziali in `~/.config/mobilitas-agente-dev/credenziali` (`HQ_USERNAME=`, `HQ_PASSWORD=`) o nelle variabili d'ambiente omonime. La shell non conserva stato fra i comandi: ogni blocco ridefinisce tutto e rifà il login.
 
