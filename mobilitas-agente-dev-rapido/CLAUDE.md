@@ -10,6 +10,9 @@ Prendi un task dalla lista HQ del gestionale, lo implementi nel gestionale, fai 
 |------|------|-------|
 | Frontend | `/Users/carlitos/mobilitas-hq/mobilitas-frontend` | React 19, Vite, TS, Tailwind v4, shadcn/ui |
 | Backend | `/Users/carlitos/mobilitas-hq/mobilitas-backend` | Spring Boot, Java, Maven — package `it.mobilitas.hq` |
+| Sito web | `/Users/carlitos/mobilitas-sito-web` | React 19, Vite, Tailwind, JavaScript (niente TypeScript) — sito pubblico e landing |
+
+Il sito si tocca quando il task parla del sito, delle landing o delle pagine pubbliche (prenotazione, form, popup). Il sito chiama il backend del gestionale (es. `/api/sito/prenotazione`): se cambi un'API che il sito usa, aggiorni entrambi i lati, come fra frontend e backend. Convenzioni del sito: `DESIGN_SYSTEM.md` e `COLORS.md` nella sua radice.
 
 Usa sempre `git -C <path>`, mai `cd`. Per `npm` e `./mvnw` usa una subshell: `( cd <path> && ... )`.
 
@@ -81,6 +84,14 @@ Leggi il codice che serve e scrivi. Niente piano su file, niente approvazioni.
 ( cd /Users/carlitos/mobilitas-hq/mobilitas-frontend && npm run typecheck 2>&1 | grep -E '^src/' | grep -Ff <(git diff --name-only HEAD; git ls-files --others --exclude-standard) )
 ```
 
+Se hai toccato il sito:
+
+```bash
+( cd /Users/carlitos/mobilitas-sito-web && npm run build && { git diff --name-only HEAD -- '*.js' '*.jsx'; git ls-files --others --exclude-standard -- '*.js' '*.jsx'; } | xargs npx eslint )
+```
+
+La build deve passare. Il lint del sito ha centinaia di errori pregressi: contano solo quelli nei file che hai toccato e causati dal tuo diff. `dist/` è ignorato da git: la build non sporca il commit.
+
 Il backend parte pulito: ogni errore è tuo, correggilo. Il frontend ha centinaia di errori pregressi: contano solo quelli nei file che hai toccato e causati dal tuo diff. Correggi finché è pulito, poi rileggi il diff una volta da cima a fondo.
 
 ## 4. Commit
@@ -94,7 +105,7 @@ git -C <path> commit -m "<Titolo breve> (HQ-<task_id>)" -- <file tuoi>
 
 - Messaggio: una riga in italiano, iniziale maiuscola, nello stile dello storico (`Stats segreteria`, `Fix calcolo compenso`), seguita da `(HQ-<task_id>)`. Stesso messaggio in entrambi i repo se li tocchi entrambi.
 - Se hai dovuto modificare un file che Carlos aveva già modificato, il commit si porta dietro anche le sue modifiche: dillo esplicitamente alla fine.
-- **Mai** push, branch, checkout, reset, stash, amend. Niente deploy.
+- **Mai** push, branch, checkout, reset, stash, amend. Niente deploy: nel sito questo vuol dire mai `./deploy.sh`, `npm run deploy` o `firebase deploy`, che pubblicano subito su Firebase Hosting.
 
 Poi sposta il task a `IN_ATTESA` (senza, al prossimo giro lo riprenderesti), e nient'altro sul task — niente commenti, checklist o altri campi:
 

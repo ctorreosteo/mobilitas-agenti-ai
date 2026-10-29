@@ -1,6 +1,6 @@
 # Agente dev rapido
 
-La versione minima di `mobilitas-agente-dev-hq`: legge il task dalla lista HQ del gestionale, lo implementa su frontend e backend, fa il commit. Niente piano, revisori, report o deploy.
+La versione minima di `mobilitas-agente-dev-hq`: legge il task dalla lista HQ del gestionale, lo implementa su frontend e backend (e sul sito web, quando il task lo riguarda), fa il commit. Niente piano, revisori, report o deploy.
 
 ```bash
 cd /Users/carlitos/mobilitas-agenti-ai/mobilitas-agente-dev-rapido
