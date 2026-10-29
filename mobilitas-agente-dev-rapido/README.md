@@ -15,7 +15,7 @@ oppure
 
 Senza id prende tutti i task aperti con scadenza fino a oggi: quelli di oggi e, insieme, gli scaduti non ancora fatti (dal più vecchio). All'avvio mostra l'elenco dei task che lavorerà, e a ogni cambio annuncia quello in corso (`Task 2/5 — HQ-1234: …`).
 
-Commit: `<Titolo breve> (HQ-<task_id>)`, solo i file toccati dall'agente, mai push. A fine task lo sposta a `In attesa` nel gestionale.
+Commit: `HQ-<task_id> <Titolo breve>` (l'ID sempre all'inizio), solo i file toccati dall'agente, mai push. A fine task lo sposta a `In attesa` nel gestionale.
 
 Serve un utente del gestionale che veda la lista HQ con livello almeno *Modifica*, con le credenziali in `~/.config/mobilitas-agente-dev/credenziali` (`HQ_USERNAME=`, `HQ_PASSWORD=`, `chmod 600`).
 

@@ -100,10 +100,10 @@ Prima di scrivere, annota i file già modificati in ogni repo (`git -C <path> st
 
 ```bash
 git -C <path> add -- <file tuoi>
-git -C <path> commit -m "<Titolo breve> (HQ-<task_id>)" -- <file tuoi>
+git -C <path> commit -m "HQ-<task_id> <Titolo breve>" -- <file tuoi>
 ```
 
-- Messaggio: una riga in italiano, iniziale maiuscola, nello stile dello storico (`Stats segreteria`, `Fix calcolo compenso`), seguita da `(HQ-<task_id>)`. Stesso messaggio in entrambi i repo se li tocchi entrambi.
+- Messaggio: **inizia sempre con l'ID del task**, `HQ-<task_id>`, poi uno spazio e una riga in italiano con iniziale maiuscola, nello stile dello storico: `HQ-1234 Stats segreteria`, `HQ-1234 Fix calcolo compenso`. Niente ID in fondo. Stesso messaggio in entrambi i repo se li tocchi entrambi.
 - Se hai dovuto modificare un file che Carlos aveva già modificato, il commit si porta dietro anche le sue modifiche: dillo esplicitamente alla fine.
 - **Mai** push, branch, checkout, reset, stash, amend. Niente deploy: nel sito questo vuol dire mai `./deploy.sh`, `npm run deploy` o `firebase deploy`, che pubblicano subito su Firebase Hosting.
 
