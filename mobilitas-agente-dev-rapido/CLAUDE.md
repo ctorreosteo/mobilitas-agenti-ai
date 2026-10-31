@@ -1,8 +1,8 @@
 # Agente dev rapido
 
-Prendi un task dalla lista HQ del gestionale, lo implementi nel gestionale, fai il commit. Nient'altro: niente piano scritto, niente revisori, niente report, niente deploy.
+Prendi un task dalla lista HQ del gestionale, lo implementi dove serve (gestionale, sito, app), fai il commit. Nient'altro: niente piano scritto, niente revisori, niente report.
 
-**Rapido vuol dire niente cerimonie, non lavoro a metà.** Letto il task parti subito, ma consegni solo codice finito, che compila e copre entrambi i lati.
+**Rapido vuol dire niente cerimonie, non lavoro a metà.** Letto il task parti subito, ma consegni solo codice finito, che compila e copre tutti i lati.
 
 ## Repo
 
@@ -11,8 +11,13 @@ Prendi un task dalla lista HQ del gestionale, lo implementi nel gestionale, fai 
 | Frontend | `/Users/carlitos/mobilitas-hq/mobilitas-frontend` | React 19, Vite, TS, Tailwind v4, shadcn/ui |
 | Backend | `/Users/carlitos/mobilitas-hq/mobilitas-backend` | Spring Boot, Java, Maven — package `it.mobilitas.hq` |
 | Sito web | `/Users/carlitos/mobilitas-sito-web` | React 19, Vite, Tailwind, JavaScript (niente TypeScript) — sito pubblico e landing |
+| App mobile | `/Users/carlitos/mobilitas-academy-frontend` | Expo 54, React Native, TS — app pazienti "Mobilitas" |
+
+Una funzionalità può coinvolgere tutti e tre: gestionale, sito e app parlano con lo stesso backend. Tocca solo i repo che servono al task, ma tutti quelli che servono.
 
 Il sito si tocca quando il task parla del sito, delle landing o delle pagine pubbliche (prenotazione, form, popup). Il sito chiama il backend del gestionale (es. `/api/sito/prenotazione`): se cambi un'API che il sito usa, aggiorni entrambi i lati, come fra frontend e backend. Convenzioni del sito: `DESIGN_SYSTEM.md` e `COLORS.md` nella sua radice.
+
+L'app si tocca quando il task parla dell'app o dei pazienti che la usano. Chiama il backend di produzione: prima di cambiare un'API controlla in `src/api/` e `src/services/` se l'app la usa. **Le versioni vecchie dell'app restano sui telefoni**, quindi per lei un'API si estende e basta: niente campi o endpoint rinominati o rimossi. Documentazione in `docs/` nella sua radice. `mobilitas-academy-firebase` (proxy YouTube) non è un repo git: non toccarla, e se il task la richiede dillo.
 
 Usa sempre `git -C <path>`, mai `cd`. Per `npm` e `./mvnw` usa una subshell: `( cd <path> && ... )`.
 
@@ -22,11 +27,11 @@ I task stanno nel modulo **Task del gestionale**, lista **HQ** — non più su C
 
 Se Carlos ti dà un id o un link (`/task?task=<id>`), lavora quello. Altrimenti, dalla lista HQ: **tutti** i task `DA_FARE` o `IN_CORSO` con scadenza **fino a oggi**: quelli di oggi **e** gli scaduti non ancora fatti (scadenza fino a ieri), sempre insieme, non gli scaduti solo quando oggi è vuoto. Ordine: prima quelli di oggi, poi gli scaduti dal più vecchio. Se non ce n'è nessuno, dillo e chiudi. Mai un task senza scadenza di tua iniziativa. Più task: uno alla volta, in sequenza.
 
-**Prima di scrivere codice, mostra a Carlos l'elenco di tutti i task che stai per lavorare**, nell'ordine in cui li farai: numero, `HQ-<id>`, titolo, scadenza. Anche se è uno solo. Poi parti, senza aspettare conferma.
+**Prima di scrivere codice, mostra a Carlos l'elenco di tutti i task che stai per lavorare**, nell'ordine in cui li farai: numero, id, titolo, scadenza. Anche se è uno solo. Poi parti, senza aspettare conferma.
 
 **Ogni volta che inizi un task, annuncialo** con una riga a sé, prima di toccare il codice:
 
-> **Task 2/5 — HQ-1234: <titolo>** (scadenza 2026-10-27)
+> **Task 2/5 — 1234: <titolo>** (scadenza 2026-10-27)
 
 Così si vede sempre a che punto sei e su cosa stai lavorando.
 
@@ -90,6 +95,12 @@ Se hai toccato il sito:
 ( cd /Users/carlitos/mobilitas-sito-web && npm run build && { git diff --name-only HEAD -- '*.js' '*.jsx'; git ls-files --others --exclude-standard -- '*.js' '*.jsx'; } | xargs npx eslint )
 ```
 
+Se hai toccato l'app (parte pulita: ogni errore è tuo):
+
+```bash
+( cd /Users/carlitos/mobilitas-academy-frontend && npx tsc --noEmit )
+```
+
 La build deve passare. Il lint del sito ha centinaia di errori pregressi: contano solo quelli nei file che hai toccato e causati dal tuo diff. `dist/` è ignorato da git: la build non sporca il commit.
 
 Il backend parte pulito: ogni errore è tuo, correggilo. Il frontend ha centinaia di errori pregressi: contano solo quelli nei file che hai toccato e causati dal tuo diff. Correggi finché è pulito, poi rileggi il diff una volta da cima a fondo.
@@ -100,12 +111,16 @@ Prima di scrivere, annota i file già modificati in ogni repo (`git -C <path> st
 
 ```bash
 git -C <path> add -- <file tuoi>
-git -C <path> commit -m "HQ-<task_id> <Titolo breve>" -- <file tuoi>
+git -C <path> commit -m "<task_id> - <spiegazione>" -- <file tuoi>
 ```
 
-- Messaggio: **inizia sempre con l'ID del task**, `HQ-<task_id>`, poi uno spazio e una riga in italiano con iniziale maiuscola, nello stile dello storico: `HQ-1234 Stats segreteria`, `HQ-1234 Fix calcolo compenso`. Niente ID in fondo. Stesso messaggio in entrambi i repo se li tocchi entrambi.
+- Messaggio: sempre `<task_id> - <spiegazione>`, cioè solo il numero del task, trattino, e una riga in italiano con iniziale maiuscola: `1234 - Stats segreteria`, `1234 - Fix calcolo compenso`. Nessuna sigla davanti, niente ID in fondo.
+- **Ogni repo ha il suo commit.** Se il task tocca più repo, fai un commit in ciascuno, solo con i file di quel repo e con lo stesso messaggio.
 - Se hai dovuto modificare un file che Carlos aveva già modificato, il commit si porta dietro anche le sue modifiche: dillo esplicitamente alla fine.
-- **Mai** push, branch, checkout, reset, stash, amend. Niente deploy: nel sito questo vuol dire mai `./deploy.sh`, `npm run deploy` o `firebase deploy`, che pubblicano subito su Firebase Hosting.
+- **Il tuo lavoro finisce col commit.** Mai push, pull, fetch, rebase, deploy: quelli li fa Carlos a mano (nel sito vuol dire mai `./deploy.sh`, `npm run deploy` o `firebase deploy`).
+- **Mai** branch, checkout, reset, stash, amend.
+
+## 5. Stato del task
 
 Poi sposta il task a `IN_ATTESA` (senza, al prossimo giro lo riprenderesti), e nient'altro sul task — niente commenti, checklist o altri campi:
 
