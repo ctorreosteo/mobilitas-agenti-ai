@@ -1,5 +1,5 @@
 #!/bin/zsh
-# installa.sh — prepara un Mac con chip Apple per l'agente video YouTube (v1.0).
+# installa.sh — prepara un Mac con chip Apple per l'agente video YouTube (v1.0.1).
 #
 # Controlla cosa c'è già e installa il resto SOLO dopo una conferma per ogni pezzo:
 # Strumenti da riga di comando di Xcode, Homebrew, ffmpeg, whisper.cpp con il modello
@@ -7,7 +7,8 @@
 # Alla fine fa una prova di 30 secondi. Si può rilanciare quante volte si vuole:
 # quello che c'è già non si tocca.
 #
-# Uso: apri il Terminale nella cartella agente-video-youtube e scrivi  ./installa.sh
+# Uso: apri il Terminale nella cartella dell'agente e scrivi  ./installa.sh
+#      ./installa.sh --prova   rifà solo la prova finale, senza controllare né installare
 
 set -u
 DIR=${0:A:h}
@@ -29,12 +30,26 @@ errore(){ print -P "%F{red}!!! $1%f"; }
 chiedi(){ local r; read "r?  → $1 [s/N] "; [[ $r == [sSyY]* ]]; }
 titolo(){ print; print -P "%B$1%b"; }
 
-titolo "Agente video YouTube v1.0: controllo del Mac"
+# il modello whisper: dove lo cerca anche il motore (motore/motore/progetto.py)
+trova_modello() {
+  local p
+  for p in "${MVE_WHISPER_MODEL:-}" "$MODELLO" "$HOME/.cache/hyperframes/whisper/models/ggml-large-v3.bin"; do
+    [[ -n $p && -f $p ]] && { print -r -- "$p"; return 0; }
+  done
+  return 1
+}
+
+# Homebrew nel PATH anche se il profilo del Terminale non lo carica
+[[ -x /opt/homebrew/bin/brew ]] && eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# ================================================================ controllo e installazione
+installa() {
+titolo "Agente video YouTube v1.0.1: controllo del Mac"
 if [[ $(uname -s) != Darwin || $(uname -m) != arm64 ]]; then
   errore "serve un Mac con chip Apple (M1, M2, M3, M4, M5...)"; exit 1
 fi
-RAM=$(( $(sysctl -n hw.memsize) / 1073741824 ))
-LIBERO=$(df -g "$DIR" | awk 'NR==2 {print $4}')
+local RAM=$(( $(sysctl -n hw.memsize) / 1073741824 ))
+local LIBERO=$(df -g "$DIR" | awk 'NR==2 {print $4}')
 print "  $(sysctl -n machdep.cpu.brand_string), RAM $RAM GB, macOS $(sw_vers -productVersion), disco libero $LIBERO GB"
 if (( RAM < 16 )); then
   manca "RAM sotto i 16 GB: l'agente funziona, ma fa un lavoro alla volta ed è più lento"
@@ -60,7 +75,6 @@ fi
 
 # ---------------------------------------------------------------- Homebrew
 titolo "2. Homebrew"
-[[ -x /opt/homebrew/bin/brew ]] && eval "$(/opt/homebrew/bin/brew shellenv)"
 if command -v brew >/dev/null; then
   ok "presente ($(brew --version | head -1))"
 else
@@ -130,11 +144,8 @@ fi
 
 # ---------------------------------------------------------------- modello whisper
 titolo "7. Modello di trascrizione whisper large-v3 (3,1 GB)"
-TROVATO=""
-for p in "${MVE_WHISPER_MODEL:-}" "$MODELLO" "$HOME/.cache/hyperframes/whisper/models/ggml-large-v3.bin"; do
-  [[ -n $p && -f $p ]] && { TROVATO=$p; break; }
-done
-if [[ -n $TROVATO ]]; then
+local TROVATO
+if TROVATO=$(trova_modello); then
   ok "presente: $TROVATO"
 else
   manca "manca"
@@ -149,25 +160,45 @@ else
   fi
 fi
 
-# ---------------------------------------------------------------- prova
 titolo "8. Prova di 30 secondi"
 if ! chiedi "fare la prova (voce sintetica di 30 s, trascrizione, video, Apple Vision, una grafica HyperFrames)?"; then
   print; ./mve stato 2>/dev/null | tail -25; exit 0
 fi
-rm -rf "$PROVA"; mkdir -p "$PROVA/hf/assets"
-INIZIO=$SECONDS
-FALLITE=0
-prova() { if eval "$2" >"$PROVA/log-$1.txt" 2>&1; then ok "$1"; else errore "$1 non riuscita: vedi .lavoro/prova-installazione/log-$1.txt"; FALLITE=$((FALLITE+1)); fi; }
+}
 
+# ================================================================ prova di 30 secondi
+# Ogni controllo è una funzione: i testi e i percorsi passano come argomenti fra
+# virgolette, mai dentro un eval (un apostrofo nella frase o nel nome della
+# cartella rompeva le virgolette: corretto nella v1.0.1).
 TESTO="Ciao, questa è la prova dell'agente video di Mobilitas. Il bacino è la zona dei fianchi dove la schiena si unisce alle gambe. Oggi proviamo la trascrizione, il montaggio, la grafica e il suono. Se senti questa frase, il computer è pronto per lavorare sui video del canale. Grazie e buon lavoro."
-VOCE=$(say -v '?' | awk '/it_IT/ {print $1; exit}')
-prova "voce sintetica" "say ${VOCE:+-v $VOCE} -r 150 -o '$PROVA/voce.aiff' '$TESTO' && ffmpeg -v error -y -i '$PROVA/voce.aiff' -af apad=whole_dur=30 -t 30 -ac 1 -ar 16000 '$PROVA/voce.wav'"
-MOD=${TROVATO:-$MODELLO}
-prova "trascrizione (whisper large-v3)" "whisper-cli -m '$MOD' -f '$PROVA/voce.wav' -l it -t 4 -np -otxt -of '$PROVA/trascrizione' && grep -qi -e bacino -e prova -e video '$PROVA/trascrizione.txt'"
-prova "video 30 s 1080p25 (ffmpeg)" "ffmpeg -v error -y -f lavfi -i testsrc2=s=1920x1080:r=25:d=30 -i '$PROVA/voce.wav' -c:v libx264 -pix_fmt yuv420p -c:a aac -shortest '$PROVA/prova.mp4' && [[ \$(ffprobe -v error -show_entries format=duration -of csv=p=0 '$PROVA/prova.mp4' | cut -d. -f1) -ge 29 ]]"
-prova "Apple Vision (swiftc)" "PYTHONPATH=motore .venv/bin/python -c 'from motore.visione import binario; binario()'"
-cp motore/inserti/node_modules/hyperframes/dist/vendor/npm/gsap@3.15.0/dist/gsap.min.js "$PROVA/hf/assets/" 2>/dev/null
-cat > "$PROVA/hf/index.html" <<'HTML'
+
+controllo_voce() {
+  local -a v=()
+  local nome=$(say -v '?' | awk '/it_IT/ {print $1; exit}')   # la prima voce italiana
+  [[ -n $nome ]] && v=(-v "$nome")
+  say "${v[@]}" -r 150 -o "$PROVA/voce.aiff" "$TESTO" &&
+  ffmpeg -v error -y -i "$PROVA/voce.aiff" -af apad=whole_dur=30 -t 30 -ac 1 -ar 16000 "$PROVA/voce.wav" &&
+  [[ -s $PROVA/voce.wav ]]
+}
+controllo_trascrizione() {
+  local mod
+  mod=$(trova_modello) || { print "modello whisper large-v3 non trovato"; return 1; }
+  whisper-cli -m "$mod" -f "$PROVA/voce.wav" -l it -t 4 -np -otxt -of "$PROVA/trascrizione" &&
+  grep -qi -e bacino -e prova -e video "$PROVA/trascrizione.txt"
+}
+controllo_video() {
+  ffmpeg -v error -y -f lavfi -i testsrc2=s=1920x1080:r=25:d=30 -i "$PROVA/voce.wav" \
+    -c:v libx264 -pix_fmt yuv420p -c:a aac -shortest "$PROVA/prova.mp4" || return 1
+  local durata=$(ffprobe -v error -show_entries format=duration -of csv=p=0 "$PROVA/prova.mp4")
+  print "durata: $durata s"
+  (( ${durata%%.*} >= 29 ))
+}
+controllo_vision() {
+  PYTHONPATH=motore .venv/bin/python -c 'from motore.visione import binario; binario()'
+}
+controllo_grafica() {
+  cp motore/inserti/node_modules/hyperframes/dist/vendor/npm/gsap@3.15.0/dist/gsap.min.js "$PROVA/hf/assets/" || return 1
+  cat > "$PROVA/hf/index.html" <<'HTML'
 <!doctype html>
 <html>
   <head>
@@ -193,14 +224,39 @@ cat > "$PROVA/hf/index.html" <<'HTML'
   </body>
 </html>
 HTML
-prova "grafica HyperFrames" "hf render '$PROVA/hf' --fps 25 --format mov -o '$PROVA/grafica.mov' --quiet && [[ -s '$PROVA/grafica.mov' ]]"
+  hf render "$PROVA/hf" --fps 25 --format mov -o "$PROVA/grafica.mov" --quiet &&
+  [[ -s $PROVA/grafica.mov ]]
+}
+
+RIUSCITE=0
+FALLITE=0
+prova() {   # $1 nome del controllo, $2 la funzione che lo fa
+  if "$2" >"$PROVA/log-$1.txt" 2>&1; then
+    ok "$1"; RIUSCITE=$((RIUSCITE+1))
+  else
+    errore "$1 non riuscita: vedi .lavoro/prova-installazione/log-$1.txt"; FALLITE=$((FALLITE+1))
+  fi
+}
+
+if [[ ${1:-} == --prova ]]; then
+  titolo "Prova di 30 secondi (senza controllare né installare)"
+else
+  installa
+fi
+rm -rf "$PROVA"; mkdir -p "$PROVA/hf/assets" motore/inserti/.casa/.cache motore/inserti/.casa/tmp
+INIZIO=$SECONDS
+prova "voce sintetica" controllo_voce
+prova "trascrizione (whisper large-v3)" controllo_trascrizione
+prova "video 30 s 1080p25 (ffmpeg)" controllo_video
+prova "Apple Vision (swiftc)" controllo_vision
+prova "grafica HyperFrames" controllo_grafica
 PYTHONPATH=motore .venv/bin/python -c "from motore import inserti; inserti.dimentica()" >/dev/null 2>&1
 print "  durata della prova: $(( SECONDS - INIZIO )) s"
 if (( FALLITE == 0 )); then
   rm -rf "$PROVA"
-  ok "prova riuscita"
+  ok "prova riuscita: $RIUSCITE controlli su $((RIUSCITE+FALLITE))"
 else
-  errore "$FALLITE controlli non riusciti: i dettagli sono in .lavoro/prova-installazione/"
+  errore "$RIUSCITE controlli su $((RIUSCITE+FALLITE)) riusciti: i dettagli sono in .lavoro/prova-installazione/"
 fi
 
 titolo "Riepilogo (./mve stato)"

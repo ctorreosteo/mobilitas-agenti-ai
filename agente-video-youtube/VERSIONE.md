@@ -1,3 +1,20 @@
+# Versione 1.0.1 — 02/11/2026
+
+**Correzione di `installa.sh`.** Nella prova finale di 30 secondi la voce sintetica
+non partiva: la frase da leggere contiene un apostrofo («dell'agente») e lo script
+la passava dentro un `eval` fra apostrofi, che si rompevano (`unmatched '`). Senza
+`voce.wav` fallivano anche trascrizione e video: 3 controlli su 5.
+
+- Ogni controllo della prova ora è una funzione, con testi e percorsi passati come
+  argomenti: niente `eval` su testo libero (vale anche per una cartella con un
+  apostrofo nel nome).
+- La prova dice quanti controlli sono riusciti («5 controlli su 5»).
+- Nuovo: `./installa.sh --prova` rifà solo la prova, senza controllare né
+  installare niente.
+
+Provata il 02/11/2026 su un M3 Max: 5 controlli su 5 in 14 s. Il resto della v1.0
+(qui sotto) non cambia.
+
 # Versione 1.0 — 02/11/2026
 
 Prima versione per i collaboratori dell'agente video YouTube di @Studio_Mobilitas.

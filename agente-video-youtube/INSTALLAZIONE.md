@@ -106,3 +106,5 @@ servirà di più (non ancora misurato). Ogni video scrive i suoi tempi veri in
 - `./mve stato` mostra cosa manca (✗) e dove guardare.
 - Se la prova finale fallisce, i dettagli sono in `.lavoro/prova-installazione/log-*.txt`.
 - Per rifare un pezzo, rilancia `./installa.sh`: salta quello che c'è già.
+- Per rifare solo la prova di 30 secondi, senza controllare né installare:
+  `./installa.sh --prova`.
