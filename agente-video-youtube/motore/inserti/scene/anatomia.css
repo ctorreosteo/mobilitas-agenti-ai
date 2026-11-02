@@ -1,0 +1,25 @@
+.an-pan { position: absolute; border-radius: 34px; background: linear-gradient(180deg, #0A3468 0%, #002552 40%, #001D45 100%);
+  border-top: 2px solid rgba(244, 244, 244, 0.5); border-bottom: 5px solid #00132E;
+  box-shadow: 0 3px 6px rgba(0, 6, 18, 0.55), 0 28px 70px rgba(0, 6, 18, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.18); }
+.an-pan.an-pieno { border: 0; border-radius: 0; box-shadow: none; background: var(--fondo-sito); }
+.an-lampo { position: absolute; inset: 0; background: #F4F4F4; }
+.an-fig img { filter: brightness(1.2) drop-shadow(0 0 22px rgba(244, 244, 244, 0.32)) drop-shadow(0 0 70px rgba(114, 250, 147, 0.16)); }
+.an-luce { position: absolute; border-radius: 50%; pointer-events: none;
+  background: radial-gradient(closest-side, rgba(40, 110, 200, 0.55), rgba(0, 60, 140, 0.22) 55%, rgba(0, 37, 82, 0)); }
+.an-svg path, .an-svg ellipse, .an-svg line, .an-svg polyline { filter: drop-shadow(0 0 8px rgba(114, 250, 147, 0.75)) drop-shadow(0 0 26px rgba(114, 250, 147, 0.4)); }
+.an-fig { position: absolute; }
+.an-fig img { position: absolute; left: 0; top: 0; }
+.an-svg { position: absolute; left: 0; top: 0; overflow: visible; }
+.an-et { position: absolute; line-height: 1.08; white-space: nowrap; text-shadow: 0 2px 18px rgba(0, 20, 50, 0.45); }
+/* tappa 3: l'attribuzione Servier si legge (prima 15-20 px al 56%: invisibile a 960 px), mai tagliata */
+.an-attr { position: absolute; left: 96px; bottom: 60px; font-size: 22px; font-weight: 600; color: var(--panna); white-space: nowrap;
+  text-shadow: 0 1px 3px rgba(0, 10, 28, 0.9), 0 0 12px rgba(0, 10, 28, 0.6); }
+
+.an-pan { overflow: hidden; }
+.an-cam { position: absolute; inset: 0; }
+.an-trama { position: absolute; left: 0; top: 0; }
+.an-grana { position: absolute; inset: 0; opacity: 0.07; background-image: radial-gradient(rgba(244, 244, 244, 0.9) 0.6px, transparent 0.8px); background-size: 5px 5px; }
+.an-par { line-height: 1.1; }
+.an-w { display: inline-block; }
+.an-k { color: #72FA93; font-weight: 800; text-shadow: 0 0 22px rgba(114, 250, 147, 0.5), 0 2px 14px rgba(0, 20, 50, 0.5); }
+.an-et { text-shadow: 0 0 18px rgba(244, 244, 244, 0.18), 0 2px 18px rgba(0, 20, 50, 0.5); }

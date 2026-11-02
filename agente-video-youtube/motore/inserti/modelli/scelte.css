@@ -1,0 +1,5 @@
+.scelte { position: absolute; left: 80px; right: var(--margine); top: 170px; display: flex; flex-direction: column; gap: 60px; }
+.scelta { position: relative; border-radius: 22px; border: 2px solid rgba(244,244,244,0.14); padding: 40px 44px; }
+.scelta .domanda { font-size: 46px; font-weight: 300; color: rgba(244,244,244,0.76); line-height: 1.2; }
+.scelta .risposta { font-size: 54px; font-weight: 300; margin-top: 26px; display: flex; align-items: center; gap: 22px; }
+.scelta .risposta svg { width: 54px; height: 30px; flex: none; }

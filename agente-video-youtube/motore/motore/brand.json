@@ -1,0 +1,327 @@
+{
+  "_cosa": "Brand Mobilitas: fonte unica per la grafica Pillow (stile.py) e per gli inserti HyperFrames. Allineato al sito (letto il 30/10/2026) nella fase 7c, 01/11/2026, con le proposte 1-6 approvate da Riccardo.",
+  "_fonte": "sito https://www.studiomobilitas.it/ letto il 30/10/2026 (report/brand-sito-video.md); decisioni di Riccardo del 31/10/2026 (brief fase 7c)",
+  "colori": {
+    "blu_notte": {
+      "hex": "#002552",
+      "rgb": [
+        0,
+        37,
+        82
+      ],
+      "uso": "inchiostro principale; fondo delle superfici scure"
+    },
+    "blu_profondo": {
+      "hex": "#001A3D",
+      "rgb": [
+        0,
+        26,
+        61
+      ],
+      "uso": "alternanza sulle superfici scure"
+    },
+    "blu_abisso": {
+      "hex": "#000F2B",
+      "rgb": [
+        0,
+        15,
+        43
+      ],
+      "uso": "fondo delle scene scure a tutto schermo, delle schermate e della schermata finale, con il radiale del sito (fase 7c)"
+    },
+    "panna": {
+      "hex": "#F4F4F4",
+      "rgb": [
+        244,
+        244,
+        244
+      ],
+      "uso": "fondo chiaro; testo sulle superfici blu"
+    },
+    "verde": {
+      "hex": "#72FA93",
+      "rgb": [
+        114,
+        250,
+        147
+      ],
+      "uso": "accento e azione principale (testo blu sopra)",
+      "solo_su": [
+        "blu_notte",
+        "blu_profondo"
+      ]
+    }
+  },
+  "trasparenze": {
+    "testo_secondario_su_blu": {
+      "colore": "panna",
+      "opacita": 0.7,
+      "_da": "Riccardo, fase 7c (proposta 5): 70% come il corpo del sito (prima 74-78%)"
+    },
+    "filetti_su_blu": {
+      "colore": "panna",
+      "opacita": 0.14
+    }
+  },
+  "font": {
+    "famiglia": "Montserrat",
+    "unico": true,
+    "file": "risorse/fonts/Montserrat-VF.ttf",
+    "_file": "relativo a motore/motore/; TTF variabile, asse wght 100-900, licenza OFL",
+    "pesi_sito": {
+      "titoli": 900,
+      "h3": 800,
+      "corpo": [
+        400,
+        500
+      ],
+      "etichette": 700,
+      "pulsanti": 800,
+      "_misurati": "getComputedStyle sul sito, 30/10/2026 (prima erano scritti 200-300: un dato sbagliato)"
+    },
+    "pesi_video": "800-900 per le parole grandi e i titoli, 600-700 per etichette e fumetti, 400-500 per il corpo dei pannelli"
+  },
+  "regole": [
+    "solo Montserrat: niente mono, niente secondo font",
+    "maiuscolo spaziato solo per le etichette strutturali brevi (vedi 'etichette', fase 7c); mai per frasi o titoli",
+    "il verde solo su blu: mai sul panna",
+    "niente look SaaS, gradienti decorativi, glassmorphism, neon, illustrazioni mediche, foto di repertorio (nel video le ombre morbide e la luce morbida sono ammesse: vedi 'video')",
+    "prima/dopo ammesso solo con consenso scritto del paziente segnato nel catalogo (decisione di Riccardo, 26/10/2026); niente promesse di risultato nei testi",
+    "almeno un elemento firma e un momento di scala estrema (numeri veri giganti)"
+  ],
+  "loghi": {
+    "su_blu": {
+      "file": "libreria/logo/logo_verde.png",
+      "px": [
+        4915,
+        676
+      ]
+    },
+    "su_chiaro": {
+      "file": "libreria/logo/logo_blu.png",
+      "px": [
+        4916,
+        676
+      ]
+    },
+    "_file": "relativo alla radice dell'agente; PNG trasparenti",
+    "pittogramma": {
+      "file": "libreria/logo/pittogramma-sfondo-trasparente.png",
+      "px": [
+        1080,
+        1080
+      ],
+      "regola": "blu notte con la foglia verde: non si ricolora; su fondo scuro sta dentro un disco panna (Riccardo, fase 7c)",
+      "dove": [
+        "schermata finale",
+        "chip"
+      ]
+    }
+  },
+  "differenze_con_stile_attuale": {
+    "_nota": "stile.py oggi (non toccato in questa fase); da riallineare quando si applica il brand",
+    "MINT": {
+      "oggi": "#72FB93",
+      "brand": "#72FA93"
+    },
+    "PAPER": {
+      "oggi": "#EDF3F0",
+      "brand": "#F4F4F4"
+    },
+    "NAVY": {
+      "oggi": "#002552",
+      "brand": "#002552"
+    },
+    "NAVY_DEEP": {
+      "oggi": "#001730",
+      "brand": "#001A3D"
+    },
+    "MUTED": {
+      "oggi": "#8FA8BE",
+      "brand": "panna al 74-78% su blu"
+    },
+    "FONT_MONO": {
+      "oggi": "IBM Plex Mono per eyebrow, chip, CTA",
+      "brand": "vietato: solo Montserrat"
+    },
+    "eyebrow": {
+      "oggi": "maiuscolo spaziato (TRACK eyebrow)",
+      "brand": "vietato"
+    }
+  },
+  "video": {
+    "_cosa": "Regole del brand per il video (decisione di Riccardo, 27/10/2026, fase 6a). Valgono per i video; il sito resta com'e.",
+    "invariati": [
+      "colori (blu notte, blu profondo, panna, verde)",
+      "solo Montserrat",
+      "il verde solo su blu (bottoni, card, pannelli, schermate blu): mai sul video nudo, mai sul panna"
+    ],
+    "vietati": [
+      "bagliori di colori fuori dal brand e neon multicolore: la luce è solo verde #72FA93 o panna (Riccardo, 28/10/2026, fase 7b rivista: sostituisce il divieto di tutti i bagliori della fase 6a)",
+      "maiuscolo urlato o spaziato (eccezioni: le etichette PRIMA e DOPO del catalogo e, dalla fase 7c, le etichette strutturali brevi come il sito, almeno 30 px: vedi 'etichette')",
+      "vetro come decorazione: il vetro smerigliato è ammesso solo come pannello che lascia vedere lo studio dietro (reference martell-06), proposto come alternativa e approvato da Riccardo (fase 7b rivista)",
+      "gradienti decorativi sul testo; unica eccezione: la parola chiave dei titoli in gradiente verde -> azzurro come il sito, e l'azzurro #38BDF8 solo dentro quel gradiente (Riccardo, 01/11/2026, fase 7c: il video si allinea al sito)",
+      "figure umane disegnate da noi (sagome vettoriali, profili, icone di persona): il corpo si mostra solo con disegni Servier anatomicamente corretti o con riprese e foto vere (Riccardo, 28/10/2026)",
+      "telefoni disegnati da noi: solo un modello realistico di iPhone di ultima generazione, con dentro solo contenuti veri; la fonte del modello si approva prima di scaricarla (Riccardo, 28/10/2026)",
+      "rosso corallo del sito (#FF6869) e badge verdi dei numeri: in un video di salute il rosso si legge come allarme, il badge come risultato (Riccardo, 01/11/2026, fase 7c, proposta 7 respinta)"
+    ],
+    "ammessi": {
+      "profondita": "ombre morbide (sotto card, telefono, testo sul video), sfondo sfocato dietro la persona (sagoma di Vision), luce morbida colorata del brand sulla parete",
+      "davanti_dietro": "testo e oggetti davanti o dietro la persona, con la maschera di Vision come i titoli dietro; il volto non si copre mai",
+      "prospettiva": "oggetti semplici in prospettiva (telefono, card), con rotazioni 3D leggere",
+      "pesi_grandi": "pesi 700-900 per le parole chiave a grande scala"
+    },
+    "dimensioni": {
+      "testo_min_px": 60,
+      "parola_chiave_min_px": 120,
+      "_a": "a 1080p: il video si guarda sul telefono"
+    },
+    "movimento": {
+      "entrata_frame": [
+        8,
+        12
+      ],
+      "rimbalzo_max": 0.05,
+      "sfasamento_parole_frame": [
+        2,
+        3
+      ],
+      "uscita": "piu corta dell'entrata (6 frame)",
+      "sincronia_parola_frame": 2,
+      "leggibile_min_s": 1.0,
+      "elementi_insieme_max": 2
+    },
+    "suono": "un suono su ogni movimento (whoosh, pop, click, impact), sotto la voce; musica solo con licenza in libreria/musica",
+    "card": {
+      "_da": "Riccardo, 27/10/2026 (fase 6b)",
+      "fondo": "blu notte (sfumatura dentro i blu del brand), bordo sottile panna al 14%, angoli ampi (44 px), ombra morbida che la stacca dal fondo",
+      "contenuto": "icona lineare verde in un cerchio verde tenue al posto del numero; titolo pieno (800) e sottotitolo leggero (400, panna 74%), centrati",
+      "testo": "misurato con il font vero: la parola piu lunga sta dentro margini fissi; corpo uguale per tutte le card del gruppo, mai sotto 60 px",
+      "entrata": "scala da 0,9 e sfocatura che si scioglie, dalla mano vera (Vision); contenuto che sale da dietro le maschere",
+      "posizione": "mai sopra una mano o il volto per tutto il tempo in cui e a schermo (lo misura il motore)"
+    },
+    "numero_dietro": {
+      "_da": "Riccardo, 27/10/2026 (fase 6b)",
+      "regola": "la persona ne copre al massimo il 10-15% e mai il primo carattere, misurato sulla sagoma; 'più di' legato al numero, non sospeso"
+    },
+    "frase_sul_corpo": {
+      "_da": "Riccardo, 27/10/2026 (fase 6b)",
+      "regola": "una o due parole enormi, peso 800-900, ombra morbida di profondita, piccolo colpo di scala, su una zona calma; mai una riga piccola tipo sottotitolo"
+    },
+    "momento_forte": {
+      "_da": "Riccardo, 27/10/2026 (fase 6b)",
+      "regola": "CTA grande sullo spazio libero, movimento deciso e suono; il quadro puo diventare una finestra sul fondo del brand"
+    },
+    "in_tutti": {
+      "_da": "Riccardo, 27/10/2026 (fase 6b)",
+      "regola": "elementi grandi; quando entra un elemento grande lo sfondo si sfoca e scende un poco e la camera fa un piccolo colpo di zoom con l'impatto; parallasse fra i livelli; maschere e rivelazioni al posto delle dissolvenze"
+    },
+    "look": "originale, nessun look (Riccardo, 27/10/2026)",
+    "animazioni_anatomiche": {
+      "_da": "Riccardo, 28/10/2026 (fase 7a)",
+      "ammesse": "animazioni anatomiche didattiche basate su disegni anatomici affidabili: Servier Medical Art (smart.servier.com, CC BY 4.0, uso commerciale con attribuzione)",
+      "adattamento": "colori del brand (blu notte, blu profondo, panna; verde solo per evidenziare sul blu), linee pulite, testi in Montserrat, movimento del campionario (entrate 8-12 frame, maschere, parallasse)",
+      "disegni_propri": "solo forme semplici sopra i disegni Servier: frecce, linee, evidenziazioni, assi",
+      "vietato": "anatomia generata dall'AI; aggiunte cliniche non dette nel video",
+      "contenuto": "mostra solo cio che l'osteopata dice, mentre lo dice",
+      "validazione": "ogni animazione e validata da un osteopata prima della pubblicazione (scheda con cosa mostra, fonte, frase detta, approvato da)",
+      "attribuzione": "in descrizione YouTube: illustrazioni adattate da Servier Medical Art (smart.servier.com), CC BY 4.0",
+      "libreria": "libreria/anatomia/, licenza nel catalogo",
+      "modello_approvato": "due modelli approvati da Riccardo (28/10/2026) nell'anteprima 7b: l'animazione Servier del meccanismo (1:21) e la card della colonna «spesso lavora di più» (A9): disegno Servier ricolorato in una card blu, zona evidenziata in verde, testo accanto"
+    },
+    "linguaggio": {
+      "_da": "Riccardo, 28/10/2026 (fase 7b rivista), dallo studio di libreria/reference/ (14 clip, catalogo in libreria/reference/catalogo.md). Le reference fissano il livello, non si copiano: per ogni video si sceglie cosa serve al contenuto e si inventano grafiche nuove dello stesso livello.",
+      "due_mondi": {
+        "accanto_a_lui": "lui inquadrato con il lato libero ampio (punch-in o spostamento di camera all'arrivo dell'elemento); elementi accanto a lui, mai sul volto o sulle mani",
+        "scena_scura": "a tutto schermo, fondo blu profondo -> blu notte con una texture sottile (grana fine e curve di livello panna al 4-6%, o luci sfocate); la camera si muove fra gli elementi: avanza lenta (circa 5% in 7 s) o scorre fra due punti in 0,8 s",
+        "passaggio": "taglio netto o lampo di luce panna/verde di 3-4 frame, mai una dissolvenza lunga; si alternano nel video, nessuno dei due per più di 2-3 momenti di fila"
+      },
+      "famiglie": {
+        "frase_parola_per_parola": "testo che arriva parola per parola sulla voce: ogni parola nasce panna al 35% e sfocata e in 2-3 frame diventa piena con il suo bagliore; la parola chiave in verde (solo sul blu) o in peso 900",
+        "lista_voce_per_voce": "voci accanto a lui con un segno (punto verde luminoso o icona lineare), testo che si scrive da sinistra in 4-6 frame sulle parole dette; senza pannello, con ombra",
+        "etichette_luminose": "pillole blu notte con bordo e bagliore verdi, testo panna 700; barrate da una riga che corre da sinistra in 3 frame sulla parola che le smonta",
+        "fumetti": "fumetti di chat panna a gradiente leggero con coda, ombra di contatto e luce interna, testo blu notte 700; nascono sfocati e scalati a 0,85, nitidi in 4 frame, quelli prima salgono",
+        "card_con_spessore": "card blu notte con bordo superiore chiaro (spessore), ombra di contatto + ombra morbida, texture fine; arrivano una ogni 0,25 s; icona o disegno Servier con luce verde",
+        "vetro": "pannello smerigliato che sfoca lo studio vero dietro, bordo panna sottile con riflesso, contenuto che arriva dopo il bordo",
+        "numeri": "cifre che scorrono come un contachilometri con sfocatura verticale e frenano sulla parola",
+        "anatomia": "disegno Servier in una card (modelli approvati: l'animazione del meccanismo a 1:21 e la card della colonna «spesso lavora di più» dell'anteprima 7b) o in una scena scura con la camera che va sulla parte nominata",
+        "oggetti_veri": "telefoni, foto e interfacce credibili (iPhone realistico, foto vere con il viso tagliato fuori)"
+      },
+      "movimento": {
+        "entrata_s": [
+          0.25,
+          0.4
+        ],
+        "_entrata": "3-5 frame a 12 fps = 6-10 frame a 25 fps, con la sfocatura che si scioglie e power3.out; piccolo rimbalzo solo su fumetti e pillole (back.out <= 1.4)",
+        "parola_frame_25": [
+          4,
+          6
+        ],
+        "sfasamento_s": 0.25,
+        "uscita": "con lo stacco o in 2-3 frame (4-6 a 25 fps)",
+        "camera": "nelle scene scure sempre in movimento; accanto a lui punch-in all'arrivo dell'elemento"
+      },
+      "luce": {
+        "bagliore": "gli elementi sulle scene scure emettono luce: bagliore morbido dello stesso colore (verde #72FA93 o panna), 2 strati (stretto 8-12 px + largo 30-50 px)",
+        "scritte_bianche_sulla_scena": "ombra morbida forte dietro ogni scritta bianca sopra il girato: 0 4px 14px blu profondo al 70% + 0 0 44px blu profondo al 55% (più di prima, regola del 28/10/2026)",
+        "sfondo": "quando arriva un elemento grande, lo sfondo si scurisce (-20/30%) e si sfoca in 3 frame"
+      },
+      "profondita": "card con spessore e ombra, vetro che lascia vedere lo studio, testo dietro di lui con la sagoma di Vision, camera che si muove nello spazio delle scene scure",
+      "sincronia": "nessun elemento arriva prima della sua parola; liste voce per voce, testo parola per parola, numeri che frenano sulla parola, barre che barrano sulla parola",
+      "colore": "un solo accento forte per video: per Mobilitas il verde #72FA93, come luce e accento, solo sul blu; tutto il resto panna e blu",
+      "font": "Montserrat; 800-900 per le parole grandi, 600-700 per fumetti ed etichette, 400 per il corpo dei pannelli"
+    },
+    "regole_testo": {
+      "_da": "Riccardo, 28/10/2026 (fase 7b rivista)",
+      "dentro_il_quadro": "nessun testo esce dal quadro in nessun fotogramma, entrate comprese: il motore lo controlla su ogni frame (scena.py, controllo 'fuori quadro')",
+      "ombra": "scritte bianche sulla scena: ombra morbida più forte dietro (linguaggio.luce)",
+      "numeri_anatomia": "i numeri delle animazioni stanno solo accanto alla parte del corpo, mai nel testo («la schiena bassa si inarca di più», non «1 la schiena…»)",
+      "attribuzione_servier": "una riga, dentro i margini della card"
+    },
+    "servier_varieta": {
+      "_da": "Riccardo, 28/10/2026 (fase 7b rivista)",
+      "regola": "alterna uomo e donna e cambia vista (scheletro intero, colonna, bacino, muscoli); mai la stessa figura due volte di fila; se il tema è generico, solo le ossa senza il contorno del corpo; quello che manca si scarica da smart.servier.com con licenza e attribuzione nel catalogo",
+      "limite_noto": "su smart.servier.com (28/10/2026) l'uomo c'è solo di fronte (corpo, muscoli di fronte e di schiena); di profilo ci sono solo donne (Adult - Premenopause) e lo scheletro, che è neutro"
+    }
+  },
+  "fondo_scuro": {
+    "_da": "Riccardo, fase 7c (proposta 2 del brand dal sito)",
+    "css": "radial-gradient(120% 80% at 50% 0%, #00346F 0%, #002552 45%, #000F2B 100%)",
+    "tappe": [
+      [
+        "#00346F",
+        0.0
+      ],
+      [
+        "#002552",
+        0.45
+      ],
+      [
+        "#000F2B",
+        1.0
+      ]
+    ],
+    "regola": "luce dall'alto come il sito; grana fine, retino e curve di livello restano sopra"
+  },
+  "titoli": {
+    "_da": "Riccardo, fase 7c (proposta 3)",
+    "forma": "minuscolo con il punto finale, come il sito; le parole restano le sue, si aggiunge solo il punto",
+    "peso": 900,
+    "spaziatura_em": -0.045,
+    "interlinea": 0.92,
+    "parola_chiave": "in gradiente verde -> azzurro",
+    "gradiente_css": "linear-gradient(100deg, #72FA93 10%, #38BDF8 90%)",
+    "azzurro": "#38BDF8 solo dentro questo gradiente: mai come luce, bagliore, fondo o testo pieno",
+    "vale_per": [
+      "titolo_dietro",
+      "schermata"
+    ]
+  },
+  "etichette": {
+    "_da": "Riccardo, fase 7c (proposta 4)",
+    "forma": "maiuscolo spaziato come il sito: 700, spaziatura 0,22 em, verde su blu, con un filetto verde davanti",
+    "solo_per": "etichette strutturali brevi (una-tre parole) o parole sue brevi; mai frasi",
+    "corpo_min_px": 30,
+    "classe_css": ".eyebrow (motore/inserti/scene/_scena.html)"
+  }
+}

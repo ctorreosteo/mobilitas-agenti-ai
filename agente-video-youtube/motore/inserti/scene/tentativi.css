@@ -1,0 +1,6 @@
+.tt-col { position: absolute; display: flex; flex-direction: column; align-items: flex-start; padding: 44px 52px 48px; }
+.tt-fondo { position: absolute; inset: 0; border-radius: 28px; background: rgba(0, 37, 81, 0.86); box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35); transform-origin: 50% 0; }
+.tt-voce { position: relative; display: flex; align-items: center; gap: 26px; margin: 10px 0; }
+.tt-tratto { flex: none; width: 34px; height: 9px; border-radius: 5px; background: var(--verde); transform-origin: 0 50%; }
+.tt-et { font-weight: 700; line-height: 1.04; white-space: normal; color: var(--panna); }
+.tt-sotto { position: relative; margin: -2px 0 10px 60px; font-weight: 400; line-height: 1.16; white-space: normal; color: rgba(244, 244, 244, 0.92); }

@@ -1,0 +1,11 @@
+.eq { position: absolute; }
+.eq-riga { position: relative; height: 84px; white-space: nowrap; }
+.eq-op { position: absolute; left: -86px; top: -2px; width: 66px; text-align: center; font-weight: 800; font-size: 70px; color: #72FA93;
+  text-shadow: 0 0 18px rgba(114, 250, 147, 0.75), 0 0 46px rgba(114, 250, 147, 0.35); }
+.eq-t { position: relative; display: inline-block; font-weight: 800; font-size: 66px; color: #F4F4F4; letter-spacing: -0.02em;
+  text-shadow: 0 0 18px rgba(244, 244, 244, 0.45), 0 4px 14px rgba(0, 26, 61, 0.8), 0 0 2px rgba(0, 26, 61, 0.7); }
+.eq-k { color: #72FA93; text-shadow: 0 0 2px #0B1E3A, 0 0 20px rgba(114, 250, 147, 0.75), 0 0 56px rgba(114, 250, 147, 0.35); }
+.eq-barra { position: absolute; height: 10px; border-radius: 5px; background: linear-gradient(90deg, #4BD97E, #8DFFA9);
+  box-shadow: 0 0 12px rgba(114, 250, 147, 0.95), 0 0 36px rgba(114, 250, 147, 0.45); }
+.eq-testa { position: absolute; right: -6px; top: -5px; width: 20px; height: 20px; border-radius: 50%; background: #E6FFEC;
+  box-shadow: 0 0 14px #FFFFFF, 0 0 34px rgba(114, 250, 147, 0.9); }

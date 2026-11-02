@@ -1,0 +1,40 @@
+# Agente video YouTube: cosa resta sul Mac e non entra nel repository
+
+# materiali personali: si tengono solo i LEGGIMI
+libreria/broll/*
+!libreria/broll/LEGGIMI.md
+libreria/prima-dopo/*
+!libreria/prima-dopo/LEGGIMI.md
+libreria/musica/*
+!libreria/musica/LEGGIMI.md
+libreria/.indice/
+libreria/indice.json
+libreria/indice.md
+
+# girato e lavoro sui video: si tengono solo i LEGGIMI
+inbox/*
+!inbox/LEGGIMI.md
+videos/*
+!videos/LEGGIMI.md
+
+# spazio di lavoro, programmi compilati, installazioni
+.lavoro/
+.cache/
+.venv/
+node_modules/
+motore/inserti/.casa/
+
+# modelli whisper
+.modelli/
+*.bin
+
+# file di sistema
+.DS_Store
+__pycache__/
+*.py[cod]
+
+# uso dei modelli per video: lo scrive il motore, ognuno ha il suo
+libreria/uso-modelli.json
+
+# impostazioni personali di Claude Code
+.claude/settings.local.json

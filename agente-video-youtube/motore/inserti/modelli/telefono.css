@@ -1,0 +1,5 @@
+.schermata { position: absolute; top: 110px; height: 680px; left: 50%; transform-origin: 50% 90%; }
+.schermata img { height: 100%; display: block; }
+.schermata.piatta { padding: 18px; border-radius: 64px; background: #0b0f14; box-shadow: none; }
+.schermata.piatta img { border-radius: 48px; }
+.chiave { position: absolute; left: 96px; right: var(--margine); bottom: 110px; font-size: 64px; font-weight: 300; text-align: left; }

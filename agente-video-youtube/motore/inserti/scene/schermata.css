@@ -1,0 +1,23 @@
+.sc-fondo { position: absolute; inset: 0; background: rgba(0, 26, 61, 0.65); overflow: hidden; }
+.sc-luce { position: absolute; left: -10%; top: -30%; width: 90%; height: 140%;
+  background: radial-gradient(ellipse at 40% 50%, rgba(0, 52, 112, 0.85) 0%, rgba(0, 37, 82, 0.45) 38%, rgba(0, 26, 61, 0) 70%); }
+.sc-marchio { position: absolute; left: 8%; top: 70%; width: 84%; opacity: 0.06; transform-origin: 0 0; }   /* intero dentro il quadro (fase 7b: tagliato ai bordi era «testo fuori dal quadro») */
+.sc-grana { position: absolute; left: -2%; top: -2%; width: 104%; height: 104%; opacity: 0.05; mix-blend-mode: screen; }
+.sc-testo { position: absolute; top: 0; bottom: 0; display: flex; flex-direction: column; justify-content: center;
+  transform-origin: 0 50%; }
+.sc-riga { white-space: nowrap; line-height: 1.0; }
+.sc-w { display: inline-block; margin-right: 0.22em; font-weight: 400; color: var(--panna); letter-spacing: -0.015em; }
+.sc-k { font-weight: 800; color: var(--verde); letter-spacing: -0.035em; }
+
+/* v3: la schermata su fondo blu vero (non piu velo sul girato), con il retino di punti e la chiave che emette luce */
+.sc-pieno { background: var(--fondo-sito); }
+.sc-ret { position: absolute; left: -240px; top: -160px; opacity: 0.3; }
+.sc-pieno .sc-k { text-shadow: 0 0 30px rgba(114, 250, 147, 0.8), 0 0 90px rgba(114, 250, 147, 0.4); }
+.sc-pieno .sc-w { font-weight: 500; text-shadow: 0 0 24px rgba(244, 244, 244, 0.3); }
+.sc-pieno .sc-k { font-weight: 800; }
+.sc-pieno .sc-marchio { display: none; }
+
+/* fase 7c (brand dal sito): la chiave in gradiente verde -> azzurro, la luce resta verde (drop-shadow) */
+.sc-pieno .sc-k.grad { text-shadow: none; font-weight: 900; letter-spacing: -0.045em;
+  filter: drop-shadow(0 0 22px rgba(114, 250, 147, 0.55)) drop-shadow(0 0 70px rgba(114, 250, 147, 0.25)); }
+.sc-pieno .sc-w { letter-spacing: -0.03em; }

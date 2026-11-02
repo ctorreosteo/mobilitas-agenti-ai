@@ -1,0 +1,7 @@
+.frase-passo { position: absolute; left: 96px; right: var(--margine); top: 150px; font-size: 64px; font-weight: 300; line-height: 1.18; }
+.lista { position: absolute; left: 96px; right: var(--margine); top: 520px; }
+.riga-lista { height: 50px; border-bottom: 2px solid rgba(244,244,244,0.14); position: relative; }
+.riga-lista .segno { position: absolute; left: 0; top: 14px; width: 22px; height: 22px; border-radius: 50%;
+  border: 2px solid rgba(244,244,244,0.35); }
+.riga-lista .tratto { position: absolute; left: 44px; top: 22px; height: 6px; border-radius: 3px; background: rgba(244,244,244,0.18); }
+.freccia { position: absolute; left: 50%; bottom: 120px; width: 70px; margin-left: -35px; }

@@ -1,0 +1,5 @@
+.prefisso { position: absolute; left: 96px; top: 250px; font-size: 56px; font-weight: 300; color: var(--panna76); }
+.valore { position: absolute; left: 80px; top: 310px; font-size: 290px; font-weight: 200; color: var(--verde);
+  line-height: 1; letter-spacing: -6px; font-variant-numeric: tabular-nums; }
+.etichetta { position: absolute; left: 96px; top: 660px; right: var(--margine); font-size: 48px; font-weight: 500; }
+.filetto { position: absolute; left: 96px; top: 800px; width: 96px; height: 2px; background: var(--filetto); }

@@ -1,0 +1,10 @@
+.ch-fondo { position: absolute; inset: 0;
+  background: var(--fondo-sito); }
+.ch-col { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+.ch-logo { width: 520px; margin-bottom: 64px; }
+.ch-tit { font-size: 150px; font-weight: 900; letter-spacing: -0.03em; line-height: 1; color: var(--panna); white-space: nowrap; }
+.ch-freccia { width: 120px; height: 166px; margin-top: 56px; }
+.ch-freccia .freccia-svg { width: 100%; height: 100%; }
+
+/* fase 7c: pittogramma su disco panna sopra il logo (in flusso nella colonna) */
+.ch-pitto { position: relative; width: 132px; height: 132px; margin-bottom: 40px; }

@@ -1,0 +1,5 @@
+.fk-pan { position: absolute; background: var(--profondo); box-shadow: 0 0 80px rgba(0, 0, 0, 0.35); }
+.fk-filo { position: absolute; left: 96px; top: 300px; width: 8px; height: 120px; border-radius: 4px; background: var(--verde); transform-origin: 50% 0; display: none; }
+.fk-testo { position: absolute; top: 0; bottom: 0; display: flex; flex-wrap: wrap; align-content: center; column-gap: 0.26em; row-gap: 0.12em; line-height: 1.12; color: var(--panna); }
+.fk-p { font-weight: 400; display: inline-block; }
+.fk-chiave { font-weight: 800; color: var(--verde); display: inline-block; }

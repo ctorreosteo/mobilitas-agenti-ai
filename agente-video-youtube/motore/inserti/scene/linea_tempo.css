@@ -1,0 +1,24 @@
+.lt-fondo { position: absolute; inset: 0; overflow: hidden;
+  background: var(--fondo-sito); }
+.lt-vigna { position: absolute; inset: 0; background: radial-gradient(ellipse 70% 65% at 50% 50%, rgba(0, 0, 0, 0) 55%, rgba(0, 8, 22, 0.6) 100%); }
+.lt-ret { position: absolute; left: -240px; top: -160px; opacity: 0.6; }
+.lt-cam { position: absolute; inset: 0; }
+.lt-svg { position: absolute; left: 0; top: 0; overflow: visible; }
+.lt-linea { filter: drop-shadow(0 0 8px rgba(141, 255, 169, 0.95)) drop-shadow(0 0 28px rgba(114, 250, 147, 0.5)); }
+.lt-base { stroke: rgba(244, 244, 244, 0.14); }
+.lt-tacca { filter: drop-shadow(0 0 6px rgba(114, 250, 147, 0.9)); }
+.lt-scia { position: absolute; height: 170px; background: linear-gradient(180deg, rgba(114, 250, 147, 0.3), rgba(114, 250, 147, 0)); }
+.lt-sotto .dc-strato { width: 520px; text-align: center; }
+.lt-nodo { position: absolute; width: 140px; height: 140px; margin: -70px 0 0 -70px; border-radius: 50%; box-sizing: border-box;
+  background: radial-gradient(circle at 40% 32%, #E2FFE9 0%, #8DFFA9 38%, #72FA93 62%, #3FD46E 100%);
+  box-shadow: 0 0 0 8px rgba(114, 250, 147, 0.22), 0 0 34px rgba(141, 255, 169, 0.95), 0 0 110px rgba(114, 250, 147, 0.5); }
+.lt-nodo-t { position: absolute; left: 0; top: 33px; width: 140px; text-align: center; font-weight: 900; font-size: 64px; line-height: 1;
+  color: #002552; letter-spacing: -0.04em; }
+.lt-nodo-t .dc-strato { width: 140px; text-align: center; }
+.lt-sotto { position: absolute; width: 520px; text-align: center; font-weight: 800; font-size: 64px; color: #F4F4F4; letter-spacing: -0.02em; white-space: nowrap;
+  text-shadow: 0 0 16px rgba(244, 244, 244, 0.35), 0 6px 20px rgba(0, 8, 22, 0.7); }
+.lt-pill { position: absolute; box-sizing: border-box; border-radius: 999px; padding: 0 46px; height: 112px; line-height: 112px;
+  font-weight: 800; font-size: 72px; white-space: nowrap; color: #002552; letter-spacing: -0.02em;
+  background: linear-gradient(180deg, #C3FFD2 0%, #8DFFA9 30%, #72FA93 62%, #4BD97E 100%);
+  box-shadow: 0 0 0 2px rgba(214, 255, 224, 0.75), 0 0 22px rgba(141, 255, 169, 0.75), 0 0 70px rgba(114, 250, 147, 0.35), 0 16px 34px rgba(0, 8, 22, 0.55),
+    inset 0 3px 0 rgba(255, 255, 255, 0.55); }

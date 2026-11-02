@@ -1,0 +1,12 @@
+.pannello .logo { position: absolute; left: 96px; top: 190px; width: 280px; }
+.titolo { position: absolute; left: 96px; right: var(--margine); top: 360px; font-size: 76px; font-weight: 300; line-height: 1.18; }
+/* etichetta opaca (niente vetro), in un angolo dentro la zona sicura */
+.etichetta-box { position: absolute; padding: 28px 36px 24px 36px; background: var(--blu); border-radius: 18px; }
+.etichetta-box.basso_sx { left: 96px; bottom: 110px; }
+.etichetta-box.basso_dx { right: 96px; bottom: 110px; }
+.etichetta-box.alto_sx { left: 96px; top: 96px; }
+.etichetta-box.alto_dx { right: 96px; top: 96px; }
+.etichetta-box .nome { font-size: 42px; font-weight: 600; margin-bottom: 14px; }
+.voce { display: flex; align-items: center; gap: 18px; font-size: 38px; font-weight: 400; color: rgba(244,244,244,0.45);
+  margin: 8px 0; }
+.voce .pallino { width: 18px; height: 18px; border-radius: 50%; border: 3px solid rgba(244,244,244,0.45); flex: none; }

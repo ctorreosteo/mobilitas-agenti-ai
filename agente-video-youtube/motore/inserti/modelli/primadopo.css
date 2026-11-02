@@ -1,0 +1,6 @@
+#scena { background: #001A3D; }
+.foto { position: absolute; top: 110px; height: 860px; overflow: hidden; border-radius: 8px; }
+.foto img { height: 100%; display: block; }
+.foto svg { position: absolute; left: 0; top: 0; width: 100%; height: 100%; overflow: visible; }
+.lab { position: absolute; top: 34px; left: 24px; padding: 8px 22px; border-radius: 12px; background: #002552;
+  font-size: 40px; font-weight: 600; letter-spacing: 0; }

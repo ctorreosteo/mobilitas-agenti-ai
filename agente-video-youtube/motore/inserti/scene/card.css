@@ -1,0 +1,18 @@
+.cd-filo { position: absolute; inset: 0; width: 1920px; height: 1080px; overflow: visible; }
+.cd-linea { fill: none; stroke: rgba(244, 244, 244, 0.85); stroke-width: 5; stroke-linecap: round;
+  filter: drop-shadow(0 2px 6px rgba(0, 8, 24, 0.6)); }
+.cd-punto { fill: var(--verde); }
+.cd-pos { position: absolute; }
+.cd { position: absolute; inset: 0; box-sizing: border-box; display: flex; flex-direction: column;
+  align-items: center; justify-content: center; text-align: center; color: var(--panna);
+  background: linear-gradient(160deg, #063470 0%, #002551 46%, #001c43 100%);
+  border: 2px solid rgba(244, 244, 244, 0.14);
+  box-shadow: 0 60px 110px rgba(0, 6, 18, 0.6), 0 24px 44px rgba(0, 6, 18, 0.42), inset 0 1px 0 rgba(255, 255, 255, 0.08); }
+.cd-par { position: absolute; inset: 0; }
+.cd-ic { color: var(--verde); flex: none; border-radius: 50%; box-sizing: border-box; display: flex;
+  align-items: center; justify-content: center; background: rgba(114, 250, 147, 0.10);
+  border: 2px solid rgba(114, 250, 147, 0.30); }
+.cd-ic .icona { width: 56%; height: 56%; }
+.cd-t { font-weight: 800; letter-spacing: -0.02em; line-height: 1.04; white-space: nowrap; }
+.cd-s { font-weight: 500; line-height: 1.12; white-space: nowrap; color: var(--panna70); }   /* fase 7c: 70% come il sito */
+.cd-s0 { margin-top: 14px; }

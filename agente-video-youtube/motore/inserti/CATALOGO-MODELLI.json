@@ -1,0 +1,1346 @@
+{
+ "_cosa": "Catalogo dei modelli grafici (fase 7c, 01/11/2026). Lo legge il motore (motore/motore/catalogo.py). Si aggiunge e basta.",
+ "condizioni": {
+  "zona_libera": "la zona dove cade l'elemento e libera: niente mani, oggetti o modellini (scena.controlla: zona libera)",
+  "vetro_zona_ricca": "il vetro sta davanti a una zona chiara o ricca dello studio (scena.controlla: luminanza e dettaglio sotto il vetro)",
+  "tempo_detto": "nelle parole dette durante l'elemento c'e un tempo o una durata (scena.controlla: tempo detto)"
+ },
+ "modelli": [
+  {
+   "id": "camera-viva",
+   "nome": "Camera viva (punch-in)",
+   "famiglia": "camera e passaggi",
+   "motore": {
+    "piatto": [
+     "camera"
+    ]
+   },
+   "cosa_fa": "lui a tutto schermo con la camera che si muove: avvicinamenti, tagli netti, piccola spinta continua, sfondo che si sfoca",
+   "quando": "fra un momento grafico e l'altro; frasi forti senza grafica; dare respiro",
+   "quando_no": "mai per più di 2-3 momenti di fila senza una grafica",
+   "condizioni": [],
+   "reference": "gadzhi-04, martell-02",
+   "ultimo_voto": "8 (campionario v2, minimo 7)",
+   "esempio_da": [
+    "campionario/v2/01-camera-viva.mp4",
+    4.36
+   ],
+   "stato": "attivo",
+   "origine": "campionario v1 e v2",
+   "variante_di": null,
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/camera-viva.jpg"
+  },
+  {
+   "id": "transizione-spinta",
+   "nome": "Transizione a spinta",
+   "famiglia": "camera e passaggi",
+   "motore": {
+    "piatto": [
+     "spinta"
+    ]
+   },
+   "cosa_fa": "una lastra blu notte attraversa davanti alla spinta di camera",
+   "quando": "cambio di argomento dentro lo stesso girato",
+   "quando_no": "più di una volta per video",
+   "condizioni": [],
+   "reference": "martell-02",
+   "ultimo_voto": "7 (campionario v2)",
+   "esempio_da": [
+    "campionario/v2/09a-transizione-spinta.mp4",
+    2.28
+   ],
+   "stato": "attivo",
+   "origine": "campionario v1 e v2",
+   "variante_di": null,
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/transizione-spinta.jpg"
+  },
+  {
+   "id": "transizione-zoom",
+   "nome": "Transizione a zoom",
+   "famiglia": "camera e passaggi",
+   "motore": {
+    "camera": [
+     "mosse"
+    ]
+   },
+   "cosa_fa": "zoom rapido sugli occhi con la sfocatura di movimento e un piccolo superamento",
+   "quando": "una parola che pesa («dico»)",
+   "quando_no": "su frasi lunghe",
+   "condizioni": [],
+   "reference": "gadzhi-04",
+   "ultimo_voto": "7 (campionario v2, minimo 6)",
+   "esempio_da": [
+    "campionario/v2/09b-transizione-zoom.mp4",
+    3.05
+   ],
+   "stato": "attivo",
+   "origine": "campionario v1 e v2",
+   "variante_di": null,
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/transizione-zoom.jpg"
+  },
+  {
+   "id": "lampo",
+   "nome": "Taglio con lampo",
+   "famiglia": "camera e passaggi",
+   "motore": {
+    "piatto": [
+     "lampo"
+    ]
+   },
+   "cosa_fa": "lampo di luce panna/verde di 3-4 frame fra lui e una scena scura",
+   "quando": "entrata in una scena scura a tutto schermo",
+   "quando_no": "fra due momenti sul girato",
+   "condizioni": [],
+   "reference": "martell-02",
+   "ultimo_voto": "parte dei momenti a 7 (YT_POSTURA_32)",
+   "esempio_da": [
+    "videos/YT_POSTURA_32/consegna/YT_POSTURA_32.mp4",
+    165.44
+   ],
+   "stato": "attivo",
+   "origine": "YT_POSTURA_32",
+   "variante_di": null,
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/lampo.jpg"
+  },
+  {
+   "id": "lui-nel-cerchio",
+   "nome": "Lui nel cerchio",
+   "famiglia": "camera e passaggi",
+   "motore": {
+    "piatto": [
+     "finestra.cerchio"
+    ]
+   },
+   "cosa_fa": "il quadro di lui si stacca, diventa un rettangolo tondo e poi un cerchio nell'angolo con l'anello verde; dietro entra la scena scura con il disegno",
+   "quando": "passaggio da lui a una scena scura con un disegno Servier mentre lui continua a parlare",
+   "quando_no": "senza una scena scura dietro",
+   "condizioni": [],
+   "reference": "gadzhi-09",
+   "ultimo_voto": "7 (campionario v3)",
+   "esempio_da": [
+    "campionario/v3/06-cerchio.mp4",
+    3.44
+   ],
+   "stato": "attivo",
+   "origine": "campionario v3",
+   "variante_di": null,
+   "nota": "fase 7c: la finestra si compone SOPRA gli strati del disegno (scena.componi), così lo scheletro entra mentre lui si stringe; prima entrava a cerchio già nell'angolo",
+   "esempio": "motore/inserti/catalogo/lui-nel-cerchio.jpg"
+  },
+  {
+   "id": "finestra-inclinata",
+   "nome": "Finestra inclinata sul fondo del brand",
+   "famiglia": "camera e passaggi",
+   "motore": {
+    "piatto": [
+     "finestra.inclina"
+    ]
+   },
+   "cosa_fa": "il quadro diventa una finestra inclinata sul fondo del brand, con spazio grande per un testo forte",
+   "quando": "call to action, link in descrizione",
+   "quando_no": "nei momenti di contenuto",
+   "condizioni": [],
+   "reference": "martell-06",
+   "ultimo_voto": "8 (MR_POSTURA_01_v4, direttore, 02/11/2026)",
+   "esempio_da": [
+    "videos/MR_POSTURA_01_v3/renders/MR_POSTURA_01_v3_FINALE.mp4",
+    86.0
+   ],
+   "stato": "attivo",
+   "origine": "campionario v2, MR_POSTURA_01_v3",
+   "variante_di": null,
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/finestra-inclinata.jpg"
+  },
+  {
+   "id": "b-roll",
+   "nome": "B-roll pieno o in sequenza",
+   "famiglia": "camera e passaggi",
+   "motore": {
+    "regia": [
+     "broll"
+    ]
+   },
+   "cosa_fa": "clip della libreria a tutto schermo o in sequenza, rallentate all'83%, senza audio, con un fruscio",
+   "quando": "quando lui descrive una situazione",
+   "quando_no": "clip escluse dall'indice; mai sopra testo",
+   "condizioni": [],
+   "reference": "—",
+   "ultimo_voto": "—",
+   "esempio_da": [
+    "videos/YT_POSTURA_32/consegna/YT_POSTURA_32.mp4",
+    117.0
+   ],
+   "stato": "attivo",
+   "origine": "prima generazione, YT_POSTURA_32",
+   "variante_di": null,
+   "nota": "Esempio sostituito da un'immagine neutra nella v1.0 per i collaboratori: il fotogramma mostrava persone svestite durante un trattamento.",
+   "esempio": "motore/inserti/catalogo/b-roll.jpg"
+  },
+  {
+   "id": "frase-sul-corpo",
+   "nome": "Frase sul corpo",
+   "famiglia": "testo sulla scena",
+   "motore": {
+    "modello": "parole"
+   },
+   "cosa_fa": "una o due parole enormi (800-900) sul busto, parola per parola sulla voce, le mani passano davanti alle lettere",
+   "quando": "aggancio, una parola chiave da far pesare",
+   "quando_no": "frasi lunghe; quando le mani coprono troppo",
+   "condizioni": [],
+   "reference": "martell-02",
+   "ultimo_voto": "8 (MR_POSTURA_01_v4, direttore, 02/11/2026)",
+   "esempio_da": [
+    "videos/MR_POSTURA_01_v4/consegna/MR_POSTURA_01_v4.mp4",
+    1.4
+   ],
+   "stato": "attivo",
+   "origine": "campionario v1 e v2",
+   "variante_di": null,
+   "nota": "fase 7c: ogni parola nasce sfocata e al 40% (5 frame) mentre sale dalla maschera: il primo frame non mostra piu solo le cime delle aste («U» -> «- -», direttore v4)",
+   "esempio": "motore/inserti/catalogo/frase-sul-corpo.jpg"
+  },
+  {
+   "id": "numero-dietro",
+   "nome": "Numero gigante dietro di lui",
+   "famiglia": "numeri",
+   "motore": {
+    "modello": "numero_dietro"
+   },
+   "cosa_fa": "un numero detto da lui, enorme, dietro la persona (sagoma di Vision), che conta e frena sulla parola",
+   "quando": "un numero detto (recensioni, addominali, ore)",
+   "quando_no": "numeri non detti, percentuali di risultato",
+   "condizioni": [],
+   "reference": "martell-02, gadzhi-03",
+   "ultimo_voto": "8 (MR_POSTURA_01_v4, direttore, 02/11/2026)",
+   "esempio_da": [
+    "videos/MR_POSTURA_01_v4/consegna/MR_POSTURA_01_v4.mp4",
+    18.5
+   ],
+   "stato": "attivo",
+   "origine": "campionario v1 e v2",
+   "variante_di": null,
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/numero-dietro.jpg"
+  },
+  {
+   "id": "titolo-dietro",
+   "nome": "Titolo dietro di lui",
+   "famiglia": "testo sulla scena",
+   "motore": {
+    "modello": "titolo_dietro"
+   },
+   "cosa_fa": "il titolo di un capitolo passa dietro la persona (sagoma di Vision): minuscolo con il punto e la parola chiave in gradiente verde → azzurro, come il sito",
+   "quando": "inizio di un capitolo, con le sue parole",
+   "quando_no": "testi lunghi; quando lui copre più del 15%",
+   "condizioni": [],
+   "reference": "martell-02",
+   "ultimo_voto": "7 (YT_POSTURA_32)",
+   "esempio_da": [
+    "videos/YT_POSTURA_32/consegna/YT_POSTURA_32.mp4",
+    63.1
+   ],
+   "stato": "attivo",
+   "origine": "prima generazione (Pillow), poi YT_POSTURA_32",
+   "variante_di": null,
+   "nota": "dal 01/11/2026 forma del sito (brand.json -> titoli): minuscolo con il punto, -0,045 em, interlinea 0,92, `dati.chiave` = parole in gradiente (default l'ultima riga). Il posto dietro di lui lo misura impagina.piazza_titolo sulle righe minuscole; se non trova un posto coperto 4-12% resta sulla parete (si segnala)",
+   "esempio": "motore/inserti/catalogo/titolo-dietro.jpg"
+  },
+  {
+   "id": "titolo-dietro-maiuscolo",
+   "nome": "Titolo dietro di lui (maiuscolo)",
+   "famiglia": "testo sulla scena",
+   "motore": {
+    "modello": "titolo_dietro",
+    "dati": {
+     "forma": "maiuscolo"
+    }
+   },
+   "cosa_fa": "la versione di YT_POSTURA_32: titolo in MAIUSCOLO 900, tutto panna, passa dietro la persona",
+   "quando": "—",
+   "quando_no": "—",
+   "condizioni": [],
+   "reference": "martell-02",
+   "ultimo_voto": "7 (YT_POSTURA_32)",
+   "esempio_da": [
+    "videos/YT_POSTURA_32/consegna/YT_POSTURA_32.mp4",
+    63.1
+   ],
+   "stato": "variante",
+   "origine": "YT_POSTURA_32 (principale fino al 31/10/2026)",
+   "variante_di": "titolo-dietro",
+   "nota": "variante dal 01/11/2026: il titolo principale segue il sito (minuscolo con il punto e la chiave in gradiente)",
+   "esempio": "motore/inserti/catalogo/titolo-dietro-maiuscolo.jpg"
+  },
+  {
+   "id": "schermata",
+   "nome": "Schermata su fondo blu vero",
+   "famiglia": "scene scure",
+   "motore": {
+    "modello": "schermata",
+    "dati": {
+     "fondo": "pieno"
+    }
+   },
+   "cosa_fa": "frase a tutto schermo su fondo blu pieno con il retino, parole che nascono sfocate e si accendono, colpo di scala sulla chiave",
+   "quando": "frasi che chiudono un passaggio",
+   "quando_no": "più di due per video",
+   "condizioni": [],
+   "reference": "martell-07",
+   "ultimo_voto": "8 (MR_POSTURA_01_v4, direttore, 02/11/2026)",
+   "esempio_da": [
+    "videos/MR_POSTURA_01_v4/consegna/MR_POSTURA_01_v4.mp4",
+    41.9
+   ],
+   "stato": "attivo",
+   "origine": "campionario v3 (principale dal 01/11/2026)",
+   "variante_di": null,
+   "nota": "dal 01/11/2026: fondo del sito, parole minuscole con il punto, chiave in gradiente con la luce verde; chiavi di fila sulla stessa riga con un gradiente continuo",
+   "esempio": "motore/inserti/catalogo/schermata.jpg"
+  },
+  {
+   "id": "schermata-velo",
+   "nome": "Schermata sul velo (classica)",
+   "famiglia": "scene scure",
+   "motore": {
+    "modello": "schermata"
+   },
+   "cosa_fa": "frase a tutto schermo su un velo blu sopra il girato sfocato, parole che salgono dalle maschere, filigrana MOBILITAS",
+   "quando": "quando si vuole lasciare intravedere lui",
+   "quando_no": "—",
+   "condizioni": [],
+   "reference": "martell-07",
+   "ultimo_voto": "6 (YT_POSTURA_32)",
+   "esempio_da": [
+    "videos/YT_POSTURA_32/consegna/YT_POSTURA_32.mp4",
+    320.8
+   ],
+   "stato": "variante",
+   "origine": "campionario v1 e v2, YT_POSTURA_32",
+   "variante_di": "schermata",
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/schermata-velo.jpg"
+  },
+  {
+   "id": "frase-chiave-vetro",
+   "nome": "Frase chiave nel vetro (più luce)",
+   "famiglia": "testo sulla scena",
+   "motore": {
+    "modello": "frase_luce",
+    "dati": {
+     "vetro": {
+      "forte": true
+     }
+    }
+   },
+   "cosa_fa": "frase parola per parola dentro un vetro che sfoca lo studio, tinta blu, bordo di luce, riflesso diagonale, alone verde in entrata",
+   "quando": "le frasi chiave (versione B scelta da Riccardo)",
+   "quando_no": "davanti al muro scuro: il vetro si legge come un riquadro",
+   "condizioni": [
+    "vetro_zona_ricca"
+   ],
+   "reference": "martell-06",
+   "ultimo_voto": "7 (campionario v3)",
+   "esempio_da": [
+    "campionario/v3/08-vetro-luce.mp4",
+    11.67
+   ],
+   "stato": "attivo",
+   "origine": "campionario v3",
+   "variante_di": null,
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/frase-chiave-vetro.jpg"
+  },
+  {
+   "id": "frase-chiave-vetro-classico",
+   "nome": "Frase chiave nel vetro (classica)",
+   "famiglia": "testo sulla scena",
+   "motore": {
+    "modello": "frase_luce",
+    "dati": {
+     "vetro": {}
+    }
+   },
+   "cosa_fa": "la versione di YT_POSTURA_32: vetro chiaro che schiarisce lo studio",
+   "quando": "—",
+   "quando_no": "—",
+   "condizioni": [],
+   "reference": "martell-06",
+   "ultimo_voto": "6-7 (YT_POSTURA_32)",
+   "esempio_da": [
+    "videos/YT_POSTURA_32/consegna/YT_POSTURA_32.mp4",
+    188.5
+   ],
+   "stato": "variante",
+   "origine": "YT_POSTURA_32",
+   "variante_di": "frase-chiave-vetro",
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/frase-chiave-vetro-classico.jpg"
+  },
+  {
+   "id": "frase-chiave-pannello",
+   "nome": "Frase chiave nel pannello (versione A)",
+   "famiglia": "testo sulla scena",
+   "motore": {
+    "modello": "frase_chiave"
+   },
+   "cosa_fa": "pannello blu al bordo del quadro con la frase che sale riga per riga",
+   "quando": "—",
+   "quando_no": "Riccardo ha scelto la versione B (vetro)",
+   "condizioni": [],
+   "reference": "martell-07",
+   "ultimo_voto": "— (campione tappa 2)",
+   "esempio_da": [
+    "videos/YT_POSTURA_32/renders/campione/frase-A.mp4",
+    3.0
+   ],
+   "stato": "variante",
+   "origine": "campione di YT_POSTURA_32",
+   "variante_di": "frase-chiave-vetro",
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/frase-chiave-pannello.jpg"
+  },
+  {
+   "id": "equazione",
+   "nome": "Equazione detta",
+   "famiglia": "testo sulla scena",
+   "motore": {
+    "modello": "equazione"
+   },
+   "cosa_fa": "testo laterale: i termini detti si decifrano sulla voce, + e = verdi, esce cancellandosi all'indietro",
+   "quando": "due o tre cose dette che si sommano in una conseguenza",
+   "quando_no": "sulla pianta o sul legno: sempre sulla parete libera con il velo blu",
+   "condizioni": [],
+   "reference": "gadzhi-10, gadzhi-13",
+   "ultimo_voto": "8 (MR_POSTURA_01_v4, direttore, 02/11/2026)",
+   "esempio_da": [
+    "videos/MR_POSTURA_01_v4/consegna/MR_POSTURA_01_v4.mp4",
+    38.3
+   ],
+   "stato": "attivo",
+   "origine": "campionario v3",
+   "variante_di": null,
+   "nota": "fase 7c: decifra = 'minuscole' per i termini lunghi (le maiuscole e i simboli provvisori allargano la parola di un terzo)",
+   "esempio": "motore/inserti/catalogo/equazione.jpg"
+  },
+  {
+   "id": "connettore",
+   "nome": "Connettore",
+   "famiglia": "testo sulla scena",
+   "motore": {
+    "modello": "connettore"
+   },
+   "cosa_fa": "due etichette basse unite da una linea luminosa che si disegna dal centro, nodo con due anelli e le sue parole sotto",
+   "quando": "due cose che lui lega («vanno di pari passo», «dipende da»)",
+   "quando_no": "quando sotto ci sono mani, oggetti o modellini",
+   "condizioni": [
+    "zona_libera"
+   ],
+   "reference": "gadzhi-11",
+   "ultimo_voto": "7 (campionario v3)",
+   "esempio_da": [
+    "campionario/v3/04-connettore.mp4",
+    4.94
+   ],
+   "stato": "attivo",
+   "origine": "campionario v3",
+   "variante_di": null,
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/connettore.jpg"
+  },
+  {
+   "id": "linea-tempo",
+   "nome": "Linea del tempo luminosa",
+   "famiglia": "numeri",
+   "motore": {
+    "modello": "linea_tempo"
+   },
+   "cosa_fa": "scena scura: un nodo verde disegna una linea mentre la percorre, la camera lo segue inclinata, pillole con le sue parole",
+   "quando": "solo quando lui dice un tempo o una durata",
+   "quando_no": "per inventare un dato o una curva",
+   "condizioni": [
+    "tempo_detto"
+   ],
+   "reference": "gadzhi-07",
+   "ultimo_voto": "6 (campionario v3)",
+   "esempio_da": [
+    "campionario/v3/02-linea-tempo.mp4",
+    4.04
+   ],
+   "stato": "attivo",
+   "origine": "campionario v3",
+   "variante_di": null,
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/linea-tempo.jpg"
+  },
+  {
+   "id": "chip",
+   "nome": "Chip con nome e ruolo",
+   "famiglia": "testo sulla scena",
+   "motore": {
+    "grafica": [
+     "chip"
+    ]
+   },
+   "cosa_fa": "nome e ruolo di chi parla; dal 01/11/2026 con il pittogramma su un disco panna",
+   "quando": "alla presentazione",
+   "quando_no": "nomi non confermati dai materiali",
+   "condizioni": [],
+   "reference": "—",
+   "ultimo_voto": "—",
+   "esempio_da": [
+    "videos/YT_POSTURA_32/consegna/YT_POSTURA_32.mp4",
+    52.0
+   ],
+   "stato": "attivo",
+   "origine": "prima generazione",
+   "variante_di": null,
+   "nota": "regia.chip.stile: v3 = pittogramma su disco panna, nome 700, ruolo al 70% (v2 resta per i video vecchi)",
+   "esempio": "motore/inserti/catalogo/chip.jpg"
+  },
+  {
+   "id": "etichette-barrate",
+   "nome": "Etichette barrate (più luce)",
+   "famiglia": "liste",
+   "motore": {
+    "modello": "etichette_luce",
+    "dati": {
+     "luce": "forte"
+    }
+   },
+   "cosa_fa": "pillole piene di luce verde con il testo blu notte; la barra blu notte le barra sulla parola e restano accese",
+   "quando": "i tentativi o le idee che lui smonta",
+   "quando_no": "cose che non smonta",
+   "condizioni": [],
+   "reference": "martell-01",
+   "ultimo_voto": "8 (MR_POSTURA_01_v4, direttore, 02/11/2026)",
+   "esempio_da": [
+    "videos/MR_POSTURA_01_v4/consegna/MR_POSTURA_01_v4.mp4",
+    68.2
+   ],
+   "stato": "attivo",
+   "origine": "campionario v3 (principale dal 01/11/2026)",
+   "variante_di": null,
+   "nota": "fase 7c: barra = 'panna' -> barra panna che sporge e pillola barrata che scende al 38% e perde colore (sulla pillola verde la barra blu notte non si distingueva)",
+   "esempio": "motore/inserti/catalogo/etichette-barrate.jpg"
+  },
+  {
+   "id": "etichette-barrate-classiche",
+   "nome": "Etichette barrate (classiche)",
+   "famiglia": "liste",
+   "motore": {
+    "modello": "etichette_luce",
+    "dati": {
+     "luce": "classica"
+    }
+   },
+   "cosa_fa": "pillole blu notte con bordo e bagliore verdi; barrate si spengono",
+   "quando": "—",
+   "quando_no": "—",
+   "condizioni": [],
+   "reference": "martell-01",
+   "ultimo_voto": "7 (YT_POSTURA_32)",
+   "esempio_da": [
+    "videos/YT_POSTURA_32/consegna/YT_POSTURA_32.mp4",
+    251.7
+   ],
+   "stato": "variante",
+   "origine": "YT_POSTURA_32",
+   "variante_di": "etichette-barrate",
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/etichette-barrate-classiche.jpg"
+  },
+  {
+   "id": "tentativi",
+   "nome": "Lista dei tentativi",
+   "famiglia": "liste",
+   "motore": {
+    "modello": "tentativi"
+   },
+   "cosa_fa": "colonna di voci con tratto che le barra",
+   "quando": "—",
+   "quando_no": "—",
+   "condizioni": [],
+   "reference": "martell-01",
+   "ultimo_voto": "— (campione tappa 2)",
+   "esempio_da": [
+    "videos/YT_POSTURA_32/renders/YT_POSTURA_32_anteprima_tappa1.mp4",
+    322.0
+   ],
+   "stato": "variante",
+   "origine": "YT_POSTURA_32 tappa 1",
+   "variante_di": "etichette-barrate",
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/tentativi.jpg"
+  },
+  {
+   "id": "riga-icone",
+   "nome": "Riga di icone in basso",
+   "famiglia": "liste",
+   "motore": {
+    "modello": "riga_icone"
+   },
+   "cosa_fa": "icone lineari verdi che si disegnano sulla parola con l'etichetta sotto, velo blu dal basso",
+   "quando": "tre luoghi, oggetti o momenti detti in fila",
+   "quando_no": "quando la parte bassa ha mani, oggetti o modellini; figure umane",
+   "condizioni": [
+    "zona_libera"
+   ],
+   "reference": "gadzhi-14",
+   "ultimo_voto": "7 (campionario v3)",
+   "esempio_da": [
+    "campionario/v3/05-riga-icone.mp4",
+    9.7
+   ],
+   "stato": "attivo",
+   "origine": "campionario v3",
+   "variante_di": null,
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/riga-icone.jpg"
+  },
+  {
+   "id": "card-accese",
+   "nome": "Card che si accendono",
+   "famiglia": "liste",
+   "motore": {
+    "modello": "card_accese"
+   },
+   "cosa_fa": "scena scura: tre card 3D arrivano nascoste con una scansione e si accendono quando lui le nomina, poi riepilogo",
+   "quando": "elenchi di tre cose annunciate prima",
+   "quando_no": "elenchi lunghi",
+   "condizioni": [],
+   "reference": "gadzhi-08/09/12/15",
+   "ultimo_voto": "8 (MR_POSTURA_01_v4, direttore, 02/11/2026)",
+   "esempio_da": [
+    "videos/MR_POSTURA_01_v4/consegna/MR_POSTURA_01_v4.mp4",
+    30.4
+   ],
+   "stato": "attivo",
+   "origine": "campionario v3",
+   "variante_di": null,
+   "nota": "fase 7c: cifre = false toglie le cifre a contorno (il «1» si leggeva come una freccia)",
+   "esempio": "motore/inserti/catalogo/card-accese.jpg"
+  },
+  {
+   "id": "card-con-spessore",
+   "nome": "Card con spessore",
+   "famiglia": "liste",
+   "motore": {
+    "modello": "card_spessore"
+   },
+   "cosa_fa": "card blu notte con spessore, una ogni 0,25 s, con icona o ritaglio Servier",
+   "quando": "elenchi brevi accanto a lui",
+   "quando_no": "sopra mani o volto",
+   "condizioni": [],
+   "reference": "gadzhi-06",
+   "ultimo_voto": "8 (MR_POSTURA_01_v4, direttore, 02/11/2026)",
+   "esempio_da": [
+    "videos/MR_POSTURA_01_v4/consegna/MR_POSTURA_01_v4.mp4",
+    46.4
+   ],
+   "stato": "attivo",
+   "origine": "YT_POSTURA_32",
+   "variante_di": null,
+   "nota": "; fase 7c: senza disegno Servier, `icona` (lineare verde su disco blu notte); attenzione: il testo deve stare in due righe (la card taglia il testo che va a capo una terza volta, e il controllo «lettere intere» non lo vede)",
+   "esempio": "motore/inserti/catalogo/card-con-spessore.jpg"
+  },
+  {
+   "id": "card-fluttuanti",
+   "nome": "Card vicino alle mani",
+   "famiglia": "liste",
+   "motore": {
+    "modello": "card"
+   },
+   "cosa_fa": "card che nascono sulla mano vera (Vision) e volano al loro posto",
+   "quando": "due cose dette in fila",
+   "quando_no": "quando le mani sono al centro e le card dovrebbero coprirle",
+   "condizioni": [],
+   "reference": "gadzhi-06",
+   "ultimo_voto": "8 (MR_POSTURA_01_v4, direttore, 02/11/2026)",
+   "esempio_da": [
+    "campionario/v2/05-card-fluttuanti.mp4",
+    4.24
+   ],
+   "stato": "attivo",
+   "origine": "campionario v1 e v2",
+   "variante_di": null,
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/card-fluttuanti.jpg"
+  },
+  {
+   "id": "card-dietro-la-spalla",
+   "nome": "Card dietro la spalla",
+   "famiglia": "liste",
+   "motore": {
+    "modello": "card",
+    "dati": {
+     "dietro": true
+    }
+   },
+   "cosa_fa": "come le card vicino alle mani, ma la seconda passa dietro la spalla (profondità)",
+   "quando": "come le card",
+   "quando_no": "—",
+   "condizioni": [],
+   "reference": "gadzhi-06",
+   "ultimo_voto": "8 (MR_POSTURA_01_v4, direttore, 02/11/2026)",
+   "esempio_da": [
+    "videos/MR_POSTURA_01_v3/renders/MR_POSTURA_01_v3_FINALE.mp4",
+    45.5
+   ],
+   "stato": "attivo",
+   "origine": "campionario v2, MR_POSTURA_01_v3",
+   "variante_di": null,
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/card-dietro-la-spalla.jpg"
+  },
+  {
+   "id": "fumetti",
+   "nome": "Fumetti dei pensieri",
+   "famiglia": "liste",
+   "motore": {
+    "modello": "fumetti"
+   },
+   "cosa_fa": "fumetti chiari con coda e luce interna, uno per frase, i precedenti salgono",
+   "quando": "i pensieri che si dice da solo",
+   "quando_no": "frasi che non sono pensieri",
+   "condizioni": [],
+   "reference": "martell-05",
+   "ultimo_voto": "7 (YT_POSTURA_32)",
+   "esempio_da": [
+    "videos/YT_POSTURA_32/consegna/YT_POSTURA_32.mp4",
+    234.7
+   ],
+   "stato": "attivo",
+   "origine": "YT_POSTURA_32",
+   "variante_di": null,
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/fumetti.jpg"
+  },
+  {
+   "id": "lista-attesa",
+   "nome": "Lista d'attesa",
+   "famiglia": "chiamata all'azione",
+   "motore": {
+    "modello": "lista_attesa"
+   },
+   "cosa_fa": "righe che compaiono spente e si accendono sulla parola, in una finestra sul fondo del brand",
+   "quando": "lista d'attesa, posti",
+   "quando_no": "—",
+   "condizioni": [],
+   "reference": "gadzhi-04",
+   "ultimo_voto": "8 (MR_POSTURA_01_v4, direttore, 02/11/2026)",
+   "esempio_da": [
+    "videos/MR_POSTURA_01_v4/consegna/MR_POSTURA_01_v4.mp4",
+    94.0
+   ],
+   "stato": "attivo",
+   "origine": "campionario v1 e v2",
+   "variante_di": null,
+   "nota": "dal 01/11/2026 titolo nella forma del sito (forma: classica = variante)",
+   "esempio": "motore/inserti/catalogo/lista-attesa.jpg"
+  },
+  {
+   "id": "lista-attesa-classica",
+   "nome": "Lista d'attesa (classica)",
+   "famiglia": "chiamata all'azione",
+   "motore": {
+    "modello": "lista_attesa",
+    "dati": {
+     "forma": "classica"
+    }
+   },
+   "cosa_fa": "la versione di MR_POSTURA_01_v3: titolo «Lista d'attesa» in Title Case, tutto panna",
+   "quando": "—",
+   "quando_no": "—",
+   "condizioni": [],
+   "reference": "gadzhi-04",
+   "ultimo_voto": "6 (campionario v2)",
+   "esempio_da": [
+    "videos/MR_POSTURA_01_v3/renders/MR_POSTURA_01_v3_FINALE.mp4",
+    94.0
+   ],
+   "stato": "variante",
+   "origine": "campionario v1 e v2",
+   "variante_di": "lista-attesa",
+   "nota": "variante dal 01/11/2026: il modello principale segue il brand del sito (minuscolo con il punto, chiave in gradiente)",
+   "esempio": "motore/inserti/catalogo/lista-attesa-classica.jpg"
+  },
+  {
+   "id": "cta-link",
+   "nome": "Link in descrizione",
+   "famiglia": "chiamata all'azione",
+   "motore": {
+    "modello": "cta"
+   },
+   "cosa_fa": "«Link in descrizione» grande con una freccia verde che cade e rimbalza",
+   "quando": "quando lui rimanda alla descrizione",
+   "quando_no": "nei video senza link",
+   "condizioni": [],
+   "reference": "gadzhi-04",
+   "ultimo_voto": "8 (MR_POSTURA_01_v4, direttore, 02/11/2026)",
+   "esempio_da": [
+    "videos/MR_POSTURA_01_v4/consegna/MR_POSTURA_01_v4.mp4",
+    87.5
+   ],
+   "stato": "attivo",
+   "origine": "campionario v1 e v2",
+   "variante_di": null,
+   "nota": "dal 01/11/2026 forma del sito: minuscolo con il punto, l'ultima parola in gradiente (forma: classica = variante)",
+   "esempio": "motore/inserti/catalogo/cta-link.jpg"
+  },
+  {
+   "id": "cta-link-classica",
+   "nome": "Link in descrizione (classica)",
+   "famiglia": "chiamata all'azione",
+   "motore": {
+    "modello": "cta",
+    "dati": {
+     "forma": "classica"
+    }
+   },
+   "cosa_fa": "la versione di MR_POSTURA_01_v3: «Link in descrizione» in Title Case, tutto panna",
+   "quando": "—",
+   "quando_no": "—",
+   "condizioni": [],
+   "reference": "gadzhi-04",
+   "ultimo_voto": "6 (campionario v2)",
+   "esempio_da": [
+    "videos/MR_POSTURA_01_v3/renders/MR_POSTURA_01_v3_FINALE.mp4",
+    86.0
+   ],
+   "stato": "variante",
+   "origine": "campionario v1 e v2",
+   "variante_di": "cta-link",
+   "nota": "variante dal 01/11/2026: il modello principale segue il brand del sito (minuscolo con il punto, chiave in gradiente)",
+   "esempio": "motore/inserti/catalogo/cta-link-classica.jpg"
+  },
+  {
+   "id": "chiusura",
+   "nome": "Card e schermata di chiusura",
+   "famiglia": "chiamata all'azione",
+   "motore": {
+    "modello": "chiusura"
+   },
+   "cosa_fa": "card dietro la spalla, poi schermata piena con marchio, testo e freccia",
+   "quando": "fine dei mid-roll",
+   "quando_no": "—",
+   "condizioni": [],
+   "reference": "martell-02",
+   "ultimo_voto": "8 (MR_POSTURA_01_v4, direttore, 02/11/2026)",
+   "esempio_da": [
+    "videos/MR_POSTURA_01_v4/consegna/MR_POSTURA_01_v4.mp4",
+    110.5
+   ],
+   "stato": "attivo",
+   "origine": "MR_POSTURA_01_v3",
+   "variante_di": null,
+   "nota": "dal 01/11/2026 forma del sito e pittogramma su disco panna sopra il logo (forma: classica = variante)",
+   "esempio": "motore/inserti/catalogo/chiusura.jpg"
+  },
+  {
+   "id": "chiusura-classica",
+   "nome": "Chiusura (classica)",
+   "famiglia": "chiamata all'azione",
+   "motore": {
+    "modello": "chiusura",
+    "dati": {
+     "forma": "classica"
+    }
+   },
+   "cosa_fa": "la versione di MR_POSTURA_01_v3: logo e «Link in descrizione» senza pittogramma",
+   "quando": "—",
+   "quando_no": "—",
+   "condizioni": [],
+   "reference": "martell-02",
+   "ultimo_voto": "parte del voto 8 di MR_POSTURA_01_v3",
+   "esempio_da": [
+    "videos/MR_POSTURA_01_v3/renders/MR_POSTURA_01_v3_FINALE.mp4",
+    111.0
+   ],
+   "stato": "variante",
+   "origine": "MR_POSTURA_01_v3",
+   "variante_di": "chiusura",
+   "nota": "variante dal 01/11/2026: il modello principale segue il brand del sito (minuscolo con il punto, chiave in gradiente)",
+   "esempio": "motore/inserti/catalogo/chiusura-classica.jpg"
+  },
+  {
+   "id": "schermata-finale-youtube",
+   "nome": "Schermata finale YouTube",
+   "famiglia": "chiamata all'azione",
+   "motore": {
+    "regia": [
+     "scena.coda"
+    ]
+   },
+   "cosa_fa": "12 s dopo l'ultima parola: fondo del brand, logo, pittogramma su disco panna, zone libere per gli elementi di YouTube",
+   "quando": "fine dei video YouTube",
+   "quando_no": "mid-roll",
+   "condizioni": [],
+   "reference": "—",
+   "ultimo_voto": "— (approvata con il video YT_POSTURA_32)",
+   "esempio_da": [
+    "videos/YT_POSTURA_32/consegna/YT_POSTURA_32.mp4",
+    404.0
+   ],
+   "stato": "attivo",
+   "origine": "YT_POSTURA_32 tappa 3",
+   "variante_di": null,
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/schermata-finale-youtube.jpg"
+  },
+  {
+   "id": "telefono-prospettiva",
+   "nome": "Telefono in prospettiva (app vera)",
+   "famiglia": "oggetti veri",
+   "motore": {
+    "modello": "telefono3d"
+   },
+   "cosa_fa": "telefono in prospettiva con le schermate vere dell'app, messa a fuoco e colpo di camera",
+   "quando": "quando lui parla dell'app",
+   "quando_no": "schermate con dati di persone, importi o frasi sulla salute non sfocati; telefono grande che copre lui",
+   "condizioni": [],
+   "reference": "martell-06",
+   "ultimo_voto": "7 (MR_POSTURA_01_v4, direttore, 02/11/2026) — dopo il quinto giro il profilo l'ho verificato io",
+   "esempio_da": [
+    "videos/MR_POSTURA_01_v4/consegna/MR_POSTURA_01_v4.mp4",
+    51.0
+   ],
+   "stato": "attivo",
+   "origine": "campionario v1 e v2",
+   "variante_di": null,
+   "nota": "render dell'app scontornati dal motore (titolo: false, tieni_bianco: true per i render senza titolo e con card bianche). fase 7c: entrata = 'posto' -> nasce dove sta (niente viaggio da fuori quadro, che non passa il controllo del quadro: anche in MR_POSTURA_01_v3), cambio di schermata sul posto, alone verde tenue dietro; piu schermate cambiano sul posto, ognuna sulle sue parole; `sfoca`: [[x0, y0, x1, y1], ...] (px del file) sfoca le righe con dati di persone, importi o frasi sulla salute (Riccardo, 02/11/2026: tutte le foto dell'app, in modo estetico e minimale)",
+   "esempio": "motore/inserti/catalogo/telefono-prospettiva.jpg"
+  },
+  {
+   "id": "telefono-sagoma",
+   "nome": "Telefono con la sagoma",
+   "famiglia": "oggetti veri",
+   "motore": {
+    "modello": "telefono3d",
+    "dati": {
+     "genera": "foto_sagoma"
+    }
+   },
+   "cosa_fa": "telefono con una «foto» fatta dalla sagoma disegnata",
+   "quando": "mai",
+   "quando_no": "mai: bocciato da Riccardo",
+   "condizioni": [],
+   "reference": "—",
+   "ultimo_voto": "bocciato",
+   "esempio_da": [
+    "videos/YT_POSTURA_32/renders/YT_POSTURA_32_anteprima_tappa1.mp4",
+    217.0
+   ],
+   "stato": "vietato",
+   "origine": "YT_POSTURA_32 tappa 1",
+   "variante_di": null,
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/telefono-sagoma.jpg"
+  },
+  {
+   "id": "foto-card",
+   "nome": "Foto vera in card",
+   "famiglia": "oggetti veri",
+   "motore": {
+    "modello": "foto_card"
+   },
+   "cosa_fa": "foto vera di un paziente (consenso nel catalogo), viso tagliato fuori, in card; solo PRIMA e DOPO come testo",
+   "quando": "quando lui parla di come si vede di lato",
+   "quando_no": "senza consenso; con tempi o risultati scritti",
+   "condizioni": [],
+   "reference": "martell-06",
+   "ultimo_voto": "6 (YT_POSTURA_32)",
+   "esempio_da": [
+    "videos/YT_POSTURA_32/consegna/YT_POSTURA_32.mp4",
+    214.0
+   ],
+   "stato": "attivo",
+   "origine": "YT_POSTURA_32",
+   "variante_di": null,
+   "nota": "Esempio sostituito da un'immagine neutra nella v1.0 per i collaboratori: il fotogramma mostrava la foto di un paziente.",
+   "esempio": "motore/inserti/catalogo/foto-card.jpg"
+  },
+  {
+   "id": "prima-dopo-cursore",
+   "nome": "Prima/dopo con cursore",
+   "famiglia": "oggetti veri",
+   "motore": {
+    "modello": "confronto"
+   },
+   "cosa_fa": "due foto del paziente (data EXIF), PRIMA a sinistra e DOPO a destra, linea posturale di Vision, cursore",
+   "quando": "quando lui parla dei risultati dello studio, senza promesse",
+   "quando_no": "senza consenso; foto quasi uguali",
+   "condizioni": [],
+   "reference": "gadzhi-05",
+   "ultimo_voto": "7 (MR_POSTURA_01_v4, direttore, 02/11/2026)",
+   "esempio_da": [
+    "videos/MR_POSTURA_01_v3/renders/MR_POSTURA_01_v3_FINALE.mp4",
+    70.0
+   ],
+   "stato": "attivo",
+   "origine": "campionario v1 e v2",
+   "variante_di": null,
+   "nota": "fase 7c: cursore.modo = 'meta' -> fermo a meta dall'entrata (PRIMA e DOPO sempre leggibili), poi una sola corsa fino a `fino`. Esempio sostituito da un'immagine neutra nella v1.0 per i collaboratori: il fotogramma mostrava la foto di un paziente.",
+   "esempio": "motore/inserti/catalogo/prima-dopo-cursore.jpg"
+  },
+  {
+   "id": "anatomia-card",
+   "nome": "Anatomia Servier in card",
+   "famiglia": "anatomia",
+   "motore": {
+    "modello": "anatomia",
+    "dati": {
+     "pannello": "card"
+    }
+   },
+   "cosa_fa": "disegno Servier ricolorato in una card accanto a lui, aloni, frecce, assi, etichette sulla voce, attribuzione",
+   "quando": "un meccanismo detto, accanto a lui",
+   "quando_no": "aggiunte cliniche non dette",
+   "condizioni": [],
+   "reference": "martell-06, gadzhi-06",
+   "ultimo_voto": "7 (YT_POSTURA_32)",
+   "esempio_da": [
+    "videos/YT_POSTURA_32/consegna/YT_POSTURA_32.mp4",
+    38.2
+   ],
+   "stato": "attivo",
+   "origine": "YT_POSTURA_32",
+   "variante_di": null,
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/anatomia-card.jpg"
+  },
+  {
+   "id": "anatomia-scena",
+   "nome": "Anatomia Servier in scena scura",
+   "famiglia": "anatomia",
+   "motore": {
+    "modello": "anatomia",
+    "dati": {
+     "pannello": "pieno"
+    }
+   },
+   "cosa_fa": "disegno Servier a tutto schermo su fondo scuro, camera che si muove fra le parti, lui in finestra o in cerchio",
+   "quando": "il meccanismo centrale del video",
+   "quando_no": "più di 2-3 volte per video",
+   "condizioni": [],
+   "reference": "martell-07",
+   "ultimo_voto": "7 (YT_POSTURA_32)",
+   "esempio_da": [
+    "videos/YT_POSTURA_32/consegna/YT_POSTURA_32.mp4",
+    95.0
+   ],
+   "stato": "attivo",
+   "origine": "YT_POSTURA_32",
+   "variante_di": null,
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/anatomia-scena.jpg"
+  },
+  {
+   "id": "sagoma-vettoriale",
+   "nome": "Sagoma vettoriale",
+   "famiglia": "vietati",
+   "motore": {
+    "modello": "sagoma"
+   },
+   "cosa_fa": "figura umana disegnata da noi (profilo posturale)",
+   "quando": "mai",
+   "quando_no": "mai: bocciata da Riccardo (niente figure umane disegnate)",
+   "condizioni": [],
+   "reference": "—",
+   "ultimo_voto": "bocciata",
+   "esempio_da": [
+    "videos/YT_POSTURA_32/renders/YT_POSTURA_32_anteprima_tappa1.mp4",
+    28.5
+   ],
+   "stato": "vietato",
+   "origine": "YT_POSTURA_32 tappa 1 e inserti di MR_POSTURA_01_v2",
+   "variante_di": null,
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/sagoma-vettoriale.jpg"
+  },
+  {
+   "id": "inserto-aggancio",
+   "nome": "Aggancio a pannello (prima generazione)",
+   "famiglia": "prima generazione",
+   "motore": {
+    "inserto": "aggancio"
+   },
+   "cosa_fa": "frase d'apertura su un pannello accanto alla persona, con il logo",
+   "quando": "—",
+   "quando_no": "—",
+   "condizioni": [],
+   "reference": "—",
+   "ultimo_voto": "— (MR_POSTURA_01_v2)",
+   "esempio_da": [
+    "videos/MR_POSTURA_01_v2/renders/MR_POSTURA_01_v2_FINALE.mp4",
+    1.5
+   ],
+   "stato": "variante",
+   "origine": "MR_POSTURA_01_v2",
+   "variante_di": "frase-sul-corpo",
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/inserto-aggancio.jpg"
+  },
+  {
+   "id": "inserto-numero",
+   "nome": "Numero a pannello (prima generazione)",
+   "famiglia": "prima generazione",
+   "motore": {
+    "inserto": "numero"
+   },
+   "cosa_fa": "numero che conta su un pannello accanto alla persona",
+   "quando": "—",
+   "quando_no": "—",
+   "condizioni": [],
+   "reference": "—",
+   "ultimo_voto": "— (MR_POSTURA_01_v2)",
+   "esempio_da": [
+    "videos/MR_POSTURA_01_v2/renders/MR_POSTURA_01_v2_FINALE.mp4",
+    18.0
+   ],
+   "stato": "variante",
+   "origine": "MR_POSTURA_01_v2",
+   "variante_di": "numero-dietro",
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/inserto-numero.jpg"
+  },
+  {
+   "id": "inserto-prodotto",
+   "nome": "Prodotto a pannello (prima generazione)",
+   "famiglia": "prima generazione",
+   "motore": {
+    "inserto": "prodotto"
+   },
+   "cosa_fa": "voci del servizio su un pannello",
+   "quando": "—",
+   "quando_no": "—",
+   "condizioni": [],
+   "reference": "—",
+   "ultimo_voto": "— (MR_POSTURA_01_v2)",
+   "esempio_da": [
+    "videos/MR_POSTURA_01_v2/renders/MR_POSTURA_01_v2_FINALE.mp4",
+    44.0
+   ],
+   "stato": "variante",
+   "origine": "MR_POSTURA_01_v2",
+   "variante_di": "card-fluttuanti",
+   "nota": "Esempio sostituito da un'immagine neutra nella v1.0 per i collaboratori: il fotogramma mostrava persone svestite durante un trattamento.",
+   "esempio": "motore/inserti/catalogo/inserto-prodotto.jpg"
+  },
+  {
+   "id": "inserto-telefono",
+   "nome": "Telefono a pannello (prima generazione)",
+   "famiglia": "prima generazione",
+   "motore": {
+    "inserto": "telefono"
+   },
+   "cosa_fa": "schermate dell'app in un telefono piatto sul pannello",
+   "quando": "—",
+   "quando_no": "—",
+   "condizioni": [],
+   "reference": "—",
+   "ultimo_voto": "— (MR_POSTURA_01_v2)",
+   "esempio_da": [
+    "videos/MR_POSTURA_01_v2/renders/MR_POSTURA_01_v2_FINALE.mp4",
+    53.0
+   ],
+   "stato": "variante",
+   "origine": "MR_POSTURA_01_v2",
+   "variante_di": "telefono-prospettiva",
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/inserto-telefono.jpg"
+  },
+  {
+   "id": "inserto-primadopo",
+   "nome": "Prima/dopo a pannello (prima generazione)",
+   "famiglia": "prima generazione",
+   "motore": {
+    "inserto": "primadopo"
+   },
+   "cosa_fa": "due foto affiancate con la linea posturale su blu profondo",
+   "quando": "—",
+   "quando_no": "—",
+   "condizioni": [],
+   "reference": "—",
+   "ultimo_voto": "— (MR_POSTURA_01_v2)",
+   "esempio_da": [
+    "videos/MR_POSTURA_01_v2/renders/MR_POSTURA_01_v2_FINALE.mp4",
+    70.0
+   ],
+   "stato": "variante",
+   "origine": "MR_POSTURA_01_v2",
+   "variante_di": "prima-dopo-cursore",
+   "nota": "Esempio sostituito da un'immagine neutra nella v1.0 per i collaboratori: il fotogramma mostrava la foto di un paziente.",
+   "esempio": "motore/inserti/catalogo/inserto-primadopo.jpg"
+  },
+  {
+   "id": "inserto-lista",
+   "nome": "Lista a pannello (prima generazione)",
+   "famiglia": "prima generazione",
+   "motore": {
+    "inserto": "lista"
+   },
+   "cosa_fa": "lista d'attesa in più tempi su un pannello",
+   "quando": "—",
+   "quando_no": "—",
+   "condizioni": [],
+   "reference": "—",
+   "ultimo_voto": "— (MR_POSTURA_01_v2)",
+   "esempio_da": [
+    "videos/MR_POSTURA_01_v2/renders/MR_POSTURA_01_v2_FINALE.mp4",
+    80.0
+   ],
+   "stato": "variante",
+   "origine": "MR_POSTURA_01_v2",
+   "variante_di": "lista-attesa",
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/inserto-lista.jpg"
+  },
+  {
+   "id": "inserto-scelte",
+   "nome": "Scelte a pannello (prima generazione)",
+   "famiglia": "prima generazione",
+   "motore": {
+    "inserto": "scelte"
+   },
+   "cosa_fa": "due o tre scelte su un pannello",
+   "quando": "—",
+   "quando_no": "—",
+   "condizioni": [],
+   "reference": "—",
+   "ultimo_voto": "— (MR_POSTURA_01_v2)",
+   "esempio_da": [
+    "videos/MR_POSTURA_01_v2/renders/MR_POSTURA_01_v2_FINALE.mp4",
+    91.0
+   ],
+   "stato": "variante",
+   "origine": "MR_POSTURA_01_v2",
+   "variante_di": "card-fluttuanti",
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/inserto-scelte.jpg"
+  },
+  {
+   "id": "inserto-modulo",
+   "nome": "Modulo stilizzato (prima generazione)",
+   "famiglia": "prima generazione",
+   "motore": {
+    "inserto": "modulo"
+   },
+   "cosa_fa": "campi vuoti che si evidenziano quando li nomina",
+   "quando": "—",
+   "quando_no": "—",
+   "condizioni": [],
+   "reference": "—",
+   "ultimo_voto": "— (MR_POSTURA_01_v2)",
+   "esempio_da": [
+    "videos/MR_POSTURA_01_v2/renders/MR_POSTURA_01_v2_FINALE.mp4",
+    96.0
+   ],
+   "stato": "variante",
+   "origine": "MR_POSTURA_01_v2",
+   "variante_di": "cta-link",
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/inserto-modulo.jpg"
+  },
+  {
+   "id": "inserto-chiusura",
+   "nome": "Chiusura a pannello (prima generazione)",
+   "famiglia": "prima generazione",
+   "motore": {
+    "inserto": "chiusura"
+   },
+   "cosa_fa": "pannello che si allarga a tutto schermo dopo l'ultima parola",
+   "quando": "—",
+   "quando_no": "—",
+   "condizioni": [],
+   "reference": "—",
+   "ultimo_voto": "— (MR_POSTURA_01_v2)",
+   "esempio_da": [
+    "videos/MR_POSTURA_01_v2/renders/MR_POSTURA_01_v2_FINALE.mp4",
+    110.0
+   ],
+   "stato": "variante",
+   "origine": "MR_POSTURA_01_v2",
+   "variante_di": "chiusura",
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/inserto-chiusura.jpg"
+  },
+  {
+   "id": "inserto-sagoma",
+   "nome": "Sagoma a pannello (prima generazione)",
+   "famiglia": "vietati",
+   "motore": {
+    "inserto": "sagoma"
+   },
+   "cosa_fa": "profilo posturale disegnato su pannello",
+   "quando": "mai",
+   "quando_no": "mai: bocciata da Riccardo",
+   "condizioni": [],
+   "reference": "—",
+   "ultimo_voto": "bocciata",
+   "esempio_da": [
+    "videos/MR_POSTURA_01_v2/renders/MR_POSTURA_01_v2_FINALE.mp4",
+    37.0
+   ],
+   "stato": "vietato",
+   "origine": "MR_POSTURA_01_v2",
+   "variante_di": null,
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/inserto-sagoma.jpg"
+  },
+  {
+   "id": "look-caldo",
+   "nome": "Look caldo",
+   "famiglia": "prima generazione",
+   "motore": {
+    "piatto": [
+     "look_caldo"
+    ]
+   },
+   "cosa_fa": "correzione colore calda sul girato",
+   "quando": "—",
+   "quando_no": "Riccardo: look originale, nessuna correzione del girato",
+   "condizioni": [],
+   "reference": "—",
+   "ultimo_voto": "— (campionario v1)",
+   "esempio_da": [
+    "campionario/11b-colore-caldo.mp4",
+    2.0
+   ],
+   "stato": "variante",
+   "origine": "campionario v1",
+   "variante_di": null,
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/look-caldo.jpg"
+  },
+  {
+   "id": "look-profondo",
+   "nome": "Look profondo",
+   "famiglia": "prima generazione",
+   "motore": {
+    "piatto": [
+     "look_profondo"
+    ]
+   },
+   "cosa_fa": "correzione colore profonda sul girato",
+   "quando": "—",
+   "quando_no": "Riccardo: look originale, nessuna correzione del girato",
+   "condizioni": [],
+   "reference": "—",
+   "ultimo_voto": "— (campionario v1)",
+   "esempio_da": [
+    "campionario/11c-colore-profondo.mp4",
+    2.0
+   ],
+   "stato": "variante",
+   "origine": "campionario v1",
+   "variante_di": null,
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/look-profondo.jpg"
+  }
+ ]
+}

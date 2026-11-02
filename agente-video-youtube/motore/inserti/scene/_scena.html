@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="assets/comune.css" />
+    <style>
+#scena { perspective: 1800px; }
+.el { position: absolute; inset: 0; }
+/* la maschera serve solo durante entrata e uscita: a entrata finita si apre (rivela/nascondi in
+   _scena.js, tappa 3), cosi accenti e discendenti restano interi; il margine e quello di sempre */
+.msk { display: inline-block; overflow: hidden; vertical-align: top; padding: 0.04em 0.06em 0.14em; margin: -0.04em -0.06em -0.14em; }
+.msk > * { display: inline-block; }
+.icona { display: block; }
+.dc-strato { position: absolute; left: 0; top: 0; white-space: nowrap; }
+.dc-vero { white-space: nowrap; }
+.v3-retino { position: absolute; left: 0; top: 0; }
+/* brand dal sito (fase 7c, Riccardo) */
+.fondo-sito { background: var(--fondo-sito); }
+.eyebrow { font-weight: 700; font-size: 32px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--verde);
+  white-space: nowrap; text-shadow: 0 0 12px rgba(114, 250, 147, 0.35); }
+.eyebrow::before { content: ''; display: inline-block; width: 44px; height: 3px; margin-right: 18px; vertical-align: middle;
+  background: var(--verde); border-radius: 2px; box-shadow: 0 0 10px rgba(114, 250, 147, 0.6); transform: translateY(-3px); }
+.grad { background: var(--grad-titolo); -webkit-background-clip: text; background-clip: text; color: transparent;
+  -webkit-text-fill-color: transparent; padding-right: 0.06em; text-shadow: none;
+  filter: drop-shadow(0 4px 14px rgba(0, 15, 43, 0.55)); }
+.sec { color: var(--panna70); }
+.pittogramma { position: absolute; border-radius: 50%; background: #F4F4F4; overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 8, 22, 0.5), 0 0 0 2px rgba(244, 244, 244, 0.35); }
+.pittogramma img { position: absolute; left: -55%; top: -55%; width: 210%; height: 210%; }
+/*__STILE__*/
+    </style>
+  </head>
+  <body>
+    <script src="assets/gsap.min.js"></script>
+    <div id="root" data-composition-id="scena" data-start="0" data-duration="__DURATA__" data-width="1920" data-height="1080" __MB__>
+      <div id="scena" class="clip" data-start="0" data-duration="__DURATA__"></div>
+    </div>
+    <script>window.SCENA_DATI = __DATI__;</script>
+    <script src="assets/scena.js"></script>
+    <script>
+/*__MODELLI__*/
+    </script>
+    <script>avvia();</script>
+  </body>
+</html>

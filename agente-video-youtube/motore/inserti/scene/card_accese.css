@@ -1,0 +1,41 @@
+.ca-fondo { position: absolute; inset: 0; overflow: hidden;
+  background: var(--fondo-sito); }
+.ca-vigna { position: absolute; inset: 0; background: radial-gradient(ellipse 70% 65% at 50% 55%, rgba(0, 0, 0, 0) 55%, rgba(0, 8, 22, 0.55) 100%); }
+.ca-ret { position: absolute; left: -240px; top: -160px; opacity: 0.55; }
+.ca-cam { position: absolute; inset: 0; transform-origin: 50% 55%; }
+.ca-titolo { position: absolute; left: 0; right: 0; top: 92px; text-align: center; }
+.ca-occ { position: relative; display: inline-block; font-weight: 700; font-size: 60px; color: #72FA93;
+  text-shadow: 0 0 18px rgba(114, 250, 147, 0.45); }
+.ca-tit { position: relative; display: inline-block; font-weight: 800; font-size: 84px; color: #F4F4F4; letter-spacing: -0.02em;
+  text-shadow: 0 0 26px rgba(244, 244, 244, 0.25), 0 6px 24px rgba(0, 8, 22, 0.7); }
+.ca-riga { height: 100px; position: relative; }
+.ca-riga1 { height: 76px; position: relative; }
+.ca-scena { position: absolute; inset: 0; perspective: 1600px; perspective-origin: 50% 50%; }
+.ca-card { position: absolute; box-sizing: border-box; border-radius: 34px; overflow: hidden; color: #F4F4F4;
+  background: linear-gradient(170deg, rgba(14, 58, 112, 0.96) 0%, rgba(0, 37, 82, 0.97) 45%, rgba(0, 24, 56, 0.98) 100%);
+  border: 2px solid rgba(244, 244, 244, 0.16); border-top-color: rgba(244, 244, 244, 0.5);
+  box-shadow: 0 4px 8px rgba(0, 8, 22, 0.6), 0 40px 90px rgba(0, 8, 22, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.18); }
+.ca-trama { position: absolute; inset: 0; opacity: 0.08;
+  background-image: radial-gradient(rgba(244, 244, 244, 0.9) 0.8px, transparent 1px); background-size: 7px 7px; }
+.ca-luce { position: absolute; inset: 0; background: linear-gradient(135deg, #C8FFD6 0%, #72FA93 30%, #3FD46E 62%, #1E8F4A 100%); }
+.ca-onda2 { position: absolute; left: -20%; top: 62%; width: 140%; height: 80%; border-radius: 50%; border-top: 40px solid rgba(0, 37, 82, 0.10); transform: rotate(-12deg); }
+.ca-onda3 { position: absolute; left: -30%; top: 78%; width: 160%; height: 90%; border-radius: 50%; border-top: 60px solid rgba(0, 37, 82, 0.12); transform: rotate(-5deg); }
+.ca-onda { position: absolute; left: -10%; top: 46%; width: 120%; height: 70%; border-radius: 50%;
+  border-top: 3px solid rgba(0, 37, 82, 0.16); transform: rotate(-8deg); }
+.ca-riflesso { position: absolute; top: -40%; left: -70%; width: 45%; height: 180%; transform: rotate(18deg);
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0)); }
+.ca-cifra { position: absolute; right: 8px; top: 400px; font-weight: 900; font-size: 280px; line-height: 1; color: transparent;
+  -webkit-text-stroke: 6px rgba(114, 250, 147, 0.7); letter-spacing: -0.04em; filter: drop-shadow(0 0 8px rgba(114, 250, 147, 0.55)); }
+.ca-cifra-p { position: absolute; right: 8px; top: 400px; font-weight: 900; font-size: 280px; line-height: 1; color: transparent;
+  -webkit-text-stroke: 7px #002552; letter-spacing: -0.04em; }
+.ca-ico { position: absolute; left: 40px; top: 36px; width: 88px; height: 88px; box-sizing: border-box; border-radius: 18px;
+  border: 2px solid rgba(114, 250, 147, 0.65); box-shadow: 0 0 16px rgba(114, 250, 147, 0.35); }
+.ca-ico-t { position: absolute; left: 0; top: 4px; width: 84px; text-align: center; font-weight: 800; font-size: 60px; color: #72FA93; }
+.ca-testo { position: absolute; left: 40px; right: 30px; top: 140px; }
+.ca-pre { position: relative; height: 72px; font-weight: 600; font-size: 60px; opacity: 0.85; }
+.ca-chiave { position: relative; height: 98px; font-weight: 800; font-size: 86px; letter-spacing: -0.025em; }
+.ca-dopo { position: relative; font-weight: 700; font-size: 44px; line-height: 1.1; }
+.ca-dopo2 { position: relative; height: 68px; font-weight: 700; font-size: 60px; }
+.ca-punti { position: absolute; left: 0; font-size: 46px; letter-spacing: 0.24em; color: rgba(244, 244, 244, 0.5); white-space: nowrap; }
+.ca-banda { position: absolute; left: 0; width: 100%; height: 96px; }
+.ca-banda canvas { position: absolute; left: 0; top: 0; width: 100%; height: 100%; }

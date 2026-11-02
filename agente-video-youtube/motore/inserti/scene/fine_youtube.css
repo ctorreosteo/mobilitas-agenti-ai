@@ -1,0 +1,9 @@
+.fy-fondo { position: absolute; inset: 0; background: var(--fondo-sito); overflow: hidden; }
+.fy-luce { position: absolute; left: 5%; top: -35%; width: 90%; height: 120%;
+  background: radial-gradient(ellipse at 50% 50%, rgba(0, 58, 124, 0.9) 0%, rgba(0, 37, 82, 0.5) 40%, rgba(0, 26, 61, 0) 72%); }
+.fy-luce2 { position: absolute; left: -20%; top: 40%; width: 140%; height: 90%;
+  background: radial-gradient(ellipse at 50% 60%, rgba(0, 37, 82, 0.55) 0%, rgba(0, 26, 61, 0) 70%); }
+.fy-vigna { position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 45%, rgba(0, 0, 0, 0) 55%, rgba(0, 8, 22, 0.45) 100%); }
+.fy-grana { position: absolute; left: -2%; top: -2%; width: 104%; height: 104%; opacity: 0.05; mix-blend-mode: screen; }
+.fy-logo { position: absolute; }
+.fy-filo { position: absolute; height: 2px; background: linear-gradient(90deg, rgba(114, 250, 147, 0), rgba(114, 250, 147, 0.75), rgba(114, 250, 147, 0)); }

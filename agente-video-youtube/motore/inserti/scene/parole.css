@@ -1,0 +1,4 @@
+.pa-riga { position: absolute; text-align: center; line-height: 1; white-space: nowrap;
+  filter: drop-shadow(0 0 22px rgba(244, 244, 244, 0.22)) drop-shadow(0 6px 18px rgba(0, 26, 61, 0.8)) drop-shadow(0 0 60px rgba(0, 26, 61, 0.6)); }
+.pa-dentro { display: inline-block; }
+.pa-w { font-weight: 900; letter-spacing: -0.03em; color: var(--panna); }
