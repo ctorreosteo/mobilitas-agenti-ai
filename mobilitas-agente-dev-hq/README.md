@@ -1,195 +1,26 @@
-# Agente dev HQ — sviluppo del gestionale Mobilitas
+# Agente dev HQ
 
-Agente che porta un task della lista HQ del gestionale da una riga di titolo a codice revisionato, su frontend e backend del gestionale, **senza mai committare**.
-
-## Come si usa
+L'agente di sviluppo del gestionale: legge il task dalla lista HQ del gestionale, lo implementa su frontend e backend (e su sito web e app mobile, quando il task li riguarda), aggiorna la documentazione e le novità del gestionale, fa il commit. Niente piano, revisori o report.
 
 ```bash
 cd /Users/carlitos/mobilitas-agenti-ai/mobilitas-agente-dev-hq
 claude
 ```
 
-Poi:
+> Vai
 
-> Lavora i task di oggi
+oppure
 
-L'orchestratore parte da solo. In alternativa, `/dev-hq-orchestratore`.
+> Lavora il task 1234
 
-I due repo del gestionale sono già dichiarati come directory aggiuntive in `.claude/settings.json`: l'agente lavora da qui e scrive lì.
+Senza id prende tutti i task aperti con scadenza fino a oggi: quelli di oggi e, insieme, gli scaduti non ancora fatti (dal più vecchio). All'avvio mostra l'elenco dei task che lavorerà, e a ogni cambio annuncia quello in corso (`Task 2/5 — 1234: …`).
 
-## Le sei fasi
+Documentazione: a ogni task allinea la documentazione di ogni repo toccato, nello stesso commit del codice, e alla fine dice cosa ha aggiornato o perché non serviva.
 
-| Fase | Cosa succede | Si ferma? |
-|------|--------------|-----------|
-| 1 | Legge i task con scadenza **oggi**; se non ce ne sono, prende gli **scaduti** dal più vecchio. Sposta il task a **`in progress`** | No |
-| 2 | Scrive il **piano d'azione** — cercando online la doc aggiornata di ogni software di terzi coinvolto, che già lo usiamo o sia da introdurre — lo fa revisionare, corregge finché è approvato | No — nessuna approvazione umana |
-| 3 | Sviluppa su frontend e backend | No |
-| 4 | **Ciclo revisione → correzione**, finché i revisori lanciati approvano al 100% | No |
-| 5 | **Allinea la documentazione** sul codice ormai definitivo | No |
-| 6 | Scrive il report in `report/` e lo stampa, e sposta il task a **`review`**. **Nessun commit** | Fine |
+Novità: ogni task che cambia ciò che si vede o si fa nel gestionale ha la sua voce nel pannello «Novità» (`src/data/novita.ts` del frontend), scritta per lo staff e visibile solo a chi può usare la funzione. Va nel commit del frontend.
 
-Un task alla volta, sequenziale. **Non si ferma mai a chiederti niente:** se non trova task in scadenza chiude la sessione con un riepilogo, e se un ciclo si impunta applica il protocollo di uscita qui sotto.
+Commit: `<task_id> - <spiegazione>`, solo i file toccati dall'agente, uno per ogni repo toccato. Push e deploy li fa Carlos a mano. A fine task lo sposta a `In attesa` nel gestionale.
 
-### Il ciclo della Fase 4
+Serve un utente del gestionale che veda la lista HQ con livello almeno *Modifica*, con le credenziali in `~/.config/mobilitas-agente-dev/credenziali` (`HQ_USERNAME=`, `HQ_PASSWORD=`, `chmod 600`).
 
-```
-        ┌──────────────────────────────┐
-        ▼                              │
-  4A · i 9 revisori in parallelo       │
-      (SOLA LETTURA per costruzione)   │
-        │                              │
-        ├── zero ERRORE ──▶ Fase 5     │
-        │                              │
-        └── almeno un ERRORE           │
-                │                      │
-                ▼                      │
-  4B · sviluppo correttivo ────────────┘
-      (l'unico che scrive)
-```
-
-I revisori **non correggono**: producono un referto. A correggere è un passaggio di sviluppo separato. Si gira finché **tutti quelli lanciati** tornano con zero ERRORE sullo stesso stato del codice.
-
-### Se il ciclo non converge, esce da solo
-
-**L'agente non ti chiede mai di sbloccarlo.** Se il ciclo si impunta — stesso rilievo due volte, un rilievo risolto che riappare, il conto degli ERRORE che non scende, o **5 giri** raggiunti — scatta un protocollo automatico:
-
-1. **Una gerarchia decide i conflitti.** `sicurezza` → `logica` → `regressioni`/`impatto` → `ux` → `performance` → `estetico` → `documentazione`. Vince chi sta più in alto; il rilievo dell'altro viene declassato a DUBBIO con scritto perché. Un ERRORE di sicurezza non si declassa mai.
-2. **Sceglie una delle tre uscite**, in base a chi ha sollevato il rilievo rimasto:
-
-| Uscita | Quando | Risultato |
-|---|---|---|
-| **A — Consegna con riserva** | UX, performance, estetico, doc | Consegna, dichiarando cosa resta aperto. **Il caso normale** |
-| **B — Consegna parziale** | Logica/regressioni, se isolabile | Annulla solo quel pezzo, consegna il resto |
-| **C — Abbandono protetto** | Sicurezza, o problema non isolabile | Salva la patch, ripristina, task non consegnato |
-
-3. **Passa al task successivo.** Uno stallo non ferma la giornata.
-
-Tutto finisce nel report, in evidenza: uscita usata, rilievo rimasto, regola applicata, **rischio residuo in una frase**.
-
-**Quando annulla, non tocca il tuo lavoro:** all'inizio registra quali file erano già modificati, salva sempre una patch in `/tmp/dev-hq-abbandonati/`, e ripristina solo i file che ha scritto lui. Senza quella registrazione, annullare gli è vietato.
-
-## Gli undici revisori
-
-Nessuno di loro modifica un file — e non per promessa: ognuno è definito in `.claude/agents/` con `tools: Read, Grep, Glob`, quindi `Write`, `Edit` e `Bash` **non esistono** per lui. Producono referti, e ogni rilievo è **ERRORE** (blocca l'avanzamento) o **DUBBIO** (si valuta e si motiva).
-
-L'unica eccezione è `revisore-piano`, che ha in più `WebFetch`: è l'unico la cui materia — la documentazione dei vendor esterni — vive fuori dai due repo. Anche quello è leggere.
-
-Siccome non hanno Bash, il diff non se lo costruiscono: glielo prepara l'orchestratore in un **dossier** per giro (`/tmp/dev-hq-dossier/<task-id>-giro<n>.md`) che contiene task, percorso del piano, stato dei due repo, diff, elenco dei file nuovi e l'esito delle verifiche meccaniche. Tutti leggono quel file, quindi tutti giudicano lo stesso stato del codice — che è ciò che dà valore all'approvazione al 100%.
-
-Il dossier **cita e non ricopia**: piano e file nuovi hanno un percorso su disco, e i revisori hanno `Read`. Il diff è l'unica cosa che contiene per intero.
-
-Sono disposti su tre momenti: **uno prima** dello sviluppo, **nove durante**, **uno dopo**.
-
-### Prima dello sviluppo — Fase 2
-
-| Revisore | Guarda |
-|----------|--------|
-| `revisore-piano` | Che il piano abbia capito il task, prima che diventi codice. È l'unico con `WebFetch`: apre le fonti che il piano cita e controlla che dicano davvero quello |
-
-È il più economico del sistema: legge mezza pagina e intercetta il fraintendimento finché costa una frase.
-
-### Nel ciclo — Fase 4
-
-Girano in parallelo, un subagent ciascuno, sullo stesso dossier. Sono indipendenti: nessuno vede i rilievi degli altri.
-
-| Revisore | Guarda | Gira su |
-|----------|--------|---------|
-| `revisore-estetico` | Colori nei **tre** temi, riuso delle primitive | FE |
-| `revisore-ux` | Che il flusso si possa usare davvero | FE |
-| `revisore-logica-frontend` | Che il codice React faccia ciò che il task chiedeva | FE |
-| `revisore-logica-backend` | Che il codice Java faccia ciò che il task chiedeva | BE |
-| `revisore-performance-frontend` | Refetch, chiamate nei cicli, liste non paginate | FE |
-| `revisore-performance-backend` | N+1, query senza limite, lavoro in memoria | BE |
-| `revisore-sicurezza` | Audit clinico, permessi, PII nei log, GDPR | FE + BE |
-| `revisore-regressioni` | Chi chiamava ciò che è cambiato — **un salto** | FE + BE |
-| `revisore-impatto-sistemico` | Effetti a **più salti**, incoerenze, invarianti | FE + BE |
-
-**Nove non costano nove — perché non se ne lanciano nove.** Sei girano su un repo solo, e se quel repo ha il diff vuoto l'orchestratore **non li lancia affatto**: un task di solo backend ne spegne quattro prima di partire, e il report dice quali e perché. Restano sempre accesi sicurezza, regressioni e impatto sistemico, che guardano entrambi i repo. Il gating **per materia** invece resta in mano al revisore, che chiude in una riga quando il diff non lo riguarda — quello richiede di aver letto il diff.
-
-### Dopo il ciclo — Fase 5
-
-| Revisore | Guarda | Gira su |
-|----------|--------|---------|
-| `revisore-documentazione` | Cataloghi e contratti resi falsi dal diff | FE + BE |
-
-Gira **da solo, alla fine**, sul codice ormai definitivo. Dentro il ciclo avrebbe fatto riscrivere i cataloghi a ogni giro inseguendo un codice che cambiava sotto. E siccome le sue correzioni toccano solo file `.md`, **non possono rompere ciò che i nove hanno approvato**: è l'unica cosa che si può sistemare dopo il 100% senza rimetterlo in discussione.
-
-**Regressioni ≠ impatto sistemico.** Il primo parte dai simboli cambiati e cerca i chiamanti: **un salto**, meccanico. Il secondo parte dai concetti e percorre i flussi end-to-end: **molti salti**, semantico. Uno trova ciò che non compila più; l'altro ciò che compila benissimo e ha smesso di avere senso.
-
-## Struttura
-
-```
-report/                            i report, uno per task + riepilogo giornaliero
-.claude/
-  settings.json                    permessi; git commit/push negati
-  skills/
-    dev-hq-orchestratore/          il workflow — l'unico che scrive
-      references/
-        task-gestionale.md         login, lista HQ, campi, i due cambi di stato
-        mappa-gestionale.md        i due repo
-        piano-azione.md            come si scrive il piano
-        ricetta-enum.md            aggiungere un valore a un enum senza dimenticare pezzi
-        diff-completo.md           il dossier da dare ai revisori (git diff non basta)
-        verifiche.md               i gate, il confronto con la baseline, il database
-        stallo.md                  come esce da solo se il ciclo si impunta
-  agents/                          gli undici revisori — tools: Read, Grep, Glob
-    revisore-piano.md              gira in Fase 2, prima dello sviluppo
-    revisore-estetico.md
-    revisore-ux.md
-    revisore-logica-frontend.md
-    revisore-logica-backend.md
-    revisore-performance-frontend.md
-    revisore-performance-backend.md
-    revisore-sicurezza.md
-    revisore-regressioni.md
-    revisore-impatto-sistemico.md
-    revisore-documentazione.md     gira in Fase 5, dopo il ciclo
-    references/
-      design-system.md             i tre temi, le 29 primitives
-      impianto-privacy.md          GDPR, audit clinico, RBAC
-docs/
-  workflow-sviluppo.md             il workflow per esteso
-```
-
-**La divisione fra le due cartelle è il disegno in miniatura:** in `skills/` c'è chi scrive, in `agents/` chi guarda. Un solo file in tutto l'agente ha `Write` fra gli strumenti, ed è l'orchestratore.
-
-## Dove finisce il lavoro
-
-L'agente **non committa**, e sul task muove solo lo stato. Il kanban dei task ti dice quindi *dove* è arrivato — `In corso` mentre lavora, `In attesa` quando ha finito — ma non *cosa* ha fatto: quello sta solo nei file che produce lui.
-
-| File | Contiene |
-|---|---|
-| `report/<data>-<task-id>.md` | Il report del task: cosa ha fatto, come verificarlo, cosa resta aperto |
-| `report/<data>-<task-id>-piano.md` | Il piano su cui ha lavorato |
-| `report/<data>-riepilogo.md` | La giornata in una tabella: task, esiti, decisioni che aspettano te |
-
-Se ha abbandonato del lavoro, lì accanto trovi anche la patch e l'archivio dei file nuovi, per recuperarlo.
-
-Il report va **sempre su file, non solo a schermo**: l'agente lavora in autonomia su più task di seguito, e il terminale scorre. Senza il file, i report dei primi task sparirebbero prima che tu li legga.
-
-## Lezioni dalla prima esecuzione
-
-L'agente è stato corretto sulla base del primo task vero (869cng430, «Aggiungere visita rimandata»). Le quattro cose che ha imparato:
-
-| Problema trovato | Correzione |
-|---|---|
-| **`git diff` non mostra i file nuovi né le modifiche in staging** — sul task reale restituiva **0 righe** mentre il lavoro c'era tutto: i revisori avrebbero approvato il vuoto | Il diff si costruisce con `git diff HEAD` più il contenuto dei file `??` — [diff-completo.md](.claude/skills/dev-hq-orchestratore/references/diff-completo.md) |
-| **`cd` fra due repo fa leggere quello sbagliato**, senza errori. È successo due volte | Regola: `git -C <path>`, mai `cd`; subshell per `npm` e `./mvnw` |
-| **Il confronto con la baseline per numero di riga** dava 3 errori nuovi, **2 dei quali falsi** | Si confronta per testo (typecheck) e per regola (lint) |
-| **I task "aggiungi un valore a un enum" dimenticano pezzi** — il vincolo `CHECK` a database avrebbe rotto la feature **solo in produzione** | [ricetta-enum.md](.claude/skills/dev-hq-orchestratore/references/ricetta-enum.md): l'elenco dei posti da toccare, la verifica del vincolo, la migrazione Flyway |
-
-Ha anche scoperto che **il database è interrogabile** (`docker exec postgres psql`): serve a verificare i vincoli prima di scrivere il piano, e a provare le migrazioni in una transazione da annullare.
-
-## Tre cose da sapere prima di usarlo
-
-**La scadenza di oggi è spesso vuota.** Su ClickUp solo 3 task HQ su 100 avevano una scadenza, e l'import li ha portati così nel gestionale. Se il filtro "oggi" torna zero, allora l'agente ripiega sui task **scaduti e ancora aperti**, dal più vecchio. Se non ce ne sono nemmeno di quelli, chiude la sessione con un riepilogo — non lavora mai un task senza scadenza di sua iniziativa, perché sceglierne uno a caso fra cento è lavoro buttato. Se vuoi che lavori un task preciso, **mettigli una scadenza nel gestionale.**
-
-**I task sono titoli.** 6 descrizioni su 100, nessuna priorità, nessun tag. Per questo la Fase 2 esiste ed è la più importante: è dove il titolo diventa un intervento definito, leggendo il codice.
-
-**Non ci sono test automatici, e i gate del frontend sono già rossi.** Zero test nel backend, Vitest non cablato nel frontend. Su albero pulito `npm run typecheck` dà **318 errori** e `npm run lint` **894 problemi**: debito pregresso, non regressioni. Per questo l'agente fotografa la linea di base *prima* di sviluppare e poi confronta — contano solo gli errori nuovi. Il backend invece compila pulito, quindi lì ogni errore è del diff.
-
-## Vincoli
-
-- **Mai commit, push, branch.** Negati anche a livello di permessi.
-- **Sul task muove lo stato, e nient'altro.** `IN_CORSO` quando prende in carico, `IN_ATTESA` quando consegna. **Mai `COMPLETATO`:** chiudere un task resta una tua decisione, dopo il collaudo. Niente commenti, nessuna modifica a titolo, descrizione, checklist o scadenza — `POST` (tranne il login), `PUT` e `DELETE` verso l'API sono negati anche a livello di permessi.
-- **I task si leggono dall'API di produzione**, con un utente del gestionale. Le credenziali stanno in `~/.config/mobilitas-agente-dev/credenziali` (`HQ_USERNAME=`, `HQ_PASSWORD=`, `chmod 600`), fuori da ogni repo, e non si stampano né si copiano in file o report. L'utente deve vedere la lista HQ con livello almeno *Modifica*.
+Tutte le istruzioni sono in [CLAUDE.md](CLAUDE.md).

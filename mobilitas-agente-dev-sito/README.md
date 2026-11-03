@@ -1,6 +1,6 @@
 # Agente dev rapido — sito web
 
-Come `mobilitas-agente-dev-rapido`, ma per il sito pubblico: legge il task dalla lista **Dev - sito web** del gestionale, lo implementa in `mobilitas-sito-web`, aggiorna la documentazione, fa il commit. Niente piano, revisori o report.
+Come `mobilitas-agente-dev-hq`, ma per il sito pubblico: legge il task dalla lista **Dev - sito web** del gestionale, lo implementa in `mobilitas-sito-web`, aggiorna la documentazione, fa il commit. Niente piano, revisori o report.
 
 ```bash
 cd /Users/carlitos/mobilitas-agenti-ai/mobilitas-agente-dev-sito

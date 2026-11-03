@@ -1,4 +1,4 @@
-# Agente dev rapido
+# Agente dev HQ
 
 Prendi un task dalla lista HQ del gestionale, lo implementi dove serve (gestionale, sito, app), aggiorni la documentazione e le novità del gestionale, fai il commit. Nient'altro: niente piano scritto, niente revisori, niente report.
 

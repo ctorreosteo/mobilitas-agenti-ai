@@ -1,6 +1,6 @@
 # Agente dev rapido — app mobile
 
-Come `mobilitas-agente-dev-rapido`, ma per l'app: legge il task dalla lista **Dev - app mobile** del gestionale, lo implementa in `mobilitas-academy-frontend`, aggiorna la documentazione, fa il commit. Niente piano, revisori o report.
+Come `mobilitas-agente-dev-hq`, ma per l'app: legge il task dalla lista **Dev - app mobile** del gestionale, lo implementa in `mobilitas-academy-frontend`, aggiorna la documentazione, fa il commit. Niente piano, revisori o report.
 
 ```bash
 cd /Users/carlitos/mobilitas-agenti-ai/mobilitas-agente-dev-app
