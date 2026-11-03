@@ -1,8 +1,8 @@
 # Agente dev rapido
 
-Prendi un task dalla lista HQ del gestionale, lo implementi dove serve (gestionale, sito, app), fai il commit. Nient'altro: niente piano scritto, niente revisori, niente report.
+Prendi un task dalla lista HQ del gestionale, lo implementi dove serve (gestionale, sito, app), aggiorni la documentazione e le novità del gestionale, fai il commit. Nient'altro: niente piano scritto, niente revisori, niente report.
 
-**Rapido vuol dire niente cerimonie, non lavoro a metà.** Letto il task parti subito, ma consegni solo codice finito, che compila e copre tutti i lati.
+**Rapido vuol dire niente cerimonie, non lavoro a metà.** Letto il task parti subito, ma consegni solo codice finito, che compila e copre tutti i lati, con la documentazione e le novità allineate.
 
 ## Repo
 
@@ -15,7 +15,7 @@ Prendi un task dalla lista HQ del gestionale, lo implementi dove serve (gestiona
 
 Una funzionalità può coinvolgere tutti e tre: gestionale, sito e app parlano con lo stesso backend. Tocca solo i repo che servono al task, ma tutti quelli che servono.
 
-Il sito si tocca quando il task parla del sito, delle landing o delle pagine pubbliche (prenotazione, form, popup). Il sito chiama il backend del gestionale (es. `/api/sito/prenotazione`): se cambi un'API che il sito usa, aggiorni entrambi i lati, come fra frontend e backend. Convenzioni del sito: `DESIGN_SYSTEM.md` e `COLORS.md` nella sua radice.
+Il sito si tocca quando il task parla del sito, delle landing o delle pagine pubbliche (prenotazione, form, popup). Il sito chiama il backend del gestionale (es. `/api/sito/prenotazione`): se cambi un'API che il sito usa, aggiorni entrambi i lati, come fra frontend e backend. Convenzioni del sito: `docs/design-system.md` e `docs/landing.md` (regole sui testi).
 
 L'app si tocca quando il task parla dell'app o dei pazienti che la usano. Chiama il backend di produzione: prima di cambiare un'API controlla in `src/api/` e `src/services/` se l'app la usa. **Le versioni vecchie dell'app restano sui telefoni**, quindi per lei un'API si estende e basta: niente campi o endpoint rinominati o rimossi. Documentazione in `docs/` nella sua radice. `mobilitas-academy-firebase` (proxy YouTube) non è un repo git: non toccarla, e se il task la richiede dillo.
 
@@ -105,7 +105,40 @@ La build deve passare. Il lint del sito ha centinaia di errori pregressi: contan
 
 Il backend parte pulito: ogni errore è tuo, correggilo. Il frontend ha centinaia di errori pregressi: contano solo quelli nei file che hai toccato e causati dal tuo diff. Correggi finché è pulito, poi rileggi il diff una volta da cima a fondo.
 
-## 4. Commit
+## 4. Documentazione
+
+Fa parte del task, non è un extra, e si fa **a ogni task**. A codice definitivo e prima del commit, ogni aggiunta, modifica o cancellazione va riportata nella documentazione di ogni repo toccato. Cerca nei documenti i nomi che hai toccato (pagina, endpoint, campo, file, job) e sistema tutto ciò che il tuo lavoro ha reso falso o incompleto. Se hai tolto qualcosa, toglilo anche dai documenti, link compresi.
+
+| Repo | Da dove partire |
+|------|-----------------|
+| Backend | Tabella «Checklist aggiornamento documentazione» in `docs/guides/CONVENTIONS.md`: per ogni tipo di cambio dice quali documenti |
+| Frontend | Sezione 9 di `docs/howto-add-feature.md`: cataloghi di pagine, service, API, storage |
+| Sito | `docs/pagine.md` (route), `docs/landing.md`, `docs/integrazioni.md` (API, form, tracciamento, servizi esterni), `docs/design-system.md`, `docs/architettura.md`, `README.md` (comandi, variabili d'ambiente) |
+| App | `docs/17-aggiornamenti-post-agosto-2026.md`, nella sezione del tuo argomento o in `Altre modifiche`; il debito tecnico in `Debito tecnico aggiunto`. I capitoli 01–16 sono una fotografia datata e non si riscrivono: il 17 prevale. L'hash nella riga in cima lo lasci com'è: il tuo commit non esiste ancora |
+
+- **Documento nuovo** solo se la funzionalità non è banale e nessun documento esistente la copre, e va aggiunto all'indice (`docs/README.md`; `README.md` per il sito).
+- Anche un bug corretto o un ritocco si scrive, se cambia un comportamento che i documenti descrivono (regole, stati, permessi, calcoli, cosa si vede in una pagina). Non scrivi niente solo se hai cercato i nomi toccati e nessun documento ne parla: alla fine dici cosa hai cercato.
+- Scrivi solo ciò che hai verificato nel codice, tocca solo le righe che servono, niente cronache («modificato il…»).
+- I documenti vanno nello stesso commit del codice, fra i file tuoi, un commit per repo.
+- **`docs/privacy/` del backend non si tocca:** sono atti firmati. Se il task cambia dati trattati, fornitori, ruoli o usi dell'AI, dillo alla fine: lì decide Carlos.
+
+## 5. Novità del gestionale
+
+Chi usa il gestionale scopre i cambiamenti dal pannello «Novità» dell'intestazione, che legge `src/data/novita.ts` del frontend (lo mostra per 30 giorni e solo a chi può usare la funzione). Anche questo fa parte del task.
+
+**Quando.** Ogni task che cambia ciò che qualcuno vede o fa nel gestionale ha la sua novità: funzioni nuove, modi di lavorare cambiati e anche correzioni che si notano (un file che prima non si apriva, un calcolo che cambia il compenso). Niente novità solo se il cambiamento non si vede dal gestionale: refactoring, correzioni interne, task solo del sito o dell'app. Anche un task fatto solo nel backend può averla, se cambia cosa si vede nel gestionale: la novità va comunque nel frontend, con il suo commit.
+
+**Dove e come.**
+- Una voce nuova **in cima** a `NOVITA`, con `data` di oggi (`TZ=Europe/Rome date +%F`) e un `id` stabile, in minuscolo con trattini, che non c'è già.
+- Una funzione, una novità: se il task continua una funzione che ha già una voce negli ultimi 30 giorni, aggiorna quella (testi e data) invece di aggiungerne un'altra.
+- Compila tutti i campi del tipo `Novita`: `categoria` fra quelle esistenti, `icona` di lucide (aggiungi l'import se manca), `link` solo verso una pagina che chi la vede può aprire.
+- `visibile` mostra la voce solo a chi ha quella funzione per il suo ruolo: riusa gli helper in cima al file e gli stessi controlli di accesso della pagina (`src/lib/*-access.ts`, guardie delle rotte, `app-sidebar.tsx`). Mai `() => true`.
+
+**Come si scrive.** Per chi lavora in studio (segreteria, osteopati, manager), non per chi programma: niente nomi tecnici (endpoint, componenti, codici di enum), seconda persona, cose concrete. `slogan` una riga; `descrizione` due o tre frasi su cos'è; `cosaPuoiFare` da due a cinque voci che iniziano con un verbo; `aCosaServe` una frase su cosa cambia nel lavoro di tutti i giorni. Prendi a modello le voci più recenti del file.
+
+La novità va nel commit del frontend insieme al codice; il typecheck la controlla con il resto.
+
+## 6. Commit
 
 Prima di scrivere, annota i file già modificati in ogni repo (`git -C <path> status --porcelain`): spesso Carlos ha lavoro in corso, anche già in stage. **Committa solo i file tuoi**, elencandoli — così ciò che è già in stage resta fuori:
 
@@ -120,7 +153,7 @@ git -C <path> commit -m "<task_id> - <spiegazione>" -- <file tuoi>
 - **Il tuo lavoro finisce col commit.** Mai push, pull, fetch, rebase, deploy: quelli li fa Carlos a mano (nel sito vuol dire mai `./deploy.sh`, `npm run deploy` o `firebase deploy`).
 - **Mai** branch, checkout, reset, stash, amend.
 
-## 5. Stato del task
+## 7. Stato del task
 
 Poi sposta il task a `IN_ATTESA` (senza, al prossimo giro lo riprenderesti), e nient'altro sul task — niente commenti, checklist o altri campi:
 
@@ -133,4 +166,4 @@ curl -s -X PATCH -H "$AUTH" -H "Content-Type: application/json" "$HQ_API/task/<I
 
 ## Alla fine
 
-Poche righe per task: cosa hai fatto, hash dei commit, interpretazioni scelte, cosa provare a mano.
+Poche righe per task: cosa hai fatto, hash dei commit, documenti aggiornati (o «doc: nessuna», con cosa hai cercato), novità aggiunta o aggiornata (il suo `id`, o «novità: nessuna», col motivo), interpretazioni scelte, cosa provare a mano.

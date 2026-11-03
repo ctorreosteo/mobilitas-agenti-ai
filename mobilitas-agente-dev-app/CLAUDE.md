@@ -1,8 +1,8 @@
 # Agente dev rapido — app mobile
 
-Prendi un task dalla lista **Dev - app mobile** del gestionale, lo implementi nell'app, fai il commit. Nient'altro: niente piano scritto, niente revisori, niente report.
+Prendi un task dalla lista **Dev - app mobile** del gestionale, lo implementi nell'app, aggiorni la documentazione, fai il commit. Nient'altro: niente piano scritto, niente revisori, niente report.
 
-**Rapido vuol dire niente cerimonie, non lavoro a metà.** Letto il task parti subito, ma consegni solo codice finito, che compila.
+**Rapido vuol dire niente cerimonie, non lavoro a metà.** Letto il task parti subito, ma consegni solo codice finito, che compila, con la documentazione allineata.
 
 ## Repo
 
@@ -90,7 +90,19 @@ L'app parte pulita: ogni errore è tuo, correggilo. Non c'è lint né test.
 
 Correggi finché è pulito, poi rileggi il diff una volta da cima a fondo.
 
-## 4. Commit
+## 4. Documentazione
+
+Fa parte del task, non è un extra. A codice definitivo e prima del commit, ogni aggiunta, modifica o cancellazione va riportata nella documentazione dell'app. Cerca nei documenti i nomi che hai toccato (schermata, endpoint, campo, file, chiave di storage) e sistema tutto ciò che il tuo lavoro ha reso falso o incompleto. Se hai tolto qualcosa, toglilo anche dai documenti, link compresi.
+
+Il posto è `docs/17-aggiornamenti-post-agosto-2026.md`, nella sezione del tuo argomento o in `Altre modifiche`; il debito tecnico in `Debito tecnico aggiunto`. I capitoli 01–16 sono una fotografia datata e non si riscrivono: il 17 prevale. L'hash nella riga in cima lo lasci com'è: il tuo commit non esiste ancora.
+
+- **Documento nuovo** solo se la funzionalità non è banale e nessun documento esistente la copre, e va aggiunto all'indice in `docs/README.md`.
+- Se il task non cambia niente di ciò che i documenti descrivono (un bug corretto, un ritocco grafico), non scrivere niente. Ma la domanda te la fai a ogni task, e l'esito lo dici alla fine.
+- Scrivi solo ciò che hai verificato nel codice, tocca solo le righe che servono, niente cronache («modificato il…»).
+- I documenti vanno nello stesso commit del codice, fra i file tuoi.
+- Se il task cambia quali dati si raccolgono, il tracciamento o un fornitore, dillo alla fine: il fascicolo privacy sta nel gestionale e lì decide Carlos.
+
+## 5. Commit
 
 Prima di scrivere, annota i file già modificati (`git -C <path> status --porcelain`): spesso Carlos ha lavoro in corso, anche già in stage. **Committa solo i file tuoi**, elencandoli — così ciò che è già in stage resta fuori:
 
@@ -105,7 +117,7 @@ git -C <path> commit -m "<task_id> - <spiegazione>" -- <file tuoi>
 - **Il tuo lavoro finisce col commit.** Mai push, pull, fetch, rebase, deploy: quelli li fa Carlos a mano.
 - **Mai** branch, checkout, reset, stash, amend.
 
-## 5. Stato del task
+## 6. Stato del task
 
 Poi sposta il task a `IN_ATTESA` (senza, al prossimo giro lo riprenderesti), e nient'altro sul task — niente commenti, checklist o altri campi:
 
@@ -118,4 +130,4 @@ curl -s -X PATCH -H "$AUTH" -H "Content-Type: application/json" "$HQ_API/task/<I
 
 ## Alla fine
 
-Poche righe per task: cosa hai fatto, hash dei commit, interpretazioni scelte, cosa provare a mano. Elenca a parte i task saltati perché richiedono il gestionale, con cosa servirebbe lì.
+Poche righe per task: cosa hai fatto, hash dei commit, documenti aggiornati (o «doc: nessuna», col motivo), interpretazioni scelte, cosa provare a mano. Elenca a parte i task saltati perché richiedono il gestionale, con cosa servirebbe lì.
