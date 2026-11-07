@@ -1,0 +1,51 @@
+#!/bin/zsh
+# yt2txt — da un link YouTube: mp3 dell'audio + trascritto .txt in ~/Downloads.
+# Uso: ./yt2txt <link-youtube> [--speakers]
+# La trascrizione la fa Spokenly in locale (server MCP su localhost:51089).
+set -e
+PORT=51089
+OUT="$HOME/Downloads"
+URL="$1"
+SPEAKERS=false
+[ "$2" = "--speakers" ] && SPEAKERS=true
+[ -n "$URL" ] || { echo "uso: ./yt2txt <link-youtube> [--speakers]"; exit 1; }
+
+for t in yt-dlp ffmpeg curl python3; do
+  command -v $t >/dev/null || { echo "manca $t (brew install $t)"; exit 1; }
+done
+
+spokenly_up() {
+  curl -s --max-time 5 -X POST "http://localhost:$PORT" -H "Content-Type: application/json" \
+    -d '{"jsonrpc":"2.0","id":1,"method":"tools/list"}' | grep -q transcribe_file
+}
+
+# 1. audio
+echo "▸ scarico l'audio…"
+MP3=$(yt-dlp --no-playlist -x --audio-format mp3 --audio-quality 0 \
+  --restrict-filenames -o "$OUT/%(title).120s.%(ext)s" \
+  --print after_move:filepath --no-simulate --quiet --no-warnings "$URL" | tail -1)
+[ -f "$MP3" ] || { echo "✗ download fallito"; exit 1; }
+echo "✓ $MP3"
+
+# 2. trascrizione con Spokenly
+if ! spokenly_up; then
+  echo "▸ Spokenly non risponde, lo apro…"
+  open -a Spokenly
+  for i in {1..20}; do sleep 1; spokenly_up && break; done
+  spokenly_up || { echo "✗ Spokenly non raggiungibile su localhost:$PORT (attiva il server MCP nelle impostazioni)"; exit 1; }
+fi
+
+TXT="${MP3%.mp3}.txt"
+echo "▸ trascrivo con Spokenly (in locale)…"
+REQ=$(python3 -c 'import json,sys; print(json.dumps({"jsonrpc":"2.0","id":2,"method":"tools/call","params":{"name":"transcribe_file","arguments":{"file_path":sys.argv[1],"format":"text","speakers":sys.argv[2]=="true"}}}))' "$MP3" "$SPEAKERS")
+curl -s --max-time 7200 -X POST "http://localhost:$PORT" -H "Content-Type: application/json" -d "$REQ" \
+  | python3 -c '
+import json, sys
+r = json.load(sys.stdin)
+if "error" in r: sys.exit("✗ Spokenly: " + str(r["error"]))
+res = r["result"]
+text = "\n".join(c.get("text", "") for c in res.get("content", []) if c.get("type") == "text").strip()
+if res.get("isError") or not text: sys.exit("✗ Spokenly: " + (text or "trascritto vuoto"))
+open(sys.argv[1], "w").write(text + "\n")
+' "$TXT"
+echo "✓ $TXT ($(wc -w < "$TXT" | tr -d ' ') parole)"
