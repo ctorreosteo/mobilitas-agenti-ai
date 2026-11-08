@@ -1,0 +1,44 @@
+#!/bin/zsh
+# schema2docx — trasforma lo schema scritto in Markdown nel .docx finale in ~/Downloads.
+# Uso: ./schema2docx <schema.md> <percorso-mp3-o-txt-del-video>
+# Il .docx prende il nome del video (<titolo>_schema.docx); il .md resta fuori da Downloads.
+set -e
+DIR=${0:A:h}
+MD="$1"; VIDEO="$2"
+[ -f "$MD" ] && [ -n "$VIDEO" ] || { echo "uso: ./schema2docx <schema.md> <percorso-mp3-o-txt>"; exit 1; }
+command -v pandoc >/dev/null || { echo "manca pandoc (brew install pandoc)"; exit 1; }
+
+DOCX="${VIDEO%.*}_schema.docx"
+pandoc "$MD" -f markdown-smart -o "$DOCX" --reference-doc="$DIR/stile-schema.docx"
+# Font, bordi e intestazione delle tabelle scritti anche nel documento: Pages e
+# l'anteprima di macOS ignorano gli stili predefiniti di Word.
+python3 -I - "$DOCX" <<'EOF'
+import re, sys, zipfile, shutil, os
+path = sys.argv[1]; tmp = path + ".tmp"
+FONT = '<w:rFonts w:ascii="Arial" w:hAnsi="Arial" w:eastAsia="Arial" w:cs="Arial" />'
+BORDERS = '<w:tblBorders>' + ''.join(
+    f'<w:{e} w:val="single" w:sz="4" w:space="0" w:color="A6A6A6"/>'
+    for e in ['top', 'left', 'bottom', 'right', 'insideH', 'insideV']) + '</w:tblBorders>'
+SHADE = '<w:shd w:val="clear" w:color="auto" w:fill="DEEAF6"/>'
+def header_row(m):
+    row = re.sub(r'<w:tcPr\s*/>', '<w:tcPr></w:tcPr>', m.group(0))
+    return re.sub(r'<w:tcPr>', '<w:tcPr>' + SHADE, row)
+with zipfile.ZipFile(path) as zin, zipfile.ZipFile(tmp, "w", zipfile.ZIP_DEFLATED) as zout:
+    for item in zin.infolist():
+        if item.filename.endswith("/"):
+            continue
+        data = zin.read(item.filename)
+        if item.filename == "word/styles.xml":
+            s = data.decode()
+            s = re.sub(r'(<w:style [^>]*w:styleId="Normal"[^>]*>.*?)(</w:style>)',
+                       lambda m: m.group(1) + '<w:rPr>' + FONT + '</w:rPr>' + m.group(2), s, count=1, flags=re.S)
+            data = s.encode()
+        elif item.filename == "word/document.xml":
+            s = data.decode()
+            s = re.sub(r'(<w:tblStyle [^>]*/>)', r'\1' + BORDERS, s)
+            s = re.sub(r'<w:tr>(?:(?!</w:tr>).)*?<w:tblHeader[^>]*/>.*?</w:tr>', header_row, s, flags=re.S)
+            data = s.encode()
+        zout.writestr(item, data)
+shutil.move(tmp, path)
+EOF
+echo "✓ $DOCX ($(pandoc "$DOCX" -t plain | wc -w | tr -d ' ') parole)"

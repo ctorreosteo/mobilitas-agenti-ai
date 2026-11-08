@@ -4,8 +4,10 @@ Da un link YouTube metti in `~/Downloads` tre file con lo stesso nome:
 
 - `<titolo>.mp3`, l'audio del video;
 - `<titolo>.txt`, il trascritto di quell'audio, fatto **in locale** da Spokenly;
-- `<titolo>_schema.md`, lo schema di studio in italiano, che scrivi tu leggendo
-  il trascritto (sezione «Lo schema di studio»).
+- `<titolo>_schema.docx`, lo schema di studio in italiano, in **Word**, che
+  scrivi tu leggendo il trascritto (sezione «Lo schema di studio»).
+
+In `~/Downloads` finiscono solo questi tre file: mai un `.md`.
 
 ## Quando ti attivi
 
@@ -40,9 +42,23 @@ Poi passi allo schema.
 
 ## Lo schema di studio
 
-Leggi **tutto** il trascritto, non solo l'inizio, e scrivi
-`~/Downloads/<titolo>_schema.md`. Serve per imparare tutto quello che dice il
-video senza riascoltarlo.
+Leggi **tutto** il trascritto, non solo l'inizio (se è lungo, a pezzi, ma
+tutto). Lo schema serve per imparare tutto quello che dice il video senza
+riascoltarlo.
+
+**Come si produce il Word.** Scrivi lo schema in Markdown in
+`lavoro/<titolo>_schema.md` (cartella dell'agente, fuori da Downloads), poi:
+
+```
+./schema2docx lavoro/<titolo>_schema.md ~/Downloads/<titolo>.mp3
+```
+
+Lo script crea `~/Downloads/<titolo>_schema.docx` con lo stile fisso di
+`stile-schema.docx` (A4, Arial, titoli blu, tabelle con bordi e intestazione
+colorata). Nel Markdown usa solo cose che Word rende bene: titoli `#`/`##`/`###`,
+elenchi, elenchi numerati, **grassetto**, *corsivo*, tabelle a pipe, `---`.
+Niente HTML (`<details>`, `<br>`): in Word non funziona. Il titolo del documento
+è il primo `#`.
 
 **Lingua.** Sempre italiano, anche se il video è in un'altra lingua. I termini
 tecnici restano nella lingua originale la prima volta, tra parentesi
@@ -64,9 +80,10 @@ strumenti.
    (⚠️). Le tabelle vanno bene per i confronti (opzione A contro B).
 5. **Errori da evitare**: tutti in un posto solo, con il motivo.
 6. **Glossario** dei termini tecnici.
-7. **Domande di ripasso**: 8-15 domande con la risposta sotto, in un
-   `<details>` così si può provare prima di leggerla.
-8. **Punti dubbi del trascritto**: dove il trascritto è palesemente sbagliato o
+7. **Domande di ripasso**: 8-15 domande numerate, **senza** risposta sotto,
+   così si prova a rispondere prima di guardare.
+8. **Soluzioni**: le risposte, con lo stesso numero della domanda.
+9. **Punti dubbi del trascritto**: dove il trascritto è palesemente sbagliato o
    ambiguo (cifre che non tornano, nomi storpiati), scrivi cosa c'è nel testo e
    l'interpretazione più probabile, segnata come tale.
 
@@ -82,6 +99,10 @@ strumenti.
 - **Completo vuol dire completo.** Finito lo schema, ripassa il trascritto dall'inizio
   alla fine e verifica che ogni consiglio, numero, passaggio ed esempio concreto
   sia nello schema. Quello che manca lo aggiungi prima di consegnare.
+
+Prima di consegnare controlla il `.docx` sul disco: `pandoc <file>.docx -t plain | head -60`
+deve mostrare il testo, e il numero di parole stampato da `schema2docx` deve
+essere vicino a quello del Markdown.
 
 Alla fine rispondi con i tre percorsi, le prime righe del trascritto e la mappa
 dello schema.
