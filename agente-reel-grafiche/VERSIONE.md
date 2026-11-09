@@ -13,7 +13,7 @@ una cartella diversa, con una copia propria del motore.
   si studiano (scheda, ritmo, catalogo, linguaggio) prima di partire. `reel-init` si ferma finché resta qualcosa da studiare.
 - **Radiografia generica**: tagli, inquadrature, finestre, persona fotogramma per fotogramma (volti, teste, mani, sagoma),
   sottotitoli impressi, scritte del video, zone libere, voce.
-- **Il sistema di forme** (modello `palco-fascia-alta`, in prova): stile fisso approvato e forme scelte per inquadratura
+- **Il sistema di forme** (modello `palco-fascia-alta`, attivo dal 09/11/2026): stile fisso approvato e forme scelte per inquadratura
   (pannello sotto il volto, fascia alta, badge, pannello al posto di una finestra; brevi: tendina a tutto schermo, schermo
   diviso, card di vetro), con oggetti che si trasformano, indicatore di struttura, disegni Servier.
 - **Sottotitoli impressi mai toccati**: un controllo automatico (`reel_sottotitoli.py`) blocca il render se la fascia di un
@@ -65,6 +65,8 @@ Strumenti, uguali all'agente video YouTube: ffmpeg, whisper.cpp con il modello l
   modelli (`etichette_ads`, `card_accese_ads`…) restano quelli del catalogo. Report: `report/2026-11-08-nome-reel-grafiche.md`.
 - **09/11/2026, primo reel consegnato** (`REEL_MOFU_CERVICALGIA_TEST`). `reel-stato` non chiede più un giro 3 del direttore:
   una grafica ritoccata dopo il giro 2 («non rivotata») la decide Riccardo sull'anteprima, come i voti rimasti sotto 7.
+  Con l'ok di Riccardo diventano attivi nel catalogo il sistema di forme (`palco-fascia-alta`) e gli effetti sonori
+  (`effetti-sonori-reel`); nella skill, la nota sui segni vuoti letti «0» e sull'icona `send` letta «7».
 
 ## Regole superate (non valgono più)
 
@@ -86,4 +88,5 @@ Strumenti, uguali all'agente video YouTube: ffmpeg, whisper.cpp con il modello l
 - **Regressione YouTube non fattibile qui**: la regressione dei modelli 16:9 condivisi (`./mve regressione tutti`) è un
   comando dell'agente video YouTube e ha bisogno del video `YT_POSTURA_32`; in questa cartella non c'è più. Le modifiche ai
   file condivisi (`brand.json` e simili) vanno provate nell'agente video YouTube.
-- Modelli «in prova» da approvare: `palco-fascia-alta` (il sistema di forme), le infografiche, gli zoom e gli effetti sonori.
+- Modelli «in prova» da approvare: le infografiche e gli zoom. Il sistema di forme (`palco-fascia-alta`) e gli effetti sonori
+  sono attivi dal 09/11/2026.

@@ -45,7 +45,7 @@ spesso alla stessa; passaggi legati):
   fotogramma: nel frontman a 56,8–58,1 s il volto scende fino alla fascia dei sottotitoli, e l'offerta ha due pannelli brevi,
   uno prima e uno dopo).
 
-**Il modello (`infografica_reel`, `dati.modo = "palco"`, catalogo `palco-fascia-alta`, in prova: è il sistema a più forme).**
+**Il modello (`infografica_reel`, `dati.modo = "palco"`, catalogo `palco-fascia-alta`, attivo dal 09/11/2026: è il sistema a più forme).**
 - `box` tutto il quadro; `stati` [{da, forma, x, y, w, h, r, ombra «alto»|«basso»|«no», filo «sopra»|«sotto», entra
   «taglio»|«seme»|«tendina», fr, lato}]; `salta` [y0, y1] (la fascia che la tendina salta). I puntini stanno dentro la forma.
 - Impaginazione del frontman: **l'oggetto è il protagonista**, cioè una card ~420 × 390 a destra (x 590–1010) nella fascia alta
@@ -152,6 +152,9 @@ dall'inizio della pagina):
   pennello barrato sembra «8», il lampo Vision lo legge «4», il pittogramma Mobilitas da solo sembra «7», la nuvoletta tonda
   verde (`message-circle`) ricorda il logo di WhatsApp (meglio `message-dots`); il logo intero va tenuto grande (piccolo, il
   direttore legge «MOBILI7AS»). Segni vietati: biglietto, scintille, lucchetto e chiave, mano che sembra un pugno.
+  I segni piccoli con il bordo vuoto (cerchi o quadratini a contorno, per esempio i pallini di una lista) Apple Vision li
+  legge «0»: si usano pallini pieni (una `barra` di 28×28). L'aeroplano di carta (`send`) Vision lo legge «7»: non si usa
+  (REEL_MOFU_CERVICALGIA_TEST, 08/11/2026).
 - **Etichette**: corpo almeno il minimo del reel (1,5× i sottotitoli), misurate con PIL a peso 800; dentro la zona sicura;
   `testi_detti` come sempre.
 - **Nessuna promessa disegnata**: un sintomo non si spegne su una parola di sollievo; un risultato si mostra solo sotto
@@ -180,7 +183,7 @@ Nel piano, `"zoom": [{nome, f0, f1, scala ≤ 1,10, centro [x, y], zona "tutto"|
   identici bit per bit; media di Y, U, V della zona ingrandita contro la zona del base da cui viene (≤ 1 livello). Le etichette
   di colore vanno anche sull'**ingresso** di ffmpeg, se no converte il range e cambia tutti i fotogrammi.
 
-## 5. Effetti sonori (`effetti-sonori-reel`, in prova)
+## 5. Effetti sonori (`effetti-sonori-reel`, attivo dal 09/11/2026)
 
 Sulla grafica: `"suono": {"file": "whoosh-short.mp3", "db": -24, "dopo": 0}` (`dopo`: secondi dopo il primo fotogramma
 visibile, per una trasformazione importante). Solo aperture e trasformazioni importanti, `db` al massimo -12 rispetto alla voce

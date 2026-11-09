@@ -268,7 +268,7 @@ sull'anteprima vale anche come sua decisione sui voti rimasti sotto 7 e sulle gr
 ## Varianti e modelli «in prova»
 
 - Una voce del catalogo con `"in_prova": true` è un modello o una variante che aspetta l'ok di Riccardo (per esempio
-  `palco-fascia-alta`, il sistema di forme; `infografica-*`; `equazione-finestra-v2`, `etichette-barrate-finestra-v2`,
+  `infografica-*`; `equazione-finestra-v2`, `etichette-barrate-finestra-v2`,
   `chiusura-9x16-v2`).
 - **I piani nuovi la usano al posto del modello di partenza**: `reel-piano` lo accetta e lo segnala come IN PROVA; se un piano
   usa ancora il modello di partenza, avvisa di usare la variante.

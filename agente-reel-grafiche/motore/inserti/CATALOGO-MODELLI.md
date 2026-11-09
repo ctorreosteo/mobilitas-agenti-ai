@@ -8,7 +8,7 @@ Generato da `CATALOGO-MODELLI.json` (`python -m motore.catalogo md`). **Nessun m
 
 Ogni piano grafico parte dal catalogo **intero**: si sceglie per occasione, si mescolano le famiglie, non si usa tutto in ogni video, mai lo stesso modello due volte di fila (lo controlla `scena`). L'uso per video è in `libreria/uso-modelli.json`. Gli esempi di non regressione sono in `campionario/regressione/`.
 
-**86 modelli**: 37 attivi, 46 varianti, 3 vietati.
+**86 modelli**: 38 attivi, 45 varianti, 3 vietati.
 
 ## camera e passaggi
 
@@ -1099,7 +1099,7 @@ Ogni piano grafico parte dal catalogo **intero**: si sceglie per occasione, si m
 
 ## suono (reel)
 
-### Effetti sonori sotto le grafiche importanti (`effetti-sonori-reel`, variante)
+### Effetti sonori sotto le grafiche importanti (`effetti-sonori-reel`, attivo)
 
 - **Cosa fa:** un effetto della libreria libreria/sfx (Pixabay) sull'entrata di una grafica importante, ben sotto la voce (di solito 20-24 dB sotto il parlato); la versione senza effetti esce sempre accanto, con l'audio copiato
 - **Quando:** entrate delle infografiche grandi
@@ -1109,7 +1109,7 @@ Ogni piano grafico parte dal catalogo **intero**: si sceglie per occasione, si m
 - **Ultimo voto:** —
 - **Nel motore:** `{"modello": null, "usa": [], "dati": {"piano": "grafiche[].suono"}}`
 - **Origine:** laboratorio reel-grafiche, fase 6 (05/11/2026): densità «piena», effetti sonori
-- **Nota:** IN PROVA (fase 6, 05/11/2026): modello nuovo dell'agente reel-grafiche; diventa attivo solo con l'ok di Riccardo, anche dopo l'uscita dal laboratorio. Motore: motore/motore/reel_suono.py.
+- **Nota:** approvato da Riccardo il 09/11/2026 (ok all'anteprima di REEL_MOFU_CERVICALGIA_TEST: 3 effetti a −24 dB, whoosh e pop). Motore: motore/motore/reel_suono.py.
 
 ## sulla persona (reel)
 
@@ -1215,10 +1215,12 @@ Regola di Riccardo: una parola o una frase da sola non è una grafica; ogni graf
 - **Motore:** `parole_ads`
 
 
-### Palco del reel: fascia alta (reel 9:16) (`palco-fascia-alta`) — in prova
+### Palco del reel: fascia alta (reel 9:16) (`palco-fascia-alta`) — attivo
 
 - **Cosa fa:** UN palco per tutto il reel (Riccardo, 07/11/2026): un pannello fisso in alto (blu del sito, angoli in basso arrotondati, filo di luce verde) dentro cui il contenuto cambia e si trasforma seguendo la voce: poche famiglie di oggetti-prova grandi (card con disegno Servier, lista che si barra, barre a confronto, card del logo, disco con icona), indicatore di struttura a trattini, parola chiave in gradiente. Si apre e si chiude a tendina; con la persona inquadrata stretta il motore abbassa il video in una finestra arrotondata (`reel_palco.py`) e i sottotitoli restano al loro posto
 - **Quando:** ogni reel con un copy che spiega (benefici, differenze, passi): il palco si sceglie una volta e si tiene; si chiude sulle animazioni del montaggio (3D, pastiglie) e dove il montaggio ha già le sue grafiche (banner, prezzo)
 - **Quando no:** animazioni 3D; inquadrature dove abbassare il video porterebbe un volto sotto i sottotitoli; scene complesse (allora un tutto schermo breve)
 - **Reference:** verticale-03, verticale-05, verticale-06, verticale-07, verticale-11, verticale-08, verticale-10
 - **Motore:** `infografica_reel` (dati.modo «palco») + `reel_palco.py` (il video nella finestra)
+- **Ultimo voto:** 7 il reel intero (REEL_MOFU_CERVICALGIA_TEST, direttore, giro 2, 08/11/2026; grafiche da 6 a 7)
+- **Nota:** approvato da Riccardo il 09/11/2026 (ok all'anteprima di REEL_MOFU_CERVICALGIA_TEST, primo reel consegnato con il sistema di forme).

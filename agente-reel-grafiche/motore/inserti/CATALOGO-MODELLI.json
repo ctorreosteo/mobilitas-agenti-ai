@@ -2228,10 +2228,9 @@
     "prova: tolti gli effetti, l'audio è l'originale (residuo al livello della sola ricodifica)"
    ],
    "ultimo_voto": "—",
-   "stato": "variante",
+   "stato": "attivo",
    "origine": "laboratorio reel-grafiche, fase 6 (05/11/2026): densità «piena», effetti sonori",
-   "nota": "IN PROVA (fase 6, 05/11/2026): modello nuovo dell'agente reel-grafiche; diventa attivo solo con l'ok di Riccardo, anche dopo l'uscita dal laboratorio. Motore: motore/motore/reel_suono.py.",
-   "in_prova": true,
+   "nota": "approvato da Riccardo il 09/11/2026 (ok all'anteprima di REEL_MOFU_CERVICALGIA_TEST: 3 effetti a −24 dB, whoosh e pop). Motore: motore/motore/reel_suono.py.",
    "corregge": false
   },
   {
@@ -2614,11 +2613,10 @@
     "icone Tabler 3.49.0 o il logo intero: mai figure umane, mai spunte, mai organi disegnati da noi (anatomia solo Servier, con l'attribuzione)",
     "mai «il tuo» + disturbo a schermo; nessuna cifra non detta; le frasi che promettono un risultato non diventano grafiche"
    ],
-   "ultimo_voto": "—",
-   "stato": "variante",
+   "ultimo_voto": "7 il reel intero (REEL_MOFU_CERVICALGIA_TEST, direttore, giro 2, 08/11/2026; grafiche da 6 a 7)",
+   "stato": "attivo",
    "origine": "laboratorio reel-grafiche, 07/11/2026 («nuova direzione» di Riccardo dopo il giro 5: le grafiche sembravano un collage; studio delle reference verticali 01-11)",
-   "nota": "IN PROVA (07/11/2026): diventa attivo solo con l'ok di Riccardo. Modello motore/inserti/scene/infografica_reel.js (dati.modo «palco»); il video nella finestra: motore/motore/reel_palco.py.",
-   "in_prova": true,
+   "nota": "approvato da Riccardo il 09/11/2026 (ok all'anteprima di REEL_MOFU_CERVICALGIA_TEST, primo reel consegnato con il sistema di forme). Modello motore/inserti/scene/infografica_reel.js (dati.modo «palco»); il video nella finestra: motore/motore/reel_palco.py.",
    "corregge": false
   }
  ]
