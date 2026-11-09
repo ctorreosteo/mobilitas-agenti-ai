@@ -1,0 +1,129 @@
+{
+ "clip": "gadzhi-20",
+ "durata_s": 15.48,
+ "eventi": [
+  {
+   "t": 0.83,
+   "tipo": "taglio",
+   "cosa": "stacco da lui a una scena scura con un calendario grande (OCTOBER 2026, «0 BOOKINGS» in rosso)"
+  },
+  {
+   "t": 0.92,
+   "tipo": "camera",
+   "cosa": "la camera arretra: il calendario scende e si rimpicciolisce mentre un alone verde lime si accende dai bordi e poi si spegne (0,92-1,50)"
+  },
+  {
+   "t": 1.0,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "titolo «EMPTY» in alto, compare in dissolvenza (2 frame)"
+  },
+  {
+   "t": 1.33,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "seconda parola «CALENDARS» accanto, prima grigia poi bianca (2 frame)"
+  },
+  {
+   "t": 2.67,
+   "tipo": "stato",
+   "cosa": "un cursore disegnato clicca la freccia (il tasto si accende lime a 2,58): i giorni di ottobre svaniscono e compare NOVEMBER 2026, sempre vuoto (2,67-2,92)"
+  },
+  {
+   "t": 4.33,
+   "tipo": "taglio",
+   "cosa": "stacco a una scena vuota: stesso fondo scuro con puntini, il calendario sparisce"
+  },
+  {
+   "t": 4.5,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«BIG» lime in alto a sinistra"
+  },
+  {
+   "t": 4.67,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "foto grande di un hotel (riquadro arrotondato), da sfocata a nitida in 2 frame"
+  },
+  {
+   "t": 4.83,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«HOTELS» sotto «BIG»"
+  },
+  {
+   "t": 4.83,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "prima foto piccola sotto la grande"
+  },
+  {
+   "t": 5.0,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "seconda foto piccola"
+  },
+  {
+   "t": 6.33,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "spunta + «HUGE BUDGETS» sopra la foto"
+  },
+  {
+   "t": 7.08,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "spunta + «PRO PHOTO TEAMS»"
+  },
+  {
+   "t": 7.67,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "spunta + «HUNDREDS OF ROOMS» sotto le foto"
+  },
+  {
+   "t": 8.25,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "spunta + «AD CAMPAIGNS»"
+  },
+  {
+   "t": 8.67,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«INDEPENDENT» lime nella colonna destra"
+  },
+  {
+   "t": 8.83,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "foto grande di una stanza semplice, colonna destra"
+  },
+  {
+   "t": 9.08,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«OWNERS» sotto «INDEPENDENT»"
+  },
+  {
+   "t": 9.08,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "prima foto piccola della colonna destra"
+  },
+  {
+   "t": 9.25,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "seconda foto piccola della colonna destra"
+  }
+ ],
+ "principali": 20,
+ "principali_ogni_10s": 12.9,
+ "micro": 14,
+ "uscite": 0,
+ "pausa_media_s": 0.81,
+ "pausa_max_s": 6.23,
+ "note": "Le foto piccole (circa 1/8 della larghezza) le ho segnate micro; sono riquadri foto e qualcuno le chiamerebbe card. La camera a 0,92 parte quasi insieme allo stacco: potrebbe essere l'entrata del calendario in scala più che un movimento di camera. Da 9,25 a 15,48 il quadro resta fermo (solo il fondo sfocato si muove pochissimo). Pause calcolate fra istanti distinti, compresi inizio e fine clip."
+}

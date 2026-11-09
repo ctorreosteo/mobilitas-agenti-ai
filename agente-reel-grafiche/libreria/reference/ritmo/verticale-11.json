@@ -1,0 +1,9 @@
+{"clip": "verticale-11", "durata_s": 4.47,
+ "eventi": [
+  {"t": 0.0, "tipo": "stato", "cosa": "nella card di vetro il contenuto 04 («Facebook ads engine») si dissolve, sfocato, nel contenuto 05 («Cold email machine»), in corso già dal primo fotogramma (0,00-0,17)"},
+  {"t": 1.5, "tipo": "stato", "cosa": "la card cambia contenuto: 05 → 06 («Personal assistant») con dissolvenza sfocata (1,50-1,67, 5 fotogrammi); nello stesso istante il trattino attivo della barra in alto avanza dal 5° al 6°"},
+  {"t": 3.02, "tipo": "stato", "cosa": "la card diventa la chiusura: «Pick one and build it this week» con un asterisco colorato e una riga tra parentesi (3,02-3,22); la barra a trattini sparisce"},
+  {"t": 4.03, "tipo": "stato", "cosa": "la card di chiusura diventa la chiamata all'azione: «Comment» + pillola colorata luminosa «\"BUILD\"» + riga sotto (4,03-4,20)"}
+ ],
+ "principali": 4, "principali_ogni_10s": 8.9, "micro": 0, "uscite": 1, "pausa_media_s": 0.89, "pausa_max_s": 1.52,
+ "note": "Uscita: la barra a trattini svanisce (3,02-3,25). Intestazione (icona, «6», titolo su due righe) e card di vetro restano per tutta la clip; il fondo è il video sfocato. I cambi di contenuto avvengono SUL POSTO con dissolvenza e sfocatura, non con uno scorrimento laterale a carosello: contati come stati della stessa card. Il primo cambio è già in corso a 0,00: contato. Nessun sottotitolo nella clip. Ignorati: interfaccia, puntatore, un piccolo spostamento del browser verso 2,4 s."}

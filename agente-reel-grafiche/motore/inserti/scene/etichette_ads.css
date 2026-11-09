@@ -1,0 +1,13 @@
+/* etichette_ads (laboratorio, fase 1): il posto della grafica nel 9:16 */
+.ea-clip { position: absolute; overflow: hidden; }
+.ea-tutto { position: absolute; overflow: hidden; }
+.ea-fondo { position: absolute; }
+.ea-dentro { position: absolute; }
+/* giro 2 (direttore): la barra del modello si nasconde, al suo posto .ea-barra (panna piena con alone) */
+.ea-dentro .el-barra { display: none; }
+.ea-barra { position: absolute; background: #F4F4F4;
+  box-shadow: 0 0 12px rgba(244, 244, 244, 0.95), 0 0 30px rgba(244, 244, 244, 0.5), 0 2px 4px rgba(0, 15, 43, 0.6); }
+/* più luce come in martell-01: alone verde largo e morbido attorno alla pillola accesa */
+.ea-dentro .el-pill.el-forte { box-shadow: 0 6px 0 #1F9E55, 0 0 34px rgba(141, 255, 169, 0.75), 0 0 110px rgba(114, 250, 147, 0.45),
+  0 0 220px rgba(114, 250, 147, 0.22), 0 26px 46px rgba(0, 10, 28, 0.5), inset 0 3px 0 rgba(255, 255, 255, 0.7),
+  inset 0 -8px 16px rgba(30, 130, 70, 0.35); }

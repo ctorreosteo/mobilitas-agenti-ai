@@ -1,0 +1,147 @@
+{
+ "clip": "gadzhi-18",
+ "durata_s": 10.78,
+ "eventi": [
+  {
+   "t": 3.03,
+   "tipo": "taglio",
+   "cosa": "stacco dall'oratore a una scena scura verde a tutto schermo"
+  },
+  {
+   "t": 3.07,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "card di vetro «01» con lucchetto entra dal basso a destra sfocata e si ferma (3.07→3.32)"
+  },
+  {
+   "t": 3.15,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "numero enorme a sinistra che esce dallo sfocato"
+  },
+  {
+   "t": 3.4,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "pillola verde piccola «OF THE EASIEST»"
+  },
+  {
+   "t": 3.73,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "card 02 si apre a ventaglio dietro la 01"
+  },
+  {
+   "t": 3.82,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "card 03 nel ventaglio"
+  },
+  {
+   "t": 3.9,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "card 04 nel ventaglio"
+  },
+  {
+   "t": 3.98,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "card 05 nel ventaglio"
+  },
+  {
+   "t": 4.07,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«AI SIDE» si scrive lettera per lettera"
+  },
+  {
+   "t": 4.48,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«HUSTLES» si scrive lettera per lettera"
+  },
+  {
+   "t": 5.15,
+   "tipo": "stato",
+   "livello": "micro",
+   "cosa": "riflesso di luce che passa sulle card"
+  },
+  {
+   "t": 5.23,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "riga piccola «YOU CAN START TODAY» che si scrive"
+  },
+  {
+   "t": 6.85,
+   "tipo": "uscita",
+   "cosa": "scena 5 AI SIDE HUSTLES si spegne"
+  },
+  {
+   "t": 6.93,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "valore in dollari enorme al centro, esce dallo sfocato (cambio scena)"
+  },
+  {
+   "t": 7.02,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "etichetta piccola «OVER» con trattini sopra il valore"
+  },
+  {
+   "t": 7.1,
+   "tipo": "stato",
+   "livello": "grande",
+   "cosa": "il valore comincia a contare verso l'alto"
+  },
+  {
+   "t": 7.93,
+   "tipo": "stato",
+   "livello": "grande",
+   "cosa": "il conteggio si ferma e la cifra prende una sfumatura gialla luminosa"
+  },
+  {
+   "t": 8.02,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "pillola verde «PER MONTH» (la pillola, poi il testo che si scopre)"
+  },
+  {
+   "t": 8.43,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "riga piccola «EVEN AS A» che si scrive"
+  },
+  {
+   "t": 8.68,
+   "tipo": "stato",
+   "livello": "micro",
+   "cosa": "riflesso di luce che passa sulla pillola"
+  },
+  {
+   "t": 8.93,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«COMPLETE BEGINNER» completa la riga"
+  },
+  {
+   "t": 10.14,
+   "tipo": "taglio",
+   "cosa": "stacco di nuovo all'oratore"
+  },
+  {
+   "t": 10.14,
+   "tipo": "uscita",
+   "cosa": "scena del valore (stacco)"
+  }
+ ],
+ "principali": 21,
+ "principali_ogni_10s": 19.5,
+ "micro": 10,
+ "uscite": 2,
+ "pausa_media_s": 0.49,
+ "pausa_max_s": 3.03,
+ "note": "Le 4 card del ventaglio contate una per una (regola: ogni card è un evento): se si conta il ventaglio come un solo gesto, gli eventi principali scendono a 18 (16.7 ogni 10 s). Il cambio di scena a 6.93 (dentro lo stesso fondo scuro) contato come entrata, non come taglio. Nei primi 3 s c'è solo l'oratore, nessun evento (camera a mano, piccole derive non contate). Le cifre del contatore sono della reference: si studia solo il movimento."
+}

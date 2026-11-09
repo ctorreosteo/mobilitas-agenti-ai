@@ -1,0 +1,83 @@
+{
+ "clip": "gadzhi-14",
+ "durata_s": 15.63,
+ "eventi": [
+  {
+   "t": 3.92,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "icona persona a contorno lime che si disegna col tratto, in basso a sinistra; insieme arriva un velo scuro dal basso"
+  },
+  {
+   "t": 4.0,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«WORKING» bianco sotto l'icona"
+  },
+  {
+   "t": 4.08,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«WITH» (arriva disturbato e si decifra)"
+  },
+  {
+   "t": 4.25,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«CREATORS» seconda riga"
+  },
+  {
+   "t": 7.5,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "icona stretta di mano a contorno lime che si disegna, in basso al centro"
+  },
+  {
+   "t": 7.58,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«SPONSORSHIPS» (arriva sfocato/disturbato, nitido a 7,67)"
+  },
+  {
+   "t": 10.33,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "terza icona lineare lime che si disegna (mano con sacchetto col simbolo $), in basso a destra"
+  },
+  {
+   "t": 10.33,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«EARNING»"
+  },
+  {
+   "t": 10.5,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«ON»"
+  },
+  {
+   "t": 10.67,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«YOUTUBE» seconda riga"
+  },
+  {
+   "t": 13.0,
+   "tipo": "uscita",
+   "cosa": "le tre colonne escono insieme scomponendosi lettera per lettera (13,00–13,33)"
+  },
+  {
+   "t": 13.45,
+   "tipo": "taglio",
+   "cosa": "jump cut: stessa inquadratura, la persona salta di posizione"
+  }
+ ],
+ "principali": 11,
+ "principali_ogni_10s": 7.0,
+ "micro": 10,
+ "uscite": 1,
+ "pausa_media_s": 1.06,
+ "pausa_max_s": 3.25,
+ "note": "Pause misurate tra un evento principale e il successivo (istanti uguali contati una volta), senza i bordi della clip. Il jump cut a 13,45 non lo vede il rilevatore di scene (inquadratura quasi uguale): visto sui fotogrammi a 30 fps. L'icona e la sua prima parola arrivano quasi insieme (0–0,08 s): contate come due eventi. Nessun movimento di camera. Prima del primo evento 3,92 s (bordo della clip). Bordi: 3.92 s dall'inizio della clip al primo evento, 2.18 s dall'ultimo evento alla fine; contando anche i bordi la pausa più lunga sarebbe 3.92 s."
+}

@@ -1,0 +1,154 @@
+{
+ "clip": "gadzhi-16",
+ "durata_s": 6.74,
+ "eventi": [
+  {
+   "t": 0.85,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "parola «IF» rosa con bagliore, a destra della testa"
+  },
+  {
+   "t": 0.9,
+   "tipo": "taglio",
+   "cosa": "stacco a un'inquadratura un po' più larga dello stesso oratore"
+  },
+  {
+   "t": 0.93,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "parola «YOU'VE» più grande, accanto a IF, sfalsata in basso"
+  },
+  {
+   "t": 1.1,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "parola «NEVER», seconda riga"
+  },
+  {
+   "t": 1.18,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "parola «MADE», accanto a NEVER"
+  },
+  {
+   "t": 1.27,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "parola «MONEY» verde, entra grande e sfocata e si stringe (colpo)"
+  },
+  {
+   "t": 1.6,
+   "tipo": "uscita",
+   "cosa": "IF si dissolve sfocando"
+  },
+  {
+   "t": 1.72,
+   "tipo": "uscita",
+   "cosa": "YOU'VE"
+  },
+  {
+   "t": 1.8,
+   "tipo": "uscita",
+   "cosa": "NEVER"
+  },
+  {
+   "t": 1.85,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "parola «OR» rosa; MONEY resta al suo posto"
+  },
+  {
+   "t": 1.9,
+   "tipo": "uscita",
+   "cosa": "MADE"
+  },
+  {
+   "t": 2.02,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "parola «INVESTED» accanto a OR (riusa MONEY sotto)"
+  },
+  {
+   "t": 2.52,
+   "tipo": "taglio",
+   "cosa": "stacco a un piano più stretto (punch-in)"
+  },
+  {
+   "t": 2.6,
+   "tipo": "uscita",
+   "cosa": "OR"
+  },
+  {
+   "t": 2.68,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "parola «HOW» sotto MONEY che sta uscendo"
+  },
+  {
+   "t": 2.68,
+   "tipo": "uscita",
+   "cosa": "INVESTED"
+  },
+  {
+   "t": 2.77,
+   "tipo": "taglio",
+   "cosa": "stacco di nuovo all'inquadratura larga"
+  },
+  {
+   "t": 2.77,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "parola «THE» accanto a HOW"
+  },
+  {
+   "t": 2.77,
+   "tipo": "uscita",
+   "cosa": "MONEY"
+  },
+  {
+   "t": 2.93,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "parola «F*CK» rossa più grande, entra con colpo e sfocatura"
+  },
+  {
+   "t": 3.43,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "parola «ADVICE» azzurra, entra con colpo e sfocatura"
+  },
+  {
+   "t": 3.77,
+   "tipo": "uscita",
+   "cosa": "HOW"
+  },
+  {
+   "t": 3.9,
+   "tipo": "uscita",
+   "cosa": "THE"
+  },
+  {
+   "t": 4.02,
+   "tipo": "uscita",
+   "cosa": "F*CK"
+  },
+  {
+   "t": 4.18,
+   "tipo": "uscita",
+   "cosa": "ADVICE"
+  },
+  {
+   "t": 5.79,
+   "tipo": "taglio",
+   "cosa": "stacco a piano più stretto (punch-in)"
+  }
+ ],
+ "principali": 15,
+ "principali_ogni_10s": 22.3,
+ "micro": 11,
+ "uscite": 11,
+ "pausa_media_s": 0.45,
+ "pausa_max_s": 2.36,
+ "note": "Ogni parola contata come entrata a sé (le parole compaiono una alla volta, sincronizzate alla voce). Livello «micro» perché ogni parola è alta circa il 6-8% del quadro; l'insieme però fa da titolo a fianco della testa: se lo si considerasse un solo titolo «grande» per frase, le entrate sarebbero 3. Lo stacco a 0.90 è tra 0.85 e 0.95, non al fotogramma esatto. Gli stacchi a 2.52 e 2.77 potrebbero essere un punch-in digitale e ritorno. Nessun movimento di camera voluto visto (solo piccole derive). Pausa media = media di tutti gli intervalli senza eventi, compresi inizio→primo evento e ultimo evento→fine."
+}

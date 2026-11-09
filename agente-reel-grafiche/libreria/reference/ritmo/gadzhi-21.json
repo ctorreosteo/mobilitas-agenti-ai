@@ -1,0 +1,89 @@
+{
+ "clip": "gadzhi-21",
+ "durata_s": 7.57,
+ "eventi": [
+  {
+   "t": 1.17,
+   "tipo": "taglio",
+   "cosa": "dal cartello «SIDE HUSTLE #3 / AI WEBSITES» (già a schermo a 0,00) a lui in primo piano"
+  },
+  {
+   "t": 1.5,
+   "tipo": "taglio",
+   "cosa": "stacco a un'inquadratura più larga di lui (stessa ripresa, altro taglio)"
+  },
+  {
+   "t": 2.5,
+   "tipo": "taglio",
+   "cosa": "inserto dall'alto: fogli scritti a mano su un tavolo di legno"
+  },
+  {
+   "t": 2.67,
+   "tipo": "stato",
+   "cosa": "il foglio sopra viene tolto e scopre il foglio «#3 AI WEBSITES» con la cifra sottolineata in rosso (2,58-3,25)"
+  },
+  {
+   "t": 4.17,
+   "tipo": "taglio",
+   "cosa": "inquadratura larga: lui e un'altra persona alla scrivania"
+  },
+  {
+   "t": 4.67,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "pillola di vetro grigia «WEBSITE» con testo lime, da sfocata a nitida in 2 frame"
+  },
+  {
+   "t": 4.75,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "pillola «PLUMBER» in basso a sinistra, testo bianco"
+  },
+  {
+   "t": 4.83,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "linea lime sottile che si disegna da PLUMBER verso destra fino a DENTIST (4,83-5,17), con le stanghette verticali"
+  },
+  {
+   "t": 5.0,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "pillola «DENTIST» al centro"
+  },
+  {
+   "t": 5.25,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "pillola «GYM» a destra"
+  },
+  {
+   "t": 5.33,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "seconda linea lime fino a GYM (5,33-5,50)"
+  },
+  {
+   "t": 7.13,
+   "tipo": "taglio",
+   "cosa": "stacco a lui in primo piano: le pillole escono con lo stacco"
+  },
+  {
+   "t": 1.17,
+   "tipo": "uscita",
+   "cosa": "cartello iniziale esce con lo stacco"
+  },
+  {
+   "t": 7.13,
+   "tipo": "uscita",
+   "cosa": "pillole e linee escono con lo stacco"
+  }
+ ],
+ "principali": 12,
+ "principali_ogni_10s": 15.9,
+ "micro": 6,
+ "uscite": 2,
+ "pausa_media_s": 0.58,
+ "pausa_max_s": 1.8,
+ "note": "Il cartello d'apertura è già a schermo a 0,00: non l'ho contato come entrata. Il foglio tolto a mano (2,67) è un oggetto vero ripreso, non una grafica: contato come «stato» perché cambia quello che si legge; senza, i principali sarebbero 11. Il taglio a 1,50 è un cambio di inquadratura sulla stessa ripresa (il rilevatore di scene non lo vede, a occhio sì)."
+}

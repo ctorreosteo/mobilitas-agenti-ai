@@ -1,0 +1,15 @@
+/* card_spessore_ads (laboratorio, fase 3): le classi cs-* vengono da card_spessore.css, ca-* da card_accese.css */
+.csa-vis { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; overflow: hidden; }
+.csa-fondo { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+.csa-ret { position: absolute; left: -200px; top: -180px; width: 1500px; height: 2300px; opacity: 0.5;
+  -webkit-mask-image: linear-gradient(to bottom, #000 0px, #000 1430px, rgba(0,0,0,0.3) 1680px, rgba(0,0,0,0.3) 2300px);
+  mask-image: linear-gradient(to bottom, #000 0px, #000 1430px, rgba(0,0,0,0.3) 1680px, rgba(0,0,0,0.3) 2300px); }
+.csa-tit { position: absolute; left: 0; width: 1080px; text-align: center; white-space: nowrap; line-height: 1.1;
+  font-weight: 900; letter-spacing: -0.025em; color: #F4F4F4; text-shadow: 0 6px 24px rgba(0, 8, 22, 0.7); }
+.csa-k { color: #72FA93; text-shadow: 0 0 26px rgba(114, 250, 147, 0.6), 0 0 70px rgba(114, 250, 147, 0.3); }
+.csa-parola { position: relative; display: inline-block; }
+.csa-filo { position: absolute; left: 50%; margin-left: -70px; bottom: -18px; width: 140px; height: 8px; border-radius: 4px; background: #72FA93;
+  box-shadow: 0 0 14px rgba(114, 250, 147, 0.6); transform-origin: 50% 50%; }
+.csa-card { border-radius: 32px; }
+.csa-tx { font-weight: 800; letter-spacing: -0.02em; line-height: 1.08; }
+.csa-velo { position: absolute; inset: -2px; background: #001A3D; z-index: 5; }

@@ -1,0 +1,22 @@
+.cf-fondo { position: absolute; inset: 0; overflow: hidden;
+  background: radial-gradient(ellipse 70% 80% at 50% 45%, rgba(0, 58, 124, 0.30) 0%, rgba(0, 37, 81, 0.42) 45%, rgba(0, 26, 61, 0.62) 100%); }
+.cf-sfocato { display: none; }
+.cf-fin { position: absolute; overflow: hidden; border-radius: 22px;
+  box-shadow: 0 40px 90px rgba(0, 6, 18, 0.6), 0 10px 24px rgba(0, 6, 18, 0.4); }
+.cf-strato { position: absolute; inset: 0; }
+.cf-strato img { position: absolute; }
+.cf-svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.cf-linea { fill: none; stroke: var(--panna); stroke-width: 7; stroke-linecap: round; stroke-linejoin: round;
+  filter: drop-shadow(0 0 6px rgba(0, 10, 30, 0.75)) drop-shadow(0 2px 3px rgba(0, 10, 30, 0.6)); }
+.cf-piombo { stroke: rgba(244, 244, 244, 0.9); stroke-width: 3; stroke-dasharray: 10 10; }
+.cf-punto { fill: var(--panna); stroke: var(--blu); stroke-width: 5; }
+.cf-et { position: absolute; top: 28px; padding: 10px 22px 12px; border-radius: 12px; background: var(--blu);
+  color: var(--panna); font-size: 60px; font-weight: 800; line-height: 1; }
+.cf-et-prima { left: 28px; }
+.cf-et-dopo { right: 28px; }
+.cf-cur { position: absolute; left: 0; top: 0; bottom: 0; width: 0; }
+.cf-cur::before { content: ''; position: absolute; left: -4px; top: 0; bottom: 0; width: 8px; background: var(--panna);
+  box-shadow: 0 0 24px rgba(0, 6, 18, 0.5); }
+.cf-maniglia { position: absolute; left: -56px; top: 50%; margin-top: -56px; width: 112px; height: 112px; border-radius: 50%;
+  background: var(--blu); border: 6px solid var(--panna); box-sizing: border-box; display: flex; align-items: center;
+  justify-content: center; gap: 12px; color: var(--verde); font-size: 66px; font-weight: 800; line-height: 1; }

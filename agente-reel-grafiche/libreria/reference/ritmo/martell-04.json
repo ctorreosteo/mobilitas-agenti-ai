@@ -1,0 +1,131 @@
+{
+ "clip": "martell-04",
+ "durata_s": 16.43,
+ "eventi": [
+  {
+   "t": 3.25,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "titolo cromato «INTEREST GRAPH» davanti a lui in basso: lettere da sinistra a destra, salendo, con bagliore bianco (3,17-3,75)"
+  },
+  {
+   "t": 4.92,
+   "tipo": "taglio",
+   "cosa": "stacco a scena scura con curve di livello e linea ciano luminosa orizzontale (la linea c'è già al taglio)"
+  },
+  {
+   "t": 5.0,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "titolo piccolo «INTEREST GRAPH» in alto, si scrive da sinistra (5,00-5,75)"
+  },
+  {
+   "t": 5.25,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "icona profilo viola al centro della linea con contatore «views» sopra"
+  },
+  {
+   "t": 5.5,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«100 Followers» viola sotto il profilo"
+  },
+  {
+   "t": 5.5,
+   "tipo": "stato",
+   "cosa": "il contatore views sale da 11 e si ferma a 100 (6,00)"
+  },
+  {
+   "t": 5.75,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "punto arancione «TEST» a destra sulla linea, corre verso il profilo"
+  },
+  {
+   "t": 6.75,
+   "tipo": "stato",
+   "cosa": "il punto passa il profilo e diventa verde «PASS»"
+  },
+  {
+   "t": 6.75,
+   "tipo": "stato",
+   "cosa": "il contatore sale da 100 a 1,000 e si ferma (7,75)"
+  },
+  {
+   "t": 7.5,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "nuovo punto «TEST» a destra"
+  },
+  {
+   "t": 7.5,
+   "tipo": "uscita",
+   "cosa": "il punto PASS di prima sparisce a sinistra"
+  },
+  {
+   "t": 8.5,
+   "tipo": "stato",
+   "cosa": "il punto passa il profilo e diventa «PASS»"
+  },
+  {
+   "t": 8.5,
+   "tipo": "stato",
+   "cosa": "il contatore sale fino a 10,000 e si ferma (9,25)"
+  },
+  {
+   "t": 9.25,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "nuovo punto «TEST» a destra"
+  },
+  {
+   "t": 9.25,
+   "tipo": "uscita",
+   "cosa": "il punto PASS di prima sparisce a sinistra"
+  },
+  {
+   "t": 10.25,
+   "tipo": "stato",
+   "cosa": "il punto passa il profilo e diventa «PASS»"
+  },
+  {
+   "t": 10.25,
+   "tipo": "stato",
+   "cosa": "il contatore sale fino a 25,000 e si ferma (11,00)"
+  },
+  {
+   "t": 11.0,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "nuovo punto «TEST» a destra"
+  },
+  {
+   "t": 11.0,
+   "tipo": "uscita",
+   "cosa": "il punto PASS di prima sparisce a sinistra"
+  },
+  {
+   "t": 12.0,
+   "tipo": "stato",
+   "cosa": "il contatore riparte (29,549 → 69,590, non si ferma prima del taglio)"
+  },
+  {
+   "t": 12.25,
+   "tipo": "stato",
+   "cosa": "il punto passa il profilo e diventa «PASS»"
+  },
+  {
+   "t": 12.51,
+   "tipo": "taglio",
+   "cosa": "stacco di nuovo su di lui, inquadratura leggermente diversa"
+  }
+ ],
+ "principali": 19,
+ "principali_ogni_10s": 11.6,
+ "micro": 7,
+ "uscite": 3,
+ "pausa_media_s": 1.03,
+ "pausa_max_s": 3.92,
+ "note": "Coppie allo stesso istante (PASS + contatore) contate come due eventi: per l'occhio è un cambiamento solo, ma sono due elementi diversi. I tempi della scena scura sono letti a 4 fps (±0,25 s); titolo davanti e taglio misurati a 12 fps. Gli elementi della scena scura che sono già lì al taglio (linea) non sono contati come entrata. Nella scena scura lo sfondo a curve di livello si muove e il titolo cresce di circa il 4% in 6 s: lenta spinta di camera quasi invisibile, NON contata (con lei sarebbero 20 eventi). Le uscite col taglio (titolo davanti, scena scura) non sono contate come uscite. Le apparenti variazioni di inquadratura su di lui (1,8 s; 4,5 s; 13,5 s) sono lui che si sporge: lo sfondo non si muove (misurato). Pause: fra istanti diversi con eventi (eventi allo stesso istante contano una volta), compresi l'inizio e la fine della clip."
+}

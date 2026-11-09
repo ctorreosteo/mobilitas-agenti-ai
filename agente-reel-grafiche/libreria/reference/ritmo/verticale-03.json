@@ -1,0 +1,13 @@
+{"clip": "verticale-03", "durata_s": 4.5,
+ "eventi": [
+  {"t": 0.83, "tipo": "stato", "cosa": "nel pannello verde in alto il bordo interno tratteggiato diventa pieno e l'etichetta «RAW TAKE» diventa «IMPORTED» (0,83-0,92)"},
+  {"t": 1.17, "tipo": "stato", "cosa": "trasformazione: il chip del file si spegne e si restringe in una miniatura verticale (1,17-1,27); mentre il pannello svanisce la miniatura cresce in una card verticale con l'etichetta «RAW TAKE» (1,30-1,40)"},
+  {"t": 1.53, "tipo": "entrata", "livello": "grande", "cosa": "seconda card (etichetta «PAPER») esce da dietro la prima e va a sinistra, inclinata (1,53-1,67)"},
+  {"t": 1.73, "tipo": "entrata", "livello": "grande", "cosa": "terza card («BROADCAST») esce da dietro la prima e va a destra, inclinata: ventaglio di tre (1,73-1,87)"},
+  {"t": 2.13, "tipo": "stato", "cosa": "la card centrale cambia contenuto con una tendina verticale ed etichetta: «RAW TAKE» → «DEPTH» (2,13-2,20)"},
+  {"t": 2.88, "tipo": "stato", "cosa": "le anteprime dentro le tre card cambiano (nuove inquadrature e titoli dentro le miniature, 2,88-3,08)"},
+  {"t": 3.08, "tipo": "stato", "cosa": "sulle tre card compaiono numeri che contano e si fermano (3,08-3,83)"},
+  {"t": 3.2, "tipo": "entrata", "livello": "micro", "cosa": "etichetta «TRIAL» sopra ogni card, una dopo l'altra da sinistra a destra (3,20-3,33)"}
+ ],
+ "principali": 8, "principali_ogni_10s": 17.8, "micro": 1, "uscite": 3, "pausa_media_s": 0.5, "pausa_max_s": 1.3,
+ "note": "Uscite: il pannello verde svanisce durante la trasformazione (1,30-1,40); la card di sinistra vola via in alto a sinistra (3,92-4,00); la card centrale vola via in alto (4,17-4,25); la card di destra resta e si sposta un poco a fine clip. Pannello e chip sono già a schermo a 0,00: non contati. Le card hanno anche un leggero movimento continuo (fluttuano): non contato. Ignorati: sottotitoli, colonna dei commenti, puntatore. Dubbio: i numeri che contano sulle card sono dentro le anteprime (fanno parte del loro contenuto): contati una volta."}

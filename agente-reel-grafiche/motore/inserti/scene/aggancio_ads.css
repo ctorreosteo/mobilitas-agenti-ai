@@ -1,0 +1,12 @@
+/* aggancio_ads (laboratorio, prova su AD_COLON, 04/11/2026): l'aggancio dei primi secondi */
+.agg-clip { position: absolute; overflow: hidden; }
+.agg-fondo { position: absolute; left: 0; top: 0; }
+.agg-ret { position: absolute; left: -200px; top: -180px; width: 1500px; height: 2300px; opacity: 0.25; }
+.agg-dentro { position: absolute; width: 1080px; height: 1920px; }
+.agg-riga { position: absolute; left: 0; width: 1080px; text-align: center; white-space: nowrap; font-weight: 800;
+  letter-spacing: -0.025em; line-height: 1.1; color: #F4F4F4; text-shadow: 0 6px 24px rgba(0, 8, 22, 0.7); }
+.agg-riga span { display: inline-block; }
+.agg-grad span { background: var(--grad-titolo); -webkit-background-clip: text; background-clip: text; color: transparent;
+  -webkit-text-fill-color: transparent; filter: drop-shadow(0 0 22px rgba(114, 250, 147, 0.35)); }
+.agg-k { color: #72FA93; text-shadow: 0 0 2px #0B1E3A, 0 0 34px rgba(114, 250, 147, 0.75), 0 0 90px rgba(114, 250, 147, 0.35), 0 8px 26px rgba(0, 8, 22, 0.7); }
+.agg-disco { box-shadow: 0 10px 30px rgba(0, 8, 22, 0.5), 0 0 0 3px rgba(114, 250, 147, 0.8), 0 0 30px rgba(114, 250, 147, 0.4); }

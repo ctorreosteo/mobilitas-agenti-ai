@@ -1,0 +1,5 @@
+.campo { position: absolute; left: 96px; right: var(--margine); }
+.campo .lab { font-size: 44px; font-weight: 500; color: rgba(244,244,244,0.76); margin-bottom: 16px; }
+.campo .box { height: 96px; border-radius: 16px; border: 2px solid rgba(244,244,244,0.22); position: relative; }
+.campo .cursore { position: absolute; left: 26px; top: 22px; width: 4px; height: 52px; background: #72FA93; opacity: 0; }
+.freccia { position: absolute; left: 96px; top: 790px; width: 60px; }

@@ -1,0 +1,31 @@
+/* chiusura_ads (laboratorio, fase 3): le classi ca-* (fondo, vignetta) vengono da card_accese.css, caricato insieme */
+.cha-fondo { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+.cha-ret { position: absolute; left: -200px; top: -180px; width: 1500px; height: 2300px; opacity: 0.5;
+  -webkit-mask-image: linear-gradient(to bottom, #000 0px, #000 1430px, rgba(0,0,0,0.3) 1680px, rgba(0,0,0,0.3) 2300px);
+  mask-image: linear-gradient(to bottom, #000 0px, #000 1430px, rgba(0,0,0,0.3) 1680px, rgba(0,0,0,0.3) 2300px); }
+.cha-riga { position: absolute; left: 0; width: 1080px; text-align: center; white-space: nowrap; line-height: 1.1; }
+.cha-tit { font-weight: 700; color: var(--panna70); letter-spacing: -0.01em; }
+.cha-filo { position: absolute; left: 470px; width: 140px; height: 8px; border-radius: 4px; background: var(--verde);
+  transform-origin: 50% 50%; box-shadow: 0 0 14px rgba(114, 250, 147, 0.6); }
+.cha-lista { font-weight: 800; color: #F4F4F4; letter-spacing: -0.02em;
+  text-shadow: 0 0 20px rgba(244, 244, 244, 0.25), 0 6px 20px rgba(0, 8, 22, 0.7); }
+.cha-k { font-weight: 900; color: #72FA93; text-shadow: 0 0 24px rgba(114, 250, 147, 0.7), 0 0 70px rgba(114, 250, 147, 0.35); }
+.cha-pre { font-weight: 700; color: var(--panna70); }
+.cha-prezzo { font-weight: 900; color: #72FA93; letter-spacing: -0.03em; line-height: 1;
+  text-shadow: 0 0 30px rgba(114, 250, 147, 0.75), 0 0 90px rgba(114, 250, 147, 0.4), 0 10px 30px rgba(0, 8, 22, 0.6); }
+.cha-pannello { position: absolute; box-sizing: border-box; border-radius: 40px;
+  background: linear-gradient(170deg, rgba(14, 58, 112, 0.96) 0%, rgba(0, 37, 82, 0.97) 50%, rgba(0, 24, 56, 0.98) 100%);
+  border: 2px solid rgba(244, 244, 244, 0.18); border-top-color: rgba(244, 244, 244, 0.5);
+  box-shadow: 0 4px 8px rgba(0, 8, 22, 0.6), 0 40px 90px rgba(0, 8, 22, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.18); }
+.cha-campo { position: absolute; left: 50px; right: 50px; box-sizing: border-box; border-radius: 20px;
+  border: 3px solid rgba(244, 244, 244, 0.25); background: rgba(0, 15, 43, 0.55); }
+.cha-cursore { position: absolute; left: 30px; top: 22%; width: 5px; height: 56%; border-radius: 3px; background: #72FA93;
+  box-shadow: 0 0 10px rgba(114, 250, 147, 0.8); }
+.cha-bottone { position: absolute; left: 50px; right: 50px; border-radius: 999px; text-align: center; font-weight: 800; color: #002552;
+  background: linear-gradient(180deg, #D6FFE0 0%, #8DFFA9 34%, #72FA93 62%, #4BD97E 100%);
+  box-shadow: 0 6px 0 #1F9E55, 0 0 30px rgba(141, 255, 169, 0.55), 0 26px 46px rgba(0, 10, 28, 0.5), inset 0 3px 0 rgba(255, 255, 255, 0.7); }
+.cha-ci { font-weight: 800; color: #F4F4F4; letter-spacing: -0.02em; text-shadow: 0 6px 24px rgba(0, 8, 22, 0.7); }
+.cha-logo { position: absolute; height: auto; filter: drop-shadow(0 0 16px rgba(114, 250, 147, 0.75)) drop-shadow(0 0 46px rgba(114, 250, 147, 0.35)); }
+.cha-disco { position: absolute; }
+.cha-freccia { position: absolute; }
+.cha-freccia svg { width: 100%; height: auto; filter: drop-shadow(0 0 18px rgba(114, 250, 147, 0.85)) drop-shadow(0 0 50px rgba(114, 250, 147, 0.4)); }

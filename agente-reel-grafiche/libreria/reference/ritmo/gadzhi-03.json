@@ -1,0 +1,22 @@
+{"clip": "gadzhi-03", "durata_s": 15.46,
+ "eventi": [
+  {"t": 1.17, "tipo": "taglio", "cosa": "stacco da lui a una scena scura con luci calde sfocate in alto"},
+  {"t": 1.33, "tipo": "entrata", "livello": "micro", "cosa": "icona asterisco bianca grande al centro, che poi si rimpicciolisce e diventa l'icona del titolo"},
+  {"t": 1.42, "tipo": "entrata", "livello": "grande", "cosa": "numero «+1,000 Hours» con le cifre che scorrono come un contachilometri, sfocate in verticale"},
+  {"t": 1.50, "tipo": "entrata", "livello": "micro", "cosa": "titolo piccolo «Full Claude Mode» sopra il numero, scritto lettera per lettera (1,50-1,90)"},
+  {"t": 2.50, "tipo": "stato", "cosa": "le cifre si fermano su «+1,000»"},
+  {"t": 3.17, "tipo": "entrata", "livello": "grande", "cosa": "campo di chat scuro: il numero si scompone in quadratini arancio da sinistra a destra e al suo posto resta il campo (3,08-3,90)"},
+  {"t": 4.08, "tipo": "stato", "cosa": "il bordo del campo si illumina d'arancio e il testo provvisorio si cancella"},
+  {"t": 4.50, "tipo": "entrata", "livello": "micro", "cosa": "domanda scritta nel campo «What are your strengths?», la parola appena scritta in arancio"},
+  {"t": 4.67, "tipo": "camera", "cosa": "punch-in forte e istantaneo sul campo (il campo raddoppia in 1 frame), poi deriva lenta verso sinistra"},
+  {"t": 5.83, "tipo": "entrata", "livello": "micro", "cosa": "la domanda si cancella (5,60) e si scrive «What are your weaknesses?», di nuovo con la parola chiave arancio"},
+  {"t": 7.67, "tipo": "camera", "cosa": "carrello veloce verso destra con sfocatura di movimento (7,67-8,17); il campo esce a sinistra"},
+  {"t": 8.00, "tipo": "entrata", "livello": "grande", "cosa": "card con cursore a livelli: «Beginner», «Tier 1 … Tier 4», arriva sfocata con il carrello"},
+  {"t": 8.67, "tipo": "stato", "cosa": "la barra comincia a riempirsi a gradiente (giallo chiaro) e il cursore avanza"},
+  {"t": 9.58, "tipo": "stato", "cosa": "l'etichetta si decifra da «Beginner» a «Novice» (5-6 frame), gradiente azzurro"},
+  {"t": 10.50, "tipo": "stato", "cosa": "l'etichetta si decifra in «Intermediate», gradiente verde"},
+  {"t": 11.25, "tipo": "stato", "cosa": "l'etichetta si decifra in «Pro», gradiente viola, il cursore arriva in fondo"},
+  {"t": 13.02, "tipo": "taglio", "cosa": "stacco di ritorno a lui"}
+ ],
+ "principali": 17, "principali_ogni_10s": 11.0, "micro": 4, "uscite": 3, "pausa_media_s": 0.86, "pausa_max_s": 2.44,
+ "note": "Uscite: il numero si scompone nel campo (3,17), il campo esce con il carrello (~7,9), la scena chiude con il taglio (13,02). Pausa più lunga 2,44 s = dall'ultimo taglio alla fine della clip; dentro la scena la più lunga è 1,84 s (5,83→7,67). Dubbi: fra 1,5 e 2,8 s il numero sembra crescere di circa un quarto (lenta spinta in avanti o scala del solo numero): non contato come camera. Ogni domanda scritta contata una volta sola (la scrittura è continua, lettera per lettera, non a gruppi di parole). Il bordo che si illumina (4,08) è un cambiamento piccolo: se non si conta, 16 eventi = 10,4 ogni 10 s. Nelle decifrazioni delle etichette ho visto solo lettere e segni (es. «Ss*jc», «Mu toge late»), nessuna cifra; il contachilometri invece mostra cifre a caso per definizione."}

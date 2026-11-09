@@ -1,0 +1,150 @@
+{
+ "clip": "gadzhi-08",
+ "durata_s": 16.86,
+ "eventi": [
+  {
+   "t": 0.0,
+   "tipo": "stato",
+   "livello": "micro",
+   "cosa": "titolo piccolo in alto a sinistra «3 WAYS TO MAKE $10,000/MONTH» che si decifra (caratteri che si rimescolano, anche cifre) fino a 1,75 s"
+  },
+  {
+   "t": 1.83,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "voce «1.» dell'elenco con asterischi lime al posto del testo"
+  },
+  {
+   "t": 2.25,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "voce «2.» con asterischi"
+  },
+  {
+   "t": 2.67,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "voce «3.» con asterischi (gli asterischi sfrigolano con @ e $)"
+  },
+  {
+   "t": 3.75,
+   "tipo": "taglio",
+   "cosa": "stacco a un'inquadratura più larga di lui"
+  },
+  {
+   "t": 3.75,
+   "tipo": "uscita",
+   "cosa": "titolo ed elenco escono con lo stacco"
+  },
+  {
+   "t": 4.65,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "icona lineare lime (videocamera) con etichetta bianca «CONTENT» in basso a sinistra (2 frame)"
+  },
+  {
+   "t": 5.07,
+   "tipo": "stato",
+   "livello": "micro",
+   "cosa": "«CONTENT» diventa lime e viene barrata (1-2 frame)"
+  },
+  {
+   "t": 7.15,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "piccolo segno di legame lime dopo «CONTENT»"
+  },
+  {
+   "t": 7.28,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "icona valigia con etichetta «EXPERIENCE»"
+  },
+  {
+   "t": 7.7,
+   "tipo": "stato",
+   "livello": "micro",
+   "cosa": "«EXPERIENCE» barrata"
+  },
+  {
+   "t": 8.2,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "secondo segno di legame"
+  },
+  {
+   "t": 8.37,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "icona chiave inglese con etichetta «SKILLS»"
+  },
+  {
+   "t": 8.7,
+   "tipo": "stato",
+   "livello": "micro",
+   "cosa": "«SKILLS» barrata"
+  },
+  {
+   "t": 10.08,
+   "tipo": "taglio",
+   "cosa": "stacco al nero"
+  },
+  {
+   "t": 10.08,
+   "tipo": "uscita",
+   "cosa": "la riga di icone barrate esce con lo stacco"
+  },
+  {
+   "t": 10.33,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "retino di punti a forma di logo che entra dall'alto a sinistra"
+  },
+  {
+   "t": 10.42,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "titolo «3 WAYS TO MAKE $10,000/MONTH» che scende dall'alto (10,42-10,92 s, circa 6 frame)"
+  },
+  {
+   "t": 11.08,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "card 1 in prospettiva rivelata da una banda di disturbo lime che sale"
+  },
+  {
+   "t": 11.25,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "card 2, stessa banda, 2 frame dopo"
+  },
+  {
+   "t": 11.42,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "card 3, stessa banda, 2 frame dopo (bande finite a 12,12 s)"
+  },
+  {
+   "t": 16.08,
+   "tipo": "taglio",
+   "cosa": "stacco a lui"
+  },
+  {
+   "t": 16.08,
+   "tipo": "uscita",
+   "cosa": "le tre card escono con lo stacco"
+  },
+  {
+   "t": 16.5,
+   "tipo": "taglio",
+   "cosa": "stacco a un'inquadratura più stretta"
+  }
+ ],
+ "principali": 21,
+ "principali_ogni_10s": 12.5,
+ "micro": 12,
+ "uscite": 3,
+ "pausa_media_s": 0.8,
+ "pausa_max_s": 4.66,
+ "note": "Il titolo si stava già decifrando a 0,00 (entrata prima dell'inizio della clip): contato come stato a 0,00. A 5,90 s il viso cambia posizione ma il fondo non si sposta: è lui che si muove, non uno stacco (non contato). Icona ed etichetta che entrano insieme contano come un evento. Pausa più lunga: le tre card ferme da 11,42 a 16,08 s."
+}

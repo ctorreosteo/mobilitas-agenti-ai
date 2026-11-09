@@ -1,0 +1,96 @@
+{
+ "clip": "gadzhi-22",
+ "durata_s": 11.17,
+ "eventi": [
+  {
+   "t": 1.46,
+   "tipo": "taglio",
+   "cosa": "stacco da lui (stanza verde) a una scena nera con un alone oliva dagli angoli"
+  },
+  {
+   "t": 1.67,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "griglia di punti bianchi che si riempie riga per riga dall'alto in basso (1,67-2,25, circa 7 frame)"
+  },
+  {
+   "t": 2.33,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "titolo piccolo «PEOPLE WHO DON'T USE AI» scritto lettera per lettera, con un cursore a blocco (2,33-3,33)"
+  },
+  {
+   "t": 3.42,
+   "tipo": "camera",
+   "cosa": "la camera avanza sulla griglia, accelera e va verso l'angolo in alto a sinistra (3,42-5,00)"
+  },
+  {
+   "t": 4.92,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "punta lime a triangolo (come un fascio di luce) sul primo punto in alto a sinistra"
+  },
+  {
+   "t": 5.08,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«3 MILLION PEOPLE» lime scritto lettera per lettera sopra la punta (5,08-6,00); il «3» compare già giusto"
+  },
+  {
+   "t": 7.25,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "curva lime luminosa che si disegna dalla punta verso il basso (7,25-7,83)"
+  },
+  {
+   "t": 7.75,
+   "tipo": "camera",
+   "cosa": "la camera arretra fino a mostrare tutta la griglia (7,75-8,75)"
+  },
+  {
+   "t": 8.33,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«84%» lime che entra da sinistra con sfocatura (8,33-8,58)"
+  },
+  {
+   "t": 8.5,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "ramo inferiore della curva: diventa una graffa che abbraccia la griglia, con la punta su 84%"
+  },
+  {
+   "t": 8.58,
+   "tipo": "stato",
+   "cosa": "le ultime righe in basso della griglia diventano verdi (8,58-8,83)"
+  },
+  {
+   "t": 8.92,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "etichetta verde piccola «USE AI» sotto la griglia"
+  },
+  {
+   "t": 10.67,
+   "tipo": "taglio",
+   "cosa": "stacco di nuovo a lui"
+  },
+  {
+   "t": 8.08,
+   "tipo": "uscita",
+   "cosa": "«3 MILLION PEOPLE» e la punta svaniscono durante l'arretramento (8,00-8,33)"
+  },
+  {
+   "t": 10.67,
+   "tipo": "uscita",
+   "cosa": "la scena esce con lo stacco"
+  }
+ ],
+ "principali": 13,
+ "principali_ogni_10s": 11.6,
+ "micro": 7,
+ "uscite": 2,
+ "pausa_media_s": 0.8,
+ "pausa_max_s": 2.17,
+ "note": "Il ramo inferiore della graffa (8,50) potrebbe essere la stessa linea che continua: se non si conta, i principali sono 12. La barra del player compare e sparisce fra 7,2 e 9,3 s: ignorata. Pause fra istanti distinti, compresi inizio e fine."
+}

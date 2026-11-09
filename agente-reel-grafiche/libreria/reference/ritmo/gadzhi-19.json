@@ -1,0 +1,80 @@
+{
+ "clip": "gadzhi-19",
+ "durata_s": 6.21,
+ "eventi": [
+  {
+   "t": 0.93,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "pillola sottile di vetro con titolo piccolo monospazio «A VIDEO SHOOT REQUIRES»"
+  },
+  {
+   "t": 0.93,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "icona videocamera in un cerchio di vetro"
+  },
+  {
+   "t": 1.02,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "pillola di vetro «VIDEOGRAPHER» che si allunga da sinistra e scrive il testo"
+  },
+  {
+   "t": 1.1,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "icona lampada in un cerchio di vetro"
+  },
+  {
+   "t": 1.27,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "pillola di vetro «STUDIO»"
+  },
+  {
+   "t": 2.85,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "icona forbici in un cerchio di vetro"
+  },
+  {
+   "t": 2.93,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "pillola di vetro «TIME AND EDITING»"
+  },
+  {
+   "t": 4.1,
+   "tipo": "uscita",
+   "cosa": "titolo e VIDEOGRAPHER si dissolvono"
+  },
+  {
+   "t": 4.18,
+   "tipo": "uscita",
+   "cosa": "STUDIO"
+  },
+  {
+   "t": 4.27,
+   "tipo": "uscita",
+   "cosa": "TIME AND EDITING"
+  },
+  {
+   "t": 4.35,
+   "tipo": "uscita",
+   "cosa": "icone"
+  },
+  {
+   "t": 4.4,
+   "tipo": "taglio",
+   "cosa": "stacco alle due persone in studio"
+  }
+ ],
+ "principali": 8,
+ "principali_ogni_10s": 12.9,
+ "micro": 7,
+ "uscite": 4,
+ "pausa_media_s": 0.78,
+ "pausa_max_s": 1.81,
+ "note": "Pillole contate «micro»: ogni voce è alta circa il 5-6% del quadro; il blocco intero (lista) occupa circa un terzo della larghezza a destra dell'oratore. Titolo e prima icona compaiono nello stesso fotogramma e sono contati come due eventi. Possibile lenta spinta in avanti della camera sull'oratore tra 0 e 4 s: non sicura, non contata."
+}

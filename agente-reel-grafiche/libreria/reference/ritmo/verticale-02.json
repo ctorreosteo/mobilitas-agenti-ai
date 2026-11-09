@@ -1,0 +1,14 @@
+{"clip": "verticale-02", "durata_s": 5.5,
+ "eventi": [
+  {"t": 0.32, "tipo": "taglio", "cosa": "stacco da lui in primo piano a un'inquadratura più larga, con lui più in basso"},
+  {"t": 0.32, "tipo": "entrata", "livello": "grande", "cosa": "nello stesso fotogramma un rettangolo blu notte compare in alto a sinistra (circa 760×480 px sul quadro 1080×1920)"},
+  {"t": 0.45, "tipo": "stato", "cosa": "il rettangolo si allarga verso il basso e verso destra fino a coprire tutto lo schermo (0,45-0,58, 4 fotogrammi a 30 fps)"},
+  {"t": 0.58, "tipo": "entrata", "livello": "grande", "cosa": "scena piena: titolo «Prima l'azienda» in alto a sinistra e finestra-app chiara con un organigramma al centro, in dissolvenza sopra di lui (0,58-0,75, 5 fotogrammi)"},
+  {"t": 3.17, "tipo": "stato", "cosa": "il titolo si completa: seconda riga «e i suoi ruoli» in corsivo con grazie, colore d'accento; entra sfocata e si mette a fuoco in circa 2 fotogrammi"},
+  {"t": 4.03, "tipo": "camera", "cosa": "zoom dentro la finestra: l'organigramma si ingrandisce (la finestra resta della stessa misura), 4,03-4,33, 9 fotogrammi"},
+  {"t": 4.37, "tipo": "entrata", "livello": "micro", "cosa": "pillola colorata «chi dirige» sotto la finestra, entra sfocata e si mette a fuoco (4,37-4,47)"},
+  {"t": 5.12, "tipo": "stato", "cosa": "la pillola si spegne, il testo si sfoca e si riscrive «chi scrive» (5,12-5,22)"},
+  {"t": 5.22, "tipo": "camera", "cosa": "l'organigramma scorre verso sinistra dentro la finestra (5,22-5,45)"}
+ ],
+ "principali": 9, "principali_ogni_10s": 16.4, "micro": 1, "uscite": 1, "pausa_media_s": 0.55, "pausa_max_s": 2.59,
+ "note": "Uscite: a 5,42 la finestra si ingrigisce e tutta la scena comincia a sfocarsi (uscita in corso a fine clip). Pause fra eventi consecutivi, compresi l'inizio e la fine della clip (eventi nello stesso fotogramma: pausa 0). Ignorati: il puntatore a mano che si muove fra 2,17 e 2,75 (è il mouse del browser, resta nella stessa posizione dello schermo anche attraverso il taglio), il cambio dei sottotitoli. Dubbio: il rettangolo di 0,32 non scende dall'alto come una tendina (come dice NOTE.md): compare già formato in alto e poi si allarga; il taglio a lui più largo avviene nello stesso fotogramma."}

@@ -1,0 +1,141 @@
+{
+ "clip": "gadzhi-13",
+ "durata_s": 15.68,
+ "eventi": [
+  {
+   "t": 1.93,
+   "tipo": "taglio",
+   "cosa": "stacco da inquadratura larga frontale a mezza figura di tre quarti"
+  },
+  {
+   "t": 4.83,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«HIGHER» bianco, in alto a sinistra"
+  },
+  {
+   "t": 5.0,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«CTR +» lime accanto (il + con un piccolo scintillio)"
+  },
+  {
+   "t": 5.08,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "barra lime sotto il testo, parte da un trattino"
+  },
+  {
+   "t": 5.25,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«LONGER» bianco, seconda riga"
+  },
+  {
+   "t": 5.33,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«WATCH» lime"
+  },
+  {
+   "t": 5.5,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«TIME» lime"
+  },
+  {
+   "t": 5.58,
+   "tipo": "stato",
+   "cosa": "la barra cresce a scatti verso destra fino a circa 7,0 s, con la punta più luminosa"
+  },
+  {
+   "t": 8.57,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«MORE» bianco, terza riga sotto la barra"
+  },
+  {
+   "t": 8.73,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«EXPOSURE»"
+  },
+  {
+   "t": 8.9,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«TO»"
+  },
+  {
+   "t": 9.07,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«NEW» lime, quarta riga"
+  },
+  {
+   "t": 9.23,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«VIEWERS» lime (sale dal basso e si assesta)"
+  },
+  {
+   "t": 12.75,
+   "tipo": "taglio",
+   "cosa": "stacco a inquadratura larga frontale"
+  },
+  {
+   "t": 12.75,
+   "tipo": "uscita",
+   "cosa": "il blocco di testo in alto a sinistra sparisce con lo stacco"
+  },
+  {
+   "t": 12.83,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«PROMPTS» lime, in basso al centro"
+  },
+  {
+   "t": 12.92,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«IN THE»"
+  },
+  {
+   "t": 13.0,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«RESOURCE»"
+  },
+  {
+   "t": 13.08,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«DOWN» seconda riga"
+  },
+  {
+   "t": 13.17,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«BELOW»"
+  },
+  {
+   "t": 13.25,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "freccia lime a sinistra che si disegna dall'alto verso il basso"
+  },
+  {
+   "t": 13.67,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "freccia lime a destra che si disegna"
+  }
+ ],
+ "principali": 21,
+ "principali_ogni_10s": 13.4,
+ "micro": 18,
+ "uscite": 1,
+ "pausa_media_s": 0.59,
+ "pausa_max_s": 3.52,
+ "note": "Pause misurate tra un evento principale e il successivo (istanti uguali contati una volta), senza i bordi della clip. La barra: contata come entrata (5,08, un trattino) più uno stato (la crescita a scatti, visibile da ~5,6). Le due frecce dopo ~13,9 rimbalzano in su e giù di continuo: non contato come evento (movimento in ciclo). Nessun movimento di camera evidente. Prima del primo evento 1,93 s; dopo l'ultimo 2,01 s (bordi della clip, fuori dalla pausa media). Bordi: 1.93 s dall'inizio della clip al primo evento, 2.01 s dall'ultimo evento alla fine; contando anche i bordi la pausa più lunga sarebbe 3.52 s."
+}

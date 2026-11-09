@@ -1,0 +1,191 @@
+{
+ "clip": "verticale-06",
+ "durata_s": 9.77,
+ "eventi": [
+  {
+   "t": 0.0,
+   "tipo": "stato",
+   "cosa": "badge in alto («JUST» + cifra): la cifra scorre come un contachilometri e si ferma su «3» (0,00-0,33); il movimento è già in corso al primo fotogramma"
+  },
+  {
+   "t": 1.0,
+   "tipo": "stato",
+   "cosa": "accanto al «3» si scrive in corsivo con grazie «steps.»; il badge si allunga verso destra (1,00-1,17)"
+  },
+  {
+   "t": 1.7,
+   "tipo": "taglio",
+   "cosa": "salto netto sulla stessa persona: inquadratura più stretta e mani alzate"
+  },
+  {
+   "t": 1.7,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "trasformazione a fisarmonica: una linea sottile orizzontale (1,70) si apre nel pannello scuro «Reel Kit · UPLOADING» (1,75), largo quasi tutto il quadro, appoggiato sui sottotitoli"
+  },
+  {
+   "t": 1.75,
+   "tipo": "stato",
+   "cosa": "il badge cambia capitolo: «JUST 3 steps.» scorre in alto ed esce, entra dal basso «STEP 1» (1,75-1,92); il badge si accorcia"
+  },
+  {
+   "t": 1.83,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "il chip del file («reel-kit.zip») cade inclinato dall'alto dentro il pannello e si appoggia nel suo posto (1,83-2,00)"
+  },
+  {
+   "t": 2.33,
+   "tipo": "stato",
+   "cosa": "nel pannello compaiono i puntini di caricamento e subito «Installed» con il segno di fatto (2,33-2,42); nello stesso fotogramma il badge scrive «plugin.» in corsivo (2,33-2,50)"
+  },
+  {
+   "t": 2.93,
+   "tipo": "uscita",
+   "cosa": "il pannello «Reel Kit» esce trascinato dalla spinta laterale con sfocatura"
+  },
+  {
+   "t": 3.0,
+   "tipo": "taglio",
+   "cosa": "stacco con spinta laterale e sfocatura di movimento (2,93-3,17) a un'inquadratura larga della stanza, persona piccola a destra"
+  },
+  {
+   "t": 3.08,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "una finestra-app (documento di stile, fondo scuro) entra a sinistra, dove prima c'era il pannello"
+  },
+  {
+   "t": 3.17,
+   "tipo": "stato",
+   "cosa": "il badge scorre: «1 plugin.» esce a sinistra, entra «STEP 2»"
+  },
+  {
+   "t": 3.33,
+   "tipo": "stato",
+   "cosa": "il contenuto della finestra scorre come una pagina: testo → «The big idea» → palette di colori (3,25-3,50)"
+  },
+  {
+   "t": 3.67,
+   "tipo": "stato",
+   "cosa": "la finestra mostra due anteprime di video affiancate; nello stesso fotogramma il badge scrive «guideline.» (3,67-3,83)"
+  },
+  {
+   "t": 4.33,
+   "tipo": "uscita",
+   "cosa": "la finestra scivola in basso ed esce (4,33-4,42)"
+  },
+  {
+   "t": 4.5,
+   "tipo": "taglio",
+   "cosa": "stacco a un'altra inquadratura larga: persona in piedi al centro, figura intera, piccola"
+  },
+  {
+   "t": 4.5,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "tre card verticali affiancate (anteprime di video con etichetta piccola sotto), la terza arriva a 4,67"
+  },
+  {
+   "t": 4.58,
+   "tipo": "stato",
+   "cosa": "il badge scorre e diventa «STEP 3» (4,58-4,67)"
+  },
+  {
+   "t": 4.92,
+   "tipo": "stato",
+   "cosa": "scelta fra le card: la prima sbiadisce, la centrale cambia anteprima, la terza si accende con il bordo chiaro dorato (4,92-5,17)"
+  },
+  {
+   "t": 5.17,
+   "tipo": "stato",
+   "cosa": "il badge scrive «style.» in corsivo (5,17-5,25)"
+  },
+  {
+   "t": 5.67,
+   "tipo": "uscita",
+   "cosa": "le tre card escono dentro la sfocatura dello stacco"
+  },
+  {
+   "t": 5.75,
+   "tipo": "taglio",
+   "cosa": "stacco con sfocatura di movimento (5,63-5,90) a un primo piano della persona"
+  },
+  {
+   "t": 5.83,
+   "tipo": "stato",
+   "cosa": "il badge scorre e diventa «BONUS +1» (5,83-5,92)"
+  },
+  {
+   "t": 6.25,
+   "tipo": "stato",
+   "cosa": "il badge scrive «step.» in corsivo (6,25-6,33)"
+  },
+  {
+   "t": 6.92,
+   "tipo": "uscita",
+   "cosa": "il badge scorre verso l'alto ed esce (6,92-7,00); da qui il posto in alto resta vuoto"
+  },
+  {
+   "t": 7.0,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "di nuovo fisarmonica: linea sottile (7,00) che si apre nel pannello «Trials · DRAFT» con dentro una finestra-app bianca (7,08), all'altezza del petto, sopra i sottotitoli"
+  },
+  {
+   "t": 7.17,
+   "tipo": "stato",
+   "cosa": "il contenuto della finestra scorre fino a un pulsante scuro (7,17-7,33)"
+  },
+  {
+   "t": 7.42,
+   "tipo": "stato",
+   "cosa": "il cursore clicca il pulsante: l'etichetta in alto passa a «PUBLISHING»"
+  },
+  {
+   "t": 7.5,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "una miniatura verticale di video esce dal pulsante e vola in alto sopra la testa (7,50-7,83)"
+  },
+  {
+   "t": 7.83,
+   "tipo": "uscita",
+   "cosa": "la prima miniatura esce in alto"
+  },
+  {
+   "t": 7.83,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "seconda miniatura dal pulsante, vola in alto (7,83-8,17)"
+  },
+  {
+   "t": 8.17,
+   "tipo": "uscita",
+   "cosa": "la seconda miniatura esce in alto"
+  },
+  {
+   "t": 8.5,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "terza miniatura dal pulsante, vola verso la testa (8,50-8,83)"
+  },
+  {
+   "t": 8.83,
+   "tipo": "uscita",
+   "cosa": "la terza miniatura esce in alto"
+  },
+  {
+   "t": 8.92,
+   "tipo": "stato",
+   "cosa": "trasformazione: la finestra bianca si spegne e diventa verde scuro (8,92-9,00), poi sale la grande etichetta in maiuscolo «TRIAL REELS» (9,08-9,17); in alto «SENT · 3 OF 3»"
+  }
+ ],
+ "principali": 27,
+ "principali_ogni_10s": 27.6,
+ "micro": 4,
+ "uscite": 7,
+ "pausa_media_s": 0.37,
+ "pausa_max_s": 1.0,
+ "note": "Clip a 30 fps, 1080×1920; il reel occupa nella registrazione il rettangolo x 46-892, y 251-1756 (847×1506, 9:16 esatto; misurato sulla variazione dei pixel nel tempo): tutte le misure della scheda sono riportate al quadro 1080×1920 del reel. Due tagli con transizione (spinta con sfocatura a 3,00 e 5,75) e due netti (1,70 salto sulla stessa inquadratura, 4,50 nuova inquadratura larga). Eventi nello stesso fotogramma su elementi diversi del badge e del pannello contati una volta (2,33; 3,67); entrata e taglio nello stesso istante contati separatamente (1,70; 4,50). Il contatore a 0,00 è già in movimento al primo fotogramma: contato come stato, ma il badge stesso non è contato come entrata. Ignorati: interfaccia di Instagram e del browser, puntatore, sottotitoli (il loro testo cambia di continuo), il marchio sulla felpa, i gesti. Dubbio: a 0,57 e a 1,00 la camera a mano sobbalza, ma non c'è uno stacco: non contati. Pause misurate tra un evento principale e il successivo (istanti uguali contati una volta), senza i bordi della clip: la più lunga va da 0.00 a 1.00 s. Bordi: 0.00 s dall'inizio al primo evento, 0.85 s dall'ultimo evento alla fine."
+}

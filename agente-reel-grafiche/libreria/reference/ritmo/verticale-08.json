@@ -1,0 +1,500 @@
+{
+ "clip": "verticale-08",
+ "durata_s": 38.77,
+ "eventi": [
+  {
+   "t": 0.63,
+   "tipo": "stato",
+   "cosa": "nel pannello chiaro in alto (già a schermo: titolo «4 skill di …» e quattro cubi bianchi numerati 1-4) i cubi si colorano uno alla volta, da sinistra, nel colore d'accento con un simbolo bianco (0,63-1,13)"
+  },
+  {
+   "t": 1.8,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "sotto il titolo compare una riga piccola grigia («per il tuo business», detta)"
+  },
+  {
+   "t": 2.37,
+   "tipo": "taglio",
+   "cosa": "salto netto sulla stessa inquadratura della persona (jump cut)"
+  },
+  {
+   "t": 2.5,
+   "tipo": "stato",
+   "cosa": "si sceglie il primo: titolo e cubi 2-4 svaniscono, il cubo 1 vola in alto a sinistra e resta come segno (2,50-2,75)"
+  },
+  {
+   "t": 2.5,
+   "tipo": "uscita",
+   "cosa": "titolo «4 skill…» e cubi 2-4 svaniscono"
+  },
+  {
+   "t": 3.2,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "accanto al cubo si scrive il titolo «Last 30 …» e sotto sale una finestra-app (pagina di un progetto) (3,17-3,25)"
+  },
+  {
+   "t": 3.75,
+   "tipo": "stato",
+   "cosa": "il titolo si completa con la parola chiave in corsivo colorato («Days»); la finestra scorre e mostra una fila di etichette (3,75-4,00)"
+  },
+  {
+   "t": 4.17,
+   "tipo": "uscita",
+   "cosa": "cubo, titolo e finestra lasciano il posto alla scena successiva"
+  },
+  {
+   "t": 4.17,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "trasformazione: la finestra diventa un'app con un campo di testo in alto e un calendario a griglia «Ultimi 30 giorni» (4,17-4,25)"
+  },
+  {
+   "t": 4.23,
+   "tipo": "taglio",
+   "cosa": "salto netto sulla stessa inquadratura (jump cut)"
+  },
+  {
+   "t": 4.7,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "nel campo si finisce di battere il comando e a destra compare la prima pillola-domanda con icona («Quanto costa…?»); il calendario si riempie di puntini (4,50-4,75)"
+  },
+  {
+   "t": 4.95,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "seconda pillola-domanda («Come faccio a…?»)"
+  },
+  {
+   "t": 5.45,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "terza pillola-domanda («Ne vale la pena?»)"
+  },
+  {
+   "t": 5.97,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "nel campo di testo compare un'etichetta colorata («il tuo settore», detta)"
+  },
+  {
+   "t": 6.17,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "quarta pillola-domanda («Qual è il migliore?»): colonna di quattro"
+  },
+  {
+   "t": 6.7,
+   "tipo": "stato",
+   "cosa": "nel calendario l'ultima casella si accende piena nel colore d'accento"
+  },
+  {
+   "t": 6.9,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "sopra il calendario una piccola etichetta colorata («oggi»)"
+  },
+  {
+   "t": 7.33,
+   "tipo": "taglio",
+   "cosa": "salto netto sulla stessa inquadratura (jump cut)"
+  },
+  {
+   "t": 7.4,
+   "tipo": "stato",
+   "cosa": "il calendario svanisce e le quattro pillole scivolano a sinistra in colonna (7,40-7,75)"
+  },
+  {
+   "t": 7.4,
+   "tipo": "uscita",
+   "cosa": "il calendario svanisce"
+  },
+  {
+   "t": 7.75,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "a destra delle pillole un'icona tonda nel colore d'accento (un nucleo) si accende (7,75-8,00)"
+  },
+  {
+   "t": 8.42,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "linee sottili collegano ogni pillola al nucleo, disegnate in ~0,5 s (8,42-8,92)"
+  },
+  {
+   "t": 9.1,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "dal nucleo partono linee verso destra e compaiono tre card «Idea» in colonna: domande → nucleo → idee (9,10-9,50)"
+  },
+  {
+   "t": 9.7,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "sulle tre card compaiono piccole etichette di formato («Reel», «Carosello», «Video»)"
+  },
+  {
+   "t": 10.17,
+   "tipo": "uscita",
+   "cosa": "lo schema domande → idee svanisce tutto insieme"
+  },
+  {
+   "t": 10.2,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "numero di capitolo gigante «2», sottile e chiaro, al centro del pannello (10,20-10,25)"
+  },
+  {
+   "t": 10.23,
+   "tipo": "taglio",
+   "cosa": "salto netto sulla stessa inquadratura (jump cut)"
+  },
+  {
+   "t": 10.9,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "il «2» scivola a sinistra e diventa sfondo; accanto si scrive il titolo su due righe, seconda riga in corsivo colorato (10,90-11,00)"
+  },
+  {
+   "t": 10.9,
+   "tipo": "taglio",
+   "cosa": "salto netto sulla stessa inquadratura (jump cut, lieve)"
+  },
+  {
+   "t": 11.2,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "sotto il titolo sale una finestra-app (pagina di progetto)"
+  },
+  {
+   "t": 11.6,
+   "tipo": "stato",
+   "cosa": "nella finestra un riquadro rosso arrotondato cerchia una voce"
+  },
+  {
+   "t": 12.3,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "da dietro la finestra, a sinistra, esce un mazzetto di tre card colorate a ventaglio (anteprime di pubblicità) (12,30-12,50)"
+  },
+  {
+   "t": 12.97,
+   "tipo": "taglio",
+   "cosa": "stacco netto: il pannello si allarga a tutto schermo e copre la persona; la scena arriva già composta (titolo «I tuoi …» con parola in corsivo, tre card di testo, tre immagini colorate, tre pillole); i sottotitoli scendono a y ~1300-1370"
+  },
+  {
+   "t": 12.97,
+   "tipo": "uscita",
+   "cosa": "la scena del capitolo 2 e la persona spariscono con lo stacco"
+  },
+  {
+   "t": 13.17,
+   "tipo": "stato",
+   "cosa": "le pubblicità si smontano: testo, immagine e pillola di ciascuna si separano in tre righe (13,17-13,90)"
+  },
+  {
+   "t": 14.7,
+   "tipo": "stato",
+   "cosa": "la riga delle card di testo si cerchia di rosso e sotto compare l'etichetta «GANCIO»"
+  },
+  {
+   "t": 15.45,
+   "tipo": "stato",
+   "cosa": "la riga delle pillole si cerchia e compare l'etichetta «OFFERTA» (15,45-15,75)"
+  },
+  {
+   "t": 16.0,
+   "tipo": "stato",
+   "cosa": "sotto le immagini compare l'etichetta «FORMATO»"
+  },
+  {
+   "t": 16.35,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "sotto le tre immagini piccole etichette di formato («Video», «Carosello», «Immagine»)"
+  },
+  {
+   "t": 16.7,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "in basso entra una card larga con icona e testo («Cosa puoi provare tu»)"
+  },
+  {
+   "t": 17.1,
+   "tipo": "stato",
+   "cosa": "nella card una barra sottile si riempie (17,10-17,30)"
+  },
+  {
+   "t": 17.67,
+   "tipo": "taglio",
+   "cosa": "stacco netto di ritorno allo schermo diviso; nel pannello c'è già l'indicatore grande 1-2-3-4 (1 e 2 pieni chiari, 3 e 4 vuoti con bordo)"
+  },
+  {
+   "t": 17.67,
+   "tipo": "uscita",
+   "cosa": "la scena a tutto schermo sparisce con lo stacco"
+  },
+  {
+   "t": 18.03,
+   "tipo": "stato",
+   "cosa": "nell'indicatore il «3» si riempie nel colore d'accento e si ingrandisce (18,03-18,15)"
+  },
+  {
+   "t": 18.3,
+   "tipo": "stato",
+   "cosa": "l'indicatore si rimpicciolisce e sale in alto a sinistra, dove resta per tutto il capitolo (18,30-18,40)"
+  },
+  {
+   "t": 18.5,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "titolo grande «Skill …» con la seconda parola in corsivo colorato, scritto sotto l'indicatore (18,50-18,90)"
+  },
+  {
+   "t": 19.05,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "sotto il titolo sale una finestra-app (pagina di progetto), con una riga piccola grigia sotto il titolo (19,05-19,15)"
+  },
+  {
+   "t": 19.57,
+   "tipo": "stato",
+   "cosa": "nella finestra un riquadro rosso arrotondato cerchia una voce"
+  },
+  {
+   "t": 20.0,
+   "tipo": "uscita",
+   "cosa": "titolo e finestra del capitolo 3 escono"
+  },
+  {
+   "t": 20.0,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "trasformazione: al posto della finestra una scena di due pannelli affiancati, una pagina web finta («Benvenuti nel nostro sito», pulsante, modulo) e una colonna «Audit / Correzioni» con tre voci (20,00-20,17)"
+  },
+  {
+   "t": 20.33,
+   "tipo": "taglio",
+   "cosa": "salto netto sulla stessa inquadratura (jump cut)"
+  },
+  {
+   "t": 20.45,
+   "tipo": "stato",
+   "cosa": "l'analisi parte: una fascia rossa scorre sulla pagina dall'alto in basso e la barra sotto «Audit» si riempie (20,45-22,10)"
+  },
+  {
+   "t": 22.17,
+   "tipo": "stato",
+   "cosa": "l'etichetta passa a «Fatto», sotto ogni voce compare la correzione e sulla pagina si disegnano riquadri rossi intorno a titolo, pulsante e modulo (22,17-22,75)"
+  },
+  {
+   "t": 23.45,
+   "tipo": "stato",
+   "cosa": "il titolo della pagina si riscrive in colore («Più clienti, meno fatica») e la voce «Titolo» prende il segno di fatto verde"
+  },
+  {
+   "t": 23.9,
+   "tipo": "stato",
+   "cosa": "il pulsante si riscrive («Prenota una prova») e la voce «Pulsanti» prende il segno di fatto"
+  },
+  {
+   "t": 24.45,
+   "tipo": "stato",
+   "cosa": "la voce «Moduli» prende il segno di fatto"
+  },
+  {
+   "t": 24.73,
+   "tipo": "uscita",
+   "cosa": "la scena pagina + audit svanisce"
+  },
+  {
+   "t": 24.73,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "indicatore grande 1-2-3-4 al centro del pannello (1-3 pieni chiari, 4 vuoto con bordo)"
+  },
+  {
+   "t": 24.93,
+   "tipo": "taglio",
+   "cosa": "salto netto sulla stessa inquadratura (jump cut)"
+  },
+  {
+   "t": 25.2,
+   "tipo": "stato",
+   "cosa": "il «4» si riempie nel colore d'accento e si ingrandisce"
+  },
+  {
+   "t": 25.7,
+   "tipo": "stato",
+   "cosa": "l'indicatore si rimpicciolisce e sale in alto a sinistra (25,70-25,90)"
+  },
+  {
+   "t": 26.05,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "titolo su due righe con parola chiave in corsivo colorato (26,07) e sotto una cartella colorata con fogli che spuntano (26,15-26,25)"
+  },
+  {
+   "t": 27.17,
+   "tipo": "taglio",
+   "cosa": "salto netto sulla stessa inquadratura (jump cut)"
+  },
+  {
+   "t": 27.25,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "a destra della cartella una finestra di chat bianca, con campo per scrivere (27,25-27,50)"
+  },
+  {
+   "t": 27.9,
+   "tipo": "stato",
+   "cosa": "il cursore trascina la cartella dentro la chat: la cartella si rimpicciolisce e diventa un chip nel campo; la chat si sposta al centro (27,90-28,75)"
+  },
+  {
+   "t": 28.9,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "nella chat compare una riga di risposta con icona («Leggo le ricevute…»)"
+  },
+  {
+   "t": 29.27,
+   "tipo": "taglio",
+   "cosa": "stacco netto: di nuovo pannello a tutto schermo; titolo «Fatture …» con parola in corsivo e una card con la fila dei file originali"
+  },
+  {
+   "t": 29.27,
+   "tipo": "uscita",
+   "cosa": "la scena del capitolo 4 e la persona spariscono con lo stacco"
+  },
+  {
+   "t": 29.6,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "sotto, una seconda card grande e vuota («Fatture ordinate»)"
+  },
+  {
+   "t": 29.75,
+   "tipo": "stato",
+   "cosa": "i file volano uno alla volta dalla prima card alla seconda e diventano righe di una lista (29,73-30,15)"
+  },
+  {
+   "t": 30.7,
+   "tipo": "stato",
+   "cosa": "la lista si riordina: le righe si raggruppano sotto due intestazioni di mese (30,70-31,10)"
+  },
+  {
+   "t": 31.6,
+   "tipo": "stato",
+   "cosa": "i nomi dei file si riscrivono lettera per lettera con data e fornitore (31,60-32,25)"
+  },
+  {
+   "t": 32.35,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "in basso entra una card «riepilogo.csv» con le intestazioni di una tabella"
+  },
+  {
+   "t": 32.5,
+   "tipo": "stato",
+   "cosa": "accanto alle righe della lista compaiono gli importi in rosso, uno alla volta (32,50-33,00)"
+  },
+  {
+   "t": 33.1,
+   "tipo": "stato",
+   "cosa": "la tabella del riepilogo si riempie riga per riga (33,10-33,25)"
+  },
+  {
+   "t": 33.45,
+   "tipo": "stato",
+   "cosa": "un riquadro rosso cerchia la colonna degli importi nel riepilogo"
+  },
+  {
+   "t": 34.17,
+   "tipo": "taglio",
+   "cosa": "stacco netto di ritorno allo schermo diviso (subito dopo, a 34,30, un secondo salto sulla persona: non contato a parte)"
+  },
+  {
+   "t": 34.17,
+   "tipo": "uscita",
+   "cosa": "la scena a tutto schermo sparisce con lo stacco"
+  },
+  {
+   "t": 34.25,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "i quattro cubi colorati tornano uno alla volta al centro del pannello (34,25-34,48)"
+  },
+  {
+   "t": 34.73,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "sotto i cubi si disegna un arco sottile che li abbraccia (34,73-35,00)"
+  },
+  {
+   "t": 35.48,
+   "tipo": "uscita",
+   "cosa": "i cubi svaniscono"
+  },
+  {
+   "t": 35.5,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "una card-profilo (foto tonda, nome, pulsante «Segui») nasce al posto dei cubi (35,48-35,57)"
+  },
+  {
+   "t": 35.9,
+   "tipo": "stato",
+   "cosa": "il pulsante passa da «Segui» a «Segui già»"
+  },
+  {
+   "t": 36.1,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "la card-profilo sale e sotto si apre un pannello «Commenti» con il campo per scrivere (36,07-36,23)"
+  },
+  {
+   "t": 36.45,
+   "tipo": "stato",
+   "cosa": "nel campo si batte il commento lettera per lettera (36,45-36,80)"
+  },
+  {
+   "t": 36.95,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "in alto entra una card-messaggio (notifica con documento allegato) e il commento si pubblica nella lista sotto (36,95-37,08)"
+  },
+  {
+   "t": 37.33,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "sotto il documento la prima pillola piccola"
+  },
+  {
+   "t": 37.67,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "seconda pillola piccola"
+  },
+  {
+   "t": 38.0,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "terza pillola piccola"
+  },
+  {
+   "t": 38.25,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "un cuoricino compare sulla card-messaggio"
+  }
+ ],
+ "principali": 79,
+ "principali_ogni_10s": 20.4,
+ "micro": 17,
+ "uscite": 11,
+ "pausa_media_s": 0.49,
+ "pausa_max_s": 1.72,
+ "note": "Clip a 30 fps, 1080×1920; il reel occupa nella registrazione il rettangolo x 116-962, y 251-1756 (847×1506, 9:16; misurato sulla variazione dei pixel nel tempo): le misure della scheda sono riportate al quadro 1080×1920 del reel. Il palco (pannello chiaro in alto, cucitura a y ~957) è già a schermo a 0,00 con titolo e cubi: non contato come entrata. Tagli: 2 stacchi netti al tutto schermo (12,97 e 29,27), 2 di ritorno (17,67 e 34,17), 8 salti sulla stessa inquadratura della persona (jump cut, più uno a 34,30 attaccato allo stacco e non contato; trovati con la differenza fra fotogrammi nella metà bassa e controllati a occhio). Nessun movimento di camera voluto, nessuno zoom. Eventi nello stesso istante su elementi diversi della stessa scena contati una volta (es. 26,05 titolo + cartella a 0,08 s di distanza); entrata e taglio nello stesso istante contati separatamente. Uno stacco che porta una scena già composta conta solo come taglio. Pillole e card che entrano una alla volta sulla voce contate una per una (4,70-6,17; 37,33-38,00). Ignorati: interfaccia di Instagram e del browser, puntatore (anche quando trascina, conta lo spostamento della cartella), testo dei sottotitoli, logo e scritta d'accento in basso, nomi utente e loghi dentro le finestre. Dubbi: un possibile salto a 25,17 (la testa si inclina in un fotogramma) non contato; la cascata di colorazione dei cubi (0,63-1,13) contata come un solo stato. Pause misurate tra un evento principale e il successivo (istanti uguali contati una volta), senza i bordi della clip: la più lunga va da 20.45 a 22.17 s. Bordi: 0.63 s dall'inizio al primo evento, 0.52 s dall'ultimo evento alla fine."
+}

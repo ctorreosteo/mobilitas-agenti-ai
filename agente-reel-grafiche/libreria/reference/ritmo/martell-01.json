@@ -1,0 +1,206 @@
+{
+ "clip": "martell-01",
+ "durata_s": 19.95,
+ "eventi": [
+  {
+   "t": 1.75,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "pillola azzurra luminosa in alto a sinistra: nasce come una linea verticale, diventa un quadratino e si allarga"
+  },
+  {
+   "t": 2.0,
+   "tipo": "camera",
+   "cosa": "punch-in rapido in avanti (2-3 fotogrammi), poi spinta lenta che continua"
+  },
+  {
+   "t": 2.08,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«PASSIVE» battuto lettera per lettera nella pillola"
+  },
+  {
+   "t": 2.17,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "icona $ in un cerchio, a destra nella pillola"
+  },
+  {
+   "t": 2.42,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«INCOME» battuto (completo a 2,75; l'icona $ sfuma)"
+  },
+  {
+   "t": 3.0,
+   "tipo": "stato",
+   "cosa": "riga rossa che barra «PASSIVE INCOME» da sinistra a destra (finisce a 3,42)"
+  },
+  {
+   "t": 4.08,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "seconda pillola, gialla, sotto la prima: nasce da una linea"
+  },
+  {
+   "t": 4.42,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«GETTING» battuto nella pillola gialla"
+  },
+  {
+   "t": 4.42,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "icona freccia in su a destra nella pillola gialla"
+  },
+  {
+   "t": 4.75,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«RICH»"
+  },
+  {
+   "t": 4.92,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«QUICK»"
+  },
+  {
+   "t": 5.25,
+   "tipo": "stato",
+   "cosa": "riga rossa che barra «GETTING RICH QUICK» (finisce a ~5,75)"
+  },
+  {
+   "t": 7.0,
+   "tipo": "camera",
+   "cosa": "la camera si allarga e scorre: le pillole scivolano fuori a sinistra (7,5–7,92) e si torna all'inquadratura media"
+  },
+  {
+   "t": 7.5,
+   "tipo": "uscita",
+   "cosa": "le due pillole barrate escono dal bordo sinistro con il movimento di camera"
+  },
+  {
+   "t": 8.17,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "notifica bianca YouTube a destra (arriva sfocata, nitida a 8,42); la cifra conta di continuo"
+  },
+  {
+   "t": 9.08,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "notifica Instagram sotto la prima (nitida a 9,25), la cifra conta"
+  },
+  {
+   "t": 9.58,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "notifica LinkedIn sotto (nitida a 9,75), la cifra conta"
+  },
+  {
+   "t": 11.38,
+   "tipo": "taglio",
+   "cosa": "stacco a scena scura blu a tutto schermo"
+  },
+  {
+   "t": 11.38,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "scena: luce dall'alto su una folla in silhouette"
+  },
+  {
+   "t": 11.38,
+   "tipo": "uscita",
+   "cosa": "le notifiche spariscono con lo stacco"
+  },
+  {
+   "t": 11.5,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«You'd» bianco battuto lettera per lettera"
+  },
+  {
+   "t": 11.92,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«think»"
+  },
+  {
+   "t": 12.08,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«you»"
+  },
+  {
+   "t": 12.25,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«need»"
+  },
+  {
+   "t": 12.42,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "«a big» magenta corsivo con bagliore, grande"
+  },
+  {
+   "t": 12.67,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "«audience» magenta corsivo con bagliore"
+  },
+  {
+   "t": 13.75,
+   "tipo": "camera",
+   "cosa": "la camera scende: «a big audience» sale in alto e sotto appare un fondo nero a curve di livello"
+  },
+  {
+   "t": 13.75,
+   "tipo": "uscita",
+   "cosa": "«You'd think you need» si cancella all'indietro (13,67–13,92)"
+  },
+  {
+   "t": 13.92,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "imbuto luminoso viola-azzurro che cresce dal basso al centro"
+  },
+  {
+   "t": 14.25,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "«fancy» magenta corsivo battuto a sinistra dell'imbuto"
+  },
+  {
+   "t": 14.58,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "«funnel» a destra dell'imbuto (completo a ~15,0)"
+  },
+  {
+   "t": 16.08,
+   "tipo": "taglio",
+   "cosa": "stacco all'inquadratura larga in studio"
+  },
+  {
+   "t": 16.08,
+   "tipo": "uscita",
+   "cosa": "la scena scura sparisce con lo stacco"
+  },
+  {
+   "t": 16.75,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«IT'S» bianco semitrasparente grande dietro, sugli scaffali a sinistra, sale dal basso (inizio del titolo dietro di martell-02)"
+  }
+ ],
+ "principali": 30,
+ "principali_ogni_10s": 15.0,
+ "micro": 17,
+ "uscite": 4,
+ "pausa_media_s": 0.56,
+ "pausa_max_s": 1.8,
+ "note": "Pause misurate tra un evento principale e il successivo (istanti uguali contati una volta), senza i bordi della clip. Le cifre delle notifiche contano di continuo e non si fermano prima dello stacco: non contato come stato a parte. Stacco + scena scura contati come due eventi. Il testo battuto lettera per lettera è contato una volta per parola (con «a big» insieme). Imbuto classificato grande (alto circa un terzo del quadro) anche se è un'icona. «IT'S» fantasma classificato micro (piccolo e quasi trasparente). Nessuna pausa oltre 1,8 s tra 1,75 e 16,75; dopo 16,75 la clip prosegue 3,2 s senza eventi (bordo). Bordi: 1.75 s dall'inizio della clip al primo evento, 3.20 s dall'ultimo evento alla fine; contando anche i bordi la pausa più lunga sarebbe 3.20 s."
+}

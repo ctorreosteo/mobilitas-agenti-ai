@@ -1,0 +1,7 @@
+{"clip": "gadzhi-02", "durata_s": 10.65,
+ "eventi": [
+  {"t": 2.33, "tipo": "entrata", "livello": "micro", "cosa": "notifica scura in alto a destra: entra da destra sfocata in 2-3 frame (2,33-2,50); il titolo «Claude Tip #1» con icona asterisco si scrive in 4 frame (2,50-2,80)"},
+  {"t": 2.75, "tipo": "entrata", "livello": "micro", "cosa": "riga piccola grigia sotto il titolo scritta a macchina: «Expensive Model + Simple Task = Wasted Money» (2,75-3,60, circa 10 frame)"}
+ ],
+ "principali": 2, "principali_ogni_10s": 1.9, "micro": 2, "uscite": 1, "pausa_media_s": 3.55, "pausa_max_s": 7.90,
+ "note": "Uscita: la notifica esce a destra sfocandosi in 3 frame (6,90-7,17). Nessun taglio e nessun movimento di camera: confrontati i fotogrammi a 0,5 / 1,9 / 2,1 / 3,5 / 5,0 / 6,5 / 9,0 s, i pannelli del muro restano fermi; i cambi apparenti di inquadratura sono lui che si sposta e allarga le braccia. Pause calcolate compresi l'inizio (2,33 s) e la fine della clip: la pausa più lunga (7,90 s) va dalla riga scritta alla fine e include i ~4 s in cui la notifica resta ferma. Titolo e riga sotto contati come due entrate perché la riga parte dopo, come scrittura a sé; se si contano insieme gli eventi diventano 1."}

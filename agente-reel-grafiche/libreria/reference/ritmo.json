@@ -1,0 +1,746 @@
+{
+ "_cosa": "ritmo delle reference (./mve reel-ritmo-reference): eventi visivi contati sui fotogrammi (un file per clip in libreria/reference/ritmo/), misurati con la regola dei piani (reel_piano). L'obiettivo dei piani a densità «piena» viene da qui (regola di Riccardo, 05/11/2026).",
+ "clip": [
+  {
+   "clip": "gadzhi-01",
+   "cartella": "reference",
+   "durata_s": 11.89,
+   "conteggio_agente": {
+    "principali": 10,
+    "ogni_10s": 8.4,
+    "pausa_max_s": 2.68
+   },
+   "eventi": 10,
+   "eventi_fusi": 8,
+   "ogni_10s": 6.73,
+   "micro": 2,
+   "quota_micro": 0.2,
+   "pausa_media_s": 1.05,
+   "pausa_max_s": 2.68
+  },
+  {
+   "clip": "gadzhi-02",
+   "cartella": "reference",
+   "durata_s": 10.65,
+   "conteggio_agente": {
+    "principali": 2,
+    "ogni_10s": 1.9,
+    "pausa_max_s": 7.9
+   },
+   "eventi": 2,
+   "eventi_fusi": 2,
+   "ogni_10s": 1.88,
+   "micro": 2,
+   "quota_micro": 1.0,
+   "pausa_media_s": 0.42,
+   "pausa_max_s": 0.42
+  },
+  {
+   "clip": "gadzhi-03",
+   "cartella": "reference",
+   "durata_s": 15.46,
+   "conteggio_agente": {
+    "principali": 17,
+    "ogni_10s": 11.0,
+    "pausa_max_s": 2.44
+   },
+   "eventi": 17,
+   "eventi_fusi": 14,
+   "ogni_10s": 9.06,
+   "micro": 4,
+   "quota_micro": 0.24,
+   "pausa_media_s": 0.91,
+   "pausa_max_s": 1.84
+  },
+  {
+   "clip": "gadzhi-04",
+   "cartella": "reference",
+   "durata_s": 13.82,
+   "conteggio_agente": {
+    "principali": 10,
+    "ogni_10s": 7.2,
+    "pausa_max_s": 4.1
+   },
+   "eventi": 10,
+   "eventi_fusi": 5,
+   "ogni_10s": 3.62,
+   "micro": 8,
+   "quota_micro": 0.8,
+   "pausa_media_s": 1.64,
+   "pausa_max_s": 3.24
+  },
+  {
+   "clip": "gadzhi-05",
+   "cartella": "reference",
+   "durata_s": 10.29,
+   "conteggio_agente": {
+    "principali": 4,
+    "ogni_10s": 3.9,
+    "pausa_max_s": 3.29
+   },
+   "eventi": 4,
+   "eventi_fusi": 4,
+   "ogni_10s": 3.89,
+   "micro": 0,
+   "quota_micro": 0.0,
+   "pausa_media_s": 1.43,
+   "pausa_max_s": 2.0
+  },
+  {
+   "clip": "gadzhi-06",
+   "cartella": "reference",
+   "durata_s": 13.42,
+   "conteggio_agente": {
+    "principali": 6,
+    "ogni_10s": 4.5,
+    "pausa_max_s": 5.05
+   },
+   "eventi": 6,
+   "eventi_fusi": 4,
+   "ogni_10s": 2.98,
+   "micro": 0,
+   "quota_micro": 0.0,
+   "pausa_media_s": 2.49,
+   "pausa_max_s": 3.82
+  },
+  {
+   "clip": "gadzhi-07",
+   "cartella": "reference",
+   "durata_s": 19.96,
+   "conteggio_agente": {
+    "principali": 44,
+    "ogni_10s": 22.0,
+    "pausa_max_s": 2.35
+   },
+   "eventi": 44,
+   "eventi_fusi": 29,
+   "ogni_10s": 14.53,
+   "micro": 10,
+   "quota_micro": 0.23,
+   "pausa_media_s": 0.66,
+   "pausa_max_s": 2.35
+  },
+  {
+   "clip": "gadzhi-08",
+   "cartella": "reference",
+   "durata_s": 16.86,
+   "conteggio_agente": {
+    "principali": 21,
+    "ogni_10s": 12.5,
+    "pausa_max_s": 4.66
+   },
+   "eventi": 21,
+   "eventi_fusi": 17,
+   "ogni_10s": 10.08,
+   "micro": 12,
+   "quota_micro": 0.57,
+   "pausa_media_s": 1.03,
+   "pausa_max_s": 4.66
+  },
+  {
+   "clip": "gadzhi-09",
+   "cartella": "reference",
+   "durata_s": 22.98,
+   "conteggio_agente": {
+    "principali": 13,
+    "ogni_10s": 5.7,
+    "pausa_max_s": 4.0
+   },
+   "eventi": 13,
+   "eventi_fusi": 11,
+   "ogni_10s": 4.79,
+   "micro": 4,
+   "quota_micro": 0.31,
+   "pausa_media_s": 1.67,
+   "pausa_max_s": 4.0
+  },
+  {
+   "clip": "gadzhi-10",
+   "cartella": "reference",
+   "durata_s": 10.74,
+   "conteggio_agente": {
+    "principali": 7,
+    "ogni_10s": 6.5,
+    "pausa_max_s": 4.78
+   },
+   "eventi": 7,
+   "eventi_fusi": 6,
+   "ogni_10s": 5.59,
+   "micro": 6,
+   "quota_micro": 0.86,
+   "pausa_media_s": 1.6,
+   "pausa_max_s": 4.78
+  },
+  {
+   "clip": "gadzhi-11",
+   "cartella": "reference",
+   "durata_s": 16.5,
+   "conteggio_agente": {
+    "principali": 14,
+    "ogni_10s": 8.5,
+    "pausa_max_s": 4.12
+   },
+   "eventi": 14,
+   "eventi_fusi": 11,
+   "ogni_10s": 6.67,
+   "micro": 13,
+   "quota_micro": 0.93,
+   "pausa_media_s": 1.13,
+   "pausa_max_s": 3.7
+  },
+  {
+   "clip": "gadzhi-12",
+   "cartella": "reference",
+   "durata_s": 9.91,
+   "conteggio_agente": {
+    "principali": 7,
+    "ogni_10s": 7.1,
+    "pausa_max_s": 3.91
+   },
+   "eventi": 7,
+   "eventi_fusi": 4,
+   "ogni_10s": 4.04,
+   "micro": 4,
+   "quota_micro": 0.57,
+   "pausa_media_s": 1.58,
+   "pausa_max_s": 3.91
+  },
+  {
+   "clip": "gadzhi-13",
+   "cartella": "reference",
+   "durata_s": 15.68,
+   "conteggio_agente": {
+    "principali": 21,
+    "ogni_10s": 13.4,
+    "pausa_max_s": 3.52
+   },
+   "eventi": 21,
+   "eventi_fusi": 12,
+   "ogni_10s": 7.65,
+   "micro": 18,
+   "quota_micro": 0.86,
+   "pausa_media_s": 1.07,
+   "pausa_max_s": 3.52
+  },
+  {
+   "clip": "gadzhi-14",
+   "cartella": "reference",
+   "durata_s": 15.63,
+   "conteggio_agente": {
+    "principali": 11,
+    "ogni_10s": 7.0,
+    "pausa_max_s": 3.25
+   },
+   "eventi": 11,
+   "eventi_fusi": 6,
+   "ogni_10s": 3.84,
+   "micro": 10,
+   "quota_micro": 0.91,
+   "pausa_media_s": 1.91,
+   "pausa_max_s": 3.25
+  },
+  {
+   "clip": "gadzhi-15",
+   "cartella": "reference",
+   "durata_s": 19.84,
+   "conteggio_agente": {
+    "principali": 10,
+    "ogni_10s": 5.0,
+    "pausa_max_s": 5.08
+   },
+   "eventi": 10,
+   "eventi_fusi": 7,
+   "ogni_10s": 3.53,
+   "micro": 3,
+   "quota_micro": 0.3,
+   "pausa_media_s": 3.08,
+   "pausa_max_s": 5.08
+  },
+  {
+   "clip": "gadzhi-16",
+   "cartella": "reference",
+   "durata_s": 6.74,
+   "conteggio_agente": {
+    "principali": 15,
+    "ogni_10s": 22.3,
+    "pausa_max_s": 2.36
+   },
+   "eventi": 15,
+   "eventi_fusi": 7,
+   "ogni_10s": 10.39,
+   "micro": 11,
+   "quota_micro": 0.73,
+   "pausa_media_s": 0.82,
+   "pausa_max_s": 2.36
+  },
+  {
+   "clip": "gadzhi-17",
+   "cartella": "reference",
+   "durata_s": 11.34,
+   "conteggio_agente": {
+    "principali": 39,
+    "ogni_10s": 34.4,
+    "pausa_max_s": 1.62
+   },
+   "eventi": 39,
+   "eventi_fusi": 23,
+   "ogni_10s": 20.28,
+   "micro": 29,
+   "quota_micro": 0.74,
+   "pausa_media_s": 0.46,
+   "pausa_max_s": 1.62
+  },
+  {
+   "clip": "gadzhi-18",
+   "cartella": "reference",
+   "durata_s": 10.78,
+   "conteggio_agente": {
+    "principali": 21,
+    "ogni_10s": 19.5,
+    "pausa_max_s": 3.03
+   },
+   "eventi": 21,
+   "eventi_fusi": 12,
+   "ogni_10s": 11.13,
+   "micro": 10,
+   "quota_micro": 0.48,
+   "pausa_media_s": 0.65,
+   "pausa_max_s": 1.78
+  },
+  {
+   "clip": "gadzhi-19",
+   "cartella": "reference",
+   "durata_s": 6.21,
+   "conteggio_agente": {
+    "principali": 8,
+    "ogni_10s": 12.9,
+    "pausa_max_s": 1.81
+   },
+   "eventi": 8,
+   "eventi_fusi": 4,
+   "ogni_10s": 6.44,
+   "micro": 7,
+   "quota_micro": 0.88,
+   "pausa_media_s": 1.16,
+   "pausa_max_s": 1.58
+  },
+  {
+   "clip": "gadzhi-20",
+   "cartella": "reference",
+   "durata_s": 15.48,
+   "conteggio_agente": {
+    "principali": 20,
+    "ogni_10s": 12.9,
+    "pausa_max_s": 6.23
+   },
+   "eventi": 20,
+   "eventi_fusi": 12,
+   "ogni_10s": 7.75,
+   "micro": 14,
+   "quota_micro": 0.7,
+   "pausa_media_s": 0.75,
+   "pausa_max_s": 1.66
+  },
+  {
+   "clip": "gadzhi-21",
+   "cartella": "reference",
+   "durata_s": 7.57,
+   "conteggio_agente": {
+    "principali": 12,
+    "ogni_10s": 15.9,
+    "pausa_max_s": 1.8
+   },
+   "eventi": 12,
+   "eventi_fusi": 8,
+   "ogni_10s": 10.57,
+   "micro": 6,
+   "quota_micro": 0.5,
+   "pausa_media_s": 0.85,
+   "pausa_max_s": 1.88
+  },
+  {
+   "clip": "gadzhi-22",
+   "cartella": "reference",
+   "durata_s": 11.17,
+   "conteggio_agente": {
+    "principali": 13,
+    "ogni_10s": 11.6,
+    "pausa_max_s": 2.17
+   },
+   "eventi": 13,
+   "eventi_fusi": 10,
+   "ogni_10s": 8.95,
+   "micro": 7,
+   "quota_micro": 0.54,
+   "pausa_media_s": 1.02,
+   "pausa_max_s": 2.33
+  },
+  {
+   "clip": "gadzhi-23",
+   "cartella": "reference",
+   "durata_s": 11.09,
+   "conteggio_agente": {
+    "principali": 11,
+    "ogni_10s": 9.9,
+    "pausa_max_s": 4.58
+   },
+   "eventi": 11,
+   "eventi_fusi": 6,
+   "ogni_10s": 5.41,
+   "micro": 1,
+   "quota_micro": 0.09,
+   "pausa_media_s": 1.03,
+   "pausa_max_s": 2.25
+  },
+  {
+   "clip": "martell-01",
+   "cartella": "reference",
+   "durata_s": 19.95,
+   "conteggio_agente": {
+    "principali": 30,
+    "ogni_10s": 15.0,
+    "pausa_max_s": 1.8
+   },
+   "eventi": 30,
+   "eventi_fusi": 21,
+   "ogni_10s": 10.53,
+   "micro": 17,
+   "quota_micro": 0.57,
+   "pausa_media_s": 0.75,
+   "pausa_max_s": 1.8
+  },
+  {
+   "clip": "martell-02",
+   "cartella": "reference",
+   "durata_s": 15.76,
+   "conteggio_agente": {
+    "principali": 23,
+    "ogni_10s": 14.6,
+    "pausa_max_s": 2.59
+   },
+   "eventi": 23,
+   "eventi_fusi": 15,
+   "ogni_10s": 9.52,
+   "micro": 6,
+   "quota_micro": 0.26,
+   "pausa_media_s": 0.89,
+   "pausa_max_s": 2.59
+  },
+  {
+   "clip": "martell-03",
+   "cartella": "reference",
+   "durata_s": 13.93,
+   "conteggio_agente": {
+    "principali": 14,
+    "ogni_10s": 10.1,
+    "pausa_max_s": 4.58
+   },
+   "eventi": 14,
+   "eventi_fusi": 8,
+   "ogni_10s": 5.74,
+   "micro": 5,
+   "quota_micro": 0.36,
+   "pausa_media_s": 1.18,
+   "pausa_max_s": 4.58
+  },
+  {
+   "clip": "martell-04",
+   "cartella": "reference",
+   "durata_s": 16.43,
+   "conteggio_agente": {
+    "principali": 19,
+    "ogni_10s": 11.6,
+    "pausa_max_s": 3.92
+   },
+   "eventi": 19,
+   "eventi_fusi": 14,
+   "ogni_10s": 8.52,
+   "micro": 7,
+   "quota_micro": 0.37,
+   "pausa_media_s": 0.71,
+   "pausa_max_s": 1.67
+  },
+  {
+   "clip": "martell-05",
+   "cartella": "reference",
+   "durata_s": 12.16,
+   "conteggio_agente": {
+    "principali": 6,
+    "ogni_10s": 4.9,
+    "pausa_max_s": 4.81
+   },
+   "eventi": 6,
+   "eventi_fusi": 5,
+   "ogni_10s": 4.11,
+   "micro": 3,
+   "quota_micro": 0.5,
+   "pausa_media_s": 1.16,
+   "pausa_max_s": 1.75
+  },
+  {
+   "clip": "martell-06",
+   "cartella": "reference",
+   "durata_s": 14.38,
+   "conteggio_agente": {
+    "principali": 13,
+    "ogni_10s": 9.0,
+    "pausa_max_s": 4.03
+   },
+   "eventi": 13,
+   "eventi_fusi": 11,
+   "ogni_10s": 7.65,
+   "micro": 9,
+   "quota_micro": 0.69,
+   "pausa_media_s": 0.98,
+   "pausa_max_s": 2.15
+  },
+  {
+   "clip": "martell-07",
+   "cartella": "reference",
+   "durata_s": 14.29,
+   "conteggio_agente": {
+    "principali": 37,
+    "ogni_10s": 25.9,
+    "pausa_max_s": 4.0
+   },
+   "eventi": 37,
+   "eventi_fusi": 21,
+   "ogni_10s": 14.7,
+   "micro": 22,
+   "quota_micro": 0.59,
+   "pausa_media_s": 0.56,
+   "pausa_max_s": 4.0
+  },
+  {
+   "clip": "martell-08",
+   "cartella": "reference",
+   "durata_s": 11.28,
+   "conteggio_agente": {
+    "principali": 4,
+    "ogni_10s": 3.5,
+    "pausa_max_s": 3.79
+   },
+   "eventi": 4,
+   "eventi_fusi": 3,
+   "ogni_10s": 2.66,
+   "micro": 1,
+   "quota_micro": 0.25,
+   "pausa_media_s": 2.15,
+   "pausa_max_s": 3.89
+  },
+  {
+   "clip": "verticale-01",
+   "cartella": "verticali",
+   "durata_s": 0.57,
+   "conteggio_agente": {
+    "principali": 0,
+    "ogni_10s": 0.0,
+    "pausa_max_s": 0.57
+   },
+   "eventi": 0,
+   "eventi_fusi": 0,
+   "ogni_10s": 0.0,
+   "micro": 0,
+   "quota_micro": 0.0,
+   "pausa_media_s": null,
+   "pausa_max_s": null
+  },
+  {
+   "clip": "verticale-02",
+   "cartella": "verticali",
+   "durata_s": 5.5,
+   "conteggio_agente": {
+    "principali": 9,
+    "ogni_10s": 16.4,
+    "pausa_max_s": 2.59
+   },
+   "eventi": 9,
+   "eventi_fusi": 6,
+   "ogni_10s": 10.91,
+   "micro": 1,
+   "quota_micro": 0.11,
+   "pausa_media_s": 0.96,
+   "pausa_max_s": 2.59
+  },
+  {
+   "clip": "verticale-03",
+   "cartella": "verticali",
+   "durata_s": 4.5,
+   "conteggio_agente": {
+    "principali": 8,
+    "ogni_10s": 17.8,
+    "pausa_max_s": 1.3
+   },
+   "eventi": 8,
+   "eventi_fusi": 6,
+   "ogni_10s": 13.33,
+   "micro": 1,
+   "quota_micro": 0.12,
+   "pausa_media_s": 0.47,
+   "pausa_max_s": 0.75
+  },
+  {
+   "clip": "verticale-04",
+   "cartella": "verticali",
+   "durata_s": 2.2,
+   "conteggio_agente": {
+    "principali": 4,
+    "ogni_10s": 18.2,
+    "pausa_max_s": 0.91
+   },
+   "eventi": 4,
+   "eventi_fusi": 3,
+   "ogni_10s": 13.64,
+   "micro": 1,
+   "quota_micro": 0.25,
+   "pausa_media_s": 0.95,
+   "pausa_max_s": 1.15
+  },
+  {
+   "clip": "verticale-05",
+   "cartella": "verticali",
+   "durata_s": 3.2,
+   "conteggio_agente": {
+    "principali": 8,
+    "ogni_10s": 25.0,
+    "pausa_max_s": 0.95
+   },
+   "eventi": 8,
+   "eventi_fusi": 6,
+   "ogni_10s": 18.75,
+   "micro": 1,
+   "quota_micro": 0.12,
+   "pausa_media_s": 0.59,
+   "pausa_max_s": 1.0
+  },
+  {
+   "clip": "verticale-06",
+   "cartella": "verticali",
+   "durata_s": 9.77,
+   "conteggio_agente": {
+    "principali": 27,
+    "ogni_10s": 27.6,
+    "pausa_max_s": 1.0
+   },
+   "eventi": 27,
+   "eventi_fusi": 17,
+   "ogni_10s": 17.4,
+   "micro": 4,
+   "quota_micro": 0.15,
+   "pausa_media_s": 0.56,
+   "pausa_max_s": 1.0
+  },
+  {
+   "clip": "verticale-07",
+   "cartella": "verticali",
+   "durata_s": 2.07,
+   "conteggio_agente": {
+    "principali": 5,
+    "ogni_10s": 24.2,
+    "pausa_max_s": 0.74
+   },
+   "eventi": 5,
+   "eventi_fusi": 3,
+   "ogni_10s": 14.49,
+   "micro": 1,
+   "quota_micro": 0.2,
+   "pausa_media_s": 0.61,
+   "pausa_max_s": 0.68
+  },
+  {
+   "clip": "verticale-08",
+   "cartella": "verticali",
+   "durata_s": 38.77,
+   "conteggio_agente": {
+    "principali": 79,
+    "ogni_10s": 20.4,
+    "pausa_max_s": 1.72
+   },
+   "eventi": 79,
+   "eventi_fusi": 63,
+   "ogni_10s": 16.25,
+   "micro": 17,
+   "quota_micro": 0.22,
+   "pausa_media_s": 0.61,
+   "pausa_max_s": 1.84
+  },
+  {
+   "clip": "verticale-09",
+   "cartella": "verticali",
+   "durata_s": 47.1,
+   "conteggio_agente": {
+    "principali": 88,
+    "ogni_10s": 18.7,
+    "pausa_max_s": 1.82
+   },
+   "eventi": 88,
+   "eventi_fusi": 73,
+   "ogni_10s": 15.5,
+   "micro": 10,
+   "quota_micro": 0.11,
+   "pausa_media_s": 0.64,
+   "pausa_max_s": 1.82
+  },
+  {
+   "clip": "verticale-10",
+   "cartella": "verticali",
+   "durata_s": 31.8,
+   "conteggio_agente": {
+    "principali": 65,
+    "ogni_10s": 20.4,
+    "pausa_max_s": 1.78
+   },
+   "eventi": 65,
+   "eventi_fusi": 50,
+   "ogni_10s": 15.72,
+   "micro": 19,
+   "quota_micro": 0.29,
+   "pausa_media_s": 0.63,
+   "pausa_max_s": 1.78
+  },
+  {
+   "clip": "verticale-11",
+   "cartella": "verticali",
+   "durata_s": 4.47,
+   "conteggio_agente": {
+    "principali": 4,
+    "ogni_10s": 8.9,
+    "pausa_max_s": 1.52
+   },
+   "eventi": 4,
+   "eventi_fusi": 4,
+   "ogni_10s": 8.95,
+   "micro": 0,
+   "quota_micro": 0.0,
+   "pausa_media_s": 1.34,
+   "pausa_max_s": 1.52
+  }
+ ],
+ "insieme": {
+  "clip": 42,
+  "secondi": 572.1,
+  "ogni_10s_complessivo": 9.63,
+  "ogni_10s_mediana": 8.73,
+  "ogni_10s_quartili": [
+   4.62,
+   13.41
+  ],
+  "ogni_10s_min_max": [
+   0.0,
+   20.28
+  ],
+  "pausa_max_mediana_s": 2.15,
+  "pausa_max_quartili_s": [
+   1.67,
+   3.61
+  ],
+  "quota_micro": 0.39
+ },
+ "obiettivo": {
+  "ogni_10s": 6.7,
+  "pausa_max_s": 3.0,
+  "quota_micro_indicativa": 0.5,
+  "fonte": "mediana delle 31 reference (6,7 eventi visivi ogni 10 s, metà delle clip fra 4,0 e 10,1; micro il 52%); pausa massima 3 s = regola di Riccardo «un cambiamento ogni 2-3 s» (le reference: mediana 2,4 s, metà fra 1,8 e 3,9) — fissato il 05/11/2026",
+  "nota": "le reference sono spezzoni da 6-23 s scelti per le loro grafiche: su un video intero il ritmo vero è probabilmente più basso. L'obiettivo vale per i piani a densità «piena» (reel-piano: errore se sotto di oltre 0,5 o con pause oltre 3 s)"
+ }
+}

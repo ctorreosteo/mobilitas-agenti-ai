@@ -1,0 +1,14 @@
+/* fumetto_ads (laboratorio, AD_REFLUSSO 04/11/2026): un fumetto di chat chiaro nella finestra grande */
+.ffa-clip { position: absolute; overflow: hidden; }
+.ffa-fondo { position: absolute; left: 0; top: 0; }
+.ffa-dentro { position: absolute; width: 1080px; height: 1920px; }
+.ffa-alone { position: absolute; left: 90px; top: 440px; width: 900px; height: 440px; border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(0, 92, 170, 0.34), rgba(0, 60, 130, 0.12) 60%, rgba(0, 40, 90, 0) 100%); }
+.ffa { position: absolute; box-sizing: border-box; border-radius: 48px 48px 48px 8px; white-space: nowrap;
+  background: linear-gradient(180deg, #FFFFFF 0%, #F4F4F4 45%, #D9DFE6 100%);
+  box-shadow: 0 28px 54px rgba(0, 8, 24, 0.5), 0 8px 16px rgba(0, 8, 24, 0.35),
+    inset 0 3px 0 #FFFFFF, inset 0 -14px 26px rgba(0, 37, 82, 0.13), inset 0 18px 30px rgba(255, 255, 255, 0.7),
+    0 0 30px rgba(244, 244, 244, 0.35), 0 0 90px rgba(244, 244, 244, 0.16); }
+.ffa-t { position: relative; color: #001A3D; font-weight: 700; letter-spacing: -0.01em; text-align: center; }
+.ffa-coda { position: absolute; width: 34px; height: 48px; left: -30px; bottom: 0; overflow: visible; }
+.ffa-punto { position: absolute; width: 26px; height: 26px; border-radius: 50%; background: #001A3D; }

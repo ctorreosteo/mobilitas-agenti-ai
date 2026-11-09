@@ -1,0 +1,72 @@
+{
+ "clip": "gadzhi-15",
+ "durata_s": 19.84,
+ "eventi": [
+  {
+   "t": 1.08,
+   "tipo": "taglio",
+   "cosa": "stacco da mezza figura di lato a inquadratura frontale più larga"
+  },
+  {
+   "t": 5.06,
+   "tipo": "taglio",
+   "cosa": "stacco a una scena scura a tutto schermo"
+  },
+  {
+   "t": 5.06,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "titolo «3 WAYS TO MAKE / $10,000/MONTH» e tre card scure in prospettiva con numeri 1-2-3 a contorno: arrivano già composti con lo stacco"
+  },
+  {
+   "t": 5.42,
+   "tipo": "stato",
+   "cosa": "la card 1 si accende: dal buio al gradiente lime pieno in ~2 fotogrammi a 12 fps, con un piccolo colpo di scala"
+  },
+  {
+   "t": 10.5,
+   "tipo": "stato",
+   "cosa": "la card 2 si accende allo stesso modo (piena a 10,67)"
+  },
+  {
+   "t": 13.2,
+   "tipo": "stato",
+   "cosa": "la card 3 si accende (piena a 13,33)"
+  },
+  {
+   "t": 16.76,
+   "tipo": "taglio",
+   "cosa": "ritorno sulla persona: un fotogramma stretto e subito largo (rientro rapidissimo)"
+  },
+  {
+   "t": 16.76,
+   "tipo": "uscita",
+   "cosa": "la scena delle card sparisce con lo stacco"
+  },
+  {
+   "t": 19.57,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«YOU» bianco piccolo in basso a sinistra"
+  },
+  {
+   "t": 19.65,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«ONCE»"
+  },
+  {
+   "t": 19.73,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«NEEDED» (la frase continua oltre la fine della clip)"
+  }
+ ],
+ "principali": 10,
+ "principali_ogni_10s": 5.0,
+ "micro": 3,
+ "uscite": 1,
+ "pausa_media_s": 2.33,
+ "pausa_max_s": 5.08,
+ "note": "Pause misurate tra un evento principale e il successivo (istanti uguali contati una volta), senza i bordi della clip. Stacco + scena delle card contati come due eventi (taglio ed entrata grande) anche se arrivano nello stesso fotogramma. Le parole «YOU ONCE NEEDED» sono del montaggio (carattere della grafica, una parola alla volta), non sottotitoli di YouTube: dubbio basso. Pausa lunga voluta: le card restano ferme 5,1 s tra la prima e la seconda accensione. Bordi: 1.08 s dall'inizio della clip al primo evento, 0.11 s dall'ultimo evento alla fine; contando anche i bordi la pausa più lunga sarebbe 5.08 s."
+}

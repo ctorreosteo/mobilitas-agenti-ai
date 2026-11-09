@@ -1,0 +1,80 @@
+{
+ "clip": "gadzhi-23",
+ "durata_s": 11.09,
+ "eventi": [
+  {
+   "t": 4.58,
+   "tipo": "taglio",
+   "cosa": "stacco da lui a una scena nera con una grande forma arrotondata oliva a destra"
+  },
+  {
+   "t": 4.75,
+   "tipo": "camera",
+   "cosa": "la camera arretra e scorre: le card si rimpiccioliscono e il quadro si apre su una griglia di 5 miniature video (4,75-5,75)"
+  },
+  {
+   "t": 4.75,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "card 1 (miniatura video con titolo sopra) entra dal bordo sinistro"
+  },
+  {
+   "t": 4.92,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "card 2 al centro, in dissolvenza (2 frame)"
+  },
+  {
+   "t": 5.08,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "card 3 a destra, in dissolvenza"
+  },
+  {
+   "t": 5.25,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "card 4 in basso a sinistra, in dissolvenza (5,25-5,42)"
+  },
+  {
+   "t": 5.42,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "card 5 in basso a destra, in dissolvenza (5,42-5,67)"
+  },
+  {
+   "t": 7.25,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "titolo enorme «THE EASIEST WAY» che entra scorrendo da sinistra con sfocatura di movimento (7,25-7,75, 6 frame); bianco cromato con ombra"
+  },
+  {
+   "t": 7.25,
+   "tipo": "stato",
+   "cosa": "le card dietro si scuriscono e si sfocano sotto il titolo (7,25-8,00)"
+  },
+  {
+   "t": 7.5,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "sottotitolo in corsivo «TO MAKE MONEY WITH AI» scritto lettera per lettera (7,50-8,67, circa 14 frame)"
+  },
+  {
+   "t": 9.75,
+   "tipo": "taglio",
+   "cosa": "stacco a lui in esterno davanti a un edificio"
+  },
+  {
+   "t": 9.75,
+   "tipo": "uscita",
+   "cosa": "titolo e card escono con lo stacco"
+  }
+ ],
+ "principali": 11,
+ "principali_ogni_10s": 9.9,
+ "micro": 1,
+ "uscite": 1,
+ "pausa_media_s": 1.11,
+ "pausa_max_s": 4.58,
+ "note": "Le card 4 e 5 sono miniature con titolo, larghe circa 1/5 del quadro: segnate grandi. La card 1 forse non entra da sola ma viene scoperta dal movimento di camera. Il cartellone giallo nella ripresa finale cambia immagine (10,5 s): fa parte della ripresa, non è montaggio. I primi 4,58 s sono solo lui, senza eventi."
+}

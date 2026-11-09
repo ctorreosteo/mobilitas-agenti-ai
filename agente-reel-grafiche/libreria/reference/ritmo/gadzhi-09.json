@@ -1,0 +1,89 @@
+{
+ "clip": "gadzhi-09",
+ "durata_s": 22.98,
+ "eventi": [
+  {
+   "t": 2.83,
+   "tipo": "taglio",
+   "cosa": "stacco alla scena scura con le tre card in prospettiva e il titolo (entrano con lo stacco)"
+  },
+  {
+   "t": 3.43,
+   "tipo": "stato",
+   "livello": "micro",
+   "cosa": "il testo della card 1 si decifra («@&...» → «CONTENT MAXXING»), 3,43-4,02 s, circa 7 frame"
+  },
+  {
+   "t": 3.52,
+   "tipo": "stato",
+   "livello": "micro",
+   "cosa": "il bordo della card 1 si accende di lime"
+  },
+  {
+   "t": 4.27,
+   "tipo": "stato",
+   "livello": "grande",
+   "cosa": "la card 1 si riempie di luce lime a gradiente in 2 frame, con un riflesso che passa"
+  },
+  {
+   "t": 4.68,
+   "tipo": "stato",
+   "livello": "micro",
+   "cosa": "le card 2 e 3 si spengono un poco"
+  },
+  {
+   "t": 5.75,
+   "tipo": "taglio",
+   "cosa": "stacco a lui"
+  },
+  {
+   "t": 5.75,
+   "tipo": "uscita",
+   "cosa": "le card escono con lo stacco"
+  },
+  {
+   "t": 8.62,
+   "tipo": "taglio",
+   "cosa": "stacco a un'inquadratura più stretta"
+  },
+  {
+   "t": 12.62,
+   "tipo": "taglio",
+   "cosa": "stacco a un'inquadratura più larga"
+  },
+  {
+   "t": 14.32,
+   "tipo": "camera",
+   "cosa": "il quadro di lui si stacca: diventa un rettangolo con angoli tondi e scivola in basso a destra, sfocato dal movimento"
+  },
+  {
+   "t": 14.48,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "dietro compare la pagina web a tutto schermo"
+  },
+  {
+   "t": 14.82,
+   "tipo": "stato",
+   "livello": "micro",
+   "cosa": "il rettangolo diventa un cerchio nell'angolo in basso a destra (fine a 14,90 s; tutto il passaggio 14,32-14,90 s, circa 7 frame)"
+  },
+  {
+   "t": 18.45,
+   "tipo": "camera",
+   "cosa": "punch-in veloce sui filtri della pagina, sfocato dal movimento (circa 2 frame)"
+  },
+  {
+   "t": 19.53,
+   "tipo": "camera",
+   "cosa": "zoom indietro veloce sulla pagina intera"
+  }
+ ],
+ "principali": 13,
+ "principali_ogni_10s": 5.7,
+ "micro": 4,
+ "uscite": 1,
+ "pausa_media_s": 1.64,
+ "pausa_max_s": 4.0,
+ "note": "Lo stacco iniziale porta tutta la scena delle card insieme: contato una volta come taglio, non come entrata. Il clic sul filtro (19,03 s), il ricaricamento della pagina e lo scorrimento (21,25-22,75 s) sono parte della registrazione dello schermo, non grafiche: non contati. Pausa più lunga: 8,62-12,62 s, solo lui che parla."
+}

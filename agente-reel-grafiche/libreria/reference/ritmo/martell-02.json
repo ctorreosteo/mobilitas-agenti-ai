@@ -1,0 +1,175 @@
+{
+ "clip": "martell-02",
+ "durata_s": 15.76,
+ "eventi": [
+  {
+   "t": 0.75,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "«IT'S» bianco enorme dietro la persona (la testa lo copre), sale e si accende"
+  },
+  {
+   "t": 0.83,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "«SO»"
+  },
+  {
+   "t": 1.33,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "«SIMPLE» a destra della testa (completo a ~1,67)"
+  },
+  {
+   "t": 3.0,
+   "tipo": "uscita",
+   "cosa": "il titolo dietro sfuma via (3,00–3,42)"
+  },
+  {
+   "t": 3.92,
+   "tipo": "camera",
+   "cosa": "punch-in rapido sul primo piano"
+  },
+  {
+   "t": 4.08,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "«\"BORING\"» bianco enorme davanti, sul petto, battuto lettera per lettera (completo a 4,58), ombra e bagliore"
+  },
+  {
+   "t": 4.95,
+   "tipo": "taglio",
+   "cosa": "stacco a un'angolazione laterale"
+  },
+  {
+   "t": 4.95,
+   "tipo": "uscita",
+   "cosa": "«BORING» sparisce con lo stacco"
+  },
+  {
+   "t": 5.25,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "numero grande bianco-cromato con bagliore in basso a sinistra, conta in su"
+  },
+  {
+   "t": 6.08,
+   "tipo": "stato",
+   "cosa": "il conteggio si ferma sul numero tondo (bagliore pieno)"
+  },
+  {
+   "t": 7.58,
+   "tipo": "uscita",
+   "cosa": "il numero si cancella da destra a sinistra"
+  },
+  {
+   "t": 7.75,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "«in the» stesso stile del numero, al suo posto"
+  },
+  {
+   "t": 7.83,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "«last»"
+  },
+  {
+   "t": 8.08,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "«two»"
+  },
+  {
+   "t": 8.17,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "«years»"
+  },
+  {
+   "t": 8.95,
+   "tipo": "taglio",
+   "cosa": "stacco all'inquadratura frontale"
+  },
+  {
+   "t": 8.95,
+   "tipo": "uscita",
+   "cosa": "la frase sparisce con lo stacco"
+  },
+  {
+   "t": 9.17,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«chatting» bianco piccolo in alto a sinistra"
+  },
+  {
+   "t": 9.42,
+   "tipo": "camera",
+   "cosa": "spinta lenta in avanti (dubbio: leggera)"
+  },
+  {
+   "t": 9.42,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«with»"
+  },
+  {
+   "t": 9.58,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«complete»"
+  },
+  {
+   "t": 9.83,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«strangers» azzurro corsivo con bagliore, battuto (completo a 10,42)"
+  },
+  {
+   "t": 11.0,
+   "tipo": "uscita",
+   "cosa": "«chatting with complete strangers» si cancella"
+  },
+  {
+   "t": 11.0,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "card profilo con bordo luminoso azzurro-viola che entra da destra accanto alla testa"
+  },
+  {
+   "t": 11.25,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "testi nella card: nome con spunta e «1.4M followers»"
+  },
+  {
+   "t": 11.42,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "foto profilo rotonda nella card"
+  },
+  {
+   "t": 12.17,
+   "tipo": "taglio",
+   "cosa": "lampo di luce bianca e stacco a una scena alla scrivania (nitida a 12,42)"
+  },
+  {
+   "t": 12.17,
+   "tipo": "uscita",
+   "cosa": "la card sparisce nel lampo"
+  },
+  {
+   "t": 13.25,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "velo di luce rosa che entra da destra e copre tutto il quadro fino alla fine (transizione verso una scena fuori clip)"
+  }
+ ],
+ "principali": 23,
+ "principali_ogni_10s": 14.6,
+ "micro": 6,
+ "uscite": 6,
+ "pausa_media_s": 0.6,
+ "pausa_max_s": 2.59,
+ "note": "Pause misurate tra un evento principale e il successivo (istanti uguali contati una volta), senza i bordi della clip. Il velo rosa finale è contato come entrata grande (effetto di transizione): se non lo si conta, i principali scendono di 1. La spinta lenta a 9,42 è incerta. Il testo battuto è contato una volta per parola. Nella clip compaiono cifre (conteggio): qui si misura solo il ritmo, da noi vietate se non dette. Bordi: 0.75 s dall'inizio della clip al primo evento, 2.51 s dall'ultimo evento alla fine; contando anche i bordi la pausa più lunga sarebbe 2.59 s."
+}

@@ -1,0 +1,10 @@
+{"clip": "verticale-07", "durata_s": 2.07,
+ "eventi": [
+  {"t": 0.1, "tipo": "taglio", "cosa": "stacco con sfocatura di movimento: la ripresa di prima esce sfocata (0,00-0,07), la nuova entra mossa e inclinata e si mette a fuoco entro 0,13"},
+  {"t": 0.1, "tipo": "entrata", "livello": "grande", "cosa": "badge in alto a sinistra: nasce come una linea sottile (0,10) e si apre in un pannello verde scuro in 1 fotogramma (0,13), già con il numero che scorre"},
+  {"t": 0.17, "tipo": "entrata", "livello": "micro", "cosa": "etichetta piccola in maiuscolo spaziato «MORE THAN» sopra il numero"},
+  {"t": 0.65, "tipo": "stato", "cosa": "il numero, che scorre come un contachilometri dal 0,13, si ferma sul valore detto «2,000»"},
+  {"t": 1.33, "tipo": "stato", "cosa": "il badge si allarga verso destra e si scrive la parola «people.» in corsivo con grazie, colore d'accento (1,33-1,47)"}
+ ],
+ "principali": 5, "principali_ogni_10s": 24.2, "micro": 1, "uscite": 1, "pausa_media_s": 0.34, "pausa_max_s": 0.74,
+ "note": "Uscita: la card «TRIAL REELS» della scena precedente è a schermo, sfocata, a 0,00-0,07 e sparisce con il taglio. Pause fra eventi consecutivi, compresi inizio e fine (taglio ed entrata del badge nello stesso fotogramma: pausa 0). Lo scorrere continuo del numero (0,13-0,65) è contato una volta, quando si ferma. Ignorati: sottotitoli, colonna dei commenti, puntatore."}

@@ -1,0 +1,34 @@
+{
+ "clip": "martell-08",
+ "durata_s": 11.28,
+ "eventi": [
+  {
+   "t": 3.79,
+   "tipo": "taglio",
+   "cosa": "stacco a scena scura: linea orizzontale bianca, punto giallo «No Confidence», grande cerchio viola «BUYING ZONE» (tutto già lì al taglio)"
+  },
+  {
+   "t": 4.2,
+   "tipo": "camera",
+   "cosa": "carrello orizzontale verso destra lungo la linea: parte piano, più veloce fra 4,6 e 5,0, si ferma verso 5,6"
+  },
+  {
+   "t": 4.37,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "scritta «Too Much Confidence» lettera per lettera accanto al punto rosso che entra dal bordo con il carrello (4,37-5,87)"
+  },
+  {
+   "t": 8.09,
+   "tipo": "taglio",
+   "cosa": "stacco di nuovo su di lui, seconda camera"
+  }
+ ],
+ "principali": 4,
+ "principali_ogni_10s": 3.5,
+ "micro": 1,
+ "uscite": 0,
+ "pausa_media_s": 2.26,
+ "pausa_max_s": 3.79,
+ "note": "Il punto rosso è rivelato dal carrello (era fuori quadro), non contato a parte. «No Confidence» e «BUYING ZONE» sono già a schermo al taglio: non contati come entrate. Dopo il carrello la scena resta ferma 2,2 s; dopo il taglio a 8,09 nessun evento fino alla fine. Su di lui nessun movimento di camera (sfondo misurato fermo). Pause: fra istanti diversi con eventi (eventi allo stesso istante contano una volta), compresi l'inizio e la fine della clip."
+}

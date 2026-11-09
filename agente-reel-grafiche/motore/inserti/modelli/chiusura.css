@@ -1,0 +1,6 @@
+/* il blocco ha larghezza fissa: quando il pannello si allarga il testo non va a capo in modo diverso */
+.cont { position: absolute; left: 96px; width: 554px; top: 220px; }
+.cont .logo { width: 360px; display: block; margin-bottom: 70px; }
+.cont .titolo { font-size: 72px; font-weight: 300; line-height: 1.15; }
+.cont .voci { margin-top: 40px; font-size: 44px; font-weight: 500; color: rgba(244,244,244,0.76); line-height: 1.35; }
+.cont .freccia { width: 56px; margin-top: 44px; display: block; }

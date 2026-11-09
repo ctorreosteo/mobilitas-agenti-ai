@@ -1,0 +1,15 @@
+{"clip": "gadzhi-04", "durata_s": 13.82,
+ "eventi": [
+  {"t": 3.15, "tipo": "camera", "cosa": "punch-in istantaneo: lui più vicino e spostato a destra, si libera il lato sinistro"},
+  {"t": 3.15, "tipo": "entrata", "livello": "micro", "cosa": "icona asterisco arancio della voce 1 (punto che si apre in 2 frame)"},
+  {"t": 3.32, "tipo": "entrata", "livello": "micro", "cosa": "voce 1 «Open it up» scritta lettera per lettera in 4 frame"},
+  {"t": 4.07, "tipo": "entrata", "livello": "micro", "cosa": "icona della voce 2"},
+  {"t": 4.23, "tipo": "entrata", "livello": "micro", "cosa": "voce 2 «Type out a question»"},
+  {"t": 5.07, "tipo": "entrata", "livello": "micro", "cosa": "icona della voce 3"},
+  {"t": 5.15, "tipo": "entrata", "livello": "micro", "cosa": "voce 3 «Read the answer»"},
+  {"t": 6.48, "tipo": "entrata", "livello": "micro", "cosa": "icona della voce 4"},
+  {"t": 6.57, "tipo": "entrata", "livello": "micro", "cosa": "voce 4 «Ask one more thing»"},
+  {"t": 9.72, "tipo": "camera", "cosa": "ritorno istantaneo all'inquadratura larga (punch-out); la lista sparisce con lo stacco"}
+ ],
+ "principali": 10, "principali_ogni_10s": 7.2, "micro": 8, "uscite": 1, "pausa_media_s": 1.26, "pausa_max_s": 4.10,
+ "note": "Uscita: la lista sparisce tutta insieme con il ritorno all'inquadratura larga (9,72). Il punch-in e il punch-out sono lo stesso girato ingrandito, per questo segnati «camera»; si potrebbero anche chiamare «taglio». Icona e testo di ogni voce contati separati come chiede la regola (arrivano a 0,08-0,17 s di distanza): se si contano insieme sono 6 eventi = 4,3 ogni 10 s. Le icone delle voci già scritte pulsano piano (si rimpiccioliscono a punto e si riaccendono): movimento d'ambiente, non contato. Pausa più lunga 4,10 s = dal punch-out alla fine; dentro la lista la più lunga è 3,15 s (6,57→9,72, la lista ferma mentre lui parla). Prima del punch-in, 3,15 s senza eventi."}

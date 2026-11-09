@@ -1,0 +1,15 @@
+{"clip": "gadzhi-01", "durata_s": 11.89,
+ "eventi": [
+  {"t": 2.15, "tipo": "taglio", "cosa": "stacco dalla scena illustrata («Hey, I'm Claude», già a schermo all'inizio) a lui in piano medio"},
+  {"t": 4.83, "tipo": "taglio", "cosa": "stacco a una scena scura a tutto schermo: nero caldo, luci sfocate in basso, testo sfocato in alto come texture"},
+  {"t": 5.00, "tipo": "entrata", "livello": "micro", "cosa": "icona asterisco arancio: nasce come punto e si apre in 2 frame"},
+  {"t": 5.17, "tipo": "entrata", "livello": "grande", "cosa": "etichetta «Thinking» scritta lettera per lettera (5,17-5,50)"},
+  {"t": 5.33, "tipo": "entrata", "livello": "micro", "cosa": "barra sottile «Daily Usage» sotto l'etichetta, parte quasi vuota (blu)"},
+  {"t": 7.00, "tipo": "stato", "cosa": "l'etichetta si cancella e si riscrive «Deeper Thinking» (7,00-7,50); la barra vira al viola (7,25)"},
+  {"t": 7.25, "tipo": "camera", "cosa": "la camera scorre verso sinistra e accelera; l'etichetta esce dal quadro e resta la barra (7,25-8,50)"},
+  {"t": 7.83, "tipo": "stato", "cosa": "la barra diventa rosa-rossa e cresce veloce, con la percentuale «% used» che sale"},
+  {"t": 9.08, "tipo": "stato", "cosa": "la barra arriva in fondo e si ferma su «100% used»"},
+  {"t": 9.50, "tipo": "taglio", "cosa": "stacco di ritorno a lui, stessa inquadratura di prima"}
+ ],
+ "principali": 10, "principali_ogni_10s": 8.4, "micro": 2, "uscite": 2, "pausa_media_s": 1.08, "pausa_max_s": 2.68,
+ "note": "Uscite: l'etichetta esce dal quadro per il movimento di camera (~8,3 s); la scena scura si chiude con il taglio (9,50). Pause calcolate fra eventi consecutivi, compresi l'inizio e la fine della clip (inizio→primo evento 2,15 s; ultimo evento→fine 2,39 s). Dubbi: la camera comincia a derivare piano verso sinistra già da ~6,5 s, ma diventa evidente solo a 7,25: contata una volta. Cambio di etichetta e viraggio al viola contati come un solo stato (0,25 s di distanza). La barra cresce in modo continuo da 5,33 a 9,08: contati solo i cambi evidenti (colore rosso, arresto a 100%). La scena illustrata iniziale è già a schermo a 0,00: non contata. La clip è a frequenza variabile (~55 fps medi): i tempi sono ±1 frame a 12 fps."}

@@ -1,0 +1,93 @@
+{
+ "clip": "martell-06",
+ "durata_s": 14.38,
+ "eventi": [
+  {
+   "t": 0.58,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "nella storia viola del telefono si scrive «and looking for» (parola per parola con sfocatura, 0,58-1,30)"
+  },
+  {
+   "t": 1.92,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "barra viola chiara (parola nascosta) sulla riga successiva"
+  },
+  {
+   "t": 2.08,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«let me know by sending» (2,08-2,80)"
+  },
+  {
+   "t": 2.83,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«me this message:» (2,83-3,40)"
+  },
+  {
+   "t": 3.2,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "rettangolo ciano luminoso (la parola chiave) che si allarga dal centro (3,20-3,70)"
+  },
+  {
+   "t": 4.47,
+   "tipo": "taglio",
+   "cosa": "stacco a lui, seconda camera, lui a sinistra"
+  },
+  {
+   "t": 4.65,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "pannello di vetro smerigliato a destra: prima il bordo chiaro, poi il vetro pieno (4,65-4,90)"
+  },
+  {
+   "t": 5.15,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "dentro il pannello: foto profilo rotonda e nome (5,15-5,40)"
+  },
+  {
+   "t": 5.57,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "barra del messaggio in fondo al pannello"
+  },
+  {
+   "t": 6.0,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "riga piccola sotto il nome (follower e post)"
+  },
+  {
+   "t": 7.05,
+   "tipo": "stato",
+   "cosa": "nella barra si scrive «COACH» (7,05-7,55)"
+  },
+  {
+   "t": 8.2,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "il messaggio parte: la barra si svuota e compare il fumetto ciano «COACH» (8,13-8,30)"
+  },
+  {
+   "t": 9.47,
+   "tipo": "uscita",
+   "cosa": "il pannello si schiaccia in una pillola, poi in una linea, e sparisce (9,47-9,97)"
+  },
+  {
+   "t": 10.35,
+   "tipo": "taglio",
+   "cosa": "stacco alla prima camera, inquadratura larga"
+  }
+ ],
+ "principali": 13,
+ "principali_ogni_10s": 9.0,
+ "micro": 9,
+ "uscite": 1,
+ "pausa_media_s": 1.03,
+ "pausa_max_s": 4.03,
+ "note": "La clip parte a scena già iniziata: la prima riga «If you are» e la prima barra ci sono già a 0,00. Il testo della storia arriva parola per parola: ho contato una entrata per riga (contando ogni parola sarebbero circa 6 eventi in più). Lo sfondo scuro deriva lentamente dall'inizio (movimento già in corso, non contato). Dopo il taglio a 10,35 non succede niente fino alla fine (4,0 s). Pause: fra istanti diversi con eventi (eventi allo stesso istante contano una volta), compresi l'inizio e la fine della clip."
+}

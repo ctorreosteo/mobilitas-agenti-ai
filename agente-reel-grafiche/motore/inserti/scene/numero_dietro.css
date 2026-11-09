@@ -1,0 +1,9 @@
+.nd-wrap { position: absolute; inset: 0; }
+.nd-luce { position: absolute; border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(0, 58, 124, 0.55), rgba(0, 37, 82, 0.28) 55%, rgba(0, 26, 61, 0)); }
+.nd-num { position: absolute; line-height: 1; white-space: nowrap; font-weight: 800;
+  text-shadow: 0 4px 14px rgba(0, 26, 61, 0.72), 0 0 44px rgba(0, 26, 61, 0.58); }
+.nd-c { display: inline-block; text-align: center; line-height: 1; color: var(--panna); }
+.nd-pre, .nd-et { position: absolute; line-height: 1; white-space: nowrap; font-weight: 600; color: var(--panna);
+  text-shadow: 0 3px 10px rgba(0, 26, 61, 0.75), 0 0 30px rgba(0, 26, 61, 0.55); }
+.nd-pre { opacity: 0.92; }

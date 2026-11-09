@@ -1,0 +1,76 @@
+/* infografica_reel (agente reel-grafiche, fase 6, giro 4, 05/11/2026, in prova): infografiche vere nella finestra grande
+   o a tutto schermo. Fondo pieno (mai vetro sul video), icone lineari verdi in dischi blu notte, etichette panna o verdi */
+.inf-clip { position: absolute; overflow: hidden; }
+.inf-fondo { position: absolute; left: 0; top: 0; }
+.inf-dentro { position: absolute; width: 1080px; height: 1920px; }
+.inf-cam { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+.inf-griglia { position: absolute; }
+.inf-alone { position: absolute; left: 120px; top: 420px; width: 840px; height: 460px; border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(0, 92, 170, 0.30), rgba(0, 60, 130, 0.10) 60%, rgba(0, 40, 90, 0) 100%); }
+.inf-svg { position: absolute; left: 0; top: 0; overflow: visible; }
+.inf-linea { filter: drop-shadow(0 0 6px rgba(141, 255, 169, 0.9)) drop-shadow(0 0 18px rgba(114, 250, 147, 0.45)); }
+.inf-impulso { filter: drop-shadow(0 0 8px #FFFFFF) drop-shadow(0 0 20px rgba(114, 250, 147, 0.95)); }
+.inf-sopra { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+.inf-disco { position: absolute; box-sizing: border-box; background: radial-gradient(circle at 50% 35%, rgba(0, 58, 122, 1), rgba(0, 26, 61, 1) 75%);
+  box-shadow: inset 0 0 0 4px rgba(141, 255, 169, 0.85), 0 0 18px rgba(141, 255, 169, 0.55), 0 0 54px rgba(114, 250, 147, 0.22),
+  0 12px 30px rgba(0, 8, 22, 0.6); }
+.inf-disco-p { background: none; box-shadow: 0 0 22px rgba(141, 255, 169, 0.45), 0 0 60px rgba(114, 250, 147, 0.2); }
+.inf-acceso, .inf-luce { background: radial-gradient(circle at 50% 35%, #A9FFBE, #72FA93 70%); }
+.inf-luce { position: absolute; inset: 0; border-radius: 50%; box-shadow: 0 0 30px rgba(141, 255, 169, 0.9), 0 0 80px rgba(114, 250, 147, 0.45); }
+.inf-ic { position: absolute; overflow: visible; filter: drop-shadow(0 0 6px rgba(141, 255, 169, 0.7)); }
+.inf-acceso .inf-ic { filter: none; }
+.inf-pitto-box { position: absolute; }
+.inf-pitto { position: absolute; }
+.inf-pitto-l { position: absolute; left: 0; top: 0; width: 100%; height: 100%; }
+.inf-servier { position: absolute; }
+.inf-anello { position: absolute; overflow: visible; filter: drop-shadow(0 0 6px rgba(141, 255, 169, 0.9)) drop-shadow(0 0 20px rgba(114, 250, 147, 0.4)); }
+.inf-et { position: absolute; white-space: nowrap; font-weight: 800; letter-spacing: -0.02em; color: #F4F4F4;
+  text-shadow: 0 0 2px #0B1E3A, 0 0 18px rgba(244, 244, 244, 0.25), 0 4px 14px rgba(0, 8, 22, 0.8); }
+.inf-et-v { color: #72FA93; text-shadow: 0 0 2px #0B1E3A, 0 0 22px rgba(114, 250, 147, 0.75), 0 0 56px rgba(114, 250, 147, 0.35); }
+.inf-punto { position: absolute; border-radius: 50%; background: #8DFFA9; box-shadow: 0 0 10px rgba(141, 255, 169, 0.9); }
+.inf-scheda { position: absolute; box-sizing: border-box; background: linear-gradient(180deg, rgba(0, 58, 122, 1), rgba(0, 30, 70, 1));
+  box-shadow: inset 0 0 0 3px rgba(141, 255, 169, 0.6), inset 0 2px 0 rgba(255, 255, 255, 0.14), 0 0 22px rgba(114, 250, 147, 0.25),
+  0 12px 26px rgba(0, 8, 22, 0.55); }
+.inf-scheda-luce { position: absolute; inset: 0; border-radius: inherit; box-shadow: inset 0 0 0 5px #8DFFA9, 0 0 26px rgba(141, 255, 169, 0.85),
+  0 0 70px rgba(114, 250, 147, 0.4); background: linear-gradient(180deg, rgba(114, 250, 147, 0.22), rgba(114, 250, 147, 0.06)); }
+.inf-mv { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+.inf-barra { position: absolute; left: 0; top: 0; overflow: visible; filter: drop-shadow(0 2px 6px rgba(0, 8, 22, 0.8)); }
+
+/* giro 5 (Riccardo, 06/11/2026): profondità e luce. Dischi con spessore (gradiente, filo chiaro in alto, ombra di contatto,
+   bagliore più ampio); etichette in pillola sul video; card del logo */
+.inf-disco { background: radial-gradient(circle at 50% 28%, rgba(10, 78, 150, 1), rgba(0, 34, 80, 1) 62%, rgba(0, 20, 50, 1));
+  box-shadow: inset 0 0 0 4px rgba(141, 255, 169, 0.9), inset 0 6px 10px rgba(255, 255, 255, 0.18), inset 0 -10px 18px rgba(0, 8, 22, 0.55),
+  0 10px 0 rgba(0, 14, 36, 0.85), 0 16px 28px rgba(0, 8, 22, 0.7), 0 0 26px rgba(141, 255, 169, 0.55), 0 0 70px rgba(114, 250, 147, 0.25); }
+.inf-disco-p { background: none; box-shadow: 0 0 22px rgba(141, 255, 169, 0.45), 0 0 60px rgba(114, 250, 147, 0.2); }
+.inf-ic { filter: drop-shadow(0 0 7px rgba(141, 255, 169, 0.85)) drop-shadow(0 0 18px rgba(114, 250, 147, 0.35)); }
+.inf-pill { background: linear-gradient(180deg, rgba(0, 46, 100, 0.96), rgba(0, 26, 61, 0.96));
+  box-shadow: inset 0 0 0 3px rgba(141, 255, 169, 0.7), inset 0 3px 0 rgba(255, 255, 255, 0.14), 0 8px 0 rgba(0, 14, 36, 0.8),
+  0 14px 24px rgba(0, 8, 22, 0.6), 0 0 22px rgba(114, 250, 147, 0.3); text-shadow: none; }
+.inf-scheda { box-shadow: inset 0 0 0 3px rgba(141, 255, 169, 0.7), inset 0 4px 0 rgba(255, 255, 255, 0.16), 0 10px 0 rgba(0, 14, 36, 0.85),
+  0 18px 30px rgba(0, 8, 22, 0.65), 0 0 26px rgba(114, 250, 147, 0.3); }
+.inf-logo-img { position: absolute; }
+/* giro 5: attribuzione Servier (CC BY) sopra il video: piccola, panna, con un'ombra che la stacca dal B-roll */
+.inf-attr { position: absolute; font-size: 22px; font-weight: 600; color: #F4F4F4; opacity: 0.92; white-space: nowrap;
+  text-shadow: 0 0 3px rgba(0, 8, 22, 0.95), 0 2px 8px rgba(0, 8, 22, 0.8); }
+.inf-velo { position: absolute; inset: 0; border-radius: 50%; background: rgba(0, 12, 32, 0.66); pointer-events: none; }
+.inf-velo-pill { border-radius: inherit; background: rgba(0, 12, 32, 0.62); }
+/* giro 5 (direttore): i disegni Servier liberi hanno luce e ombra di contatto, non restano piatti sul video */
+.inf-servier { filter: drop-shadow(0 0 14px rgba(141, 255, 169, 0.55)) drop-shadow(0 10px 18px rgba(0, 8, 22, 0.7)); }
+
+/* 07/11/2026 (Riccardo, «nuova direzione»): il palco in alto (fascia alta, verticale-03…07). Pannello del sito con gli angoli
+   in basso arrotondati, spessore (ombra di contatto) e il filo di luce verde; parola chiave in gradiente (l'azzurro solo lì) */
+.inf-palco { position: absolute; overflow: hidden; border-radius: 40px; }
+/* 07/11/2026 sera: i puntini dentro la forma (prima erano un canvas su tutto il riquadro) */
+.inf-palco-punti { position: absolute; inset: 0; background-image: radial-gradient(circle, rgba(114, 250, 147, 0.13) 1.6px, transparent 2.4px);
+  background-size: 34px 34px; background-position: 17px 17px; }
+.inf-palco-filo { position: absolute; border-radius: 2px; background: #72FA93;
+  box-shadow: 0 0 10px rgba(114, 250, 147, 0.8), 0 0 28px rgba(114, 250, 147, 0.35); }
+.inf-chiave { background: linear-gradient(100deg, #72FA93 10%, #38BDF8 90%); -webkit-background-clip: text; background-clip: text;
+  color: transparent; text-shadow: none; filter: drop-shadow(0 0 16px rgba(114, 250, 147, 0.35)); }
+.inf-et-900 { font-weight: 900; }
+.inf-et-600 { font-weight: 600; }
+.inf-ind { position: absolute; }
+.inf-ind-s { position: absolute; }
+.inf-bar { position: absolute; overflow: hidden; background: rgba(244, 244, 244, 0.12); box-shadow: inset 0 0 0 2px rgba(244, 244, 244, 0.18); }
+.inf-bar-f { position: absolute; background: linear-gradient(180deg, #A9FFBE, #72FA93);
+  box-shadow: 0 0 16px rgba(114, 250, 147, 0.7); }

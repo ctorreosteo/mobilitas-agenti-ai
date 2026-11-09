@@ -1,0 +1,14 @@
+.cn-et { position: absolute; font-weight: 800; font-size: 66px; line-height: 1.04; color: #F4F4F4; letter-spacing: -0.02em; white-space: nowrap;
+  text-shadow: 0 0 14px rgba(244, 244, 244, 0.3), 0 4px 14px rgba(0, 26, 61, 0.85), 0 0 44px rgba(0, 26, 61, 0.6); }
+.cn-sx { text-align: right; }
+.cn-r { position: relative; height: 70px; }
+.cn-sx .dc-strato { left: auto; right: 0; }
+.cn-svg { position: absolute; left: 0; top: 0; overflow: visible; }
+.cn-linea { filter: drop-shadow(0 0 8px rgba(141, 255, 169, 0.95)) drop-shadow(0 0 26px rgba(114, 250, 147, 0.5)); }
+.cn-nodo { position: absolute; width: 96px; height: 96px; margin: -48px 0 0 -48px; border-radius: 50%; box-sizing: border-box;
+  border: 3px solid #A9FFBE; background: radial-gradient(circle, rgba(0, 52, 112, 0.97), rgba(0, 26, 61, 0.97));
+  box-shadow: 0 0 22px rgba(141, 255, 169, 0.85), 0 0 70px rgba(114, 250, 147, 0.4), inset 0 0 22px rgba(114, 250, 147, 0.4); }
+.cn-ico { position: absolute; left: 18px; top: 18px; width: 54px; height: 54px; overflow: visible; }
+.cn-pp { position: absolute; width: 600px; margin-left: -300px; text-align: center; font-weight: 800; font-size: 60px; color: #72FA93;
+  text-shadow: 0 0 2px #0B1E3A, 0 0 18px rgba(114, 250, 147, 0.6), 0 3px 12px rgba(11, 30, 58, 0.7); }
+.cn-pp .dc-strato { width: 600px; text-align: center; }

@@ -1,0 +1,13 @@
+{"clip": "verticale-05", "durata_s": 3.2,
+ "eventi": [
+  {"t": 0.03, "tipo": "entrata", "livello": "grande", "cosa": "pannello verde scuro con bordo sottile in alto, sopra la testa: dissolvenza in 4 fotogrammi (0,03-0,17)"},
+  {"t": 0.07, "tipo": "entrata", "livello": "micro", "cosa": "etichetta piccola in maiuscolo spaziato «• YOUR DAYS OF» in alto a sinistra nel pannello (0,07-0,10)"},
+  {"t": 0.47, "tipo": "entrata", "livello": "grande", "cosa": "riga 1 in maiuscolo grande, scritta lettera per lettera sulla voce: «EDITING IT YOURSELF» (0,47-0,75)"},
+  {"t": 1.42, "tipo": "stato", "cosa": "una linea di colore d'accento passa sulla riga 1 da sinistra a destra e la barra; la riga si spegne"},
+  {"t": 1.5, "tipo": "entrata", "livello": "grande", "cosa": "riga 2 scritta lettera per lettera: «HIRING AN EDITOR» (1,50-1,92)"},
+  {"t": 2.42, "tipo": "stato", "cosa": "la barra passa sulla riga 2 (2,42-2,58, 5 fotogrammi, con una punta chiara davanti)"},
+  {"t": 2.72, "tipo": "entrata", "livello": "grande", "cosa": "riga 3 scritta lettera per lettera: «NOT POSTING AT ALL» (2,72-3,00)"},
+  {"t": 3.0, "tipo": "stato", "cosa": "la barra comincia a passare sulla riga 3 (in corso a fine clip)"}
+ ],
+ "principali": 8, "principali_ogni_10s": 25.0, "micro": 1, "uscite": 0, "pausa_media_s": 0.36, "pausa_max_s": 0.95,
+ "note": "Nessuna uscita: il pannello resta per tutta la clip, della stessa misura (lo spazio per le tre righe c'è già dall'inizio). Il pannello comincia a comparire a 0,03 (prima è appena visibile): contato. Ignorati: sottotitoli (riquadro verde scuro con parole in un altro colore), colonna dei commenti, puntatore. Dubbio: le righe sono solo testo; contate come entrate «grandi» per la misura (riga in corpo grande), ma per le regole Mobilitas una riga di solo testo non è una grafica."}

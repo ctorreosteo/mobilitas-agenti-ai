@@ -1,0 +1,5 @@
+{"clip": "verticale-01", "durata_s": 0.57,
+ "eventi": [
+ ],
+ "principali": 0, "principali_ogni_10s": 0.0, "micro": 0, "uscite": 0, "pausa_media_s": 0.57, "pausa_max_s": 0.57,
+ "note": "Clip di 17 fotogrammi (0,57 s): finestra-app «Notizie», tre card dei ruoli e il testo sulla cucitura restano fermi per tutta la clip. Il testo sulla cucitura cambia a 0,13 s («articoli di blog per il sito» → «della mia azienda», dissolvenza in 2 fotogrammi a 30 fps): ha lo stesso stile dei sottotitoli di verticale-02 (stesso autore) e cambia sulla voce, quindi è contato come sottotitolo e NON come evento; se fosse un titolo sarebbe 1 stato. Il puntatore a mano fermo sulla finestra è il mouse del browser: ignorato. Clip troppo corta per misurare un ritmo: le pause coincidono con la durata."}

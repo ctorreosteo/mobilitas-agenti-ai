@@ -1,0 +1,24 @@
+.fl-frase { position: absolute; color: var(--panna); letter-spacing: -0.015em; white-space: normal;
+  text-shadow: 0 0 2px rgba(0, 26, 61, 0.6), 0 4px 14px rgba(0, 26, 61, 0.8), 0 0 44px rgba(0, 26, 61, 0.6); }
+.fl-dx { text-align: right; }
+.fl-centro { text-align: center; }
+.fl-w { display: inline-block; }
+.fl-k { color: #72FA93; font-weight: 800; text-shadow: 0 0 2px #0B1E3A, 0 2px 12px rgba(11, 30, 58, 0.65), 0 0 24px rgba(114, 250, 147, 0.35); }
+.fl-kp { color: var(--panna); font-weight: 900; text-shadow: 0 0 26px rgba(244, 244, 244, 0.35), 0 4px 14px rgba(0, 26, 61, 0.8); }
+.fl-vetro { position: absolute; box-sizing: border-box; overflow: hidden;
+  border: 2px solid rgba(244, 244, 244, 0.82);
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.20), rgba(255, 255, 255, 0.06) 45%, rgba(214, 226, 238, 0.08));
+  box-shadow: inset 0 2px 0 rgba(255, 255, 255, 0.9), inset 0 0 0 1px rgba(255, 255, 255, 0.10), inset 0 0 70px rgba(244, 244, 244, 0.16),
+    0 0 26px rgba(244, 244, 244, 0.30), 0 0 80px rgba(244, 244, 244, 0.10), 0 30px 70px rgba(0, 8, 22, 0.40); }
+.fl-riflesso { position: absolute; left: -20%; top: -60%; width: 80%; height: 120%;
+  background: linear-gradient(115deg, rgba(255, 255, 255, 0.24), rgba(255, 255, 255, 0) 60%); transform: rotate(8deg); }
+
+/* v3 «più luce» (direttore): vetro con la tinta blu (il verde sta sul blu), bordo panna sottile con la luce
+   in alto, alone verde solo in entrata, riflesso a banda diagonale sfumata */
+.fl-forte { border: 2px solid rgba(244, 244, 244, 0.7);
+  background: linear-gradient(160deg, rgba(0, 52, 112, 0.30), rgba(0, 37, 82, 0.22) 50%, rgba(0, 26, 61, 0.30));
+  box-shadow: inset 0 2px 0 rgba(244, 244, 244, 0.55), inset 0 0 60px rgba(0, 26, 61, 0.2), 0 0 26px rgba(114, 250, 147, 0.45),
+    0 30px 70px rgba(0, 8, 22, 0.45); }
+.fl-forte .fl-riflesso { left: -30%; top: -40%; width: 18%; height: 180%; transform: rotate(25deg);
+  background: linear-gradient(90deg, rgba(244, 244, 244, 0), rgba(244, 244, 244, 0.22) 50%, rgba(244, 244, 244, 0)); filter: blur(10px); }
+.fl-filo { display: none; }

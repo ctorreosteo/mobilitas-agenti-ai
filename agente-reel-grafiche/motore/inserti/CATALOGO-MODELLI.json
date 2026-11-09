@@ -1,0 +1,2625 @@
+{
+ "_cosa": "Catalogo dei modelli grafici (fase 7c, 01/11/2026). Lo legge il motore (motore/motore/catalogo.py). Si aggiunge e basta.",
+ "condizioni": {
+  "zona_libera": "la zona dove cade l'elemento e libera: niente mani, oggetti o modellini (scena.controlla: zona libera)",
+  "vetro_zona_ricca": "il vetro sta davanti a una zona chiara o ricca dello studio (scena.controlla: luminanza e dettaglio sotto il vetro)",
+  "tempo_detto": "nelle parole dette durante l'elemento c'e un tempo o una durata (scena.controlla: tempo detto)"
+ },
+ "modelli": [
+  {
+   "id": "camera-viva",
+   "nome": "Camera viva (punch-in)",
+   "famiglia": "camera e passaggi",
+   "motore": {
+    "piatto": [
+     "camera"
+    ]
+   },
+   "cosa_fa": "lui a tutto schermo con la camera che si muove: avvicinamenti, tagli netti, piccola spinta continua, sfondo che si sfoca",
+   "quando": "fra un momento grafico e l'altro; frasi forti senza grafica; dare respiro",
+   "quando_no": "mai per più di 2-3 momenti di fila senza una grafica",
+   "condizioni": [],
+   "reference": "gadzhi-04, martell-02",
+   "ultimo_voto": "8 (campionario v2, minimo 7)",
+   "esempio_da": [
+    "campionario/v2/01-camera-viva.mp4",
+    4.36
+   ],
+   "stato": "attivo",
+   "origine": "campionario v1 e v2",
+   "variante_di": null,
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/camera-viva.jpg"
+  },
+  {
+   "id": "transizione-spinta",
+   "nome": "Transizione a spinta",
+   "famiglia": "camera e passaggi",
+   "motore": {
+    "piatto": [
+     "spinta"
+    ]
+   },
+   "cosa_fa": "una lastra blu notte attraversa davanti alla spinta di camera",
+   "quando": "cambio di argomento dentro lo stesso girato",
+   "quando_no": "più di una volta per video",
+   "condizioni": [],
+   "reference": "martell-02",
+   "ultimo_voto": "7 (campionario v2)",
+   "esempio_da": [
+    "campionario/v2/09a-transizione-spinta.mp4",
+    2.28
+   ],
+   "stato": "attivo",
+   "origine": "campionario v1 e v2",
+   "variante_di": null,
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/transizione-spinta.jpg"
+  },
+  {
+   "id": "transizione-zoom",
+   "nome": "Transizione a zoom",
+   "famiglia": "camera e passaggi",
+   "motore": {
+    "camera": [
+     "mosse"
+    ]
+   },
+   "cosa_fa": "zoom rapido sugli occhi con la sfocatura di movimento e un piccolo superamento",
+   "quando": "una parola che pesa («dico»)",
+   "quando_no": "su frasi lunghe",
+   "condizioni": [],
+   "reference": "gadzhi-04",
+   "ultimo_voto": "7 (campionario v2, minimo 6)",
+   "esempio_da": [
+    "campionario/v2/09b-transizione-zoom.mp4",
+    3.05
+   ],
+   "stato": "attivo",
+   "origine": "campionario v1 e v2",
+   "variante_di": null,
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/transizione-zoom.jpg"
+  },
+  {
+   "id": "lampo",
+   "nome": "Taglio con lampo",
+   "famiglia": "camera e passaggi",
+   "motore": {
+    "piatto": [
+     "lampo"
+    ]
+   },
+   "cosa_fa": "lampo di luce panna/verde di 3-4 frame fra lui e una scena scura",
+   "quando": "entrata in una scena scura a tutto schermo",
+   "quando_no": "fra due momenti sul girato",
+   "condizioni": [],
+   "reference": "martell-02",
+   "ultimo_voto": "parte dei momenti a 7 (YT_POSTURA_32)",
+   "esempio_da": [
+    "videos/YT_POSTURA_32/consegna/YT_POSTURA_32.mp4",
+    165.44
+   ],
+   "stato": "attivo",
+   "origine": "YT_POSTURA_32",
+   "variante_di": null,
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/lampo.jpg"
+  },
+  {
+   "id": "lui-nel-cerchio",
+   "nome": "Lui nel cerchio",
+   "famiglia": "camera e passaggi",
+   "motore": {
+    "piatto": [
+     "finestra.cerchio"
+    ]
+   },
+   "cosa_fa": "il quadro di lui si stacca, diventa un rettangolo tondo e poi un cerchio nell'angolo con l'anello verde; dietro entra la scena scura con il disegno",
+   "quando": "passaggio da lui a una scena scura con un disegno Servier mentre lui continua a parlare",
+   "quando_no": "senza una scena scura dietro",
+   "condizioni": [],
+   "reference": "gadzhi-09",
+   "ultimo_voto": "7 (campionario v3)",
+   "esempio_da": [
+    "campionario/v3/06-cerchio.mp4",
+    3.44
+   ],
+   "stato": "attivo",
+   "origine": "campionario v3",
+   "variante_di": null,
+   "nota": "fase 7c: la finestra si compone SOPRA gli strati del disegno (scena.componi), così lo scheletro entra mentre lui si stringe; prima entrava a cerchio già nell'angolo",
+   "esempio": "motore/inserti/catalogo/lui-nel-cerchio.jpg"
+  },
+  {
+   "id": "finestra-inclinata",
+   "nome": "Finestra inclinata sul fondo del brand",
+   "famiglia": "camera e passaggi",
+   "motore": {
+    "piatto": [
+     "finestra.inclina"
+    ]
+   },
+   "cosa_fa": "il quadro diventa una finestra inclinata sul fondo del brand, con spazio grande per un testo forte",
+   "quando": "call to action, link in descrizione",
+   "quando_no": "nei momenti di contenuto",
+   "condizioni": [],
+   "reference": "martell-06",
+   "ultimo_voto": "8 (MR_POSTURA_01_v4, direttore, 02/11/2026)",
+   "esempio_da": [
+    "videos/MR_POSTURA_01_v3/renders/MR_POSTURA_01_v3_FINALE.mp4",
+    86.0
+   ],
+   "stato": "attivo",
+   "origine": "campionario v2, MR_POSTURA_01_v3",
+   "variante_di": null,
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/finestra-inclinata.jpg"
+  },
+  {
+   "id": "b-roll",
+   "nome": "B-roll pieno o in sequenza",
+   "famiglia": "camera e passaggi",
+   "motore": {
+    "regia": [
+     "broll"
+    ]
+   },
+   "cosa_fa": "clip della libreria a tutto schermo o in sequenza, rallentate all'83%, senza audio, con un fruscio",
+   "quando": "quando lui descrive una situazione",
+   "quando_no": "clip escluse dall'indice; mai sopra testo",
+   "condizioni": [],
+   "reference": "—",
+   "ultimo_voto": "—",
+   "esempio_da": [
+    "videos/YT_POSTURA_32/consegna/YT_POSTURA_32.mp4",
+    117.0
+   ],
+   "stato": "attivo",
+   "origine": "prima generazione, YT_POSTURA_32",
+   "variante_di": null,
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/b-roll.jpg"
+  },
+  {
+   "id": "frase-sul-corpo",
+   "nome": "Frase sul corpo",
+   "famiglia": "testo sulla scena",
+   "motore": {
+    "modello": "parole"
+   },
+   "cosa_fa": "una o due parole enormi (800-900) sul busto, parola per parola sulla voce, le mani passano davanti alle lettere",
+   "quando": "aggancio, una parola chiave da far pesare",
+   "quando_no": "frasi lunghe; quando le mani coprono troppo",
+   "condizioni": [],
+   "reference": "martell-02",
+   "ultimo_voto": "8 (MR_POSTURA_01_v4, direttore, 02/11/2026)",
+   "esempio_da": [
+    "videos/MR_POSTURA_01_v4/consegna/MR_POSTURA_01_v4.mp4",
+    1.4
+   ],
+   "stato": "attivo",
+   "origine": "campionario v1 e v2",
+   "variante_di": null,
+   "nota": "fase 7c: ogni parola nasce sfocata e al 40% (5 frame) mentre sale dalla maschera: il primo frame non mostra piu solo le cime delle aste («U» -> «- -», direttore v4)",
+   "esempio": "motore/inserti/catalogo/frase-sul-corpo.jpg"
+  },
+  {
+   "id": "numero-dietro",
+   "nome": "Numero gigante dietro di lui",
+   "famiglia": "numeri",
+   "motore": {
+    "modello": "numero_dietro"
+   },
+   "cosa_fa": "un numero detto da lui, enorme, dietro la persona (sagoma di Vision), che conta e frena sulla parola",
+   "quando": "un numero detto (recensioni, addominali, ore)",
+   "quando_no": "numeri non detti, percentuali di risultato",
+   "condizioni": [],
+   "reference": "martell-02, gadzhi-03",
+   "ultimo_voto": "8 (MR_POSTURA_01_v4, direttore, 02/11/2026)",
+   "esempio_da": [
+    "videos/MR_POSTURA_01_v4/consegna/MR_POSTURA_01_v4.mp4",
+    18.5
+   ],
+   "stato": "attivo",
+   "origine": "campionario v1 e v2",
+   "variante_di": null,
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/numero-dietro.jpg"
+  },
+  {
+   "id": "titolo-dietro",
+   "nome": "Titolo dietro di lui",
+   "famiglia": "testo sulla scena",
+   "motore": {
+    "modello": "titolo_dietro"
+   },
+   "cosa_fa": "il titolo di un capitolo passa dietro la persona (sagoma di Vision): minuscolo con il punto e la parola chiave in gradiente verde → azzurro, come il sito",
+   "quando": "inizio di un capitolo, con le sue parole",
+   "quando_no": "testi lunghi; quando lui copre più del 15%",
+   "condizioni": [],
+   "reference": "martell-02",
+   "ultimo_voto": "7 (YT_POSTURA_32)",
+   "esempio_da": [
+    "videos/YT_POSTURA_32/consegna/YT_POSTURA_32.mp4",
+    63.1
+   ],
+   "stato": "attivo",
+   "origine": "prima generazione (Pillow), poi YT_POSTURA_32",
+   "variante_di": null,
+   "nota": "dal 01/11/2026 forma del sito (brand.json -> titoli): minuscolo con il punto, -0,045 em, interlinea 0,92, `dati.chiave` = parole in gradiente (default l'ultima riga). Il posto dietro di lui lo misura impagina.piazza_titolo sulle righe minuscole; se non trova un posto coperto 4-12% resta sulla parete (si segnala)",
+   "esempio": "motore/inserti/catalogo/titolo-dietro.jpg"
+  },
+  {
+   "id": "titolo-dietro-maiuscolo",
+   "nome": "Titolo dietro di lui (maiuscolo)",
+   "famiglia": "testo sulla scena",
+   "motore": {
+    "modello": "titolo_dietro",
+    "dati": {
+     "forma": "maiuscolo"
+    }
+   },
+   "cosa_fa": "la versione di YT_POSTURA_32: titolo in MAIUSCOLO 900, tutto panna, passa dietro la persona",
+   "quando": "—",
+   "quando_no": "—",
+   "condizioni": [],
+   "reference": "martell-02",
+   "ultimo_voto": "7 (YT_POSTURA_32)",
+   "esempio_da": [
+    "videos/YT_POSTURA_32/consegna/YT_POSTURA_32.mp4",
+    63.1
+   ],
+   "stato": "variante",
+   "origine": "YT_POSTURA_32 (principale fino al 31/10/2026)",
+   "variante_di": "titolo-dietro",
+   "nota": "variante dal 01/11/2026: il titolo principale segue il sito (minuscolo con il punto e la chiave in gradiente)",
+   "esempio": "motore/inserti/catalogo/titolo-dietro-maiuscolo.jpg"
+  },
+  {
+   "id": "schermata",
+   "nome": "Schermata su fondo blu vero",
+   "famiglia": "scene scure",
+   "motore": {
+    "modello": "schermata",
+    "dati": {
+     "fondo": "pieno"
+    }
+   },
+   "cosa_fa": "frase a tutto schermo su fondo blu pieno con il retino, parole che nascono sfocate e si accendono, colpo di scala sulla chiave",
+   "quando": "frasi che chiudono un passaggio",
+   "quando_no": "più di due per video",
+   "condizioni": [],
+   "reference": "martell-07",
+   "ultimo_voto": "8 (MR_POSTURA_01_v4, direttore, 02/11/2026)",
+   "esempio_da": [
+    "videos/MR_POSTURA_01_v4/consegna/MR_POSTURA_01_v4.mp4",
+    41.9
+   ],
+   "stato": "attivo",
+   "origine": "campionario v3 (principale dal 01/11/2026)",
+   "variante_di": null,
+   "nota": "dal 01/11/2026: fondo del sito, parole minuscole con il punto, chiave in gradiente con la luce verde; chiavi di fila sulla stessa riga con un gradiente continuo",
+   "esempio": "motore/inserti/catalogo/schermata.jpg"
+  },
+  {
+   "id": "schermata-velo",
+   "nome": "Schermata sul velo (classica)",
+   "famiglia": "scene scure",
+   "motore": {
+    "modello": "schermata"
+   },
+   "cosa_fa": "frase a tutto schermo su un velo blu sopra il girato sfocato, parole che salgono dalle maschere, filigrana MOBILITAS",
+   "quando": "quando si vuole lasciare intravedere lui",
+   "quando_no": "—",
+   "condizioni": [],
+   "reference": "martell-07",
+   "ultimo_voto": "6 (YT_POSTURA_32)",
+   "esempio_da": [
+    "videos/YT_POSTURA_32/consegna/YT_POSTURA_32.mp4",
+    320.8
+   ],
+   "stato": "variante",
+   "origine": "campionario v1 e v2, YT_POSTURA_32",
+   "variante_di": "schermata",
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/schermata-velo.jpg"
+  },
+  {
+   "id": "frase-chiave-vetro",
+   "nome": "Frase chiave nel vetro (più luce)",
+   "famiglia": "testo sulla scena",
+   "motore": {
+    "modello": "frase_luce",
+    "dati": {
+     "vetro": {
+      "forte": true
+     }
+    }
+   },
+   "cosa_fa": "frase parola per parola dentro un vetro che sfoca lo studio, tinta blu, bordo di luce, riflesso diagonale, alone verde in entrata",
+   "quando": "le frasi chiave (versione B scelta da Riccardo)",
+   "quando_no": "davanti al muro scuro: il vetro si legge come un riquadro",
+   "condizioni": [
+    "vetro_zona_ricca"
+   ],
+   "reference": "martell-06",
+   "ultimo_voto": "7 (campionario v3)",
+   "esempio_da": [
+    "campionario/v3/08-vetro-luce.mp4",
+    11.67
+   ],
+   "stato": "attivo",
+   "origine": "campionario v3",
+   "variante_di": null,
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/frase-chiave-vetro.jpg"
+  },
+  {
+   "id": "frase-chiave-vetro-classico",
+   "nome": "Frase chiave nel vetro (classica)",
+   "famiglia": "testo sulla scena",
+   "motore": {
+    "modello": "frase_luce",
+    "dati": {
+     "vetro": {}
+    }
+   },
+   "cosa_fa": "la versione di YT_POSTURA_32: vetro chiaro che schiarisce lo studio",
+   "quando": "—",
+   "quando_no": "—",
+   "condizioni": [],
+   "reference": "martell-06",
+   "ultimo_voto": "6-7 (YT_POSTURA_32)",
+   "esempio_da": [
+    "videos/YT_POSTURA_32/consegna/YT_POSTURA_32.mp4",
+    188.5
+   ],
+   "stato": "variante",
+   "origine": "YT_POSTURA_32",
+   "variante_di": "frase-chiave-vetro",
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/frase-chiave-vetro-classico.jpg"
+  },
+  {
+   "id": "frase-chiave-pannello",
+   "nome": "Frase chiave nel pannello (versione A)",
+   "famiglia": "testo sulla scena",
+   "motore": {
+    "modello": "frase_chiave"
+   },
+   "cosa_fa": "pannello blu al bordo del quadro con la frase che sale riga per riga",
+   "quando": "—",
+   "quando_no": "Riccardo ha scelto la versione B (vetro)",
+   "condizioni": [],
+   "reference": "martell-07",
+   "ultimo_voto": "— (campione tappa 2)",
+   "esempio_da": [
+    "videos/YT_POSTURA_32/renders/campione/frase-A.mp4",
+    3.0
+   ],
+   "stato": "variante",
+   "origine": "campione di YT_POSTURA_32",
+   "variante_di": "frase-chiave-vetro",
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/frase-chiave-pannello.jpg"
+  },
+  {
+   "id": "equazione",
+   "nome": "Equazione detta",
+   "famiglia": "testo sulla scena",
+   "motore": {
+    "modello": "equazione"
+   },
+   "cosa_fa": "testo laterale: i termini detti si decifrano sulla voce, + e = verdi, esce cancellandosi all'indietro",
+   "quando": "due o tre cose dette che si sommano in una conseguenza",
+   "quando_no": "sulla pianta o sul legno: sempre sulla parete libera con il velo blu",
+   "condizioni": [],
+   "reference": "gadzhi-10, gadzhi-13",
+   "ultimo_voto": "8 (MR_POSTURA_01_v4, direttore, 02/11/2026)",
+   "esempio_da": [
+    "videos/MR_POSTURA_01_v4/consegna/MR_POSTURA_01_v4.mp4",
+    38.3
+   ],
+   "stato": "attivo",
+   "origine": "campionario v3",
+   "variante_di": null,
+   "nota": "fase 7c: decifra = 'minuscole' per i termini lunghi (le maiuscole e i simboli provvisori allargano la parola di un terzo)",
+   "esempio": "motore/inserti/catalogo/equazione.jpg"
+  },
+  {
+   "id": "equazione-finestra",
+   "nome": "Equazione detta (ads 9:16, nella finestra)",
+   "famiglia": "testo sulla scena",
+   "motore": {
+    "modello": "equazione_ads",
+    "dati": {
+     "modo": "finestra",
+     "rett": "la finestra grande in alto, misurata sui pixel per inquadratura",
+     "corpo": 84
+    }
+   },
+   "cosa_fa": "l'equazione detta dentro la finestra grande in alto del video ads, al posto del B-roll: termini centrati che si decifrano sulla parola (solo lettere), + e = verdi, risultato verde con colpo di luce e barra che cresce; il blocco resta centrato in ogni stato; esce cancellandosi all'indietro",
+   "quando": "ads 9:16: quando la voce mette insieme due cose che danno un risultato («sciogliere la tensione + liberare il movimento = sollievo»)",
+   "quando_no": "termini piu larghi di ~930 px a corpo 84; inquadrature di schema C",
+   "condizioni": [],
+   "reference": "gadzhi-10/13",
+   "ultimo_voto": "8 (AD_CERVICALGIA_AI-Barontini, direttore, giro 2, 04/11/2026; giro 1: 7)",
+   "esempio_da": [
+    "videos/AD_CERVICALGIA_AI-Barontini/anteprime/AD_CERVICALGIA_lavoro-intero.mp4",
+    17.2
+   ],
+   "stato": "attivo",
+   "origine": "laboratorio, fase 3 notte (04/11/2026), AD_CERVICALGIA_AI-Barontini",
+   "variante_di": "equazione",
+   "nota": "approvata da Riccardo il 04/11/2026 (fase 3 ads, dopo l'anteprima completa). Modello nuovo in motore/inserti/scene/ (il modello di partenza resta com'e); riconosciuta da catalogo.identifica.",
+   "esempio": "motore/inserti/catalogo/equazione-finestra.jpg"
+  },
+  {
+   "id": "equazione-finestra-v2",
+   "nome": "Equazione detta (ads 9:16, nella finestra), variante 2",
+   "famiglia": "testo sulla scena",
+   "motore": {
+    "modello": "equazione_ads2",
+    "dati": {
+     "modo": "finestra",
+     "rett": "la finestra grande in alto, misurata sui pixel per inquadratura",
+     "corpo": 84
+    },
+    "usa": [
+     "equazione_ads"
+    ]
+   },
+   "cosa_fa": "l'equazione detta dentro la finestra grande in alto del video ads, al posto del B-roll: termini centrati che si decifrano sulla parola (solo lettere), + e = verdi, risultato verde con colpo di luce e barra che cresce; il blocco resta centrato in ogni stato; esce cancellandosi all'indietro Variante 2: il fondo pieno della finestra entra a taglio al primo fotogramma e nessun termine parte prima del fotogramma dopo (mai testo sopra il B-roll). Giro 3: uscita «cancella» a parole intere, t_via calcolato dal modello: l'ultimo fotogramma mostra la prima parola intera, mai una parola a meta.",
+   "quando": "ads 9:16: quando la voce mette insieme due cose che danno un risultato («sciogliere la tensione + liberare il movimento = sollievo»)",
+   "quando_no": "termini piu larghi di ~930 px a corpo 84; inquadrature di schema C",
+   "condizioni": [],
+   "reference": "gadzhi-10/13",
+   "ultimo_voto": "6 (AD_CERVICALGIA, direttore cieco, giro 3, 04/11/2026; giri 1 e 2: 6): l'uscita va a parole intere come chiesto; il direttore vorrebbe l'uscita a taglio con l'equazione intera (l'uscita «cancella» e una scelta approvata). Sotto 7: tenuta come migliore versione (report collaudo)",
+   "esempio_da": [
+    "videos/AD_CERVICALGIA_AI-Barontini-varianti/anteprime/AD_CERVICALGIA_AI-Barontini-varianti_lavoro-intero.mp4",
+    17.2
+   ],
+   "stato": "variante",
+   "origine": "laboratorio, fase 5 (04/11/2026): correzione di un difetto trovato dal direttore nella fase 4",
+   "variante_di": "equazione-finestra",
+   "nota": "IN PROVA: diventa attiva solo con l'ok di Riccardo; fino ad allora i piani dei nuovi ads la usano al posto di «equazione-finestra», segnata «in prova». Correzione: il fondo pieno della finestra entra a taglio al primo fotogramma e nessun termine parte prima del fotogramma dopo (mai testo sopra il B-roll). Modello motore/inserti/scene/equazione_ads2.js (copia di quello di partenza, che resta com'e). Giro 3: uscita «cancella» a parole intere, t_via calcolato dal modello: l'ultimo fotogramma mostra la prima parola intera, mai una parola a meta.",
+   "in_prova": true,
+   "esempio": "motore/inserti/catalogo/equazione-finestra-v2.jpg"
+  },
+  {
+   "id": "connettore",
+   "nome": "Connettore",
+   "famiglia": "testo sulla scena",
+   "motore": {
+    "modello": "connettore"
+   },
+   "cosa_fa": "due etichette basse unite da una linea luminosa che si disegna dal centro, nodo con due anelli e le sue parole sotto",
+   "quando": "due cose che lui lega («vanno di pari passo», «dipende da»)",
+   "quando_no": "quando sotto ci sono mani, oggetti o modellini",
+   "condizioni": [
+    "zona_libera"
+   ],
+   "reference": "gadzhi-11",
+   "ultimo_voto": "7 (campionario v3)",
+   "esempio_da": [
+    "campionario/v3/04-connettore.mp4",
+    4.94
+   ],
+   "stato": "attivo",
+   "origine": "campionario v3",
+   "variante_di": null,
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/connettore.jpg"
+  },
+  {
+   "id": "linea-tempo",
+   "nome": "Linea del tempo luminosa",
+   "famiglia": "numeri",
+   "motore": {
+    "modello": "linea_tempo"
+   },
+   "cosa_fa": "scena scura: un nodo verde disegna una linea mentre la percorre, la camera lo segue inclinata, pillole con le sue parole",
+   "quando": "solo quando lui dice un tempo o una durata",
+   "quando_no": "per inventare un dato o una curva",
+   "condizioni": [
+    "tempo_detto"
+   ],
+   "reference": "gadzhi-07",
+   "ultimo_voto": "6 (campionario v3)",
+   "esempio_da": [
+    "campionario/v3/02-linea-tempo.mp4",
+    4.04
+   ],
+   "stato": "attivo",
+   "origine": "campionario v3",
+   "variante_di": null,
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/linea-tempo.jpg"
+  },
+  {
+   "id": "chip",
+   "nome": "Chip con nome e ruolo",
+   "famiglia": "testo sulla scena",
+   "motore": {
+    "grafica": [
+     "chip"
+    ]
+   },
+   "cosa_fa": "nome e ruolo di chi parla; dal 01/11/2026 con il pittogramma su un disco panna",
+   "quando": "alla presentazione",
+   "quando_no": "nomi non confermati dai materiali",
+   "condizioni": [],
+   "reference": "—",
+   "ultimo_voto": "—",
+   "esempio_da": [
+    "videos/YT_POSTURA_32/consegna/YT_POSTURA_32.mp4",
+    52.0
+   ],
+   "stato": "attivo",
+   "origine": "prima generazione",
+   "variante_di": null,
+   "nota": "regia.chip.stile: v3 = pittogramma su disco panna, nome 700, ruolo al 70% (v2 resta per i video vecchi)",
+   "esempio": "motore/inserti/catalogo/chip.jpg"
+  },
+  {
+   "id": "etichette-barrate",
+   "nome": "Etichette barrate (più luce)",
+   "famiglia": "liste",
+   "motore": {
+    "modello": "etichette_luce",
+    "dati": {
+     "luce": "forte"
+    }
+   },
+   "cosa_fa": "pillole piene di luce verde con il testo blu notte; la barra blu notte le barra sulla parola e restano accese",
+   "quando": "i tentativi o le idee che lui smonta",
+   "quando_no": "cose che non smonta",
+   "condizioni": [],
+   "reference": "martell-01",
+   "ultimo_voto": "8 (MR_POSTURA_01_v4, direttore, 02/11/2026)",
+   "esempio_da": [
+    "videos/MR_POSTURA_01_v4/consegna/MR_POSTURA_01_v4.mp4",
+    68.2
+   ],
+   "stato": "attivo",
+   "origine": "campionario v3 (principale dal 01/11/2026)",
+   "variante_di": null,
+   "nota": "fase 7c: barra = 'panna' -> barra panna che sporge e pillola barrata che scende al 38% e perde colore (sulla pillola verde la barra blu notte non si distingueva)",
+   "esempio": "motore/inserti/catalogo/etichette-barrate.jpg"
+  },
+  {
+   "id": "etichette-barrate-classiche",
+   "nome": "Etichette barrate (classiche)",
+   "famiglia": "liste",
+   "motore": {
+    "modello": "etichette_luce",
+    "dati": {
+     "luce": "classica"
+    }
+   },
+   "cosa_fa": "pillole blu notte con bordo e bagliore verdi; barrate si spengono",
+   "quando": "—",
+   "quando_no": "—",
+   "condizioni": [],
+   "reference": "martell-01",
+   "ultimo_voto": "7 (YT_POSTURA_32)",
+   "esempio_da": [
+    "videos/YT_POSTURA_32/consegna/YT_POSTURA_32.mp4",
+    251.7
+   ],
+   "stato": "variante",
+   "origine": "YT_POSTURA_32",
+   "variante_di": "etichette-barrate",
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/etichette-barrate-classiche.jpg"
+  },
+  {
+   "id": "etichette-barrate-finestra",
+   "nome": "Etichette barrate (ads 9:16, nella finestra)",
+   "famiglia": "liste",
+   "motore": {
+    "modello": "etichette_ads",
+    "usa": [
+     "etichette_luce"
+    ],
+    "dati": {
+     "modo": "finestra",
+     "rett": "la finestra grande in alto, misurata sui pixel",
+     "luce": "forte",
+     "barra": "panna",
+     "barra_px": 10,
+     "barra_resta": 0.85,
+     "barrata": 0.55
+    }
+   },
+   "cosa_fa": "le pillole di etichette-barrate dentro la finestra grande in alto del video ads (schemi A e B), al posto del B-roll, con lo stesso rettangolo e gli stessi angoli; fondo del sito; barra panna piena lunga quanto la pillola che resta all'85%, pillola barrata al 55%",
+   "quando": "ads 9:16: due o tre cose che la voce nega o smonta («niente medicine», «niente esercizi»), su un'inquadratura di schema A o B",
+   "quando_no": "inquadrature di schema C; testi più larghi di 950 px al corpo minimo (1,5 volte il sottotitolo)",
+   "condizioni": [],
+   "reference": "martell-01",
+   "ultimo_voto": "8 (AD_CERVICALGIA_AI-Barontini, direttore, giro 2, 03/11/2026)",
+   "esempio_da": [
+    "videos/AD_CERVICALGIA_AI-Barontini/anteprime/AD_CERVICALGIA_V1-finestra-intero.mp4",
+    37.57
+   ],
+   "stato": "attivo",
+   "origine": "laboratorio, fase 1 (03/11/2026), AD_CERVICALGIA_AI-Barontini inquadratura 8",
+   "variante_di": "etichette-barrate",
+   "nota": "approvata da Riccardo il 03/11/2026 (fase 1 ads, V1). Modello motore/inserti/scene/etichette_ads.js (chiama etichette_luce senza modificarlo); pagina 1080x1920 da motore/motore/reel_grafiche.py; barra panna; riconosciuta da catalogo.identifica.",
+   "esempio": "motore/inserti/catalogo/etichette-barrate-finestra.jpg"
+  },
+  {
+   "id": "etichette-barrate-finestra-v2",
+   "nome": "Etichette barrate (ads 9:16, nella finestra), variante 2",
+   "famiglia": "liste",
+   "motore": {
+    "modello": "etichette_ads2",
+    "usa": [
+     "etichette_luce",
+     "etichette_ads"
+    ],
+    "dati": {
+     "modo": "finestra",
+     "rett": "la finestra grande in alto, misurata sui pixel",
+     "luce": "forte",
+     "barra": "panna",
+     "barra_px": 10,
+     "barra_resta": 0.85,
+     "barrata": 0.55
+    }
+   },
+   "cosa_fa": "le pillole di etichette-barrate dentro la finestra grande in alto del video ads (schemi A e B), al posto del B-roll, con lo stesso rettangolo e gli stessi angoli; fondo del sito; barra panna piena lunga quanto la pillola che resta all'85%, pillola barrata al 55% Variante 2: il fondo entra ed esce a taglio, le pillole dentro il fondo pieno (niente doppia immagine con il B-roll). Giro 3: le pillole restano nitide fino al taglio (niente uscita sfocata).",
+   "quando": "ads 9:16: due o tre cose che la voce nega o smonta («niente medicine», «niente esercizi»), su un'inquadratura di schema A o B",
+   "quando_no": "inquadrature di schema C; testi più larghi di 950 px al corpo minimo (1,5 volte il sottotitolo)",
+   "condizioni": [],
+   "reference": "martell-01",
+   "ultimo_voto": "7 (AD_CERVICALGIA, direttore cieco, giro 3, 04/11/2026; giri 1 e 2: 6): uscita nitida fino al taglio",
+   "esempio_da": [
+    "videos/AD_CERVICALGIA_AI-Barontini-varianti/anteprime/AD_CERVICALGIA_AI-Barontini-varianti_lavoro-intero.mp4",
+    37.57
+   ],
+   "stato": "variante",
+   "origine": "laboratorio, fase 5 (04/11/2026): correzione di un difetto trovato dal direttore nella fase 4",
+   "variante_di": "etichette-barrate-finestra",
+   "nota": "IN PROVA: diventa attiva solo con l'ok di Riccardo; fino ad allora i piani dei nuovi ads la usano al posto di «etichette-barrate-finestra», segnata «in prova». Correzione: il fondo entra ed esce a taglio, le pillole dentro il fondo pieno (niente doppia immagine con il B-roll). Modello motore/inserti/scene/etichette_ads2.js (copia di quello di partenza, che resta com'e). Giro 3: le pillole restano nitide fino al taglio (niente uscita sfocata).",
+   "in_prova": true,
+   "esempio": "motore/inserti/catalogo/etichette-barrate-finestra-v2.jpg"
+  },
+  {
+   "id": "etichette-barrate-9x16",
+   "nome": "Etichette barrate (ads 9:16, tutto schermo)",
+   "famiglia": "liste",
+   "motore": {
+    "modello": "etichette_ads",
+    "usa": [
+     "etichette_luce"
+    ],
+    "dati": {
+     "modo": "pieno",
+     "luce": "forte",
+     "barra": "panna",
+     "barra_px": 10,
+     "barra_resta": 0.85,
+     "barrata": 0.55
+    }
+   },
+   "cosa_fa": "le pillole di etichette-barrate in colonna, più grandi, su tutto il quadro 9:16 (fondo del sito), sottotitoli coperti per la durata della grafica",
+   "quando": "ads 9:16, quando la lista ha bisogno di tutto lo schermo",
+   "quando_no": "inquadrature con le animazioni 3D; quando i sottotitoli devono restare",
+   "condizioni": [],
+   "reference": "martell-01",
+   "ultimo_voto": "6 (AD_CERVICALGIA_AI-Barontini, direttore, giro 2, 03/11/2026: limite di impostazione)",
+   "esempio_da": [
+    "videos/AD_CERVICALGIA_AI-Barontini/anteprime/AD_CERVICALGIA_V2-pieno-intero.mp4",
+    37.57
+   ],
+   "stato": "variante",
+   "origine": "laboratorio, fase 1 (03/11/2026), AD_CERVICALGIA_AI-Barontini inquadratura 8",
+   "variante_di": "etichette-barrate",
+   "nota": "variante (fase 1 ads, 03/11/2026): «tutto schermo» solo quando il contenuto riempie davvero lo schermo; con una o due pillole si usa etichette-barrate-finestra. Modello etichette_ads; riconosciuta da catalogo.identifica.",
+   "esempio": "motore/inserti/catalogo/etichette-barrate-9x16.jpg"
+  },
+  {
+   "id": "etichette-barrate-9x16-sottotitoli",
+   "nome": "Etichette barrate (ads 9:16, tutto schermo con i sottotitoli visibili)",
+   "famiglia": "liste",
+   "motore": {
+    "modello": "etichette_ads",
+    "usa": [
+     "etichette_luce"
+    ],
+    "dati": {
+     "modo": "pieno",
+     "fascia": [
+      921,
+      1013
+     ],
+     "luce": "forte",
+     "barra": "panna",
+     "barra_px": 10,
+     "barra_resta": 0.85,
+     "barrata": 0.55
+    }
+   },
+   "cosa_fa": "come etichette-barrate-9x16, ma la fascia dei sottotitoli resta trasparente (si vedono i sottotitoli del video base); le pillole stanno sopra la fascia",
+   "quando": "ads 9:16 tutto schermo quando i sottotitoli devono restare",
+   "quando_no": "inquadrature con le animazioni 3D",
+   "condizioni": [],
+   "reference": "martell-01",
+   "ultimo_voto": "4 (AD_CERVICALGIA_AI-Barontini, direttore, giro 2, 03/11/2026: limite di impostazione)",
+   "esempio_da": [
+    "videos/AD_CERVICALGIA_AI-Barontini/anteprime/AD_CERVICALGIA_V3-pieno-sottotitoli-intero.mp4",
+    37.57
+   ],
+   "stato": "variante",
+   "origine": "laboratorio, fase 1 (03/11/2026), AD_CERVICALGIA_AI-Barontini inquadratura 8",
+   "variante_di": "etichette-barrate",
+   "nota": "variante da non usare (Riccardo, 03/11/2026): la fascia trasparente per i sottotitoli non si usa. Modello etichette_ads; riconosciuta da catalogo.identifica.",
+   "esempio": "motore/inserti/catalogo/etichette-barrate-9x16-sottotitoli.jpg"
+  },
+  {
+   "id": "tentativi",
+   "nome": "Lista dei tentativi",
+   "famiglia": "liste",
+   "motore": {
+    "modello": "tentativi"
+   },
+   "cosa_fa": "colonna di voci con tratto che le barra",
+   "quando": "—",
+   "quando_no": "—",
+   "condizioni": [],
+   "reference": "martell-01",
+   "ultimo_voto": "— (campione tappa 2)",
+   "esempio_da": [
+    "videos/YT_POSTURA_32/renders/YT_POSTURA_32_anteprima_tappa1.mp4",
+    322.0
+   ],
+   "stato": "variante",
+   "origine": "YT_POSTURA_32 tappa 1",
+   "variante_di": "etichette-barrate",
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/tentativi.jpg"
+  },
+  {
+   "id": "riga-icone",
+   "nome": "Riga di icone in basso",
+   "famiglia": "liste",
+   "motore": {
+    "modello": "riga_icone"
+   },
+   "cosa_fa": "icone lineari verdi che si disegnano sulla parola con l'etichetta sotto, velo blu dal basso",
+   "quando": "tre luoghi, oggetti o momenti detti in fila",
+   "quando_no": "quando la parte bassa ha mani, oggetti o modellini; figure umane",
+   "condizioni": [
+    "zona_libera"
+   ],
+   "reference": "gadzhi-14",
+   "ultimo_voto": "7 (campionario v3)",
+   "esempio_da": [
+    "campionario/v3/05-riga-icone.mp4",
+    9.7
+   ],
+   "stato": "attivo",
+   "origine": "campionario v3",
+   "variante_di": null,
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/riga-icone.jpg"
+  },
+  {
+   "id": "card-accese",
+   "nome": "Card che si accendono",
+   "famiglia": "liste",
+   "motore": {
+    "modello": "card_accese"
+   },
+   "cosa_fa": "scena scura: tre card 3D arrivano nascoste con una scansione e si accendono quando lui le nomina, poi riepilogo",
+   "quando": "elenchi di tre cose annunciate prima",
+   "quando_no": "elenchi lunghi",
+   "condizioni": [],
+   "reference": "gadzhi-08/09/12/15",
+   "ultimo_voto": "8 (MR_POSTURA_01_v4, direttore, 02/11/2026)",
+   "esempio_da": [
+    "videos/MR_POSTURA_01_v4/consegna/MR_POSTURA_01_v4.mp4",
+    30.4
+   ],
+   "stato": "attivo",
+   "origine": "campionario v3",
+   "variante_di": null,
+   "nota": "fase 7c: cifre = false toglie le cifre a contorno (il «1» si leggeva come una freccia)",
+   "esempio": "motore/inserti/catalogo/card-accese.jpg"
+  },
+  {
+   "id": "card-accese-9x16",
+   "nome": "Card che si accendono (ads 9:16, tutto schermo)",
+   "famiglia": "liste",
+   "motore": {
+    "modello": "card_accese_ads",
+    "usa": [
+     "card_accese"
+    ],
+    "dati": {
+     "apparizioni": "[{s, e, esce}] a tutto schermo, in mezzo il video base",
+     "titolo": "{cifra, testo, t}",
+     "carte": "[{num, t_num, chiave, t_chiave, t_stato}]",
+     "t_riepilogo": "s",
+     "corpo": 87,
+     "velo": 0.48,
+     "lucine": "[t]",
+     "pulsa": "[t0, t1]"
+    }
+   },
+   "cosa_fa": "le card di card-accese una sotto l'altra su tutto il quadro 9:16: titolo che si decifra, card che arrivano spente con la scansione, a ogni «primo/secondo/terzo» la scena torna e si accende la card giusta (le altre sotto un velo blu), riepilogo finale; fra un ritorno e l'altro il video base",
+   "quando": "ads 9:16: elenchi di tre cose annunciate prima («3 motivi»), quando il contenuto riempie davvero lo schermo",
+   "quando_no": "inquadrature con le animazioni 3D; elenchi lunghi; testi delle card più larghi di ~730 px a corpo 87",
+   "condizioni": [],
+   "reference": "gadzhi-08/09/12/15",
+   "ultimo_voto": "9 (AD_CERVICALGIA_AI-Barontini, direttore, giro 3, 03/11/2026; giri 1-2: 7, 8)",
+   "esempio_da": [
+    "videos/AD_CERVICALGIA_AI-Barontini/anteprime/AD_CERVICALGIA_lavoro-etichetteV1-card-intero.mp4",
+    40.0
+   ],
+   "stato": "attivo",
+   "origine": "laboratorio, fase 2 (03/11/2026), AD_CERVICALGIA_AI-Barontini 18–40 s",
+   "variante_di": "card-accese",
+   "nota": "approvata da Riccardo il 03/11/2026 (fase 2 ads, dopo il giro 3). Modello motore/inserti/scene/card_accese_ads.js (rifatto su card_accese, che resta com'e); numeri nel riquadro, niente cifre a contorno; decifraStretto: caratteri provvisori solo lettere (mai cifre, niente aste sole i/l/j), della stessa larghezza; alone sulla card accesa (maschera della scansione tolta a entrata finita); velo 48% sulle card in secondo piano; riconosciuta da catalogo.identifica.",
+   "esempio": "motore/inserti/catalogo/card-accese-9x16.jpg"
+  },
+  {
+   "id": "card-con-spessore",
+   "nome": "Card con spessore",
+   "famiglia": "liste",
+   "motore": {
+    "modello": "card_spessore"
+   },
+   "cosa_fa": "card blu notte con spessore, una ogni 0,25 s, con icona o ritaglio Servier",
+   "quando": "elenchi brevi accanto a lui",
+   "quando_no": "sopra mani o volto",
+   "condizioni": [],
+   "reference": "gadzhi-06",
+   "ultimo_voto": "8 (MR_POSTURA_01_v4, direttore, 02/11/2026)",
+   "esempio_da": [
+    "videos/MR_POSTURA_01_v4/consegna/MR_POSTURA_01_v4.mp4",
+    46.4
+   ],
+   "stato": "attivo",
+   "origine": "YT_POSTURA_32",
+   "variante_di": null,
+   "nota": "; fase 7c: senza disegno Servier, `icona` (lineare verde su disco blu notte); attenzione: il testo deve stare in due righe (la card taglia il testo che va a capo una terza volta, e il controllo «lettere intere» non lo vede)",
+   "esempio": "motore/inserti/catalogo/card-con-spessore.jpg"
+  },
+  {
+   "id": "card-con-spessore-9x16",
+   "nome": "Card con spessore (ads 9:16, tutto schermo a momenti)",
+   "famiglia": "liste",
+   "motore": {
+    "modello": "card_spessore_ads",
+    "usa": [
+     "card_spessore",
+     "card_accese"
+    ],
+    "dati": {
+     "apparizioni": "[{s, e}]",
+     "titolo": "{testo, chiave, t, t_chiave, y, corpo}",
+     "carte": "[{testo '*verde*|a capo', t, t_stato}]",
+     "t_gusci": "s",
+     "velo": 0.45,
+     "guscio": 0.6,
+     "t_riepilogo": "s"
+    }
+   },
+   "cosa_fa": "titolo sempre visibile e tre card blu notte con spessore una sotto l'altra, vuote e spente dal primo fotogramma; ognuna si accende con il suo testo di due righe sulla frase che la nomina, le precedenti sotto un velo blu, riepilogo; apparizioni a taglio, in mezzo il video base",
+   "quando": "ads 9:16: tre frasi brevi non numerate (obiettivi, non garanzie), quando le card accese sono gia state usate subito prima",
+   "quando_no": "elenchi numerati (card-accese-9x16); piu di due righe per card; inquadrature con le 3D",
+   "condizioni": [],
+   "reference": "gadzhi-06",
+   "ultimo_voto": "8 (AD_CERVICALGIA_AI-Barontini, direttore, giro 2, 04/11/2026; giro 1: 7)",
+   "esempio_da": [
+    "videos/AD_CERVICALGIA_AI-Barontini/anteprime/AD_CERVICALGIA_lavoro-intero.mp4",
+    61.0
+   ],
+   "stato": "attivo",
+   "origine": "laboratorio, fase 3 notte (04/11/2026), AD_CERVICALGIA_AI-Barontini",
+   "variante_di": "card-con-spessore",
+   "nota": "approvata da Riccardo il 04/11/2026 (fase 3 ads, dopo l'anteprima completa). Modello nuovo in motore/inserti/scene/ (il modello di partenza resta com'e); riconosciuta da catalogo.identifica.",
+   "esempio": "motore/inserti/catalogo/card-con-spessore-9x16.jpg"
+  },
+  {
+   "id": "card-fluttuanti",
+   "nome": "Card vicino alle mani",
+   "famiglia": "liste",
+   "motore": {
+    "modello": "card"
+   },
+   "cosa_fa": "card che nascono sulla mano vera (Vision) e volano al loro posto",
+   "quando": "due cose dette in fila",
+   "quando_no": "quando le mani sono al centro e le card dovrebbero coprirle",
+   "condizioni": [],
+   "reference": "gadzhi-06",
+   "ultimo_voto": "8 (MR_POSTURA_01_v4, direttore, 02/11/2026)",
+   "esempio_da": [
+    "campionario/v2/05-card-fluttuanti.mp4",
+    4.24
+   ],
+   "stato": "attivo",
+   "origine": "campionario v1 e v2",
+   "variante_di": null,
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/card-fluttuanti.jpg"
+  },
+  {
+   "id": "card-dietro-la-spalla",
+   "nome": "Card dietro la spalla",
+   "famiglia": "liste",
+   "motore": {
+    "modello": "card",
+    "dati": {
+     "dietro": true
+    }
+   },
+   "cosa_fa": "come le card vicino alle mani, ma la seconda passa dietro la spalla (profondità)",
+   "quando": "come le card",
+   "quando_no": "—",
+   "condizioni": [],
+   "reference": "gadzhi-06",
+   "ultimo_voto": "8 (MR_POSTURA_01_v4, direttore, 02/11/2026)",
+   "esempio_da": [
+    "videos/MR_POSTURA_01_v3/renders/MR_POSTURA_01_v3_FINALE.mp4",
+    45.5
+   ],
+   "stato": "attivo",
+   "origine": "campionario v2, MR_POSTURA_01_v3",
+   "variante_di": null,
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/card-dietro-la-spalla.jpg"
+  },
+  {
+   "id": "fumetti",
+   "nome": "Fumetti dei pensieri",
+   "famiglia": "liste",
+   "motore": {
+    "modello": "fumetti"
+   },
+   "cosa_fa": "fumetti chiari con coda e luce interna, uno per frase, i precedenti salgono",
+   "quando": "i pensieri che si dice da solo",
+   "quando_no": "frasi che non sono pensieri",
+   "condizioni": [],
+   "reference": "martell-05",
+   "ultimo_voto": "7 (YT_POSTURA_32)",
+   "esempio_da": [
+    "videos/YT_POSTURA_32/consegna/YT_POSTURA_32.mp4",
+    234.7
+   ],
+   "stato": "attivo",
+   "origine": "YT_POSTURA_32",
+   "variante_di": null,
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/fumetti.jpg"
+  },
+  {
+   "id": "lista-attesa",
+   "nome": "Lista d'attesa",
+   "famiglia": "chiamata all'azione",
+   "motore": {
+    "modello": "lista_attesa"
+   },
+   "cosa_fa": "righe che compaiono spente e si accendono sulla parola, in una finestra sul fondo del brand",
+   "quando": "lista d'attesa, posti",
+   "quando_no": "—",
+   "condizioni": [],
+   "reference": "gadzhi-04",
+   "ultimo_voto": "8 (MR_POSTURA_01_v4, direttore, 02/11/2026)",
+   "esempio_da": [
+    "videos/MR_POSTURA_01_v4/consegna/MR_POSTURA_01_v4.mp4",
+    94.0
+   ],
+   "stato": "attivo",
+   "origine": "campionario v1 e v2",
+   "variante_di": null,
+   "nota": "dal 01/11/2026 titolo nella forma del sito (forma: classica = variante)",
+   "esempio": "motore/inserti/catalogo/lista-attesa.jpg"
+  },
+  {
+   "id": "lista-attesa-classica",
+   "nome": "Lista d'attesa (classica)",
+   "famiglia": "chiamata all'azione",
+   "motore": {
+    "modello": "lista_attesa",
+    "dati": {
+     "forma": "classica"
+    }
+   },
+   "cosa_fa": "la versione di MR_POSTURA_01_v3: titolo «Lista d'attesa» in Title Case, tutto panna",
+   "quando": "—",
+   "quando_no": "—",
+   "condizioni": [],
+   "reference": "gadzhi-04",
+   "ultimo_voto": "6 (campionario v2)",
+   "esempio_da": [
+    "videos/MR_POSTURA_01_v3/renders/MR_POSTURA_01_v3_FINALE.mp4",
+    94.0
+   ],
+   "stato": "variante",
+   "origine": "campionario v1 e v2",
+   "variante_di": "lista-attesa",
+   "nota": "variante dal 01/11/2026: il modello principale segue il brand del sito (minuscolo con il punto, chiave in gradiente)",
+   "esempio": "motore/inserti/catalogo/lista-attesa-classica.jpg"
+  },
+  {
+   "id": "cta-link",
+   "nome": "Link in descrizione",
+   "famiglia": "chiamata all'azione",
+   "motore": {
+    "modello": "cta"
+   },
+   "cosa_fa": "«Link in descrizione» grande con una freccia verde che cade e rimbalza",
+   "quando": "quando lui rimanda alla descrizione",
+   "quando_no": "nei video senza link",
+   "condizioni": [],
+   "reference": "gadzhi-04",
+   "ultimo_voto": "8 (MR_POSTURA_01_v4, direttore, 02/11/2026)",
+   "esempio_da": [
+    "videos/MR_POSTURA_01_v4/consegna/MR_POSTURA_01_v4.mp4",
+    87.5
+   ],
+   "stato": "attivo",
+   "origine": "campionario v1 e v2",
+   "variante_di": null,
+   "nota": "dal 01/11/2026 forma del sito: minuscolo con il punto, l'ultima parola in gradiente (forma: classica = variante)",
+   "esempio": "motore/inserti/catalogo/cta-link.jpg"
+  },
+  {
+   "id": "cta-link-classica",
+   "nome": "Link in descrizione (classica)",
+   "famiglia": "chiamata all'azione",
+   "motore": {
+    "modello": "cta",
+    "dati": {
+     "forma": "classica"
+    }
+   },
+   "cosa_fa": "la versione di MR_POSTURA_01_v3: «Link in descrizione» in Title Case, tutto panna",
+   "quando": "—",
+   "quando_no": "—",
+   "condizioni": [],
+   "reference": "gadzhi-04",
+   "ultimo_voto": "6 (campionario v2)",
+   "esempio_da": [
+    "videos/MR_POSTURA_01_v3/renders/MR_POSTURA_01_v3_FINALE.mp4",
+    86.0
+   ],
+   "stato": "variante",
+   "origine": "campionario v1 e v2",
+   "variante_di": "cta-link",
+   "nota": "variante dal 01/11/2026: il modello principale segue il brand del sito (minuscolo con il punto, chiave in gradiente)",
+   "esempio": "motore/inserti/catalogo/cta-link-classica.jpg"
+  },
+  {
+   "id": "chiusura",
+   "nome": "Card e schermata di chiusura",
+   "famiglia": "chiamata all'azione",
+   "motore": {
+    "modello": "chiusura"
+   },
+   "cosa_fa": "card dietro la spalla, poi schermata piena con marchio, testo e freccia",
+   "quando": "fine dei mid-roll",
+   "quando_no": "—",
+   "condizioni": [],
+   "reference": "martell-02",
+   "ultimo_voto": "8 (MR_POSTURA_01_v4, direttore, 02/11/2026)",
+   "esempio_da": [
+    "videos/MR_POSTURA_01_v4/consegna/MR_POSTURA_01_v4.mp4",
+    110.5
+   ],
+   "stato": "attivo",
+   "origine": "MR_POSTURA_01_v3",
+   "variante_di": null,
+   "nota": "dal 01/11/2026 forma del sito e pittogramma su disco panna sopra il logo (forma: classica = variante)",
+   "esempio": "motore/inserti/catalogo/chiusura.jpg"
+  },
+  {
+   "id": "chiusura-9x16",
+   "nome": "Chiusura con prezzo e modulo (ads 9:16, tutto schermo)",
+   "famiglia": "chiamata all'azione",
+   "motore": {
+    "modello": "chiusura_ads",
+    "usa": [
+     "card_accese"
+    ],
+    "dati": {
+     "lista": "…",
+     "prezzo": "…",
+     "modulo": "…",
+     "marchio": "…"
+    }
+   },
+   "cosa_fa": "chiusura dell'ad a tutto schermo fino all'ultimo fotogramma: lista che si accende sulle parole (da lista-attesa), prezzo detto grande, modulo stilizzato con campi vuoti che si evidenziano (da inserto-modulo, senza etichette ne dati), marchio con pittogramma e logo, pulsante che resta e freccia verso il pulsante dell'ad (da chiusura)",
+   "quando": "ads 9:16: la chiamata all'azione finale con prezzo e modulo detti dalla voce",
+   "quando_no": "prezzi barrati o confronti, numeri di posti non detti, campi con etichette",
+   "condizioni": [],
+   "reference": "gadzhi-04, martell-02",
+   "ultimo_voto": "9 (AD_CERVICALGIA_AI-Barontini, direttore, giro 2, 04/11/2026; giro 1: 8)",
+   "esempio_da": [
+    "videos/AD_CERVICALGIA_AI-Barontini/anteprime/AD_CERVICALGIA_lavoro-intero.mp4",
+    68.9
+   ],
+   "stato": "attivo",
+   "origine": "laboratorio, fase 3 notte (04/11/2026), AD_CERVICALGIA_AI-Barontini",
+   "variante_di": "chiusura",
+   "nota": "approvata da Riccardo il 04/11/2026 (fase 3 ads, dopo l'anteprima completa). Modello nuovo in motore/inserti/scene/ (il modello di partenza resta com'e); riconosciuta da catalogo.identifica.",
+   "esempio": "motore/inserti/catalogo/chiusura-9x16.jpg"
+  },
+  {
+   "id": "chiusura-9x16-v2",
+   "nome": "Chiusura con prezzo e modulo (ads 9:16, tutto schermo), variante 2",
+   "famiglia": "chiamata all'azione",
+   "motore": {
+    "modello": "chiusura_ads2",
+    "usa": [
+     "card_accese",
+     "chiusura_ads"
+    ],
+    "dati": {
+     "lista": "…",
+     "prezzo": "…",
+     "modulo": "…",
+     "marchio": "…"
+    }
+   },
+   "cosa_fa": "chiusura dell'ad a tutto schermo fino all'ultimo fotogramma: lista che si accende sulle parole (da lista-attesa), prezzo detto grande, modulo stilizzato con campi vuoti che si evidenziano (da inserto-modulo, senza etichette ne dati), marchio con pittogramma e logo, pulsante che resta e freccia verso il pulsante dell'ad (da chiusura) Variante 2: «ci vediamo» entra intero, senza maschera (niente segni staccati sopra «compila»). Giro 3: anche le righe della lista e «a soli» entrano intere, senza maschera.",
+   "quando": "ads 9:16: la chiamata all'azione finale con prezzo e modulo detti dalla voce",
+   "quando_no": "prezzi barrati o confronti, numeri di posti non detti, campi con etichette",
+   "condizioni": [],
+   "reference": "gadzhi-04, martell-02",
+   "ultimo_voto": "7 (AD_CERVICALGIA, direttore cieco, giro 3, 04/11/2026; giri 1 e 2: 7): nessun testo tagliato da una maschera",
+   "esempio_da": [
+    "videos/AD_CERVICALGIA_AI-Barontini-varianti/anteprime/AD_CERVICALGIA_AI-Barontini-varianti_lavoro-intero.mp4",
+    68.9
+   ],
+   "stato": "variante",
+   "origine": "laboratorio, fase 5 (04/11/2026): correzione di un difetto trovato dal direttore nella fase 4",
+   "variante_di": "chiusura-9x16",
+   "nota": "IN PROVA: diventa attiva solo con l'ok di Riccardo; fino ad allora i piani dei nuovi ads la usano al posto di «chiusura-9x16», segnata «in prova». Correzione: «ci vediamo» entra intero, senza maschera (niente segni staccati sopra «compila»). Modello motore/inserti/scene/chiusura_ads2.js (copia di quello di partenza, che resta com'e). Giro 3: anche le righe della lista e «a soli» entrano intere, senza maschera.",
+   "in_prova": true,
+   "esempio": "motore/inserti/catalogo/chiusura-9x16-v2.jpg"
+  },
+  {
+   "id": "chiusura-classica",
+   "nome": "Chiusura (classica)",
+   "famiglia": "chiamata all'azione",
+   "motore": {
+    "modello": "chiusura",
+    "dati": {
+     "forma": "classica"
+    }
+   },
+   "cosa_fa": "la versione di MR_POSTURA_01_v3: logo e «Link in descrizione» senza pittogramma",
+   "quando": "—",
+   "quando_no": "—",
+   "condizioni": [],
+   "reference": "martell-02",
+   "ultimo_voto": "parte del voto 8 di MR_POSTURA_01_v3",
+   "esempio_da": [
+    "videos/MR_POSTURA_01_v3/renders/MR_POSTURA_01_v3_FINALE.mp4",
+    111.0
+   ],
+   "stato": "variante",
+   "origine": "MR_POSTURA_01_v3",
+   "variante_di": "chiusura",
+   "nota": "variante dal 01/11/2026: il modello principale segue il brand del sito (minuscolo con il punto, chiave in gradiente)",
+   "esempio": "motore/inserti/catalogo/chiusura-classica.jpg"
+  },
+  {
+   "id": "schermata-finale-youtube",
+   "nome": "Schermata finale YouTube",
+   "famiglia": "chiamata all'azione",
+   "motore": {
+    "regia": [
+     "scena.coda"
+    ]
+   },
+   "cosa_fa": "12 s dopo l'ultima parola: fondo del brand, logo, pittogramma su disco panna, zone libere per gli elementi di YouTube",
+   "quando": "fine dei video YouTube",
+   "quando_no": "mid-roll",
+   "condizioni": [],
+   "reference": "—",
+   "ultimo_voto": "— (approvata con il video YT_POSTURA_32)",
+   "esempio_da": [
+    "videos/YT_POSTURA_32/consegna/YT_POSTURA_32.mp4",
+    404.0
+   ],
+   "stato": "attivo",
+   "origine": "YT_POSTURA_32 tappa 3",
+   "variante_di": null,
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/schermata-finale-youtube.jpg"
+  },
+  {
+   "id": "telefono-prospettiva",
+   "nome": "Telefono in prospettiva (app vera)",
+   "famiglia": "oggetti veri",
+   "motore": {
+    "modello": "telefono3d"
+   },
+   "cosa_fa": "telefono in prospettiva con le schermate vere dell'app, messa a fuoco e colpo di camera",
+   "quando": "quando lui parla dell'app",
+   "quando_no": "schermate con dati di persone, importi o frasi sulla salute non sfocati; telefono grande che copre lui",
+   "condizioni": [],
+   "reference": "martell-06",
+   "ultimo_voto": "7 (MR_POSTURA_01_v4, direttore, 02/11/2026) — dopo il quinto giro il profilo l'ho verificato io",
+   "esempio_da": [
+    "videos/MR_POSTURA_01_v4/consegna/MR_POSTURA_01_v4.mp4",
+    51.0
+   ],
+   "stato": "attivo",
+   "origine": "campionario v1 e v2",
+   "variante_di": null,
+   "nota": "render dell'app scontornati dal motore (titolo: false, tieni_bianco: true per i render senza titolo e con card bianche). fase 7c: entrata = 'posto' -> nasce dove sta (niente viaggio da fuori quadro, che non passa il controllo del quadro: anche in MR_POSTURA_01_v3), cambio di schermata sul posto, alone verde tenue dietro; piu schermate cambiano sul posto, ognuna sulle sue parole; `sfoca`: [[x0, y0, x1, y1], ...] (px del file) sfoca le righe con dati di persone, importi o frasi sulla salute (Riccardo, 02/11/2026: tutte le foto dell'app, in modo estetico e minimale)",
+   "esempio": "motore/inserti/catalogo/telefono-prospettiva.jpg"
+  },
+  {
+   "id": "telefono-sagoma",
+   "nome": "Telefono con la sagoma",
+   "famiglia": "oggetti veri",
+   "motore": {
+    "modello": "telefono3d",
+    "dati": {
+     "genera": "foto_sagoma"
+    }
+   },
+   "cosa_fa": "telefono con una «foto» fatta dalla sagoma disegnata",
+   "quando": "mai",
+   "quando_no": "mai: bocciato da Riccardo",
+   "condizioni": [],
+   "reference": "—",
+   "ultimo_voto": "bocciato",
+   "esempio_da": [
+    "videos/YT_POSTURA_32/renders/YT_POSTURA_32_anteprima_tappa1.mp4",
+    217.0
+   ],
+   "stato": "vietato",
+   "origine": "YT_POSTURA_32 tappa 1",
+   "variante_di": null,
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/telefono-sagoma.jpg"
+  },
+  {
+   "id": "foto-card",
+   "nome": "Foto vera in card",
+   "famiglia": "oggetti veri",
+   "motore": {
+    "modello": "foto_card"
+   },
+   "cosa_fa": "foto vera di un paziente (consenso nel catalogo), viso tagliato fuori, in card; solo PRIMA e DOPO come testo",
+   "quando": "quando lui parla di come si vede di lato",
+   "quando_no": "senza consenso; con tempi o risultati scritti",
+   "condizioni": [],
+   "reference": "martell-06",
+   "ultimo_voto": "6 (YT_POSTURA_32)",
+   "esempio_da": [
+    "videos/YT_POSTURA_32/consegna/YT_POSTURA_32.mp4",
+    214.0
+   ],
+   "stato": "attivo",
+   "origine": "YT_POSTURA_32",
+   "variante_di": null,
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/foto-card.jpg"
+  },
+  {
+   "id": "prima-dopo-cursore",
+   "nome": "Prima/dopo con cursore",
+   "famiglia": "oggetti veri",
+   "motore": {
+    "modello": "confronto"
+   },
+   "cosa_fa": "due foto del paziente (data EXIF), PRIMA a sinistra e DOPO a destra, linea posturale di Vision, cursore",
+   "quando": "quando lui parla dei risultati dello studio, senza promesse",
+   "quando_no": "senza consenso; foto quasi uguali",
+   "condizioni": [],
+   "reference": "gadzhi-05",
+   "ultimo_voto": "7 (MR_POSTURA_01_v4, direttore, 02/11/2026)",
+   "esempio_da": [
+    "videos/MR_POSTURA_01_v3/renders/MR_POSTURA_01_v3_FINALE.mp4",
+    70.0
+   ],
+   "stato": "attivo",
+   "origine": "campionario v1 e v2",
+   "variante_di": null,
+   "nota": "fase 7c: cursore.modo = 'meta' -> fermo a meta dall'entrata (PRIMA e DOPO sempre leggibili), poi una sola corsa fino a `fino`",
+   "esempio": "motore/inserti/catalogo/prima-dopo-cursore.jpg"
+  },
+  {
+   "id": "anatomia-card",
+   "nome": "Anatomia Servier in card",
+   "famiglia": "anatomia",
+   "motore": {
+    "modello": "anatomia",
+    "dati": {
+     "pannello": "card"
+    }
+   },
+   "cosa_fa": "disegno Servier ricolorato in una card accanto a lui, aloni, frecce, assi, etichette sulla voce, attribuzione",
+   "quando": "un meccanismo detto, accanto a lui",
+   "quando_no": "aggiunte cliniche non dette",
+   "condizioni": [],
+   "reference": "martell-06, gadzhi-06",
+   "ultimo_voto": "7 (YT_POSTURA_32)",
+   "esempio_da": [
+    "videos/YT_POSTURA_32/consegna/YT_POSTURA_32.mp4",
+    38.2
+   ],
+   "stato": "attivo",
+   "origine": "YT_POSTURA_32",
+   "variante_di": null,
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/anatomia-card.jpg"
+  },
+  {
+   "id": "anatomia-scena",
+   "nome": "Anatomia Servier in scena scura",
+   "famiglia": "anatomia",
+   "motore": {
+    "modello": "anatomia",
+    "dati": {
+     "pannello": "pieno"
+    }
+   },
+   "cosa_fa": "disegno Servier a tutto schermo su fondo scuro, camera che si muove fra le parti, lui in finestra o in cerchio",
+   "quando": "il meccanismo centrale del video",
+   "quando_no": "più di 2-3 volte per video",
+   "condizioni": [],
+   "reference": "martell-07",
+   "ultimo_voto": "7 (YT_POSTURA_32)",
+   "esempio_da": [
+    "videos/YT_POSTURA_32/consegna/YT_POSTURA_32.mp4",
+    95.0
+   ],
+   "stato": "attivo",
+   "origine": "YT_POSTURA_32",
+   "variante_di": null,
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/anatomia-scena.jpg"
+  },
+  {
+   "id": "sagoma-vettoriale",
+   "nome": "Sagoma vettoriale",
+   "famiglia": "vietati",
+   "motore": {
+    "modello": "sagoma"
+   },
+   "cosa_fa": "figura umana disegnata da noi (profilo posturale)",
+   "quando": "mai",
+   "quando_no": "mai: bocciata da Riccardo (niente figure umane disegnate)",
+   "condizioni": [],
+   "reference": "—",
+   "ultimo_voto": "bocciata",
+   "esempio_da": [
+    "videos/YT_POSTURA_32/renders/YT_POSTURA_32_anteprima_tappa1.mp4",
+    28.5
+   ],
+   "stato": "vietato",
+   "origine": "YT_POSTURA_32 tappa 1 e inserti di MR_POSTURA_01_v2",
+   "variante_di": null,
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/sagoma-vettoriale.jpg"
+  },
+  {
+   "id": "inserto-aggancio",
+   "nome": "Aggancio a pannello (prima generazione)",
+   "famiglia": "prima generazione",
+   "motore": {
+    "inserto": "aggancio"
+   },
+   "cosa_fa": "frase d'apertura su un pannello accanto alla persona, con il logo",
+   "quando": "—",
+   "quando_no": "—",
+   "condizioni": [],
+   "reference": "—",
+   "ultimo_voto": "— (MR_POSTURA_01_v2)",
+   "esempio_da": [
+    "videos/MR_POSTURA_01_v2/renders/MR_POSTURA_01_v2_FINALE.mp4",
+    1.5
+   ],
+   "stato": "variante",
+   "origine": "MR_POSTURA_01_v2",
+   "variante_di": "frase-sul-corpo",
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/inserto-aggancio.jpg"
+  },
+  {
+   "id": "inserto-numero",
+   "nome": "Numero a pannello (prima generazione)",
+   "famiglia": "prima generazione",
+   "motore": {
+    "inserto": "numero"
+   },
+   "cosa_fa": "numero che conta su un pannello accanto alla persona",
+   "quando": "—",
+   "quando_no": "—",
+   "condizioni": [],
+   "reference": "—",
+   "ultimo_voto": "— (MR_POSTURA_01_v2)",
+   "esempio_da": [
+    "videos/MR_POSTURA_01_v2/renders/MR_POSTURA_01_v2_FINALE.mp4",
+    18.0
+   ],
+   "stato": "variante",
+   "origine": "MR_POSTURA_01_v2",
+   "variante_di": "numero-dietro",
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/inserto-numero.jpg"
+  },
+  {
+   "id": "inserto-prodotto",
+   "nome": "Prodotto a pannello (prima generazione)",
+   "famiglia": "prima generazione",
+   "motore": {
+    "inserto": "prodotto"
+   },
+   "cosa_fa": "voci del servizio su un pannello",
+   "quando": "—",
+   "quando_no": "—",
+   "condizioni": [],
+   "reference": "—",
+   "ultimo_voto": "— (MR_POSTURA_01_v2)",
+   "esempio_da": [
+    "videos/MR_POSTURA_01_v2/renders/MR_POSTURA_01_v2_FINALE.mp4",
+    44.0
+   ],
+   "stato": "variante",
+   "origine": "MR_POSTURA_01_v2",
+   "variante_di": "card-fluttuanti",
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/inserto-prodotto.jpg"
+  },
+  {
+   "id": "inserto-telefono",
+   "nome": "Telefono a pannello (prima generazione)",
+   "famiglia": "prima generazione",
+   "motore": {
+    "inserto": "telefono"
+   },
+   "cosa_fa": "schermate dell'app in un telefono piatto sul pannello",
+   "quando": "—",
+   "quando_no": "—",
+   "condizioni": [],
+   "reference": "—",
+   "ultimo_voto": "— (MR_POSTURA_01_v2)",
+   "esempio_da": [
+    "videos/MR_POSTURA_01_v2/renders/MR_POSTURA_01_v2_FINALE.mp4",
+    53.0
+   ],
+   "stato": "variante",
+   "origine": "MR_POSTURA_01_v2",
+   "variante_di": "telefono-prospettiva",
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/inserto-telefono.jpg"
+  },
+  {
+   "id": "inserto-primadopo",
+   "nome": "Prima/dopo a pannello (prima generazione)",
+   "famiglia": "prima generazione",
+   "motore": {
+    "inserto": "primadopo"
+   },
+   "cosa_fa": "due foto affiancate con la linea posturale su blu profondo",
+   "quando": "—",
+   "quando_no": "—",
+   "condizioni": [],
+   "reference": "—",
+   "ultimo_voto": "— (MR_POSTURA_01_v2)",
+   "esempio_da": [
+    "videos/MR_POSTURA_01_v2/renders/MR_POSTURA_01_v2_FINALE.mp4",
+    70.0
+   ],
+   "stato": "variante",
+   "origine": "MR_POSTURA_01_v2",
+   "variante_di": "prima-dopo-cursore",
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/inserto-primadopo.jpg"
+  },
+  {
+   "id": "inserto-lista",
+   "nome": "Lista a pannello (prima generazione)",
+   "famiglia": "prima generazione",
+   "motore": {
+    "inserto": "lista"
+   },
+   "cosa_fa": "lista d'attesa in più tempi su un pannello",
+   "quando": "—",
+   "quando_no": "—",
+   "condizioni": [],
+   "reference": "—",
+   "ultimo_voto": "— (MR_POSTURA_01_v2)",
+   "esempio_da": [
+    "videos/MR_POSTURA_01_v2/renders/MR_POSTURA_01_v2_FINALE.mp4",
+    80.0
+   ],
+   "stato": "variante",
+   "origine": "MR_POSTURA_01_v2",
+   "variante_di": "lista-attesa",
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/inserto-lista.jpg"
+  },
+  {
+   "id": "inserto-scelte",
+   "nome": "Scelte a pannello (prima generazione)",
+   "famiglia": "prima generazione",
+   "motore": {
+    "inserto": "scelte"
+   },
+   "cosa_fa": "due o tre scelte su un pannello",
+   "quando": "—",
+   "quando_no": "—",
+   "condizioni": [],
+   "reference": "—",
+   "ultimo_voto": "— (MR_POSTURA_01_v2)",
+   "esempio_da": [
+    "videos/MR_POSTURA_01_v2/renders/MR_POSTURA_01_v2_FINALE.mp4",
+    91.0
+   ],
+   "stato": "variante",
+   "origine": "MR_POSTURA_01_v2",
+   "variante_di": "card-fluttuanti",
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/inserto-scelte.jpg"
+  },
+  {
+   "id": "inserto-modulo",
+   "nome": "Modulo stilizzato (prima generazione)",
+   "famiglia": "prima generazione",
+   "motore": {
+    "inserto": "modulo"
+   },
+   "cosa_fa": "campi vuoti che si evidenziano quando li nomina",
+   "quando": "—",
+   "quando_no": "—",
+   "condizioni": [],
+   "reference": "—",
+   "ultimo_voto": "— (MR_POSTURA_01_v2)",
+   "esempio_da": [
+    "videos/MR_POSTURA_01_v2/renders/MR_POSTURA_01_v2_FINALE.mp4",
+    96.0
+   ],
+   "stato": "variante",
+   "origine": "MR_POSTURA_01_v2",
+   "variante_di": "cta-link",
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/inserto-modulo.jpg"
+  },
+  {
+   "id": "inserto-chiusura",
+   "nome": "Chiusura a pannello (prima generazione)",
+   "famiglia": "prima generazione",
+   "motore": {
+    "inserto": "chiusura"
+   },
+   "cosa_fa": "pannello che si allarga a tutto schermo dopo l'ultima parola",
+   "quando": "—",
+   "quando_no": "—",
+   "condizioni": [],
+   "reference": "—",
+   "ultimo_voto": "— (MR_POSTURA_01_v2)",
+   "esempio_da": [
+    "videos/MR_POSTURA_01_v2/renders/MR_POSTURA_01_v2_FINALE.mp4",
+    110.0
+   ],
+   "stato": "variante",
+   "origine": "MR_POSTURA_01_v2",
+   "variante_di": "chiusura",
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/inserto-chiusura.jpg"
+  },
+  {
+   "id": "inserto-sagoma",
+   "nome": "Sagoma a pannello (prima generazione)",
+   "famiglia": "vietati",
+   "motore": {
+    "inserto": "sagoma"
+   },
+   "cosa_fa": "profilo posturale disegnato su pannello",
+   "quando": "mai",
+   "quando_no": "mai: bocciata da Riccardo",
+   "condizioni": [],
+   "reference": "—",
+   "ultimo_voto": "bocciata",
+   "esempio_da": [
+    "videos/MR_POSTURA_01_v2/renders/MR_POSTURA_01_v2_FINALE.mp4",
+    37.0
+   ],
+   "stato": "vietato",
+   "origine": "MR_POSTURA_01_v2",
+   "variante_di": null,
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/inserto-sagoma.jpg"
+  },
+  {
+   "id": "look-caldo",
+   "nome": "Look caldo",
+   "famiglia": "prima generazione",
+   "motore": {
+    "piatto": [
+     "look_caldo"
+    ]
+   },
+   "cosa_fa": "correzione colore calda sul girato",
+   "quando": "—",
+   "quando_no": "Riccardo: look originale, nessuna correzione del girato",
+   "condizioni": [],
+   "reference": "—",
+   "ultimo_voto": "— (campionario v1)",
+   "esempio_da": [
+    "campionario/11b-colore-caldo.mp4",
+    2.0
+   ],
+   "stato": "variante",
+   "origine": "campionario v1",
+   "variante_di": null,
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/look-caldo.jpg"
+  },
+  {
+   "id": "look-profondo",
+   "nome": "Look profondo",
+   "famiglia": "prima generazione",
+   "motore": {
+    "piatto": [
+     "look_profondo"
+    ]
+   },
+   "cosa_fa": "correzione colore profonda sul girato",
+   "quando": "—",
+   "quando_no": "Riccardo: look originale, nessuna correzione del girato",
+   "condizioni": [],
+   "reference": "—",
+   "ultimo_voto": "— (campionario v1)",
+   "esempio_da": [
+    "campionario/11c-colore-profondo.mp4",
+    2.0
+   ],
+   "stato": "variante",
+   "origine": "campionario v1",
+   "variante_di": null,
+   "nota": "",
+   "esempio": "motore/inserti/catalogo/look-profondo.jpg"
+  },
+  {
+   "id": "connettore-finestra",
+   "nome": "Connettore (ads 9:16, nella finestra)",
+   "famiglia": "testo sulla scena",
+   "variante_di": "connettore",
+   "reference": "gadzhi-11, gadzhi-13",
+   "cosa_fa": "nella finestra grande in alto, al posto del B-roll: «pensato per» in testa, due etichette dette in colonna unite da una linea verde che si disegna dal centro con un nodo luminoso; poi le etichette escono e il risultato detto entra in verde con una barra che cresce",
+   "quando": "ads 9:16: due azioni dette che portano allo stesso scopo («calmare il bruciore, aiutare la digestione e darti un sollievo»)",
+   "quando_no": "etichette piu larghe di ~880 px a corpo 84; inquadrature di schema C",
+   "motore": {
+    "modello": "connettore_ads",
+    "usa": [],
+    "dati": {
+     "rett": "finestra grande misurata (lista sul taglio)",
+     "corpo": 84
+    }
+   },
+   "condizioni": [],
+   "ultimo_voto": "7 (AD_REFLUSSO giro 1); 6 (AD_COLON giro 2, senza risultato: chiusa sul taglio per non coprire un sottotitolo)",
+   "esempio_da": [
+    "videos/AD_REFLUSSO_AI-Palazzolo/anteprime/AD_REFLUSSO_AI-Palazzolo_lavoro-intero.mp4",
+    15.6
+   ],
+   "stato": "variante",
+   "origine": "laboratorio, collaudo AD_REFLUSSO (04/11/2026): modello nuovo per gli ads, da un modello del catalogo",
+   "nota": "IN PROVA: modello nuovo per gli ads 9:16, costruito dopo l'ok di Riccardo al piano di AD_REFLUSSO (04/11/2026); diventa attivo solo con il suo ok. Modello motore/inserti/scene/connettore_ads.js (quello di partenza resta com'e).",
+   "in_prova": true,
+   "corregge": false,
+   "esempio": "motore/inserti/catalogo/connettore-finestra.jpg"
+  },
+  {
+   "id": "card-accese-9x16-carrello",
+   "nome": "Card accese a carrello (ads 9:16, tutto schermo)",
+   "famiglia": "liste",
+   "variante_di": "card-accese-9x16",
+   "reference": "gadzhi-08, gadzhi-12, gadzhi-15",
+   "cosa_fa": "le card accese una per volta, grandi al centro, con la cifra detta piena sopra la frase chiave; carrello di camera da una card all'altra all'inizio di ogni apparizione; tutto schermo a taglio",
+   "quando": "ads 9:16: tre motivi numerati, quando le card in colonna sono gia state usate in un altro ad",
+   "quando_no": "cifre non dette",
+   "motore": {
+    "modello": "card_carrello_ads",
+    "usa": [
+     "card_accese",
+     "card_accese_ads"
+    ],
+    "dati": {}
+   },
+   "condizioni": [],
+   "ultimo_voto": "8 (AD_REFLUSSO, AD_BRUXISMO, AD_COLON, giro 2 dopo il rifacimento: card vicine visibili, «?» prima della cifra)",
+   "esempio_da": [
+    "videos/AD_REFLUSSO_AI-Palazzolo/anteprime/AD_REFLUSSO_AI-Palazzolo_lavoro-intero.mp4",
+    26.5
+   ],
+   "stato": "variante",
+   "origine": "laboratorio, collaudo AD_REFLUSSO (04/11/2026): modello nuovo per gli ads, da un modello del catalogo",
+   "nota": "IN PROVA: modello nuovo per gli ads 9:16, costruito dopo l'ok di Riccardo al piano di AD_REFLUSSO (04/11/2026); diventa attivo solo con il suo ok. Modello motore/inserti/scene/card_carrello_ads.js (quello di partenza resta com'e).",
+   "in_prova": true,
+   "corregge": false,
+   "esempio": "motore/inserti/catalogo/card-accese-9x16-carrello.jpg"
+  },
+  {
+   "id": "etichette-barrate-finestra-centrate",
+   "nome": "Etichette barrate centrate (ads 9:16, nella finestra)",
+   "famiglia": "liste",
+   "variante_di": "etichette-barrate-finestra-v2",
+   "reference": "martell-01",
+   "cosa_fa": "le pillole della v2 centrate nella finestra, entrate da lati opposti, la prima gia al primo fotogramma; barra panna dentro il contorno; fondo e pillole a taglio",
+   "quando": "ads 9:16: due cose negate («niente pastiglie in più»), quando le pillole a sinistra sono gia state usate",
+   "quando_no": "inquadrature di schema C",
+   "motore": {
+    "modello": "etichette_centrate_ads",
+    "usa": [
+     "etichette_luce",
+     "etichette_ads",
+     "etichette_ads2"
+    ],
+    "dati": {
+     "modo": "finestra"
+    }
+   },
+   "condizioni": [],
+   "ultimo_voto": "7 (AD_REFLUSSO, AD_EMICRANIA, AD_BRUXISMO, AD_COLON)",
+   "esempio_da": [
+    "videos/AD_REFLUSSO_AI-Palazzolo/anteprime/AD_REFLUSSO_AI-Palazzolo_lavoro-intero.mp4",
+    37.6
+   ],
+   "stato": "variante",
+   "origine": "laboratorio, collaudo AD_REFLUSSO (04/11/2026): modello nuovo per gli ads, da un modello del catalogo",
+   "nota": "IN PROVA: modello nuovo per gli ads 9:16, costruito dopo l'ok di Riccardo al piano di AD_REFLUSSO (04/11/2026); diventa attivo solo con il suo ok. Modello motore/inserti/scene/etichette_centrate_ads.js (quello di partenza resta com'e).",
+   "in_prova": true,
+   "corregge": false,
+   "esempio": "motore/inserti/catalogo/etichette-barrate-finestra-centrate.jpg"
+  },
+  {
+   "id": "parole-finestra",
+   "nome": "Parole una per volta (ads 9:16, nella finestra)",
+   "famiglia": "testo sulla scena",
+   "variante_di": "schermata",
+   "reference": "martell-07, martell-03",
+   "cosa_fa": "nella finestra grande: una riga panna di apertura, poi parole dette che nascono grigie e sfocate e diventano verdi con bagliore sulla voce, una dopo l'altra; retino leggero e camera lenta",
+   "quando": "ads 9:16: un elenco breve di parole dette («diaframma, postura e stress»)",
+   "quando_no": "frasi lunghe; inquadrature di schema C",
+   "motore": {
+    "modello": "parole_ads",
+    "usa": [],
+    "dati": {}
+   },
+   "condizioni": [],
+   "ultimo_voto": "7 (AD_EMICRANIA, AD_BRUXISMO giro 2); AD_REFLUSSO: 7 e poi 6 sulla stessa grafica",
+   "esempio_da": [
+    "videos/AD_REFLUSSO_AI-Palazzolo/anteprime/AD_REFLUSSO_AI-Palazzolo_lavoro-intero.mp4",
+    44.0
+   ],
+   "stato": "variante",
+   "origine": "laboratorio, collaudo AD_REFLUSSO (04/11/2026): modello nuovo per gli ads, da un modello del catalogo",
+   "nota": "IN PROVA: modello nuovo per gli ads 9:16, costruito dopo l'ok di Riccardo al piano di AD_REFLUSSO (04/11/2026); diventa attivo solo con il suo ok. Modello motore/inserti/scene/parole_ads.js (quello di partenza resta com'e).",
+   "in_prova": true,
+   "corregge": false,
+   "esempio": "motore/inserti/catalogo/parole-finestra.jpg"
+  },
+  {
+   "id": "anatomia-scena-9x16",
+   "nome": "Scena anatomica (ads 9:16, tutto schermo)",
+   "famiglia": "anatomia",
+   "variante_di": "anatomia-scena",
+   "reference": "martell-07",
+   "cosa_fa": "fondo del sito con retino, un disegno Servier ricolorato nel brand fermo al centro (mai deformato), frecce verdi generiche sulla parola, righe dette sopra e sotto, attribuzione Servier in basso (senza cifre)",
+   "quando": "ads 9:16: un meccanismo detto che si capisce meglio visto, su un'inquadratura senza 3D",
+   "quando_no": "inquadrature con animazioni 3D; etichette anatomiche non dette; disegni non in libreria/anatomia",
+   "motore": {
+    "modello": "anatomia_ads",
+    "usa": [],
+    "dati": {
+     "servier": {
+      "nome": "servier_smart-stomach.png",
+      "alto": 540,
+      "modo": "ossa"
+     }
+    }
+   },
+   "condizioni": [],
+   "ultimo_voto": "7 (AD_REFLUSSO)",
+   "esempio_da": [
+    "videos/AD_REFLUSSO_AI-Palazzolo/anteprime/AD_REFLUSSO_AI-Palazzolo_lavoro-intero.mp4",
+    48.9
+   ],
+   "stato": "variante",
+   "origine": "laboratorio, collaudo AD_REFLUSSO (04/11/2026): modello nuovo per gli ads, da un modello del catalogo",
+   "nota": "IN PROVA: modello nuovo per gli ads 9:16, costruito dopo l'ok di Riccardo al piano di AD_REFLUSSO (04/11/2026); diventa attivo solo con il suo ok. Modello motore/inserti/scene/anatomia_ads.js (quello di partenza resta com'e).",
+   "in_prova": true,
+   "corregge": false,
+   "esempio": "motore/inserti/catalogo/anatomia-scena-9x16.jpg"
+  },
+  {
+   "id": "fumetto-finestra",
+   "nome": "Fumetto (ads 9:16, nella finestra)",
+   "famiglia": "testo sulla scena",
+   "variante_di": "fumetti",
+   "reference": "martell-05",
+   "cosa_fa": "un fumetto di chat chiaro con coda nella finestra grande: nasce sfocato con i tre puntini, poi diventa nitido con la frase detta, piccolo rimbalzo",
+   "quando": "ads 9:16: una frase che altri hanno detto ai pazienti («ci devi convivere»)",
+   "quando_no": "messaggi dello studio; inquadrature di schema C",
+   "motore": {
+    "modello": "fumetto_ads",
+    "usa": [],
+    "dati": {}
+   },
+   "condizioni": [],
+   "ultimo_voto": "7 (AD_REFLUSSO, AD_COLON)",
+   "esempio_da": [
+    "videos/AD_REFLUSSO_AI-Palazzolo/anteprime/AD_REFLUSSO_AI-Palazzolo_lavoro-intero.mp4",
+    54.3
+   ],
+   "stato": "variante",
+   "origine": "laboratorio, collaudo AD_REFLUSSO (04/11/2026): modello nuovo per gli ads, da un modello del catalogo",
+   "nota": "IN PROVA: modello nuovo per gli ads 9:16, costruito dopo l'ok di Riccardo al piano di AD_REFLUSSO (04/11/2026); diventa attivo solo con il suo ok. Modello motore/inserti/scene/fumetto_ads.js (quello di partenza resta com'e).",
+   "in_prova": true,
+   "corregge": false,
+   "esempio": "motore/inserti/catalogo/fumetto-finestra.jpg"
+  },
+  {
+   "id": "riga-icone-9x16",
+   "nome": "Riga di icone (ads 9:16, tutto schermo)",
+   "famiglia": "liste",
+   "variante_di": "riga-icone",
+   "reference": "gadzhi-14, gadzhi-09",
+   "cosa_fa": "titolo in alto, tre riquadri con icone lineari verdi (oggetti, mai figure umane) che si disegnano e si accendono sulla loro frase, pannello grande con la frase dell'icona accesa; riempie lo schermo fino a y 1230",
+   "quando": "ads 9:16: tre cose concrete dette (obiettivi: dormire, svegliarsi, una pizza)",
+   "quando_no": "cose astratte senza un oggetto; figure umane",
+   "motore": {
+    "modello": "riga_icone_ads",
+    "usa": [],
+    "dati": {}
+   },
+   "condizioni": [],
+   "ultimo_voto": "7 (AD_REFLUSSO, AD_EMICRANIA, AD_BRUXISMO giro 2: icone intere dal primo fotogramma, tessera accesa piena)",
+   "esempio_da": [
+    "videos/AD_REFLUSSO_AI-Palazzolo/anteprime/AD_REFLUSSO_AI-Palazzolo_lavoro-intero.mp4",
+    61.5
+   ],
+   "stato": "variante",
+   "origine": "laboratorio, collaudo AD_REFLUSSO (04/11/2026): modello nuovo per gli ads, da un modello del catalogo",
+   "nota": "IN PROVA: modello nuovo per gli ads 9:16, costruito dopo l'ok di Riccardo al piano di AD_REFLUSSO (04/11/2026); diventa attivo solo con il suo ok. Modello motore/inserti/scene/riga_icone_ads.js (quello di partenza resta com'e).",
+   "in_prova": true,
+   "corregge": false,
+   "esempio": "motore/inserti/catalogo/riga-icone-9x16.jpg"
+  },
+  {
+   "famiglia": "testo sulla scena",
+   "variante_di": "frase-sul-corpo",
+   "reference": "martell-02, gadzhi-04, martell-07",
+   "condizioni": [],
+   "ultimo_voto": "7 (AD_COLON giro 2; preferita dal direttore alla versione tutto schermo)",
+   "stato": "variante",
+   "in_prova": true,
+   "corregge": false,
+   "origine": "laboratorio, prova dell'aggancio su AD_COLON (04/11/2026)",
+   "quando": "ads 9:16: i primi secondi, sul disturbo e sullo specialista, leggibile dal fotogramma 0",
+   "quando_no": "«il tuo / la tua» insieme al disturbo; decifrazioni o sfocature al primo fotogramma",
+   "nota": "IN PROVA: prova chiesta da Riccardo (04/11/2026), versione A finestra e B tutto schermo breve; diventa attiva solo con il suo ok. Modello motore/inserti/scene/aggancio_ads.js",
+   "id": "aggancio-finestra",
+   "nome": "Aggancio (ads 9:16, nella finestra)",
+   "cosa_fa": "nella finestra grande dei primi secondi: il disturbo in parola chiave a gradiente pieno dal fotogramma 0, poi le frasi dette sullo specialista, il pittogramma in un disco",
+   "motore": {
+    "modello": "aggancio_ads",
+    "usa": [],
+    "dati": {
+     "modo": "finestra"
+    }
+   },
+   "esempio_da": [
+    "videos/AD_COLON_AI-DeRosa-aggancioA/anteprime/AD_COLON_AI-DeRosa-aggancioA_lavoro-intero.mp4",
+    0.5
+   ],
+   "esempio": "motore/inserti/catalogo/aggancio-finestra.jpg"
+  },
+  {
+   "famiglia": "testo sulla scena",
+   "variante_di": "frase-sul-corpo",
+   "reference": "martell-02, gadzhi-04, martell-07",
+   "condizioni": [],
+   "ultimo_voto": "7 (AD_COLON giro 2)",
+   "stato": "variante",
+   "in_prova": true,
+   "corregge": false,
+   "origine": "laboratorio, prova dell'aggancio su AD_COLON (04/11/2026)",
+   "quando": "ads 9:16: i primi secondi, sul disturbo e sullo specialista, leggibile dal fotogramma 0",
+   "quando_no": "«il tuo / la tua» insieme al disturbo; decifrazioni o sfocature al primo fotogramma",
+   "nota": "IN PROVA: prova chiesta da Riccardo (04/11/2026), versione A finestra e B tutto schermo breve; diventa attiva solo con il suo ok. Modello motore/inserti/scene/aggancio_ads.js",
+   "id": "aggancio-9x16",
+   "nome": "Aggancio (ads 9:16, tutto schermo breve)",
+   "cosa_fa": "1,5-2 s di schermata piena dal fotogramma 0: il disturbo grande a gradiente, il pittogramma, una riga detta; poi il video base",
+   "motore": {
+    "modello": "aggancio_ads",
+    "usa": [],
+    "dati": {
+     "modo": "tutto"
+    }
+   },
+   "esempio_da": [
+    "videos/AD_COLON_AI-DeRosa-aggancioB/anteprime/AD_COLON_AI-DeRosa-aggancioB_lavoro-intero.mp4",
+    1.5
+   ],
+   "esempio": "motore/inserti/catalogo/aggancio-9x16.jpg"
+  },
+  {
+   "id": "micro-parola",
+   "nome": "Micro: parola chiave in pillola",
+   "famiglia": "micro-grafiche (reel)",
+   "variante_di": null,
+   "reference": "gadzhi-17, gadzhi-19",
+   "cosa_fa": "una parola o due dette, in una pillola di vetro blu (o verde con il testo blu notte) che si allunga da sinistra mentre la parola si mette a fuoco; icona tonda a sinistra a scelta; evidenziatore a scelta",
+   "quando": "reel a densità piena: la parola che conta di una frase detta, fra due grafiche grandi",
+   "quando_no": "frasi lunghe (più di ~18 lettere a corpo 88); sopra volti, mani, sottotitoli",
+   "motore": {
+    "modello": "micro_reel",
+    "usa": [
+     "riga_icone_ads"
+    ],
+    "dati": {
+     "modo": "micro",
+     "tipo": "parola"
+    }
+   },
+   "condizioni": [
+    "dentro dati.box",
+    "box nella zona sicura e nelle zone libere della radiografia (niente volti, mani, sottotitoli, scritte)",
+    "mai insieme a un'altra grafica",
+    "niente effetto sonoro"
+   ],
+   "ultimo_voto": "—",
+   "stato": "variante",
+   "origine": "laboratorio reel-grafiche, fase 6 (05/11/2026): densità «piena», livello delle micro-grafiche",
+   "nota": "IN PROVA (fase 6, 05/11/2026): modello nuovo dell'agente reel-grafiche; diventa attivo solo con l'ok di Riccardo, anche dopo l'uscita dal laboratorio. Modello motore/inserti/scene/micro_reel.js.",
+   "in_prova": true,
+   "corregge": false
+  },
+  {
+   "id": "micro-icona",
+   "nome": "Micro: icona che si disegna",
+   "famiglia": "micro-grafiche (reel)",
+   "variante_di": null,
+   "reference": "gadzhi-14, gadzhi-19",
+   "cosa_fa": "un'icona lineare verde (oggetti, mai figure umane) che si disegna con il tratto in un disco di vetro, con la parola detta sotto a scelta",
+   "quando": "un oggetto detto («in bianco» → piatto, «bruciore» → fiamma)",
+   "quando_no": "cose astratte senza un oggetto",
+   "motore": {
+    "modello": "micro_reel",
+    "usa": [
+     "riga_icone_ads"
+    ],
+    "dati": {
+     "modo": "micro",
+     "tipo": "icona"
+    }
+   },
+   "condizioni": [
+    "dentro dati.box",
+    "box nella zona sicura e nelle zone libere della radiografia (niente volti, mani, sottotitoli, scritte)",
+    "mai insieme a un'altra grafica",
+    "niente effetto sonoro"
+   ],
+   "ultimo_voto": "—",
+   "stato": "variante",
+   "origine": "laboratorio reel-grafiche, fase 6 (05/11/2026): densità «piena», livello delle micro-grafiche",
+   "nota": "IN PROVA (fase 6, 05/11/2026): modello nuovo dell'agente reel-grafiche; diventa attivo solo con l'ok di Riccardo, anche dopo l'uscita dal laboratorio. Modello motore/inserti/scene/micro_reel.js.",
+   "in_prova": true,
+   "corregge": false
+  },
+  {
+   "id": "micro-numero",
+   "nome": "Micro: numero detto",
+   "famiglia": "micro-grafiche (reel)",
+   "variante_di": null,
+   "reference": "gadzhi-18, gadzhi-03",
+   "cosa_fa": "la cifra detta, grande e verde con il bagliore, già giusta dal primo fotogramma, con la parola detta sotto a scelta",
+   "quando": "un numero detto («il terzo», «3 motivi»)",
+   "quando_no": "numeri non detti (mai)",
+   "motore": {
+    "modello": "micro_reel",
+    "usa": [
+     "riga_icone_ads"
+    ],
+    "dati": {
+     "modo": "micro",
+     "tipo": "numero"
+    }
+   },
+   "condizioni": [
+    "dentro dati.box",
+    "box nella zona sicura e nelle zone libere della radiografia (niente volti, mani, sottotitoli, scritte)",
+    "mai insieme a un'altra grafica",
+    "niente effetto sonoro"
+   ],
+   "ultimo_voto": "—",
+   "stato": "variante",
+   "origine": "laboratorio reel-grafiche, fase 6 (05/11/2026): densità «piena», livello delle micro-grafiche",
+   "nota": "IN PROVA (fase 6, 05/11/2026): modello nuovo dell'agente reel-grafiche; diventa attivo solo con l'ok di Riccardo, anche dopo l'uscita dal laboratorio. Modello motore/inserti/scene/micro_reel.js.",
+   "in_prova": true,
+   "corregge": false
+  },
+  {
+   "id": "micro-freccia",
+   "nome": "Micro: freccia che si disegna",
+   "famiglia": "micro-grafiche (reel)",
+   "variante_di": null,
+   "reference": "gadzhi-13",
+   "cosa_fa": "una freccia verde con il bagliore che si disegna in 6 fotogrammi verso un dettaglio del B-roll",
+   "quando": "la voce nomina una cosa che si vede nel B-roll",
+   "quando_no": "dettagli che si muovono molto; volti",
+   "motore": {
+    "modello": "micro_reel",
+    "usa": [
+     "riga_icone_ads"
+    ],
+    "dati": {
+     "modo": "micro",
+     "tipo": "freccia"
+    }
+   },
+   "condizioni": [
+    "dentro dati.box",
+    "box nella zona sicura e nelle zone libere della radiografia (niente volti, mani, sottotitoli, scritte)",
+    "mai insieme a un'altra grafica",
+    "niente effetto sonoro"
+   ],
+   "ultimo_voto": "—",
+   "stato": "variante",
+   "origine": "laboratorio reel-grafiche, fase 6 (05/11/2026): densità «piena», livello delle micro-grafiche",
+   "nota": "IN PROVA (fase 6, 05/11/2026): modello nuovo dell'agente reel-grafiche; diventa attivo solo con l'ok di Riccardo, anche dopo l'uscita dal laboratorio. Modello motore/inserti/scene/micro_reel.js.",
+   "in_prova": true,
+   "corregge": false
+  },
+  {
+   "id": "micro-cerchio",
+   "nome": "Micro: cerchio su un dettaglio",
+   "famiglia": "micro-grafiche (reel)",
+   "variante_di": null,
+   "reference": "gadzhi-05, gadzhi-17",
+   "cosa_fa": "un anello verde tracciato come a mano attorno a un dettaglio del B-roll, con la parola detta sopra o sotto a scelta",
+   "quando": "la voce nomina una cosa che si vede nel B-roll (le mani che lavorano)",
+   "quando_no": "volti; dettagli che escono dall'inquadratura",
+   "motore": {
+    "modello": "micro_reel",
+    "usa": [
+     "riga_icone_ads"
+    ],
+    "dati": {
+     "modo": "micro",
+     "tipo": "cerchio"
+    }
+   },
+   "condizioni": [
+    "dentro dati.box",
+    "box nella zona sicura e nelle zone libere della radiografia (niente volti, mani, sottotitoli, scritte)",
+    "mai insieme a un'altra grafica",
+    "niente effetto sonoro"
+   ],
+   "ultimo_voto": "—",
+   "stato": "variante",
+   "origine": "laboratorio reel-grafiche, fase 6 (05/11/2026): densità «piena», livello delle micro-grafiche",
+   "nota": "IN PROVA (fase 6, 05/11/2026): modello nuovo dell'agente reel-grafiche; diventa attivo solo con l'ok di Riccardo, anche dopo l'uscita dal laboratorio. Modello motore/inserti/scene/micro_reel.js.",
+   "in_prova": true,
+   "corregge": false
+  },
+  {
+   "id": "micro-scheda",
+   "nome": "Micro: scheda con icona (grande)",
+   "famiglia": "micro-grafiche (reel)",
+   "variante_di": null,
+   "reference": "gadzhi-19, gadzhi-14",
+   "cosa_fa": "card di vetro grande nella finestra: disco con un'icona lineare che si disegna a sinistra e, a destra, una o due righe dette che compaiono ognuna sulla sua parola (la seconda in verde)",
+   "quando": "reel a densità piena, nella finestra grande quando non c'è un'infografica grande: un concetto detto con un oggetto che lo regge («professionista specializzato» → stella, «trattamento di un'ora» → orologio)",
+   "quando_no": "righe lunghe (più di ~20 lettere a corpo 110); icone senza legame con le parole; sopra volti o mani",
+   "motore": {
+    "modello": "micro_reel",
+    "usa": [
+     "riga_icone_ads"
+    ],
+    "dati": {
+     "modo": "micro",
+     "tipo": "scheda"
+    }
+   },
+   "condizioni": [
+    "dentro dati.box",
+    "box nella zona sicura e nelle zone libere della radiografia (niente volti, mani, sottotitoli, scritte)",
+    "grande: testo con corpo almeno 110 e riquadro di almeno il 15% della finestra (niente badge negli angoli)",
+    "testo nella finestra grande o lontano almeno 150 px dalla fascia dei sottotitoli",
+    "mai insieme a un'altra grafica",
+    "niente effetto sonoro"
+   ],
+   "ultimo_voto": "—",
+   "stato": "variante",
+   "origine": "laboratorio reel-grafiche, fase 6, giro 3 (05/11/2026): «micro-grafiche grandi e visibili; la finestra grande è la tela principale» (Riccardo)",
+   "nota": "IN PROVA (fase 6, giro 3, 05/11/2026): diventa attivo solo con l'ok di Riccardo. Modello motore/inserti/scene/micro_reel.js.",
+   "in_prova": true,
+   "corregge": false
+  },
+  {
+   "id": "micro-parole",
+   "nome": "Micro: parole chiave grandi sulla voce",
+   "famiglia": "micro-grafiche (reel)",
+   "variante_di": null,
+   "reference": "gadzhi-17, gadzhi-19",
+   "cosa_fa": "una, due o tre parole chiave dette, grandi, ognuna in un pannello di vetro (o verde) impilato al centro della finestra; ognuna entra sulla sua parola detta con un piccolo colpo di scala; sottolineatura verde a scelta",
+   "quando": "reel a densità piena, nella finestra grande: le parole che contano di una frase («nemmeno… in bianco», «dolci, profonde, precise»), quando non c'è un'infografica grande",
+   "quando_no": "frasi intere (non è un secondo sottotitolo: solo le parole chiave); vicino ai sottotitoli fuori dalla finestra; sopra volti o mani",
+   "motore": {
+    "modello": "micro_reel",
+    "usa": [
+     "riga_icone_ads"
+    ],
+    "dati": {
+     "modo": "micro",
+     "tipo": "parole"
+    }
+   },
+   "condizioni": [
+    "dentro dati.box",
+    "box nella zona sicura e nelle zone libere della radiografia (niente volti, mani, sottotitoli, scritte)",
+    "grande: testo con corpo almeno 110 e riquadro di almeno il 15% della finestra (niente badge negli angoli)",
+    "testo nella finestra grande o lontano almeno 150 px dalla fascia dei sottotitoli",
+    "mai insieme a un'altra grafica",
+    "niente effetto sonoro"
+   ],
+   "ultimo_voto": "—",
+   "stato": "variante",
+   "origine": "laboratorio reel-grafiche, fase 6, giro 3 (05/11/2026): «parole sì anche con i sottotitoli impressi, purché GRANDI, nella finestra e sincronizzate con la voce» (Riccardo)",
+   "nota": "IN PROVA (fase 6, giro 3, 05/11/2026): diventa attivo solo con l'ok di Riccardo. Modello motore/inserti/scene/micro_reel.js.",
+   "in_prova": true,
+   "corregge": false
+  },
+  {
+   "id": "zoom-leggero-9x16",
+   "nome": "Zoom e spinte di camera leggeri sul video base",
+   "famiglia": "camera (reel)",
+   "variante_di": "camera-viva",
+   "reference": "gadzhi-04, gadzhi-12, gadzhi-23",
+   "cosa_fa": "ingrandimento morbido del video base (tutto il quadro o solo il contenuto di una finestra), al massimo 8-10%, «spinta» fino al taglio o «respiro» che torna a 1; colori intatti (ricampionamento dei piani YUV), fotogrammi fuori dallo zoom identici bit per bit",
+   "quando": "una pausa lunga senza grafiche, su un'inquadratura ferma",
+   "quando_no": "sotto una grafica a finestra, a tutto schermo o sulla persona; se taglia sottotitoli, scritte o la testa (controllo automatico); finestre con i sottotitoli dentro (schema C)",
+   "motore": {
+    "modello": null,
+    "usa": [],
+    "dati": {
+     "piano": "zoom"
+    }
+   },
+   "condizioni": [
+    "scala ≤ 1,10",
+    "almeno 1,5 s",
+    "≤ 5% al secondo",
+    "dentro un'inquadratura",
+    "niente tagli di sottotitoli, scritte, teste"
+   ],
+   "ultimo_voto": "—",
+   "stato": "variante",
+   "origine": "laboratorio reel-grafiche, fase 6 (05/11/2026): densità «piena», zoom leggeri",
+   "nota": "IN PROVA (fase 6, 05/11/2026): modello nuovo dell'agente reel-grafiche; diventa attivo solo con l'ok di Riccardo, anche dopo l'uscita dal laboratorio. Motore: motore/motore/reel_zoom.py.",
+   "in_prova": true,
+   "corregge": false
+  },
+  {
+   "id": "effetti-sonori-reel",
+   "nome": "Effetti sonori sotto le grafiche importanti",
+   "famiglia": "suono (reel)",
+   "variante_di": null,
+   "reference": "—",
+   "cosa_fa": "un effetto della libreria libreria/sfx (Pixabay) sull'entrata di una grafica importante, ben sotto la voce (di solito 20-24 dB sotto il parlato); la versione senza effetti esce sempre accanto, con l'audio copiato",
+   "quando": "entrate delle infografiche grandi",
+   "quando_no": "micro-grafiche; più di un effetto per grafica",
+   "motore": {
+    "modello": null,
+    "usa": [],
+    "dati": {
+     "piano": "grafiche[].suono"
+    }
+   },
+   "condizioni": [
+    "al massimo -12 dB dalla voce",
+    "prova: tolti gli effetti, l'audio è l'originale (residuo al livello della sola ricodifica)"
+   ],
+   "ultimo_voto": "—",
+   "stato": "variante",
+   "origine": "laboratorio reel-grafiche, fase 6 (05/11/2026): densità «piena», effetti sonori",
+   "nota": "IN PROVA (fase 6, 05/11/2026): modello nuovo dell'agente reel-grafiche; diventa attivo solo con l'ok di Riccardo, anche dopo l'uscita dal laboratorio. Motore: motore/motore/reel_suono.py.",
+   "in_prova": true,
+   "corregge": false
+  },
+  {
+   "id": "titolo-dietro-9x16",
+   "nome": "Titolo dietro di lui (reel 9:16)",
+   "famiglia": "sulla persona (reel)",
+   "variante_di": "titolo-dietro",
+   "reference": "martell-02",
+   "cosa_fa": "una o due righe di parole dette, enormi (Montserrat Black), che salgono da dietro le spalle e restano dietro la testa: il motore rimette sopra la persona con la sagoma di Apple Vision",
+   "quando": "il tema di un capitolo detto, con la persona in camera e spazio sopra la testa",
+   "quando_no": "persona che si muove molto o esce dal quadro; titoli che la testa coprirebbe per più di un quarto",
+   "motore": {
+    "modello": "persona_reel",
+    "usa": [],
+    "dati": {
+     "modo": "persona",
+     "tipo": "titolo",
+     "dietro": true
+    }
+   },
+   "condizioni": [
+    "inquadratura «persona in camera»",
+    "la persona copre al massimo il 25% della grafica (controllo del render)",
+    "niente sottotitoli o scritte coperti"
+   ],
+   "ultimo_voto": "—",
+   "stato": "variante",
+   "origine": "laboratorio reel-grafiche, fase 6 (05/11/2026): modelli sulla persona in camera (ad con frontman, reel MOFU)",
+   "nota": "IN PROVA (fase 6, 05/11/2026): adattamento al 9:16 del modello YouTube (che resta com'è); diventa attivo solo con l'ok di Riccardo, anche dopo l'uscita dal laboratorio. Modello motore/inserti/scene/persona_reel.js.",
+   "in_prova": true,
+   "corregge": false
+  },
+  {
+   "id": "numero-dietro-9x16",
+   "nome": "Numero gigante dietro di lui (reel 9:16)",
+   "famiglia": "sulla persona (reel)",
+   "variante_di": "numero-dietro",
+   "reference": "martell-02, gadzhi-03",
+   "cosa_fa": "la cifra detta, gigante, a contorno verde con il bagliore, dietro la persona",
+   "quando": "un numero detto («3 motivi»)",
+   "quando_no": "numeri non detti (mai)",
+   "motore": {
+    "modello": "persona_reel",
+    "usa": [],
+    "dati": {
+     "modo": "persona",
+     "tipo": "numero",
+     "dietro": true
+    }
+   },
+   "condizioni": [
+    "inquadratura «persona in camera»",
+    "dentro dati.box",
+    "niente sottotitoli o scritte coperti"
+   ],
+   "ultimo_voto": "—",
+   "stato": "variante",
+   "origine": "laboratorio reel-grafiche, fase 6 (05/11/2026): modelli sulla persona in camera (ad con frontman, reel MOFU)",
+   "nota": "IN PROVA (fase 6, 05/11/2026): adattamento al 9:16 del modello YouTube (che resta com'è); diventa attivo solo con l'ok di Riccardo, anche dopo l'uscita dal laboratorio. Modello motore/inserti/scene/persona_reel.js.",
+   "in_prova": true,
+   "corregge": false
+  },
+  {
+   "id": "frase-sul-corpo-9x16",
+   "nome": "Frase sul corpo (reel 9:16)",
+   "famiglia": "sulla persona (reel)",
+   "variante_di": "frase-sul-corpo",
+   "reference": "martell-02",
+   "cosa_fa": "una o due parole dette, enormi e bianche con l'ombra doppia, davanti, sul busto (mai sul volto)",
+   "quando": "la parola chiave di una frase detta, con la persona in camera",
+   "quando_no": "sopra il volto o le mani",
+   "motore": {
+    "modello": "persona_reel",
+    "usa": [],
+    "dati": {
+     "modo": "persona",
+     "tipo": "frase"
+    }
+   },
+   "condizioni": [
+    "inquadratura «persona in camera»",
+    "dentro dati.box",
+    "niente sottotitoli o scritte coperti"
+   ],
+   "ultimo_voto": "—",
+   "stato": "variante",
+   "origine": "laboratorio reel-grafiche, fase 6 (05/11/2026): modelli sulla persona in camera (ad con frontman, reel MOFU)",
+   "nota": "IN PROVA (fase 6, 05/11/2026): adattamento al 9:16 del modello YouTube (che resta com'è); diventa attivo solo con l'ok di Riccardo, anche dopo l'uscita dal laboratorio. Modello motore/inserti/scene/persona_reel.js.",
+   "in_prova": true,
+   "corregge": false
+  },
+  {
+   "id": "card-mani-9x16",
+   "nome": "Card vicino alle mani (reel 9:16)",
+   "famiglia": "sulla persona (reel)",
+   "variante_di": "card-fluttuanti",
+   "reference": "gadzhi-02, gadzhi-19",
+   "cosa_fa": "card piccola di vetro con una parola detta, accanto alle mani, che entra di lato e fluttua appena",
+   "quando": "una cosa detta mentre la persona gesticola (nota a margine)",
+   "quando_no": "sopra le mani o il volto",
+   "motore": {
+    "modello": "persona_reel",
+    "usa": [],
+    "dati": {
+     "modo": "persona",
+     "tipo": "card",
+     "vicino_mani": true
+    }
+   },
+   "condizioni": [
+    "inquadratura «persona in camera»",
+    "dentro dati.box",
+    "niente sottotitoli o scritte coperti"
+   ],
+   "ultimo_voto": "—",
+   "stato": "variante",
+   "origine": "laboratorio reel-grafiche, fase 6 (05/11/2026): modelli sulla persona in camera (ad con frontman, reel MOFU)",
+   "nota": "IN PROVA (fase 6, 05/11/2026): adattamento al 9:16 del modello YouTube (che resta com'è); diventa attivo solo con l'ok di Riccardo, anche dopo l'uscita dal laboratorio. Modello motore/inserti/scene/persona_reel.js.",
+   "in_prova": true,
+   "corregge": false
+  },
+  {
+   "id": "cerchio-9x16",
+   "nome": "Lui nel cerchio (reel 9:16)",
+   "famiglia": "sulla persona (reel)",
+   "variante_di": "lui-nel-cerchio",
+   "reference": "gadzhi-09",
+   "cosa_fa": "fondo del brand a tutto schermo con un foro tondo: dentro, il video della persona rimpicciolito (il motore, pip); anello verde che si traccia; sopra, le parole dette",
+   "quando": "quando il discorso passa a un contenuto grande da guardare (una scena, un disegno) e la persona deve restare presente",
+   "quando_no": "per una frase sola (meglio una micro-grafica); sulle animazioni 3D; più di 3-4 s",
+   "motore": {
+    "modello": "persona_reel",
+    "usa": [],
+    "dati": {
+     "modo": "tutto schermo",
+     "tipo": "cerchio"
+    }
+   },
+   "condizioni": [
+    "dati.pip {scala, x, y} che mette il volto dentro il foro",
+    "come «tutto schermo»"
+   ],
+   "ultimo_voto": "—",
+   "stato": "variante",
+   "origine": "laboratorio reel-grafiche, fase 6 (05/11/2026): modelli sulla persona in camera (ad con frontman, reel MOFU)",
+   "nota": "IN PROVA (fase 6, 05/11/2026): adattamento al 9:16 del modello YouTube (che resta com'è); diventa attivo solo con l'ok di Riccardo, anche dopo l'uscita dal laboratorio. Modello motore/inserti/scene/persona_reel.js.",
+   "in_prova": true,
+   "corregge": false
+  },
+  {
+   "id": "infografica-finestra",
+   "nome": "Infografica vera (reel 9:16, nella finestra)",
+   "famiglia": "infografiche (reel)",
+   "variante_di": null,
+   "reference": "gadzhi-14, gadzhi-11, gadzhi-21, gadzhi-05, gadzhi-07, gadzhi-22, martell-03, gadzhi-09",
+   "cosa_fa": "nella finestra grande, al posto del B-roll: una piccola scena che MOSTRA il concetto detto con pezzi che si animano sulla voce: dischi con icone che si disegnano (Tabler), il pittogramma Mobilitas che si compone, linee che collegano con impulsi di luce, anello che si riempie come un orologio senza cifre, punti che arrivano (tante persone), card, disegni Servier; etichette dette brevi; la camera si sposta fra le parti",
+   "quando": "reel a densità piena: ogni concetto detto che si può mostrare (un oggetto, un collegamento, una durata, «tanti», un prima/dopo detto); più scene di fila nella stessa grafica",
+   "quando_no": "inquadrature di schema C (senza finestra grande); animazioni 3D; concetti che si reggerebbero solo con una frase (allora meglio il B-roll)",
+   "motore": {
+    "modello": "infografica_reel",
+    "usa": [],
+    "dati": {
+     "modo": "finestra"
+    }
+   },
+   "condizioni": [
+    "solo parole dette nelle etichette (il testo è solo un'etichetta)",
+    "icone Tabler 3.49.0 (MIT, motore/inserti/icone/) o il pittogramma: mai figure umane, mai spunte, mai organi disegnati da noi (anatomia solo Servier)",
+    "testi nella zona sicura Meta, corpo almeno il minimo del reel",
+    "mai «il tuo» + disturbo a schermo; nessuna cifra non detta"
+   ],
+   "ultimo_voto": "—",
+   "stato": "variante",
+   "origine": "laboratorio reel-grafiche, fase 6, giro 4 (05/11/2026): «una parola o una frase da sola non è una grafica; ogni grafica deve MOSTRARE il concetto» (Riccardo)",
+   "nota": "IN PROVA (fase 6, giro 4, 05/11/2026): diventa attivo solo con l'ok di Riccardo. Modello motore/inserti/scene/infografica_reel.js.",
+   "in_prova": true,
+   "corregge": false
+  },
+  {
+   "id": "infografica-9x16",
+   "nome": "Infografica vera (reel 9:16, tutto schermo)",
+   "famiglia": "infografiche (reel)",
+   "variante_di": "infografica-finestra",
+   "reference": "gadzhi-17, gadzhi-22, gadzhi-07",
+   "cosa_fa": "come l'infografica nella finestra, ma a tutto schermo (copre anche i sottotitoli per la sua durata): per scene che riempiono davvero lo schermo",
+   "quando": "inquadrature senza finestra grande (schema C, persona in camera) o scene grandi",
+   "quando_no": "animazioni 3D; contenuti piccoli",
+   "motore": {
+    "modello": "infografica_reel",
+    "usa": [],
+    "dati": {
+     "modo": "tutto"
+    }
+   },
+   "condizioni": [
+    "solo parole dette nelle etichette (il testo è solo un'etichetta)",
+    "icone Tabler 3.49.0 (MIT, motore/inserti/icone/) o il pittogramma: mai figure umane, mai spunte, mai organi disegnati da noi (anatomia solo Servier)",
+    "testi nella zona sicura Meta, corpo almeno il minimo del reel",
+    "mai «il tuo» + disturbo a schermo; nessuna cifra non detta"
+   ],
+   "ultimo_voto": "—",
+   "stato": "variante",
+   "origine": "laboratorio reel-grafiche, fase 6, giro 4 (05/11/2026): «una parola o una frase da sola non è una grafica; ogni grafica deve MOSTRARE il concetto» (Riccardo)",
+   "nota": "IN PROVA (fase 6, giro 4, 05/11/2026): diventa attivo solo con l'ok di Riccardo. Modello motore/inserti/scene/infografica_reel.js (dati.modo «tutto»).",
+   "in_prova": true,
+   "corregge": false
+  },
+  {
+   "id": "etichette-barrate-finestra-centrate-icone",
+   "nome": "Etichette barrate centrate con l'icona (ads 9:16, nella finestra)",
+   "famiglia": "liste",
+   "variante_di": "etichette-barrate-finestra-centrate",
+   "reference": "martell-01, gadzhi-08 (riga di icone barrate)",
+   "cosa_fa": "come le etichette barrate centrate (stesse parole, tempi, impaginazione), con l'icona dell'oggetto negato dentro la pillola: la barra attraversa icona e parola insieme",
+   "quando": "due cose negate che sono oggetti («pastiglie in più» → pastiglia, «esercizi a casa» → casa (il manubrio «barbell» in riga col testo Apple Vision lo leggeva «0-0», «40»; la kettlebell barrata «8»))",
+   "quando_no": "negazioni senza un oggetto da mostrare",
+   "motore": {
+    "modello": "etichette_centrate_ads",
+    "usa": [
+     "etichette_luce",
+     "etichette_ads",
+     "etichette_ads2"
+    ],
+    "dati": {
+     "modo": "finestra"
+    }
+   },
+   "condizioni": [
+    "solo parole dette nelle etichette (il testo è solo un'etichetta)",
+    "icone Tabler 3.49.0 (MIT, motore/inserti/icone/) o il pittogramma: mai figure umane, mai spunte, mai organi disegnati da noi (anatomia solo Servier)",
+    "testi nella zona sicura Meta, corpo almeno il minimo del reel",
+    "mai «il tuo» + disturbo a schermo; nessuna cifra non detta"
+   ],
+   "ultimo_voto": "—",
+   "stato": "variante",
+   "origine": "laboratorio reel-grafiche, fase 6, giro 4 (05/11/2026): «una parola o una frase da sola non è una grafica; ogni grafica deve MOSTRARE il concetto» (Riccardo)",
+   "nota": "IN PROVA (fase 6, giro 4, 05/11/2026): diventa attivo solo con l'ok di Riccardo. Opzione «icona» per voce in motore/inserti/scene/etichette_centrate_ads.js (senza icona il modello resta com'era).",
+   "in_prova": true,
+   "corregge": false
+  },
+  {
+   "id": "parole-finestra-icone",
+   "nome": "Parole una per volta con l'icona (ads 9:16, nella finestra)",
+   "famiglia": "testo sulla scena",
+   "variante_di": "parole-finestra",
+   "reference": "martell-07, martell-03, gadzhi-14",
+   "cosa_fa": "come le parole una per volta (stesse parole, tempi, impaginazione), con un disco davanti a ogni parola: un'icona o un disegno Servier che nasce grigio e si accende verde con lei",
+   "quando": "un elenco breve di parole dette che hanno un'immagine («diaframma» → respiro, «postura» → colonna Servier, «stress» → temporale)",
+   "quando_no": "parole astratte senza un'immagine onesta",
+   "motore": {
+    "modello": "parole_ads",
+    "usa": [],
+    "dati": {}
+   },
+   "condizioni": [
+    "solo parole dette nelle etichette (il testo è solo un'etichetta)",
+    "icone Tabler 3.49.0 (MIT, motore/inserti/icone/) o il pittogramma: mai figure umane, mai spunte, mai organi disegnati da noi (anatomia solo Servier)",
+    "testi nella zona sicura Meta, corpo almeno il minimo del reel",
+    "mai «il tuo» + disturbo a schermo; nessuna cifra non detta"
+   ],
+   "ultimo_voto": "—",
+   "stato": "variante",
+   "origine": "laboratorio reel-grafiche, fase 6, giro 4 (05/11/2026): «una parola o una frase da sola non è una grafica; ogni grafica deve MOSTRARE il concetto» (Riccardo)",
+   "nota": "IN PROVA (fase 6, giro 4, 05/11/2026): diventa attivo solo con l'ok di Riccardo. Opzione «icona» (Tabler) o «servier» per parola in motore/inserti/scene/parole_ads.js (senza: com'era).",
+   "in_prova": true,
+   "corregge": false
+  },
+  {
+   "id": "infografica-cerchio-9x16",
+   "nome": "Infografica con lui nel cerchio (reel 9:16)",
+   "famiglia": "infografiche (reel)",
+   "variante_di": "infografica-finestra",
+   "reference": "gadzhi-09, gadzhi-07, gadzhi-14",
+   "cosa_fa": "infografica a tutto schermo con un foro tondo: dentro, la persona in camera rimpicciolita (il motore, dati.pip), l'anello verde attorno; la scena mostra il concetto detto intorno a lei",
+   "quando": "persona in camera, quando arriva un contenuto da guardare (una scena, non una frase); il volto resta sempre visibile nel foro",
+   "quando_no": "inquadrature con grafiche o scritte del montaggio da non coprire (banner, prezzo); animazioni 3D",
+   "motore": {
+    "modello": "infografica_reel",
+    "usa": [],
+    "dati": {
+     "modo": "tutto",
+     "foro": "c, r",
+     "pip": "scala, x, y"
+    }
+   },
+   "condizioni": [
+    "solo parole dette nelle etichette (il testo è solo un'etichetta)",
+    "icone Tabler 3.49.0 (MIT, motore/inserti/icone/) o il pittogramma: mai figure umane, mai spunte, mai organi disegnati da noi (anatomia solo Servier)",
+    "testi nella zona sicura Meta, corpo almeno il minimo del reel",
+    "mai «il tuo» + disturbo a schermo; nessuna cifra non detta"
+   ],
+   "ultimo_voto": "—",
+   "stato": "variante",
+   "origine": "laboratorio reel-grafiche, fase 6, giro 4 (05/11/2026): «una parola o una frase da sola non è una grafica; ogni grafica deve MOSTRARE il concetto» (Riccardo)",
+   "nota": "IN PROVA (tappa 2, 06/11/2026): diventa attivo solo con l'ok di Riccardo. Modello motore/inserti/scene/infografica_reel.js (dati.foro + dati.pip).",
+   "in_prova": true,
+   "corregge": false
+  },
+  {
+   "id": "infografica-persona",
+   "nome": "Infografica sulla persona (reel 9:16)",
+   "famiglia": "infografiche (reel)",
+   "variante_di": "infografica-finestra",
+   "reference": "gadzhi-04, gadzhi-06, gadzhi-14, martell-02",
+   "cosa_fa": "infografica senza pannello sopra la persona in camera, dentro dati.box: dischi con icone, collegamenti, card blu notte con icona ed etichetta; con dati.dietro la persona (mani comprese) torna sopra",
+   "quando": "persona in camera, accanto alla testa o dietro di lei, dove le scritte del montaggio e i sottotitoli non ci sono",
+   "quando_no": "sopra il volto (davanti); sopra grafiche o scritte del montaggio; verde sul video nudo (le etichette stanno in card blu)",
+   "motore": {
+    "modello": "infografica_reel",
+    "usa": [],
+    "dati": {
+     "modo": "persona",
+     "box": "x, y, w, h",
+     "dietro": "facoltativo"
+    }
+   },
+   "condizioni": [
+    "solo parole dette nelle etichette (il testo è solo un'etichetta)",
+    "icone Tabler 3.49.0 (MIT, motore/inserti/icone/) o il pittogramma: mai figure umane, mai spunte, mai organi disegnati da noi (anatomia solo Servier)",
+    "testi nella zona sicura Meta, corpo almeno il minimo del reel",
+    "mai «il tuo» + disturbo a schermo; nessuna cifra non detta"
+   ],
+   "ultimo_voto": "—",
+   "stato": "variante",
+   "origine": "laboratorio reel-grafiche, fase 6, giro 4 (05/11/2026): «una parola o una frase da sola non è una grafica; ogni grafica deve MOSTRARE il concetto» (Riccardo)",
+   "nota": "IN PROVA (tappa 2, 06/11/2026): diventa attivo solo con l'ok di Riccardo. Modello motore/inserti/scene/infografica_reel.js (dati.modo «libero»).",
+   "in_prova": true,
+   "corregge": false
+  },
+  {
+   "id": "infografica-sopra",
+   "nome": "Infografica sopra il video (reel 9:16)",
+   "famiglia": "infografiche (reel)",
+   "variante_di": "infografica-finestra",
+   "reference": "gadzhi-04, gadzhi-06, gadzhi-14, martell-02",
+   "cosa_fa": "infografica senza pannello sopra il B-roll, dentro dati.box: dischi con spessore e luce, card con icona, collegamenti, etichette in pillola; il video resta visibile (giro 5)",
+   "quando": "sopra il B-roll o una finestra, invece di sostituirlo (regola del giro 5)",
+   "quando_no": "sopra volti o sottotitoli; scritte del montaggio",
+   "motore": {
+    "modello": "infografica_reel",
+    "usa": [],
+    "dati": {
+     "modo": "micro",
+     "box": "x, y, w, h"
+    }
+   },
+   "condizioni": [
+    "solo parole dette nelle etichette (il testo è solo un'etichetta)",
+    "icone Tabler 3.49.0 (MIT, motore/inserti/icone/) o il pittogramma: mai figure umane, mai spunte, mai organi disegnati da noi (anatomia solo Servier)",
+    "testi nella zona sicura Meta, corpo almeno il minimo del reel",
+    "mai «il tuo» + disturbo a schermo; nessuna cifra non detta"
+   ],
+   "ultimo_voto": "—",
+   "stato": "variante",
+   "origine": "laboratorio reel-grafiche, fase 6, giro 4 (05/11/2026): «una parola o una frase da sola non è una grafica; ogni grafica deve MOSTRARE il concetto» (Riccardo)",
+   "nota": "IN PROVA (giro 5, 06/11/2026): diventa attivo solo con l'ok di Riccardo. Modello motore/inserti/scene/infografica_reel.js (dati.modo «libero», senza dietro).",
+   "in_prova": true,
+   "corregge": false
+  },
+  {
+   "id": "palco-fascia-alta",
+   "nome": "Palco del reel: fascia alta (reel 9:16)",
+   "famiglia": "infografiche (reel)",
+   "variante_di": "infografica-finestra",
+   "reference": "verticale-03, verticale-05, verticale-06, verticale-07, verticale-11, verticale-08, verticale-10",
+   "cosa_fa": "UN palco per tutto il reel: un pannello fisso in alto (blu del sito, angoli in basso arrotondati, filo di luce verde) dentro cui il contenuto cambia e si trasforma seguendo la voce: poche famiglie di oggetti-prova grandi (card con disegno Servier, lista che si barra, barre a confronto, card del logo, disco con icona), indicatore di struttura a trattini, parola chiave in gradiente. Si apre e si chiude a tendina; con la persona inquadrata stretta il motore abbassa il video in una finestra arrotondata (reel_palco.py) e i sottotitoli restano al loro posto",
+   "quando": "ogni reel con un copy che spiega (benefici, differenze, passi): il palco si sceglie una volta e si tiene; si chiude sulle animazioni del montaggio (3D, pastiglie) e dove il montaggio ha già le sue grafiche (banner, prezzo)",
+   "quando_no": "animazioni 3D; inquadrature dove abbassare il video porterebbe un volto sotto i sottotitoli; scene complesse (allora un tutto schermo breve)",
+   "motore": {
+    "modello": "infografica_reel",
+    "usa": [],
+    "dati": {
+     "modo": "palco"
+    }
+   },
+   "condizioni": [
+    "un palco per reel: niente elementi sparsi fuori dal palco (reel_palco.controlla)",
+    "ogni scena dichiara famiglia, da dove nasce (nasce_da) e la reference verticale (verticale-NN@secondi)",
+    "solo parole dette nelle etichette (il testo è solo un'etichetta); testi nel contenuto del palco e nella zona sicura Meta, corpo almeno il minimo del reel",
+    "icone Tabler 3.49.0 o il logo intero: mai figure umane, mai spunte, mai organi disegnati da noi (anatomia solo Servier, con l'attribuzione)",
+    "mai «il tuo» + disturbo a schermo; nessuna cifra non detta; le frasi che promettono un risultato non diventano grafiche"
+   ],
+   "ultimo_voto": "—",
+   "stato": "variante",
+   "origine": "laboratorio reel-grafiche, 07/11/2026 («nuova direzione» di Riccardo dopo il giro 5: le grafiche sembravano un collage; studio delle reference verticali 01-11)",
+   "nota": "IN PROVA (07/11/2026): diventa attivo solo con l'ok di Riccardo. Modello motore/inserti/scene/infografica_reel.js (dati.modo «palco»); il video nella finestra: motore/motore/reel_palco.py.",
+   "in_prova": true,
+   "corregge": false
+  }
+ ]
+}

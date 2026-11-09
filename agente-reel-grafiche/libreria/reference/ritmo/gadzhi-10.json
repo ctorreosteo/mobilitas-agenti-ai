@@ -1,0 +1,59 @@
+{
+ "clip": "gadzhi-10",
+ "durata_s": 10.74,
+ "eventi": [
+  {
+   "t": 1.73,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«15» in lime in alto a sinistra, piccolo"
+  },
+  {
+   "t": 1.9,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«DAYS»"
+  },
+  {
+   "t": 2.07,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«×»"
+  },
+  {
+   "t": 2.32,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«$55»"
+  },
+  {
+   "t": 4.55,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«≈» a capo"
+  },
+  {
+   "t": 4.97,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«$800/MO»"
+  },
+  {
+   "t": 7.47,
+   "tipo": "uscita",
+   "cosa": "l'equazione si cancella all'indietro, carattere per carattere (7,47-8,22 s, circa 9 frame)"
+  },
+  {
+   "t": 9.75,
+   "tipo": "taglio",
+   "cosa": "piccolo punch-in a stacco su di lui, poi avvicinamento lento fino a 10,5 s"
+  }
+ ],
+ "principali": 7,
+ "principali_ogni_10s": 6.5,
+ "micro": 6,
+ "uscite": 1,
+ "pausa_media_s": 1.34,
+ "pausa_max_s": 4.78,
+ "note": "Ogni termine dell'equazione compare da solo, quindi conta come un evento. Nessuno stacco fra 0 e 9,75 s: i cambi di posizione del viso sono suoi movimenti (fondo fermo, controllato con la differenza fra fotogrammi). Il punch-in a 9,75 s è piccolo: potrebbe essere un avvicinamento della camera e non uno stacco."
+}

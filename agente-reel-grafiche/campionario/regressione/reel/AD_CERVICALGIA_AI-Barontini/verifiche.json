@@ -1,0 +1,8 @@
+{
+ "cifre": {
+  "f766-803:2": "lettura sbagliata: sul fotogramma c'è il «?» del riquadro della card 3 (ritaglio guardato); come i 38 «?» letti «2» della fase 3 (guardato il 04/11/2026 09:00)",
+  "f1959:349": "lettura sbagliata: sul fotogramma c'è «€49» che entra sfocato, Vision legge «€» come «3» (ritaglio guardato); come f1959 nella fase 3 (guardato il 04/11/2026 09:00)",
+  "f1958:673": "lettura sbagliata: «€49» che entra sfocato (guardato sul riferimento, fase 5)",
+  "f2026:67З": "lettura sbagliata: «€49» che esce sopra il modulo (guardato sul riferimento, fase 5)"
+ }
+}

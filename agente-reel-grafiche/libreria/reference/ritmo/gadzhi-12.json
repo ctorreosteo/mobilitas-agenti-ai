@@ -1,0 +1,58 @@
+{
+ "clip": "gadzhi-12",
+ "durata_s": 9.91,
+ "eventi": [
+  {
+   "t": 1.88,
+   "tipo": "stato",
+   "livello": "micro",
+   "cosa": "sulla card 2 gli asterischi cominciano a rimescolarsi"
+  },
+  {
+   "t": 1.96,
+   "tipo": "camera",
+   "cosa": "carrello veloce: la camera salta dalla card 1 alla 2 e avanza (1,96-2,92 s, sfocatura di movimento, parallasse fra le card)"
+  },
+  {
+   "t": 1.97,
+   "tipo": "stato",
+   "livello": "micro",
+   "cosa": "il bordo della card 2 si accende di lime"
+  },
+  {
+   "t": 2.22,
+   "tipo": "stato",
+   "livello": "micro",
+   "cosa": "il testo della card 2 si decifra («AI @&0» → «AI ADS»), 2,22-2,47 s, 3 frame"
+  },
+  {
+   "t": 2.38,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "icona megafono lime sopra il testo"
+  },
+  {
+   "t": 2.72,
+   "tipo": "stato",
+   "livello": "grande",
+   "cosa": "la card 2 si riempie di luce lime (2,72-2,97 s, 3 frame), poi un riflesso chiaro sale fino a 3,72 s"
+  },
+  {
+   "t": 6.63,
+   "tipo": "taglio",
+   "cosa": "stacco a lui"
+  },
+  {
+   "t": 6.63,
+   "tipo": "uscita",
+   "cosa": "le card escono con lo stacco"
+  }
+ ],
+ "principali": 7,
+ "principali_ogni_10s": 7.1,
+ "micro": 4,
+ "uscite": 1,
+ "pausa_media_s": 1.24,
+ "pausa_max_s": 3.91,
+ "note": "La clip comincia con le card già a schermo e la card 1 già accesa. Il riflesso dopo il riempimento è contato dentro lo stesso stato. Poche entrate: è un momento di «accensione», non di costruzione."
+}

@@ -1,0 +1,9 @@
+{"clip": "verticale-04", "durata_s": 2.2,
+ "eventi": [
+  {"t": 0.03, "tipo": "entrata", "livello": "micro", "cosa": "icona-app (quadrato bianco arrotondato con etichetta piccola sotto) sopra la testa: scala e dissolvenza in 3 fotogrammi (0,03-0,13)"},
+  {"t": 0.78, "tipo": "stato", "cosa": "l'icona si spegne e si restringe (0,78-0,82), diventa una linea orizzontale (0,85) che si apre in un pannello scuro (0,88-0,95) con l'interfaccia di una timeline di montaggio"},
+  {"t": 1.02, "tipo": "stato", "cosa": "le tracce della timeline si riempiono di clip colorate e forme d'onda (1,02-1,33); poi la testina scorre fino a 1,80"},
+  {"t": 1.93, "tipo": "taglio", "cosa": "stacco a un'inquadratura più stretta di lui (punch-in)"}
+ ],
+ "principali": 4, "principali_ogni_10s": 18.2, "micro": 1, "uscite": 1, "pausa_media_s": 0.44, "pausa_max_s": 0.91,
+ "note": "Uscita: il pannello si schiaccia in verticale (1,83-1,90), diventa una linea (1,93) e la linea svanisce entro 2,03: è la chiusura «a fisarmonica», contata come uscita e non come stato. Lo scorrere continuo della testina e del tempo (1,33-1,80) non è contato. Dubbio: il taglio di 1,93 cade nello stesso fotogramma in cui il pannello è già linea; potrebbe essere un punch-in digitale e non un'altra ripresa."}

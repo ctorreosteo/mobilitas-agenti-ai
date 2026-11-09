@@ -1,0 +1,3 @@
+.pannello .logo { position: absolute; left: 110px; top: 150px; width: 300px; }
+.righe { position: absolute; left: 110px; right: var(--margine); top: 360px; }
+.riga { font-size: 68px; line-height: 1.22; font-weight: 300; }

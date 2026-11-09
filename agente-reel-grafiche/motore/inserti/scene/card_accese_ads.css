@@ -1,0 +1,22 @@
+/* card_accese_ads (laboratorio, fase 2): le classi ca-* vengono da card_accese.css (caricato insieme) */
+.caa-vis { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; overflow: hidden; }
+.caa-fondo { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+.caa-ret { position: absolute; left: -200px; top: -180px; width: 1500px; height: 2300px; opacity: 0.55;
+  /* giro 2: il retino si attenua sotto y 1250 (zona dell'interfaccia di Reels) */
+  -webkit-mask-image: linear-gradient(to bottom, #000 0px, #000 1430px, rgba(0,0,0,0.3) 1680px, rgba(0,0,0,0.3) 2300px);
+  mask-image: linear-gradient(to bottom, #000 0px, #000 1430px, rgba(0,0,0,0.3) 1680px, rgba(0,0,0,0.3) 2300px); }
+.caa-titolo { position: absolute; left: 0; width: 1080px; text-align: center; line-height: 1; font-weight: 900;
+  letter-spacing: -0.02em; white-space: nowrap; }
+.caa-titolo .dc-strato { position: absolute; left: 0; top: 0; }
+.caa-tcifra { position: relative; display: inline-block; color: #72FA93; text-shadow: 0 0 30px rgba(114, 250, 147, 0.55); }
+.caa-ttesto { position: relative; display: inline-block; color: #F4F4F4;
+  text-shadow: 0 0 26px rgba(244, 244, 244, 0.25), 0 6px 24px rgba(0, 8, 22, 0.7); }
+.caa-scena { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; perspective: 1600px; perspective-origin: 50% 45%; }
+.caa-card { border-radius: 34px; }
+.caa-ico { left: 28px; top: 50%; width: 120px; height: 120px; margin-top: -60px; border-radius: 26px; }
+.caa-ico-t { top: 50%; width: 116px; height: 116px; margin-top: -60px; line-height: 116px; font-size: 100px; }
+.caa-chiave { position: absolute; left: 176px; right: 24px; top: 50%; font-weight: 800; letter-spacing: -0.025em;
+  white-space: nowrap; line-height: 1.2; }
+.caa-chiave .dc-strato, .caa-chiave .dc-vero { position: absolute; left: 0; top: 0; }
+.caa-punti { top: 50%; transform: translateY(-50%); font-size: 52px; }
+.caa-velo { position: absolute; inset: -2px; background: #001A3D; z-index: 5; }

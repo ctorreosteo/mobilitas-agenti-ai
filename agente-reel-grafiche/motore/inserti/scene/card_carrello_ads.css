@@ -1,0 +1,44 @@
+/* card_carrello_ads (laboratorio, 04/11/2026, giro 3): le classi ca-* vengono da card_accese.css, caa-* da
+   card_accese_ads.css (caricati insieme con `usa`) */
+.ccr-par { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+.ccr-ret { position: absolute; left: -200px; top: -180px; width: 2000px; height: 2300px; opacity: 0.55;
+  -webkit-mask-image: linear-gradient(to bottom, #000 0px, #000 1430px, rgba(0,0,0,0.3) 1680px, rgba(0,0,0,0.3) 2300px);
+  mask-image: linear-gradient(to bottom, #000 0px, #000 1430px, rgba(0,0,0,0.3) 1680px, rgba(0,0,0,0.3) 2300px); }
+.ccr-cam, .ccr-fan, .ccr-bin, .ccr-corsia { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+.ccr-pezzo { position: absolute; }
+/* card opaca (le vicine stanno dietro: niente trasparenze) */
+.ccr-card { border-radius: 40px;
+  background: linear-gradient(170deg, #0E3A70 0%, #002552 45%, #001838 100%); }
+/* spessore sotto la card (scende sotto y 1248: li solo forme) */
+.ccr-spessore { position: absolute; left: 10px; right: 10px; border-radius: 0 0 44px 44px;
+  background: linear-gradient(180deg, #001630 0%, #000C1E 100%); border: 2px solid rgba(141, 255, 169, 0.12); border-top: none;
+  box-shadow: 0 30px 60px rgba(0, 6, 18, 0.7); }
+.ccr-forme, .ccr-testi { position: absolute; inset: 0; }
+.ccr-tit { left: 0; }
+/* medaglione della cifra (sta tutto dentro la card, con margine) */
+.ccr-anello { position: absolute; box-sizing: border-box; border-radius: 50%; border: 4px solid rgba(114, 250, 147, 0.32);
+  background: radial-gradient(circle at 50% 50%, rgba(114, 250, 147, 0.12) 0%, rgba(114, 250, 147, 0.04) 55%, rgba(114, 250, 147, 0) 72%); }
+.ccr-alone { position: absolute; left: 6%; top: 6%; width: 88%; height: 88%; border-radius: 50%;
+  background: radial-gradient(circle at 50% 50%, rgba(140, 255, 170, 0.42) 0%, rgba(114, 250, 147, 0.18) 42%, rgba(114, 250, 147, 0) 70%); }
+.ccr-onda { position: absolute; box-sizing: border-box; border-radius: 50%; border: 6px solid rgba(160, 255, 185, 0.9);
+  box-shadow: 0 0 24px rgba(114, 250, 147, 0.6); }
+.ccr-cifra { position: absolute; left: 0; text-align: center; font-weight: 900; line-height: 1; letter-spacing: -0.04em;
+  color: #72FA93; text-shadow: 0 0 28px rgba(114, 250, 147, 0.6), 0 0 80px rgba(114, 250, 147, 0.3); }
+.ccr-q { font-weight: 800; letter-spacing: 0; }
+/* frase chiave */
+.ccr-chiave { position: absolute; left: 0; text-align: center; font-weight: 800; letter-spacing: -0.025em; line-height: 1.16; }
+.ccr-riga { position: relative; white-space: nowrap; }
+.ccr-rv { position: relative; display: inline-block; }
+.ccr-rv .dc-strato { position: absolute; left: 0; top: 0; }
+.ccr-pz { position: absolute; left: 0; }
+/* puntini (forme, non caratteri) */
+.ccr-punti { display: flex; align-items: center; justify-content: center; gap: 22px; }
+.ccr-punti i { display: block; width: 14px; height: 14px; border-radius: 50%; background: rgba(244, 244, 244, 0.4); }
+.ccr-punti-k { position: relative; }
+.ccr-punti-f { position: absolute; left: 0; width: 100%; height: 40px; gap: 18px; }
+.ccr-punti-f i { width: 12px; height: 12px; }
+/* tacche del binario */
+.ccr-tacche { position: absolute; left: 0; display: flex; justify-content: center; align-items: center; gap: 18px; height: 20px; }
+.ccr-tacche i { display: block; width: 46px; height: 12px; border-radius: 6px; background: rgba(244, 244, 244, 0.22); }
+.ccr-tacche i.gia { background: rgba(114, 250, 147, 0.75); }
+.ccr-tacche i.ora { width: 96px; background: #72FA93; box-shadow: 0 0 14px rgba(114, 250, 147, 0.6); }

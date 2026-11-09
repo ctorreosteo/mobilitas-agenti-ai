@@ -1,0 +1,5 @@
+# versioni esatte (07/11/2026, Python 3.12.16): le installa installa.sh; uguali al laboratorio e all'agente video YouTube
+brotli==1.2.1
+fonttools==4.67.0
+numpy==2.5.4
+pillow==13.0.0

@@ -1,0 +1,441 @@
+{
+ "_cosa": "Piano della prova di non regressione (fase 4): è il piano gia approvato da Riccardo per AD_CERVICALGIA_AI-Barontini (fasi 1-3), elementi copiati senza cambiare niente da videos/AD_CERVICALGIA_AI-Barontini/grafiche.json e grafica-fase1.json (V1).",
+ "slug": "AD_CERVICALGIA_AI-Barontini-prova",
+ "grafiche": [
+  {
+   "nome": "etichette-barrate",
+   "catalogo": "etichette-barrate-finestra",
+   "modo": "finestra",
+   "f0": 1067,
+   "frames": 94,
+   "voce": "«niente medicine e niente esercizi da fare a casa» (35,72–38,50 s)",
+   "perche": "due cose che la voce nega: due pillole barrate, contenuto piccolo, nella finestra grande dell'inquadratura 8",
+   "elementi": [
+    {
+     "modello": "etichette_ads",
+     "usa": [
+      "etichette_luce"
+     ],
+     "s": 0.0,
+     "e": 3.1,
+     "dati": {
+      "modo": "finestra",
+      "luce": "forte",
+      "barra": "panna",
+      "corpo": 88,
+      "spazio": 30,
+      "x": 153,
+      "y": 466,
+      "voci": [
+       {
+        "testo": "medicine",
+        "t": 0.0667,
+        "barra_t": 0.8667,
+        "larg": 430.0
+       },
+       {
+        "testo": "esercizi a casa",
+        "t": 1.3667,
+        "barra_t": 2.4333,
+        "larg": 663.8
+       }
+      ],
+      "rett": {
+       "x": 28,
+       "y": 373,
+       "w": 1024,
+       "h": 549,
+       "r": 67
+      },
+      "barra_px": 10,
+      "barra_resta": 0.85,
+      "barrata": 0.55
+     }
+    }
+   ]
+  },
+  {
+   "nome": "card-3-motivi",
+   "catalogo": "card-accese-9x16",
+   "modo": "tutto schermo",
+   "f0": 541,
+   "frames": 662,
+   "voce": "«ecco 3 motivi per cui il nostro trattamento funziona davvero» e poi «primo… secondo… terzo…» (18,07–40,10 s)",
+   "perche": "elenco di tre cose annunciate prima: le card riempiono lo schermo; quattro apparizioni a taglio sulle parole",
+   "elementi": [
+    {
+     "modello": "card_accese_ads",
+     "usa": [
+      "card_accese"
+     ],
+     "s": 0.0,
+     "e": 22.0667,
+     "dati": {
+      "apparizioni": [
+       {
+        "s": 0.0,
+        "e": 3.5667,
+        "esce": "taglio",
+        "_cosa": "annuncio: «ecco 3 motivi ... funziona davvero» (18,07-21,43)"
+       },
+       {
+        "s": 6.6667,
+        "e": 8.7667,
+        "esce": "taglio",
+        "_cosa": "«primo, già dalla prima seduta» (24,72-26,45)"
+       },
+       {
+        "s": 12.0667,
+        "e": 14.7667,
+        "esce": "taglio",
+        "_cosa": "«secondo, lavoriamo solo con le mani» (30,25-32,64); entra sul taglio a 30,100"
+       },
+       {
+        "s": 20.6333,
+        "e": 22.0667,
+        "esce": "taglio",
+        "_cosa": "«terzo, non trattiamo solo...» (38,72-): entra sul fotogramma dopo le etichette, esce sul taglio verso le 3D (40,100)"
+       }
+      ],
+      "titolo": {
+       "cifra": "3",
+       "testo": "motivi",
+       "t": 0.0
+      },
+      "t_entra": 0.5667,
+      "x": 70,
+      "y": 478,
+      "w": 940,
+      "h": 230,
+      "gap": 36,
+      "rot": 5,
+      "corpo": 87,
+      "corpo_titolo": 132,
+      "y_titolo": 300,
+      "carte": [
+       {
+        "num": "1",
+        "t_num": 6.6867,
+        "chiave": "prima seduta",
+        "t_chiave": 7.3567,
+        "t_stato": 6.4667
+       },
+       {
+        "num": "2",
+        "t_num": 12.2467,
+        "chiave": "solo con le mani",
+        "t_chiave": 13.0067,
+        "t_stato": 11.8667
+       },
+       {
+        "num": "3",
+        "t_num": 20.6867,
+        "chiave": "non solo il collo",
+        "t_chiave": 21.1667,
+        "t_stato": 20.4333
+       }
+      ],
+      "t_riepilogo": 21.7167,
+      "lucine": [
+       1.3167,
+       2.3167
+      ],
+      "pulsa": [
+       1.0667,
+       3.4167
+      ],
+      "velo": 0.48
+     }
+    }
+   ]
+  },
+  {
+   "nome": "equazione",
+   "catalogo": "equazione-finestra",
+   "modo": "finestra",
+   "f0": 376,
+   "frames": 165,
+   "voce": "«pensato per sciogliere la tensione, liberare il movimento del collo e darti un sollievo a lungo termine» (12,57–18,00 s)",
+   "perche": "la voce mette insieme due cose che danno un risultato: equazione; contenuto piccolo, quindi nella finestra grande (inquadrature 3 e 4), con le 3D delle finestre piccole visibili",
+   "elementi": [
+    {
+     "modello": "equazione_ads",
+     "s": 0.0,
+     "e": 5.5,
+     "dati": {
+      "rett": [
+       {
+        "da": 0,
+        "x": 27,
+        "y": 375,
+        "w": 1026,
+        "h": 550,
+        "r": 67
+       },
+       {
+        "da": 2.4667,
+        "x": 28,
+        "y": 373,
+        "w": 1024,
+        "h": 550,
+        "r": 66
+       }
+      ],
+      "corpo": 84,
+      "entra_fr": 4,
+      "t_via": 5.1333,
+      "sfalsa_fr": 2,
+      "cancella_fr": 4,
+      "righe": [
+       {
+        "testo": "sciogliere la tensione",
+        "t": 0.0333,
+        "y": 402
+       },
+       {
+        "op": "+",
+        "t_op": 1.3,
+        "y": 494
+       },
+       {
+        "testo": "liberare il movimento",
+        "t": 1.3333,
+        "y": 578
+       },
+       {
+        "op": "=",
+        "t_op": 3.6,
+        "testo": "sollievo",
+        "t": 3.6333,
+        "chiave": true,
+        "y": 676,
+        "luce": 4.0333
+       },
+       {
+        "testo": "a lungo termine",
+        "t": 4.1333,
+        "chiave": true,
+        "y": 768
+       }
+      ],
+      "centra": [
+       {
+        "t": 0,
+        "dy": 201
+       },
+       {
+        "t": 1.1333,
+        "dy": 113
+       },
+       {
+        "t": 3.4667,
+        "dy": 64
+       },
+       {
+        "t": 4.0,
+        "dy": 0
+       }
+      ],
+      "barra": {
+       "t": 4.5333,
+       "y": 888,
+       "larghezza": 520
+      }
+     }
+    }
+   ]
+  },
+  {
+   "nome": "chiusura",
+   "catalogo": "chiusura-9x16",
+   "modo": "tutto schermo",
+   "f0": 1841,
+   "frames": 234,
+   "voce": "«stiamo riservando gli ultimi trattamenti specifici nel nostro studio a soli 49 euro: compila il form e ci vediamo in Mobilitas» (61,38–69,17 s)",
+   "perche": "la chiusura con prezzo e modulo riempie lo schermo fino alla fine",
+   "elementi": [
+    {
+     "modello": "chiusura_ads",
+     "usa": [
+      "card_accese"
+     ],
+     "s": 0.0,
+     "e": 7.8,
+     "dati": {
+      "lista": {
+       "titolo": {
+        "testo": "stiamo riservando",
+        "t": 0.0,
+        "corpo": 88,
+        "subito": true
+       },
+       "y": 389,
+       "via": 3.3333,
+       "righe": [
+        {
+         "testo": "gli ultimi",
+         "t": 0.6933,
+         "chiave": true,
+         "corpo": 140,
+         "dopo": 20
+        },
+        {
+         "testo": "trattamenti",
+         "t": 1.2333,
+         "corpo": 120,
+         "dopo": 10
+        },
+        {
+         "testo": "specifici",
+         "t": 1.8933,
+         "corpo": 120,
+         "dopo": 10
+        },
+        {
+         "testo": "nel nostro studio",
+         "t": 2.4733,
+         "corpo": 100
+        }
+       ]
+      },
+      "prezzo": {
+       "pre": {
+        "testo": "a soli",
+        "t": 3.5533,
+        "corpo": 96
+       },
+       "cifra": {
+        "testo": "€49",
+        "t": 3.8833,
+        "corpo": 300
+       },
+       "y": 560,
+       "su": {
+        "t": 4.9133,
+        "dy": -436,
+        "scala": 0.5
+       }
+      },
+      "modulo": {
+       "t": 5.1333,
+       "x": 140,
+       "y": 520,
+       "w": 800,
+       "h": 640,
+       "campo_y0": 60,
+       "campo_passo": 130,
+       "campo_h": 100,
+       "campi": [
+        5.3533,
+        5.5833,
+        5.7733
+       ],
+       "bottone": {
+        "testo": "compila",
+        "t": 5.8833,
+        "y": 465,
+        "h": 120,
+        "corpo": 86
+       },
+       "via": 6.0033
+      },
+      "marchio": {
+       "testo": {
+        "testo": "ci vediamo",
+        "t": 6.2133,
+        "corpo": 120
+       },
+       "y": 478,
+       "disco": 128,
+       "disco_y": 300,
+       "logo_t": 6.6833,
+       "logo_y": 660,
+       "logo_w": 820,
+       "bottone_y": 823,
+       "freccia_t": 6.2533,
+       "freccia_y": 993,
+       "freccia_w": 140,
+       "freccia_tratto": 14,
+       "rimbalzo": 30
+      }
+     }
+    }
+   ]
+  },
+  {
+   "nome": "obiettivo",
+   "catalogo": "card-con-spessore-9x16",
+   "modo": "tutto schermo",
+   "f0": 1549,
+   "frames": 292,
+   "voce": "«il nostro obiettivo è un altro: farti tornare a girare la testa senza pensarci, svegliarti senza il collo bloccato e arrivare a fine giornata senza il collo a pezzi» (51,66–61,10 s)",
+   "perche": "tre obiettivi (non garanzie, niente numeri); le card accese sono gia usate, quindi card con spessore; tre apparizioni, niente 3D nelle inquadrature 11-12",
+   "elementi": [
+    {
+     "modello": "card_spessore_ads",
+     "usa": [
+      "card_spessore",
+      "card_accese"
+     ],
+     "s": 0.0,
+     "e": 9.7333,
+     "dati": {
+      "apparizioni": [
+       {
+        "s": 0.0,
+        "e": 3.5333,
+        "_cosa": "«il nostro obiettivo è un altro: farti tornare a girare la testa» (51,66-55,15); esce sul taglio a 55,167"
+       },
+       {
+        "s": 4.4333,
+        "e": 6.6667,
+        "_cosa": "«svegliarti senza il collo bloccato» (56,14-58,26)"
+       },
+       {
+        "s": 7.3333,
+        "e": 9.7333,
+        "_cosa": "«fine giornata senza il collo a pezzi» (59,08-61,10); al 1841 entra la chiusura a taglio"
+       }
+      ],
+      "titolo": {
+       "testo": "il nostro obiettivo",
+       "chiave": true,
+       "t": 0.0,
+       "t_chiave": 0.5767,
+       "y": 298,
+       "corpo": 96,
+       "subito": true
+      },
+      "x": 70,
+      "y": 464,
+      "larghezza": 940,
+      "altezza": 242,
+      "spazio": 24,
+      "corpo": 84,
+      "velo": 0.45,
+      "carte": [
+       {
+        "testo": "*girare la testa*|senza pensarci",
+        "t": 2.6167
+       },
+       {
+        "testo": "*svegliarti senza*|il collo bloccato",
+        "t": 4.4667,
+        "t_stato": 4.3667
+       },
+       {
+        "testo": "*fine giornata senza*|il collo a pezzi",
+        "t": 7.4167,
+        "t_stato": 7.2667
+       }
+      ],
+      "t_riepilogo": 8.9667,
+      "t_gusci": 0.9667,
+      "guscio": 0.6,
+      "gusci_passo": 0.25
+     }
+    }
+   ]
+  }
+ ]
+}

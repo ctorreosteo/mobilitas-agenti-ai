@@ -1,0 +1,151 @@
+{
+ "errori": [],
+ "audio_identico": true,
+ "grafiche": {
+  "equazione": {
+   "visibile": [
+    [
+     377,
+     540
+    ]
+   ],
+   "testo_ingombro": [
+    88,
+    410,
+    996,
+    876
+   ],
+   "testi_scritti": [
+    "sciogliere la tensione",
+    "+",
+    "liberare il movimento",
+    "=",
+    "sollievo",
+    "a lungo termine"
+   ]
+  },
+  "card-3-motivi": {
+   "visibile": [
+    [
+     541,
+     647
+    ],
+    [
+     741,
+     803
+    ],
+    [
+     903,
+     983
+    ],
+    [
+     1160,
+     1202
+    ]
+   ],
+   "testo_ingombro": [
+    113,
+    304,
+    982,
+    1163
+   ],
+   "testi_scritti": [
+    "3",
+    "?",
+    "• • • • • • •",
+    "motivi",
+    "1",
+    "prima seduta",
+    "2",
+    "solo con le mani",
+    "non solo il collo"
+   ]
+  },
+  "etichette-barrate": {
+   "visibile": [
+    [
+     1068,
+     1159
+    ]
+   ],
+   "testo_ingombro": [
+    160,
+    512,
+    866,
+    780
+   ],
+   "testi_scritti": [
+    "medicine",
+    "esercizi a casa"
+   ]
+  },
+  "obiettivo": {
+   "visibile": [
+    [
+     1549,
+     1654
+    ],
+    [
+     1682,
+     1748
+    ],
+    [
+     1769,
+     1840
+    ]
+   ],
+   "testo_ingombro": [
+    100,
+    306,
+    982,
+    1220
+   ],
+   "testi_scritti": [
+    "il",
+    "nostro",
+    "obiettivo",
+    "girare la testa",
+    "senza pensarci",
+    "svegliarti senza",
+    "il collo bloccato",
+    "fine giornata senza",
+    "il collo a pezzi"
+   ]
+  },
+  "chiusura": {
+   "visibile": [
+    [
+     1841,
+     2074
+    ]
+   ],
+   "testo_ingombro": [
+    96,
+    313,
+    988,
+    1145
+   ],
+   "testi_scritti": [
+    "stiamo riservando",
+    "gli ultimi",
+    "trattamenti",
+    "specifici",
+    "nel nostro studio",
+    "a soli",
+    "€49",
+    "compila",
+    "ci vediamo"
+   ]
+  }
+ },
+ "ssim": {
+  "senza_grafiche": 0.99521,
+  "equazione: sopra la finestra": 0.99968,
+  "equazione: sotto la finestra": 0.99575,
+  "etichette-barrate: sopra la finestra": 0.99973,
+  "etichette-barrate: sotto la finestra": 0.99355
+ },
+ "vision": {
+  "fotogrammi_letti": 1029
+ }
+}

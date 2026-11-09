@@ -1,0 +1,278 @@
+{
+ "clip": "gadzhi-17",
+ "durata_s": 11.34,
+ "eventi": [
+  {
+   "t": 0.92,
+   "tipo": "stato",
+   "livello": "grande",
+   "cosa": "il punto verde fermo dall'inizio cresce e diventa un cerchio con una silhouette dentro (0.92→1.25)"
+  },
+  {
+   "t": 1.08,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "pallino verde accanto al cerchio (diventerà il badge)"
+  },
+  {
+   "t": 1.17,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "arco sottile che gira attorno al cerchio"
+  },
+  {
+   "t": 1.42,
+   "tipo": "stato",
+   "livello": "micro",
+   "cosa": "nel pallino compare «?»"
+  },
+  {
+   "t": 1.58,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "scritta piccola «ONE OF THE MOST» che si scrive da sinistra"
+  },
+  {
+   "t": 2.0,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«SUCCESSFUL» in grassetto più grande, si scrive da sinistra"
+  },
+  {
+   "t": 2.58,
+   "tipo": "stato",
+   "livello": "micro",
+   "cosa": "il badge «?» si svuota e diventa «$»"
+  },
+  {
+   "t": 2.67,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "riga «ONLINE ENTREPRENEURS» sale da sotto mentre la precedente sale via"
+  },
+  {
+   "t": 2.67,
+   "tipo": "uscita",
+   "cosa": "riga ONE OF THE MOST SUCCESSFUL sale via"
+  },
+  {
+   "t": 2.75,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "raggi sottili che partono dal cerchio"
+  },
+  {
+   "t": 2.92,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "icone piccole in cerchietti (frecce) in fondo ai raggi"
+  },
+  {
+   "t": 3.33,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "grafico ad area che si disegna da sinistra, mentre il cerchio si spegne"
+  },
+  {
+   "t": 3.42,
+   "tipo": "uscita",
+   "cosa": "cerchio con icone si spegne"
+  },
+  {
+   "t": 3.5,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "etichette degli anni sull'asse"
+  },
+  {
+   "t": 3.58,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«OF THE» al posto della riga precedente"
+  },
+  {
+   "t": 3.58,
+   "tipo": "uscita",
+   "cosa": "ONLINE ENTREPRENEURS"
+  },
+  {
+   "t": 3.67,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "pillola verde che si apre e «DECADE» dentro"
+  },
+  {
+   "t": 4.0,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "pallino in cima alla linea del grafico"
+  },
+  {
+   "t": 4.17,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "il pallino diventa una miniatura che si ingrandisce fino a riempire il quadro (scena 'AI', 4.17→4.67)"
+  },
+  {
+   "t": 4.42,
+   "tipo": "uscita",
+   "cosa": "grafico e OF THE DECADE coperti dalla scena che si ingrandisce"
+  },
+  {
+   "t": 4.75,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«MAKE MONEY» si scrive da sinistra"
+  },
+  {
+   "t": 5.17,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "freccia ondulata che si disegna verso l'alto"
+  },
+  {
+   "t": 5.25,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "contatore piccolo «+$…» con icona"
+  },
+  {
+   "t": 5.25,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«WITH» in alto a destra"
+  },
+  {
+   "t": 5.42,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "pillola verde con «AI»"
+  },
+  {
+   "t": 5.67,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«IN 20…» in basso a sinistra, le cifre scorrono"
+  },
+  {
+   "t": 6.08,
+   "tipo": "stato",
+   "livello": "micro",
+   "cosa": "il contatore si ferma sul valore finale"
+  },
+  {
+   "t": 6.08,
+   "tipo": "stato",
+   "livello": "micro",
+   "cosa": "l'anno smette di scorrere e si ferma"
+  },
+  {
+   "t": 6.33,
+   "tipo": "camera",
+   "cosa": "carrello indietro: la scena diventa una card in un carosello 3D"
+  },
+  {
+   "t": 6.67,
+   "tipo": "camera",
+   "cosa": "il carosello scorre di lato, con mosso, fino alla card «0»"
+  },
+  {
+   "t": 7.17,
+   "tipo": "camera",
+   "cosa": "la card «0» avanza e si sposta a sinistra, le altre spariscono"
+  },
+  {
+   "t": 7.25,
+   "tipo": "uscita",
+   "cosa": "altre card del carosello"
+  },
+  {
+   "t": 7.33,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«START» esce dallo sfocato"
+  },
+  {
+   "t": 7.58,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "mini grafico a barre che cresce, con «0 →»"
+  },
+  {
+   "t": 7.67,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«FROM»"
+  },
+  {
+   "t": 7.75,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "pillola verde con «SCRATCH»"
+  },
+  {
+   "t": 7.83,
+   "tipo": "stato",
+   "livello": "grande",
+   "cosa": "dentro la card la scena si allarga: la scala si allunga e la figura rimpicciolisce"
+  },
+  {
+   "t": 8.46,
+   "tipo": "taglio",
+   "cosa": "stacco alle due persone in studio"
+  },
+  {
+   "t": 8.46,
+   "tipo": "uscita",
+   "cosa": "grafica START FROM SCRATCH (stacco)"
+  },
+  {
+   "t": 10.08,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "card di un articolo che entra inclinata e si raddrizza"
+  },
+  {
+   "t": 10.25,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "evidenziatore verde sul primo nome"
+  },
+  {
+   "t": 10.33,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "evidenziatore verde sul secondo nome"
+  },
+  {
+   "t": 10.75,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "seconda card articolo che cala sopra la prima, inclinata, con mosso"
+  },
+  {
+   "t": 10.75,
+   "tipo": "uscita",
+   "cosa": "prima card coperta dalla seconda"
+  },
+  {
+   "t": 10.92,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "evidenziatore verde su una cifra del titolo"
+  },
+  {
+   "t": 11.0,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "evidenziatore verde sul nome"
+  }
+ ],
+ "principali": 39,
+ "principali_ogni_10s": 34.4,
+ "micro": 29,
+ "uscite": 7,
+ "pausa_media_s": 0.3,
+ "pausa_max_s": 1.62,
+ "note": "Clip quasi tutta grafica a tutto schermo. Le parole di una riga che si scrivono da sinistra in 0.2-0.3 s contate come un gruppo. Lo stacco a 10.08 (studio → card articolo) contato solo come entrata della card, non anche come taglio. Il punto verde a 0.00 è già a schermo: non contato. Contatore e anno che si fermano contati come due stati. Nella reference compaiono cifre (anni, valori in dollari): servono solo a studiare il movimento, non si prendono."
+}

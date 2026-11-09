@@ -1,0 +1,51 @@
+{
+ "clip": "martell-05",
+ "durata_s": 12.16,
+ "eventi": [
+  {
+   "t": 4.81,
+   "tipo": "taglio",
+   "cosa": "stacco alla seconda camera, inquadratura larga"
+  },
+  {
+   "t": 5.05,
+   "tipo": "camera",
+   "cosa": "punch-in rapido (5,03-5,28, 3 fotogrammi a 12 fps) che porta lui a sinistra e libera il lato destro"
+  },
+  {
+   "t": 5.12,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "fumetto 1 «I don't have the time to chat with everybody»: macchia chiara sfocata che diventa nitida (5,12-5,45), poi il testo si scrive (5,37-6,50, seconda riga dalle 6,12)"
+  },
+  {
+   "t": 6.75,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "fumetto 2 «How am I supposed to do it?» sotto il primo; il primo sale; testo da 7,25"
+  },
+  {
+   "t": 8.5,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "fumetto 3 «I gotta run my business»; testo da 8,88"
+  },
+  {
+   "t": 9.45,
+   "tipo": "camera",
+   "cosa": "carrello/allargamento lento verso l'inquadratura larga (9,45-10,95)"
+  },
+  {
+   "t": 9.6,
+   "tipo": "uscita",
+   "cosa": "i tre fumetti scivolano insieme fuori a destra con il movimento di camera (9,6-10,95)"
+  }
+ ],
+ "principali": 6,
+ "principali_ogni_10s": 4.9,
+ "micro": 3,
+ "uscite": 1,
+ "pausa_media_s": 1.74,
+ "pausa_max_s": 4.81,
+ "note": "I fumetti sono segnati «micro» ma stanno a metà: ognuno è circa un terzo della larghezza del quadro; insieme riempiono il lato destro. Il testo che si scrive dentro il fumetto (anche la seconda riga) è contato come parte della sua entrata, non come evento a sé: contando ogni seconda riga sarebbero 8 eventi. Il punch-in a 5,05 si vede bene sui fotogrammi; il confronto automatico sullo sfondo (angolo in alto a sinistra) non lo rileva, quindi è una lettura a occhio. Pause: fra istanti diversi con eventi (eventi allo stesso istante contano una volta), compresi l'inizio e la fine della clip."
+}

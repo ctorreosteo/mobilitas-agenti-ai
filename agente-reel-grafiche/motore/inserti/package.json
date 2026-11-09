@@ -1,0 +1,9 @@
+{
+  "name": "mobilitas-inserti",
+  "private": true,
+  "description": "Inserti grafici HyperFrames del motore di montaggio (laboratorio)",
+  "type": "module",
+  "dependencies": {
+    "hyperframes": "0.8.204"
+  }
+}

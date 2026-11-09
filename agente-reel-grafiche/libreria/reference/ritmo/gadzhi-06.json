@@ -1,0 +1,11 @@
+{"clip": "gadzhi-06", "durata_s": 13.42,
+ "eventi": [
+  {"t": 5.05, "tipo": "taglio", "cosa": "stacco dalla registrazione dello schermo (pagina di chat con lui in un cerchio in basso a destra) a lui in primo piano, spostato a destra"},
+  {"t": 5.13, "tipo": "entrata", "livello": "grande", "cosa": "card 1 in alto a sinistra, «10-80-10 Rule» con icona a barrette arancio: entra in dissolvenza da sfocata in 2 frame, il testo si scrive lettera per lettera (fino a ~6,3)"},
+  {"t": 5.38, "tipo": "entrata", "livello": "grande", "cosa": "card 2 sotto, «Context Prompts» con icona a bersaglio"},
+  {"t": 5.47, "tipo": "entrata", "livello": "grande", "cosa": "card 3 sotto, «Upload Files» con icona a nuvola"},
+  {"t": 9.20, "tipo": "camera", "cosa": "la camera si allarga piano (zoom indietro, ~1 s): lui e la colonna di card si rimpiccioliscono e scendono"},
+  {"t": 12.53, "tipo": "taglio", "cosa": "stacco a lui in inquadratura larga; le card spariscono con lo stacco"}
+ ],
+ "principali": 6, "principali_ogni_10s": 4.5, "micro": 0, "uscite": 1, "pausa_media_s": 1.92, "pausa_max_s": 5.05,
+ "note": "Uscita: le card spariscono con il taglio (12,53). Pausa più lunga 5,05 s = dall'inizio della clip al taglio; in quel tratto la pagina della chat scorre verso l'alto (~2,0-4,6 s), ma è il contenuto registrato, non montaggio: non contato (se lo si conta come camera, 7 eventi = 5,2 ogni 10 s). Dentro la grafica le pause sono 3,73 s e 3,33 s: le card restano ferme mentre lui parla. Le icone delle card sfarfallano piano (luci delle barrette): movimento d'ambiente, non contato. Le card stanno DIETRO di lui: la sua mano passa davanti alla card 3 (~9,2-10 s). Lo sfasamento tra le card misurato a 12 fps è 3 frame poi 1 frame, non 0,25 s regolari come dice il catalogo. Attenzione: la clip è a frequenza variabile (~55 fps medi); i tempi li ho presi con estrazioni a 12 fps a partire da -ss e controllati con un fotogramma esatto a 4,0/4,5/5,0/5,5 s."}

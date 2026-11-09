@@ -1,0 +1,15 @@
+/* parole_ads (laboratorio, AD_REFLUSSO 04/11/2026): parole dette che si accendono una per una nella finestra grande */
+.pfa-clip { position: absolute; overflow: hidden; }
+.pfa-fondo { position: absolute; left: 0; top: 0; }
+.pfa-dentro { position: absolute; width: 1080px; height: 1920px; }
+.pfa-griglia { position: absolute; filter: drop-shadow(0 0 6px rgba(114, 250, 147, 0.35)); }
+.pfa-cam { position: absolute; left: 0; top: 0; width: 1080px; height: 1920px; }
+.pfa-riga { position: absolute; left: 0; width: 1080px; text-align: center; white-space: nowrap; }
+.pfa-w { position: relative; display: inline-block; font-weight: 800; letter-spacing: -0.02em; }
+.pfa-ap { color: #F4F4F4; text-shadow: 0 0 18px rgba(244, 244, 244, 0.28), 0 4px 14px rgba(0, 15, 43, 0.8); }
+.pfa-p { color: #F4F4F4; letter-spacing: -0.025em; }
+.pfa-k { color: #72FA93; text-shadow: 0 0 2px #0B1E3A, 0 0 22px rgba(114, 250, 147, 0.8), 0 0 60px rgba(114, 250, 147, 0.4); }
+/* fase 6, giro 4: disco con l'icona davanti alla parola (variante in prova «-icone»), nel colore della parola */
+.pfa-disco { position: relative; display: inline-block; box-sizing: border-box; border: 5px solid currentColor;
+  background: rgba(0, 26, 61, 0.9); }
+.pfa-ic, .pfa-img { position: absolute; overflow: visible; }

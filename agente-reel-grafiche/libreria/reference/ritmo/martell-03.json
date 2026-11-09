@@ -1,0 +1,104 @@
+{
+ "clip": "martell-03",
+ "durata_s": 13.93,
+ "eventi": [
+  {
+   "t": 3.08,
+   "tipo": "taglio",
+   "cosa": "stacco a una scena nera con curve di livello appena visibili"
+  },
+  {
+   "t": 3.17,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "icona persona magenta che si accende dal buio (piena a 3,25)"
+  },
+  {
+   "t": 3.25,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "triangolino magenta sopra l'icona e «Who» bianco con bagliore, battuto"
+  },
+  {
+   "t": 3.5,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«can»"
+  },
+  {
+   "t": 3.67,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«I»"
+  },
+  {
+   "t": 3.75,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«help?» (completo a ~4,08)"
+  },
+  {
+   "t": 3.92,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "fila di icone grigie che cresce dal centro verso i lati (completa a ~4,42)"
+  },
+  {
+   "t": 5.17,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "«Help» magenta corsivo con bagliore, battuto a sinistra"
+  },
+  {
+   "t": 5.33,
+   "tipo": "uscita",
+   "cosa": "«Who can I help?» si cancella all'indietro (5,33–5,75)"
+  },
+  {
+   "t": 5.42,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "«other»"
+  },
+  {
+   "t": 5.58,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "«people»"
+  },
+  {
+   "t": 5.75,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "«like»"
+  },
+  {
+   "t": 5.92,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "«you»"
+  },
+  {
+   "t": 6.75,
+   "tipo": "stato",
+   "cosa": "le icone grigie si colorano una alla volta, prima lilla poi magenta con bagliore (fino a ~7,9)"
+  },
+  {
+   "t": 11.33,
+   "tipo": "taglio",
+   "cosa": "ritorno sulla persona in studio"
+  },
+  {
+   "t": 11.33,
+   "tipo": "uscita",
+   "cosa": "la scena scura sparisce con lo stacco"
+  }
+ ],
+ "principali": 14,
+ "principali_ogni_10s": 10.1,
+ "micro": 5,
+ "uscite": 2,
+ "pausa_media_s": 0.63,
+ "pausa_max_s": 4.58,
+ "note": "Pause misurate tra un evento principale e il successivo (istanti uguali contati una volta), senza i bordi della clip. La colorazione delle icone è una cascata continua di ~1,2 s: contata come un solo stato. Pausa lunga voluta: la scena resta ferma 4,6 s (6,75→11,33) mentre lui parla. Prima del primo evento 3,08 s, dopo l'ultimo 2,60 s (bordi). Nessun movimento di camera evidente. Le icone di persona non si prendono (figure umane disegnate, vietate da noi). Bordi: 3.08 s dall'inizio della clip al primo evento, 2.60 s dall'ultimo evento alla fine; contando anche i bordi la pausa più lunga sarebbe 4.58 s."
+}

@@ -1,0 +1,221 @@
+{
+ "clip": "martell-07",
+ "durata_s": 14.29,
+ "eventi": [
+  {
+   "t": 1.04,
+   "tipo": "taglio",
+   "cosa": "stacco dalla prima alla seconda camera"
+  },
+  {
+   "t": 5.04,
+   "tipo": "taglio",
+   "cosa": "stacco a scena scura con curve di livello"
+  },
+  {
+   "t": 5.2,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "parola «When» del titolo in alto: nasce grigia e sfocata, diventa bianca con bagliore"
+  },
+  {
+   "t": 5.37,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "griglia viola con alone e un punto lilla al centro (si accende 5,37-5,62)"
+  },
+  {
+   "t": 5.45,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "parola «you» del titolo in alto: nasce grigia e sfocata, diventa bianca con bagliore"
+  },
+  {
+   "t": 5.7,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "parola «sell,» del titolo in alto: nasce grigia e sfocata, diventa bianca con bagliore"
+  },
+  {
+   "t": 6.03,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "parola «you» del titolo in alto: nasce grigia e sfocata, diventa bianca con bagliore"
+  },
+  {
+   "t": 6.28,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "parola «have» del titolo in alto: nasce grigia e sfocata, diventa bianca con bagliore"
+  },
+  {
+   "t": 6.28,
+   "tipo": "stato",
+   "cosa": "il punto diventa una linea con un nuovo punto giallo"
+  },
+  {
+   "t": 6.62,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "parola «to» del titolo in alto: nasce grigia e sfocata, diventa bianca con bagliore"
+  },
+  {
+   "t": 6.87,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "parola «create» del titolo in alto: nasce grigia e sfocata, diventa bianca con bagliore"
+  },
+  {
+   "t": 7.12,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "parola «a» del titolo in alto: nasce grigia e sfocata, diventa bianca con bagliore"
+  },
+  {
+   "t": 7.37,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "parola «framework» del titolo in alto: nasce grigia e sfocata, diventa bianca con bagliore"
+  },
+  {
+   "t": 7.37,
+   "tipo": "stato",
+   "cosa": "nuovo punto, la linea si piega"
+  },
+  {
+   "t": 7.78,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "parola «of» del titolo in alto: nasce grigia e sfocata, diventa bianca con bagliore"
+  },
+  {
+   "t": 7.87,
+   "tipo": "stato",
+   "cosa": "il grafico si riscala: le celle della griglia si dimezzano"
+  },
+  {
+   "t": 8.03,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "parola «getting» del titolo in alto: nasce grigia e sfocata, diventa bianca con bagliore"
+  },
+  {
+   "t": 8.12,
+   "tipo": "stato",
+   "cosa": "nuovo tratto che sale ripido"
+  },
+  {
+   "t": 8.2,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "parola «somebody» del titolo in alto: nasce grigia e sfocata, diventa bianca con bagliore"
+  },
+  {
+   "t": 8.37,
+   "tipo": "stato",
+   "cosa": "nuovo punto in basso a destra (zigzag)"
+  },
+  {
+   "t": 8.45,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "parola «into» del titolo in alto: nasce grigia e sfocata, diventa bianca con bagliore"
+  },
+  {
+   "t": 8.53,
+   "tipo": "stato",
+   "cosa": "compare un punto rosa sopra il picco"
+  },
+  {
+   "t": 8.68,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "parola «the» del titolo in alto: nasce grigia e sfocata, diventa bianca con bagliore"
+  },
+  {
+   "t": 8.93,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "parola «right» del titolo in alto: nasce grigia e sfocata, diventa bianca con bagliore"
+  },
+  {
+   "t": 8.93,
+   "tipo": "stato",
+   "cosa": "la linea risale fino al punto rosa in alto a destra"
+  },
+  {
+   "t": 9.1,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "parola «emotion» del titolo in alto: nasce grigia e sfocata, diventa bianca con bagliore"
+  },
+  {
+   "t": 10.35,
+   "tipo": "stato",
+   "cosa": "il grafico comincia a trasformarsi (si appiattisce, punti che scorrono, 10,27-10,95)"
+  },
+  {
+   "t": 10.43,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "parola «of» in basso, corsivo con bagliore viola/magenta, nasce sfocata"
+  },
+  {
+   "t": 10.6,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "parola «getting» in basso, corsivo con bagliore viola/magenta, nasce sfocata"
+  },
+  {
+   "t": 10.77,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "parola «ready» in basso, corsivo con bagliore viola/magenta, nasce sfocata"
+  },
+  {
+   "t": 11.02,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "parola «to» in basso, corsivo con bagliore viola/magenta, nasce sfocata"
+  },
+  {
+   "t": 11.02,
+   "tipo": "stato",
+   "cosa": "un punto si gonfia in un cerchio grande"
+  },
+  {
+   "t": 11.18,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "parola «buy» in basso, corsivo con bagliore viola/magenta, nasce sfocata"
+  },
+  {
+   "t": 11.27,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "«BUY» dentro il cerchio"
+  },
+  {
+   "t": 11.43,
+   "tipo": "stato",
+   "cosa": "il cerchio diventa rosso con bagliore"
+  },
+  {
+   "t": 11.85,
+   "tipo": "stato",
+   "cosa": "il cerchio torna chiaro"
+  },
+  {
+   "t": 12.19,
+   "tipo": "taglio",
+   "cosa": "stacco di nuovo su di lui, prima camera"
+  }
+ ],
+ "principali": 37,
+ "principali_ogni_10s": 25.9,
+ "micro": 22,
+ "uscite": 0,
+ "pausa_media_s": 0.42,
+ "pausa_max_s": 4.0,
+ "note": "Ogni parola del titolo e della frase in basso è contata come entrata a sé: arrivano davvero una alla volta, sulla voce. Il grafico non ha mai uscite visibili: resta fino al taglio. Nella scena scura c'è una spinta di camera lentissima (il titolo cresce di circa il 2% in 2,7 s, circa 5% su tutta la scena): quasi invisibile, NON contata (con lei 38). Gli stati del grafico fra 10,27 e 11,27 sono una trasformazione continua: ne ho contati due (10,35 e 11,02); il punto esatto in cui finisce uno e comincia l'altro è incerto. Pause: fra istanti diversi con eventi (eventi allo stesso istante contano una volta), compresi l'inizio e la fine della clip."
+}

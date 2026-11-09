@@ -1,0 +1,9 @@
+{"clip": "gadzhi-05", "durata_s": 10.29,
+ "eventi": [
+  {"t": 2.72, "tipo": "entrata", "livello": "grande", "cosa": "allarme sopra di lui: anello azzurro luminoso, triangolo rosa con il punto esclamativo, «Limiting power:» e «100%» grande; lui dietro si scurisce e si sfoca in 3 frame (2,72-2,97)"},
+  {"t": 3.05, "tipo": "stato", "cosa": "la percentuale comincia a scendere veloce e l'anello si svuota, virando dall'azzurro al rosa (a metà, ~3,8 s)"},
+  {"t": 5.05, "tipo": "stato", "cosa": "il conteggio frena e si ferma su «1%»"},
+  {"t": 7.00, "tipo": "taglio", "cosa": "stacco a lui in un'inquadratura più larga, netto; l'allarme sparisce con lo stacco"}
+ ],
+ "principali": 4, "principali_ogni_10s": 3.9, "micro": 0, "uscite": 1, "pausa_media_s": 2.06, "pausa_max_s": 3.29,
+ "note": "Uscita: l'allarme sparisce con il taglio (7,00). Dubbi: dopo lo stacco lui sembra avvicinarsi (7,6-8,6 s), ma i pannelli del muro restano fermi (confronto 7,1 / 10,2 s): è lui che si sporge, non la camera, quindi non contato. Il viraggio di colore dell'anello è continuo dentro il conteggio: non contato a parte. Pausa più lunga 3,29 s = dall'ultimo taglio alla fine; dentro la grafica le pause sono 2,0 s (1% fermo) e 1,95 s. Prima dell'allarme 2,72 s senza eventi."}

@@ -1,0 +1,263 @@
+{
+ "clip": "gadzhi-07",
+ "durata_s": 19.96,
+ "eventi": [
+  {
+   "t": 1.0,
+   "tipo": "taglio",
+   "cosa": "stacco su un'altra inquadratura di lui; il titolo «$10,000/MONTH» con la fascia lime sparisce con lo stacco"
+  },
+  {
+   "t": 1.0,
+   "tipo": "uscita",
+   "cosa": "titolo grande e fascia lime escono con lo stacco"
+  },
+  {
+   "t": 2.62,
+   "tipo": "taglio",
+   "cosa": "stacco a una scena nera a tutto schermo"
+  },
+  {
+   "t": 2.83,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "retino di punti lime e grigi (forma del logo) che entra scorrendo dall'alto a sinistra"
+  },
+  {
+   "t": 3.08,
+   "tipo": "camera",
+   "cosa": "la camera scorre sul retino verso destra, dove nasce il grafico"
+  },
+  {
+   "t": 3.17,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "punto luminoso lime sull'origine e asse orizzontale sottile"
+  },
+  {
+   "t": 3.33,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "etichette piccole dell'asse verticale ($500M, $250M)"
+  },
+  {
+   "t": 3.67,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "il punto diventa un nodo tondo con icona e bagliore (2 frame a 12 fps)"
+  },
+  {
+   "t": 4.08,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "la curva lime si disegna mentre il nodo la percorre, area sotto appena illuminata (4,08-5,00 s, circa 11 frame)"
+  },
+  {
+   "t": 4.25,
+   "tipo": "camera",
+   "cosa": "la camera segue il nodo: avanza, sale e ruota un poco in 3D (assi sfocati dal movimento)"
+  },
+  {
+   "t": 5.08,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "soglia tratteggiata lime in alto"
+  },
+  {
+   "t": 5.25,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "titolo «FASTEST GROWING / AI COMPANY IN THE WORLD» che scende dall'alto, sfocato (circa 4 frame)"
+  },
+  {
+   "t": 5.67,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "pillola lime «$1B IN 18 MONTHS» che entra da sinistra (circa 3 frame)"
+  },
+  {
+   "t": 6.25,
+   "tipo": "camera",
+   "cosa": "la camera arretra e mostra il grafico intero con gli assi completi"
+  },
+  {
+   "t": 7.25,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "seconda curva grigia (OPENAI) disegnata da un punto bianco con etichetta"
+  },
+  {
+   "t": 8.5,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "terza curva grigia (CURSOR) con etichetta"
+  },
+  {
+   "t": 9.0,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "quarta curva grigia (ANTHROPIC) con etichetta"
+  },
+  {
+   "t": 10.0,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "quinta curva (LOVABLE) con punto rosa ed etichetta"
+  },
+  {
+   "t": 11.5,
+   "tipo": "taglio",
+   "cosa": "stacco a un titolo di giornale (inizio della raffica)"
+  },
+  {
+   "t": 11.5,
+   "tipo": "uscita",
+   "cosa": "il grafico esce con lo stacco"
+  },
+  {
+   "t": 11.67,
+   "tipo": "taglio",
+   "cosa": "raffica di titoli di giornale con la cifra evidenziata in lime: nuovo stacco"
+  },
+  {
+   "t": 11.88,
+   "tipo": "taglio",
+   "cosa": "raffica di titoli di giornale con la cifra evidenziata in lime: nuovo stacco"
+  },
+  {
+   "t": 12.05,
+   "tipo": "taglio",
+   "cosa": "raffica di titoli di giornale con la cifra evidenziata in lime: nuovo stacco"
+  },
+  {
+   "t": 12.22,
+   "tipo": "taglio",
+   "cosa": "raffica di titoli di giornale con la cifra evidenziata in lime: nuovo stacco"
+  },
+  {
+   "t": 12.38,
+   "tipo": "taglio",
+   "cosa": "raffica di titoli di giornale con la cifra evidenziata in lime: nuovo stacco"
+  },
+  {
+   "t": 12.54,
+   "tipo": "taglio",
+   "cosa": "raffica di titoli di giornale con la cifra evidenziata in lime: nuovo stacco"
+  },
+  {
+   "t": 12.72,
+   "tipo": "taglio",
+   "cosa": "raffica di titoli di giornale con la cifra evidenziata in lime: nuovo stacco"
+  },
+  {
+   "t": 12.88,
+   "tipo": "taglio",
+   "cosa": "raffica di titoli di giornale con la cifra evidenziata in lime: nuovo stacco"
+  },
+  {
+   "t": 13.05,
+   "tipo": "taglio",
+   "cosa": "raffica di titoli di giornale con la cifra evidenziata in lime: nuovo stacco"
+  },
+  {
+   "t": 13.3,
+   "tipo": "taglio",
+   "cosa": "raffica di titoli di giornale con la cifra evidenziata in lime: nuovo stacco"
+  },
+  {
+   "t": 13.47,
+   "tipo": "taglio",
+   "cosa": "raffica di titoli di giornale con la cifra evidenziata in lime: nuovo stacco"
+  },
+  {
+   "t": 13.63,
+   "tipo": "taglio",
+   "cosa": "raffica di titoli di giornale con la cifra evidenziata in lime: nuovo stacco"
+  },
+  {
+   "t": 13.8,
+   "tipo": "taglio",
+   "cosa": "raffica di titoli di giornale con la cifra evidenziata in lime: nuovo stacco"
+  },
+  {
+   "t": 13.88,
+   "tipo": "taglio",
+   "cosa": "raffica di titoli di giornale con la cifra evidenziata in lime: nuovo stacco"
+  },
+  {
+   "t": 14.05,
+   "tipo": "taglio",
+   "cosa": "raffica di titoli di giornale con la cifra evidenziata in lime: nuovo stacco"
+  },
+  {
+   "t": 14.22,
+   "tipo": "taglio",
+   "cosa": "raffica di titoli di giornale con la cifra evidenziata in lime: nuovo stacco"
+  },
+  {
+   "t": 14.38,
+   "tipo": "taglio",
+   "cosa": "raffica di titoli di giornale con la cifra evidenziata in lime: nuovo stacco"
+  },
+  {
+   "t": 14.55,
+   "tipo": "taglio",
+   "cosa": "raffica di titoli di giornale con la cifra evidenziata in lime: nuovo stacco"
+  },
+  {
+   "t": 14.72,
+   "tipo": "taglio",
+   "cosa": "raffica di titoli di giornale con la cifra evidenziata in lime: nuovo stacco"
+  },
+  {
+   "t": 14.88,
+   "tipo": "stato",
+   "livello": "micro",
+   "cosa": "evidenziatore lime che scorre su «Acquires Stake in Higgsfield» (14,88-15,30 s, circa 5 frame)"
+  },
+  {
+   "t": 16.05,
+   "tipo": "camera",
+   "cosa": "piccolo avvicinamento sulla pagina (punch-in lento)"
+  },
+  {
+   "t": 16.38,
+   "tipo": "taglio",
+   "cosa": "stacco a una scena scura con tende verticali"
+  },
+  {
+   "t": 16.38,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "logo lime che entra ruotando da una fessura al centro (16,38-16,63 s, 3 frame)"
+  },
+  {
+   "t": 16.8,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "scritta «HIGGSFIELD.AI» battuta a gruppi di lettere sotto il logo (16,80-17,22 s, 5-6 frame)"
+  },
+  {
+   "t": 19.15,
+   "tipo": "taglio",
+   "cosa": "stacco a lui"
+  },
+  {
+   "t": 19.15,
+   "tipo": "uscita",
+   "cosa": "il logo esce con lo stacco"
+  },
+  {
+   "t": 19.4,
+   "tipo": "taglio",
+   "cosa": "stacco a un'inquadratura più stretta di lui"
+  }
+ ],
+ "principali": 44,
+ "principali_ogni_10s": 22.0,
+ "micro": 10,
+ "uscite": 3,
+ "pausa_media_s": 0.45,
+ "pausa_max_s": 2.35,
+ "note": "La raffica di titoli di giornale (11,50-14,72 s) conta 20 stacchi in 3,2 s (uno ogni 2-3 frame a 12 fps): se la raffica conta come un evento solo, i principali sono 25, cioè 12,5 ogni 10 s. Il titolo «$10,000/MONTH» era già a schermo a 0,00 (non contato come entrata). Lo scorrimento del retino (3,08 s) è contato come camera, ma potrebbe essere il fondo che si muove da solo. Pause calcolate fra eventi principali consecutivi, contando anche l'inizio (0 s) e la fine della clip."
+}
