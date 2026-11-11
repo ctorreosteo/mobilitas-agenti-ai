@@ -10,12 +10,16 @@ ok.
 **1. Installa (una volta sola).** Apri il Terminale e scrivi:
 
 ```bash
-cd ~/mobilitas-agenti-ai/agente-video-youtube
+cd ~/mobilitas-agenti-ai/agente-video-youtube-riccardo
 ./installa.sh
 ```
 
 Ti chiede il permesso prima di installare ogni cosa. Dettagli e requisiti in
 `INSTALLAZIONE.md`.
+
+**Avevi già la versione 1.0?** Fino alla 1.0.1 la cartella si chiamava
+`agente-video-youtube`. Dopo l'aggiornamento rilancia `./installa.sh` nella
+cartella nuova: ti chiede se spostare B-roll, inbox e video dalla vecchia.
 
 **2. Prepara la cartella del video.** In `inbox/` crea una cartella con il nome
 del video, per esempio `inbox/YT_POSTURA_33/`, e mettici dentro:
@@ -35,7 +39,7 @@ del video, per esempio `inbox/YT_POSTURA_33/`, e mettici dentro:
 Le regole sono in `inbox/LEGGIMI.md`.
 
 **3. Chiedi all'agente.** Apri Claude Code **in questa cartella**
-(`agente-video-youtube`) e scrivi:
+(`agente-video-youtube-riccardo`) e scrivi:
 
 > Edita il video YT_POSTURA_33
 

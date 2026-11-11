@@ -1,3 +1,29 @@
+# Versione 1.1 — 11/11/2026
+
+**Cambio di nome.** La cartella si chiama `agente-video-youtube-riccardo` (prima
+`agente-video-youtube`). Il laboratorio da cui arriva si chiama
+`agente-video-youtube-riccardo-lab`: stessi nomi, il laboratorio ha solo `-lab` in
+più. Il motore, i modelli e le regole non cambiano.
+
+- Nomi aggiornati in `CLAUDE.md`, `LEGGIMI.md`, `INSTALLAZIONE.md`, `installa.sh`,
+  nei tre subagenti (`.claude/agents/`) e nella skill `mobilitas-grafica`
+  (`references/pipeline.md`).
+- **`installa.sh`**: se accanto c'è ancora la vecchia `agente-video-youtube`, chiede
+  «Sposto B-roll, inbox e video nella cartella nuova? [s/N]» e sposta tutto quello
+  che git ignora (B-roll con indice, `inbox/`, `videos/`, `uso-modelli.json`, musica,
+  modello whisper, HyperFrames installato), tranne `.venv` e `.lavoro`. Non
+  sovrascrive e non cancella niente; nei video spostati riscrive sulla cartella
+  nuova il collegamento al girato e i percorsi nei `.json` del motore, conservando
+  le date dei file (`./mve stato` non chiede di rifare fasi). Alla fine dice che la
+  vecchia cartella si può cestinare.
+- **`installa.sh`**: un `.venv` creato in un'altra cartella si riconosce
+  (`.venv/pyvenv.cfg`) e si ricrea con gli stessi pacchetti
+  (`motore/requirements.lock`), dopo una conferma.
+
+Provata l'11/11/2026 su una copia finta (percorso con spazio e apostrofo): 15
+elementi spostati, un doppione e un file personale lasciati e segnalati, girato e
+materiali raggiungibili dal video spostato, date dei file invariate.
+
 # Versione 1.0.1 — 02/11/2026
 
 **Correzione di `installa.sh`.** Nella prova finale di 30 secondi la voce sintetica

@@ -9,7 +9,7 @@ Sei il regista di un canale YouTube di divulgazione osteopatica. Il montatore ha
 
 ## Cosa leggi
 
-Nella cartella `agente-video-youtube/videos/<slug>/`:
+Nella cartella `agente-video-youtube-riccardo/videos/<slug>/`:
 
 - il testo del montato, ricostruito da `data/parole-montato.json` (tempi in secondi del montato):
   ```bash

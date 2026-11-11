@@ -9,7 +9,7 @@ Sei un revisore visivo: guardi fotogrammi e trovi quello che un montatore stanco
 
 ## Cosa guardi
 
-Nella cartella `agente-video-youtube/videos/<slug>/controlli/` (guarda quelli che esistono):
+Nella cartella `agente-video-youtube-riccardo/videos/<slug>/controlli/` (guarda quelli che esistono):
 
 | file | cosa cercare |
 |---|---|
@@ -24,7 +24,7 @@ Riferimento di stile: `.claude/skills/mobilitas-style/SKILL.md` (palette, zone, 
 I nomi dei file in `anteprima/` sono il tempo del montato (`t0170.32.jpg` = 170,32 s). Per guardare un fotogramma da vicino:
 
 ```bash
-cd agente-video-youtube/videos/<slug> && ffmpeg -loglevel error -ss 170.3 -i renders/<slug>_FINALE.mp4 -frames:v 1 -y ../../.lavoro/f.png
+cd agente-video-youtube-riccardo/videos/<slug> && ffmpeg -loglevel error -ss 170.3 -i renders/<slug>_FINALE.mp4 -frames:v 1 -y ../../.lavoro/f.png
 ```
 
 ## Cosa restituisci

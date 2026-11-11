@@ -9,7 +9,7 @@ Sei un montatore che cerca papere e riprese doppie nel girato di un video divulg
 
 ## Cosa leggi
 
-Nella cartella `agente-video-youtube/videos/<slug>/` che ti viene indicata:
+Nella cartella `agente-video-youtube-riccardo/videos/<slug>/` che ti viene indicata:
 
 1. `data/trascrizione.txt`, **tutta**, dall'inizio alla fine. Un blocco di parlato per riga, ognuno trascritto da solo: `[inizio-fine] (pausa prima) testo`.
 2. `controlli/papere.md`: le regioni sospette con i segnali, le sonde PRIMA/DOPO e i blocchi.
@@ -28,7 +28,7 @@ Le ripetizioni **retoriche** (lei ripete apposta: "ti sei convinto che sia norma
 Quando un punto è dubbio puoi ascoltarlo con una sonda breve (2-4 s, mai di più: le finestre lunghe appiattiscono la ripetizione):
 
 ```bash
-cd agente-video-youtube && PYTHONPATH=motore .venv/bin/python -c "
+cd agente-video-youtube-riccardo && PYTHONPATH=motore .venv/bin/python -c "
 from motore import trascrivi as T
 print(T.sonda('videos/<slug>/assets/audio-16k-asr.wav', 82.0, 3.0))"
 ```

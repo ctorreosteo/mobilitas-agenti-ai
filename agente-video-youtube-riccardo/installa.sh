@@ -1,11 +1,15 @@
 #!/bin/zsh
-# installa.sh — prepara un Mac con chip Apple per l'agente video YouTube (v1.0.1).
+# installa.sh — prepara un Mac con chip Apple per l'agente video YouTube (v1.1).
 #
 # Controlla cosa c'è già e installa il resto SOLO dopo una conferma per ogni pezzo:
 # Strumenti da riga di comando di Xcode, Homebrew, ffmpeg, whisper.cpp con il modello
 # large-v3, Python 3.12 con il venv, Node e HyperFrames 0.8.204, il browser di render.
 # Alla fine fa una prova di 30 secondi. Si può rilanciare quante volte si vuole:
 # quello che c'è già non si tocca.
+#
+# Dalla 1.1 la cartella si chiama agente-video-youtube-riccardo. Se accanto c'è ancora
+# la vecchia agente-video-youtube, chiede se spostare qui i file che git non porta con
+# sé (B-roll con indice, inbox, videos, ...). Non cancella niente.
 #
 # Uso: apri il Terminale nella cartella dell'agente e scrivi  ./installa.sh
 #      ./installa.sh --prova   rifà solo la prova finale, senza controllare né installare
@@ -42,9 +46,110 @@ trova_modello() {
 # Homebrew nel PATH anche se il profilo del Terminale non lo carica
 [[ -x /opt/homebrew/bin/brew ]] && eval "$(/opt/homebrew/bin/brew shellenv)"
 
+# ================================================================ cartella della versione precedente
+# Fino alla 1.0.1 l'agente stava in agente-video-youtube. Con il cambio di nome git
+# sposta i suoi file, ma quelli che ignora (B-roll e indice, inbox, videos, modello
+# whisper, HyperFrames installato, ...) restano nella vecchia cartella. Si spostano
+# qui solo i percorsi che il .gitignore di questa cartella ignora, tranne .venv
+# (si ricrea) e .lavoro (spazio di lavoro). Mai sovrascrivere: se qui c'è già, resta là.
+VECCHIA="${DIR:h}/agente-video-youtube"
+SPOSTATI=0
+typeset -a RIMASTI=() ALTRI=()
+VECCHIA_SVUOTATA=0
+
+ignorato() { git -C "$DIR" check-ignore -q --no-index -- "$1"; }
+# una cartella che qui non c'è si chiede con la / finale (git non può guardarla per
+# sapere che è una cartella); una che c'è, senza: «inbox/» corrisponderebbe a «inbox/*»
+cartella_ignorata() { if [[ -d $DIR/$1 ]]; then ignorato "$1"; else ignorato "$1/"; fi; }
+
+sposta_ignorati() {   # $1 percorso relativo nella vecchia cartella ("" = la cartella stessa)
+  local rel=$1 voce nome chiave
+  for voce in "$VECCHIA${rel:+/$rel}"/*(DN); do
+    nome=${voce:t}
+    [[ -z $rel && ( $nome == .venv || $nome == .lavoro ) ]] && continue
+    [[ $nome == .DS_Store || $nome == __pycache__ ]] && continue   # file di sistema e compilati
+    chiave=${rel:+$rel/}$nome
+    if [[ -d $voce && ! -L $voce ]]; then
+      if cartella_ignorata "$chiave"; then sposta_voce "$voce" "$chiave"
+      else sposta_ignorati "$chiave"; fi
+    elif ignorato "$chiave"; then
+      sposta_voce "$voce" "$chiave"
+    else
+      ALTRI+=("$chiave")   # non ignorato: con il cambio di nome git l'ha già portato qui, oppure è un file tuo
+    fi
+  done
+}
+sposta_voce() {   # $1 percorso nella vecchia cartella, $2 percorso relativo
+  local dst="$DIR/$2"
+  if [[ -e $dst || -L $dst ]]; then
+    RIMASTI+=("$2")
+  else
+    mkdir -p "${dst:h}" && mv "$1" "$dst" && SPOSTATI=$((SPOSTATI+1)) || RIMASTI+=("$2")
+  fi
+}
+
+# i video in lavorazione tengono percorsi assoluti: il collegamento al girato
+# (videos/<NOME>/sorgente.*) e i .json del motore (meta.json: girato e materiali).
+# Si riscrivono sulla cartella nuova, conservando la data dei file (./mve stato
+# decide cosa rifare dalle date).
+ripara_percorsi() {
+  local l t n f tmp="$DIR/.lavoro/ripara.tmp"
+  for l in "$DIR"/{videos,inbox,libreria}/**/*(@N); do
+    t=$(readlink "$l")
+    [[ $t == "$VECCHIA"/* ]] || continue
+    n="$DIR/${t#"$VECCHIA"/}"
+    [[ -e $n ]] && ln -sfn "$n" "$l"
+  done
+  mkdir -p "$DIR/.lavoro"
+  for f in "$DIR"/videos/**/*.json(.N); do
+    grep -qF -- "$VECCHIA/" "$f" || continue
+    cp -p "$f" "$tmp" &&
+      VECCHIA="$VECCHIA" NUOVA="$DIR" perl -pi -e 's/\Q$ENV{VECCHIA}\E\//$ENV{NUOVA}\//g' "$f" &&
+      touch -r "$tmp" "$f"
+    rm -f "$tmp"
+  done
+}
+
+dalla_vecchia_cartella() {
+  [[ -d $VECCHIA && ${VECCHIA:A} != ${DIR:A} ]] || return 0
+  titolo "Cartella della versione precedente"
+  print "  Accanto c'è ancora $VECCHIA,"
+  print "  con i file che restano sul Mac (B-roll con indice, inbox, video, modello whisper...)."
+  if ! git -C "$DIR" rev-parse --is-inside-work-tree >/dev/null 2>&1; then
+    manca "questa cartella non è dentro il repository git: sposta i file a mano"; return 0
+  fi
+  if ! chiedi "Sposto B-roll, inbox e video nella cartella nuova?"; then
+    print "  Non sposto niente. Per farlo più tardi rilancia ./installa.sh"; return 0
+  fi
+  sposta_ignorati ""
+  ripara_percorsi
+  ok "spostati $SPOSTATI elementi in $DIR"
+  if (( ${#RIMASTI} )); then
+    manca "lasciati nella vecchia cartella perché qui ci sono già (controllali a mano):"
+    print -rl -- "      ${^RIMASTI}"
+  fi
+  if (( ${#ALTRI} )); then
+    manca "${#ALTRI} file che git non ignora (forse li hai messi tu): restano là, controllali a mano"
+    print -rl -- "      ${^ALTRI[1,10]}"
+    (( ${#ALTRI} > 10 )) && print "      ... e altri $(( ${#ALTRI} - 10 ))"
+  fi
+  VECCHIA_SVUOTATA=1
+}
+
+promemoria_vecchia() {
+  (( VECCHIA_SVUOTATA )) || return 0
+  local n=$(( ${#RIMASTI} + ${#ALTRI} ))
+  print
+  if (( n )); then
+    print -rP -- "%BLa vecchia cartella $VECCHIA si può cestinare dopo aver controllato i $n elementi rimasti (elencati sopra).%b"
+  else
+    print -P "%BLa vecchia cartella $VECCHIA ora tiene solo .venv e .lavoro, che non servono più: si può cestinare.%b"
+  fi
+}
+
 # ================================================================ controllo e installazione
 installa() {
-titolo "Agente video YouTube v1.0.1: controllo del Mac"
+titolo "Agente video YouTube v1.1: controllo del Mac"
 if [[ $(uname -s) != Darwin || $(uname -m) != arm64 ]]; then
   errore "serve un Mac con chip Apple (M1, M2, M3, M4, M5...)"; exit 1
 fi
@@ -106,9 +211,24 @@ else
   chiedi "installare node con Homebrew?" && brew install node
 fi
 
+# prima di controllare .venv, HyperFrames e il modello: se arrivano dalla vecchia cartella non si reinstallano
+dalla_vecchia_cartella
+
 # ---------------------------------------------------------------- Python
 titolo "4. Ambiente Python del motore (.venv)"
-if [[ -x .venv/bin/python ]] && .venv/bin/python -c "import PIL, numpy, fontTools" 2>/dev/null; then
+# un .venv creato in un'altra cartella (spostato con la cartella) ha i percorsi vecchi dentro
+# (pyvenv.cfg: «command = <python> -m venv [--clear] <cartella>/.venv»)
+local VENV_ALTROVE="" RIGA=""
+[[ -f .venv/pyvenv.cfg ]] && RIGA=$(grep '^command = ' .venv/pyvenv.cfg)
+if [[ -n $RIGA && $RIGA != *" $DIR/.venv" ]]; then
+  VENV_ALTROVE=${RIGA##* -m venv }; VENV_ALTROVE=${VENV_ALTROVE#--clear }
+fi
+if [[ -n $VENV_ALTROVE ]]; then
+  manca "creato per un'altra cartella ($VENV_ALTROVE)"
+  if chiedi "ricrearlo qui con gli stessi pacchetti (pillow, numpy, fonttools, brotli, versioni fissate)?"; then
+    python3.12 -m venv --clear .venv && .venv/bin/pip install --quiet -r motore/requirements.lock && ok "pronto"
+  fi
+elif [[ -x .venv/bin/python ]] && .venv/bin/python -c "import PIL, numpy, fontTools" 2>/dev/null; then
   ok "pronto ($(.venv/bin/python --version))"
 else
   manca "manca"
@@ -162,7 +282,7 @@ fi
 
 titolo "8. Prova di 30 secondi"
 if ! chiedi "fare la prova (voce sintetica di 30 s, trascrizione, video, Apple Vision, una grafica HyperFrames)?"; then
-  print; ./mve stato 2>/dev/null | tail -25; exit 0
+  print; ./mve stato 2>/dev/null | tail -25; promemoria_vecchia; exit 0
 fi
 }
 
@@ -261,3 +381,4 @@ fi
 
 titolo "Riepilogo (./mve stato)"
 ./mve stato | sed -n '/strumenti:/,$p'
+promemoria_vecchia

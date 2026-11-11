@@ -1,16 +1,35 @@
 # Installazione
 
 Per un **Mac con chip Apple** (M1, M2, M3, M4, M5). Si fa una volta sola, da
-Terminale, nella cartella `agente-video-youtube`:
+Terminale, nella cartella `agente-video-youtube-riccardo`:
 
 ```bash
-cd ~/mobilitas-agenti-ai/agente-video-youtube
+cd ~/mobilitas-agenti-ai/agente-video-youtube-riccardo
 ./installa.sh
 ```
 
 Lo script **controlla cosa c'è già** e per ogni pezzo che manca **chiede prima**
 di installarlo ([s/N]). Si può rilanciare quante volte si vuole. Alla fine fa una
 prova di 30 secondi e mostra il riepilogo (`./mve stato`).
+
+## Se avevi la versione 1.0 (cartella `agente-video-youtube`)
+
+Dalla 1.1 la cartella si chiama `agente-video-youtube-riccardo`. Con
+l'aggiornamento git porta nella cartella nuova i file del repository, ma non
+quelli che restano solo sul tuo Mac: B-roll con il suo indice, `inbox/`,
+`videos/`, `libreria/uso-modelli.json`, la musica, il modello whisper,
+HyperFrames installato. Lanciando `./installa.sh` nella cartella nuova:
+
+- se accanto c'è ancora `agente-video-youtube`, chiede **«Sposto B-roll, inbox e
+  video nella cartella nuova? [s/N]»**;
+- con «s» sposta tutto quello che git ignora, tranne `.venv` e `.lavoro`. Non
+  sovrascrive niente: quello che c'è già nella cartella nuova resta nella vecchia
+  e te lo elenca. Nei video in lavorazione aggiorna il collegamento al girato e i
+  percorsi del motore;
+- **non cancella niente**: alla fine ti dice che la vecchia cartella si può
+  cestinare (o cosa controllare prima);
+- se `.venv` è stato creato in un'altra cartella, propone di ricrearlo con gli
+  stessi pacchetti.
 
 ## Cosa installa
 

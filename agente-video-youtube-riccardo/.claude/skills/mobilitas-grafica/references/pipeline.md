@@ -1,6 +1,6 @@
 # Dalla regia al master, comando per comando
 
-Da dentro `agente-video-youtube/`, con `regia.json` già scritto e `./mve audio <slug>` fatto:
+Da dentro `agente-video-youtube-riccardo/`, con `regia.json` già scritto e `./mve audio <slug>` fatto:
 
 ```bash
 ./mve grafica   <slug>     # piano: sottotitoli, card, titoli, enfasi (secondi)
