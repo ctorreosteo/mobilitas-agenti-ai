@@ -19,6 +19,8 @@ Documentazione: a ogni task allinea la documentazione di ogni repo toccato, nell
 
 Novità: ogni task che cambia ciò che si vede o si fa nel gestionale ha la sua voce nel pannello «Novità» (`src/data/novita.ts` del frontend), scritta per lo staff e visibile solo a chi può usare la funzione. Va nel commit del frontend.
 
+Locale prima di tutto: l'agente non crea né modifica dati in produzione. Anche i dati chiesti da un task (un'automazione o un template dell'Email Marketing, una configurazione) diventano una migrazione Flyway idempotente, provata e applicata sul database locale: in produzione arrivano col deploy.
+
 Commit: a fine di ogni task e di ogni richiesta fatta in chat, senza che serva chiederlo. `<task_id> - <spiegazione>` (in chat solo la spiegazione), solo i file toccati dall'agente, uno per ogni repo toccato. Push e deploy li fa Carlos a mano. A fine task lo sposta a `In attesa` nel gestionale.
 
 Serve un utente del gestionale che veda la lista HQ con livello almeno *Modifica*, con le credenziali in `~/.config/mobilitas-agente-dev/credenziali` (`HQ_USERNAME=`, `HQ_PASSWORD=`, `chmod 600`).
