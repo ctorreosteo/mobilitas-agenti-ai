@@ -83,6 +83,7 @@ Leggi il codice che serve e scrivi. Niente piano su file, niente approvazioni.
 - Imita il codice vicino: convenzioni in `mobilitas-frontend/docs/conventions.md` e `mobilitas-backend/docs/guides/CONVENTIONS.md`. Non prendere `Calendario.tsx` come modello.
 - Un valore enum nuovo può avere un vincolo `CHECK` a database: controlla e, se serve, aggiungi la migrazione Flyway. Il db si legge con `docker exec postgres psql -U admin -d mobilitashq -tAc "..."` — solo lettura.
 - Finisci il lavoro: stati di errore e caricamento, chiamanti aggiornati, entrambi i lati.
+- **Elenchi di persone: sempre «Cognome Nome», in ordine di cognome** (poi nome), ovunque: tabelle, menu a tendina, filtri, liste, schede. Nel frontend `cognomeNome`, `perCognome` e `confrontaCognome` di `src/lib/osteopati-ordine.ts`; nel backend le liste escono già ordinate per cognome. Restano «Nome Cognome» solo i testi rivolti a una persona (messaggi, email, documenti). Gli utenti di test (`test.<ruolo>@studiomobilitas.it`, `Utente.isUtenteDiTest()`) non compaiono negli elenchi di persone vere.
 
 ## 3. Verifica
 
