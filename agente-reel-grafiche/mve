@@ -1,5 +1,0 @@
-#!/bin/zsh
-# mve — il motore dell'agente reel-grafiche. Uso: ./mve <comando> <slug>   (./mve -h per l'elenco)
-DIR=${0:A:h}
-[ -x "$DIR/.venv/bin/python" ] || { echo "manca il venv: lancia ./installa.sh (vedi INSTALLAZIONE.md)"; exit 1; }
-PYTHONPATH="$DIR/motore" exec "$DIR/.venv/bin/python" -m motore "$@"

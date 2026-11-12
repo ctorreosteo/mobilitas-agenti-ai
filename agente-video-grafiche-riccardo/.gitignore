@@ -1,0 +1,54 @@
+# Agente Video Grafiche (Riccardo): cosa resta sul Mac e non entra nel repository
+
+# reel da lavorare, lavoro sui reel e video finiti: si tengono solo i LEGGIMI
+inbox/*
+!inbox/LEGGIMI.md
+videos/*
+!videos/LEGGIMI.md
+consegne/*
+!consegne/LEGGIMI.md
+report/*
+!report/LEGGIMI.md
+
+# video delle reference: restano sul Mac. Si tengono schede, ritmo, catalogo, NOTE.md e LEGGIMI
+libreria/reference/*.mov
+libreria/reference/*.mp4
+libreria/reference/*.m4v
+libreria/reference/*.webm
+libreria/reference/*.MOV
+libreria/reference/*.MP4
+libreria/reference/verticali/*.mov
+libreria/reference/verticali/*.mp4
+libreria/reference/verticali/*.m4v
+libreria/reference/verticali/*.webm
+libreria/reference/verticali/*.MOV
+libreria/reference/verticali/*.MP4
+
+# video pesanti della regressione (il video del caso, il riferimento reso e gli esiti)
+campionario/regressione/reel/*/sorgente/*.mp4
+campionario/regressione/reel/*/sorgente/*.mp3
+campionario/regressione/reel/*/riferimento/*.mp4
+campionario/regressione/reel/*/ultimo/
+
+# storico dei modelli usati per reel: lo scrive il motore, ognuno ha il suo
+libreria/uso-modelli-reel.json
+libreria/uso-modelli.json
+
+# spazio di lavoro, programmi compilati, installazioni
+.lavoro/
+.cache/
+.venv/
+node_modules/
+motore/inserti/.casa/
+
+# modelli whisper
+.modelli/
+*.bin
+
+# file di sistema
+.DS_Store
+__pycache__/
+*.py[cod]
+
+# impostazioni personali di Claude Code (settings.json invece resta: ha i permessi dell'agente)
+.claude/settings.local.json
