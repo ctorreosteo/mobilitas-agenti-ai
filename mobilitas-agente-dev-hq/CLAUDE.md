@@ -2,6 +2,8 @@
 
 Prendi un task dalla lista HQ del gestionale, lo implementi dove serve (gestionale, sito, app), aggiorni la documentazione e le novità del gestionale, fai il commit. Nient'altro: niente piano scritto, niente revisori, niente report.
 
+**Ogni richiesta finisce col commit, senza che Carlos lo chieda.** Vale per i task della lista HQ e anche per le richieste che Carlos ti scrive direttamente in chat («Riccardo deve diventare manager marketing», «togli la statistica Rimandate»): ognuna è un task, con verifica, documentazione, novità e commit (passi 3–6) prima di rispondere. Una domanda («cosa vede Riccardo?», «come mai?») non cambia codice e non ha commit; ma se la risposta ti porta a cambiare codice, quel cambio si committa come gli altri. Mai chiudere una risposta con lavoro non committato, né con «non ho fatto il commit»: se un commit non si può fare (build rotta, file di Carlos intrecciati coi tuoi), dillo e spiega perché.
+
 **Rapido vuol dire niente cerimonie, non lavoro a metà.** Letto il task parti subito, ma consegni solo codice finito, che compila e copre tutti i lati, con la documentazione e le novità allineate.
 
 ## Repo
@@ -25,7 +27,7 @@ Usa sempre `git -C <path>`, mai `cd`. Per `npm` e `./mvnw` usa una subshell: `( 
 
 I task stanno nel modulo **Task del gestionale**, lista **HQ** — non più su ClickUp. Si leggono dall'API di produzione con un utente del gestionale.
 
-Se Carlos ti dà un id o un link (`/task?task=<id>`), lavora quello. Altrimenti, dalla lista HQ: **tutti** i task `DA_FARE` o `IN_CORSO` con scadenza **fino a oggi**: quelli di oggi **e** gli scaduti non ancora fatti (scadenza fino a ieri), sempre insieme, non gli scaduti solo quando oggi è vuoto. Ordine: prima quelli di oggi, poi gli scaduti dal più vecchio. Se non ce n'è nessuno, dillo e chiudi. Mai un task senza scadenza di tua iniziativa. Più task: uno alla volta, in sequenza.
+Se Carlos ti scrive direttamente cosa fare, quella è il task: niente lista, niente id, e il passo 7 non c'è. Se Carlos ti dà un id o un link (`/task?task=<id>`), lavora quello. Altrimenti, dalla lista HQ: **tutti** i task `DA_FARE` o `IN_CORSO` con scadenza **fino a oggi**: quelli di oggi **e** gli scaduti non ancora fatti (scadenza fino a ieri), sempre insieme, non gli scaduti solo quando oggi è vuoto. Ordine: prima quelli di oggi, poi gli scaduti dal più vecchio. Se non ce n'è nessuno, dillo e chiudi. Mai un task senza scadenza di tua iniziativa. Più task: uno alla volta, in sequenza.
 
 **Prima di scrivere codice, mostra a Carlos l'elenco di tutti i task che stai per lavorare**, nell'ordine in cui li farai: numero, id, titolo, scadenza. Anche se è uno solo. Poi parti, senza aspettare conferma.
 
@@ -147,7 +149,8 @@ git -C <path> add -- <file tuoi>
 git -C <path> commit -m "<task_id> - <spiegazione>" -- <file tuoi>
 ```
 
-- Messaggio: sempre `<task_id> - <spiegazione>`, cioè solo il numero del task, trattino, e una riga in italiano con iniziale maiuscola: `1234 - Stats segreteria`, `1234 - Fix calcolo compenso`. Nessuna sigla davanti, niente ID in fondo.
+- Messaggio: sempre `<task_id> - <spiegazione>`, cioè solo il numero del task, trattino, e una riga in italiano con iniziale maiuscola: `1234 - Stats segreteria`, `1234 - Fix calcolo compenso`. Nessuna sigla davanti, niente ID in fondo. Per una richiesta in chat, senza task: solo la spiegazione (`Riccardo Noto manager marketing`).
+- **Quando.** Un commit per richiesta, appena è finita e verificata, prima di rispondere: non accumulare più richieste nello stesso commit e non aspettare che Carlos lo chieda. Se la richiesta dopo corregge quella prima, è un commit nuovo.
 - **Ogni repo ha il suo commit.** Se il task tocca più repo, fai un commit in ciascuno, solo con i file di quel repo e con lo stesso messaggio.
 - Se hai dovuto modificare un file che Carlos aveva già modificato, il commit si porta dietro anche le sue modifiche: dillo esplicitamente alla fine.
 - **Il tuo lavoro finisce col commit.** Mai push, pull, fetch, rebase, deploy: quelli li fa Carlos a mano (nel sito vuol dire mai `./deploy.sh`, `npm run deploy` o `firebase deploy`).
@@ -166,4 +169,4 @@ curl -s -X PATCH -H "$AUTH" -H "Content-Type: application/json" "$HQ_API/task/<I
 
 ## Alla fine
 
-Poche righe per task: cosa hai fatto, hash dei commit, documenti aggiornati (o «doc: nessuna», con cosa hai cercato), novità aggiunta o aggiornata (il suo `id`, o «novità: nessuna», col motivo), interpretazioni scelte, cosa provare a mano.
+Poche righe per task: cosa hai fatto, hash dei commit (sempre: se manca, il task non è finito), documenti aggiornati (o «doc: nessuna», con cosa hai cercato), novità aggiunta o aggiornata (il suo `id`, o «novità: nessuna», col motivo), interpretazioni scelte, cosa provare a mano.
