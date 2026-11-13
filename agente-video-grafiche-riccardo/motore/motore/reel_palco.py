@@ -13,7 +13,10 @@ Il video non si abbassa più e le lettere non si ricompongono: tolti `stato`, `c
 
 Le grafiche sono `infografica_reel` con `dati.modo = "palco"`; `dati.stati` = [{da, forma, x, y, w, h, r, entra}], uno per
 ogni forma che la grafica attraversa (entra: «taglio», «seme» = cresce dal suo bordo verso il contenuto, «tendina» = si allarga
-dalla forma di prima saltando la fascia dei sottotitoli). Nel piano (`piano.json`, chiave `palco`):
+dalla forma di prima saltando la fascia dei sottotitoli). Uno stato con `"copre": "finestra"` (13/11/2026, Riccardo, AD_STITICHEZZA:
+il pannello disegnato a mano lasciava 4-6 px di B-roll sotto il bordo) non scrive x, y, w, h, r: il motore li prende dalla finestra
+misurata nella radiografia (`rett_grafica`, la finestra allargata di 1 px per lato, angoli compresi), inquadratura per
+inquadratura, e cambia il rettangolo da solo sul taglio (`risolvi`). Nel piano (`piano.json`, chiave `palco`):
 
     {"nome": ..., "tipo": ..., "forme": [{"nome": "fascia alta", "video": "fermo", "reference": [...], "quando": ...},
                                            {"nome": "pannello basso", "video": "fermo", ...},
@@ -67,6 +70,50 @@ def stati_di(g):
             dur = g['frames'] / 30.0
             return [dict(q, a=(st[i + 1]['da'] if i + 1 < len(st) else dur)) for i, q in enumerate(st)], d
     return [], {}
+
+
+def risolvi(P, R):
+    """13/11/2026 (Riccardo, AD_STITICHEZZA_AI_01): gli stati con "copre": "finestra" prendono il rettangolo della finestra misurata
+    (rett_grafica) di ogni inquadratura che attraversano; sul taglio dove la finestra cambia nasce uno stato nuovo (a taglio).
+    Si chiama dopo aver letto piano e radiografia, prima dei controlli e delle pagine; una seconda chiamata non cambia niente.
+    Senza ombra di suo (la finestra originale non ne ha): "ombra" resta quella scritta, di norma "no"."""
+    fps = R['fps']
+    inq = sorted(R['inquadrature'], key=lambda s_: s_['f0'])
+    for g in P.get('grafiche') or []:
+        for x in g.get('elementi') or []:
+            d = x.get('dati') or {}
+            if d.get('modo') != 'palco' or not any(q.get('copre') == 'finestra' and not q.get('_risolto') for q in d.get('stati') or []):
+                continue
+            st = sorted(d['stati'], key=lambda q: q.get('da', 0))
+            dur = g['frames'] / fps
+            nuovi = []
+            for i, q in enumerate(st):
+                if q.get('copre') != 'finestra' or q.get('_risolto'):
+                    nuovi.append(q)
+                    continue
+                a = st[i + 1]['da'] if i + 1 < len(st) else dur
+                fa, fb = g['f0'] + round(q.get('da', 0) * fps), g['f0'] + round(a * fps) - 1
+                prima = None
+                for s_ in inq:
+                    if s_['f1'] < fa or s_['f0'] > fb:
+                        continue
+                    rg = s_.get('rett_grafica')
+                    da = q.get('da', 0) if s_['f0'] <= fa else round((s_['f0'] - g['f0']) / fps, 4)
+                    if not rg:
+                        nuovi.append(dict(q, da=da, _risolto=True, _senza_finestra=s_['n'], x=0, y=0, w=0, h=0, r=0, ombra=q.get('ombra', 'no')))
+                        prima = None
+                        continue
+                    # 1 px in più per lato oltre rett_grafica: gli angoli arrotondati sfumati non lasciano un filo di B-roll
+                    geo = {'x': rg['x'] - 1, 'y': rg['y'] - 1, 'w': rg['w'] + 2, 'h': rg['h'] + 2, 'r': rg['r'] + 1}
+                    if prima == geo:
+                        continue
+                    z = dict(q, da=da, _risolto=True, _inquadratura=s_['n'], ombra=q.get('ombra', 'no'), **geo)
+                    if nuovi and da > q.get('da', 0):
+                        z['entra'] = 'taglio'
+                    nuovi.append(z)
+                    prima = geo
+            d['stati'] = nuovi
+    return P
 
 
 MAX_TUTTO_SCHERMO = 3
@@ -154,15 +201,29 @@ def controlla(P, R):
                                    "o la fascia resta identica o è coperta del tutto")
                         break
                 continue
+            if q.get('_senza_finestra'):
+                err.append(f"{g['nome']}: forma «{q['forma']}» con \"copre\": \"finestra\" sull'inquadratura {q['_senza_finestra']}, che non ha "
+                           "una finestra grande da coprire (schema C o persona): un'altra forma, o la grafica finisce prima")
+                continue
+            if q.get('copre') == 'finestra':
+                # 13/11/2026: la forma è la finestra del montaggio (il suo bordo è già lì nell'originale): si misura con il margine
+                # vero del controllo dei sottotitoli (reel_sottotitoli: lettere -4 px), più quanto scende l'ombra
+                giu = {'no': 0, 'basso': 8, 'alto': OMBRA_ALTO_PX}.get(q.get('ombra') or 'no', OMBRA_ALTO_PX)
+                for fm, bx in righe_s:
+                    if fm[1] >= f0 and fm[0] <= f1 and _tocca([r[0], r[1], r[2], r[3] + giu], [bx[0] - 6, bx[1] - 4, bx[2] + 10, bx[3] + 10]):
+                        err.append(f"{g['nome']}: la finestra dell'inquadratura {q.get('_inquadratura')} {r} (con l'ombra «{q.get('ombra') or 'no'}») "
+                                   f"arriva sulla riga di sottotitolo (lettere da y {bx[1]}, fotogrammi {max(fm[0], f0)}-{min(fm[1], f1)}): "
+                                   + ("lì la finestra non si copre" if not giu else "\"ombra\": \"no\", o lì la finestra non si copre"))
+                        break
             # video fermo: la forma non tocca la fascia dei sottotitoli né i volti
-            for fm, bx in righe_s:
+            for fm, bx in ([] if q.get('copre') == 'finestra' else righe_s):
                 if fm[1] >= f0 and fm[0] <= f1 and _tocca(r, [bx[0] - 12, bx[1] - 14, bx[2] + 18, bx[3] + 20], 4):
                     err.append(f"{g['nome']}: la forma «{q['forma']}» {r} tocca la fascia dei sottotitoli (riga y {bx[1]}–{bx[3]}, fotogrammi "
                                f"{max(fm[0], f0)}-{min(fm[1], f1)}): con il video fermo la fascia resta identica")
                     break
             # 11/11/2026 (VSL_BRUXISMO_AI_01, render: alfa 35 sulla riga a due righe): l'ombra «alto» scende di ~60 px sotto la
             # forma (0 22px 40px); se sotto c'è una riga di sottotitolo più vicina, la vela. Lì si usa l'ombra «basso» o «no»
-            if (q.get('ombra') or 'alto') == 'alto':
+            if (q.get('ombra') or 'alto') == 'alto' and q.get('copre') != 'finestra':
                 for fm, bx in righe_s:
                     if (fm[1] >= f0 and fm[0] <= f1 and bx[1] >= r[3] and bx[1] - 4 - r[3] < OMBRA_ALTO_PX
                             and r[0] < bx[2] + 18 and r[2] > bx[0] - 12):
