@@ -201,6 +201,13 @@ Le forme e il modello sono in [references/reel.md](references/reel.md), sezione 
   grafica attraversa un taglio, una lista `[{da, x, y, w, h, r}]` che cambia sul fotogramma del taglio (se la finestra cambia
   di 1–2 px, un rettangolo che copra tutte e due); finestre in basso, sottotitoli e fondo restano intatti; niente nella fessura
   dei sottotitoli;
+- **sistema di forme sulla finestra** (`modo: "palco"`, dal 13/11/2026, AD_STITICHEZZA_AI_01): lo stato della forma scrive
+  `"copre": "finestra"` e **niente x, y, w, h, r**: il motore (`reel_palco.risolvi`) prende il rettangolo misurato della finestra
+  (`rett_grafica` più 1 px per lato, angoli compresi) di ogni inquadratura che la grafica attraversa e lo cambia da solo sul
+  taglio. Ombra `"no"` (la finestra originale non ne ha). Un pannello disegnato a mano finiva a y 919 per stare lontano dai
+  sottotitoli e lasciava 4–6 px di B-roll sotto il bordo (Riccardo l'ha visto sull'anteprima). Il controllo del piano misura
+  queste forme con il margine vero dei sottotitoli: se la finestra stessa arriva sulla riga (es. un'inquadratura con la finestra
+  più alta) o se l'inquadratura non ha una finestra grande (schema C), è un errore;
 - **grafica piena** (`modo: "tutto schermo"` o una forma piena del sistema di forme): solo quando il contenuto riempie lo
   schermo, breve (al massimo 4 s, 3 per reel), mai sulle inquadrature con le 3D; copre tutta la riga dei sottotitoli per tutta
   la sua durata (caso (b)). La fascia trasparente per i sottotitoli non si usa;

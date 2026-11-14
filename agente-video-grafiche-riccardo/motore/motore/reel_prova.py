@@ -36,6 +36,8 @@ def prova(slug, grafica, tempi):
         raise SystemExit(f"{slug}: nel piano non c'è la grafica «{grafica}» (ci sono: {', '.join(x['nome'] for x in P['grafiche'])})")
     g = gg[0]
     R = C.leggi(D / 'radiografia.json')
+    from . import reel_palco as RPal
+    RPal.risolvi(P, R)           # 13/11/2026: "copre": "finestra" (il rettangolo misurato della finestra)
     fps = R['fps']
     L = C.lavoro(slug, 'prova')
     _, mov, _ = AR._mov(g, fps, L)

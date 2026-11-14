@@ -41,6 +41,15 @@
   dell'agente ads, più le 2 VSL); l'esportazione aggiunge allo storico di produzione quelli che mancano.
 - `LEGGIMI.md`: sezione «Aggiornamento alla 1.1» per i collaboratori.
 
+## Dopo la 1.1 (13/11/2026)
+
+- **Forme che coprono la finestra del montaggio** (`"copre": "finestra"` negli stati del palco, `reel_palco.risolvi`): il motore
+  prende il rettangolo della finestra misurata nella radiografia, inquadratura per inquadratura, e lo cambia da solo sul taglio;
+  il controllo del piano le misura con il margine vero dei sottotitoli e dà errore se la finestra arriva sulla riga o se
+  l'inquadratura non ha una finestra grande. Nato da `AD_STITICHEZZA_AI_01-Agazzi`: il pannello scritto a mano doveva finire a
+  y 919 (margine del controllo) e lasciava 4–6 px di B-roll sotto il bordo (Riccardo, 13/11/2026). Regressione del verticale:
+  vedi sotto.
+
 ## Da fare (1.1)
 
 - **Prova fissa per il 16:9**: la regressione ha solo il caso verticale. Proposta nel report del 12/11/2026 (da una delle due

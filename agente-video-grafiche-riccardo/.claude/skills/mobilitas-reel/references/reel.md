@@ -34,7 +34,8 @@ spesso alla stessa; passaggi legati):
   meglio 20) e i sottotitoli (riga − 14 px; l'ombra del pannello va solo in su: `ombra: basso`); il video resta fermo. Con la
   persona seduta e il volto basso il pannello si fa più stretto (~200 px), con una riga sola e un oggetto;
 - **badge in un angolo** (06, 07): accanto alla testa, nella zona sicura (y ≥ 269), lontano dal volto e dai sottotitoli;
-- **fascia alta** (03, 04, 05): sulle B-roll e nei montaggi a finestre (al posto della finestra in alto), video fermo;
+- **fascia alta** (03, 04, 05): sulle B-roll e nei montaggi a finestre (al posto della finestra in alto), video fermo; al
+  posto di una finestra lo stato scrive `"copre": "finestra"` e il motore usa il rettangolo misurato (SKILL.md, «Forme e geometria»);
 - **brevi, solo scene complesse** (grafiche piene, i sottotitoli non ci sono): tendina che diventa tutto schermo (02, 08),
   schermo diviso (08, 09), card di vetro sul video sfocato (11). Al massimo 3, 4 s l'una. La tendina salta la fascia dei
   sottotitoli in un solo fotogramma (`dati.salta`), e nei fotogrammi di passaggio non ha ombra.

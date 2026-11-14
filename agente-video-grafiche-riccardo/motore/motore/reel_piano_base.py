@@ -188,6 +188,8 @@ def controlla(slug, P=None, R=None):
     D = C.cartella(slug)
     R = R or C.leggi(D / 'radiografia.json')
     P = P or C.leggi(D / 'piano.json')
+    from . import reel_palco as RPal0
+    RPal0.risolvi(P, R)          # 13/11/2026: le forme con "copre": "finestra" prendono il rettangolo misurato (anche per le pagine)
     from . import catalogo as K
     cat = K.per_id()
     fps, nf = R['fps'], R['fotogrammi']
