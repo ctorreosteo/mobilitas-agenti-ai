@@ -1,0 +1,64 @@
+{
+ "clip": "verticale-21",
+ "durata_s": 4.6,
+ "eventi": [
+  {
+   "t": 0.1,
+   "tipo": "taglio",
+   "cosa": "salto a un'inquadratura più stretta della stessa persona (f3)"
+  },
+  {
+   "t": 0.1,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "parola gigante «SWITCH» dietro la testa: sale di poco e si accende in 4 fotogrammi (f3-f7)"
+  },
+  {
+   "t": 0.2,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "sopra la testa un anello ellittico sottile (un'orbita) con quattro icone-app sul bordo e una parola più piccola «ASAP» dietro «SWITCH» (0,20-0,42); una linea di luce orizzontale attraversa le lettere e scende lentamente lungo la parola (0,33-1,08)"
+  },
+  {
+   "t": 0.42,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "etichetta scura «ASAP» con l'icona di un razzo, a destra del volto (0,42 tenue, 0,50 piena)"
+  },
+  {
+   "t": 1.17,
+   "tipo": "uscita",
+   "cosa": "tutto il gruppo (parola gigante, orbita, icone, etichetta) si spegne in dissolvenza in 6 fotogrammi (f35-f40)"
+  },
+  {
+   "t": 1.4,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "tacche di un quadrante (un semicerchio di trattini, quelli principali più lunghi) intorno alla testa (f42-f45)"
+  },
+  {
+   "t": 1.58,
+   "tipo": "stato",
+   "cosa": "un arco turchese si riempie da sinistra a destra sul quadrante insieme a un ago luminoso che ruota (1,58-1,92), poi resta fermo"
+  },
+  {
+   "t": 2.83,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "barra-notifica scura larga sotto i sottotitoli: icona turchese, «Selling» e una riga più piccola in turchese, «now» a destra (2,83 tenue, 2,92 piena)"
+  },
+  {
+   "t": 3.42,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "pillola bianca con testo nero grande («…ne Claude skill · $20») entra da sinistra con sfocatura di movimento e resta tagliata dal bordo sinistro (3,42-3,58)"
+  }
+ ],
+ "principali": 8,
+ "principali_ogni_10s": 17.4,
+ "micro": 1,
+ "uscite": 1,
+ "pausa_media_s": 0.55,
+ "pausa_max_s": 1.25,
+ "note": "Clip a 30 fps, registrazione 1080×1928 senza interfaccia di Instagram visibile, stessa impaginazione della verticale-20 (y del reel ≈ y della registrazione − 40, stima ±30 px). Taglio a f3 verificato fotogramma per fotogramma (f0-f9); fra 1,17 e 1,40 non c'è un taglio (verificato f34-f45): il gruppo si spegne e il quadrante entra sulla stessa inquadratura. Taglio ed entrata nello stesso istante contati separatamente (come nella verticale-06); il motore li fonde. La linea di luce che scende lungo la parola è un moto continuo dentro l'entrata delle 0,20, non contata a parte. Ignorati: i sottotitoli in maiuscolo («ULTIMATELY, I DECIDED ON»), l'etichetta fissa in alto a sinistra, i gesti. Bordi: 0,10 s dall'inizio al primo evento; 1,18 s dall'ultimo evento alla fine."
+}

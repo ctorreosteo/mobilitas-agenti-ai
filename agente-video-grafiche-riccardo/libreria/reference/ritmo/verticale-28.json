@@ -1,0 +1,36 @@
+{
+ "clip": "verticale-28",
+ "durata_s": 3.8,
+ "eventi": [
+  {
+   "t": 0.57,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "sopra il cappello, quattro card verticali (anteprime di video) arrivano una alla volta da sinistra a destra, ognuna da sfocata e piccola a nitida, inclinate a ventaglio; una nuova ogni ~2 fotogrammi (0,57-0,83)"
+  },
+  {
+   "t": 1.37,
+   "tipo": "stato",
+   "cosa": "trasformazione da molti a uno: le quattro card si stringono e sbiadiscono mentre nasce sopra di loro una card-messaggio scura orizzontale (miniatura + «4 skill video» + «+ guida passo passo» + pulsante verde d'invio); 1,37-1,47, ~3 fotogrammi, i bordi delle card si vedono ancora dietro per 1 fotogramma"
+  },
+  {
+   "t": 1.6,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "un adesivo verde lime «gratis» in corsivo, inclinato, cade sull'angolo basso destro della card: entra grande (~2×) e trasparente e si posa alla misura giusta in 3 fotogrammi (1,60-1,70), con piccole stelline intorno; nello stesso istante la parola è detta e sottolineata nei sottotitoli"
+  },
+  {
+   "t": 2.83,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "sotto la card compare la pillola lime «✓ inviato in DM», da sfocata a nitida in 2 fotogrammi (2,83-2,90)"
+  }
+ ],
+ "principali": 4,
+ "principali_ogni_10s": 10.5,
+ "micro": 2,
+ "uscite": 0,
+ "pausa_media_s": 0.75,
+ "pausa_max_s": 1.23,
+ "note": "Misure e tempi: clip 1080×1928 a 30 fps; il reel occupa tutta la registrazione (nessuna barra del browser, solo 1-2 px chiari sul bordo alto e sinistro): le misure della scheda sono riportate al quadro 1080×1920 moltiplicando y per 1920/1928 (0,996; differenze di 8 px al massimo). Persona in camera a tutto quadro per tutta la clip; nessun taglio. Il primo fotogramma ha un bordo chiaro della registrazione (non contato). Contati gli oggetti sopra la testa. Ignorati: i sottotitoli parola per parola con la parola chiave in una pillola lime (sono i sottotitoli del reel), interfaccia di Instagram, gesti (il microfono in mano). Le quattro card sono contate come una sola entrata (cascata). Nessuna uscita: la card resta fino alla fine. Pause misurate tra un evento principale e il successivo (istanti uguali contati una volta), senza i bordi della clip: la più lunga va da 1.60 a 2.83 s. Bordi: 0.57 s dall'inizio al primo evento, 0.97 s dall'ultimo evento alla fine."
+}

@@ -1,0 +1,117 @@
+{
+ "clip": "verticale-17",
+ "durata_s": 6.3,
+ "eventi": [
+  {
+   "t": 0.0,
+   "tipo": "uscita",
+   "cosa": "la card blu e la pellicola della scena prima escono a sinistra con sfocatura di movimento (0,00-0,07)"
+  },
+  {
+   "t": 0.07,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "sei scrivanie con monitor (griglia 3×2, x 80-760, y 575-1155) entrano scaglionate con sfocatura (0,07-0,42)"
+  },
+  {
+   "t": 0.2,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "asse verticale sottile in basso (x ~307, y 1285-1630), da solo, aspetta il grafico (0,17-0,25)"
+  },
+  {
+   "t": 0.67,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "una persona stilizzata (testa nera, busto blu) spunta sotto la prima scrivania, da un punto con rimbalzo"
+  },
+  {
+   "t": 1.0,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "seconda persona"
+  },
+  {
+   "t": 1.17,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "terza persona"
+  },
+  {
+   "t": 1.33,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "quarta persona (fila sotto)"
+  },
+  {
+   "t": 1.5,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "quinta persona"
+  },
+  {
+   "t": 1.75,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "sesta persona"
+  },
+  {
+   "t": 2.08,
+   "tipo": "stato",
+   "cosa": "i monitor si accendono uno dopo l'altro: da bianchi a grigi a schermo scuro con un'interfaccia di montaggio (2,08-2,42); poi le testine rosse si muovono fino a 4,75"
+  },
+  {
+   "t": 3.25,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "sveglia a destra (~235 px) con rimbalzo (3,20-3,33); la lancetta gira e lascia un settore azzurro fino a 4,75"
+  },
+  {
+   "t": 3.25,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "barra grigia spessa «hours» che cresce dall'asse verso destra (x 307-960, y 1328-1428) (3,25-3,50)"
+  },
+  {
+   "t": 4.73,
+   "tipo": "stato",
+   "cosa": "tutto il gruppo (scrivanie, persone, sveglia) si rimpicciolisce a ~50% in alto a sinistra e diventa grigio (4,73-4,92)"
+  },
+  {
+   "t": 5.0,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "asterisco arancio grande (x 248-577, y 818-1175) entra con sfocatura di movimento e si assesta (5,00-5,17)"
+  },
+  {
+   "t": 5.42,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "cronometro (~240 px) a destra dell'asterisco, da un punto con rimbalzo (5,42-5,67)"
+  },
+  {
+   "t": 5.83,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "sotto la barra grigia, barra blu corta «minutes» (x 307-382, y 1490-1590) con l'etichetta blu (5,83-5,92)"
+  },
+  {
+   "t": 5.92,
+   "tipo": "stato",
+   "cosa": "nel cronometro la lancetta fa un pezzo di giro e lascia un settore blu (5,92-6,00)"
+  },
+  {
+   "t": 6.0,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "piccolo asterisco accanto alla barra blu"
+  }
+ ],
+ "principali": 17,
+ "principali_ogni_10s": 27.0,
+ "micro": 8,
+ "uscite": 1,
+ "pausa_media_s": 0.4,
+ "pausa_max_s": 1.48,
+ "note": "Clip a 30 fps; registrazione 1080×1928 con due bande nere (y 0-30 e 1897-1927): il reel occupa x 0-1079, y 31-1896 (1080×1866), quindi è tagliato di ~54 px in altezza rispetto a 1080×1920. Le misure della scheda sono in px della registrazione meno 4 (ipotesi: ~27 px tagliati sopra e sotto, nessun ridimensionamento); errore possibile ±27 px in verticale. In basso, y ~1670-1900, c'è l'interfaccia di Instagram (account, didascalia, tasto audio) e il puntatore del mouse: ignorati. Sveglia e barra grigia entrano nello stesso istante (3,25): contate come due entrate, una volta sola nelle pause. Le sei persone sono micro (ognuna ~110 px). Le testine nei monitor e la lancetta della sveglia si muovono di continuo (2,42-4,75): non contate a parte. Il titolo in alto («That's the part that used to take a whole team of motion designers spending hours on assets and edits. Now Claude does it in minutes.») è il sottotitolo del reel: non contato. La clip comincia con l'uscita della scena di verticale-16 (stesso reel). Pause misurate tra un evento principale e il successivo (istanti uguali contati una volta), senza i bordi della clip: la più lunga va da 3.25 a 4.73 s. Bordi: 0.07 s dall'inizio al primo evento, 0.30 s dall'ultimo evento alla fine. Ignorati: interfaccia di Instagram, puntatore, sottotitoli, marchi."
+}

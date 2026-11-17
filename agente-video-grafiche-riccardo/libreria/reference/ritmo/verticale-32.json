@@ -1,0 +1,68 @@
+{
+ "clip": "verticale-32",
+ "durata_s": 2.8,
+ "eventi": [
+  {
+   "t": 0.07,
+   "tipo": "taglio",
+   "cosa": "fine del velo di luce viola della clip prima e stacco a una pagina bianca a tutto schermo (0,00-0,07): fondo grigio chiarissimo con un alone bianco al centro, codice a barre piccolo in alto, due scritte verticali piccole ai lati"
+  },
+  {
+   "t": 0.07,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "la frase in alto comincia a scriversi parola per parola sulla voce: «I would» compare grigio chiaro e poi si scurisce"
+  },
+  {
+   "t": 0.1,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "l'oggetto 3D al centro (un chip elettronico fotografico) entra molto sfocato e un po' più grande, poi si mette a fuoco e si assesta con l'ombra a terra (0,10-0,27)"
+  },
+  {
+   "t": 0.17,
+   "tipo": "stato",
+   "cosa": "la frase continua: «hire the one» (grigio → nero)"
+  },
+  {
+   "t": 0.33,
+   "tipo": "stato",
+   "cosa": "la frase continua: «who»"
+  },
+  {
+   "t": 0.67,
+   "tipo": "stato",
+   "cosa": "la frase continua: «is»; la riga è completa"
+  },
+  {
+   "t": 0.8,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "sotto la frase compare un cursore verticale nero (0,80), si allarga in una barra e si apre da sinistra a destra in un'etichetta nera arrotondata che rivela «EXPERT» in maiuscolo verde-limone (0,83-0,93)"
+  },
+  {
+   "t": 1.1,
+   "tipo": "stato",
+   "cosa": "attorno all'etichetta compare una cornice di selezione tratteggiata grigia con i quadratini agli angoli, come in un programma di grafica (1,10-1,17)"
+  },
+  {
+   "t": 1.33,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "sotto l'oggetto, «in using AI.» in corsivo con grazie grande, da sfocato a nitido (1,33-1,50)"
+  },
+  {
+   "t": 1.67,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "sotto il corsivo, una riga piccolissima grigia di attribuzione (chi lo ha detto)"
+  }
+ ],
+ "principali": 10,
+ "principali_ogni_10s": 35.7,
+ "micro": 1,
+ "uscite": 0,
+ "pausa_media_s": 0.2,
+ "pausa_max_s": 0.34,
+ "note": "Registrazione 1080×1928 a 30 fps, senza bande: il reel occupa tutto il quadro; le misure della scheda sono riportate al quadro 1080×1920 moltiplicando le y per 1920/1928 (0,996: al massimo 8 px di differenza, quindi in pratica uguali). La clip è il seguito diretto di verticale-31 (primo fotogramma = velo viola della 31). Stacco (video → grafica piena) e prima parola nello stesso istante contati separatamente, come nelle schede precedenti. Ogni gruppo di parole che compare è contato come un cambio di stato della stessa frase (la frase si scrive sulla voce). Codice a barre e scritte verticali ai lati compaiono con la pagina e restano fermi: non contati. Dopo 1,67 la pagina resta ferma fino alla fine (1,13 s). Ignorati: interfaccia, i marchi delle scritte laterali. Pause misurate tra un evento principale e il successivo (istanti uguali contati una volta), senza i bordi della clip: la più lunga va da 0.33 a 0.67 s. Bordi: 0.07 s dall'inizio al primo evento, 1.13 s dall'ultimo evento alla fine."
+}

@@ -1,0 +1,64 @@
+{
+ "clip": "verticale-26",
+ "durata_s": 2.93,
+ "eventi": [
+  {
+   "t": 0.0,
+   "tipo": "stato",
+   "cosa": "l'indicatore 1-13 è appena passato al 10: l'anello intorno al riquadro arancio si stringe (0,00-0,17); sotto la parentesi l'etichetta «VIDEO»; il badge «10» è già al suo posto, senza titolo. Movimento già in corso al primo fotogramma"
+  },
+  {
+   "t": 0.42,
+   "tipo": "stato",
+   "cosa": "il titolo con grazie «Video Lens» compare accanto al badge, in dissolvenza (0,42-0,50)"
+  },
+  {
+   "t": 1.08,
+   "tipo": "stato",
+   "cosa": "la riga di spiegazione «Ti riassume un video di YouTube in una pagina» compare sotto il titolo (1,08-1,17)"
+  },
+  {
+   "t": 1.13,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "un foglio bianco cresce da dietro il lettore video fino a una pagina larga quasi tutto il quadro (1,13-1,27)"
+  },
+  {
+   "t": 1.13,
+   "tipo": "uscita",
+   "cosa": "la riga del canale sotto il lettore (avatar, righe, pulsante «Iscriviti») sfuma mentre cresce il foglio"
+  },
+  {
+   "t": 1.3,
+   "tipo": "stato",
+   "cosa": "il lettore si rimpicciolisce e scivola in alto a sinistra dentro il foglio (1,27-1,40); sopra compare il titoletto con grazie «Riassunto» (1,40)"
+  },
+  {
+   "t": 1.67,
+   "tipo": "stato",
+   "cosa": "a destra del lettore compare la colonna «SINTESI» con cinque righe grigie (1,67-1,75)"
+  },
+  {
+   "t": 2.0,
+   "tipo": "stato",
+   "cosa": "sotto compare «PUNTI CHIAVE» con quattro righe a puntino arancio (2,00-2,08)"
+  },
+  {
+   "t": 2.5,
+   "tipo": "stato",
+   "cosa": "sotto il lettore compare «INDICE» con quattro righe con l'icona play (2,50)"
+  },
+  {
+   "t": 2.67,
+   "tipo": "stato",
+   "cosa": "in fondo al foglio compaiono tre righe lunghe di testo segnaposto (2,67-2,75): la pagina è completa"
+  }
+ ],
+ "principali": 9,
+ "principali_ogni_10s": 30.7,
+ "micro": 0,
+ "uscite": 1,
+ "pausa_media_s": 0.33,
+ "pausa_max_s": 0.66,
+ "note": "Clip a 30 fps, 1080×1928 (reel a tutto quadro; y riportate a 1920 con il fattore 0,996). È lo stesso sistema della verticale-25 (stesso pannello panna, stesso indicatore 1-13, stesso badge e titolo con grazie) ma A TUTTO SCHERMO: la persona non si vede per tutta la clip, nessun taglio. Il foglio che cresce (1,13) e la riga del canale che sfuma sono nello stesso istante: entrata contata, uscita a parte. 1,08 e 1,13 sono vicini ma su oggetti diversi (riga del titolo e foglio): contati separatamente. Ignorati: interfaccia di Instagram con il velo scuro in alto e in basso, puntatore del mouse (fermo), sottotitoli nel riquadro nero (y ~1350), marchio e colori del lettore video. Pausa più lunga senza i bordi: da 0,42 a 1,08 (titolo fermo, il lettore resta immobile). Bordi: 0,00 s dall'inizio (indicatore già in movimento), 0,26 s dall'ultimo evento alla fine."
+}

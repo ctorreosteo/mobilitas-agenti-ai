@@ -1,0 +1,19 @@
+{
+ "clip": "verticale-22",
+ "durata_s": 4.2,
+ "eventi": [
+  {
+   "t": 2.42,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "pillola verde «Got it» con un'iconcina tonda compare sull'angolo alto destro della card della nota, sovrapposta al bordo (2,42 tenue, 2,58 piena)"
+  }
+ ],
+ "principali": 1,
+ "principali_ogni_10s": 2.4,
+ "micro": 1,
+ "uscite": 0,
+ "pausa_media_s": null,
+ "pausa_max_s": null,
+ "note": "Clip a 30 fps, registrazione 1080×1928 a tutta altezza (qui il reel riempie la registrazione: misure 1:1, stima). Da 0,00 a 0,17 si vede la fine di un altro reel nel feed (una copertina con titolo e due telefoni) e da 0,25 a 0,58 il feed scorre verso l'alto: è interfaccia, non contata (né come taglio né come entrata). Quando il reel arriva, la card scura della nota («Note for Claude · in the video», miniatura a sinistra, frase tra virgolette) è già al suo posto sotto i sottotitoli: non entra in questa clip e resta ferma fino alla fine. Un solo evento: niente pause fra eventi (pausa media e massima: null). Ignorati: sottotitoli bianchi della persona, interfaccia di Instagram, puntatore del mouse. Bordi: 2,42 s dall'inizio all'unico evento; 1,78 s dall'evento alla fine."
+}

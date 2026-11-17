@@ -1,0 +1,53 @@
+{
+ "clip": "verticale-13",
+ "durata_s": 1.87,
+ "eventi": [
+  {
+   "t": 0.07,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "primo nodo in alto a sinistra: cerchio bianco ~150 px con icona di persona arancio (x 10-160, y 115-265), entra con un rimbalzo (0,07-0,17) e si assesta (0,33)"
+  },
+  {
+   "t": 0.33,
+   "tipo": "taglio",
+   "cosa": "salto sulla stessa inquadratura (scala un po' diversa); i sottotitoli cambiano"
+  },
+  {
+   "t": 0.37,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "una linea arancio luminosa (~8 px con alone) parte dal primo nodo e si disegna lungo un'orbita intorno alla testa (0,37-1,42): passa DIETRO la testa e dietro il microfono (il tratto sparisce dove c'è la persona)"
+  },
+  {
+   "t": 0.57,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "secondo nodo a destra, accanto all'orecchio (x ~900-1050, y ~510-660), con rimbalzo (0,57-0,75), quando la linea ci arriva"
+  },
+  {
+   "t": 0.83,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "terzo nodo a sinistra, al bordo della guancia (x ~70-220, y ~845-995), con rimbalzo (0,83-1,00)"
+  },
+  {
+   "t": 1.4,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "quarto nodo in fondo alla linea, sul petto (x ~620-780, y ~1240-1400) (1,40-1,50)"
+  },
+  {
+   "t": 1.57,
+   "tipo": "uscita",
+   "cosa": "lampo bianco (1,57-1,67) verso la clip successiva"
+  }
+ ],
+ "principali": 6,
+ "principali_ogni_10s": 32.1,
+ "micro": 4,
+ "uscite": 1,
+ "pausa_media_s": 0.27,
+ "pausa_max_s": 0.57,
+ "note": "Clip a 30 fps; registrazione 1080×1928 a tutto quadro (nessuna banda): le misure della scheda sono in px della registrazione; riportate al quadro 1080×1920 cambiano al massimo di 8 px in verticale (fattore 0,996). La linea si disegna di continuo per 1,05 s: contata una volta, i nodi a parte (ognuno compare quando la linea lo raggiunge). L'occlusione dietro la testa e il microfono è stata verificata su fotogrammi interi a 0,75 e 1,05 s. Il salto a 0,33 è piccolo (differenza media 9 contro 30-140 dei lampi) ma visibile: stessa inquadratura, scala diversa. Ignorati i sottotitoli animati («no spaces FOR US TO», «connect WITH ANYONE»). Pause misurate tra un evento principale e il successivo (istanti uguali contati una volta), senza i bordi della clip: la più lunga va da 0.83 a 1.40 s. Bordi: 0.07 s dall'inizio al primo evento, 0.47 s dall'ultimo evento alla fine. Ignorati: interfaccia di Instagram, puntatore, sottotitoli, marchi."
+}

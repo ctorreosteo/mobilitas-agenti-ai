@@ -1,0 +1,41 @@
+{
+ "clip": "verticale-20",
+ "durata_s": 3.4,
+ "eventi": [
+  {
+   "t": 0.17,
+   "tipo": "uscita",
+   "cosa": "la parola gigante «SIMPLE» dietro la testa (già presente al primo fotogramma) si spegne (0,17-0,33)"
+  },
+  {
+   "t": 0.67,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "secondo elemento della lista verticale sul petto: icona quadrata turchese + «Going out to eat», legato al primo da un trattino verticale (0,67-0,75)"
+  },
+  {
+   "t": 1.67,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "etichetta scura «Sometimes» con una piccola icona, a destra del volto (1,67 sfocata, 1,75 nitida)"
+  },
+  {
+   "t": 2.5,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "parola gigante «MEALS» dietro la testa, lettere metalliche con bagliore (2,50-2,58); nello stesso fotogramma il terzo elemento della lista, «Missing meals»"
+  },
+  {
+   "t": 3.0,
+   "tipo": "uscita",
+   "cosa": "tutto si spegne in dissolvenza in 5 fotogrammi (3,00-3,17): lista, parola gigante, etichetta e linea a onda"
+  }
+ ],
+ "principali": 3,
+ "principali_ogni_10s": 8.8,
+ "micro": 2,
+ "uscite": 2,
+ "pausa_media_s": 0.92,
+ "pausa_max_s": 1.0,
+ "note": "Clip a 30 fps, registrazione 1080×1928 senza interfaccia di Instagram visibile: il quadro è nero fino a y ~40 e il contenuto arriva in fondo; considero il reel a scala 1 da y ~40 (y del reel ≈ y della registrazione − 40, stima con margine di ±30 px; la qualità è bassa, ricompressa). Al primo fotogramma ci sono già la parola «SIMPLE», la linea a onda turchese che attraversa il quadro dietro la testa e il primo elemento della lista «Hitting the gym»: non contati come entrate. La linea a onda si muove lentamente per tutta la clip (moto continuo, non contato). Il terzo elemento della lista entra nello stesso fotogramma di «MEALS»: contato una volta. I sottotitoli in maiuscolo («OR SIMPLE THINGS LIKE», «SO…») e l'etichetta fissa in alto a sinistra sono ignorati. Nessun taglio. Bordi: 0,67 s dall'inizio al primo evento; 0,90 s dall'ultimo evento alla fine."
+}

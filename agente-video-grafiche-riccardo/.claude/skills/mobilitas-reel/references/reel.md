@@ -255,6 +255,47 @@ loro conteggi si rifanno con la regola unica.
 - cosa non si prende: contachilometri con cifre provvisorie (07), spunte e «Installed» (06, 08), figure umane disegnate,
   percentuali e fonti non dette (10), il pannello chiaro (per noi il blu del sito).
 
+**Dalle 23 verticali nuove (17/11/2026, `verticale-12` … `verticale-34`; pezzi di sette reel, schede in `libreria/reference/schede/`):**
+- **il confronto si costruisce, non si affianca**: il «prima» non esce, si rimpicciolisce (~50%) e si spegne in un angolo e
+  resta come termine di paragone (17); il primo termine scende al ~45% quando arriva il secondo (30); lo stesso palco racconta
+  prima la strada sbagliata, poi un «reset» di ~5 fotogrammi, poi quella giusta (19). Per «venti minuti» contro «un'ora» il
+  modello più vicino è la 17: asse che compare da solo e aspetta, barra lunga spenta, poi barra corta accesa, **senza cifre**;
+  l'orologio «spende» il tempo lasciando un settore pieno (15, 17), o un arco che si riempie (21);
+- **un oggetto, un segno, una voce**: ogni frase detta mette un segno su una parte dell'oggetto e, nello stesso fotogramma, la
+  voce gemella nella lista accanto (25: per noi anelli verdi su un disegno Servier + lista); etichette appese con un tratteggio
+  al punto che nominano, a scala ogni 2–3 fotogrammi (18); etichette a cavallo del margine che accendono una riga (16); prima
+  dei segni una linea di scansione con alone (19, 25);
+- **indicatori senza numeri e chiusure**: lista «a riflettore» sotto il volto, una voce per parola detta, solo l'ultima accesa,
+  alla fine tutte accese a onda (31); chip-ancora fisso che cambia solo il nome (29); chip del passo **alla stessa y in ogni
+  forma** (23 → 24); alla fine dei passi il pannello diventa il **sommario** di tutti i passi come pillole numerate (27);
+  l'indicatore può raggruppare i passi con la categoria sotto il gruppo attivo (25–27), ma per noi al massimo 3–5 posti
+  (13 riquadri a 390 px non si leggono);
+- **oggetti che partono vuoti e si riempiono sulla voce** (25, 26): lo scheletro è il segnaposto estetico della nostra regola
+  «mai card vuote», non un riquadro bianco; la parola arriva grigia e diventa piena quando è detta (32–34), senza far ballare
+  il testo;
+- **entrate nuove**: etichetta aperta da un cursore sottile che si allarga (32–34); adesivo inclinato con la parola chiave che
+  cade sulla card da 2× a 1× in 3 fotogrammi, sulla parola (28); icona disegnata partendo da 3–4 puntini (33); oggetto che
+  ruota e si dissolve nel successivo sullo stesso piedistallo mentre la riga resta e cambia solo la parola (33); cambio di
+  argomento con la messa a fuoco **lenta** (~15 fotogrammi) dentro una cornice che resta (34); una vetrina intera che esce e
+  rientra in sfocatura incrociata (29);
+- **grafica piena come pagina-poster** (32–34): una frase detta in 3–5 pesi tipografici (contesto piccolo → parola chiave
+  enorme → un solo oggetto → chiusura), che si riempie dall'alto sulla voce; per noi su blu notte, Montserrat, un disegno
+  Servier o un'icona, testo solo nella metà alta, al massimo 4 s;
+- **il video della persona dentro la grafica** (iride 12, tessera 14, lettore nell'angolo 26, finestra del relatore 29): per
+  noi è sempre una grafica piena (caso (b) dei sottotitoli: in quel tratto la riga non c'è), breve;
+- **grafiche dietro la persona** (13, 20, 21, 24: parola gigante, quadrante, orbita dietro la testa): profondità senza coprire
+  volto né sottotitoli. Il motore oggi non lo sa fare (la radiografia ha solo una sagoma grossolana per misurare): è una
+  capacità nuova da decidere con Riccardo, non un modello;
+- **ritmo**: misurate con la regola dei piani, le 23 clip fanno 2,4–22,6 eventi ogni 10 s (mediana 15,4, pausa più lunga
+  mediana 1,4 s), ma sono spezzoni scelti per le grafiche; una scena piena che entra tutta in ~0,5 s poi si lascia leggere
+  1,5–1,8 s (14, 23); dove la grafica è una didascalia il ritmo è lento (20, 22). L'obiettivo dei piani non cambia;
+- cosa non si prende: figure umane (quasi tutte le clip: avatar, icone di persona, persone alle scrivanie), spunte e bollini di
+  fatto (16, 18, 19, 25, 28), la X rossa e i «!» rossi (19, 25), «Consigliato» (27: sembra un consiglio clinico), «gratis» e le
+  frasi-promessa (28, 34), cifre non dette («1h», assi «0s 1s», prezzi, conteggi di file), lampi bianchi e veli di luce sul
+  video (12–14, 31–34: cambiano i colori e la fascia dei sottotitoli), l'ovale a mano sopra i sottotitoli (31), oggetti
+  fotografici 3D (33, 34), cursori che cliccano interfacce finte, titoli scritti parola per parola come sottotitoli (15–19),
+  indicatori e chip sopra y 269, etichette di 18–32 px, il fondo chiaro, il nero con l'arancio, il corsivo con grazie.
+
 **Dalle 31 orizzontali (05/11/2026):**
 - vetro: pillole e card di vetro blu con bordo chiaro di 1–2 px; prima l'icona, poi la pillola che si allunga, poi il testo;
 - evidenziatore che si stende dietro una parola detta; riflesso che passa su una scena ferma per tenerla viva;
@@ -268,7 +309,17 @@ Barra che si carica, nota a margine, domanda che si scrive, anello sul concetto,
 icone barrate in fila, card rivelate da una banda, accensione con il colpo, albero di pillole, griglia di punti con zoom, muro e
 frase, confronto impilato (senza spunte), calendario che sfoglia (senza cifre), parola gigante battuta, scena che scende, fila
 che si accende, passaggio sulla linea, fumetti 9:16, parola che parte, frase parola per parola, scala-carrello; dalle verticali:
-schermo diviso, card di vetro sul video sfocato, lista che si accumula e si barra (05), da molti a uno (08).
+schermo diviso, card di vetro sul video sfocato, lista che si accumula e si barra (05), da molti a uno (08); dalle verticali del
+17/11/2026 (secondi nelle schede): prima che si spegne nell'angolo con due barre e l'asse che aspetta (17), orologio che spende
+il tempo (15, 17), quadrante del tempo (21), confronto che spegne il primo termine (30), stesso palco due strade (19), segno e voce
+gemelli su Servier (25), etichette appese e lente sul dettaglio (18), scansione nella card (19, 25), scheda che si compila con
+etichette sul margine (16), lista a riflettore sotto il volto (31), sommario a pillole (27), chip del passo fisso in y (23, 24),
+adesivo sulla parola (28), etichetta dal cursore (32–34), icona dai puntini (33), esempi sul piedistallo (33), pagina-poster della
+frase (32, 34), cambio di pagina sul posto (34), vetrina con chip-ancora (29), card della frase riferita tra virgolette (22).
+Nessuno è costruito: si costruiscono solo come varianti «in prova» quando un reel ne ha bisogno, e diventano attivi con l'ok di
+Riccardo sull'anteprima. Da decidere con Riccardo prima di costruire: grafiche dietro la persona (serve lo scontorno per
+fotogramma nel motore), la lente sopra un disegno Servier (è una «forma semplice»?), un segno grafico di «no» oltre la lista
+che si barra, la cornice di selezione con i quadratini agli angoli (32, 34: segno da programma di grafica).
 
 ## 11. Lezioni tecniche
 

@@ -1,0 +1,58 @@
+{
+ "clip": "verticale-14",
+ "durata_s": 2.6,
+ "eventi": [
+  {
+   "t": 0.13,
+   "tipo": "taglio",
+   "cosa": "stacco netto dalla persona alla scena grafica: fondo nero con bagliore arancio sui bordi"
+  },
+  {
+   "t": 0.27,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "titolo gigante «COLLABORATE» in bastoni stretti, gradiente arancio-giallo con alone (x 155-910, y 575-795): arriva scuro e sfocato (0,27) e si accende nitido (0,33)"
+  },
+  {
+   "t": 0.33,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "tessera arrotondata con DENTRO IL VIDEO della persona che continua a parlare: nasce da un punto al centro (0,33) e cresce ruotando fino a ~580×540 px, inclinata di ~-6° (0,67)"
+  },
+  {
+   "t": 0.42,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "nastro arancio pieno, curvo, entra da destra e attraversa il quadro dal basso a sinistra all'alto a destra dietro le tessere (0,42-1,00)"
+  },
+  {
+   "t": 0.58,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "seconda tessera color pesca con una grande icona di persona arancio (~425×465 px, inclinata di ~+5°), cresce accanto alla prima (0,58-0,75)"
+  },
+  {
+   "t": 0.67,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "icona bianca «sincronizza» (due frecce in cerchio, ~150 px) fra le due tessere; gira di continuo fino alla fine"
+  },
+  {
+   "t": 2.43,
+   "tipo": "uscita",
+   "cosa": "il bagliore in basso a sinistra si accende e la scena esce con lo stacco"
+  },
+  {
+   "t": 2.47,
+   "tipo": "taglio",
+   "cosa": "stacco netto di ritorno alla persona"
+  }
+ ],
+ "principali": 7,
+ "principali_ogni_10s": 26.9,
+ "micro": 1,
+ "uscite": 1,
+ "pausa_media_s": 0.39,
+ "pausa_max_s": 1.8,
+ "note": "Clip a 30 fps; registrazione 1080×1928 a tutto quadro (nessuna banda): le misure della scheda sono in px della registrazione; riportate al quadro 1080×1920 cambiano al massimo di 8 px in verticale (fattore 0,996). Scena grafica a tutto schermo 0,13-2,47 (2,33 s). Dopo 1,00 non entra più niente: la scena resta viva solo per l'icona che gira, il nastro che ondeggia e il video dentro la tessera (pausa 0,67 → 2,47). La riga piccola «with other creators» sopra il titolo (1,00-1,17, parola per parola) è il sottotitolo animato del reel: non contata. Il titolo «COLLABORATE» è contato perché ha un carattere e una misura diversi dai sottotitoli (è il titolo della scena). Pause misurate tra un evento principale e il successivo (istanti uguali contati una volta), senza i bordi della clip: la più lunga va da 0.67 a 2.47 s. Bordi: 0.13 s dall'inizio al primo evento, 0.13 s dall'ultimo evento alla fine. Ignorati: interfaccia di Instagram, puntatore, sottotitoli, marchi."
+}

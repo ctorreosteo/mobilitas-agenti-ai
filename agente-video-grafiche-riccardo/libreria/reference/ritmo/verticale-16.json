@@ -1,0 +1,78 @@
+{
+ "clip": "verticale-16",
+ "durata_s": 5.2,
+ "eventi": [
+  {
+   "t": 0.17,
+   "tipo": "stato",
+   "cosa": "nel documento bianco già presente (x 240-900, y 590-1555) si scrivono le due righe nere spesse del titolo, con un cursore blu (0,17-0,33)"
+  },
+  {
+   "t": 0.4,
+   "tipo": "stato",
+   "cosa": "si scrivono le righe grigie del corpo, una dopo l'altra (circa una riga ogni 2-3 fotogrammi, tre paragrafi), fino a 1,42"
+  },
+  {
+   "t": 1.75,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "pillola blu «HOOK» a sinistra del titolo, che passa da nero a blu (1,75-1,83), sulla parola detta"
+  },
+  {
+   "t": 2.25,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "in fondo al documento si scrive un pulsante nero, da un punto a una pillola lunga (2,25-2,42)"
+  },
+  {
+   "t": 2.5,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "pillola blu «CTA» a sinistra del pulsante, che diventa blu (2,50-2,58)"
+  },
+  {
+   "t": 3.0,
+   "tipo": "stato",
+   "cosa": "trasformazione: le righe del documento si sfocano e si fondono in quattro blocchi pieni (blu, azzurro, grigio scuro, azzurro) più la pillola (3,00-3,17)"
+  },
+  {
+   "t": 3.08,
+   "tipo": "uscita",
+   "cosa": "le pillole «HOOK» e «CTA» spariscono"
+  },
+  {
+   "t": 3.73,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "una pellicola nera con i fori entra dal basso a sinistra; i blocchi ci volano dentro e diventano 5 fotogrammi (3,73-4,03)"
+  },
+  {
+   "t": 3.83,
+   "tipo": "stato",
+   "cosa": "il documento si restringe in una card verticale blu piena (x 335-745, y 555-1285), sopra la pellicola (3,83-4,03)"
+  },
+  {
+   "t": 4.4,
+   "tipo": "stato",
+   "cosa": "la card blu si riempie (due righe bianche, barra in basso) e i 5 fotogrammi della pellicola si riempiono uno dopo l'altro con un'icona ciascuno (4,40-4,58)"
+  },
+  {
+   "t": 4.67,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "tasto play bianco al centro della card con rimbalzo (4,67-4,75) e testina blu sul primo fotogramma della pellicola"
+  },
+  {
+   "t": 5.13,
+   "tipo": "uscita",
+   "cosa": "la scena parte verso sinistra con sfocatura di movimento (continua in verticale-17)"
+  }
+ ],
+ "principali": 10,
+ "principali_ogni_10s": 19.2,
+ "micro": 4,
+ "uscite": 2,
+ "pausa_media_s": 0.5,
+ "pausa_max_s": 1.35,
+ "note": "Clip a 30 fps; registrazione 1080×1928 con due bande nere (y 0-30 e 1897-1927): il reel occupa x 0-1079, y 31-1896 (1080×1866), quindi è tagliato di ~54 px in altezza rispetto a 1080×1920. Le misure della scheda sono in px della registrazione meno 4 (ipotesi: ~27 px tagliati sopra e sotto, nessun ridimensionamento); errore possibile ±27 px in verticale. In basso, y ~1670-1900, c'è l'interfaccia di Instagram (account, didascalia, tasto audio) e il puntatore del mouse: ignorati. Il documento bianco e l'asterisco ci sono già al primo fotogramma. La scrittura del corpo è continua (0,40-1,42): contata una volta, per questo la pausa più lunga (0,40 → 1,75) non è un vuoto vero. Le righe del titolo in alto («It writes the whole script for you, from the hook to the call to action. Then it turns that script into a video.») sono il sottotitolo del reel: non contate, ma gli eventi cadono sulle sue parole (HOOK su «hook», CTA su «action», trasformazione su «Then», pellicola su «turns», play su «a»). Pause misurate tra un evento principale e il successivo (istanti uguali contati una volta), senza i bordi della clip: la più lunga va da 0.40 a 1.75 s. Bordi: 0.17 s dall'inizio al primo evento, 0.53 s dall'ultimo evento alla fine. Ignorati: interfaccia di Instagram, puntatore, sottotitoli, marchi."
+}

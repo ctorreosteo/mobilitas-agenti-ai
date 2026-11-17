@@ -1,0 +1,109 @@
+{
+ "clip": "verticale-30",
+ "durata_s": 5.47,
+ "eventi": [
+  {
+   "t": 0.1,
+   "tipo": "taglio",
+   "cosa": "tendina dal basso: una scena blu notte a tutto schermo sale sopra l'intervista e la copre in ~3 fotogrammi (0,10-0,20)"
+  },
+  {
+   "t": 0.23,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "in alto l'etichetta piccola in maiuscolo spaziato «A CHOICE BETWEEN TWO» si scrive una parola alla volta, da sfocata a nitida (0,23-0,40)"
+  },
+  {
+   "t": 0.27,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "due puntini chiari al centro, sotto l'etichetta"
+  },
+  {
+   "t": 0.5,
+   "tipo": "stato",
+   "cosa": "i due puntini diventano un cerchio sottile con dentro un punto di domanda (0,47-0,58)"
+  },
+  {
+   "t": 0.67,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "la parola grande «NO CLUE» (bianco, bastoni pesanti) arriva una lettera alla volta, ogni lettera da sfocata e un poco più in basso a nitida (0,67-1,00, ~10 fotogrammi)"
+  },
+  {
+   "t": 1.83,
+   "tipo": "stato",
+   "cosa": "sotto la parola grande si scrive «what» (riga piccola grigia), sulla voce"
+  },
+  {
+   "t": 2.25,
+   "tipo": "stato",
+   "cosa": "la riga continua: «what AI»"
+  },
+  {
+   "t": 2.42,
+   "tipo": "stato",
+   "cosa": "la riga si chiude: «what AI is»"
+  },
+  {
+   "t": 3.0,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "una linea orizzontale sottile si disegna dal centro verso i lati con al centro la pillola scura «vs» (3,00-3,07)"
+  },
+  {
+   "t": 3.07,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "un oggetto vero (un chip elettronico, foto ritagliata) arriva da sfocato, grande e ruotato, e si posa diritto sotto la linea con un alone lime (3,07-3,30, ~7 fotogrammi)"
+  },
+  {
+   "t": 3.1,
+   "tipo": "stato",
+   "cosa": "il blocco in alto («?», «NO CLUE», «what AI is») si spegne a ~45% di luminosità: il primo dei due termini passa in secondo piano (3,10-3,25)"
+  },
+  {
+   "t": 3.58,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "la parola grande «EXPERT» in verde lime arriva una lettera alla volta, da sfocata a nitida (3,58-3,83)"
+  },
+  {
+   "t": 4.17,
+   "tipo": "stato",
+   "cosa": "sotto «EXPERT» si scrive «in», sulla voce"
+  },
+  {
+   "t": 4.5,
+   "tipo": "stato",
+   "cosa": "la riga continua: «in using»"
+  },
+  {
+   "t": 4.83,
+   "tipo": "stato",
+   "cosa": "la riga si chiude con «AI» in lime: «in using AI»"
+  },
+  {
+   "t": 4.93,
+   "tipo": "stato",
+   "cosa": "«EXPERT» ha un lampo di 1 fotogramma (lettere sdoppiate, come un'eco) e torna ferma"
+  },
+  {
+   "t": 5.3,
+   "tipo": "uscita",
+   "cosa": "tutta la scena scivola a sinistra con sfocatura di movimento orizzontale (5,30-5,40)"
+  },
+  {
+   "t": 5.33,
+   "tipo": "taglio",
+   "cosa": "spinta laterale con sfocatura: dall'altra parte entra di nuovo l'intervista (5,30-5,40, ~3 fotogrammi)"
+  }
+ ],
+ "principali": 17,
+ "principali_ogni_10s": 31.1,
+ "micro": 3,
+ "uscite": 1,
+ "pausa_media_s": 0.33,
+ "pausa_max_s": 1.16,
+ "note": "Misure e tempi: clip 1080×1928 a 30 fps; il reel occupa tutta la registrazione (nessuna barra del browser, solo 1-2 px chiari sul bordo alto e sinistro): le misure della scheda sono riportate al quadro 1080×1920 moltiplicando y per 1920/1928 (0,996; differenze di 8 px al massimo). Clip con una scena grafica a tutto schermo (0,10-5,40) fra due pezzi di intervista. Le parole piccole sotto i titoli («what AI is», «in using AI») fanno parte della grafica (si scrivono sulla voce, nello stile della scena), non sono i sottotitoli del reel: questi tornano solo sull'intervista finale («I would», non contato). Taglio 0,10 e spinta 5,33 contati come tagli; l'uscita 5,30 a parte. Ignorati: interfaccia di Instagram (qui assente), la persona. Entrate nello stesso istante di altri eventi contate separatamente solo se cambiano oggetti diversi in fotogrammi diversi (3,07 e 3,10). Pause misurate tra un evento principale e il successivo (istanti uguali contati una volta), senza i bordi della clip: la più lunga va da 0.67 a 1.83 s. Bordi: 0.10 s dall'inizio al primo evento, 0.14 s dall'ultimo evento alla fine."
+}

@@ -1,0 +1,74 @@
+{
+ "clip": "verticale-33",
+ "durata_s": 5.2,
+ "eventi": [
+  {
+   "t": 0.13,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "quattro puntini neri già fermi al primo fotogramma si collegano in linee e disegnano un'icona a contorno di due persone (0,13-0,43): prima le spalle della prima, poi la testa, poi la seconda"
+  },
+  {
+   "t": 0.17,
+   "tipo": "stato",
+   "cosa": "la frase in alto «And everybody,»: «everybody» passa da grigio a nero (0,17-0,25)"
+  },
+  {
+   "t": 1.25,
+   "tipo": "uscita",
+   "cosa": "frase e icona si sfocano e svaniscono insieme (1,25-1,42)"
+  },
+  {
+   "t": 1.33,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "nuova frase in alto, parola per parola: «if» (1,33), «you're» (1,42), grigio → nero (1,50)"
+  },
+  {
+   "t": 1.5,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "un martello 3D fotografico entra molto sfocato e grande al centro e si mette a fuoco con l'ombra a terra (1,50-1,67)"
+  },
+  {
+   "t": 1.58,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "sotto «if you're», «a carpenter» in corsivo con grazie grande, da sfocato a nitido (1,58-1,67)"
+  },
+  {
+   "t": 2.6,
+   "tipo": "stato",
+   "cosa": "trasformazione sul posto: «a carpenter» si sfoca e diventa «an electrician», mentre il martello ruota, si sfoca e si dissolve nelle pinze gialle (2,60-2,87, ~8 fotogrammi); l'ombra a terra resta"
+  },
+  {
+   "t": 3.25,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "in basso, una riga piccolissima grigia di attribuzione"
+  },
+  {
+   "t": 3.92,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "sotto l'oggetto un cursore sottile (3,92) diventa una barra nera e si apre da sinistra a destra in un'etichetta nera che rivela «GO USE AI.» in verde-limone (3,93-4,10)"
+  },
+  {
+   "t": 4.8,
+   "tipo": "stato",
+   "cosa": "velo di luce colorata (rosso → viola) su tutta la pagina (4,80-4,97)"
+  },
+  {
+   "t": 4.97,
+   "tipo": "taglio",
+   "cosa": "stacco dentro il velo viola al video della persona, che torna a colori in ~5 fotogrammi (4,97-5,13)"
+  }
+ ],
+ "principali": 10,
+ "principali_ogni_10s": 19.2,
+ "micro": 1,
+ "uscite": 1,
+ "pausa_media_s": 0.54,
+ "pausa_max_s": 1.16,
+ "note": "Registrazione 1080×1928 a 30 fps, senza bande: il reel occupa tutto il quadro; le misure della scheda sono riportate al quadro 1080×1920 moltiplicando le y per 1920/1928 (0,996: al massimo 8 px di differenza, quindi in pratica uguali). Pagina bianca già a schermo al primo fotogramma, con codice a barre, scritte verticali ai lati, «And» nero e «everybody,» grigio, e quattro puntini: non contati come entrate; contato il disegno dell'icona che parte dai puntini. Frase e oggetto che cambiano nello stesso istante (2,60) contati una volta: è una sola trasformazione. «if» e «you're» contati come un'unica entrata della frase nuova. Dietro le pinze si intravede una griglia quadrettata chiarissima (x ~320-790, y ~880-1250): fondo, non contata. Ignorati: interfaccia, marchi nelle scritte laterali, il sottotitolo della persona dopo lo stacco. Pause misurate tra un evento principale e il successivo (istanti uguali contati una volta), senza i bordi della clip: la più lunga va da 0.17 a 1.33 s. Bordi: 0.13 s dall'inizio al primo evento, 0.23 s dall'ultimo evento alla fine."
+}

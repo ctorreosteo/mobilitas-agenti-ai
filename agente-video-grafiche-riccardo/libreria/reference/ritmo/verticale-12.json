@@ -1,0 +1,65 @@
+{
+ "clip": "verticale-12",
+ "durata_s": 2.97,
+ "eventi": [
+  {
+   "t": 0.25,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "pillola di vetro scuro con bordo dorato sottile (x 190-895, y 1160-1318) che si allunga da destra a sinistra sotto la riga dei sottotitoli (0,25-0,33)"
+  },
+  {
+   "t": 0.33,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "primo avatar (cerchio bianco ~150 px) sale da dentro la pillola, come da una fessura (0,33-0,42)"
+  },
+  {
+   "t": 0.58,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "secondo avatar sale dalla pillola (0,58-0,67)"
+  },
+  {
+   "t": 0.83,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "terzo avatar sale dalla pillola (0,83-0,92)"
+  },
+  {
+   "t": 1.1,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "il video si chiude in un cerchio (iride) su fondo nero con bagliore arancio: il bordo del cerchio entra dal basso (1,10) e stringe intorno al volto (1,23); poi il cerchio si rimpicciolisce e scende al centro, da ~880 a ~515 px di diametro (1,25-1,67), rallentando"
+  },
+  {
+   "t": 1.17,
+   "tipo": "uscita",
+   "cosa": "pillola e avatar restano fuori dal cerchio e spariscono"
+  },
+  {
+   "t": 1.67,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "tre anelli concentrici sottili (orbite) intorno al cerchio, si accendono dal centro verso fuori (1,67-1,75)"
+  },
+  {
+   "t": 1.83,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "sette icone arancio di persona sulle orbite, a cascata (1,83-2,08); poi pulsano a turno (crescono e calano) fino alla fine"
+  },
+  {
+   "t": 2.73,
+   "tipo": "uscita",
+   "cosa": "lampo bianco (2,73-2,80) verso la clip successiva"
+  }
+ ],
+ "principali": 7,
+ "principali_ogni_10s": 23.6,
+ "micro": 3,
+ "uscite": 2,
+ "pausa_media_s": 0.26,
+ "pausa_max_s": 0.57,
+ "note": "Clip a 30 fps; registrazione 1080×1928 a tutto quadro (nessuna banda): le misure della scheda sono in px della registrazione; riportate al quadro 1080×1920 cambiano al massimo di 8 px in verticale (fattore 0,996). Il cerchio che si rimpicciolisce (1,25-1,67) è lo stesso movimento dell'iride, non contato a parte. Le icone che pulsano dopo 2,08 tengono viva la scena ma non sono contate (nessun evento nuovo). Nessun taglio dentro la clip (verificato con la differenza fra fotogrammi: niente salti fino al lampo di 2,73-2,80). Le righe di testo «I think the BIGGEST CHALLENGE», «for AUSSIE CREATORS», «finding COMMUNITY» sono i sottotitoli animati del reel (stesso carattere e stessa posizione anche sulla scena grafica): ignorati come testo, citati nella scheda solo per la composizione. Pause misurate tra un evento principale e il successivo (istanti uguali contati una volta), senza i bordi della clip: la più lunga va da 1.10 a 1.67 s. Bordi: 0.25 s dall'inizio al primo evento, 1.14 s dall'ultimo evento alla fine. Ignorati: interfaccia di Instagram, puntatore, sottotitoli, marchi."
+}

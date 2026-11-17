@@ -1,0 +1,52 @@
+{
+ "clip": "verticale-15",
+ "durata_s": 1.77,
+ "eventi": [
+  {
+   "t": 0.07,
+   "tipo": "stato",
+   "cosa": "nel telefono disegnato dentro il pannello il tasto play diventa un'icona blu quadrata che cresce (0,07-0,17)"
+  },
+  {
+   "t": 0.25,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "orologio (cerchio nero ~350 px, tacche, lancette blu) a destra nel pannello, con un piccolo rimbalzo (0,25-0,42); nello stesso istante sotto l'icona del telefono compaiono due righe"
+  },
+  {
+   "t": 0.5,
+   "tipo": "stato",
+   "cosa": "la lancetta lunga fa un giro intero e lascia un settore azzurro che riempie il quadrante; la lancetta corta passa da 12 a 1 (0,50-0,75)"
+  },
+  {
+   "t": 0.83,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "etichetta «1h» in blu grassetto sotto l'orologio (0,83-0,92)"
+  },
+  {
+   "t": 1.07,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "puntini sotto il pannello e un pallino blu che scende fino all'asterisco del marchio (1,07-1,42)"
+  },
+  {
+   "t": 1.5,
+   "tipo": "uscita",
+   "cosa": "il pannello si ingrandisce un poco e si sfoca, dissolvendosi (1,50-1,63)"
+  },
+  {
+   "t": 1.6,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "card bianca verticale (il documento della scena dopo) con l'asterisco in alto a destra, entra mentre il pannello svanisce (1,60-1,70)"
+  }
+ ],
+ "principali": 6,
+ "principali_ogni_10s": 33.9,
+ "micro": 2,
+ "uscite": 1,
+ "pausa_media_s": 0.31,
+ "pausa_max_s": 0.53,
+ "note": "Clip a 30 fps; registrazione 1080×1928 con due bande nere (y 0-30 e 1897-1927): il reel occupa x 0-1079, y 31-1896 (1080×1866), quindi è tagliato di ~54 px in altezza rispetto a 1080×1920. Le misure della scheda sono in px della registrazione meno 4 (ipotesi: ~27 px tagliati sopra e sotto, nessun ridimensionamento); errore possibile ±27 px in verticale. In basso, y ~1670-1900, c'è l'interfaccia di Instagram (account, didascalia, tasto audio) e il puntatore del mouse: ignorati. Il pannello, il telefono, la lampadina e l'asterisco ci sono già al primo fotogramma (non contati come entrate). La barra di avanzamento sotto il telefono cresce di continuo per tutta la clip: non contata. Il titolo in alto («how your app» → «saves people an hour a day.») è il sottotitolo del reel, scritto parola per parola: non contato come evento, descritto nella scheda. La clip finisce dentro il passaggio alla scena dopo (che è l'inizio di verticale-16). Pause misurate tra un evento principale e il successivo (istanti uguali contati una volta), senza i bordi della clip: la più lunga va da 1.07 a 1.60 s. Bordi: 0.07 s dall'inizio al primo evento, 0.17 s dall'ultimo evento alla fine. Ignorati: interfaccia di Instagram, puntatore, sottotitoli, marchi."
+}

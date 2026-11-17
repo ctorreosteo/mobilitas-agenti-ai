@@ -1,0 +1,55 @@
+{
+ "clip": "verticale-24",
+ "durata_s": 7.37,
+ "eventi": [
+  {
+   "t": 0.47,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "una grande icona-cartella blu sale da dietro la testa (la persona è scontornata e sta davanti alla cartella), sulla parola «folder» (0,47-0,60)"
+  },
+  {
+   "t": 0.87,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "una casella di chat scura (campo «Reply to …», nome del servizio, pulsante arancio con la freccia) entra in basso, sul petto: da più piccola e sfocata a nitida (0,87-1,00)"
+  },
+  {
+   "t": 1.2,
+   "tipo": "uscita",
+   "cosa": "la cartella scende e sparisce dietro la testa (1,13-1,23)"
+  },
+  {
+   "t": 1.47,
+   "tipo": "stato",
+   "cosa": "nella casella compare il chip della cartella («… · 16 videos», icona-cartella blu), che scende di pochi px al suo posto (1,47-1,57): la cartella «è caduta» nella chat"
+  },
+  {
+   "t": 3.42,
+   "tipo": "uscita",
+   "cosa": "il chip del passo «3» in alto sfuma (3,42-3,58)"
+  },
+  {
+   "t": 4.33,
+   "tipo": "stato",
+   "cosa": "il segnaposto sparisce e la frase si scrive nella casella lettera per lettera, seguendo la voce (4,42-6,50): «Come up with a plan, then edit one video.»"
+  },
+  {
+   "t": 7.17,
+   "tipo": "uscita",
+   "cosa": "la casella sparisce con lo stacco"
+  },
+  {
+   "t": 7.17,
+   "tipo": "taglio",
+   "cosa": "stacco netto a una nuova inquadratura: la persona alla scrivania, di tre quarti, davanti al monitor"
+  }
+ ],
+ "principali": 5,
+ "principali_ogni_10s": 6.8,
+ "micro": 0,
+ "uscite": 3,
+ "pausa_media_s": 1.67,
+ "pausa_max_s": 2.86,
+ "note": "Clip a 30 fps, 1080×1928 (reel a tutto quadro; y riportate a 1920 con il fattore 0,996). Continua la verticale-23 (stesso reel): il chip del passo «3» è già in posizione al primo fotogramma, non contato come entrata. La scrittura nella casella (4,33-6,50) è contata come UN cambio di stato, anche se va a tempo con la voce parola per parola. Cartella e chip della cartella sono due oggetti diversi: la cartella sparisce dietro la testa (uscita) e 0,25 s dopo compare il chip nella casella (stato della casella); non c'è un volo visibile fra i due. Ignorati: interfaccia di Instagram, puntatore, sottotitoli della persona (compresa la parola chiave grande in corsivo arancio con grazie: è parte dei loro sottotitoli), gesti. Pausa più lunga senza i bordi: da 1,47 a 4,33 (la casella resta ferma con il segnaposto). Bordi: 0,47 s dall'inizio al primo evento, 0,20 s dall'ultimo alla fine."
+}

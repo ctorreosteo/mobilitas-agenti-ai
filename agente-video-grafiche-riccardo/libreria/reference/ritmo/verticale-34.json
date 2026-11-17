@@ -1,0 +1,126 @@
+{
+ "clip": "verticale-34",
+ "durata_s": 5.57,
+ "eventi": [
+  {
+   "t": 0.0,
+   "tipo": "stato",
+   "cosa": "velo di luce colorata sul video della persona: rosso a sinistra che diventa viola-blu e sbianca tutto (0,00-0,17)"
+  },
+  {
+   "t": 0.2,
+   "tipo": "taglio",
+   "cosa": "stacco alla pagina bianca a tutto schermo (codice a barre, scritte verticali ai lati)"
+  },
+  {
+   "t": 0.2,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "la frase in alto comincia a scriversi sulla voce: «so» (0,17), «that» (0,25), grigio → nero"
+  },
+  {
+   "t": 0.23,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "una lampadina 3D fotografica entra sfocata e si mette a fuoco con l'ombra a terra (0,20-0,33)"
+  },
+  {
+   "t": 0.42,
+   "tipo": "stato",
+   "cosa": "la frase continua: «I»"
+  },
+  {
+   "t": 0.58,
+   "tipo": "stato",
+   "cosa": "la frase continua: «could»"
+  },
+  {
+   "t": 0.75,
+   "tipo": "stato",
+   "cosa": "la frase continua: «be»"
+  },
+  {
+   "t": 0.92,
+   "tipo": "stato",
+   "cosa": "la frase continua: «the»; la riga è completa"
+  },
+  {
+   "t": 1.07,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "cursore sottile sotto la frase (1,07) che si allarga in barra nera e si apre da sinistra a destra in un'etichetta che rivela «INNOVATOR» in verde-limone (1,10-1,25)"
+  },
+  {
+   "t": 1.4,
+   "tipo": "stato",
+   "cosa": "attorno all'etichetta compare la cornice di selezione tratteggiata (1,40) e poi i quadratini agli angoli (1,43-1,47)"
+  },
+  {
+   "t": 1.67,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "sotto la lampadina «to revolutionize» in corsivo con grazie grande, da sfocato a nitido (1,67-1,83)"
+  },
+  {
+   "t": 3.08,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "sotto il corsivo una riga in bastoni più piccola, parola per parola: «this» (grigio → nero)"
+  },
+  {
+   "t": 3.33,
+   "tipo": "stato",
+   "cosa": "la riga continua: «industry»"
+  },
+  {
+   "t": 3.5,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "in basso l'attribuzione piccolissima grigia su due righe"
+  },
+  {
+   "t": 3.67,
+   "tipo": "stato",
+   "cosa": "la riga continua: «myself.»"
+  },
+  {
+   "t": 4.45,
+   "tipo": "uscita",
+   "cosa": "frase, etichetta, cornice, lampadina e corsivo spariscono tutti insieme in una sfocatura (4,43-4,47); restano codice a barre e scritte laterali"
+  },
+  {
+   "t": 4.47,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "nuovo oggetto 3D (tocco da laureato su rotoli di diploma, in bianco e nero) entra grande e molto sfocato e si mette a fuoco lentamente (4,47-4,97, ~15 fotogrammi)"
+  },
+  {
+   "t": 4.5,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "nuova frase in alto parola per parola: «we» grigio chiaro"
+  },
+  {
+   "t": 4.92,
+   "tipo": "stato",
+   "cosa": "la frase continua: «were to» (4,92-5,00)"
+  },
+  {
+   "t": 5.17,
+   "tipo": "stato",
+   "cosa": "la frase continua: «hire»"
+  },
+  {
+   "t": 5.33,
+   "tipo": "stato",
+   "cosa": "la frase continua: «a»; a 5,50 arriva sfocata la parola dopo, la clip finisce"
+  }
+ ],
+ "principali": 20,
+ "principali_ogni_10s": 35.9,
+ "micro": 1,
+ "uscite": 1,
+ "pausa_media_s": 0.3,
+ "pausa_max_s": 1.41,
+ "note": "Registrazione 1080×1928 a 30 fps, senza bande: il reel occupa tutto il quadro; le misure della scheda sono riportate al quadro 1080×1920 moltiplicando le y per 1920/1928 (0,996: al massimo 8 px di differenza, quindi in pratica uguali). Stesso reel di 31-33 (stesso sistema di pagina). Il velo di luce iniziale è contato come stato (effetto su tutto il quadro), lo stacco alla pagina e la prima parola nello stesso istante contati separatamente. Ogni gruppo di parole è un cambio di stato della frase; la seconda riga («this industry myself.») è contata come entrata perché è un oggetto nuovo con un altro carattere. Il cambio di scena a 4,45-4,47 non è uno stacco del video: la pagina resta (codice a barre e scritte ai lati fermi), cambia solo il contenuto; contato come uscita + entrata. Ignorati: interfaccia, il sottotitolo della persona prima dello stacco, marchi. Pause misurate tra un evento principale e il successivo (istanti uguali contati una volta), senza i bordi della clip: la più lunga va da 1.67 a 3.08 s. Bordi: 0.00 s dall'inizio al primo evento, 0.24 s dall'ultimo evento alla fine."
+}

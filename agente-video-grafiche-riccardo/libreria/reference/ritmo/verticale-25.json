@@ -1,0 +1,142 @@
+{
+ "clip": "verticale-25",
+ "durata_s": 9.1,
+ "eventi": [
+  {
+   "t": 0.47,
+   "tipo": "uscita",
+   "cosa": "il contenuto del capitolo 5 (titolo, riga sotto, tre card) sparisce in 1 fotogramma"
+  },
+  {
+   "t": 0.47,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "nello stesso fotogramma entrano le card del capitolo 6, ancora «vuote»: a sinistra lo scheletro grigio di un sito (finestra con tre puntini, righe, pulsante arancio, immagine segnaposto), a destra la card «DA SISTEMARE» senza voci"
+  },
+  {
+   "t": 0.6,
+   "tipo": "stato",
+   "cosa": "l'indicatore 1-13 avanza: il riquadro 6 si riempie di arancio con un anello che si stringe, sotto la parentesi del gruppo compare l'etichetta «DESIGN»; insieme nasce il badge quadrato «6» a sinistra del titolo (0,60-0,67)"
+  },
+  {
+   "t": 1.0,
+   "tipo": "stato",
+   "cosa": "il titolo con grazie «Web Design Guidelines» compare accanto al badge, in dissolvenza (1,00-1,08), sulla voce"
+  },
+  {
+   "t": 1.67,
+   "tipo": "stato",
+   "cosa": "una linea rossa di scansione con alone scende sullo scheletro del sito, riga per riga, fino al pulsante (1,67-2,33)"
+  },
+  {
+   "t": 2.33,
+   "tipo": "stato",
+   "cosa": "sotto il titolo compare la riga di spiegazione «Ti dice cosa sistemare nel tuo sito» (2,33-2,42)"
+  },
+  {
+   "t": 2.67,
+   "tipo": "stato",
+   "cosa": "primo problema: un pallino rosso con «!» sulla prima riga dello scheletro e, nello stesso istante, la voce «Contrasto» con il pallino rosso nella lista (2,67-2,75)"
+  },
+  {
+   "t": 3.0,
+   "tipo": "stato",
+   "cosa": "secondo problema: «!» sul pulsante e voce «Allineamento» nella lista (3,00-3,08)"
+  },
+  {
+   "t": 3.17,
+   "tipo": "stato",
+   "cosa": "terzo problema: «!» sull'immagine e voce «Immagini» nella lista (3,17-3,33)"
+  },
+  {
+   "t": 3.67,
+   "tipo": "stato",
+   "cosa": "prima correzione: le righe grigie diventano due barre nere spesse con il segno verde; nella lista «Contrasto» diventa verde; la barra di avanzamento in fondo alla lista comincia a riempirsi di verde (3,67-3,75)"
+  },
+  {
+   "t": 4.0,
+   "tipo": "stato",
+   "cosa": "seconda correzione: il pulsante prende il segno verde, «Allineamento» verde, la barra cresce (3,92-4,00)"
+  },
+  {
+   "t": 4.25,
+   "tipo": "stato",
+   "cosa": "terza correzione: il segnaposto diventa un'illustrazione rosa con il segno verde, «Immagini» verde, la barra è piena (4,25-4,33)"
+  },
+  {
+   "t": 5.07,
+   "tipo": "uscita",
+   "cosa": "il contenuto del capitolo 6 (titolo, riga, due card) sparisce in 1 fotogramma"
+  },
+  {
+   "t": 5.07,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "entrano le card del capitolo 7, vuote: a sinistra un poster panna (con un blocco grigio che scende e diventa la fascia nera in basso, 5,07-5,23), a destra la card «FORME / COLORI / LIVELLI» (cerchio, quadrato, triangolo; cinque colori)"
+  },
+  {
+   "t": 5.23,
+   "tipo": "stato",
+   "cosa": "l'indicatore passa al 7 (riempimento e anello), nasce il badge «7» (5,23-5,30); nella card compare il livello «Fascia»"
+  },
+  {
+   "t": 5.75,
+   "tipo": "stato",
+   "cosa": "il titolo «Canvas Design» compare; sul poster si stende una riga di trattini arancio e nei livelli compare «Righe» (5,75-5,92)"
+  },
+  {
+   "t": 6.17,
+   "tipo": "stato",
+   "cosa": "nella fascia nera del poster compare una barra gialla (il titolo del poster) e nei livelli il chip «Titolo» (6,17-6,33)"
+  },
+  {
+   "t": 6.67,
+   "tipo": "stato",
+   "cosa": "la riga di spiegazione «Ti aiuta a creare poster e grafiche» compare sotto il titolo (6,67-6,75)"
+  },
+  {
+   "t": 7.08,
+   "tipo": "stato",
+   "cosa": "il cursore prende il cerchio arancio dalla card e lo trascina sul poster, dove diventa il «sole» grande (7,08-7,25)"
+  },
+  {
+   "t": 7.5,
+   "tipo": "stato",
+   "cosa": "il cerchio sul poster si schiarisce e torna pieno (cambio di colore provato, 7,50-7,67); nei livelli compare «Sole»"
+  },
+  {
+   "t": 8.0,
+   "tipo": "stato",
+   "cosa": "la card FORME/COLORI si trasforma: si rimpicciolisce e diventa un secondo poster orizzontale, leggermente inclinato (8,00-8,08)"
+  },
+  {
+   "t": 8.17,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "un terzo poster scuro verticale con il sole giallo entra a destra, inclinato: da un poster a tre varianti in fila (8,17-8,25)"
+  },
+  {
+   "t": 8.58,
+   "tipo": "uscita",
+   "cosa": "il contenuto del capitolo 7 (titolo, riga, tre poster) sparisce in 1 fotogramma"
+  },
+  {
+   "t": 8.58,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "entra la card del capitolo 8: una pagina di risultati di ricerca con righe azzurre segnaposto e in fondo la riga «il tuo sito» evidenziata con bordo arancio"
+  },
+  {
+   "t": 8.67,
+   "tipo": "stato",
+   "cosa": "l'indicatore passa all'8 con l'etichetta di gruppo nuova «FARTI TROVARE»; nasce il badge «8» (8,67-8,75)"
+  }
+ ],
+ "principali": 22,
+ "principali_ogni_10s": 24.2,
+ "micro": 0,
+ "uscite": 3,
+ "pausa_media_s": 0.39,
+ "pausa_max_s": 0.82,
+ "note": "Clip a 30 fps, 1080×1928 (reel a tutto quadro; y riportate a 1920 con il fattore 0,996). Schermo diviso fermo per tutta la clip: pannello panna con una griglia leggera in alto (y 0-~966), persona sotto, sottotitoli in un riquadro nero sulla cucitura. Tre cambi di capitolo con la stessa sequenza: contenuto vecchio via e card nuove vuote nello stesso fotogramma (uscita + entrata contate a parte, l'istante una volta per le pause), poi dopo 4-5 fotogrammi indicatore + badge (uno stato), poi titolo e riga sulla voce. Coppie «segno sullo scheletro + voce nella lista» nello stesso fotogramma contate come uno stato. Ignorati: interfaccia di Instagram, puntatore del mouse di Instagram in basso a sinistra, sottotitoli, gesti; il cursore DENTRO la grafica (7,08) è contato solo quando fa qualcosa (trascina il cerchio). Il segno di spunta verde (3,67-4,25) è registrato ma per noi non si prende. Pausa più lunga senza i bordi: da 4,25 a 5,07 (la card corretta resta ferma). Bordi: 0,47 s dall'inizio al primo evento, 0,43 s dall'ultimo alla fine."
+}

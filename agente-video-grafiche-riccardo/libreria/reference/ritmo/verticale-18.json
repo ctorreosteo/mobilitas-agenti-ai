@@ -1,0 +1,74 @@
+{
+ "clip": "verticale-18",
+ "durata_s": 3.8,
+ "eventi": [
+  {
+   "t": 0.0,
+   "tipo": "uscita",
+   "cosa": "la scena precedente (barre «hours/minutes», cronometro, asterisco arancio, griglia di icone) esce con una sfocatura di movimento verticale (0,00-0,17)"
+  },
+  {
+   "t": 0.17,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "asse del tempo orizzontale con tacche fitte ed etichette «0s 1s 2s 3s» in carattere monospazio (0,17 tenue, 0,25 pieno), a y ~1285"
+  },
+  {
+   "t": 0.33,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "un punto grigio diventa il cerchio nero del microfono (0,33 punto, 0,42 piccolo, 0,50 pieno, diametro ~148 px), a sinistra dell'asse"
+  },
+  {
+   "t": 0.42,
+   "tipo": "stato",
+   "cosa": "l'onda sonora a barre verticali blu si disegna da sinistra verso destra seguendo la voce (0,42-1,33), fino a coprire tutto l'asse"
+  },
+  {
+   "t": 2.08,
+   "tipo": "stato",
+   "cosa": "sull'asse spuntano da sinistra i segni-parola: piccoli spilli blu, uno per parola (2,08-2,33)"
+  },
+  {
+   "t": 2.42,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "scala di cinque chip neri con le parole in carattere monospazio, uno ogni 2-3 fotogrammi (2,42-2,75), ognuno appeso con una linea tratteggiata al suo spillo sull'asse"
+  },
+  {
+   "t": 3.13,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "cursore di riproduzione (linea nera verticale con triangolo in cima) compare sul primo chip (f94); a f95 il primo chip diventa blu"
+  },
+  {
+   "t": 3.2,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "una lente d'ingrandimento nasce da un punto sotto l'asse e cresce in 3 fotogrammi (f96-f99), collegata da una linea sottile a un cerchietto sull'asse; intanto il cursore scorre verso destra (f96-f99)"
+  },
+  {
+   "t": 3.3,
+   "tipo": "stato",
+   "cosa": "i chip diventano blu uno dopo l'altro man mano che il cursore li passa (f99-f105)"
+  },
+  {
+   "t": 3.37,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "bollino verde con il segno di fatto sull'orlo della lente (f101)"
+  },
+  {
+   "t": 3.67,
+   "tipo": "uscita",
+   "cosa": "tutto esce con una sfocatura di movimento (3,67-3,80)"
+  }
+ ],
+ "principali": 9,
+ "principali_ogni_10s": 23.7,
+ "micro": 1,
+ "uscite": 2,
+ "pausa_media_s": 0.4,
+ "pausa_max_s": 1.66,
+ "note": "Clip a 30 fps, registrazione 1080×1928: il reel occupa le righe y 31-1896 a tutta larghezza (1080×1866); lo considero mostrato a scala 1 con ~27 px tagliati sopra e sotto, quindi y del reel ≈ y della registrazione − 4 (stima). Il titolo in alto (frase detta scritta parola per parola, parola attuale in nero, parole passate in grigio, parola chiave in corsivo blu) fa da sottotitolo: come da regola, i cambi di parola non sono contati. Lo scorrimento dell'onda (0,42-1,33) è contato una volta come stato. La scala dei cinque chip (2,42-2,75) è contata come una sola entrata scaglionata. f94-f101 verificati fotogramma per fotogramma. Ignorati: interfaccia di Instagram (nome, «Segui», didascalia, icona dell'audio), la scritta «Made with…», il puntatore del mouse. Bordi: 0,17 s dall'inizio al primo evento; 0,43 s dall'ultimo evento alla fine."
+}

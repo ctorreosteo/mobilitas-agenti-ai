@@ -1,0 +1,57 @@
+{
+ "clip": "verticale-27",
+ "durata_s": 4.03,
+ "eventi": [
+  {
+   "t": 0.0,
+   "tipo": "stato",
+   "cosa": "indicatore 1-13 in alto: intorno al «13» acceso un anello chiaro si stringe e sparisce (0,00-0,33), con un riflesso diagonale che attraversa la riga (~0,17); il movimento è già in corso al primo fotogramma"
+  },
+  {
+   "t": 0.58,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "accanto al badge «13» compare il titolo «Pricing» con grazie: da grigio chiaro trasparente a nero pieno in ~4 fotogrammi (0,58-0,70), senza spostamento"
+  },
+  {
+   "t": 1.33,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "sotto il titolo la riga descrittiva «Ti aiuta a decidere quanto far pagare il tuo prodotto», in dissolvenza (1,27-1,33)"
+  },
+  {
+   "t": 2.8,
+   "tipo": "stato",
+   "cosa": "il cursore grafico clicca «Scegli» nella card centrale: il pulsante passa da contorno a pieno arancione (2,77-2,80); sotto il cursore un'onda circolare chiara si allarga e sparisce (2,87-3,07)"
+  },
+  {
+   "t": 3.1,
+   "tipo": "stato",
+   "cosa": "la card centrale «Pro» prende il bordo arancione (scelta fra tre: le altre due restano bianche)"
+  },
+  {
+   "t": 3.13,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "sopra la card scelta compare la pillola scura «Consigliato», da sfocata e piccola a nitida (3,13-3,20)"
+  },
+  {
+   "t": 3.6,
+   "tipo": "uscita",
+   "cosa": "titolo, riga descrittiva, tre card e la parentesi «BUSINESS» sotto l'indicatore spariscono insieme, con uno stacco netto dentro il pannello"
+  },
+  {
+   "t": 3.6,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "griglia di 13 pillole numerate (pallino arancione con la cifra + nome), centrata in 5 righe: le prime sei sono già lì, le altre arrivano una alla volta in ordine di lettura, da trasparenti e sfocate a nitide, circa una ogni fotogramma (3,60-3,87); l'indicatore 1-13 resta fermo sopra"
+  }
+ ],
+ "principali": 7,
+ "principali_ogni_10s": 17.4,
+ "micro": 2,
+ "uscite": 1,
+ "pausa_media_s": 0.6,
+ "pausa_max_s": 1.47,
+ "note": "Misure e tempi: clip 1080×1928 a 30 fps; il reel occupa tutta la registrazione (nessuna barra del browser, solo 1-2 px chiari sul bordo alto e sinistro): le misure della scheda sono riportate al quadro 1080×1920 moltiplicando y per 1920/1928 (0,996; differenze di 8 px al massimo). Schermo diviso per tutta la clip: pannello chiaro in alto (y 0-965), persona sotto, sottotitoli in un riquadro nero sulla cucitura. Contati solo gli oggetti del pannello. Il cursore grafico (disegnato nel reel) si muove dalle 1,25 alle 2,77 fra le card: i suoi spostamenti non sono contati, solo il clic (2,80). Ignorati: il puntatore del mouse della registrazione (sul petto della persona, 0,00-0,83), i sottotitoli, l'interfaccia di Instagram. L'onda del clic è contata dentro lo stato 2,80. La griglia di pillole è contata come una sola entrata (cascata). Dubbio: lo stacco 3,60 potrebbe avere 1-2 fotogrammi di dissolvenza, non visibili a 30 fps. Pause misurate tra un evento principale e il successivo (istanti uguali contati una volta), senza i bordi della clip: la più lunga va da 1.33 a 2.80 s. Bordi: 0.00 s dall'inizio al primo evento, 0.43 s dall'ultimo evento alla fine."
+}

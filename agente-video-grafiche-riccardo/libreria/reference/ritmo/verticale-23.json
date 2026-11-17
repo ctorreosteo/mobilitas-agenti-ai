@@ -1,0 +1,67 @@
+{
+ "clip": "verticale-23",
+ "durata_s": 8.23,
+ "eventi": [
+  {
+   "t": 0.0,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "chip del passo in alto (pillola scura con cerchio arancio numerato «2» e titolo del passo) appoggiato sulla lista della finestra: entra sfocato e si mette a fuoco in 2-3 fotogrammi (0,00-0,08)"
+  },
+  {
+   "t": 2.5,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "chip di stato in alto a destra nella barra della finestra (pillola con contorno arancio, icona e frase «… renaming 16 files»), in dissolvenza (2,50-2,58)"
+  },
+  {
+   "t": 2.67,
+   "tipo": "stato",
+   "cosa": "la lista si rinomina a cascata dall'alto: ogni riga passa dal nome della fotocamera al titolo del video con una dissolvenza sfocata di 2-3 fotogrammi, una riga ogni ~0,17 s (2,67-3,92, 8 righe visibili)"
+  },
+  {
+   "t": 3.67,
+   "tipo": "uscita",
+   "cosa": "il chip del passo sfuma (3,67-3,75) mentre la cascata finisce"
+  },
+  {
+   "t": 5.42,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "due icone-cartella blu grandi con nome e «8 videos» compaiono in dissolvenza sopra la lista, al centro della finestra (5,42-5,50)"
+  },
+  {
+   "t": 5.75,
+   "tipo": "stato",
+   "cosa": "le righe della lista volano dentro le cartelle: si rimpiccioliscono, si spostano verso le cartelle e svaniscono, dall'alto e dal basso (5,75-6,42); resta la finestra vuota con le due cartelle"
+  },
+  {
+   "t": 5.75,
+   "tipo": "uscita",
+   "cosa": "il chip di stato sparisce mentre le righe entrano nelle cartelle"
+  },
+  {
+   "t": 7.92,
+   "tipo": "uscita",
+   "cosa": "il pannello alto con la finestra sparisce con lo stacco: il video torna a tutto quadro"
+  },
+  {
+   "t": 7.92,
+   "tipo": "taglio",
+   "cosa": "stacco netto: dallo schermo diviso (finestra sopra, persona sotto) alla persona a tutto quadro, inquadratura più larga"
+  },
+  {
+   "t": 7.92,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "nuovo chip del passo «3» nella stessa posizione del «2» (x ~300-784, y ~297-380), sopra la testa: entra sfocato e si mette a fuoco (7,92-8,17)"
+  }
+ ],
+ "principali": 7,
+ "principali_ogni_10s": 8.5,
+ "micro": 1,
+ "uscite": 3,
+ "pausa_media_s": 1.58,
+ "pausa_max_s": 2.75,
+ "note": "Clip a 30 fps, 1080×1928 (registrazione del reel che riempie tutto il quadro, senza bande): le y in scheda sono riportate a 1920 moltiplicando per 1920/1928 (0,996), le x restano uguali. Schermo diviso fermo da 0,00 a 7,92: pannello scuro con la finestra in alto (y 0-~985, con un'ombra di ~24 px sul bordo basso), persona sotto. La cascata di rinomina (2,67-3,92) è contata come UN cambio di stato: è un unico movimento scaglionato, non legato parola per parola alla voce; contando ogni riga sarebbero 8 stati. Il volo delle righe nelle cartelle (5,75-6,42) è contato come uno stato. Taglio, uscita del pannello ed entrata del chip 3 nello stesso fotogramma (7,92): taglio ed entrata contati separatamente, l'istante una volta per le pause. Ignorati: interfaccia di Instagram, puntatore del mouse (resta fermo), sottotitoli della persona (bianchi, in alto nella metà bassa), gesti, marchio del cappello, nome del servizio nel chip di stato. Pause senza i bordi: la più lunga va da 2,67 a 5,42 (la cascata è in corso: lo schermo resta vivo). Bordi: 0,00 s dall'inizio al primo evento, 0,31 s dall'ultimo alla fine."
+}

@@ -1,0 +1,94 @@
+{
+ "clip": "verticale-19",
+ "durata_s": 7.0,
+ "eventi": [
+  {
+   "t": 0.0,
+   "tipo": "uscita",
+   "cosa": "la scena precedente (chip blu e lente della verticale-18) esce verso sinistra con una sfocatura di movimento (0,00-0,08)"
+  },
+  {
+   "t": 0.08,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "griglia 3×2 di card verticali vuote (bianche, bordo grigio chiaro, una barretta grigia in basso): entrano una dopo l'altra scivolando, dall'alto a sinistra fino in basso a destra (0,08-0,58)"
+  },
+  {
+   "t": 0.67,
+   "tipo": "stato",
+   "cosa": "un riflesso diagonale azzurro passa sulle card (0,67-0,75)"
+  },
+  {
+   "t": 1.33,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "un asterisco arancio (l'«agente») compare sopra la prima card (1,33-1,42)"
+  },
+  {
+   "t": 1.67,
+   "tipo": "stato",
+   "cosa": "nella prima card si disegna un grafico a barre (le barre crescono, l'ultima blu) e la barretta in basso si riempie di blu (1,67-1,92)"
+  },
+  {
+   "t": 2.33,
+   "tipo": "stato",
+   "cosa": "l'asterisco salta sopra la seconda card"
+  },
+  {
+   "t": 2.42,
+   "tipo": "stato",
+   "cosa": "dall'asterisco parte un percorso tratteggiato che gira intorno alla terza card e torna verso la riga sotto (2,42-2,50); nella seconda card compare un anello di caricamento grigio con un piccolo arco blu (2,50)"
+  },
+  {
+   "t": 2.67,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "cerchio rosso con la X: un disco rosa che cresce (f80-f82) e poi la X bianca (f83), al centro fra le due righe di card, sopra il percorso"
+  },
+  {
+   "t": 3.08,
+   "tipo": "uscita",
+   "cosa": "tutto si spegne: il grafico diventa grigio, la X e il percorso sbiadiscono (3,08-3,25)"
+  },
+  {
+   "t": 3.25,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "tre asterischi sopra le tre card in alto, uno ogni 2-3 fotogrammi (3,25-3,42)"
+  },
+  {
+   "t": 3.5,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "tre asterischi sopra le tre card in basso (3,50-3,67)"
+  },
+  {
+   "t": 4.33,
+   "tipo": "stato",
+   "cosa": "tutte e sei le card disegnano insieme il loro contenuto (barre, anello con punto, onda, pillole di chat, linea che sale, griglia di punti) e le barrette si riempiono (4,33-4,83)"
+  },
+  {
+   "t": 5.08,
+   "tipo": "stato",
+   "cosa": "le sei card prendono il bordo blu, tutte insieme (5,00-5,08)"
+  },
+  {
+   "t": 5.58,
+   "tipo": "stato",
+   "cosa": "in ogni card scende una banda azzurra sfumata, come una scansione, sfalsata da una card all'altra (5,58-6,25)"
+  },
+  {
+   "t": 6.08,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "bollini verdi con il segno di fatto all'angolo basso destro delle card, uno dopo l'altro (6,08-6,58)"
+  }
+ ],
+ "principali": 13,
+ "principali_ogni_10s": 18.6,
+ "micro": 4,
+ "uscite": 2,
+ "pausa_media_s": 0.5,
+ "pausa_max_s": 0.83,
+ "note": "Clip a 30 fps, registrazione 1080×1928: reel nelle righe y 31-1896 a tutta larghezza; y del reel ≈ y della registrazione − 4 (stima, come la verticale-18, stesso autore e stessa registrazione). Il titolo in alto scritto parola per parola sulla voce fa da sottotitolo e non è contato. Eventi vicini fusi dal motore (2,33 e 2,42 a meno di 0,25 s; 3,25 e 3,50 no). Il cerchio con la X verificato fotogramma per fotogramma (f76-f85). A 6,92 tutto il quadro si scurisce: è l'ultimo fotogramma della registrazione (probabilmente il passaggio al reel successivo), non contato. Ignorati: interfaccia di Instagram, la scritta «Made with…», il puntatore del mouse (che compare sopra le card dal 4,50). Bordi: 0,08 s dall'inizio al primo evento; 0,92 s dall'ultimo evento alla fine."
+}

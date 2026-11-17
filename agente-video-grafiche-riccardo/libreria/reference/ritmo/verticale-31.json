@@ -1,0 +1,115 @@
+{
+ "clip": "verticale-31",
+ "durata_s": 7.87,
+ "eventi": [
+  {
+   "t": 0.13,
+   "tipo": "uscita",
+   "cosa": "il titolo già a schermo al primo fotogramma («I would hire the one who's» piccolo + «EXPERT IN AI» grande, con un ovale verde-limone disegnato a mano attorno ad «AI») si dissolve insieme all'inquadratura (0,13-0,23)"
+  },
+  {
+   "t": 0.17,
+   "tipo": "taglio",
+   "cosa": "dissolvenza incrociata (0,13-0,23) dalla prima inquadratura a un primo piano un po' più stretto e spostato"
+  },
+  {
+   "t": 0.67,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "nasce la lista: primo chip «Accountant» a sinistra, all'altezza del petto, subito sotto il mento; scivola da sinistra ~20 px passando da sfocato e trasparente a nitido (0,67-0,80); il quadratino dell'icona arriva vuoto e l'icona compare dopo (0,80-0,90)"
+  },
+  {
+   "t": 1.67,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "secondo chip «Marketing», questa volta dal bordo destro, più in basso di mezzo chip (zig-zag), sfocato → nitido (1,67-1,83)"
+  },
+  {
+   "t": 1.83,
+   "tipo": "stato",
+   "cosa": "il chip «Accountant» si spegne: icona e testo passano al grigio, il fondo resta (1,80-1,90)"
+  },
+  {
+   "t": 2.75,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "terzo chip «Supply chain» a sinistra, sotto «Accountant» (2,75-3,00)"
+  },
+  {
+   "t": 2.92,
+   "tipo": "stato",
+   "cosa": "il chip «Marketing» si spegne in grigio"
+  },
+  {
+   "t": 3.58,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "quarto chip «Customer service» a destra (3,58-3,75)"
+  },
+  {
+   "t": 3.75,
+   "tipo": "stato",
+   "cosa": "il chip «Supply chain» si spegne in grigio"
+  },
+  {
+   "t": 4.67,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "quinto chip «Salesperson» a sinistra (4,67-4,83)"
+  },
+  {
+   "t": 4.8,
+   "tipo": "taglio",
+   "cosa": "salto sulla stessa inquadratura (jump cut): la testa cambia posizione da un fotogramma all'altro"
+  },
+  {
+   "t": 4.92,
+   "tipo": "stato",
+   "cosa": "il chip «Customer service» si spegne in grigio"
+  },
+  {
+   "t": 5.67,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "sesto chip «Business development» a destra, il più largo (5,67-5,83); l'icona compare a 5,92"
+  },
+  {
+   "t": 5.92,
+   "tipo": "stato",
+   "cosa": "il chip «Salesperson» si spegne in grigio"
+  },
+  {
+   "t": 7.0,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "settimo chip «Lawyer» a sinistra, il più corto (7,00-7,17); l'icona compare a 7,33"
+  },
+  {
+   "t": 7.07,
+   "tipo": "taglio",
+   "cosa": "salto sulla stessa inquadratura (jump cut), la testa più grande e più al centro"
+  },
+  {
+   "t": 7.25,
+   "tipo": "stato",
+   "cosa": "il chip «Business development» si spegne in grigio"
+  },
+  {
+   "t": 7.5,
+   "tipo": "stato",
+   "cosa": "chiusura della lista: tutti i chip si riaccendono insieme, a onda dall'alto in basso (7,50-7,75): la colonna di sette ruoli si legge tutta accesa"
+  },
+  {
+   "t": 7.75,
+   "tipo": "stato",
+   "cosa": "un velo di luce colorata (rosso → viola, tipo «light leak») passa su tutto il quadro e lo sbianca (7,75-fine): è l'inizio della transizione alla pagina bianca di verticale-32"
+  }
+ ],
+ "principali": 18,
+ "principali_ogni_10s": 22.9,
+ "micro": 6,
+ "uscite": 1,
+ "pausa_media_s": 0.45,
+ "pausa_max_s": 1.08,
+ "note": "Registrazione 1080×1928 a 30 fps, senza bande: il reel occupa tutto il quadro; le misure della scheda sono riportate al quadro 1080×1920 moltiplicando le y per 1920/1928 (0,996: al massimo 8 px di differenza, quindi in pratica uguali). La clip viene subito prima di verticale-32 (stesso reel: l'ultimo fotogramma della 31 è il primo della 32). Il titolo «EXPERT IN AI» è già a schermo a 0,00: non contato come entrata, contata solo la sua uscita. Tagli trovati con la differenza fra fotogrammi e controllati a occhio: 0,17 (dissolvenza), 4,80 e 7,07 (salti); a 2,83 e 5,93 la differenza sale un po' ma è solo la testa che si gira: non contati (dubbio). Chip dopo il primo contati come «micro» (elementi in più della stessa lista, come le pillole di verticale-08). Ogni chip ha due eventi: entrata e, ~0,17-0,25 s dopo l'entrata del successivo, lo spegnimento; contati separati perché cadono in istanti diversi. Il velo di luce finale è contato come stato (effetto su tutto il quadro, non un oggetto; il nuovo quadro arriva nella clip dopo). Ignorati: interfaccia, il sottotitolo piccolo della persona («IF I HAD AN», maiuscolo spaziato sotto il mento), gesti. Pause misurate tra un evento principale e il successivo (istanti uguali contati una volta), senza i bordi della clip: la più lunga va da 5.92 a 7.00 s. Bordi: 0.17 s dall'inizio al primo evento, 0.12 s dall'ultimo evento alla fine."
+}

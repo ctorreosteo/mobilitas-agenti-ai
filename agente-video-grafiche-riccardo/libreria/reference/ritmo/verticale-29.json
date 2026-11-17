@@ -1,0 +1,57 @@
+{
+ "clip": "verticale-29",
+ "durata_s": 5.97,
+ "eventi": [
+  {
+   "t": 0.37,
+   "tipo": "stato",
+   "cosa": "il gruppo in alto (chip «skill OpenMontage» + card «TRAILER») si allarga di ~5% e scende di ~10 px (0,33-0,45): è probabilmente la fine dell'entrata, cominciata prima della clip"
+  },
+  {
+   "t": 2.0,
+   "tipo": "stato",
+   "cosa": "un riflesso chiaro diagonale passa sulla card «TRAILER» (1,92-2,08)"
+  },
+  {
+   "t": 2.33,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "la card «DOCUMENTARIO» (video che scorre, etichetta lime) entra da destra, da sfocata a nitida, e si posa accanto alla prima con l'inclinazione opposta, sovrapponendola un poco (2,33-2,50); nello stesso istante la parola «documentari» è detta e sottolineata nei sottotitoli"
+  },
+  {
+   "t": 3.58,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "sotto le due card una fila di quattro miniature di video arriva da sinistra, una ogni ~2 fotogrammi, da sfocate a nitide (3,58-3,83)"
+  },
+  {
+   "t": 4.0,
+   "tipo": "entrata",
+   "livello": "micro",
+   "cosa": "in fondo alla fila la pillola lime «12 pipeline» (4,00-4,08)"
+  },
+  {
+   "t": 4.62,
+   "tipo": "uscita",
+   "cosa": "tutto il gruppo (chip, due card, miniature, pillola) si sfoca, si schiarisce e si rimpicciolisce un poco fino a sparire (4,62-4,72, ~3 fotogrammi)"
+  },
+  {
+   "t": 4.73,
+   "tipo": "entrata",
+   "livello": "grande",
+   "cosa": "nello stesso posto nasce dalla sfocatura una card verticale (anteprima di un altro video), che cresce e si mette a fuoco (4,73-4,87); la sua chip scura «skill …» compare sopra a 4,80"
+  },
+  {
+   "t": 5.08,
+   "tipo": "stato",
+   "cosa": "dietro la card verticale si accende un alone verde lime che pulsa (5,08-5,75)"
+  }
+ ],
+ "principali": 7,
+ "principali_ogni_10s": 11.7,
+ "micro": 1,
+ "uscite": 1,
+ "pausa_media_s": 0.79,
+ "pausa_max_s": 1.63,
+ "note": "Misure e tempi: clip 1080×1928 a 30 fps; il reel occupa tutta la registrazione (nessuna barra del browser, solo 1-2 px chiari sul bordo alto e sinistro): le misure della scheda sono riportate al quadro 1080×1920 moltiplicando y per 1920/1928 (0,996; differenze di 8 px al massimo). Palco fisso per tutta la clip: fondo chiaro panna a tutto schermo, persona rimpicciolita in una finestra arrotondata con bordo lime (y 1050-1890), sottotitoli parola per parola sulla cucitura sopra la finestra, grafiche nella metà alta (y 300-880). Nessun taglio. Dentro le card i video scorrono di continuo (non contato). Ignorati: i sottotitoli, interfaccia di Instagram, gesti. Dubbio: lo stato 0,37 potrebbe essere la coda di un'entrata cominciata prima della clip. Pause misurate tra un evento principale e il successivo (istanti uguali contati una volta), senza i bordi della clip: la più lunga va da 0.37 a 2.00 s. Bordi: 0.37 s dall'inizio al primo evento, 0.89 s dall'ultimo evento alla fine."
+}
