@@ -233,7 +233,12 @@ Per ogni file nuovo in `libreria/reference/` o `libreria/reference/verticali/`:
    oggetti», «Indicatore di struttura», «Fotogrammi chiave per la tavola», cosa si adatta e cosa no, modelli nuovi possibili; e
    la riga in `libreria/reference/catalogo.md`. Le note di Riccardo sulle reference sono in `libreria/reference/verticali/NOTE.md`;
 4. `./mve reel-ritmo-reference`: rifà la misura d'insieme (`libreria/reference/ritmo.json`), solo informazione;
-5. linguaggio aggiornato (sotto) e modelli proposti: nascono «in prova», diventano attivi solo con l'ok di Riccardo.
+5. linguaggio aggiornato (sotto) e modelli proposti: nascono «in prova», diventano attivi solo con l'ok di Riccardo;
+6. **ritaglio per la tavola** (verticali): ogni clip nuova ha la sua voce in `reel_palco.ritaglio_reference`, con il rettangolo
+   del reel misurato (bande nere tolte clip per clip; nelle registrazioni dal browser il riquadro del reel). Senza voce il
+   motore usa il ritaglio delle registrazioni dal browser (x 108–960) e la tavola mostra un pezzo sbagliato (17/11/2026: le
+   12–34 sono registrazioni del telefono a tutto quadro). Si controlla con un foglio di un fotogramma ritagliato per clip e
+   si lancia `./mve reel-regressione` (è una modifica al motore).
 
 Si possono far lavorare più subagenti in parallelo (una clip a testa o un gruppo), con le regole di `CLAUDE.md` nel prompt; i
 loro conteggi si rifanno con la regola unica.
@@ -284,13 +289,15 @@ loro conteggi si rifanno con la regola unica.
 - **il video della persona dentro la grafica** (iride 12, tessera 14, lettore nell'angolo 26, finestra del relatore 29): per
   noi è sempre una grafica piena (caso (b) dei sottotitoli: in quel tratto la riga non c'è), breve;
 - **grafiche dietro la persona** (13, 20, 21, 24: parola gigante, quadrante, orbita dietro la testa): profondità senza coprire
-  volto né sottotitoli. Il motore oggi non lo sa fare (la radiografia ha solo una sagoma grossolana per misurare): è una
-  capacità nuova da decidere con Riccardo, non un modello;
+  volto né sottotitoli. **Per ora no** (Riccardo, 17/11/2026): il motore non si tocca; resta un'idea per una versione futura
+  (servirebbero lo scontorno della persona fotogramma per fotogramma a piena misura e la composizione a strati; oggi la
+  radiografia ha solo una sagoma grossolana per misurare). Nei piani non si propone;
 - **ritmo**: misurate con la regola dei piani, le 23 clip fanno 2,4–22,6 eventi ogni 10 s (mediana 15,4, pausa più lunga
   mediana 1,4 s), ma sono spezzoni scelti per le grafiche; una scena piena che entra tutta in ~0,5 s poi si lascia leggere
   1,5–1,8 s (14, 23); dove la grafica è una didascalia il ritmo è lento (20, 22). L'obiettivo dei piani non cambia;
 - cosa non si prende: figure umane (quasi tutte le clip: avatar, icone di persona, persone alle scrivanie), spunte e bollini di
-  fatto (16, 18, 19, 25, 28), la X rossa e i «!» rossi (19, 25), «Consigliato» (27: sembra un consiglio clinico), «gratis» e le
+  fatto (16, 18, 19, 25, 28), la X e ogni segno grafico di «no» e i «!» rossi (19, 25), la cornice di selezione con i
+  quadratini agli angoli (32, 34), «Consigliato» (27: sembra un consiglio clinico), «gratis» e le
   frasi-promessa (28, 34), cifre non dette («1h», assi «0s 1s», prezzi, conteggi di file), lampi bianchi e veli di luce sul
   video (12–14, 31–34: cambiano i colori e la fascia dei sottotitoli), l'ovale a mano sopra i sottotitoli (31), oggetti
   fotografici 3D (33, 34), cursori che cliccano interfacce finte, titoli scritti parola per parola come sottotitoli (15–19),
@@ -312,14 +319,21 @@ che si accende, passaggio sulla linea, fumetti 9:16, parola che parte, frase par
 schermo diviso, card di vetro sul video sfocato, lista che si accumula e si barra (05), da molti a uno (08); dalle verticali del
 17/11/2026 (secondi nelle schede): prima che si spegne nell'angolo con due barre e l'asse che aspetta (17), orologio che spende
 il tempo (15, 17), quadrante del tempo (21), confronto che spegne il primo termine (30), stesso palco due strade (19), segno e voce
-gemelli su Servier (25), etichette appese e lente sul dettaglio (18), scansione nella card (19, 25), scheda che si compila con
+gemelli su Servier (25), etichette appese e lente sul dettaglio dello stesso disegno (18), scansione nella card (19, 25), scheda che si compila con
 etichette sul margine (16), lista a riflettore sotto il volto (31), sommario a pillole (27), chip del passo fisso in y (23, 24),
 adesivo sulla parola (28), etichetta dal cursore (32–34), icona dai puntini (33), esempi sul piedistallo (33), pagina-poster della
 frase (32, 34), cambio di pagina sul posto (34), vetrina con chip-ancora (29), card della frase riferita tra virgolette (22).
 Nessuno è costruito: si costruiscono solo come varianti «in prova» quando un reel ne ha bisogno, e diventano attivi con l'ok di
-Riccardo sull'anteprima. Da decidere con Riccardo prima di costruire: grafiche dietro la persona (serve lo scontorno per
-fotogramma nel motore), la lente sopra un disegno Servier (è una «forma semplice»?), un segno grafico di «no» oltre la lista
-che si barra, la cornice di selezione con i quadratini agli angoli (32, 34: segno da programma di grafica).
+Riccardo sull'anteprima.
+
+**Decisioni di Riccardo sulle reference del 17/11/2026:**
+- **grafiche dietro la persona**: per ora no; idea per una versione futura (vedi §9). Il motore non si tocca per questo;
+- **lente sopra un disegno Servier** (18): sì, conta come forma semplice sopra il disegno, **purché ingrandisca una parte dello
+  stesso disegno**, senza anatomia aggiunta e senza scritte che non sono nel copy. Resta «in prova» finché Riccardo non la
+  approva su un'anteprima;
+- **segno grafico di «no»** (la X della 19 o simili): no. Per negare basta la lista che si barra;
+- **cornice di selezione con i quadratini agli angoli** (32, 34): no, per uno studio sanitario è fuori tono. L'«etichetta dal
+  cursore» si può fare senza la cornice.
 
 ## 11. Lezioni tecniche
 
